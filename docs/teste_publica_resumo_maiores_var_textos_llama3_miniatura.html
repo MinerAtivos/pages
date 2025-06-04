@@ -386,257 +386,45 @@ pre code {
 <h3>
 Destaques desta sexta-feira, 30/05 📊💡📈🚀
 </h3>
-<span>Maiores variações de  30/05</span>
-<br>5 maiores altas:</br>
+<br>Maiores altas dos ativos mais representativos:</br>
 <span>
 🟢
 #NORD3 17,1%
 </span>
 <br>
 🟢
-#PPLA11 13,5%
-</br>
-<span>
-🟢
 #GOLL4 13,1%
-</span>
-<br>
-🟢
-#SHOW3 12,4%
 </br>
 <span>
 🟢
- #AMBP3  11%
+#COGN3 2,77%
 </span>
-<br>5 maiores quedas:</br>
+<br>
+🟢
+#BBDC4 0,746%
+</br>
+<span>
+🟢
+ #HAPV3  0,351%
+</span>
+<br>Maiores quedas dos ativos mais representativos:</br>
 <span>
 🔴
-#CASH3 -9,07%
+#AZUL4 -6,25%
 </span>
 <br>
 🔴
-#CEDO4 -7,69%
+#VALE3 -2,53%
 </br>
 <span>
 🔴
-#CMIG3 -7,57%
+#ENEV3 -1,96%
 </span>
 <br>
 🔴
-#SCAR3 -7,56%
+#BBAS3 -1,18%
 </br>
-<span>🔴 #MOAR3 -6,98%</span>
-<br /> <br />
-<h3>
-Veja a seguir os destaques desta sexta-feira, 30/05 📊💡📈🚀
-</h3>
-<!-- ```{r , echo=FALSE, results='asis', message=FALSE, warning=FALSE} -->
-<!-- library(quantmod) -->
-<!-- library(DMwR2) -->
-<!-- library(xts) -->
-<!-- library(tseries) -->
-<!-- library(dplyr) -->
-<!-- library(sqldf) -->
-<!-- for (at in unique(resumo_var$Ativo)){ -->
-<!--     tryCatch({ -->
-<!-- #       #This works -->
-<!-- image2 <- paste("C:\\Users\\cecch\\Downloads\\",at,"_chartseries.png", sep = "") -->
-<!-- # image1 <- paste("C:\\Users\\cecch\\Downloads\\",at,"_grafico_dia.png", sep = "") -->
-<!-- logo = paste("C:\\Users\\cecch\\Downloads\\logos\\",at,"_big.svg", sep = "") -->
-<!-- # knitr::include_graphics(image1) -->
-<!-- # knitr::include_graphics(image2) -->
-<!-- cat("\n\n") -->
-<!-- for (i in 1:1){ -->
-<!--     #This doesnt work. -->
-<!--    #  print(knitr::include_graphics(image1)) -->
-<!--    # print(knitr::include_graphics(image2)) -->
-<!--     #This does work! -->
-<!--    cat("\n\n") -->
-<!--    cat("\n\n") -->
-<!--    cat("\n\n") -->
-<!--    cat("<p></p>") -->
-<!--    cat("<p></p>") -->
-<!--    cat("<br></br>") -->
-<!--    cat("<br></br>") -->
-<!--    cat("<br></br>") -->
-<!--    cat(paste0( -->
-<!--   "<div style='display: flex; align-items: center; gap: 10px; max-width: 500px;'>", -->
-<!--   "<img src='", logo, "' style='height: 50px; background-color: white; padding: 5px; border-radius: 5px;'>", -->
-<!--   "<h2 style='margin: 0;'><b>", subset(texto_resumo, ativo == at)[,1], "</b></h2>", -->
-<!--   "</div>" -->
-<!-- )) -->
-<!--    # cat(paste0("<h2><b> Destaque para #", cat("![](",logo,")"), subset(texto_ativo_intraday, ativo == at)[,1]), " </b></h2>") -->
-<!--    #cat(subset(texto_ativo_intraday, ativo == at)[,2])  -->
-<!--    cat(paste0("<p style='text-indent: 40px; text-align: justify; font-size: 14px;'>",subset(texto_resumo, ativo == at)[,2]," Veja a seguir o gráfico do desempenho ao longo do tempo.</p>")) -->
-<!--    cat("\n\n") -->
-<!--    cat("\n\n") -->
-<!--    cat("\n\n") -->
-<!--    cat("<p></p>") -->
-<!--    # cat("![](",image1,")") -->
-<!--    cat("\n\n") -->
-<!--    cat("\n\n") -->
-<!--    cat("\n\n") -->
-<!--    #cat(paste(texto1a[grep(at,texto1a)],"#b3 #bovespa #ibov #ibovespa #investimentos", sep = "\n\n")) -->
-<!--    cat("\n\n") -->
-<!--    cat("\n\n") -->
-<!--    cat("![](",image2,")") -->
-<!--    cat("\n\n") -->
-<!--    # cat("<p></p>") -->
-<!--    #  cat("A seguir, desempenho do ativo ao longo do tempo:") -->
-<!--    #  cat("\n\n") -->
-<!--    #  cat("![](",image2,")") -->
-<!--     cat("\n\n") -->
-<!--     cat("\n\n") -->
-<!--     cat("\n\n") -->
-<!-- } -->
-<!-- #        -->
-<!-- # paste("C:\\Users\\cecch\\Downloads\\",at,"_chartseries.png", sep = "") -->
-<!-- #  -->
-<!--     # cat(paste0("![](", "C:\\Users\\cecch\\Downloads\\", at, "_chartseries.png)"), "\n") -->
-<!-- }, error=function(e){cat("Erro(","f","):", conditionMessage(e), "\n",sep = "")}) -->
-<!-- } -->
-<!-- ``` -->
-<!-- ```{r , echo=FALSE, message=FALSE, warning=FALSE, dpi=200, results='asis'} -->
-<!-- htmltools::tags$br(paste0("Maiores volumes em ", DataAlgoritmos2, ":")) -->
-<!-- # htmltools::tags$br("5 destaques de volumes negociados:") -->
-<!-- at1 = head(ta1[order(ta1$volume_at, decreasing = TRUE),],5)[1,] -->
-<!-- htmltools::tags$span(ifelse(head(ta1[order(ta1$volume_at, decreasing = TRUE),],5)[1,"delta"]>0,"\U0001F7E2", "\U0001F534"),paste(paste( paste("#",at1$CodigoInstrumento, " ", sep = "") -->
-<!--                , str_trim(paste(formatC(as.numeric(at1$delta), digits = 3, big.mark = '.', decimal.mark = ","),"%",sep = "")) -->
-<!--                , paste(" R$ ",formatC(at1$volume/1000000, big.mark = '.', decimal.mark = ","), "Mi") -->
-<!--                , sep = ""))) -->
-<!-- at1 = head(ta1[order(ta1$volume_at, decreasing = TRUE),],5)[2,] -->
-<!-- htmltools::tags$br(ifelse(head(ta1[order(ta1$volume_at, decreasing = TRUE),],5)[2,"delta"]>0,"\U0001F7E2", "\U0001F534"), paste(paste( paste("#",at1$CodigoInstrumento, " ", sep = "") -->
-<!--                , str_trim(paste(formatC(as.numeric(at1$delta), digits = 3, big.mark = '.', decimal.mark = ","),"%",sep = "")) -->
-<!--                , paste(" R$ ",formatC(at1$volume/1000000, big.mark = '.', decimal.mark = ","), "Mi") -->
-<!--                , sep = "") -->
-<!--                ) ) -->
-<!-- at1 = head(ta1[order(ta1$volume_at, decreasing = TRUE),],5)[3,] -->
-<!-- htmltools::tags$span(ifelse(head(ta1[order(ta1$volume_at, decreasing = TRUE),],5)[3,"delta"]>0,"\U0001F7E2", "\U0001F534"), paste(paste( paste("#",at1$CodigoInstrumento, " ", sep = "") -->
-<!--                , str_trim(paste(formatC(as.numeric(at1$delta), digits = 3, big.mark = '.', decimal.mark = ","),"%",sep = "")) -->
-<!--                , paste(" R$ ",formatC(at1$volume/1000000, big.mark = '.', decimal.mark = ","), "Mi") -->
-<!--                , sep = ""))) -->
-<!-- at1 = head(ta1[order(ta1$volume_at, decreasing = TRUE),],5)[4,] -->
-<!-- htmltools::tags$br(ifelse(head(ta1[order(ta1$volume_at, decreasing = TRUE),],5)[4,"delta"]>0,"\U0001F7E2", "\U0001F534"), paste(paste( paste("#",at1$CodigoInstrumento, " ", sep = "") -->
-<!--                , str_trim(paste(formatC(as.numeric(at1$delta), digits = 3, big.mark = '.', decimal.mark = ","),"%",sep = "")) -->
-<!--                , paste(" R$ ",formatC(at1$volume/1000000, big.mark = '.', decimal.mark = ","), "Mi") -->
-<!--                , sep = ""))) -->
-<!-- at1 = head(ta1[order(ta1$volume_at, decreasing = TRUE),],5)[5,] -->
-<!-- htmltools::tags$span(ifelse(head(ta1[order(ta1$volume_at, decreasing = TRUE),],5)[5,"delta"]>0,"\U0001F7E2", "\U0001F534"), paste(paste( paste(" #",at1$CodigoInstrumento, " ", sep = "") -->
-<!--                , str_trim(paste(formatC(as.numeric(at1$delta), digits = 3, big.mark = '.', decimal.mark = ","),"%",sep = "")) -->
-<!--                , paste(" R$ ",formatC(at1$volume/1000000, big.mark = '.', decimal.mark = ","), "Mi") -->
-<!--                ))) -->
-<!-- cat("\n\n") -->
-<!-- cat("\n\n") -->
-<!-- # htmltools::tags$br("#b3 #bovespa #ibov #ibovespa #investimentos") -->
-<!-- htmltools::tags$br("a seguir, treemap dos volumes:") -->
-<!-- ``` -->
-<!-- ![](C:/Users/cecch/Downloads/grafico_volumes.png) -->
-<!-- ```{r1 setup, include=FALSE, size="huge"} -->
-<!-- # Huge > huge > LARGE > Large > large > normalsize > small > footnotesize > scriptsize > tiny -->
-<!-- knitr::opts_chunk$set(echo = TRUE) -->
-<!-- knitr::opts_chunk$set(size="huge") -->
-<!-- print(cat(gsub("\n","", texto_variacoes))) -->
-<!-- ``` -->
-<!-- ```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE, results='asis'} -->
-<!-- print(cat(gsub("\n","", texto_variacoes))) -->
-<!-- # cat(paste(dia_semana_calculo, " dia ", DataAlgoritmos, sep = "")) -->
-<!-- ``` -->
-<!-- <br></br> -->
-<!-- <br></br> -->
-<!-- <br></br> -->
-<!-- <!-- <h2 style='text-align: center;'> -->
-<p>–&gt;
-<!-- <!-- 🔍 Radar intraday: outliers nas negociações de 30/05 <p>📊💡📈🚀</p></h2> -->
-–&gt;</p>
-<!-- <!-- ```{r , echo=FALSE, results='asis', message=FALSE, warning=FALSE} -->
-<p>–&gt;</p>
-<!-- <!-- library(quantmod) -->
-<p>–&gt; <!-- <!-- library(DMwR2) --> –&gt; <!-- <!-- library(xts) -->
-–&gt; <!-- <!-- library(tseries) --> –&gt; <!-- <!-- library(dplyr) -->
-–&gt; <!-- <!-- library(sqldf) --> –&gt;</p>
-<!-- <!-- for (at in unique(negocios_outliers$CodigoInstrumento)){ -->
-<p>–&gt;</p>
-<!-- <!--     tryCatch({ -->
-<p>–&gt;</p>
-<!-- <!--       #This works -->
-<p>–&gt;
-<!-- <!-- image2 <- paste("C:\\Users\\cecch\\Downloads\\",at,"_chartseries.png", sep = "") -->
-–&gt;
-<!-- <!-- image1 <- paste("C:\\Users\\cecch\\Downloads\\",at,"_grafico_dia.png", sep = "") -->
-–&gt;
-<!-- <!-- logo = paste("C:\\Users\\cecch\\Downloads\\logos\\",at,"_big.svg", sep = "") -->
-–&gt; <!-- <!-- knitr::include_graphics(image1) --> –&gt;
-<!-- <!-- knitr::include_graphics(image2) --> –&gt;
-<!-- <!-- cat("\n\n") --> –&gt; <!-- <!-- for (i in 1:1){ --> –&gt;
-<!-- <!--     #This doesnt work. --> –&gt;
-<!-- <!--    #  print(knitr::include_graphics(image1)) --> –&gt;
-<!-- <!--    # print(knitr::include_graphics(image2)) --> –&gt;
-<!-- <!--     #This does work! --> –&gt; <!-- <!--    cat("\n\n") -->
-–&gt; <!-- <!--    cat("\n\n") --> –&gt; <!-- <!--    cat("\n\n") -->
-–&gt; <!-- <!--    cat("<p></p>") --> –&gt;
-<!-- <!--    cat("<p></p>") --> –&gt; <!-- <!--    cat("<br></br>") -->
-–&gt; <!-- <!--    cat("<br></br>") --> –&gt;
-<!-- <!--    cat("<br></br>") --> –&gt; <!-- <!--    cat(paste0( -->
-–&gt;
-<!-- <!--   "<div style='display: flex; align-items: center; gap: 10px; max-width: 500px;'>", -->
-–&gt;
-<!-- <!--   "<img src='", logo, "' style='height: 50px; background-color: white; padding: 5px; border-radius: 5px;'>", -->
-–&gt;
-<!-- <!--   "<h2 style='margin: 0;'><b>", subset(texto_ativo_intraday, ativo == at)[,1], "</b></h2>", -->
-–&gt; <!-- <!--   "</div>" --> –&gt; <!-- <!-- )) --> –&gt;</p>
-<!-- <!--    # cat(paste0("<h2><b> Destaque para #", cat("![](",logo,")"), subset(texto_ativo_intraday, ativo == at)[,1]), " </b></h2>") -->
-<p>–&gt;
-<!-- <!--    #cat(subset(texto_ativo_intraday, ativo == at)[,2])  -->
-–&gt;
-<!-- <!--    cat(paste0("<p style='text-indent: 40px; text-align: justify; font-size: 14px;'>",subset(texto_ativo_intraday, ativo == at)[,2]," Veja a seguir o gráfico do intraday com o destaque do outlier: as setas amarelas destacam o momento e o volume negociado no ponto de outlier. A linha violeta demonstra a tendência do preço antes e depois do destaque.</p>")) -->
-–&gt;</p>
-<!-- <!--    cat("\n\n") -->
-<p>–&gt; <!-- <!--    cat("\n\n") --> –&gt; <!-- <!--    cat("\n\n") -->
-–&gt; <!-- <!--    cat("<p></p>") --> –&gt;
-<!-- <!--    cat("![](",image1,")") --> –&gt;
-<!-- <!--    cat("\n\n") --> –&gt; <!-- <!--    cat("\n\n") --> –&gt;
-<!-- <!--    cat("\n\n") --> –&gt;
-<!-- <!--    #cat(paste(texto1a[grep(at,texto1a)],"#b3 #bovespa #ibov #ibovespa #investimentos", sep = "\n\n")) -->
-–&gt; <!-- <!--    cat("\n\n") --> –&gt; <!-- <!--    cat("\n\n") -->
-–&gt; <!-- <!--    # cat("![](",image1,")") --> –&gt;
-<!-- <!--    cat("\n\n") --> –&gt; <!-- <!--    cat("<p></p>") --> –&gt;
-<!-- <!--     cat("A seguir, desempenho do ativo ao longo do tempo:") -->
-–&gt; <!-- <!--     cat("\n\n") --> –&gt;
-<!-- <!--     cat("![](",image2,")") --> –&gt;
-<!-- <!--     cat("\n\n") --> –&gt; <!-- <!--     cat("\n\n") --> –&gt;
-<!-- <!--     cat("\n\n") --> –&gt; <!-- <!-- } --> –&gt;
-<!-- <!-- #        --> –&gt;
-<!-- <!-- # paste("C:\\Users\\cecch\\Downloads\\",at,"_chartseries.png", sep = "") -->
-–&gt; <!-- <!-- #  --> –&gt;
-<!-- <!--     # cat(paste0("![](", "C:\\Users\\cecch\\Downloads\\", at, "_chartseries.png)"), "\n") -->
-–&gt;
-<!-- <!-- }, error=function(e){cat("Erro(","f","):", conditionMessage(e), "\n",sep = "")}) -->
-–&gt; <!-- <!-- } --> –&gt; <!-- <!-- ``` --> –&gt;</p>
-<!-- <!-- ## R Markdown -->
-<p>–&gt;</p>
-<!-- <!-- This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>. -->
-<p>–&gt;</p>
-<!-- <!-- When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this: -->
-<p>–&gt;</p>
-<!-- <!-- ```{r cars} -->
-<p>–&gt; <!-- <!-- summary(cars) --> –&gt; <!-- <!-- ``` --> –&gt;</p>
-<!-- <!-- ## Including Plots -->
-<p>–&gt;</p>
-<!-- <!-- You can also embed plots, for example: -->
-<p>–&gt;</p>
-<!-- <!-- ```{r pressure, echo=FALSE} -->
-<p>–&gt; <!-- <!-- plot(pressure) --> –&gt; <!-- <!-- ``` --> –&gt;</p>
-<!-- <!-- Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot. -->
-<p>–&gt;</p>
-<!-- <p style="text-indent: 40px; text-align: justify; font-size: 12px;">  -->
-<!--       E assim concluímos nossa jornada diária pelos caminhos do mercado financeiro brasileiro. 📊💼 Espero que esses breves insights tenham contribuído e inspirado novas perspectivas sobre o mercado. -->
-<!--       Mas a conversa não termina aqui! 💬🌐 Convidamos todos vocês a compartilhar suas próprias análises, estratégias e pensamentos nos comentários. Afinal, é através do intercâmbio de ideias que todos nós prosperamos como investidores e membros desta comunidade vibrante. -->
-<!-- Fiquem atentos para mais análises e discussões amanhã. Até lá, que seus investimentos sejam sólidos e suas decisões informadas. 🚀🔍 Juntos, vamos além dos números e construímos um entendimento mais profundo dos mercados! -->
-<!-- #Ibovespa #AnáliseDiária #Investimentos #ComunidadeFinanceira -->
-<!-- </p> -->
-<!-- <p style="font-size: 10px;">  -->
-<!-- *Exoneração de responsabilidade*: as informações e análises contidas neste material são de caráter meramente informativo e educacional, baseadas em dados estatísticos e análise técnica do mercado financeiro. Este material não constitui e não deve ser interpretado como uma recomendação de investimento, aconselhamento financeiro ou oferta de compra ou venda de quaisquer ativos financeiros. O autor deste material não se responsabiliza por quaisquer perdas ou danos decorrentes do uso das informações aqui apresentadas. O investimento em ações e outros ativos financeiros envolve riscos significativos, e o desempenho passado não garante resultados futuros. Cada investidor é responsável por suas próprias decisões de investimento, devendo buscar orientação de profissionais qualificados antes de tomar qualquer decisão. As análises e insights apresentados neste material refletem insights sistêmicos em um determinado momento e estão sujeitos a alterações sem aviso prévio. O autor não garante a precisão, integridade ou atualidade das informações aqui fornecidas, e não se responsabiliza por eventuais erros ou omissões. Ao utilizar este material, você concorda em isentar o autor de qualquer responsabilidade por quaisquer perdas ou danos, diretos ou indiretos, decorrentes do uso das informações aqui contidas -->
-<!-- </p> -->
+<span>🔴 #PETR4 -1,09%</span>
 
 
 
