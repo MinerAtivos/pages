@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             : post.description;
 
         card.innerHTML = `
-            <img src="${post.imageUrl}" alt="${post.title}" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x200?text=Imagem+N%C3%A3o+Encontrada';">
+            <img src="${post.imageUrl}" alt="${post.title}" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x200?text=Imagem+N%C3%A3o+Encontrada';">
             <div class="post-card-content">
                 <h3>${post.title}</h3>
                 <p>${truncatedDescription}</p>
