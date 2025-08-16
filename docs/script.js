@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const postsData = await response.json(); // Carrega o JSON
 
             // Opcional: ordenar posts por algum critério, por exemplo, data (se você adicionar ao JSON)
-            // postsData.sort((a, b) => new Date(b.date) - new Date(a.date));
+             postsData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
             postsData.forEach(post => {
                 const card = createPostCard(post);
