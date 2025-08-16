@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         card.innerHTML = `
             <img src="${post.imageUrl}" alt="${post.title}" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x200?text=Imagem+N%C3%A3o+Encontrada';">
-            <span class="bg-green-50 text-green-600 px-2 py-1 rounded-md text-xs">Forecast</span>
+            <span class="bg-green-50 text-green-600 px-2 py-1 rounded-md text-xs">"${post.id}"</span>
             <div class="post-card-content">
                 <h3>${post.title}</h3>
                 <p>${truncatedDescription}</p>
