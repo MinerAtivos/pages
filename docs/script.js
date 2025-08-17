@@ -13,11 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
             : post.description;
 
         card.innerHTML = `
-            <img src="${post.imageUrl}" alt="${post.title}" onerror="this.onerror=null;this.src='https://via.placeholder.com/200x200?text=Imagem+N%C3%A3o+Encontrada';">
+            <img src="${post.imageUrl}" alt="${post.title}" onerror="this.onerror=null;this.src='https://via.placeholder.com/300x200?text=Imagem+N%C3%A3o+Encontrada';">
+            <span class="bg-green-50 text-green-600 px-2 py-1 rounded-md text-xs">${post.id}</span>
             <div class="post-card-content">
                 <h3>${post.title}</h3>
                 <p>${truncatedDescription}</p>
-                <a href="${post.path}">Ler Mais</a>
+                <a href="${post.path}">Ler Mais</a> //cta do post 
             </div>
         `;
         return card;
@@ -33,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const postsData = await response.json(); // Carrega o JSON
 
             // Opcional: ordenar posts por algum critério, por exemplo, data (se você adicionar ao JSON)
-            // postsData.sort((a, b) => new Date(b.date) - new Date(a.date));
+             postsData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
             postsData.forEach(post => {
                 const card = createPostCard(post);
