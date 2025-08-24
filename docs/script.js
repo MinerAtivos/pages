@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="post-card-content">
                 <h3>${post.title}</h3>
                 <p>${truncatedDescription}</p>
-                <a href="${post.path}">Ler Mais</a> //cta do post 
+                <a href="${post.path}">${post.cta}</a>  
             </div>
         `;
         return card;
