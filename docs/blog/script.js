@@ -49,7 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loadPosts();
 });
-    }
-
-    loadPosts();
-});
+    
