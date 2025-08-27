@@ -19,19 +19,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			<!--<script src="script.js"></script>-->
 
 
-<!-- Botão do menu hamburger -->
-<button id="menu-toggle" class="md:hidden text-dark">
-  <i class="fas fa-bars text-xl"></i>
-</button>
 
-<!-- Menu mobile (inicialmente oculto) -->
-<nav id="mobile-menu" class="md:hidden hidden flex-col space-y-4 mt-4">
-  <a href="#" class="text-dark hover:text-primary font-medium">Mercados</a>
-  <a href="#" class="text-dark hover:text-primary font-medium">Insights</a>
-  <a href="#" class="text-dark hover:text-primary font-medium">Blog</a>
-  <a href="#" class="text-dark hover:text-primary font-medium">Sobre</a>
-</nav>
-
+  <!-- Menu mobile (inicialmente oculto) -->
+  <nav
+    id="mobile-menu"
+    class="md:hidden hidden flex flex-col items-start px-4 pb-4 space-y-2 bg-white shadow"
+  >
+    <a href="#" class="text-dark hover:text-primary font-medium">Mercados</a>
+    <a href="#" class="text-dark hover:text-primary font-medium">Insights</a>
+    <a href="#" class="text-dark hover:text-primary font-medium">Blog</a>
+    <a href="#" class="text-dark hover:text-primary font-medium">Sobre</a>
+  </nav>
 
 		
     <script>
@@ -593,6 +591,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <script src="script.js"></script>
 	
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('menu-toggle');
@@ -603,5 +602,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 </script>
+
 
 </body></html>
