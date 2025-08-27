@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const postsGrid = document.querySelector('.posts-grid');
-    const postsJsonPath = 'blog/posts.json'; // Caminho para o seu arquivo JSON de posts
+    const postsJsonPath = 'posts.json'; // Caminho para o seu arquivo JSON de posts
 
     // Função para criar um card de post
     function createPostCard(post) {
