@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { 
     const postsGrid = document.querySelector('.posts-grid');
     const postsJsonPath = 'posts.json'; // Caminho para o seu arquivo JSON de posts
 
