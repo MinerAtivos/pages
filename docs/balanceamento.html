@@ -2,7 +2,22 @@
 layout: default
 ---
 
-<iframe src="https://minerativos2.github.io/p2/form_balance.html" allowfullscreen style="width: 100%; height: 100%; border: none;">
+<iframe id="balance-iframe" src="https://minerativos2.github.io/p2/form_balance.html" allowfullscreen style="width: 100%; border: none;">
 </iframe>
+
+<script>
+    window.addEventListener('message', function(event) {
+        // Verifica se a mensagem veio do domínio correto por segurança
+        if (event.origin !== "https://minerativos2.github.io") {
+            return;
+        }
+
+        const iframe = document.getElementById('balance-iframe');
+        if (iframe && event.data && event.data.height) {
+            iframe.style.height = event.data.height + 'px';
+        }
+    });
+</script>
+
 
 
