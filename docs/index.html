@@ -428,7 +428,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				            <div class="absolute top-1 left-1 bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-xs font-medium">Resumo do mercado</div>
 				        </div>
 				        
-				        <div class="relative flex-grow">
+				        <!--<div class="relative flex-grow">
 				            <iframe src="teste_publica_resumo_maiores_var_textos_llama3_miniatura.html" allowfullscreen 
 				                    class="w-full h-full object-cover" 
 				                    style="pointer-events: none;" 
@@ -438,7 +438,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				            </iframe>
 				            
 				            <button onclick="window.location.href='https://minerativos.github.io/pages/teste_publica_resumo_maiores_var_textos_llama3.html'" class="absolute bottom-4 right-1 bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium">Saiba mais</button>
-				        </div>
+				        </div>-->
+						
+						<div class="relative w-full h-64 overflow-hidden rounded-lg shadow-md">
+						    <!-- Iframe como imagem estática -->
+						    <iframe src="teste_publica_resumo_maiores_var_textos_llama3_miniatura.html"
+						        class="w-full h-full pointer-events-none"
+						        scrolling="no"
+						        sandbox="allow-forms allow-same-origin allow-scripts"
+						        style="transform: scale(1); border: none;">
+						    </iframe>
+						
+						    <!-- Camada bloqueadora para garantir que o iframe não interaja -->
+						    <div class="absolute inset-0 z-10 bg-transparent pointer-events-none"></div>
+						
+						    <!-- Botão clicável -->
+						    <button onclick="window.location.href='https://minerativos.github.io/pages/teste_publica_resumo_maiores_var_textos_llama3.html'"
+						        class="absolute bottom-4 right-4 z-20 bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium shadow-md">
+						        Acesse
+						    </button>
+						</div>
+
 				    </div>
 				</div>
                 
