@@ -2,6 +2,39 @@
 layout: default
 ---
 
+    <!-- Carregamento do Tailwind CSS para classes utilitárias -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Configuração de fonte para Inter (padrão Tailwind) e corpo geral */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb; /* Fundo levemente acinzentado */
+            color: #1f2937; /* Texto escuro */
+            line-height: 1.6;
+        }
+        /* Estilo para ícones SVG em linha */
+        .icon {
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1e40af',
+                        'light-blue': '#eff6ff',
+                        'accent-yellow': '#facc15',
+                    }
+                }
+            }
+        }
+    </script>
+
     <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-2xl p-6 sm:p-10 border-t-8 border-primary-blue">
         
         <!-- Título Principal -->
