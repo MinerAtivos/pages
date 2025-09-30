@@ -50,16 +50,11 @@ layout: default
                 1. Coleta e Fontes de Dados
             </h2>
             <p class="text-gray-700">
-                A modelagem utiliza uma base de dados de negociações históricas diárias dos principais ativos da bolsa, com registros desde 2005, atualizados diariamente.
+                A modelagem é feita em uma base de dados históricos de negociações da bolsa dos principais ativos negociados, com dados diários desde 2005, atualizados diariamente.
             </p>
             <p class="text-gray-700 mt-3">
-                O processo de criação de variáveis utiliza diferentes algoritmos de <i>I.A. e aprendizado de máquina</i> para incorporar <i>variáveis exógenas</i>, como:
-            </p>
-            <ul class="list-disc pl-5 mt-2 text-gray-700 space-y-1">
-                <li>Histórico de cotações diárias de bolsas externas (e.g., Nasdaq).</li>
-                <li>Séries de dados do BC (Banco Central) e Ipeadata.</li>
-                <li>Cotações de <i>commodities</i> consideradas correlacionadas com alguns ativos.</li>
-            </ul>
+                O processo de criação de variáveis envolve diferentes algoritmos de I.A. com aprendizado de máquina. 
+                Além dos dados históricos, esses algoritmos buscam histórico de cotações diárias de bolsas do exterior (Nasdaq, etc.), séries do BC e Ipeadata, além de cotações de alguns commodities considerados relevantes para os modelos. São as chamadas variáveis exógenas.                
         </div>
 
         <!-- Seção 2: Processamento e Geração de Insights -->
@@ -68,7 +63,7 @@ layout: default
                 <svg class="icon text-primary-blue" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8.7l-4.2 4.2-2-2-3.6 3.6"/></svg>
                 2. Modelagem e Engenharia de Variáveis
             </h2>
-            <p class="text-gray-700 mb-4">
+            <p class="text-gray-700 mb-4">                
                 Programas dedicados realizam a limpeza, normalização e padronização dos dados. A partir disso, são geradas estatísticas e insights, incluindo:
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
