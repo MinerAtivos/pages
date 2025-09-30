@@ -2,71 +2,104 @@
 layout: default
 ---
 
-<div class="post hentry uncustomized-post-template" itemprop="blogPost" itemscope="itemscope" itemtype="http://schema.org/BlogPosting">
-<meta content="968456181210842601" itemprop="blogId">
-<meta content="1427170410969906894" itemprop="postId">
-<a name="1427170410969906894"></a>
-<h3 class="post-title entry-title" itemprop="name">
-Metodologia
-</h3>
-<div class="post-header">
-<div class="post-header-line-1"></div>
-</div>
-<div class="post-body entry-content" id="post-body-1427170410969906894" itemprop="description articleBody">
-<p style="text-align: justify;"><span style="font-family: verdana;">A modelagem é feita em uma base de dados históricos de negociações da bolsa dos principais ativos negociados, com dados diários desde 2005, atualizados diariamente.</span></p><p><span style="font-family: verdana;">O processo de criação de variáveis envolve diferentes algoritmos de I.A. com aprendizado de máquina. Além dos dados históricos, esses algoritmos buscam histórico de cotações diárias de bolsas do exterior (Nasdaq, etc.), séries do BC e Ipeadata, além de cotações de alguns commodities considerados relevantes para os modelos. São as chamadas variáveis exógenas.</span></p><p><span style="font-family: verdana;">Com base nesses dados, inicia o processo de modelagem, que envolve um conjunto de programas de limpeza, normalização e padronização dos dados para que sejam feitas estatísticas e geração de insights: como exemplo, são geradas e atualizadas informações de tendências, <em>forecast</em> com janelas móveis/deslizantes, grau de inclinação de curvas, verificação de <em>outliers</em>, , médias móveis, indicadores técnicos (macd, ifr, estocástico, etc.) correlação com dados exógenos, dentre outros.</span></p><p><span style="font-family: verdana;">Neste ponto, um processo de computação paralela roda a  sensibilização desses dados para cada um dos ativos, com parâmetros definidos e modificáveis, como prazo de início da propriedade do ativo, intervalo de verificação, percentual de indicação de viés de queda e percentual de viés de alta. As variáveis dependentes são (comprar/vender/manter).</span></p><p><span style="font-family: verdana;">Atualmente são 5 algoritmos de <em>machine learning</em> diferentes, cada um com suas especificidades, com aprendizado supervisionado e não supervisionado. Os outputs desses algoritmos são consolidados e, dependendo do grau de confiança dos resultado, um 6º algoritmo confirma o viés para o período indicado (parametrizável e variável).</span></p><p><span style="font-family: verdana;">O principal objetivo deste módulo é simular os melhores pontos de entrada e de saída para cada ativo considerando o período e as margens projetadas para swing trading.</span></p><p><span style="font-family: verdana;">Além disso, é necessário combinar outro módulo de <em>machine learning</em>: o de composição de portfólio ideal com base nas projeções, contexto e objetivos de carteira. Portanto, analisar os resultados das simulações por ativo, de forma isolada, não garante sucesso das simulações.</span></p><p style="text-align: justify;"><!--wp:paragraph-->
+    <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-2xl p-6 sm:p-10 border-t-8 border-primary-blue">
+        
+        <!-- Título Principal -->
+        <header class="text-center mb-10">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-primary-blue mb-2">Metodologia</h1>
+            <p class="text-xl text-gray-600 font-medium">Inteligência Artificial Aplicada a Mercados Financeiros</p>
+        </header>
 
-<!--/wp:paragraph-->
+        <!-- Seção 1: Base de Dados e Variáveis Exógenas -->
+        <div class="bg-light-blue p-6 rounded-xl mb-8 shadow-md">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <svg class="icon text-primary-blue" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M5 11.45L12 16l7-4.55"/><path d="M5 15.45L12 20l7-4.55"/><polyline points="19 7 12 11 5 7"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
+                1. Coleta e Fontes de Dados
+            </h2>
+            <p class="text-gray-700">
+                A modelagem se inicia com uma robusta base de dados de negociações históricas diárias dos principais ativos da bolsa, com registros desde 2005, atualizados diariamente.
+            </p>
+            <p class="text-gray-700 mt-3">
+                O processo de criação de variáveis utiliza diferentes algoritmos de <i>I.A. e aprendizado de máquina</i> para incorporar <i>variáveis exógenas</i> essenciais, como:
+            </p>
+            <ul class="list-disc pl-5 mt-2 text-gray-700 space-y-1">
+                <li>Histórico de cotações diárias de bolsas externas (e.g., Nasdaq).</li>
+                <li>Séries de dados do BC (Banco Central) e Ipeadata.</li>
+                <li>Cotações de <i>commodities</i> consideradas correlacionadas com alguns ativos.</li>
+            </ul>
+        </div>
 
-<!--wp:paragraph-->
+        <!-- Seção 2: Processamento e Geração de Insights -->
+        <div class="p-6 rounded-xl mb-8 border border-gray-200 shadow-inner">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <svg class="icon text-primary-blue" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8.7l-4.2 4.2-2-2-3.6 3.6"/></svg>
+                2. Modelagem e Engenharia de Variáveis
+            </h2>
+            <p class="text-gray-700 mb-4">
+                Programas dedicados realizam a limpeza, normalização e padronização dos dados. A partir disso, são geradas estatísticas e insights, incluindo:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <ul class="list-disc pl-1 text-gray-700 space-y-1">
+                    <li>Tendências e <i>Forecast</i> (janelas móveis/deslizantes).</li>
+                    <li>Grau de inclinação de curvas e verificação de <i>outliers</i>.</li>
+                    <li>Médias Móveis.</li>
+                </ul>
+                <ul class="list-disc pl-1 text-gray-700 space-y-1">
+                    <li>Indicadores Técnicos (MACD, IFR, Estocástico, etc.).</li>
+                    <li>Correlação com dados exógenos.</li>
+                    <li>Processo de Computação Paralela para sensibilização.</li>
+                </ul>
+            </div>
+            <p class="mt-4 text-gray-700 font-semibold border-t pt-3 mt-3 border-gray-100">
+                As variáveis dependentes do modelo são: <span class="text-primary-blue">Comprar / Vender / Manter.</span>
+            </p>
+        </div>
 
-<!--/wp:paragraph-->
+        <!-- Seção 3: Algoritmos de Machine Learning e Consolidação -->
+        <div class="bg-light-blue p-6 rounded-xl mb-8 shadow-md">
+             <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <svg class="icon text-primary-blue" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><path d="M10 2v3"/><path d="M14 2v3"/><path d="M16 16h-4"/><path d="M10 16h-.01"/><path d="M7 16h-.01"/><path d="M13 19h-2"/></svg>
+                3. Arquitetura de I.A.
+            </h2>
+            <p class="text-gray-700">
+                Atualmente o módulo opera com 5 algoritmos de <i>machine learning</i> diferentes, cada um com suas especificidades em aprendizado supervisionado e não supervisionado.
+            </p>
+            <div class="bg-white p-4 rounded-lg mt-3 border border-primary-blue/30">
+                <p class="text-gray-700">
+                    <span class="font-bold text-primary-blue">Consolidação:</span> Os resultados são unificados e, dependendo do grau de confiança, um 6º algoritmo é acionado para confirmar o viés para o período indicado (totalmente parametrizável e variável).
+                </p>
+            </div>
+        </div>
 
-<!--wp:paragraph-->
+        <!-- Seção 4: Objetivo e Composição de Portfólio -->
+        <div class="p-6 rounded-xl mb-8 border border-gray-200 shadow-inner">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                <svg class="icon text-primary-blue" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l-5 5h10l-5-5z"/><path d="M12 22l5-5h-10l5 5z"/><rect x="2" y="7" width="20" height="10" rx="2"/></svg>
+                4. Foco: Swing Trading e Portfólio
+            </h2>
+            <p class="text-gray-700 mb-4">
+                O principal objetivo é simular os melhores pontos de entrada e de saída para cada ativo, considerando as margens projetadas para <i>Swing Trading</i>.
+            </p>
+            <p class="text-gray-700 border-l-4 border-accent-yellow pl-3 italic">
+                É fundamental que o módulo de composição de portfólio ideal seja combinado. A análise isolada dos resultados por ativo não garante o sucesso das simulações.
+            </p>
+        </div>
 
-<!--/wp:paragraph-->
+        <!-- Seção 5: Cautela e Fatores Externos (Destaque Importante) -->
+        <div class="bg-red-50 p-6 rounded-xl border-2 border-red-300 shadow-xl">
+            <h2 class="text-2xl font-bold text-red-700 mb-4 flex items-center">
+                <svg class="icon text-red-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                ATENÇÃO: Cautela e Observação
+            </h2>
+            <p class="text-red-700">
+                É importante destacar que a decisão final deve combinar essas projeções com <b>análises técnicas e fundamentalistas complementares</b>.
+            </p>
+            <p class="text-red-700 mt-3 font-medium">
+                O mercado possui um comportamento caótico, com volatilidade ampla. Oscilações decorrentes de fatores e notícias externas (empresas, política e economia) podem descolar as cotações dos modelos de <i>forecast</i>.
+            </p>
+            <p class="text-red-700 mt-3 italic">
+                Portanto, <b>cautela e observação</b> contínua são fundamentais em todos os cenários.
+            </p>
+        </div>
 
-<!--wp:paragraph-->
-
-<!--/wp:paragraph-->
-
-<!--wp:paragraph-->
-
-<!--/wp:paragraph-->
-
-<!--wp:paragraph-->
-
-<!--/wp:paragraph-->
-
-<!--wp:paragraph-->
-
-<!--/wp:paragraph-->
-
-<!--wp:paragraph-->
-
-<!--/wp:paragraph--></p><p><span style="font-family: verdana;">Importante destacar que, além dessas informações, é necessário combinar com análises técnicas e fundamentalistas complementares. Mas isso não basta para o processo decisório, pois em alguns casos, ocorrem oscilações decorrentes de fatores e notícias relacionadas a empresas, política e economia, descolando as cotações dos modelos de <em>forecast</em>. Por isso, cautela e observação são fundamentais para todos os cenários, pois o mercado possui comportamento caótico, com volatilidade ampla e sensibilidade ao cenário político econômico.</span></p>
-<div style="clear: both;"></div>
-</div>
-<div class="post-footer">
-<div class="post-footer-line post-footer-line-1">
-<span class="post-author vcard">
-</span>
-<span class="post-timestamp">
-</span>
-<span class="post-comment-link">
-</span>
-<span class="post-icons">
-</span>
-<div class="post-share-buttons goog-inline-block">
-<a class="goog-inline-block share-button sb-email" href="https://www.blogger.com/share-post.g?blogID=968456181210842601&amp;pageID=1427170410969906894&amp;target=email" target="_blank" title="Enviar por e-mail"><span class="share-button-link-text">Enviar por e-mail</span></a><a class="goog-inline-block share-button sb-blog" href="https://www.blogger.com/share-post.g?blogID=968456181210842601&amp;pageID=1427170410969906894&amp;target=blog" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=270,width=475&quot;); return false;" target="_blank" title="Postar no blog!"><span class="share-button-link-text">Postar no blog!</span></a><a class="goog-inline-block share-button sb-twitter" href="https://www.blogger.com/share-post.g?blogID=968456181210842601&amp;pageID=1427170410969906894&amp;target=twitter" target="_blank" title="Compartilhar no X"><span class="share-button-link-text">Compartilhar no X</span></a><a class="goog-inline-block share-button sb-facebook" href="https://www.blogger.com/share-post.g?blogID=968456181210842601&amp;pageID=1427170410969906894&amp;target=facebook" onclick="window.open(this.href, &quot;_blank&quot;, &quot;height=430,width=640&quot;); return false;" target="_blank" title="Compartilhar no Facebook"><span class="share-button-link-text">Compartilhar no Facebook</span></a><a class="goog-inline-block share-button sb-pinterest" href="https://www.blogger.com/share-post.g?blogID=968456181210842601&amp;pageID=1427170410969906894&amp;target=pinterest" target="_blank" title="Compartilhar com o Pinterest"><span class="share-button-link-text">Compartilhar com o Pinterest</span></a>
-</div>
-</div>
-<div class="post-footer-line post-footer-line-2">
-<span class="post-labels">
-</span>
-</div>
-<div class="post-footer-line post-footer-line-3">
-<span class="post-location">
-</span>
-</div>
-</div>
-</div>
+    </div>
