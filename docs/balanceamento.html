@@ -10,17 +10,34 @@ layout: default
 </div>
 
 <style>
-    /* Este CSS ajusta o layout da sua página */
-    /* Remove padding e margin do contêiner principal para evitar espaços extras */
-    .container {
+    /* Ajustes globais para garantir que o iframe ocupe toda a tela no mobile */
+    html, body {
+        margin: 0;
         padding: 0;
-        margin: 0 auto;
-        max-width: 100%;
+        height: 100%;
+        overflow: hidden; /* Evita rolagem dupla no pai */
     }
 
-    /* Garante que o iframe-wrapper não tenha padding que possa cortar o conteúdo */
-    .iframe-wrapper {
+    .container {
         padding: 0;
+        margin: 0;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    .iframe-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Ocupa a altura total da viewport */
+        overflow-y: auto; /* Permite a rolagem interna */
+        -webkit-overflow-scrolling: touch; /* Rolagem suave no iOS */
+    }
+
+    .iframe-wrapper iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: none;
     }
 </style>
 
