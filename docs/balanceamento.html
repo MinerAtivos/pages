@@ -1,10 +1,29 @@
 ---
 layout: default
 ---
-<iframe src="https://minerativos2.github.io/balanceamento/index.html"
+<!-- https://minerativos2.github.io/p2/form_balance.html -->
+<div class="iframe-wrapper">
+    <iframe src="https://minerativos2.github.io/balanceamento/index.html"
             allowfullscreen
-            style="width: 100%; height: 100%; border: none;">
+            style="width: 100%; height: 100%; border: none; overflow: hidden"
+            scrolling="no">
     </iframe>
+</div>
+
+<style>
+    /* Este CSS ajusta o layout da sua página */
+    /* Remove padding e margin do contêiner principal para evitar espaços extras */
+    .container {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    /* Garante que o iframe-wrapper não tenha padding que possa cortar o conteúdo */
+    .iframe-wrapper {
+        padding: 0;
+    }
+</style>
 
 
 
