@@ -1,0 +1,62 @@
+name: Gerenciar Usuários (Manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Ação a realizar'
+        required: true
+        type: choice
+        options:
+          - 'Adicionar'
+          - 'Remover'
+          - 'Listar'
+      username:
+        description: 'Nome de usuário'
+        required: false
+      password:
+        description: 'Senha (apenas para Adicionar)'
+        required: false
+      is_admin:
+        description: 'É administrador?'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  manage_users:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install werkzeug
+      - name: Run management script
+        env:
+          ACTION: ${{ github.event.inputs.action }}
+          USERNAME: ${{ github.event.inputs.username }}
+          PASSWORD: ${{ github.event.inputs.password }}
+          IS_ADMIN: ${{ github.event.inputs.is_admin }}
+        run: |
+          if [ "$ACTION" == "Adicionar" ]; then
+            ADMIN_FLAG=""
+            if [ "$IS_ADMIN" == "true" ]; then
+              ADMIN_FLAG="--admin"
+            fi
+            python scripts/manage_users.py --add "$USERNAME" "$PASSWORD" $ADMIN_FLAG
+          elif [ "$ACTION" == "Remover" ]; then
+            python scripts/manage_users.py --delete "$USERNAME"
+          elif [ "$ACTION" == "Listar" ]; then
+            python scripts/manage_users.py --list
+          fi
+      - name: Commit changes
+        if: github.event.inputs.action != 'Listar'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/app.db
+          git commit -m "Admin: gerenciamento de usuários [skip ci]" || echo "Nenhuma mudança para commitar"
+          git push

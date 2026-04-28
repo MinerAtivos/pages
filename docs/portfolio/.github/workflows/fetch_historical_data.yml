@@ -1,0 +1,46 @@
+name: Fetch Historical Market Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      period:
+        description: 'Período de dados (ex: 5y, 10y, max)'
+        required: true
+        default: '5y'
+      filename:
+        description: 'Nome do arquivo (ex: market_data_2020_2025.json)'
+        required: true
+        default: 'market_data_historical.json'
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-historical:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install yfinance pandas
+
+      - name: Fetch historical data
+        run: python scripts/data_fetcher.py --period "${{ github.event.inputs.period }}" --output "${{ github.event.inputs.filename }}"
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/
+          git commit -m "Add historical market data: ${{ github.event.inputs.filename }} (period: ${{ github.event.inputs.period }})" || echo "No changes to commit"
+          git push
