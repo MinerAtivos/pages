@@ -10,7 +10,7 @@ from datetime import datetime
 import numpy as np
 import pandas as pd
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
+DATA_DIR = os.path.join(os.path.dirname(__file__), 'data') #DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 OUTPUT_FILE = os.path.join(DATA_DIR, 'portfolio_analysis.json')
 
 class PortfolioAnalyzer:
