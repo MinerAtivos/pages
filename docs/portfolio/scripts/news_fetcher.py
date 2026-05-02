@@ -126,7 +126,7 @@ def get_ai_summary(ticker, context, is_priority=False):
         return "Ativo com baixa frequência de notícias recentes."
 
     prompt = (
-        f"Aja como um analista B3. Resuma de forma objetiva e em português as notícias de {ticker}. "
+        f"Aja como um analista B3. Resuma em 2 frases, de forma objetiva e em português as notícias de {ticker}. "
         f"Seja direto sobre o sentimento (positivo/negativo/neutro).\nNotícias de múltiplas fontes:\n{context}"
     )
 
@@ -221,7 +221,7 @@ def main():
             news_output["market_summary"] = g4f.ChatCompletion.create(
                 model="openai",
                 provider=g4f.Provider.PollinationsAI,
-                messages=[{"role": "user", "content": f"Aja como um analista especialista em mercado de ações da B3. Resuma de forma objetiva e em português o clima do mercado B3 hoje:\n{combined}"}],
+                messages=[{"role": "user", "content": f"Aja como um analista especialista em mercado de ações da B3. Resuma em 3 frases, de forma objetiva e em português o clima do mercado B3 hoje:\n{combined}"}],
             )
     except: pass
 
