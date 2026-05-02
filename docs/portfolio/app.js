@@ -811,11 +811,40 @@ class B3App {
 
     const data = this.marketNews.assets[ticker];
     this.$('newsModalTitle').textContent = `Resumo IA: ${ticker.replace('.SA', '')}`;
-    this.$('newsModalTickerName').textContent = ticker; // Fallback to ticker since full name isn't in news.json
-    this.$('newsModalUpdateDate').textContent = `Atualizado em ${new Date(data.updated_at).toLocaleString('pt-BR')}`;
+    this.$('newsModalTickerName').textContent = ticker;
+
+    let updateText = `Atualizado em ${new Date(data.updated_at).toLocaleString('pt-BR')}`;
+    if (data.period) updateText += ` | Período: ${data.period}`;
+    this.$('newsModalUpdateDate').textContent = updateText;
 
     // TextContent is safe from XSS
     this.$('newsModalText').textContent = data.summary;
+
+    const sourcesDiv = this.$('newsModalSources');
+    if (sourcesDiv) {
+      sourcesDiv.innerHTML = '';
+      if (data.sources && data.sources.length > 0) {
+        const title = document.createElement('p');
+        title.style.fontWeight = 'bold';
+        title.style.marginBottom = '0.5rem';
+        title.textContent = 'Fontes consultadas:';
+        sourcesDiv.appendChild(title);
+
+        const list = document.createElement('ul');
+        list.style.paddingLeft = '1.2rem';
+        data.sources.forEach((link, idx) => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = link;
+          a.target = '_blank';
+          a.textContent = `Notícia ${idx + 1}`;
+          a.style.color = 'var(--accent)';
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+        sourcesDiv.appendChild(list);
+      }
+    }
 
     this.$('newsModalOverlay').classList.add('show');
   }
