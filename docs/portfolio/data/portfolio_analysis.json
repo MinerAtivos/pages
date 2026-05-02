@@ -1,0 +1,79 @@
+{
+  "timestamp": "2026-02-24T12:21:21.055674",
+  "positions": [
+    {
+      "ticker": "PETR4.SA",
+      "name": "Petróleo Brasileiro S.A. - Petrobras",
+      "sector": "Energy",
+      "quantity": 100,
+      "current_price": 38.59,
+      "position_value": 3859.0,
+      "rentability_1y": 25.1,
+      "volatility": 1.53
+    },
+    {
+      "ticker": "VALE3.SA",
+      "name": "Vale S.A.",
+      "sector": "Basic Materials",
+      "quantity": 50,
+      "current_price": 87.39,
+      "position_value": 4369.5,
+      "rentability_1y": 50.66,
+      "volatility": 1.5
+    },
+    {
+      "ticker": "ITUB4.SA",
+      "name": "Itaú Unibanco Holding S.A.",
+      "sector": "Financial Services",
+      "quantity": 75,
+      "current_price": 47.45,
+      "position_value": 3558.75,
+      "rentability_1y": 36.61,
+      "volatility": 1.28
+    },
+    {
+      "ticker": "BBDC4.SA",
+      "name": "Banco Bradesco S.A.",
+      "sector": "Financial Services",
+      "quantity": 40,
+      "current_price": 21.23,
+      "position_value": 849.2,
+      "rentability_1y": 33.38,
+      "volatility": 1.62
+    },
+    {
+      "ticker": "ABEV3.SA",
+      "name": "Ambev S.A.",
+      "sector": "Consumer Defensive",
+      "quantity": 200,
+      "current_price": 16.19,
+      "position_value": 3238.0,
+      "rentability_1y": 32.69,
+      "volatility": 1.39
+    },
+    {
+      "ticker": "WEGE3.SA",
+      "name": "WEG S.A.",
+      "sector": "Industrials",
+      "quantity": 30,
+      "current_price": 51.97,
+      "position_value": 1559.1,
+      "rentability_1y": 23.19,
+      "volatility": 1.81
+    }
+  ],
+  "allocation": {
+    "PETR4.SA": 22.14,
+    "VALE3.SA": 25.06,
+    "ITUB4.SA": 20.41,
+    "BBDC4.SA": 4.87,
+    "ABEV3.SA": 18.57,
+    "WEGE3.SA": 8.94
+  },
+  "summary": {
+    "total_value": 17433.55,
+    "num_positions": 6,
+    "avg_rentability": 33.6,
+    "portfolio_volatility": 1.52
+  }
+}

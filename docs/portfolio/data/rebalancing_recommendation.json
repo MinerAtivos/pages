@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-02-21T16:18:43.161517",
+  "optimal_allocation": {
+    "tickers": [
+      "PETR4.SA",
+      "VALE3.SA",
+      "ITUB4.SA",
+      "BBDC4.SA",
+      "ABEV3.SA",
+      "WEGE3.SA"
+    ],
+    "weights": {
+      "PETR4.SA": 67.56,
+      "VALE3.SA": 0.0,
+      "ITUB4.SA": 32.44,
+      "BBDC4.SA": 0.0,
+      "ABEV3.SA": 0.0,
+      "WEGE3.SA": 0.0
+    },
+    "expected_return": 36.47,
+    "volatility": 1.62,
+    "sharpe_ratio": 16.3816,
+    "risk_free_rate": 10.0
+  },
+  "rebalancing_suggestions": [
+    {
+      "ticker": "PETR4.SA",
+      "name": "Petróleo Brasileiro S.A. - Petrobras",
+      "action": "COMPRAR",
+      "quantity": 210,
+      "current_allocation": 21.74,
+      "target_allocation": 67.56,
+      "price": 37.97,
+      "total_value": 7973.7
+    },
+    {
+      "ticker": "VALE3.SA",
+      "name": "Vale S.A.",
+      "action": "VENDER",
+      "quantity": 50,
+      "current_allocation": 24.85,
+      "target_allocation": 0.0,
+      "price": 86.81,
+      "total_value": 4340.5
+    },
+    {
+      "ticker": "ITUB4.SA",
+      "name": "Itaú Unibanco Holding S.A.",
+      "action": "COMPRAR",
+      "quantity": 40,
+      "current_allocation": 21.14,
+      "target_allocation": 32.44,
+      "price": 49.23,
+      "total_value": 1969.2
+    },
+    {
+      "ticker": "BBDC4.SA",
+      "name": "Banco Bradesco S.A.",
+      "action": "VENDER",
+      "quantity": 40,
+      "current_allocation": 4.98,
+      "target_allocation": 0.0,
+      "price": 21.76,
+      "total_value": 870.4
+    },
+    {
+      "ticker": "ABEV3.SA",
+      "name": "Ambev S.A.",
+      "action": "VENDER",
+      "quantity": 200,
+      "current_allocation": 18.36,
+      "target_allocation": 0.0,
+      "price": 16.03,
+      "total_value": 3206.0
+    },
+    {
+      "ticker": "WEGE3.SA",
+      "name": "WEG S.A.",
+      "action": "VENDER",
+      "quantity": 30,
+      "current_allocation": 8.93,
+      "target_allocation": 0.0,
+      "price": 51.99,
+      "total_value": 1559.7
+    }
+  ]
+}
