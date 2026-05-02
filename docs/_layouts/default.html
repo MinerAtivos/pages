@@ -24,10 +24,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 extend: {
                     colors: {
                         primary: '#2563eb',
-                        secondary: '#1e40af',
+                        secondary: '#1e3a8a',
                         accent: '#3b82f6',
-                        dark: '#1f2937',
-                        light: '#f9fafb'
+                        dark: '#0b0f19',
+                        light: '#f1f5f9'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -42,11 +42,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
+            background-color: var(--bg-slate-900);
+            color: var(--text-primary);
         }
         
         .ticker-container {
-            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            background: linear-gradient(90deg, #1e3a8a, #2563eb);
             color: white;
             overflow: hidden;
             position: relative;
@@ -65,7 +66,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
         .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
         }
         
@@ -110,9 +111,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         bottom: 0;
         width: 75%;
         max-width: 300px;
-        background-color: white;
+        background-color: var(--bg-slate-900);
         z-index: 100;
-        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        box-shadow: -2px 0 15px rgba(0,0,0,0.5);
     }
     </style>
 <body class="min-h-screen">
@@ -123,30 +124,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	
 </head>
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header style="background-color: #0b0f19" class="shadow-sm sticky top-0 z-50 backdrop-blur-md">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-chart-line text-primary text-2xl"></i>
-                <h1 class="text-xl font-bold text-dark">Miner<span class="text-primary">Ativos</span></h1>
+                <h1 class="text-xl font-bold text-gray-100">Miner<span class="text-primary">Ativos</span></h1>
             </div>
             <div class="hidden md:flex md:items-center md:space-x-8">
                 <nav class="flex flex-col md:flex-row md:space-x-8">
-					<a href="index.html" class="text-dark hover:text-primary font-medium">Início</a>
-                    <a href="#" class="text-dark hover:text-primary font-medium">Mercados</a>
-                    <!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
-					<a href="#oraculo" class="text-dark hover:text-primary font-medium">Forecast</a>
-					<a href="metodologia.html" class="text-dark hover:text-primary font-medium">Algoritmos</a>
-					<a href="#oraculo" class="text-dark hover:text-primary font-medium">Radar Intraday</a>
-					<a href="monitor.html" class="text-dark hover:text-primary font-medium">Monitor</a>
-					<a href="balanceamento.html" class="text-dark hover:text-primary font-medium">Balanceamento de portfólio</a>					                    
-                    <a href="metodologia.html" class="text-dark hover:text-primary font-medium">Sobre</a>					
+					<a href="index.html" class="text-gray-300 hover:text-blue-400 font-medium">Início</a>
+                    <a href="#" class="text-gray-300 hover:text-blue-400 font-medium">Mercados</a>
+                    <!--<a href="#" class="text-gray-300 hover:text-blue-400 font-medium">Insights</a>-->
+					<a href="#oraculo" class="text-gray-300 hover:text-blue-400 font-medium">Forecast</a>
+					<a href="metodologia.html" class="text-gray-300 hover:text-blue-400 font-medium">Algoritmos</a>
+					<a href="#oraculo" class="text-gray-300 hover:text-blue-400 font-medium">Radar Intraday</a>
+					<a href="monitor.html" class="text-gray-300 hover:text-blue-400 font-medium">Monitor</a>
+					<a href="balanceamento.html" class="text-gray-300 hover:text-blue-400 font-medium">Balanceamento de portfólio</a>
+                    <a href="metodologia.html" class="text-gray-300 hover:text-blue-400 font-medium">Sobre</a>
                 </nav>
             </div>
             <div class="flex items-center space-x-4">
-                <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-md font-medium" onclick="focarNoFormulario()">
+                <button class="bg-slate-900 hover:bg-primary text-white px-4 py-2 rounded-md font-medium" onclick="focarNoFormulario()">
                     Seguir
                 </button>
-                <button id="hamburger-button" class="md:hidden text-dark">
+                <button id="hamburger-button" class="md:hidden text-white">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
                 <script>
@@ -162,20 +163,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div id="mobile-menu" class="hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <div class="flex justify-end">
-                    <button id="close-button" class="text-dark p-2">
+                    <button id="close-button" class="text-white p-2">
                         <i class="fas fa-times text-xl"></i>
                     </button>
                 </div>
                 <nav class="flex flex-col space-y-2">
-					<a href="index.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Início</a>
-					<a href="#" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Mercados</a>
-                    <!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
-					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Forecast</a>
-					<a href="metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Algoritmos</a>
-					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Radar Intraday</a>
-					<a href="monitor.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Monitor</a>
-					<a href="balanceamento.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Balanceamento de portfólio</a>					                    
-                    <a href="metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+					<a href="index.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Início</a>
+					<a href="#" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Mercados</a>
+                    <!--<a href="#" class="text-gray-300 hover:text-blue-400 font-medium">Insights</a>-->
+					<a href="#oraculo" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Forecast</a>
+					<a href="metodologia.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Algoritmos</a>
+					<a href="#oraculo" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Radar Intraday</a>
+					<a href="monitor.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Monitor</a>
+					<a href="balanceamento.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Balanceamento de portfólio</a>
+                    <a href="metodologia.html" class="text-gray-300 hover:text-blue-400 block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
 					
                 </nav>
             </div>
@@ -192,7 +193,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 	<!-- trecho adaptado para captação de leads -->
 
-<section class="py-16 bg-primary text-white">
+<section class="py-16 bg-slate-900 text-white">
   <div class="container mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold mb-4">Mantenha-se à frente no mercado</h2>
     <p class="text-xl opacity-90 max-w-2xl mx-auto mb-8">
@@ -201,11 +202,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="message" class="message"></div>
     <form id="leadForm" class="flex flex-col gap-3 items-center max-w-md mx-auto">
       <input type="text" name="nome" id="nome" placeholder="Preencha o seu nome completo"
-        class="px-4 py-3 rounded-md text-dark w-full" required>
+        class="px-4 py-3 rounded-md bg-dark text-white w-full border border-gray-700" required>
       <input type="email" name="email" id="email" placeholder="Seu endereço de email"
-        class="px-4 py-3 rounded-md text-dark w-full hidden" required>
+        class="px-4 py-3 rounded-md bg-dark text-white w-full hidden border border-gray-700" required>
       <button type="submit"
-        class="bg-secondary hover:bg-blue-900 px-6 py-3 rounded-md font-semibold mt-2 hidden"
+        class="bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-md font-semibold mt-2 hidden"
         id="submitBtn">
         Inscrever <i class="fas fa-arrow-right ml-2"></i>
       </button>
