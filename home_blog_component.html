@@ -1,0 +1,57 @@
+<!--
+    COMPONENTE DE ÚLTIMOS POSTS DO BLOG
+    Instruções: Copie este trecho e cole no seu index.html onde desejar exibir os posts.
+-->
+
+<section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-2xl font-bold text-dark">Últimos do Blog</h2>
+            <a href="blog/index.html" class="text-primary hover:text-secondary font-medium">Ver tudo <i class="fas fa-arrow-right ml-1"></i></a>
+        </div>
+
+        <div id="home-blog-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Os posts serão carregados via JavaScript abaixo -->
+            <div class="animate-pulse bg-white rounded-xl h-64"></div>
+            <div class="animate-pulse bg-white rounded-xl h-64"></div>
+            <div class="animate-pulse bg-white rounded-xl h-64"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const blogGrid = document.getElementById('home-blog-grid');
+
+    fetch('blog/posts.json')
+        .then(response => response.json())
+        .then(posts => {
+            blogGrid.innerHTML = '';
+            // Pega os 3 posts mais recentes
+            const recentPosts = posts.slice(0, 3);
+
+            recentPosts.forEach(post => {
+                const date = new Date(post.date).toLocaleDateString('pt-BR');
+                blogGrid.innerHTML += `
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all cursor-pointer" onclick="window.location.href='blog/${post.path}'">
+                        <img src="${post.imageUrl}" alt="${post.title}" class="w-full h-40 object-cover">
+                        <div class="p-5">
+                            <div class="flex items-center text-xs text-gray-500 mb-2">
+                                <span>${date}</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-primary">${post.tags[0] || 'Mercado'}</span>
+                            </div>
+                            <h3 class="font-bold text-lg text-dark mb-2 line-clamp-2">${post.title}</h3>
+                            <p class="text-gray-600 text-sm line-clamp-2 mb-4">${post.description}</p>
+                            <span class="text-primary text-sm font-medium">Ler mais →</span>
+                        </div>
+                    </div>
+                `;
+            });
+        })
+        .catch(err => {
+            console.error('Erro ao carregar posts para a home:', err);
+            blogGrid.innerHTML = '<p class="col-span-3 text-center text-gray-400">Blog temporariamente indisponível.</p>';
+        });
+});
+</script>
