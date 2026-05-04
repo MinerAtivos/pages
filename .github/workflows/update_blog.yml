@@ -1,0 +1,40 @@
+name: Atualizar Pagina
+
+on:
+  push:
+    branches:
+      - main # Ou 'master', dependendo da sua branch
+  schedule:
+    - cron: '0 0 * * *' # Executa diariamente à meia-noite UTC (opcional)
+  workflow_dispatch: # Permite rodar manualmente na aba Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Necessário para fazer commit das alterações
+      
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Instalar dependências (se houver)
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Executar script
+        run: python update_blog.py
+
+      - name: Commit e Push das alterações
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          # Verifica se há alterações para commitar
+          git diff --quiet && git diff --staged --quiet || git commit -m "Atualizando página automaticamente"
+          git push
