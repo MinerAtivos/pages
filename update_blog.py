@@ -40,6 +40,9 @@ def update_blog():
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
 
+    if not os.path.exists(SOURCE_DIR):
+        os.makedirs(SOURCE_DIR)
+
     posts_registry = []
 
     # Processa cada arquivo na pasta source
@@ -58,7 +61,15 @@ def update_blog():
             clean_content = re.sub(r'<!--.*?-->', '', raw_content, flags=re.DOTALL).strip()
 
             title = metadata.get('title')
+
+            # Validação de data
             date_str = metadata.get('date', datetime.now().strftime('%Y-%m-%d'))
+            try:
+                datetime.strptime(date_str, '%Y-%m-%d')
+            except ValueError:
+                print(f"Aviso: Data inválida '{date_str}' em {filename}. Usando data atual.")
+                date_str = datetime.now().strftime('%Y-%m-%d')
+
             tags = [tag.strip() for tag in metadata.get('tags', '').split(',') if tag.strip()]
 
             # Lógica de imagem
@@ -104,13 +115,13 @@ def update_blog():
     with open(POSTS_JSON, 'w', encoding='utf-8') as f:
         json.dump(posts_registry, f, indent=2, ensure_ascii=False)
 
-    print(f"Blog atualizado with {len(posts_registry)} postagens.")
+    print(f"Blog atualizado com {len(posts_registry)} postagens.")
 
 def generate_post_html(post, content, output_path):
     # Carrega o layout default
     layout_path = os.path.join('docs', '_layouts', 'default.html')
     if not os.path.exists(layout_path):
-        # Fallback básico se o layout não existir (embora deva existir)
+        # Fallback básico se o layout não existir
         layout = "<html><body>{{ content }}</body></html>"
     else:
         with open(layout_path, 'r', encoding='utf-8') as f:
@@ -119,9 +130,13 @@ def generate_post_html(post, content, output_path):
     # Prepara o conteúdo do post com visual moderno
     tags_html = "".join([f'<span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#{tag}</span>' for tag in post['tags']])
 
-    # Garantir que a imagem da capa use o caminho correto relativo ao post (que está em posts/)
-    # Se a imageUrl for 'assets/blog/img.png', vira '../../assets/blog/img.png'
-    # Se for uma URL absoluta, mantém.
+    # Formatação da data para exibição
+    try:
+        display_date = datetime.strptime(post['date'], '%Y-%m-%d').strftime('%d/%m/%Y')
+    except ValueError:
+        display_date = post['date']
+
+    # Garantir que a imagem da capa use o caminho correto relativo ao post
     display_image = post['imageUrl']
     if not display_image.startswith('http') and not display_image.startswith('/'):
         display_image = '../../' + display_image.replace('../../', '')
@@ -130,7 +145,7 @@ def generate_post_html(post, content, output_path):
     <article class="max-w-4xl mx-auto px-4 py-12">
         <header class="mb-8">
             <div class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
-                <time datetime="{post['date']}">{datetime.strptime(post['date'], '%Y-%m-%d').strftime('%d/%m/%Y')}</time>
+                <time datetime="{post['date']}">{display_date}</time>
                 <span>•</span>
                 <div class="flex">{tags_html}</div>
             </div>
@@ -152,7 +167,6 @@ def generate_post_html(post, content, output_path):
     final_html = layout.replace('{{ content }}', post_html)
 
     # Ajuste de caminhos para arquivos na pasta posts/ (sobem dois níveis)
-    # Procuramos por href e src que apontam para arquivos na raiz do docs/
     final_html = final_html.replace('href="style.css"', 'href="../style.css"')
     final_html = final_html.replace('src="script.js"', 'src="../script.js"')
     final_html = final_html.replace('href="favicon.png"', 'href="../favicon.png"')
