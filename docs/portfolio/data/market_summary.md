@@ -4,18 +4,18 @@
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SMFT3.SA | Smartfit Escola de Ginástica e Dança S.A. | R$ 20.60 | R$ 18.18 | **+13.31%** 🚀 | -1.15% ⬇️ |
-| RVEE3.SA | RVEE3.SA | R$ 0.97 | R$ 0.88 | **+10.23%** 🚀 | -77.05% ⬇️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.13 | R$ 0.12 | **+8.33%** 🚀 | -98.34% ⬇️ |
-| INTB3.SA | Intelbras S.A. - Indústria de Telecomunicação Eletrônica Brasileira | R$ 15.14 | R$ 14.00 | **+8.14%** 🚀 | -72.46% ⬇️ |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 0.14 | R$ 0.13 | **+7.69%** 🚀 | -90.60% ⬇️ |
+| SMFT3.SA | Smartfit Escola de Ginástica e Dança S.A. | R$ 20.30 | R$ 18.18 | **+11.66%** 🚀 | +343.03% ⬆️ |
+| RVEE3.SA | RVEE3.SA | R$ 0.97 | R$ 0.88 | **+10.23%** 🚀 | +83.61% ⬆️ |
+| INTB3.SA | Intelbras S.A. - Indústria de Telecomunicação Eletrônica Brasileira | R$ 15.37 | R$ 14.00 | **+9.79%** 🚀 | +136.21% ⬆️ |
+| TOTS3.SA | TOTVS S.A. | R$ 36.23 | R$ 33.10 | **+9.46%** 🚀 | +92.52% ⬆️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.13 | R$ 0.12 | **+8.33%** 🚀 | -88.16% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| CTAX3.SA | Contax Participações S.A. | R$ 0.62 | R$ 0.71 | **-12.68%** 📉 | -64.38% ⬇️ |
-| ESPA3.SA | MPM Corpóreos S.A. | R$ 0.95 | R$ 1.02 | **-6.86%** 📉 | +2.78% ⬆️ |
-| VLID3.SA | Valid Soluções S.A. | R$ 18.36 | R$ 19.40 | **-5.36%** 📉 | -76.46% ⬇️ |
-| AXIA6.SA | AXIA Energia SA | R$ 64.88 | R$ 68.25 | **-4.94%** 📉 | -82.03% ⬇️ |
-| RDOR3.SA | Rede D'Or São Luiz S.A. | R$ 38.40 | R$ 40.35 | **-4.83%** 📉 | -71.82% ⬇️ |
+| MWET4.SA | Wetzel S.A. | R$ 13.80 | R$ 15.80 | **-12.66%** 📉 | +7.69% ⬆️ |
+| CBEE3.SA | Ampla Energia e Serviços S.A. | R$ 9.25 | R$ 10.57 | **-12.49%** 📉 | 0.00% — |
+| VLID3.SA | Valid Soluções S.A. | R$ 17.25 | R$ 19.40 | **-11.08%** 📉 | +161.94% ⬆️ |
+| ESPA3.SA | MPM Corpóreos S.A. | R$ 0.92 | R$ 1.02 | **-9.80%** 📉 | +533.04% ⬆️ |
+| UCAS3.SA | UCAS3.SA | R$ 1.32 | R$ 1.43 | **-7.69%** 📉 | -75.67% ⬇️ |
