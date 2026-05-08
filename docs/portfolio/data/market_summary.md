@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-05-07
+## Resumo de Mercado - 2026-05-08
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SMFT3.SA | Smartfit Escola de Ginástica e Dança S.A. | R$ 20.30 | R$ 18.18 | **+11.66%** 🚀 | +343.03% ⬆️ |
-| RVEE3.SA | RVEE3.SA | R$ 0.97 | R$ 0.88 | **+10.23%** 🚀 | +83.61% ⬆️ |
-| INTB3.SA | Intelbras S.A. - Indústria de Telecomunicação Eletrônica Brasileira | R$ 15.37 | R$ 14.00 | **+9.79%** 🚀 | +136.21% ⬆️ |
-| TOTS3.SA | TOTVS S.A. | R$ 36.23 | R$ 33.10 | **+9.46%** 🚀 | +92.52% ⬆️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.13 | R$ 0.12 | **+8.33%** 🚀 | -88.16% ⬇️ |
+| INEP3.SA | Inepar S.A. Indústria e Construções | R$ 2.48 | R$ 2.15 | **+15.35%** 🚀 | +388.41% ⬆️ |
+| MEAL3.SA | International Meal Company Alimentação S.A. | R$ 1.09 | R$ 0.99 | **+10.10%** 🚀 | +530.46% ⬆️ |
+| GEPA4.SA | Rio Paranapanema Energia S.A. | R$ 42.08 | R$ 38.66 | **+8.85%** 🚀 | -27.27% ⬇️ |
+| VLID3.SA | Valid Soluções S.A. | R$ 18.75 | R$ 17.25 | **+8.70%** 🚀 | +165.77% ⬆️ |
+| YDUQ3.SA | Yduqs Participações S.A. | R$ 10.96 | R$ 10.16 | **+7.87%** 🚀 | +108.52% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| MWET4.SA | Wetzel S.A. | R$ 13.80 | R$ 15.80 | **-12.66%** 📉 | +7.69% ⬆️ |
-| CBEE3.SA | Ampla Energia e Serviços S.A. | R$ 9.25 | R$ 10.57 | **-12.49%** 📉 | 0.00% — |
-| VLID3.SA | Valid Soluções S.A. | R$ 17.25 | R$ 19.40 | **-11.08%** 📉 | +161.94% ⬆️ |
-| ESPA3.SA | MPM Corpóreos S.A. | R$ 0.92 | R$ 1.02 | **-9.80%** 📉 | +533.04% ⬆️ |
-| UCAS3.SA | UCAS3.SA | R$ 1.32 | R$ 1.43 | **-7.69%** 📉 | -75.67% ⬇️ |
+| LJQQ3.SA | Lojas Quero-Quero S.A. | R$ 1.54 | R$ 1.95 | **-21.03%** 📉 | +514.35% ⬆️ |
+| MDIA3.SA | M. Dias Branco S.A. Indústria e Comércio de Alimentos | R$ 21.25 | R$ 24.64 | **-13.76%** 📉 | +528.01% ⬆️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.26 | R$ 1.46 | **-13.70%** 📉 | -17.69% ⬇️ |
+| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 2.21 | R$ 2.50 | **-11.60%** 📉 | +14.26% ⬆️ |
+| EMBJ3.SA | Embraer S.A. | R$ 73.78 | R$ 83.32 | **-11.45%** 📉 | +322.09% ⬆️ |
