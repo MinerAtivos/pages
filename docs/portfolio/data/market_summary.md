@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-05-05
+## Resumo de Mercado - 2026-05-08
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| OIBR3.SA | Oi S.A. | R$ 0.13 | R$ 0.11 | **+18.18%** 🚀 | -6.91% ⬇️ |
-| RVEE3.SA | RVEE3.SA | R$ 1.10 | R$ 0.95 | **+15.79%** 🚀 | -64.71% ⬇️ |
-| ABEV3.SA | Ambev S.A. | R$ 16.65 | R$ 14.44 | **+15.30%** 🚀 | +341.12% ⬆️ |
-| UNIP5.SA | Unipar Carbocloro S.A. | R$ 65.88 | R$ 60.31 | **+9.24%** 🚀 | +333.33% ⬆️ |
-| BOBR4.SA | Bombril S.A. | R$ 1.36 | R$ 1.25 | **+8.80%** 🚀 | -87.53% ⬇️ |
+| INEP3.SA | Inepar S.A. Indústria e Construções | R$ 2.48 | R$ 2.15 | **+15.35%** 🚀 | +388.41% ⬆️ |
+| MEAL3.SA | International Meal Company Alimentação S.A. | R$ 1.09 | R$ 0.99 | **+10.10%** 🚀 | +530.46% ⬆️ |
+| GEPA4.SA | Rio Paranapanema Energia S.A. | R$ 42.08 | R$ 38.66 | **+8.85%** 🚀 | -27.27% ⬇️ |
+| VLID3.SA | Valid Soluções S.A. | R$ 18.75 | R$ 17.25 | **+8.70%** 🚀 | +165.77% ⬆️ |
+| YDUQ3.SA | Yduqs Participações S.A. | R$ 10.96 | R$ 10.16 | **+7.87%** 🚀 | +108.52% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.12 | R$ 0.13 | **-7.69%** 📉 | -37.04% ⬇️ |
-| RCSL3.SA | Recrusul S/A | R$ 0.40 | R$ 0.43 | **-6.98%** 📉 | +87.75% ⬆️ |
-| DOTZ3.SA | Dotz S.A. | R$ 3.18 | R$ 3.38 | **-5.92%** 📉 | +132.25% ⬆️ |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 0.19 | R$ 0.20 | **-5.00%** 📉 | +47.19% ⬆️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.58 | R$ 0.61 | **-4.92%** 📉 | +32.71% ⬆️ |
+| LJQQ3.SA | Lojas Quero-Quero S.A. | R$ 1.54 | R$ 1.95 | **-21.03%** 📉 | +514.35% ⬆️ |
+| MDIA3.SA | M. Dias Branco S.A. Indústria e Comércio de Alimentos | R$ 21.25 | R$ 24.64 | **-13.76%** 📉 | +528.01% ⬆️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.26 | R$ 1.46 | **-13.70%** 📉 | -17.69% ⬇️ |
+| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 2.21 | R$ 2.50 | **-11.60%** 📉 | +14.26% ⬆️ |
+| EMBJ3.SA | Embraer S.A. | R$ 73.78 | R$ 83.32 | **-11.45%** 📉 | +322.09% ⬆️ |
