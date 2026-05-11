@@ -1208,10 +1208,10 @@ class B3App {
       const margin = price > 0 ? ((priceCeiling - price) / price * 100) : 0;
       const currentYield = price > 0 ? (annualDpa / price * 100) : 0;
 
-      let rec = "VENDER";
-      if (margin > 20) rec = "COMPRAR (ALTA MARGEM)";
-      else if (margin > 0) rec = "COMPRAR";
-      else if (margin > -10) rec = "MANTER";
+      let rec = "diminuir";
+      if (margin > 20) rec = "aumentar (ALTA MARGEM)";
+      else if (margin > 0) rec = "aumentar";
+      else if (margin > -10) rec = "manter";
 
       analyses.push({
         ticker, name: asset.name, current_price: price,
@@ -1221,9 +1221,9 @@ class B3App {
     }
 
     const summary = {
-      buy_signals: analyses.filter(a => a.recommendation.includes('COMPRAR')).length,
-      hold_signals: analyses.filter(a => a.recommendation.includes('MANTER')).length,
-      sell_signals: analyses.filter(a => a.recommendation.includes('VENDER')).length
+      buy_signals: analyses.filter(a => a.recommendation.includes('aumentar')).length,
+      hold_signals: analyses.filter(a => a.recommendation.includes('manter')).length,
+      sell_signals: analyses.filter(a => a.recommendation.includes('diminuir')).length
     };
 
     this.barsiResults = { analyses, summary };
