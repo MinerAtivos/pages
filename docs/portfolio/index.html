@@ -67,7 +67,7 @@
       <a href="#" class="nav-link" data-section="members" id="nav-members">
         <span class="nav-icon">👤</span> Área de Membros
       </a>
-      <a href="https://minerativos.com.br" class="nav-link" target="_top"> <!-- class="nav-link" id="nav-about" -->
+      <a href="https://minerativos.com.br" class="nav-link" target="_self"> <!-- class="nav-link" id="nav-about" -->
         <span class="nav-icon">ℹ️</span> Página principal
       </a>
     </nav>
@@ -829,8 +829,28 @@
             }
           }
         });
+		
+		//força navegação dos links do menu, pois o que ia para página inicial não estava funcionando
+		document.querySelectorAll('.nav-link').forEach(link => {
+			link.addEventListener('click', function(e) {
+				// Pega o href do link clicado
+				const href = this.getAttribute('href');
+				
+				// Se for um link externo (começa com http), força a navegação
+				if (href && href.startsWith('http')) {
+					window.location.href = href;
+				}
+			});
+		});
+
+		
+		
       </script>
     <!-- script para abrir mercado oriundo da página minerativos.com -->
+  
+  
+  
+  
   
 </body>
 </html>
