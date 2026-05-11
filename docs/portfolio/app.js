@@ -814,25 +814,17 @@ class B3App {
       return;
     }
 
-    this.$('marketInsightText').textContent = this.marketNews.market_summary || 'Sem resumo geral.';
+    const coverage = this.marketNews.coverage_period ? ` (Período: ${this.marketNews.coverage_period})` : '';
+    this.$('marketInsightText').textContent = (this.marketNews.market_summary || 'Sem resumo geral.') + coverage;
     this.$('newsLastUpdate').textContent = `Última atualização: ${new Date(this.marketNews.last_update).toLocaleString('pt-BR')}`;
 
     const grid = this.$('newsAssetsGrid');
     grid.innerHTML = '';
 
-    // Sanitization helper
-    const escapeHTML = (str) => {
-      if (!str) return '';
-      return str.replace(/[&<>"']/g, m => ({
-        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-      }[m]));
-    };
-
     const assets = Object.keys(this.marketNews.assets);
     const movers = this.marketNews.market_movers || [];
 
     assets.forEach(ticker => {
-      // Logic: If guest, only show market movers. If member, show all processed (which includes their portfolio)
       const isMover = movers.includes(ticker);
       if (!this.user && !isMover) return;
 
@@ -841,11 +833,11 @@ class B3App {
       card.className = 'card glass news-card';
       card.innerHTML = `
         <div class="news-card-header">
-          <span class="news-card-ticker">${escapeHTML(ticker.replace('.SA', ''))}</span>
+          <span class="news-card-ticker">${this.escapeHTML(ticker.replace('.SA', ''))}</span>
           <span style="font-size: 0.7rem; color: var(--text-muted);">${new Date(data.updated_at).toLocaleDateString('pt-BR')}</span>
         </div>
-        <div class="news-card-summary">${escapeHTML(data.summary)}</div>
-        <button class="btn btn-outline btn-sm" onclick="app.showAssetNews('${escapeHTML(ticker)}')" style="margin-top:auto">Ver Mais</button>
+        <div class="news-card-summary">${this.escapeHTML(data.summary)}</div>
+        <button class="btn btn-outline btn-sm" onclick="app.showAssetNews('${this.escapeHTML(ticker)}')" style="margin-top:auto">Ver Mais & Fontes</button>
       `;
       grid.appendChild(card);
     });
@@ -859,11 +851,56 @@ class B3App {
 
     const data = this.marketNews.assets[ticker];
     this.$('newsModalTitle').textContent = `Resumo IA: ${ticker.replace('.SA', '')}`;
-    this.$('newsModalTickerName').textContent = ticker; // Fallback to ticker since full name isn't in news.json
+    this.$('newsModalTickerName').textContent = ticker;
     this.$('newsModalUpdateDate').textContent = `Atualizado em ${new Date(data.updated_at).toLocaleString('pt-BR')}`;
 
-    // TextContent is safe from XSS
-    this.$('newsModalText').textContent = data.summary;
+    const modalText = this.$('newsModalText');
+    modalText.innerHTML = ''; // Limpa para reconstruir com links
+
+    // 1. Resumo IA
+    const summaryP = document.createElement('p');
+    summaryP.style.fontWeight = '600';
+    summaryP.style.marginBottom = '1.5rem';
+    summaryP.style.fontSize = '1.1rem';
+    summaryP.textContent = data.summary;
+    modalText.appendChild(summaryP);
+
+    // 2. Fontes e Notícias Originais
+    if (data.news_items && data.news_items.length > 0) {
+      const sourcesTitle = document.createElement('h4');
+      sourcesTitle.textContent = '📰 Principais Manchetes e Fontes:';
+      sourcesTitle.style.marginBottom = '0.5rem';
+      sourcesTitle.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+      sourcesTitle.style.paddingBottom = '0.5rem';
+      modalText.appendChild(sourcesTitle);
+
+      const list = document.createElement('ul');
+      list.style.listStyle = 'none';
+      list.style.padding = '0';
+
+      data.news_items.forEach(item => {
+        const li = document.createElement('li');
+        li.style.marginBottom = '1rem';
+
+        const dateStr = item.pubDate ? new Date(item.pubDate).toLocaleDateString('pt-BR') : 'Recente';
+
+        li.innerHTML = `
+          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.2rem;">
+            ${this.escapeHTML(item.source)} • ${dateStr}
+          </div>
+          <a href="${this.escapeHTML(item.link)}" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 0.95rem; line-height: 1.4; display: block;">
+            ${this.escapeHTML(item.title)} ↗
+          </a>
+        `;
+        list.appendChild(li);
+      });
+      modalText.appendChild(list);
+    } else {
+      const p = document.createElement('p');
+      p.textContent = 'Nenhuma fonte detalhada disponível no momento.';
+      p.style.fontStyle = 'italic';
+      modalText.appendChild(p);
+    }
 
     this.$('newsModalOverlay').classList.add('show');
   }
@@ -1963,7 +2000,15 @@ class B3App {
   /* ------------------------------------------------------------------
      Utilities
   ------------------------------------------------------------------ */
+  escapeHTML(str) {
+    if (!str) return '';
+    return str.toString().replace(/[&<>"']/g, m => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[m]));
+  }
+
   formatCurrency(v) {
+    if (v === null || v === undefined) return 'R$ 0,00';
     return 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 
