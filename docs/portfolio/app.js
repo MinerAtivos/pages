@@ -1671,10 +1671,10 @@ class B3App {
     let html = '';
     analyses.forEach(a => {
       let badgeClass = 'badge-none', badgeText = 'N/A';
-      if (a.recommendation.includes('COMPRAR')) { badgeClass = 'badge-buy'; badgeText = 'COMPRAR'; }
-      else if (a.recommendation.includes('MANTER')) { badgeClass = 'badge-hold'; badgeText = 'MANTER'; }
-      else if (a.recommendation.includes('VENDER')) { badgeClass = 'badge-sell'; badgeText = 'VENDER'; }
-      else if (a.recommendation.includes('SEM DADOS')) { badgeText = 'SEM DADOS'; }
+      if (a.recommendation.includes('COMPRAR')) { badgeClass = 'badge-buy'; badgeText = 'Aumentar'; }
+      else if (a.recommendation.includes('MANTER')) { badgeClass = 'badge-hold'; badgeText = 'Manter'; }
+      else if (a.recommendation.includes('VENDER')) { badgeClass = 'badge-sell'; badgeText = 'Diminuir'; }
+      else if (a.recommendation.includes('SEM DADOS')) { badgeText = 'sem dados'; }
 
       const marginClass = a.margin_of_safety > 0 ? 'positive' : 'negative';
 
