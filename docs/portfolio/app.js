@@ -638,79 +638,41 @@ class B3App {
   ------------------------------------------------------------------ */
   async loadMarketData() {
     try {
-      // 1. Carregar manifest para saber o timestamp da última atualização
-      const manifestRes = await fetch(`./data/manifest.json?t=${new Date().getTime()}`);
-      let files = ['market_data.json'];
-      let cacheKey = new Date().getTime();
+      // 1. Carregar manifest para saber quais arquivos existem
+      const manifestUrl = `./data/manifest.json?t=${new Date().getTime()}`;
+      const manifestRes = await fetch(manifestUrl);
 
+      let files = ['market_data.json']; // Fallback
       if (manifestRes.ok) {
         const manifest = await manifestRes.json();
         files = manifest.market_data_files || files;
-        // Usamos o timestamp do manifest para cache eficiente
-        cacheKey = manifest.last_update ? encodeURIComponent(manifest.last_update) : cacheKey;
       }
 
       console.log('Arquivos de mercado detectados:', files);
 
-      // 2. Carregar o arquivo PRINCIPAL primeiro (market_data.json)
-      // Ele contém os preços atuais e é pequeno, permitindo renderizar o dashboard rápido.
-      const primaryFile = files.find(f => f === 'market_data.json') || files[0];
-      const primaryRes = await fetch(`./data/${primaryFile}?v=${cacheKey}`);
-      if (primaryRes.ok) {
-        this.marketData = await primaryRes.json();
-        console.log('Dados primários carregados. Renderizando UI...');
-
-        // Renderização inicial rápida
-        await this.runAnalysis();
-        this.renderPositions();
-      }
-
-      // 3. Carregar arquivos HISTÓRICOS em segundo plano
-      const historicalFiles = files.filter(f => f !== primaryFile);
-      if (historicalFiles.length > 0) {
-        console.log('Carregando dados históricos em segundo plano...', historicalFiles);
-
-        // Carregamos em paralelo, mas sem dar 'await' no processo principal de boot
-        this.loadHistoricalDataBackground(historicalFiles, cacheKey);
-      }
-
-    } catch (err) {
-      console.error('Erro ao carregar dados de mercado:', err);
-      this.toast('Erro ao carregar dados: ' + err.message, 'error');
-    }
-  }
-
-  async loadHistoricalDataBackground(files, cacheKey) {
-    try {
+      // 2. Carregar todos os arquivos em paralelo
       const loadPromises = files.map(async (file) => {
         try {
-          const res = await fetch(`./data/${file}?v=${cacheKey}`);
+          const res = await fetch(`./data/${file}?t=${new Date().getTime()}`);
           if (res.ok) return await res.json();
         } catch (e) {
-          console.warn(`Erro ao carregar histórico ${file}:`, e);
+          console.warn(`Erro ao carregar ${file}:`, e);
         }
         return null;
       });
 
-      const historicalDataList = (await Promise.all(loadPromises)).filter(d => d !== null);
+      const dataList = (await Promise.all(loadPromises)).filter(d => d !== null);
 
-      if (historicalDataList.length > 0 && this.marketData) {
-        // Mesclar o histórico com o que já temos
-        const fullDataList = [this.marketData, ...historicalDataList];
-        this.marketData = this.mergeMarketData(fullDataList);
-
-        console.log('Histórico mesclado com sucesso. Atualizando análises...');
-
-        // Re-analisar com dados completos (dividendos históricos, etc)
-        await this.runAnalysis();
-        this.renderPositions();
-
-        // Se estiver na página de proventos ou barsi, atualiza elas também
-        if (this.currentPage === 'dividends') this.renderDividendsPage();
-        if (this.currentPage === 'barsi') this.renderBarsi();
+      if (dataList.length === 0) {
+        throw new Error('Nenhum dado de mercado pôde ser carregado.');
       }
+
+      // 3. Mesclar dados (Merge)
+      this.marketData = this.mergeMarketData(dataList);
+      console.log('Dados de mercado carregados e mesclados com sucesso');
     } catch (err) {
-      console.error('Erro no processamento de histórico em segundo plano:', err);
+      console.error('Erro ao carregar dados de mercado:', err);
+      this.toast('Erro ao carregar dados históricos: ' + err.message, 'error');
     }
   }
 
@@ -797,9 +759,7 @@ class B3App {
 
   async loadMarketNews() {
     try {
-      // Usamos um cache-buster de 1 hora para notícias para não carregar a cada refresh se não mudar
-      const hourKey = new Date().getHours();
-      const res = await fetch(`./data/market_news.json?h=${hourKey}`);
+      const res = await fetch(`./data/market_news.json?t=${new Date().getTime()}`);
       if (res.ok) {
         this.marketNews = await res.json();
       }
@@ -814,17 +774,25 @@ class B3App {
       return;
     }
 
-    const coverage = this.marketNews.coverage_period ? ` (Período: ${this.marketNews.coverage_period})` : '';
-    this.$('marketInsightText').textContent = (this.marketNews.market_summary || 'Sem resumo geral.') + coverage;
+    this.$('marketInsightText').textContent = this.marketNews.market_summary || 'Sem resumo geral.';
     this.$('newsLastUpdate').textContent = `Última atualização: ${new Date(this.marketNews.last_update).toLocaleString('pt-BR')}`;
 
     const grid = this.$('newsAssetsGrid');
     grid.innerHTML = '';
 
+    // Sanitization helper
+    const escapeHTML = (str) => {
+      if (!str) return '';
+      return str.replace(/[&<>"']/g, m => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[m]));
+    };
+
     const assets = Object.keys(this.marketNews.assets);
     const movers = this.marketNews.market_movers || [];
 
     assets.forEach(ticker => {
+      // Logic: If guest, only show market movers. If member, show all processed (which includes their portfolio)
       const isMover = movers.includes(ticker);
       if (!this.user && !isMover) return;
 
@@ -833,11 +801,11 @@ class B3App {
       card.className = 'card glass news-card';
       card.innerHTML = `
         <div class="news-card-header">
-          <span class="news-card-ticker">${this.escapeHTML(ticker.replace('.SA', ''))}</span>
+          <span class="news-card-ticker">${escapeHTML(ticker.replace('.SA', ''))}</span>
           <span style="font-size: 0.7rem; color: var(--text-muted);">${new Date(data.updated_at).toLocaleDateString('pt-BR')}</span>
         </div>
-        <div class="news-card-summary">${this.escapeHTML(data.summary)}</div>
-        <button class="btn btn-outline btn-sm" onclick="app.showAssetNews('${this.escapeHTML(ticker)}')" style="margin-top:auto">Ver Mais & Fontes</button>
+        <div class="news-card-summary">${escapeHTML(data.summary)}</div>
+        <button class="btn btn-outline btn-sm" onclick="app.showAssetNews('${escapeHTML(ticker)}')" style="margin-top:auto">Ver Mais</button>
       `;
       grid.appendChild(card);
     });
@@ -852,54 +820,38 @@ class B3App {
     const data = this.marketNews.assets[ticker];
     this.$('newsModalTitle').textContent = `Resumo IA: ${ticker.replace('.SA', '')}`;
     this.$('newsModalTickerName').textContent = ticker;
-    this.$('newsModalUpdateDate').textContent = `Atualizado em ${new Date(data.updated_at).toLocaleString('pt-BR')}`;
 
-    const modalText = this.$('newsModalText');
-    modalText.innerHTML = ''; // Limpa para reconstruir com links
+    let updateText = `Atualizado em ${new Date(data.updated_at).toLocaleString('pt-BR')}`;
+    if (data.period) updateText += ` | Período: ${data.period}`;
+    this.$('newsModalUpdateDate').textContent = updateText;
 
-    // 1. Resumo IA
-    const summaryP = document.createElement('p');
-    summaryP.style.fontWeight = '600';
-    summaryP.style.marginBottom = '1.5rem';
-    summaryP.style.fontSize = '1.1rem';
-    summaryP.textContent = data.summary;
-    modalText.appendChild(summaryP);
+    // TextContent is safe from XSS
+    this.$('newsModalText').textContent = data.summary;
 
-    // 2. Fontes e Notícias Originais
-    if (data.news_items && data.news_items.length > 0) {
-      const sourcesTitle = document.createElement('h4');
-      sourcesTitle.textContent = '📰 Principais Manchetes e Fontes:';
-      sourcesTitle.style.marginBottom = '0.5rem';
-      sourcesTitle.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
-      sourcesTitle.style.paddingBottom = '0.5rem';
-      modalText.appendChild(sourcesTitle);
+    const sourcesDiv = this.$('newsModalSources');
+    if (sourcesDiv) {
+      sourcesDiv.innerHTML = '';
+      if (data.sources && data.sources.length > 0) {
+        const title = document.createElement('p');
+        title.style.fontWeight = 'bold';
+        title.style.marginBottom = '0.5rem';
+        title.textContent = 'Fontes consultadas:';
+        sourcesDiv.appendChild(title);
 
-      const list = document.createElement('ul');
-      list.style.listStyle = 'none';
-      list.style.padding = '0';
-
-      data.news_items.forEach(item => {
-        const li = document.createElement('li');
-        li.style.marginBottom = '1rem';
-
-        const dateStr = item.pubDate ? new Date(item.pubDate).toLocaleDateString('pt-BR') : 'Recente';
-
-        li.innerHTML = `
-          <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.2rem;">
-            ${this.escapeHTML(item.source)} • ${dateStr}
-          </div>
-          <a href="${this.escapeHTML(item.link)}" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 0.95rem; line-height: 1.4; display: block;">
-            ${this.escapeHTML(item.title)} ↗
-          </a>
-        `;
-        list.appendChild(li);
-      });
-      modalText.appendChild(list);
-    } else {
-      const p = document.createElement('p');
-      p.textContent = 'Nenhuma fonte detalhada disponível no momento.';
-      p.style.fontStyle = 'italic';
-      modalText.appendChild(p);
+        const list = document.createElement('ul');
+        list.style.paddingLeft = '1.2rem';
+        data.sources.forEach((link, idx) => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = link;
+          a.target = '_blank';
+          a.textContent = `Notícia ${idx + 1}`;
+          a.style.color = 'var(--accent)';
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+        sourcesDiv.appendChild(list);
+      }
     }
 
     this.$('newsModalOverlay').classList.add('show');
@@ -911,8 +863,7 @@ class B3App {
 
   async loadMarketSummary() {
     try {
-      const hourKey = new Date().getHours();
-      const url = `./data/market_summary.json?h=${hourKey}`;
+      const url = `./data/market_summary.json?t=${new Date().getTime()}`;
       const res = await fetch(url);
       if (!res.ok) return;
       const summary = await res.json();
@@ -928,8 +879,7 @@ class B3App {
 
   async loadAssets() {
     try {
-      const hourKey = new Date().getHours();
-      const res = await fetch(`./assets.json?h=${hourKey}`);
+      const res = await fetch('./assets.json');
       if (!res.ok) throw new Error();
       const data = await res.json();
       this.assets = data.assets || [];
@@ -971,8 +921,7 @@ class B3App {
       }
     } else {
       try {
-        const hourKey = new Date().getHours();
-        const res = await fetch(`./sample_portfolio.json?h=${hourKey}`);
+        const res = await fetch('./sample_portfolio.json');
         if (res.ok) {
           this.portfolio = await res.json();
           this.savePortfolio();
@@ -1100,7 +1049,7 @@ class B3App {
   ------------------------------------------------------------------ */
   getDividendsForTicker(ticker, transactions, startDate = null, endDate = null) {
     const asset = this.marketData.assets[ticker];
-    if (!asset || !asset.dividends || !asset.dividends.dates || asset.dividends.dates.length === 0) return 0;
+    if (!asset || !asset.dividends || !asset.dividends.dates) return 0;
 
     let total = 0;
     asset.dividends.dates.forEach((date, idx) => {
@@ -2000,15 +1949,7 @@ class B3App {
   /* ------------------------------------------------------------------
      Utilities
   ------------------------------------------------------------------ */
-  escapeHTML(str) {
-    if (!str) return '';
-    return str.toString().replace(/[&<>"']/g, m => ({
-      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-    }[m]));
-  }
-
   formatCurrency(v) {
-    if (v === null || v === undefined) return 'R$ 0,00';
     return 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 
