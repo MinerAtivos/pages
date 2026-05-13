@@ -148,12 +148,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <button id="hamburger-button" class="md:hidden text-dark">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
-                <script>
+                <!--<script>
                     function focarNoFormulario() {
                       const campoNome = document.getElementById("nome");
                       campoNome.scrollIntoView({ behavior: "smooth", block: "center" });
                       campoNome.focus();
                     }
+                </script>-->
+				<script>
+					function focarNoFormulario() {
+					  const campoNome = document.getElementById("nome");
+					  if (campoNome) {
+						campoNome.scrollIntoView({ behavior: "smooth", block: "center" });
+						campoNome.focus();
+					  }
+					}
+					
+					// Executa automaticamente ao carregar a página
+					window.addEventListener("DOMContentLoaded", () => {
+					  const urlParams = new URLSearchParams(window.location.search);
+					  
+					  if (urlParams.get("cadastro") === "true") {
+						// Pequeno atraso para garantir que a página renderizou totalmente
+						setTimeout(focarNoFormulario, 300); 
+					  }
+					});
                 </script>
             </div>
         </div>
