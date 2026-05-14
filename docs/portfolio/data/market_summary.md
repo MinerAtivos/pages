@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-05-13
+## Resumo de Mercado - 2026-05-14
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| TOKY3.SA | TOKY3.SA | R$ 0.20 | R$ 0.17 | **+17.65%** 🚀 | +204.04% ⬆️ |
-| LUPA3.SA | Lupatech S.A. | R$ 0.81 | R$ 0.73 | **+10.96%** 🚀 | +984.64% ⬆️ |
-| ATED3.SA | ATED3.SA | R$ 2.37 | R$ 2.20 | **+7.73%** 🚀 | +184.21% ⬆️ |
-| HETA4.SA | Hercules S.A - Fábrica de Talheres | R$ 5.10 | R$ 4.80 | **+6.25%** 🚀 | -47.83% ⬇️ |
-| NUTR3.SA | Nutriplant Indústria e Comércio S/A | R$ 2.50 | R$ 2.36 | **+5.93%** 🚀 | +148.39% ⬆️ |
+| ARND3.SA | Arandu Investimentos S.A. | R$ 0.75 | R$ 0.61 | **+22.95%** 🚀 | -96.10% ⬇️ |
+| MLAS3.SA | Grupo Multi S.A. | R$ 1.65 | R$ 1.43 | **+15.38%** 🚀 | +336.55% ⬆️ |
+| PDGR3.SA | PDG Realty S.A. Empreendimentos e Participações | R$ 1.64 | R$ 1.44 | **+13.89%** 🚀 | +648.73% ⬆️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 0.19 | R$ 0.17 | **+11.76%** 🚀 | -18.45% ⬇️ |
+| USIM5.SA | Usinas Siderúrgicas de Minas Gerais S.A. | R$ 9.89 | R$ 9.16 | **+7.97%** 🚀 | +57.70% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| CSED3.SA | Cruzeiro do Sul Educacional S.A. | R$ 4.37 | R$ 5.07 | **-13.81%** 📉 | +625.55% ⬆️ |
-| MLAS3.SA | Grupo Multi S.A. | R$ 1.43 | R$ 1.61 | **-11.18%** 📉 | +153.24% ⬆️ |
-| BOBR4.SA | Bombril S.A. | R$ 1.24 | R$ 1.39 | **-10.79%** 📉 | -72.48% ⬇️ |
-| HBTS5.SA | Companhia Habitasul de Participações | R$ 29.50 | R$ 33.00 | **-10.61%** 📉 | +5200.00% ⬆️ |
-| ARML3.SA | Armac Locação, Logística e Serviços S.A. | R$ 3.64 | R$ 4.07 | **-10.57%** 📉 | +576.46% ⬆️ |
+| PATI4.SA | Panatlântica S.A. | R$ 30.00 | R$ 37.00 | **-18.92%** 📉 | +27.27% ⬆️ |
+| COCE3.SA | Companhia Energética do Ceará - COELCE | R$ 33.32 | R$ 38.00 | **-12.32%** 📉 | 0.00% — |
+| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 1.89 | R$ 2.13 | **-11.27%** 📉 | +185.79% ⬆️ |
+| SOND6.SA | Sondotécnica Engenharia de Solos S.A. | R$ 70.21 | R$ 77.77 | **-9.72%** 📉 | 0.00% — |
+| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 1.85 | R$ 2.04 | **-9.31%** 📉 | +72.42% ⬆️ |
