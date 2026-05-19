@@ -167,6 +167,7 @@ def generate_post_html(post, content, output_path):
     final_html = layout.replace('{{ content }}', post_html)
 
     # Ajuste de caminhos para arquivos na pasta posts/ (sobem dois níveis)
+    final_html = final_html.replace('src="cookie-consent.js"', 'src="../../cookie-consent.js"')
     final_html = final_html.replace('href="style.css"', 'href="../style.css"')
     final_html = final_html.replace('src="script.js"', 'src="../script.js"')
     final_html = final_html.replace('href="favicon.png"', 'href="../favicon.png"')
