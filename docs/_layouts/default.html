@@ -1,15 +1,9 @@
 <html lang="pt-br">
 	<head>
 		<link rel="icon" type="image/png" href="favicon.png">
-		
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NFF8PMR');</script>
-<!-- End Google Tag Manager -->
-		
+
+    <script src="cookie-consent.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MinerAtivos | Insights de Mercado</title>
@@ -37,55 +31,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
     </script>
     <style>
-	
+
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
         }
-        
+
         .ticker-container {
             background: linear-gradient(90deg, #2563eb, #3b82f6);
             color: white;
             overflow: hidden;
             position: relative;
         }
-        
+
         .ticker-content {
             display: inline-block;
             white-space: nowrap;
             animation: ticker 30s linear infinite;
         }
-        
+
         @keyframes ticker {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
-        
+
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             transition: all 0.3s ease;
         }
-        
+
         .chart-container {
             height: 300px;
             position: relative;
         }
-        
+
         .trend-up {
             color: #10b981;
         }
-        
+
         .trend-down {
             color: #ef4444;
         }
-        
+
         .trend-neutral {
             color: #6b7280;
         }
-		
+
 	.iframe-container {
       width: 100%;
       height: 100%;
@@ -115,13 +109,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     }
     </style>
-<body class="min-h-screen">
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NFF8PMR"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-	
 </head>
+<body class="min-h-screen">
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -138,8 +127,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<a href="metodologia.html" class="text-dark hover:text-primary font-medium">Algoritmos</a>
 					<a href="#oraculo" class="text-dark hover:text-primary font-medium">Radar Intraday</a>
 					<a href="monitor.html" class="text-dark hover:text-primary font-medium">Monitor</a>
-					<a href="balanceamento.html" class="text-dark hover:text-primary font-medium">Balanceamento de portfólio</a>					                    
-                    <a href="metodologia.html" class="text-dark hover:text-primary font-medium">Sobre</a>					
+					<a href="balanceamento.html" class="text-dark hover:text-primary font-medium">Balanceamento de portfólio</a>
+                    <a href="metodologia.html" class="text-dark hover:text-primary font-medium">Sobre</a>
                 </nav>
             </div>
             <div class="flex items-center space-x-4">
@@ -174,9 +163,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<a href="metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Algoritmos</a>
 					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Radar Intraday</a>
 					<a href="monitor.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Monitor</a>
-					<a href="balanceamento.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Balanceamento de portfólio</a>					                    
+					<a href="balanceamento.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Balanceamento de portfólio</a>
                     <a href="metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
-					
+
                 </nav>
             </div>
         </div>
@@ -187,7 +176,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main class="full-screen-main">
     {{ content }}
 </main>
-  
+
 <!-- até aqui vai o corpo da pagina-->
 
 	<!-- trecho adaptado para captação de leads -->
@@ -310,65 +299,65 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 <!-- trecho adaptado para captação de leads -->
-	 
-	
-	
+
+
+
 	<script>
     document.addEventListener('DOMContentLoaded', function() {
         const form = document.getElementById('leadForm');
         const submitBtn = document.getElementById('submitBtn');
         const messageDiv = document.getElementById('message');
-        
+
         // IMPORTANTE: Substitua esta URL pela URL do seu Google Apps Script
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec';
-        
+
         // Função para mostrar mensagens ao usuário
         function showMessage(text, type) {
             messageDiv.textContent = text;
             messageDiv.className = `message ${type} show`;
-            
+
             // Remove a mensagem após 5 segundos
             setTimeout(() => {
                 messageDiv.classList.remove('show');
             }, 5000);
         }
-        
+
         // Função para validar email
         function isValidEmail(email) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);
         }
-        
+
         // Função para formatar telefone (opcional)
         function formatPhone(phone) {
             // Remove todos os caracteres não numéricos
             const cleaned = phone.replace(/\D/g, '');
-            
+
             // Aplica máscara brasileira se tiver 10 ou 11 dígitos
             if (cleaned.length === 10) {
                 return cleaned.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
             } else if (cleaned.length === 11) {
                 return cleaned.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
             }
-            
+
             return phone; // Retorna original se não conseguir formatar
         }
-        
+
         // Função para validar o formulário
         function validateForm(formData) {
             const errors = [];
-            
+
             if (!formData.get('nome') || formData.get('nome').trim().length < 2) {
                 errors.push('Nome deve ter pelo menos 2 caracteres');
             }
-            
+
             if (!formData.get('email') || !isValidEmail(formData.get('email'))) {
                 errors.push('E-mail deve ter um formato válido');
             }
-            
+
             return errors;
         }
-        
+
         // Função para enviar dados para o Google Apps Script
         async function submitToGoogleScript(formData) {
             try {
@@ -380,51 +369,51 @@ document.addEventListener('DOMContentLoaded', function () {
                     },
                     body: new URLSearchParams(formData)
                 });
-                
+
                 // Como usamos 'no-cors', não podemos ler a resposta
                 // Assumimos sucesso se não houve erro na requisição
                 return { success: true };
-                
+
             } catch (error) {
                 console.error('Erro ao enviar dados:', error);
                 return { success: false, error: error.message };
             }
         }
-        
+
         // Função principal para processar o envio do formulário
         async function handleFormSubmit(event) {
             event.preventDefault();
-            
+
             // Desabilita o botão e mostra loading
             submitBtn.disabled = true;
             submitBtn.classList.add('loading');
-            
+
             try {
                 // Coleta os dados do formulário
                 const formData = new FormData(form);
-                
+
                 // Formata o telefone se fornecido
                 if (formData.get('telefone')) {
                     formData.set('telefone', formatPhone(formData.get('telefone')));
                 }
-                
+
                 // Valida os dados
                 const validationErrors = validateForm(formData);
                 if (validationErrors.length > 0) {
                     showMessage(validationErrors.join('. '), 'error');
                     return;
                 }
-                
+
                 // Envia os dados
                 const result = await submitToGoogleScript(formData);
-                
+
                 if (result.success) {
                     showMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
                     form.reset(); // Limpa o formulário
                 } else {
                     showMessage('Erro ao enviar mensagem. Tente novamente.', 'error');
                 }
-                
+
             } catch (error) {
                 console.error('Erro no envio:', error);
                 showMessage('Erro inesperado. Tente novamente mais tarde.', 'error');
@@ -434,12 +423,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 submitBtn.classList.remove('loading');
             }
         }
-        
+
         // Adiciona máscara de telefone em tempo real
         const phoneInput = document.getElementById('telefone');
         phoneInput.addEventListener('input', function(e) {
             let value = e.target.value.replace(/\D/g, '');
-            
+
             if (value.length <= 11) {
                 if (value.length <= 10) {
                     value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
@@ -449,7 +438,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 e.target.value = value;
             }
         });
-        
+
         // Adiciona validação em tempo real para email
         const emailInput = document.getElementById('email');
         emailInput.addEventListener('blur', function(e) {
@@ -459,10 +448,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 e.target.style.borderColor = '#e1e8ed';
             }
         });
-        
+
         // Adiciona o event listener para o envio do formulário
         form.addEventListener('submit', handleFormSubmit);
-        
+
         // Verifica se a URL do Google Script foi configurada
         if (GOOGLE_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec') {
             console.warn('⚠️ ATENÇÃO: Configure a URL do Google Apps Script na variável GOOGLE_SCRIPT_URL');
@@ -487,16 +476,16 @@ document.addEventListener('DOMContentLoaded', function () {
                         <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
                     </div>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Mercados</h4>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-white">Mercado de Ações</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white">Commodities</a></li>
-                        <li><a href="#oraculo" class="text-gray-400 hover:text-white">Altas e quedas</a></li>                        
+                        <li><a href="#oraculo" class="text-gray-400 hover:text-white">Altas e quedas</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Recursos</h4>
                     <ul class="space-y-2">
@@ -507,11 +496,11 @@ document.addEventListener('DOMContentLoaded', function () {
 					<li><a href="metodologia.html" class="text-gray-400 hover:text-white">Algoritmos</a></li>
 					<li><a href="#oraculo" class="text-gray-400 hover:text-white">Radar Intraday</a></li>
 					<li><a href="monitor.html" class="text-gray-400 hover:text-white">Monitor</a></li>
-					<li><a href="balanceamento.html" class="text-gray-400 hover:text-white">Balanceamento de portfólio</a></li>				                    
+					<li><a href="balanceamento.html" class="text-gray-400 hover:text-white">Balanceamento de portfólio</a></li>
                     <li><a href="metodologia.html" class="text-gray-400 hover:text-white">Sobre</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Quem somos</h4>
                     <ul class="space-y-2">
@@ -521,7 +510,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </ul>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 mb-4 md:mb-0">© 2025 MinerAtivos.</p>
                 <div class="flex space-x-6">
