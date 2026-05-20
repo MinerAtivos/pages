@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-05-19
+## Resumo de Mercado - 2026-05-20
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| DOHL4.SA | Döhler S.A. | R$ 3.84 | R$ 3.43 | **+11.95%** 🚀 | +250.44% ⬆️ |
-| ALPK3.SA | Allpark Empreendimentos, Participações e Serviços S.A. | R$ 4.40 | R$ 4.17 | **+5.52%** 🚀 | +212.73% ⬆️ |
-| CTAX3.SA | Contax Participações S.A. | R$ 0.61 | R$ 0.58 | **+5.17%** 🚀 | -41.71% ⬇️ |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 0.21 | R$ 0.20 | **+5.00%** 🚀 | +168.51% ⬆️ |
-| EQPA5.SA | Equatorial Pará Distribuidora de Energia S.A. | R$ 16.40 | R$ 15.62 | **+4.99%** 🚀 | -36.36% ⬇️ |
+| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 1.56 | R$ 1.26 | **+23.81%** 🚀 | +209.63% ⬆️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.25 | R$ 1.06 | **+17.92%** 🚀 | +51.17% ⬆️ |
+| HAGA3.SA | HAGA S/A Indústria e Comércio | R$ 2.83 | R$ 2.56 | **+10.55%** 🚀 | +13.85% ⬆️ |
+| CMIN3.SA | CSN Mineração S.A. | R$ 4.50 | R$ 4.08 | **+10.29%** 🚀 | +164.10% ⬆️ |
+| ANIM3.SA | Ânima Holding S.A. | R$ 3.39 | R$ 3.11 | **+9.00%** 🚀 | -8.34% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| FICT3.SA | Fictor Alimentos S.A. | R$ 0.20 | R$ 0.25 | **-20.00%** 📉 | -19.90% ⬇️ |
-| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 1.26 | R$ 1.49 | **-15.44%** 📉 | +138.03% ⬆️ |
-| TRAD3.SA | TC S.A. | R$ 1.48 | R$ 1.72 | **-13.95%** 📉 | +296.58% ⬆️ |
-| TOKY3.SA | TOKY3.SA | R$ 0.15 | R$ 0.17 | **-11.76%** 📉 | +6.94% ⬆️ |
-| PTNT4.SA | Pettenati S.A. Industria Têxtil | R$ 7.78 | R$ 8.61 | **-9.64%** 📉 | -98.82% ⬇️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 3.00 | R$ 4.51 | **-33.48%** 📉 | 0.00% — |
+| LIGT3.SA | Light S.A. | R$ 2.85 | R$ 4.18 | **-31.82%** 📉 | +660.79% ⬆️ |
+| RVEE3.SA | RVEE3.SA | R$ 0.76 | R$ 0.88 | **-13.64%** 📉 | -74.55% ⬇️ |
+| FICT3.SA | Fictor Alimentos S.A. | R$ 0.18 | R$ 0.20 | **-10.00%** 📉 | +356.63% ⬆️ |
+| RNEW4.SA | Renova Energia S.A. | R$ 0.89 | R$ 0.96 | **-7.29%** 📉 | +79.57% ⬆️ |
