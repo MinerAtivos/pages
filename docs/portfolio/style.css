@@ -145,6 +145,10 @@ body::after {
   border-top: 1px solid var(--border-glass);
 }
 
+.nav-icon, .nav-link span {
+  pointer-events: none;
+}
+
 /* -- Mobile header ----------------------------------------------------- */
 .mobile-header {
   display: none;

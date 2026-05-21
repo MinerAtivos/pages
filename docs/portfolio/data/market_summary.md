@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-05-20
+## Resumo de Mercado - 2026-05-15
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 1.56 | R$ 1.26 | **+23.81%** 🚀 | +209.63% ⬆️ |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.25 | R$ 1.06 | **+17.92%** 🚀 | +51.17% ⬆️ |
-| HAGA3.SA | HAGA S/A Indústria e Comércio | R$ 2.83 | R$ 2.56 | **+10.55%** 🚀 | +13.85% ⬆️ |
-| CMIN3.SA | CSN Mineração S.A. | R$ 4.50 | R$ 4.08 | **+10.29%** 🚀 | +164.10% ⬆️ |
-| ANIM3.SA | Ânima Holding S.A. | R$ 3.39 | R$ 3.11 | **+9.00%** 🚀 | -8.34% ⬇️ |
+| DOTZ3.SA | Dotz S.A. | R$ 3.92 | R$ 2.93 | **+33.79%** 🚀 | +1758.86% ⬆️ |
+| CTSA4.SA | Companhia Tecidos Santanense Ltda. | R$ 1.29 | R$ 1.14 | **+13.16%** 🚀 | +14.47% ⬆️ |
+| VITT3.SA | Vittia S.A. | R$ 3.45 | R$ 3.13 | **+10.22%** 🚀 | +257.09% ⬆️ |
+| BSLI4.SA | BRB - Banco de Brasília S.A. | R$ 3.83 | R$ 3.50 | **+9.43%** 🚀 | -39.77% ⬇️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.13 | R$ 0.12 | **+8.33%** 🚀 | -62.48% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 3.00 | R$ 4.51 | **-33.48%** 📉 | 0.00% — |
-| LIGT3.SA | Light S.A. | R$ 2.85 | R$ 4.18 | **-31.82%** 📉 | +660.79% ⬆️ |
-| RVEE3.SA | RVEE3.SA | R$ 0.76 | R$ 0.88 | **-13.64%** 📉 | -74.55% ⬇️ |
-| FICT3.SA | Fictor Alimentos S.A. | R$ 0.18 | R$ 0.20 | **-10.00%** 📉 | +356.63% ⬆️ |
-| RNEW4.SA | Renova Energia S.A. | R$ 0.89 | R$ 0.96 | **-7.29%** 📉 | +79.57% ⬆️ |
+| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.70 | R$ 4.22 | **-12.32%** 📉 | +193.27% ⬆️ |
+| TOKY3.SA | TOKY3.SA | R$ 0.17 | R$ 0.19 | **-10.53%** 📉 | +84.26% ⬆️ |
+| VVEO3.SA | CM Hospitalar S/A | R$ 1.21 | R$ 1.35 | **-10.37%** 📉 | +304.23% ⬆️ |
+| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 1.67 | R$ 1.85 | **-9.73%** 📉 | +5.68% ⬆️ |
+| TRIS3.SA | Trisul S.A. | R$ 4.17 | R$ 4.60 | **-9.35%** 📉 | +215.93% ⬆️ |

@@ -2,22 +2,27 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rebalanceamento de Portfólio</title>
-  <meta name="description" content="Plataforma inteligente de análise e rebalanceamento de portfólios de investimentos na B3.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>MinerAtivos - Rebalanceamento de Portfólio</title>
+  <meta name="description" content="Plataforma inteligente de análise e rebalanceamento de portfólios de investimentos na B3.">  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@3.0.0/dist/chartjs-chart-treemap.min.js"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="../cookie-consent.js"></script>
+  <script src="app.js"></script>
 </head>
 <body>
+
+
+
   <!-- Sidebar Navigation -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <span class="sidebar-logo">📊</span>
-      <span class="sidebar-title">Rebalanceamento<br><small>Portfólio</small></span>
+      <span class="sidebar-title">MinerAtivos<br><small>Portfólio</small></span>
     </div>
     <nav class="sidebar-nav">
       <div id="userProfile" class="user-profile-sidebar" style="display: none; padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 0.5rem; align-items: center; gap: 1rem;">
@@ -46,12 +51,12 @@
         <span class="nav-icon">🌍</span> Resumo de Mercado
       </a>
       <a href="#" class="nav-link" data-section="news" id="nav-news">
-        <span class="nav-icon">🤖</span> Insights do Mercado (IA)
+        <span class="nav-icon">🤖</span> Market Research (IA)
       </a>
       <a href="#" class="nav-link" data-section="members" id="nav-members">
         <span class="nav-icon">👤</span> Área de Membros
       </a>
-      <a href="https://minerativos.com.br" target="_top"> <!-- class="nav-link" id="nav-about" -->
+      <a href="https://minerativos.com.br" class="nav-link" target="_self"> <!-- class="nav-link" id="nav-about" -->
         <span class="nav-icon">ℹ️</span> Página principal
       </a>
     </nav>
@@ -62,7 +67,15 @@
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
-    <span class="mobile-title">📊 Rebalanceamento de Portfólio</span>
+    <!-- <span class="mobile-title">📊 MinerAtivos - Rebalanceamento de Portfólio</span> -->
+	<hgroup>
+    <h1 class="mobile-title">
+        📊 MinerAtivos
+    </h1>
+    <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">
+        Mercado e Balanceamento de Portfólio
+    </p>
+</hgroup>
   </header>
   <div class="overlay" id="overlay"></div>
 
@@ -125,13 +138,9 @@
           </div>
         </div>
       </div>
-
-
-      <div class="alert alert-info glass" style="margin-top:1.5rem;">
-        <strong>💡 Dica:</strong> Os dados do mercado são atualizados automaticamente uma vez por dia.
-      </div>
+	  	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 
     </section>
-<script src="app.js"></script>
+	  	   
     <!-- ============================================================ -->
     <!-- POSIÇÕES -->
     <!-- ============================================================ -->
@@ -188,8 +197,9 @@
           </table>
         </div>
       </div>
+	  	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 
     </section>
-
+	  
     <!-- ============================================================ -->
     <!-- PROVENTOS -->
     <!-- ============================================================ -->
@@ -315,10 +325,11 @@
       </div>
 
       <div class="barsi-summary glass" id="barsiSummary" style="display:none;">
-        <div class="summary-item"><span class="dot dot-green"></span> Comprar: <strong id="barsiBuy">0</strong></div>
+        <div class="summary-item"><span class="dot dot-green"></span> Aumentar: <strong id="barsiBuy">0</strong></div>
         <div class="summary-item"><span class="dot dot-yellow"></span> Manter: <strong id="barsiHold">0</strong></div>
-        <div class="summary-item"><span class="dot dot-red"></span> Vender: <strong id="barsiSell">0</strong></div>
+        <div class="summary-item"><span class="dot dot-red"></span> Diminuir: <strong id="barsiSell">0</strong></div>
       </div>
+	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 	  
     </section>
 
     <!-- ============================================================ -->
@@ -399,19 +410,16 @@
       <div class="card glass" id="rebalancePlaceholder">
         <p class="empty-state" style="padding:2rem;">Clique em <strong>"Otimizar Portfólio"</strong> para calcular a alocação ótima usando a Teoria de Markowitz.</p>
       </div>
+	  	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 
     </section>
-
+	  
     <!-- ============================================================ -->
     <!-- INSIGHTS DE MERCADO (IA) -->
     <!-- ============================================================ -->
     <section class="page" data-page="news" id="page-news">
       <div class="page-header">
-        <h1>Insights do Mercado (IA)</h1>
-        <p class="subtitle">Notícias e sentimentos gerados via Inteligência Generativa</p>
-      </div>
-
-      <div class="alert alert-info glass hidden" id="newsGuestTip">
-        <strong>💡 Dica:</strong> Você está vendo os insights dos principais ativos do mercado. <a href="#" onclick="app.showPage('members')" style="color: var(--accent); text-decoration: underline;">Acesse sua conta</a> para ver os resumos dos ativos da sua carteira.
+        <h1>Market Research</h1>
+        <p class="subtitle">Seu agente de busca e resumo das principais notícias e sentimentos de mercado utilizando IA Generativa</p>
       </div>
 
       <div id="newsContent">
@@ -425,6 +433,17 @@
           <!-- Asset news cards will be injected here -->
         </div>
       </div>
+	  
+      <div class="alert alert-info glass hidden" id="newsGuestTip">
+        <strong>💡 Dica:</strong> Você está vendo os insights dos ativos que foram destaque no dia. Para ver insights de todos os ativos da sua carteira, é necessário estar logado e clicar no ícone 🤖 localizado no final da linha de cada ativo listado em <a href="#" onclick="app.showPage('positions')" style="color: var(--accent); text-decoration: underline;">Posições</a>.
+      </div>
+	  <!-- 
+	  <div class="alert alert-info glass" style="margin-top:1.5rem;">
+        <strong>💡 Dica:</strong> Você está vendo os insights dos ativos que foram destaque no dia. Para ver insights de todos os ativos da sua carteira, é necessário estar logado e clicar no ícone 🤖 localizado no final da linha de cada ativo listado em <a href="#" onclick="app.showPage('positions')" style="color: var(--accent); text-decoration: underline;">Posições</a>.
+      </div>
+	  -->
+	  <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️ Este conteúdo foi consolidado por inteligência artificial com base em padrões de linguagem e probabilidade, podendo conter erros. Além disso, o conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 
+	  
     </section>
 
     <!-- ============================================================ -->
@@ -447,8 +466,8 @@
                 <tr>
                   <th>Ativo</th>
                   <th>Fech</th>
-                  <th>Variação</th>
-                  <th>DeltVol</th>
+                  <th>Var</th>
+                  <th>VarVol</th>
                 </tr>
               </thead>
               <tbody id="gainersBody">
@@ -468,8 +487,8 @@
                 <tr>
                   <th>Ativo</th>
                   <th>Fech</th>
-                  <th>Variação</th>
-                  <th>DeltVol</th>
+                  <th>Var</th>
+                  <th>VarVol</th>
                 </tr>
               </thead>
               <tbody id="losersBody">
@@ -487,6 +506,7 @@
           <canvas id="marketTreemap"></canvas>
         </div>
       </div>
+	  	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 
     </section>
 
     <!-- ============================================================ -->
@@ -615,6 +635,10 @@
         </div>
 
         <p class="license-text">MIT License — Você é livre para usar.</p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; font-size: 0.9rem;">
+          <a href="../politica-privacidade.html" style="color: var(--text-muted); text-decoration: underline;">Política de Privacidade</a>
+          <a href="../termos-uso.html" style="color: var(--text-muted); text-decoration: underline;">Termos de Uso</a>
+        </div>
       </div>
     </section>
 
@@ -718,6 +742,7 @@
             <li>✅ Ativos ilimitados</li>
             <li>✅ Sincronização automática</li>
             <li>✅ Preço-teto e Rebalanceamento</li>
+			<li>✅ Market Research de todos seus ativos cadastrados</li>
             <li>✅ Suporte prioritário</li>
           </ul>
         </div>
@@ -797,8 +822,29 @@
             }
           }
         });
+		
+		//força navegação dos links do menu, pois o que ia para página inicial não estava funcionando
+		document.querySelectorAll('.nav-link').forEach(link => {
+			link.addEventListener('click', function(e) {
+				// Pega o href do link clicado
+				const href = this.getAttribute('href');
+				
+				// Se for um link externo (começa com http), força a navegação
+				if (href && href.startsWith('http')) {
+					window.location.href = href;
+				}
+			});
+		});
+
+		
+		
       </script>
     <!-- script para abrir mercado oriundo da página minerativos.com -->
   
+  
+  
+  
+  
 </body>
+
 </html>
