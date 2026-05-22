@@ -670,11 +670,8 @@ input[type="number"]:focus, select:focus {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  /*transition: transform 0.2s, border-color 0.2s;
-  border: 1px solid rgba(255,255,255,0.05);*/
-  width: 100%; /*novo*/
-  max-width: 95%; /* Mantém uma margem mínima para não encostar na borda */
-  margin: 0 auto; /* Centraliza a coluna de texto */
+  transition: transform 0.2s, border-color 0.2s;
+  border: 1px solid rgba(255,255,255,0.05);  
 }
 
 .news-card:hover {
@@ -724,7 +721,7 @@ input[type="number"]:focus, select:focus {
 }
 
 .news-card-summary {
-  font-size: #0.95rem;
+  font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-primary);
   display: -webkit-box;
