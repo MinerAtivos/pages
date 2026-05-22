@@ -666,7 +666,7 @@ input[type="number"]:focus, select:focus {
 }
 
 .news-card {
-  padding: 1.5rem;
+  padding: 0.95rem; #1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -721,7 +721,7 @@ input[type="number"]:focus, select:focus {
 }
 
 .news-card-summary {
-  font-size: 0.625rem; #0.95rem;
+  font-size: #0.95rem;
   line-height: 1.6;
   color: var(--text-primary);
   display: -webkit-box;
