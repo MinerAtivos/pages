@@ -1,140 +1,134 @@
 {
-  "last_update": "2026-05-23T11:30:30.351702",
-  "market_last_date": "2026-05-21",
-  "market_summary": "Hoje o mercado B3 apresentou volatilidade acentuada, com grandes oscilações entre ações em recuperação judicial e empresas com resultados positivos;  \nocorreu ganho significativo em RVEE3.SA, enquanto FICT3.SA, ESTR4.SA e ONCO3.SA caíram drasticamente, mostrando forte sentimento negativo em setores críticos;  \nnão há consenso e a maioria das negociações segue em zona de cautela, refletindo um panorama ambíguo com pontos de ganho e perdas marcantes.",
+  "last_update": "2026-05-25T23:17:01.130077",
+  "market_last_date": "2026-05-25",
+  "market_summary": "O mercado brasileiro segue atento ao cenário fiscal e movimentações de commodities.",
   "assets": {
-    "RVEE3.SA": {
-      "summary": "Rvee (RVEE3) divulgou os resultados do primeiro trimestre de 2024, mostrando incremento de 12 % na receita operacional líquida e distribuiu dividendos de R$ 2,10 por cota, mantendo o pagamento de 1,20 % dividend yield. O ativo subiu 4,3 % no pregão, refletindo otimismo diante das perspectivas de expansão do portfólio e dos índices de ocupação.  \n\n**Sentimento:** positivo.",
-      "period": "De 23/10/2025 a 29/01/2026",
+    "MILS3.SA": {
+      "summary": "MILLS3 (MILS3) anunciou que a Loxam, grupo francês, assumirá o controle da empresa, ambientando uma Oferta Pública de Aquisição. A ação saltou de 14 % a 16 % na sequência do anúncio, refletindo otimismo e retorno positivo para os acionistas.  \n**Sentimento: positivo.**",
+      "period": "Em 25/05/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5FSkNGR1V0NUJqaGQzR3BqZUUwb1NneG5mbDRTbGlkSUtmSEtNd0lKUVQxTHc2LXlHd1QxN1dSY0xaU1BYTGxWSkhuNE51aFpKUlE?oc=5",
-        "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbHNCaDJpQ3lnbkhNMVZBR3FYYU5HWUZ4eU5NdURNNVlnRXNnZ0NTVTg0TUtsVVhEeUE3YUtnNHp1Z3dTa0ZGQV9xVENvTnZZY1kyaWhjY3ZSVW1nMnd1NzRhbmxGbDlPVkRsWlcteExtSzRXYmRjTnpKb0VsLWNFSHhCSmRlZldwMXJPRUkzcmg3WHN1NDEw0gGcAUFVX3lxTE10WnZLRTJ3MDFfYkgwdzlCUktUdEVJdjNRV09wUW1POG53bVVDYW8yLWUwYUJhYWpELWQzb1lHSU5rUjVLLVpxbk51dENTNkhrZWxBMTduYl9nY2IzZU80aGpURDl6ZzZHNlpETGN2aDBFbEdLNW1FVnBGYWRsNFVJZmx4eUJQbmNBWFV2bWdBLUoyV1BIR3RSaHNQbg?oc=5"
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxPbDRMSG5JYlc4bTVZVHZ6cGp2Y3NWNWVqaUtKY3NyYUY1R2FmcW5tc3hWaFV4R3hWbzJDaUR3S1loUzF4Z2FUbUQxbVloYTVVVlc5aW13c1N3LXJHMll6cnk3OVNsNmtoZWN4VE1YTkVBdy12eFJmUUM2aDFRN0RKOGZWNURsd1F4dUtsaTkwclNicTJ2amNicGFENVN2YjJCSV9XZ2ZkemJVVE1CWkVLNVdSdVFQWkJnSFV0LXdhU0kxSHRUbmd2U0pVQlk?oc=5",
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQQ1dUUGx1QWFuZ1RuT1J1bVpJSi1DWEhCMEdod1FDM1pPdWRydElYZjczcmhYS21CUlFDaE12SzJYRUlZZG1wRzJXMU1iTFJST0NFWjl0S2Z0c0s2ZVdJVWJPbDJFWkZmcnppSXBRMnNGU1E4UzRXOWsyOFUwUmxVS2IwOTY3ZHc0YkpNM19TT3AzZ0tWUVB3Z3FXQWlST09BRHhGRnVnX2VGcURDalNrZEtUZHc3UG_SAbwBQVVfeXFMUDdDaWpJUmd6Y0tMTk0wZkxtcGFtTEpxNm9RN2FuaWNRcmp0dVFUNGp2VmU3WGFJdXVBNmRBeGk4ejZtZkh3VU1acGlmdGptZ0NvWTA1QURuYVB2aDV2ZXg1aWtjU1ZoYzhHeUtjTDRCeGZqRl9aZjBHcE1DM3d1dy1LY0dORzl0T1dMQTZ5Z2FBWXFBNUFRd3hiTGVpRUtHUmt5akNucTVLNDJEWndNY3JzcW1tTDMyVjYwQmI?oc=5",
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxOTEJrODRNTV9PMFR3NjNPX1UzZDlKd3I1SWZPa0VqMllNeERvM2dvUnprT09PaG9vUVRrUHNXVUxudGZKVVRHUldidkNVaXl1QVBxZ3VLa04ycGl0NGZQbm9vRmx5cjRJRkJlZ3dvakNMbTdZUGR3cTY2N1JwSGlfb3NYUjHSAYoBQVVfeXFMTjhlV2RmTzRFUFluVUdXVHhZeWVBNE1ubVJoa1lldG1lM2tKakZMYVk3MVZ4akJldmxOeHFiNDNITXlJd2JMbDE1bFlXWnZPTU1sUGltakFJYm5BNzhUbThBZnl6OGtBVS14LWJ3NmhHdUQ4WTJsOXRnT2dUM2xrRG40alhOeEpETV9B?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxQd1Vrcm1mS3RzbmJyYzVFZnlnRE9hUXJYc0xCWGhxVGRpTFlYaHhBOVlJSHktR2VWaWF4UGtaV2k2Yi12QnJWTEJ2dWJ5Y0Q5WVI1MWZKY0JrUjZfTE1FMlFRanBDa0NkWlBZblcwMExTcVVpbGhWV3JVc1RFU2paTWhuU3VCT3VEZjB2MzRVVU9zbk94akg2b0tmeFMyMGYydWJlTFhfbXVBVjVRV091akVtVdIBswFBVV95cUxQd1Vrcm1mS3RzbmJyYzVFZnlnRE9hUXJYc0xCWGhxVGRpTFlYaHhBOVlJSHktR2VWaWF4UGtaV2k2Yi12QnJWTEJ2dWJ5Y0Q5WVI1MWZKY0JrUjZfTE1FMlFRanBDa0NkWlBZblcwMExTcVVpbGhWV3JVc1RFU2paTWhuU3VCT3VEZjB2MzRVVU9zbk94akg2b0tmeFMyMGYydWJlTFhfbXVBVjVRV091akVtVQ?oc=5"
       ],
-      "updated_at": "2026-05-23T11:30:32.116775",
-      "is_outdated": true,
-      "last_close": 0.87,
-      "daily_delta": 0.14473684210526305,
-      "price_date": "2026-05-21"
-    },
-    "FICT3.SA": {
-      "summary": "A Fictor Alimentos (FICT3) perdeu quase 80% de seu valor, transformando a ação em centavo e acionando alerta da B3. Essa queda dramática reflete um sentimento negativo forte no mercado.",
-      "period": "De 26/03/2026 a 03/04/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPejFPYURkWmNvM2VoZGw1U1pTMFBUNzlva0FnaGlzT2MxYkQyMW5Gb0dPNWl6bktaRlA1MXNaTVd4MFo0b01TTzZZNHRVeTBscENSb1dHamhoYmMxYktEanpFWmhQMVdtaXNIam5mN2MyMkxBbG9sbjFPRXhDMGduWVFESFRjX04ydUVTcVZDMzl6b19KWTdzd2tJbW5IZXpXMkZIcFhudURPdFJUcVVxSG5kX25VTXBac290cmFtVGd3djZCZGY4empTWXBwV0ho?oc=5",
-        "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOZzVzdDhLSk5mZkpPWVJqVFJtSDlWOEJCNTFIQWF4R0dZbkNYbElKY09LVW9FdUhfUnNxeUVkRzM3NzdKY3p3TUp0SVduQ0duamhwRkNEZGRjQVZPb2c2OUJ4cFZuU1N6NTVSZFR0ZGVFTmtMMmF6QkxRRUpob3BpMWJHX09fcG8xYlI1RGlHSmlkb0NUTGFVM3NsUC1NSjlLR3JMeFF4aE9hdFpmeDdXVUpDWHFhZlFZSnRnMDhDd3c1Tmo5bU5pODdCLXBuMGxRVzRYOW5QNVJUM0ZvMXk1Vy1LQUpYTzFvXzQyOVI2VGRhbDDSAYICQVVfeXFMUGNlOWRZOFdOS0JWZXVtc29PcU1HVjZCLWgxbTQxSG9uRWRLRmo1WmFFcTMzWXktR0pTMjVGdFBrOVg3bVIwTTg0SUt6eEdqRng2SWVWTm1LN0pjLWFUN25KUkRqREhSYnhkQms5WWNsbFBDRlVEV3R2OWlmZXdIMTlyY3lHM3dhMnJtOGNPREc4Z1hNQnRQTzc3aWxZamt2NWdfRkU4ak8tYUpGVFhvdkVrUXN4Wno1U1FnQlkxWU5LZHdiWUlLZnNtRmhoYnp5WnBtS0loRU00TlZ6aDRUNDZKeXVBQ0JiNUhNdEtaNk4zSXhJNUZXZXhiT0ZqTU1LOS1R?oc=5"
-      ],
-      "updated_at": "2026-05-23T11:30:33.273238",
-      "is_outdated": true,
-      "last_close": 0.2,
-      "daily_delta": 0.11111111111111116,
-      "price_date": "2026-05-21"
-    },
-    "ESTR4.SA": {
-      "summary": "Estrela (ESTR4) entrou com pedido de recuperação judicial, sinalizando uma crise grave na empresa de brinquedos. A decisão provocou queda de cerca de 33% nas ações, refletindo um sentimento negativo no mercado.",
-      "period": "De 20/05/2026 a 21/05/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSFlCQmhEU21ZazljQWs2WGRlU0EtWkZ0cjZyNlBucDBDRXZPRnNDb0ptX2lSMlN4TS1QQnJqUm9zanlyb0d3VlJXMG1lNG9GZ0gzd3ZGRmpZWXhUWEIxUjUxY3NRaFpjcFphOGhsTDNkWDV6NXpjUnM5bml6Qnd5Q2xraUFXZmxMbTRnd2ZlTWF2bEhka1FyWUFEQ2M?oc=5",
-        "https://news.google.com/rss/articles/CBMijgFBVV95cUxOM3ZDb05zQWJKNUx1NlE1aEI2dHQ0NXdUSFIxLU56cE0xdnRJczlNSlN5d2tvTV9BZm1FRW9WWjdMN24ybjRWRDk0blg1LTlKQjhNRWVpREt0dnZ3LU5icDRaTjJtdlktZjlTMEs3S1RuM1lRVUloVThiN0plRnZ4ZnlvaWE3TEVONDBfRTln?oc=5",
-        "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdXlKZDBoVkZ2SmN2VUJuU25jaWxBUy1NaDRWN3ZJdndKeTA4VHd1dTlCN2tVRVZfV0d4Sm1ZekVXdnhBWjNNWjM2ajVsM3EyVXNYWUExUmV4eDAtQTUyQkdrSW4yRTFRaWp3N2NEUlRycnZ3dTA1bUIyTlBRb3dyTUpNdG00VEHSAYwBQVVfeXFMT3hVTDRZYmdRd3ZxODg1Wl9jODFsMmZySll3azhQQ3FCYnVROGpyaEhQaGdpXzR6d0tvdm1qazZWVUNLRDVXRDczQ25HTGtWZzljNWVGb2F2N2FoQXJuTVNQOW5hTVhma0xyWlFNcTRaOGJzZlpLcmhVMlpDT2NHU2hhXzdKMHRTWTZFSHg?oc=5",
-        "https://news.google.com/rss/articles/CBMitgFBVV95cUxNYWh0QktaR0VpYUhxMUJBRjBnN0VlQkxlbjdRUm1UZWl2a3JJbWlHMmU2NFgwNF8yUlRaQXlRYXlUUzRpZlh5clBoMU9BWE91QWxaR3NTQVJ4RDRLQkY1elFtUy1HbnB0QVdHdHZMR2dGRmZ5YVpPN1hxZE9sd3JDVnkyUzlkMXVtbEtTYzlGUWcyd3lGRjZidkNSYktKS3NGSlQtSnFFaF9IVjBXZ1Z2a3FHZXAzZ9IBuwFBVV95cUxNbmc1dGRmVWFYa0RWYmxlczl6a3dSbEFOQlg3anphRHA2WkJSMmJnVy1QYkg4RUxlazY4MG0xNVNaV1hiWUFzQ3hBUmY4VlMxYVN5UWVZck53Wnd2elF5SG5CazlmbmI0U0dnVU16bGNXWFZ0bGlsVGZzRHJJM3dQWVFKd2tkdXFUWUhlZUR2WGhHSDlDbVlveGprN3BYdS0xVDd6eGNweHlVVmVHczZmU0FGb0R3UTRBUkk0?oc=5"
-      ],
-      "updated_at": "2026-05-23T11:30:34.638464",
+      "updated_at": "2026-05-25T23:18:44.540504",
       "is_outdated": false,
-      "last_close": 3.3,
-      "daily_delta": 0.09999999999999987,
-      "price_date": "2026-05-21"
+      "last_close": 15.05,
+      "daily_delta": 0.14885496183206115,
+      "price_date": "2026-05-25"
     },
-    "ONCO3.SA": {
-      "summary": "As ações da Oncoclínicas (ONCO3) despencaram, impulsionadas por um rebaixamento de rating da Fitch e por médicos saindo da operação para a Rede D’Or, o que agudiza os questionamentos sobre a rentabilidade e governança da empresa. Na véspera do balanço, a volatilidade permanece alta e as expectativas de resultados trimestrais mantêm o mercado sob pressão, levando a uma visão global negativa sobre a empresa.  \n\nSentimento: negativo.",
-      "period": "De 08/04/2026 a 08/05/2026",
+    "TOKY3.SA": {
+      "summary": "Não tenho acesso em tempo real às notícias do TOKY3.SA, então não posso apresentar um resumo atual.  \nSe precisar de um panorama geral, sugiro conferir o último relatório de analistas no site da B3 ou no Investing.com, onde geralmente indicam um sentimento neutro a positivo quando o volume de negociação está estável, ou negativo quando há queda nos preços e desvio de consenso.",
+      "period": "Em 22/05/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMiggFBVV95cUxQY2pYU2FGOV95Tng3OFFJd2JsWUl2Rm1YdGhyd3FlYkd3MWhNMlFjRWRBdnJFdkhFSjRNSGpOcFNLc2R0c2Nlc2g4LWxCOVNDd1hSN2tLcnlnUzZuR1lkQWVpY0ZobVQxSHRPbm0xR2dHUVVhR0N1S0ZiYjhFVkoyUDRB0gGHAUFVX3lxTFB2bkRuY2tWSDk0RFVpbGdQNkFnN1ozSm1VODBkV1ZxYmRIVlFfZ1NaWTdSQ0R4dGN2NVZCdkoxa25qUGhkeUlCd0J0Z09yX1JVN3Bzb3pYSDh6aHNhY3RDNGNtRmV5eXo3eVlBd1RidVlGLTNYMmhOSDUxb2JBSDhHY3pRYnlmdw?oc=5",
-        "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNamw1dnF3Sm9tbFM5emRwLTcxYkgxVEktSFdNR05xSVZNR0JLaG85a0I0eFlRTEpsTGx3UzU0Q3NiUVNxelF3NlBGOEVRcDRLUU4xSENhTlF5YU14eWlyNWdvRDQ2Z2pweFJLeTd2WXZLM093Y1NoVEFfaEFTTzNTX1owVG5ZNDFrV3BNeGswN0xUbTZmUFY5c3BVZFBPdFJZQWFRRkMxRlFxTENSWXZVREF2b2lVQWJfVVk0WXdYVVlyczBCMm42SHJUREZfaTZsUkJIUnZSSmJrNFFPaW5iVE94MXR3c2drQ2VrUkRB?oc=5"
+        "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9PR3VqTGU4LVBJdnI2STBwc2U2YkNyN3c4Q0JZS3FDbW5Ud3huS3BHYUs3MHBleEZ2NU5ZYXlSM3plNFBXbmQtMTFURVl5bzBYdWV3WFVjNTV4NHhMUDlZ?oc=5"
       ],
-      "updated_at": "2026-05-23T11:30:36.083248",
+      "updated_at": "2026-05-25T23:19:00.373875",
       "is_outdated": true,
-      "last_close": 1.37,
-      "daily_delta": 0.09600000000000009,
-      "price_date": "2026-05-21"
+      "last_close": 0.16,
+      "daily_delta": 0.1428571428571428,
+      "price_date": "2026-05-25"
     },
-    "WEST3.SA": {
-      "summary": "A Westwing (WEST3.SA) planeja distribuir R$ 5,40 por ação em julho, mantendo seu histórico de dividendos. Entretanto, a proposta de redução de capital de R$ 60 000 000,00 aponta para pressão de caixa, gerando sentimento neutro.",
-      "period": "De 23/03/2026 a 03/05/2026",
+    "DASA3.SA": {
+      "summary": "As referências destacam apenas a cotação atual da DASA3 e comentários breves em fóruns de investidores, sem reportar eventos corporativos significativos. O sentimento geral do mercado é neutro, sem sinais claros de pressão de alta ou de baixa.",
+      "period": "De 21/05/2026 a 22/05/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMisgFBVV95cUxObk5FUGcwNFNNdWVDTnk0OU4xczFpdUdXekcxemhpRHVQeThYVHFhdmJSN21mMk5MM3c1cE9RX0VVWW00cFVjR3lzTUEwbEV2Tk1mdC1nV0lfbFRTLXFkM3lkWl9fSGZGVUtaWDBMRmlkZFo1NGVZZEdHZ0tSeTRSeTlQdUF4OFFVVHFSZHpvbGtEVHFlMmNSOHJNbUhjOHlPNGNXanc3cmNoaHpYVWtvRXln0gG3AUFVX3lxTFA2OFpNUkV3YlNra3AzRjlTc1hTcEtTQ2RwME9GNEI4ZFlqcGpMMmRyVWlVa05MTTVIWjU0bjRyQmZqYU1lX1VEUnpqUXF3aThNSS1mUGwtNVFQVWo4Q3dXZjhURG9hdVRUYmZEQm5SSlo2TmxFSHRKQmlaNnBtWTBtbldpRHJHdWlGYlBIeXhfdzVjZXVhVjh4WUk5U1hmckx3eGpkbTNTT1Zra0xLR0RTU1JraDJwcw?oc=5",
-        "https://news.google.com/rss/articles/CBMimwFBVV95cUxQcHlyaHBjODNHWU9qNlpNUFE3bmFNckdFOXIySWNZZU4yWXJYOFBMOGFoa3dldUVxLTY5eFRtYTBJLVpId1FQTDlfbms4TU9vSGxoX2NrSU5McGRvUVNMam43WTcxUy1Gd0pBWnFROW5EdnZPWmdyZnVmUVpEQkI4RXduX3BZbURobGxxdmRUcVdJbzAyaUp0bmpId9IBoAFBVV95cUxNV2FBcFczNmRjRFJSOXhCTVNEb3RCS0dadW40VnY2NF9jLW1xSFpfWHJOaVd0X0l5eW16T0Z2VmNiRkpKSXFObEJiMkptZEdUVHB0WTlfeTg5Q01TbHdiT3g5NUlPRF9fWk9PTnplZjhSV0x2Nmt2NEVGcEVhaFJQb1A2VHpsODVPMTJpdWw2a2djNFZTWTEyeW9fNG1pR2xm?oc=5"
+        "https://news.google.com/rss/articles/CBMiYkFVX3lxTFAxUExLVW1CX2k3a0oxV1o4eXo2Unp4MTRUaWkwSEFGNVVIU3kwVXgySHJNcmxNcG10WkxENlpqUFNfbTQ5QlpQQXAtN09zOC1DN2FNemM0V19LLTk0WFNlYmpn?oc=5",
+        "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBkV3FCRWVtRGRoR2RCOEtVX0RqRDN3dFBvYVZFa005RmdzNmdMaGJSQnNTclhRczFvSkhtak1DdGRtMUdJei1vbnNCOU5NZWR1WnpDVGwxaw?oc=5"
       ],
-      "updated_at": "2026-05-23T11:30:37.370807",
+      "updated_at": "2026-05-25T23:19:37.410149",
       "is_outdated": true,
-      "last_close": 8.65,
-      "daily_delta": 0.08260325406758451,
-      "price_date": "2026-05-21"
+      "last_close": 3.48,
+      "daily_delta": 0.14098360655737707,
+      "price_date": "2026-05-25"
+    },
+    "FRIO3.SA": {
+      "summary": "InvestingPro projeta queda de 50 % no preço das ações da Metalfrio, sinalizando forte pressão à baixa.  \nA ação ciclística “Maio Amarelo” em Cabo Frio não impacta diretamente a companhia, mantendo o panorama operacional neutro.  \n\n**Sentimento: negativo.**",
+      "period": "De 12/05/2026 a 18/05/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPRVlha0JxTjZPbC1GVjQ0VWM4WlZ3bWdrUzRoUDN3aXRNcTRkM2Q0TE9vNVpkdzZseEFOd3pVbE8xZXcta0RUWVlTSUpLbW1OOThTOXVoVG1mbm5kT2tLbWpNNFAtZDktRXBqeUlVOXIwRmhlRTViNzF2YmwzeHhwN1cyU2N3TmxOYXFUenlwTFFBVGRtR0UyYXNBSnl0bXlqaDVDbDdneExVUEdqcTdSNGNMU3BuLUVpNHdJekxhY0k?oc=5",
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxNMks1X2hIc1UwaTJOWVlGU2QxSUFxR0h5RjN2TkRtWE05bkdHU0VHZFd2RHJUTnp2NFB0Sl91STBmRWdqX290YkJEOVlqTjhrSkFLQXFSeVI0ZW51V0d5TW5IRFdxX2pJUzJ5SlVTOVBtcExqMm85b29KYlNZbGkwWEpRZXphZG5Cb1hqU1dQMEtGMVBMRGgxX083Y090TXpMQTJ0SmNwXzllYnlhSFlSNFctNNIBuAFBVV95cUxQX3Fpbm12b0tCTkYzbGRSeURhMHZwMWxCZEhybmZoQzlVRWtDemhMY2hLbW1hU09RWkhId2tZdEE4YVNReDZHS2V0SHNMcGFwcjB5ZGVEU0FhRXRWYVlZdHh5TU1icEVhU21IU1NvWDJBdWt1U2tnZWtiVlBBOVI2eUNGWGpQTVNWNWpKTUhkX29GWk1MZzQ1OFdpeDlQNzZKXzlDUE1QN0Y4d3ZERzNWWTR5cVRfMng4?oc=5"
+      ],
+      "updated_at": "2026-05-25T23:20:12.441821",
+      "is_outdated": true,
+      "last_close": 205.0,
+      "daily_delta": 0.13888888888888884,
+      "price_date": "2026-05-25"
     },
     "CRPG3.SA": {
-      "summary": "Desculpe, mas não tenho acesso em tempo real às notícias de CRPG3.SA.  \nRecomendo conferir os sites oficiais da B3, a BM&FBOVESPA e plataformas de dados como TradingView para obter os resumos mais recentes e a análise de sentimento atual.",
-      "period": "Em 13/03/2018",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBwTmtHckVJQXVDdHRXNXctWEFMbVZGV2MtZ0hhUWhFZ3RDWXhJUzRERUVTYnZjc2RHOVRIT2FxMmZJa3lnclV3TDZFemVvMVE4d1dBR19KUGxKWkc0elhfT013?oc=5"
-      ],
-      "updated_at": "2026-05-23T11:30:45.267412",
-      "is_outdated": true,
-      "last_close": 16.0,
-      "daily_delta": -0.14438502673796794,
-      "price_date": "2026-05-21"
-    },
-    "LIGT3.SA": {
-      "summary": "A Light (LIGT3) boava 8,3 % numa sessão, mas havia registrado queda de mais de 30 % nas últimas negocições, indicando alta volatilidade. Apesar de relatar lucro de R$ 2,8 bilhões, a empresa continua com dívida elevada e em recuperação judicial, fatores que comprometem seu desempenho recente.  \n\n**Sentimento:** negativo.",
-      "period": "De 20/05/2026 a 22/05/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTnlhcC1rSV9jUV96WXNRSkpaUUtVVE51SHloRkRFX1RCUnhNdThCSmtlTktfME1ud1FISThqNWVCdC1uUG9wN1dXRDBRTnJNdi1FSjgyZ1FIRktFbnlLUVFEUG05Zkk0bHZ1ak05bXI2anRsUEZvVW81Qllzam9xMzRJcURjMHB0?oc=5",
-        "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB3VmZSZW9Ma1VmU3laR0xxUmpEVzBIY0ZTNlpSUXB3N3F1TFR6TmZFU1RqLXRxVlhnckc3NzQtTDBwaG5KUTRpc1E1WTlydXNrUEFjV05xbw?oc=5",
-        "https://news.google.com/rss/articles/CBMihAFBVV95cUxONTd0cWsxUExJSF9YWURTdXhvUFhBdlFlSlFiZ1RnMW9PVUNSbU5CSmJoRE1OeUJDSVpOaDJjeDVLWnhuSlBnUFM0UkprNmg2RVgwWkZGSFN5UDZFUU5SMlE2eWUyYWN4T0JVRnlTQ3pUd0hvQnpIekJRVk9wM0lPMkU2VTc?oc=5",
-        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOUlRhVHcwdVM2QXc5S05BTldEZVBjNV9IOHdaWGVfT0xkOWQ0d0RoLXhHbFlPd1lTQk12Q0hfeTV2a2FVaHVKWDV5QWs4M3lmamZDTjdGVGIzRGh5ZHF6ajlDeUpRY2Y0djVmdm9ycXhxSjhTMUZVdUZtREo4am9uLTZZelBNOXFOR2ozLVcxYTlUSUxpRGdua29QSnBUQUNvQWlmRkNMVi1ndnRYMUpQZjZXX3ZnMjg2dS01d0V0MUZIRkRrUnVqTDVnWjZId1Z3TUdNTzVB?oc=5"
-      ],
-      "updated_at": "2026-05-23T11:31:16.068153",
+      "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
+      "period": "",
+      "sources": [],
+      "updated_at": "2026-05-25T23:20:13.273837",
       "is_outdated": false,
-      "last_close": 2.52,
-      "daily_delta": -0.11578947368421055,
-      "price_date": "2026-05-21"
+      "last_close": 18.0,
+      "daily_delta": 0.125,
+      "price_date": "2026-05-25"
     },
-    "BOBR4.SA": {
-      "summary": "A Bombril (BOBR4) teve seu plano de recuperação judicial aprovado pelo Tribunal de Justiça de São Paulo, formalizando a reestruturação da empresa e limpando sua reputação. Essa decisão padece vistas como um passo positivo, pois elimina pendências legais e abre caminho para novos investimentos e operações.  \nSentimento: positivo.",
-      "period": "De 02/12/2025 a 04/12/2025",
+    "GSHP3.SA": {
+      "summary": "1. A General Shopping Outlets (GSHP3) continua reportando desempenho estável, com dividendos sendo pagos conforme o histórico anual e cotação alinhada aos parâmetros de mercado; não há anúncios de resultados trimestrais vívidos que alterariam a percepção geral.[1]  \n2. O GSHP3 agora aparece na lista de “ações isentas de Imposto de Renda” divulgada pelo Estadão E‑Investidor, podendo atrair investidores que buscam benefícios fiscais sem alteração provável na performance da ação.[2]  \n\n**Sentimento geral:** neutro, com leve inclinação positiva devido ao benefício fiscal.",
+      "period": "De 24/01/2023 a 30/12/2023",
       "sources": [
-        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNV2FQVDhuS1oydEkweVEtWF9xZnhYdzA1ZC1rMXpxZG1rS05iUGVna2k5RFEwTDBmS3laeldyVG9tbmJGeWJFbWdPRF83ekdZZUU1cDBKN3JEUzFZWWhNTFh2UUxaX2Z4bmRHNTlHemc0UXpSWFJLaF9nb25jT1Q2QW9XVnRFNkNIMkFzNWJTVFFsSDBxdkRIZHcxQ3hWVXRVZHh6OHVLYkJobGwyX2g2dFZsNXpTb04zUmlxLThQUG1GTDY3RW1FLXFzTENlVmZpbjBSdHVB?oc=5",
-        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPYnN0RTY3cnVNMUJhLURNZGRkTlRqMTQ0VFk0Uzlhc20zWkdOTm1Ka18xSXZaaEJMNXdzeHV0OVBGalJEb2RCZjQ1MF9aZXJNUkVwOG01ZzRSYmxyVWZDNzB5UnN0RVlBN0d6NU1XTnZwZ2w4NHpnUzhzOWZzNVpPM3FRRk9NOW1KZkNfQ0ZDMzl5M0xGc1dGc0tjMWdkZmdIS0E?oc=5"
+        "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5NSVVab1FoWUZqTzBkLU9rNUUwajBoRmhpZTBFWjVMOGJ4TFAtcmlack8yR0FEV2lpMEZYZG9HWXp3Nlhod2h4NEJpS3hsdHlpemNPdlFhVy1PSVZB?oc=5",
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxQY0dhdDdlSFdRbXpfalZCQWxSZjJEQi1EcE8yTHJaM3M5VjZyMW9OX3ZBUHBTTXpjbkxaSnkyZ0U3YjhtUHFpazRXSkpiOG5CbFZuanl3MVB2M0oyVVBId1ZQeTBvVlFhVnlhQ2FGeThoOThwR0Fpem8xZHZ1ZDRfMHYySGVSRGltZlN2Y1V4RXJkZmhNSWNBeldhcmdHVnVJN2N3NC1KWWNQZmpVQVHSAbMBQVVfeXFMT1ZlNzJjcXdDZzl0Q0hkWUVZUEZsa094SUZfbTFpdFFRSWhDeWI2c1M3c0poQXVYd2trOGNXZDNfbFkxSk1QS1JfblFmWURXWFlwZzNuaGZ6cUZISnNnRlZlMnFNdndpZGVlWGVyeVRqRTdRRW9SaUFSUm5zbEFoazZHYWZ1dXZsRTB3QjlOOEZQMEw4S3FOUjRlZXgzTFQwcFJVYWVtTnkzd0l2aUxUY0NIckE?oc=5"
       ],
-      "updated_at": "2026-05-23T11:31:17.736520",
+      "updated_at": "2026-05-25T23:20:31.571643",
       "is_outdated": true,
-      "last_close": 1.18,
-      "daily_delta": -0.09230769230769242,
-      "price_date": "2026-05-21"
+      "last_close": 2.9,
+      "daily_delta": -0.1185410334346505,
+      "price_date": "2026-05-25"
     },
-    "BDLL3.SA": {
-      "summary": "As notícias de hoje para BDLL3 concentram-se em cotações e gráficos de preço, refletindo a volatilidade comum do mercado de capitais. Sem eventos corporativos ou mudanças em dividendos divulgados, o sentimento do título permanece neutro.",
-      "period": "De 02/08/2020 a 15/05/2026",
+    "TRAD3.SA": {
+      "summary": "TRAD3.SA encontra‑se em sua maior baixa nos últimos cinco anos, enquanto o Ibovespa atingiu um recorde recente. Em pregões subsequentes, a ação trabalha em zona decisiva, podendo acelerar a tendência de alta no próximo encontro.  \n\nSentimento: Neutro.",
+      "period": "De 05/12/2025 a 17/01/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBrWm1UcnJNUjlOUEhHV3cxRm5ZdFNFWVpEbkt2b1BjQi1VSGltT1FOc1NMYmtSSmJkRndqeW1XcVJPMlpyd2dWN2JlT1VkLTA3d2JXbDJXaw?oc=5",
-        "https://news.google.com/rss/articles/CBMiigFBVV95cUxPNGljdUJiamY4RThVakJERnZLTW9PaHN5SEV4cmszR2t4UDkwMlRCVkp2UVBaNmVibVM0bGpXU3hIbFhZVVkyblNJeGhYVV9LaDdTN0I5SG5DMGN1RVM0VDE5UXRJWnJ3aE1lWkFZYTVKYzctb1lSSzQxVERvSUxiOEJaZjdkODFuT0E?oc=5"
+        "https://news.google.com/rss/articles/CBMif0FVX3lxTE1EdHh3eUU3bHhadWhVR3kwZFdSTk1GNGh0NE1hZGV4UlJ3clZXUWZsOU5UNHBwdm1xeE9zRHRhamJ0cUJhbVVRb213ZHJVSmw0R0NYblFhUzd1LXJtUm55S3JfZEdrdXpyWWZzVjlLQWdtQzItLS0yZ0E1cWpnRlU?oc=5",
+        "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQYndoU19GX2lJX0FOM3J1MG1lWVR5cjNvZjFQYmNJNXZTYmljcmFPc1hSS2NYRUVZYm1ieGltQWpBY3FQdVdJbVZHY1BFU3hHY3U4TDZKZnYtVHZLV2RnWEN0TGpYVHRYeFpKa2dyclh3M3RETXNyaF9HLURya2JZejU2cjRBMnJkTjhqT3pIRTFhcnFDdWFaTU9VSVRBMDBueEVHZ18yQkUwbV9UZmFjMm9YcFlxc3ZPWk9YLWIyT25EUGswOVljaDV1RUg1ZFF3ZzRuVThmMXNhUnV4aFNsT1FjOHFyRHhhWXJlOA?oc=5"
       ],
-      "updated_at": "2026-05-23T11:31:19.014703",
+      "updated_at": "2026-05-25T23:20:59.905134",
       "is_outdated": true,
-      "last_close": 6.2,
-      "daily_delta": -0.08823529411764697,
-      "price_date": "2026-05-21"
+      "last_close": 1.35,
+      "daily_delta": -0.09395973154362414,
+      "price_date": "2026-05-25"
     },
-    "RAIZ4.SA": {
-      "summary": "Ação da Raízen caiu até 7% nesta segunda-feira, reflexo de ajustes de política interna e clima de mercado. O sentimento é negativo, reforçado pela pressão de credores que exigiram a saída de Ometto, indicando desafios na governança e liquidez.",
-      "period": "De 27/04/2026 a 30/04/2026",
+    "OIBR3.SA": {
+      "summary": "Resultado do terceiro trimestre ultrapassou as expectativas dos analistas, fazendo a cotação OIBR3 subir cerca de 2,3 % nas últimas 24 h e gerando um sentimento majoritariamente positivo entre os investidores — conforme relatado pelo Money Times. Entretanto, a persistência de níveis elevados de dívida e questões regulatórias em andamento continuam a temperar o otimismo, mantendo o sentimento geral em um tom neutro‑moderado.",
+      "period": "Em 21/05/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSGdJTEgxblp0T0hoQ1VWNlVEUXRXQkJyS09xbkI0RVBfMWFkcFUxUUxETXBRbzFhUG9NNkE3czBPUThfQzczU3pNUVNmeGtac1BWcldwekZEcjNIOURTMXRsN0w3MW95VFItNFBfSFZGdk5Qb2RXWjJoVUlEZktCUjdMZEViNURLQ0RLN0ttMHVSRTZsVVAxTU5xUTllMDFG?oc=5",
-        "https://news.google.com/rss/articles/CBMivgFBVV95cUxQRmo1cGI0OE1OWGctc2p5QnZtWEY0ZXRmT3VicWNwRmdxQ1M0LS1FdEc3LTczTVZnYlVDR0xyTVQzM0dqbS10c3ZUYXlDd2llckhaVkpDSTAxQ1FpTEVzUV84dzNYcy1fZ213VWE3N1o4cjVwNnFYYjNjR3Npb1NUbXJoTV96eDNBSWtuWHduVWFZRXF6YlZXUldscGN3Q0JyVTlNWnc0OFppbERqcVBEYWhRVXZBcDJuc0RGUmhn0gHDAUFVX3lxTE1tT0lXM3V0SV9zNndmSVE5RTBfQnlyY2ZhNjQyc1RfV0tJRWlDOVpodUV4dGwzTjZOU0JKTmlnUjk1M1NpOXR1TTlzN0FZY2ZhSXhzZnJpUWpGdzFPSHg5MGF2a2NicV9tcjgzUVphelVhOVByQndmZmFyUU5HbmtxZEg3SGRDM1Ridm9VOWV4blhhSW41aUpGRnpEeDQ2QTE2RkliOURIaldiaGdmckZVN2FORmFrWml4WXk1a0s0anpiRQ?oc=5"
+        "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5GWkd0aG1POFNNUVhmcW9PcElUNC1RU1ZCOTF4NWJ3UndwUElLXzdmWXNTQlBsQk54a0VWZWNFblIydzdobGVCZkhTMzJYOTN3TjV1WjJiSQ?oc=5"
       ],
-      "updated_at": "2026-05-23T11:32:06.875347",
+      "updated_at": "2026-05-25T23:21:42.974422",
       "is_outdated": true,
-      "last_close": 0.39,
-      "daily_delta": -0.0714285714285714,
-      "price_date": "2026-05-21"
+      "last_close": 0.13,
+      "daily_delta": -0.07142857142857151,
+      "price_date": "2026-05-25"
+    },
+    "CTAX3.SA": {
+      "summary": "CTAX3.SA mudou oficialmente seu nome para **Contax Participações SA** e atualizou o código de negociação na B3 para refletir a nova identidade corporativa. A alteração foi anunciada como medida de fortalecimento da marca, sem impactos imediatos sobre o desempenho financeiro ou operacional da empresa.  \n**Sentimento:** neutro.",
+      "period": "De 01/08/2025 a 11/09/2025",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxNbGZNdXExTXFPWjNHREt4T2tiT2VIQ3d2V2N2U3hEVmdQTWYyRzZYNklIT0JkbE11cjU3SnZiWFgxWUhnNU5QbTgtZVZiRlE1Y1d6VDUteVk1OElzdjR5Rk1TemRPTWV1eVB2elF2YkhYdnNOV2lGUTJhUERGdVhOU3VqOW1xb0kxWDhuaS05Q19EVkZqNVFsWVFOQ0pLSkc1emxMVnNTbXBpTjhHbi1ERTh6VdIBuAFBVV95cUxPUVREbVBjOEFTWjRvTmRTNm55VkNZb1lXS0tuTW5SaHhUUkp1Umx4LTVQU0VrR1d1THZRNG5CQlRJSGcwM1JISmpOMW9GMVhBejh6TG1jc1F0RHptWXZ6UWZWcVcyWDVieDYxNWF4RlNZdFFtZU95MTVJV3YxUDl2eldNQnBNaHdOdFI2aWluZHdjdUduTkZXOUJOQTkyUmNPaUktQWlnSHdsakswNlVha1JRSWhienVa?oc=5",
+        "https://news.google.com/rss/articles/CBMijgFBVV95cUxNTUY4X0FoSnpMMDA1NXV4cjkyanphMENCYXFWSEM3NF9LS1FYenl0UnMyLXUwbW16LURFREhXTlJ0SXZ2ZzZSS2Q3N3JXc2hnNXJyeWExSF9jVjVtRjVJbGx4ejg0TWhkY1JmTDFMMlhZVDJDTVluQWE4WUFzQ3p5VXpRaE9LcHNPN0J0clln?oc=5"
+      ],
+      "updated_at": "2026-05-25T23:21:55.550908",
+      "is_outdated": true,
+      "last_close": 0.57,
+      "daily_delta": -0.06557377049180335,
+      "price_date": "2026-05-25"
+    },
+    "PRIO3.SA": {
+      "summary": "PRIO SA reportou produção recorde e forte desempenho financeiro no 1º trimestre de 2026, enquanto a ação PRIO3 escalou à terceira maior volume de negociação na B3 em março, refletindo alta demanda dos investidores.  \n**Sentimento:** positivo.",
+      "period": "De 16/04/2026 a 07/05/2026",
+      "sources": [
+        "https://finance.yahoo.com/sectors/energy/articles/prio-sa-ptrry-q1-2026-230056583.html",
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxPN0pJamdhblFWTWZiVVFkYzZhRGJrS2FuM21DR2xpUlM3WFNSVG1lWDRiLWJZQXo5NVRmcU9CcGVmUWNXOWpISFJpcVdobFV4X2JONDZsS0xPX05HWkkzQ09JWTRJRjlUbFRlU0VzUDVwalFUWkdxNHlCRHExeGJPbldmQjZoNGNuRTE3VW9VajBsTVB4RWVZSmZGZmdnd08xWlgyR1hPdnhWNk1JZFp6WExhVWVRdlF2NjBWaUljY9IBxAFBVV95cUxOWW5wOUJmazg3Qmc5RmFsNGcwNVJiMWRIMDZ1cl9rRlJrbFpLLURpcU1OZ1RVQ0RxMm5YQ0hUTUZESjRnUTlVcXpCR2QzeGFweGphdTNDMl9sYnM4djE0YjNjeHY3REt4RFpWUmMtSnBoRUMwSUgyTXV0bGppakhaLWVyYk8tUm5KdDdEbmM4OWtZYS0xd1E1ek5qNmJLalNJX0dEcllYYUc5WjcwbGNPdkN1Szk5SVdNRzZ3ZFVSMC1xRUkx?oc=5"
+      ],
+      "updated_at": "2026-05-25T23:22:42.563138",
+      "is_outdated": true,
+      "last_close": 64.31,
+      "daily_delta": -0.05979532163742696,
+      "price_date": "2026-05-25"
     },
     "BBDC4.SA": {
       "summary": "Os resultados mistos do Bradesco e as preocupações de capital fizeram as ações BBDC4 descerem quase 10 %, evidenciando um sentimento negativo no mercado. O anúncio da Elo sobre parcerias bancárias para um possível IPO nos EUA não impactou diretamente as ações do banco, mantendo a percepção corporativa neutra. Sentimento geral: negativo.",
@@ -143,50 +137,11 @@
         "https://www.electronicpaymentsinternational.com/news/elo-selects-banks-potential-us-ipo/",
         "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOYmYzaW9IVXEybThMcDBVam5ONHN4czlMNHFyd0RLRVU3RWphamxhVm5kRlE5ejlQR3hnS2JTU0Z0YzdrSWhEY0NrWkNOdXVYcjRXWEFGNHdBRm1HX0wyRXloNVdBd2plRjNzcy0xS1g3aG9NTU9XTl9qdGxNSTFLT1AwYWllMVNOVXNCb21hTmZCNWZxbWxzNnROVEJIODY4S2dHZDFvMWJlTTVublFncnZQTkJ0N1lLZ1BSQlNrT0NuQjZwYWwyOWZlOFNFTEhsS1d0M3JtTlV6NU9xUWfSAewBQVVfeXFMTWNyMnhDT2xTR1VaemEzdVQtVkJ6M0tZMzhBcTNlMkh3Qnk4eGwyNnhWVzZqWVFpX0JlQ3JUb2lqUjBRWFBlZHJBeHdvVGNZSWRveG9SazJvQ3ZHbFRjZDRfOEpMRzU4RzV2ZHcxV1R0NkFCYzlRTnVNWFhyd2ZPN1hucFdMLTZCSkNacW1vS3pzSERfSzBHSnpIMnpTSXlCclhDTFZTVHhZVWMyV3JHSk5mbTdWWkNJWFlvN3BiY1ZlYXVZaWt5ZEV3U3d6ZUs2NXZwdXMxQmdLdjhmUHM2Tjl4OGZvVzlFdElLeVE?oc=5"
       ],
-      "updated_at": "2026-05-23T11:32:08.234451",
+      "updated_at": "2026-05-25T23:22:44.044666",
       "is_outdated": true,
-      "last_close": 17.9,
-      "daily_delta": 0.002239641657334701,
-      "price_date": "2026-05-21"
-    },
-    "ITUB4.SA": {
-      "summary": "Itau Unibanco anunciou lucro do 1.º trimestre acima das previsões, impulsionado por alta renda líquida e recuperação de demandas de empréstimos. A subscrição da filial de cartões foi avaliada como medida de otimização de custos e clareza no balanço da taxa de juros para o próximo período. Sentimento: positivo.",
-      "period": "De 06/05/2026 a 11/05/2026",
-      "sources": [
-        "https://www.marketbeat.com/instant-alerts/itau-unibanco-q1-earnings-call-highlights-2026-05-10/?utm_source=yahoofinance&utm_medium=yahoofinance",
-        "https://finance.yahoo.com/markets/stocks/articles/itau-unibanco-holding-itub-next-190022794.html"
-      ],
-      "updated_at": "2026-05-23T11:32:09.791879",
-      "is_outdated": true,
-      "last_close": 40.12,
-      "daily_delta": 0.011343584572724774,
-      "price_date": "2026-05-21"
-    },
-    "MGLU3.SA": {
-      "summary": "Magazine Luiza registrou expansão expressiva de lojas físicas no FY 1 de 2026, reforçando a força no varejo e sinalizando resiliência operacional. O BB‑BI elevou o preço‑alvo da ação, refletindo otimismo quanto ao potencial de crescimento futuro. **Sentimento: positivo.**\n\n\n\n---\n\n**Support Pollinations.AI:**\n\n---\n\n🌸 **Ad** 🌸\nPowered by Pollinations.AI free text APIs. [Support our mission](https://pollinations.ai/redirect/kofi) to keep AI accessible for everyone.",
-      "period": "De 31/03/2026 a 09/05/2026",
-      "sources": [
-        "https://finance.yahoo.com/markets/stocks/articles/magazine-luiza-sa-mgluy-q1-070243795.html",
-        "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdW5Oeld1NThqRllrSkZOM2xVbWNscmRJMGc4WHpaN3lHd3QwVi01U3lfOE95NHFMQ3NKcXdaZms1eGRMaGpCVjhZQ2w1QlI4TTJOYV92OU9ab3JySmZRWlRST29Md0x2SWVVZ0hWb2JpeTltcGZCZzJZRERKX3JsMzVvVkdWSEV6Wlh3U25oZlBRUQ?oc=5"
-      ],
-      "updated_at": "2026-05-23T11:32:16.794162",
-      "is_outdated": true,
-      "last_close": 6.77,
-      "daily_delta": 0.005943536404160454,
-      "price_date": "2026-05-21"
-    },
-    "BBAS3.SA": {
-      "summary": "Banco do Brasil (BBAS3) reportou lucro líquido forte no 1.º trimestre de 2026, reforçando a resiliência operacional da instituição, porém a diretoria divulgou um outlook mais cauteloso para o resto do ano, gerando preocupações sobre a sustentabilidade dos resultados. Diante disso, o mercado manteve a ação praticamente estável, sinalizando uma atitude neutra quanto ao futuro do banco.",
-      "period": "De 14/05/2026 a 16/05/2026",
-      "sources": [
-        "https://finance.yahoo.com/markets/stocks/articles/banco-brasil-sa-bb-brasil-010207526.html",
-        "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNb1oxNkRhSXBBYm9tNHk1Q2pYWUJ1RU1FMEI3Y1E5Q1VsNWxCYlRXTVFFQjZBVDZsSUswUExDYi1FekpsWDZkejB5cnN1WVpwUnVUS1FORU1WTzhnbEhOYU1Yd0tYTVFzSWN6emkyajg2YUtBbkthanlyYW9fTGxfYTY3cmNQRHlkb0RxN01zcDFxSWhOeDZiSmdSQTM5Um1CSllyWkRfZ2RYdDNMZXNtQ2FGd2VtUjZPMjZ1MlhCbGlvODZ6R3FoRXVTc0lsN2pVNkx6Yzd0WEpqdDUxcjVBVVVn0gHnAUFVX3lxTE1ZM01ZdHp2MGJkb2prTlI1Nl96bll2VkdZTHlvZmE3dGhBZnFGSUl4bXNUNGlfNndhVTFXcHpTSC1OWEo2VjVNRzRfbFZaZmJjRUF0RGJLOEllempVclRUR1o4VFpwdU9BWTF6ckZYeUNVVFVTejBWX0ExUXVCMldSTFQ4WmhjdFFncFVUZGswOVk5bEctcXFIaVUyZkVmdTdFaEVPNmc2dlJEUkppR1RXY0lGNXJoNDV6Tjg2WmVObVhDc3d1NDAxWlNwaXA3WTRTUS1uczZGejh1M1VaS0R2T2dWYi16aw?oc=5"
-      ],
-      "updated_at": "2026-05-23T11:32:18.604332",
-      "is_outdated": true,
-      "last_close": 20.82,
-      "daily_delta": 0.005797101449275477,
-      "price_date": "2026-05-21"
+      "last_close": 18.07,
+      "daily_delta": 0.02553916004540291,
+      "price_date": "2026-05-25"
     },
     "PETR4.SA": {
       "summary": "**PETR4.SA – Resumo resumido (2 frases)**  \nAnalistas de Wall Street classificam a Petrobras como um bom investimento, enfatizando os ganhos esperados decorrentes da expansão de ativos offshore e do novo contrato de descomissionamento com a Saipem. Além disso, as iniciativas do governo Lula em energia e minerais raros, aliados ao potencial de crescimento da refinação, reforçam a perspectiva de valorização a médio–longo prazo.  \n\n**Sentimento**: **positivo**.",
@@ -197,11 +152,63 @@
         "https://finance.yahoo.com/sectors/energy/articles/brazil-lula-doubles-down-oil-230000631.html",
         "https://finance.yahoo.com/sectors/energy/articles/refining-strength-drive-petrobras-earnings-130800427.html"
       ],
-      "updated_at": "2026-05-23T11:32:49.407828",
-      "is_outdated": false,
-      "last_close": 44.95,
-      "daily_delta": 0.007847533632286963,
-      "price_date": "2026-05-21"
+      "updated_at": "2026-05-25T23:22:45.576002",
+      "is_outdated": true,
+      "last_close": 43.4,
+      "daily_delta": -0.024280575539568305,
+      "price_date": "2026-05-25"
+    },
+    "BBAS3.SA": {
+      "summary": "Banco do Brasil (BBAS3) reportou lucro líquido forte no 1.º trimestre de 2026, reforçando a resiliência operacional da instituição, porém a diretoria divulgou um outlook mais cauteloso para o resto do ano, gerando preocupações sobre a sustentabilidade dos resultados. Diante disso, o mercado manteve a ação praticamente estável, sinalizando uma atitude neutra quanto ao futuro do banco.",
+      "period": "De 14/05/2026 a 16/05/2026",
+      "sources": [
+        "https://finance.yahoo.com/markets/stocks/articles/banco-brasil-sa-bb-brasil-010207526.html",
+        "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNb1oxNkRhSXBBYm9tNHk1Q2pYWUJ1RU1FMEI3Y1E5Q1VsNWxCYlRXTVFFQjZBVDZsSUswUExDYi1FekpsWDZkejB5cnN1WVpwUnVUS1FORU1WTzhnbEhOYU1Yd0tYTVFzSWN6emkyajg2YUtBbkthanlyYW9fTGxfYTY3cmNQRHlkb0RxN01zcDFxSWhOeDZiSmdSQTM5Um1CSllyWkRfZ2RYdDNMZXNtQ2FGd2VtUjZPMjZ1MlhCbGlvODZ6R3FoRXVTc0lsN2pVNkx6Yzd0WEpqdDUxcjVBVVVn0gHnAUFVX3lxTE1ZM01ZdHp2MGJkb2prTlI1Nl96bll2VkdZTHlvZmE3dGhBZnFGSUl4bXNUNGlfNndhVTFXcHpTSC1OWEo2VjVNRzRfbFZaZmJjRUF0RGJLOEllempVclRUR1o4VFpwdU9BWTF6ckZYeUNVVFVTejBWX0ExUXVCMldSTFQ4WmhjdFFncFVUZGswOVk5bEctcXFIaVUyZkVmdTdFaEVPNmc2dlJEUkppR1RXY0lGNXJoNDV6Tjg2WmVObVhDc3d1NDAxWlNwaXA3WTRTUS1uczZGejh1M1VaS0R2T2dWYi16aw?oc=5"
+      ],
+      "updated_at": "2026-05-25T23:22:47.082335",
+      "is_outdated": true,
+      "last_close": 21.65,
+      "daily_delta": 0.0339063992359121,
+      "price_date": "2026-05-25"
+    },
+    "ABEV3.SA": {
+      "summary": "Resumo: [Yahoo Finance] Got $500? 1 Dirt-Cheap Dividend Powerhouse Under $5 to Buy and Hold Forever. [Yahoo Finance] What Makes Ambev (ABEV) a Uniquely Positioned Company?. [Yahoo Finance] Are Consumer Staple...",
+      "period": "De 20/05/2026 a 24/05/2026",
+      "sources": [
+        "https://247wallst.com/investing/2026/05/24/got-500-1-dirt-cheap-dividend-powerhouse-under-5-to-buy-and-hold-forever/",
+        "https://finance.yahoo.com/markets/stocks/articles/makes-ambev-abev-uniquely-positioned-131403521.html",
+        "https://finance.yahoo.com/markets/stocks/articles/consumer-staples-stocks-lagging-ambev-134004662.html"
+      ],
+      "updated_at": "2026-05-25T23:23:03.992203",
+      "is_outdated": true,
+      "last_close": 16.4,
+      "daily_delta": 0.01863354037267073,
+      "price_date": "2026-05-25"
+    },
+    "WEGE3.SA": {
+      "summary": "Resumo: [Google News] Cotação Weg (WEGE3) hoje: veja preços, gráficos e notícias em Tempo Real - Money Times. ...",
+      "period": "Em 21/05/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMiV0FVX3lxTE53SkZGd3laMFNycmYxY29NX19wckdBWW1xeWxaLWFvc1RrWmpoMTVvYU82UjFVOXY4MXZzZzVfVzVPcWxCY0NNMkpWMU9OV2tRVmJPLXRBMA?oc=5"
+      ],
+      "updated_at": "2026-05-25T23:23:06.085807",
+      "is_outdated": true,
+      "last_close": 43.31,
+      "daily_delta": 0.013573601684998993,
+      "price_date": "2026-05-25"
+    },
+    "ITUB4.SA": {
+      "summary": "Itau Unibanco anunciou lucro do 1.º trimestre acima das previsões, impulsionado por alta renda líquida e recuperação de demandas de empréstimos. A subscrição da filial de cartões foi avaliada como medida de otimização de custos e clareza no balanço da taxa de juros para o próximo período. Sentimento: positivo.",
+      "period": "De 06/05/2026 a 11/05/2026",
+      "sources": [
+        "https://www.marketbeat.com/instant-alerts/itau-unibanco-q1-earnings-call-highlights-2026-05-10/?utm_source=yahoofinance&utm_medium=yahoofinance",
+        "https://finance.yahoo.com/markets/stocks/articles/itau-unibanco-holding-itub-next-190022794.html"
+      ],
+      "updated_at": "2026-05-25T23:23:07.613087",
+      "is_outdated": true,
+      "last_close": 40.32,
+      "daily_delta": 0.022571645954856612,
+      "price_date": "2026-05-25"
     },
     "VALE3.SA": {
       "summary": "Vale avançou na licitação de um porto de minério de ferro de US$ 5 bilhões, sinalizando expansão logística que pode reforçar a eficiência de exportação – entanto, a volatilidade de preços e os custos de construção mantêm os investidores cautelosos. Análise de mercado aponta a ação abaixo de US$ 60, oferecendo dividendos reais e atraindo profissionalismo na busca de dados, refletindo uma perspectiva de subavaliação moderada, com tom neutro-positivo.",
@@ -212,50 +219,36 @@
         "https://247wallst.com/investing/2026/05/19/forget-crowded-u-s-mega-caps-these-3-global-stocks-under-60-are-undervalued-and-pay-real-dividends/",
         "https://finance.yahoo.com/sectors/energy/articles/tencent-catl-join-10-million-141822693.html"
       ],
-      "updated_at": "2026-05-23T11:32:51.066916",
-      "is_outdated": false,
-      "last_close": 82.63,
-      "daily_delta": 0.0076829268292681885,
-      "price_date": "2026-05-21"
-    },
-    "ABEV3.SA": {
-      "summary": "**Resumo (2 frases):** A Ambev se destaca como uma empresa altamente posicionada, com vantagens competitivas em escala, marca e modelo de negócio que a diferenciam no setor de bebidas no Brasil. Os investidores de crescimento apontam forte demanda, expansão de margens e forte fluxo de caixa como razões para ampliar a exposição.\n\n**Sentimento:** Positivo.",
-      "period": "De 18/05/2026 a 21/05/2026",
-      "sources": [
-        "https://finance.yahoo.com/markets/stocks/articles/makes-ambev-abev-uniquely-positioned-131403521.html",
-        "https://finance.yahoo.com/markets/stocks/articles/consumer-staples-stocks-lagging-ambev-134004662.html",
-        "https://finance.yahoo.com/markets/stocks/articles/3-reasons-growth-investors-love-164503037.html"
-      ],
-      "updated_at": "2026-05-23T11:32:52.599442",
-      "is_outdated": false,
-      "last_close": 16.4,
-      "daily_delta": 0.011097410604192337,
-      "price_date": "2026-05-21"
-    },
-    "WEGE3.SA": {
-      "summary": "WEGE3 enfrenta uma vibe meio ambígua: JP Morgan sinaliza deceção no curto prazo, mas aponta ajustes de rota para o futuro; em contrapartida, a cobertura da “EuQueroInvestir” destaca como a empresa consegue contornar a tarifa de Trump, colocando a ação com potencial de ganho de até 30 %.  \n**Sentimento:** neutro‑positivo.",
-      "period": "De 06/04/2026 a 15/04/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMEpUeEw0dUdlMUJXaE1WWFdhVHRCdExaSFRSSlZybDRTRlVPX2I2QXIyZFFtTXRoX1BHck9PTDdMbnB3UnhNa2tGekpES29uR0lhVWNwc0ozcmdhU2J4RHNRSG1XVWFQcV9Ic1BHcGQwUUJKaFYwRDBWOWVndGdnTzhIQm92SENoVGZJamdzQWF5MU52NjV6OTl5dmgtWERZTjlxZFVYNVlGeF8zWmJoT0p6NEZaaUoxWVlyaDI0TC02cHZ3UEJzZDlJclAwVmM?oc=5",
-        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPRVNfR041NVZUdmthMzlvVkNoSVJBWk5oQndsTnRqTWFVZGRPYWVucHVPWXhqOGRIV3lrQXY4N04tWl9oMWdsLXJhRjJyS05pOU1yLTE5LXpIellaR3ZzUlhNbW0wbW9zeG9NRVBWaE1pUlQwaU5rZWVXWkZ2SnFGZXNqb1g0Z2xBdTctaFlVanM?oc=5"
-      ],
-      "updated_at": "2026-05-23T11:32:54.506958",
+      "updated_at": "2026-05-25T23:23:09.279280",
       "is_outdated": true,
-      "last_close": 42.47,
-      "daily_delta": -0.002583372475340573,
-      "price_date": "2026-05-21"
+      "last_close": 83.59,
+      "daily_delta": 0.00589651022864035,
+      "price_date": "2026-05-25"
+    },
+    "MGLU3.SA": {
+      "summary": "Magazine Luiza registrou expansão expressiva de lojas físicas no FY 1 de 2026, reforçando a força no varejo e sinalizando resiliência operacional. O BB‑BI elevou o preço‑alvo da ação, refletindo otimismo quanto ao potencial de crescimento futuro. **Sentimento: positivo.**\n\n\n\n---\n\n**Support Pollinations.AI:**\n\n---\n\n🌸 **Ad** 🌸\nPowered by Pollinations.AI free text APIs. [Support our mission](https://pollinations.ai/redirect/kofi) to keep AI accessible for everyone.",
+      "period": "De 31/03/2026 a 09/05/2026",
+      "sources": [
+        "https://finance.yahoo.com/markets/stocks/articles/magazine-luiza-sa-mgluy-q1-070243795.html",
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxQdW5Oeld1NThqRllrSkZOM2xVbWNscmRJMGc4WHpaN3lHd3QwVi01U3lfOE95NHFMQ3NKcXdaZms1eGRMaGpCVjhZQ2w1QlI4TTJOYV92OU9ab3JySmZRWlRST29Md0x2SWVVZ0hWb2JpeTltcGZCZzJZRERKX3JsMzVvVkdWSEV6Wlh3U25oZlBRUQ?oc=5"
+      ],
+      "updated_at": "2026-05-25T23:23:10.741082",
+      "is_outdated": true,
+      "last_close": 6.77,
+      "daily_delta": 0.02111613876319751,
+      "price_date": "2026-05-25"
     }
   },
   "market_movers": [
-    "RVEE3.SA",
-    "FICT3.SA",
-    "ESTR4.SA",
-    "ONCO3.SA",
-    "WEST3.SA",
+    "MILS3.SA",
+    "TOKY3.SA",
+    "DASA3.SA",
+    "FRIO3.SA",
     "CRPG3.SA",
-    "LIGT3.SA",
-    "BOBR4.SA",
-    "BDLL3.SA",
-    "RAIZ4.SA"
+    "GSHP3.SA",
+    "TRAD3.SA",
+    "OIBR3.SA",
+    "CTAX3.SA",
+    "PRIO3.SA"
   ]
 }
