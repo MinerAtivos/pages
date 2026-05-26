@@ -47,7 +47,7 @@ def update_blog():
 
     # Processa cada arquivo na pasta source
     for filename in os.listdir(SOURCE_DIR):
-        if filename.endswith('.html') or filename.endswith('.txt'):
+        if filename.endswith('.html') or filename.endswith('.txt') or filename.endswith('.md'):
             filepath = os.path.join(SOURCE_DIR, filename)
             with open(filepath, 'r', encoding='utf-8') as f:
                 raw_content = f.read()
