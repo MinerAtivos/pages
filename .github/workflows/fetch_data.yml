@@ -3,7 +3,7 @@ name: Fetch Market Data
 on:
   schedule:
     # Executa todos os dias úteis às 23:00 UTC (20:00 BRT), após fechamento da B3
-    - cron: '5 22 * * 1-5'
+    - cron: '30 21 * * 1-5'
 
   workflow_dispatch:  # Permite execução manual
 
