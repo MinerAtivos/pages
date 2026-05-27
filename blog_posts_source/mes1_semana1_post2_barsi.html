@@ -1,0 +1,97 @@
+<!--
+Title: Método Barsi
+Date: 2026-05-27
+Tags: Conteúdo
+-->
+
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div class="container">
+	    <header>
+            <h1>Dominando o Método Barsi: Como Calcular o Preço-Teto de Ações na B3</h1>
+            <p class="meta">Por Equipe Minerativos | 08 de Maio de 2026 | Categoria: Investimento em Dividendos</p>
+        </header>
+
+        <div class="content">
+            <p>Luiz Barsi Filho, conhecido como o "Rei dos Dividendos", construiu uma fortuna investindo em ações de empresas sólidas que pagam bons proventos. Seu método, simples e eficaz, foca na geração de renda passiva e na compra de ativos abaixo do seu "preço-teto". Mas como você pode aplicar essa estratégia na B3 e identificar as melhores oportunidades?</p>
+
+            <h2>O que é o Preço-Teto?</h2>
+            <p>O Preço-Teto é o valor máximo que você deve pagar por uma ação para que ela ainda seja considerada um bom investimento, gerando um dividend yield (rendimento de dividendo) mínimo desejado. Barsi, por exemplo, busca um dividend yield de 6% ao ano. Se o preço da ação ultrapassar esse teto, ela pode não ser mais atrativa para a estratégia de dividendos.</p>
+
+            <h3>A Fórmula Simples do Barsi</h3>
+            <p>A fórmula para calcular o Preço-Teto é surpreendentemente direta:</p>
+            <p><code>Preço-Teto = (Dividendo por Ação nos Últimos 12 Meses) / (Dividend Yield Desejado)</code></p>
+            <p>Por exemplo, se uma ação pagou R$ 1,20 em dividendos nos últimos 12 meses e seu dividend yield desejado é de 6% (0,06), o Preço-Teto seria R$ 1,20 / 0,06 = R$ 20,00.</p>
+
+            
+    <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin: 30px 0;">
+        <div style="background: #333; padding: 20px; border-radius: 10px; width: 200px; text-align: center; border-top: 4px solid #00C853;">
+            <h4 style="margin: 0; color: #00C853;">PASSO 01</h4>
+            <p style="font-size: 0.9em; margin: 10px 0 0; color: #FFFFFF;">Mineração de Dados Brutos</p>
+        </div>
+        <div style="background: #333; padding: 20px; border-radius: 10px; width: 200px; text-align: center; border-top: 4px solid #00C853;">
+            <h4 style="margin: 0; color: #00C853;">PASSO 02</h4>
+            <p style="font-size: 0.9em; margin: 10px 0 0; color: #FFFFFF;">Identificação de outliers</p>
+        </div>
+        <div style="background: #333; padding: 20px; border-radius: 10px; width: 200px; text-align: center; border-top: 4px solid #00C853;">
+            <h4 style="margin: 0; color: #00C853;">PASSO 03</h4>
+            <p style="font-size: 0.9em; margin: 10px 0 0; color: #FFFFFF;">Insight para Tomada de Decisão</p>
+        </div>
+    </div>
+    
+
+            <h2>Por que o Método Barsi é Relevante Hoje?</h2>
+            <p>Em um cenário de juros voláteis e incertezas econômicas, a busca por empresas que geram valor e distribuem lucros de forma consistente se torna ainda mais crucial. O Método Barsi oferece uma bússola para o investidor que busca construir um patrimônio sólido e uma fonte de renda passiva duradoura, protegendo-se das flutuações de curto prazo.</p>
+
+            <h3>A Minerativos e o Seu Preço-Teto</h3>
+            <p>Nossa plataforma automatiza o cálculo do Preço-Teto para as ações da B3, utilizando dados atualizados de dividendos. Você pode definir seu próprio dividend yield desejado e a Minerativos fará o trabalho pesado, mostrando quais ações estão abaixo do seu preço ideal de compra.</p>
+            <p>Além disso, a Minerativos permite que você:</p>
+            <ul>
+                <li>Acompanhe o histórico de dividendos das suas ações.</li>
+                <li>Compare o Preço-Teto com o preço atual de mercado.</li>
+                <li>Identifique rapidamente oportunidades de compra para sua estratégia de renda passiva.</li>
+            </ul>
+
+            
+        <div style="background: #1E1E1E; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <canvas id="barsiChart"></canvas>
+        </div>
+        <script>
+            const ctx = document.getElementById('barsiChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['BBAS3', 'ITSA4', 'VIVT3', 'CPLE6', 'TRPL4'],
+                    datasets: [{
+                        label: 'Dividend Yield Atual (%)',
+                        data: [9.5, 8.2, 7.8, 10.1, 8.9],
+                        backgroundColor: '#00C853'
+                    }, {
+                        label: 'Preço-Teto Barsi (6%)',
+                        data: [12.0, 9.5, 9.0, 11.5, 10.5],
+                        type: 'line',
+                        borderColor: '#FFC107',
+                        borderDash: [5, 5]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { labels: { color: '#fff' } } },
+                    scales: { y: { grid: { color: '#333' }, ticks: { color: '#ccc' } }, x: { ticks: { color: '#ccc' } } }
+                }
+            });
+        </script>
+        
+
+            <h2>Construa Sua Renda Passiva com Inteligência!</h2>
+            <p>O Método Barsi é uma estratégia poderosa, você pode aplicá-la com eficiência e confiança. Comece a identificar as melhores ações pagadoras de dividendos e construa seu futuro financeiro.</p>
+
+            <div class="disclaimer">
+                <strong>⚠️ Aviso Legal:</strong> Este conteúdo é fornecido apenas para fins educacionais e informativos. Não constitui recomendação de investimento. Consulte um profissional qualificado antes de tomar qualquer decisão financeira.
+            </div>
+        </div>
+
+    </div>
+</body>
+
