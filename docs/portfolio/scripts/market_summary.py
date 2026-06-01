@@ -156,27 +156,29 @@ def calculate_variations():
             asset_summary['daily_delta'] = (last_close / prev_close) - 1
             asset_summary['prev_close'] = prev_close
 
-        # Monthly Delta (approx 30 days ago)
-        # We look for the price closest to 30 days before the last date
+        # Monthly and Yearly Deltas
         try:
             last_date = datetime.strptime(dates[-1], '%Y-%m-%d')
-            target_date = last_date - timedelta(days=30)
-            target_date_str = target_date.strftime('%Y-%m-%d')
 
-            # Find closest date index that is <= target_date_str
-            # Since dates are sorted, we can search
-            month_idx = 0
-            for i, d in enumerate(dates):
-                if d <= target_date_str:
-                    month_idx = i
-                else:
-                    break
+            # Helper function to find delta for N days ago
+            def calculate_delta_days_ago(days):
+                target_date_str = (last_date - timedelta(days=days)).strftime('%Y-%m-%d')
+                idx = 0
+                for i, d in enumerate(dates):
+                    if d <= target_date_str:
+                        idx = i
+                    else:
+                        break
+                hist_close = closes[idx]
+                if hist_close and hist_close > 0 and last_close is not None:
+                    return (last_close / hist_close) - 1
+                return 0
 
-            month_close = closes[month_idx]
-            if month_close and month_close > 0 and last_close is not None:
-                asset_summary['monthly_delta'] = (last_close / month_close) - 1
+            asset_summary['monthly_delta'] = calculate_delta_days_ago(30)
+            asset_summary['yearly_delta'] = calculate_delta_days_ago(365)
+
         except Exception as e:
-            print(f"⚠️ Erro ao calcular delta mensal para {ticker}: {e}")
+            print(f"⚠️ Erro ao calcular deltas temporais para {ticker}: {e}")
 
         all_assets_summary.append(asset_summary)
 
@@ -184,18 +186,38 @@ def calculate_variations():
         print("⚠️ Nenhum dado suficiente para calcular variações.")
         return None
 
-    # Top Gainers/Losers based on daily delta
-    valid_daily = [a for a in all_assets_summary if 'prev_close' in a]
-    sorted_daily = sorted(valid_daily, key=lambda x: x['daily_delta'], reverse=True)
+    # Separate Ibovespa
+    ibov_data = next((a for a in all_assets_summary if a['ticker'] == '^BVSP'), None)
 
-    top_gainers = sorted_daily[:5]
-    top_losers = sorted_daily[-5:][::-1]
+    # Filter out Ibovespa from rankings
+    rank_assets = [a for a in all_assets_summary if a['ticker'] != '^BVSP']
+
+    # Top Gainers/Losers based on daily delta
+    valid_daily = [a for a in rank_assets if 'prev_close' in a]
+    sorted_daily = sorted(valid_daily, key=lambda x: x['daily_delta'], reverse=True)
+    top_gainers_day = sorted_daily[:5]
+    top_losers_day = sorted_daily[-5:][::-1]
+
+    # Top Gainers/Losers based on monthly delta
+    sorted_monthly = sorted(rank_assets, key=lambda x: x.get('monthly_delta', 0), reverse=True)
+    top_gainers_month = sorted_monthly[:5]
+    top_losers_month = sorted_monthly[-5:][::-1]
+
+    # Top Gainers/Losers based on yearly delta
+    sorted_yearly = sorted(rank_assets, key=lambda x: x.get('yearly_delta', 0), reverse=True)
+    top_gainers_year = sorted_yearly[:5]
+    top_losers_year = sorted_yearly[-5:][::-1]
 
     return {
         'last_update': data.get('timestamp'),
         'date': all_assets_summary[0]['date'] if all_assets_summary else None,
-        'gainers': top_gainers,
-        'losers': top_losers,
+        'ibov': ibov_data,
+        'gainers': top_gainers_day,
+        'losers': top_losers_day,
+        'gainers_month': top_gainers_month,
+        'losers_month': top_losers_month,
+        'gainers_year': top_gainers_year,
+        'losers_year': top_losers_year,
         'all_assets': all_assets_summary
     }
 

@@ -22,22 +22,29 @@ CACHE_DIR = os.path.join(DATA_DIR, 'cache')
 
 # Ativos B3 populares para fallback
 DEFAULT_ASSETS = [
-    'PETR4.SA', 'VALE3.SA', 'ITUB4.SA', 'BBDC4.SA', 'ABEV3.SA',
+    '^BVSP', 'PETR4.SA', 'VALE3.SA', 'ITUB4.SA', 'BBDC4.SA', 'ABEV3.SA',
     'WEGE3.SA', 'JBSS3.SA', 'LREN3.SA', 'MGLU3.SA', 'ASAI3.SA'
 ]
 
 def load_tickers():
     """Carrega lista de tickers do arquivo assets.json"""
+    tickers = []
     if os.path.exists(ASSETS_FILE):
         try:
             with open(ASSETS_FILE, 'r', encoding='utf-8') as f:
                 data = json.load(f)
                 tickers = [a['ticker'] for a in data.get('assets', []) if 'ticker' in a]
-                if tickers:
-                    return tickers
         except Exception as e:
             print(f"⚠️ Erro ao ler {ASSETS_FILE}: {e}")
-    return DEFAULT_ASSETS
+
+    if not tickers:
+        tickers = DEFAULT_ASSETS
+
+    # Garante que ^BVSP esteja na lista para o Market Research
+    if '^BVSP' not in tickers:
+        tickers.insert(0, '^BVSP')
+
+    return tickers
 
 def fetch_asset_data(ticker, period=None, start=None):
     """
