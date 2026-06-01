@@ -461,7 +461,18 @@
 
       <div id="newsContent">
         <div class="card glass news-insight-card" style="margin-bottom: 2rem; border-left: 4px solid var(--accent);">
-          <h2 class="card-title">🌍 Panorama Geral do Mercado</h2>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+            <h2 class="card-title" style="margin-bottom: 0;">🌍 Panorama Geral do Mercado</h2>
+            <div id="ibovHeaderCard" class="ibov-header-card glass" style="padding: 0.5rem 1rem; border-radius: 8px; display: none;">
+              <span style="font-weight: 700; color: var(--text-secondary); font-size: 0.8rem;">IBOVESPA:</span>
+              <span id="ibovScore" style="font-weight: 800; font-size: 1.1rem; margin-left: 0.5rem;">—</span>
+              <div style="display: flex; gap: 0.75rem; margin-top: 0.25rem; font-size: 0.75rem; font-weight: 600;">
+                <span id="ibovDay" title="Variação Dia">—</span>
+                <span id="ibovMonth" title="Variação Mês (30d)">—</span>
+                <span id="ibovYear" title="Variação Ano (365d)">—</span>
+              </div>
+            </div>
+          </div>
           <p id="marketInsightText" style="font-size: 1.1rem; line-height: 1.6; color: var(--text-primary);">Carregando insights...</p>
           <p class="subtitle" id="newsLastUpdate" style="margin-top: 1rem; font-size: 0.8rem;"></p>
         </div>
@@ -489,7 +500,15 @@
     <section class="page" data-page="summary" id="page-summary">
       <div class="page-header">
         <h1>Resumo do Mercado</h1>
-        <p class="subtitle" id="summaryDateFull">Visão diária dos ativos que mais se movimentaram</p>
+        <p class="subtitle" id="summaryDateFull">Visão dos ativos que mais se movimentaram</p>
+      </div>
+
+      <div class="toolbar" style="justify-content: center; margin-bottom: 2rem;">
+        <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: 12px; gap: 4px;">
+          <button class="btn btn-sm btn-period active" onclick="app.setSummaryPeriod('day')" id="btn-period-day" style="width: auto;">Dia</button>
+          <button class="btn btn-sm btn-period" onclick="app.setSummaryPeriod('month')" id="btn-period-month" style="width: auto;">Mês</button>
+          <button class="btn btn-sm btn-period" onclick="app.setSummaryPeriod('year')" id="btn-period-year" style="width: auto;">Ano</button>
+        </div>
       </div>
 
       <div class="summary-grid">
@@ -538,7 +557,7 @@
 
       <div class="card glass" style="margin-top: 1.5rem;">
         <h2 class="card-title">🗺️ Mapa do Mercado (Treemap)</h2>
-        <p class="subtitle" style="margin-bottom: 1rem;">O tamanho dos blocos representa a variação absoluta do dia. Cores: Verde (Alta) e Laranja/Vermelho (Baixa).</p>
+        <p class="subtitle" id="treemapSubtitle" style="margin-bottom: 1rem;">O tamanho dos blocos representa a variação absoluta do período. Cores: Verde (Alta) e Laranja/Vermelho (Baixa).</p>
         <div class="chart-container" style="height: 600px;">
           <canvas id="marketTreemap"></canvas>
         </div>
@@ -572,6 +591,9 @@
           </div>
           <p style="margin-top: 1rem; text-align: center; font-size: 0.85rem;">
             <a href="mailto:minerativos+esquecisenha@gmail.com" style="color: var(--text-muted); text-decoration: none;">Esqueceu a senha? Entre em contato com o suporte</a>
+          </p>
+          <p style="margin-top: 0.5rem; text-align: center; font-size: 0.85rem;">
+            Novo por aqui? <a href="#" onclick="app.openMembershipModal('registration')" style="color: var(--accent); text-decoration: underline;">Clique aqui e solicite cadastramento</a>
           </p>
         </form>
       </div>
@@ -766,12 +788,13 @@
   <div class="modal-overlay" id="membershipModalOverlay">
     <div class="modal glass" id="membershipModal">
       <div class="modal-header">
-        <h2>Seja Membro</h2>
+        <h2 id="membershipModalTitle">Seja Membro</h2>
         <button class="modal-close" id="membershipModalClose">&times;</button>
       </div>
       <div class="membership-content">
-        <p>Você atingiu o limite de <strong>5 ativos</strong> para usuários não cadastrados.</p>
-        <p>Para gerenciar um portfólio ilimitado, acessar análises avançadas e sincronizar seus dados na nuvem, torne-se um membro da nossa plataforma.</p>
+        <p id="membershipModalText">Para gerenciar um portfólio ilimitado, acessar análises avançadas e sincronizar seus dados na nuvem, torne-se um membro da nossa plataforma.</p>
+
+        <div id="membershipExtraActions" style="margin-top: 1.5rem;"></div>
 
         <div class="membership-plans" style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
           <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Plano Pro</h3>

@@ -20,6 +20,7 @@ class B3App {
     this.charts = {};
     this.isDiscoveryMode = false;
     this.currentPage = 'dashboard';
+    this.summaryPeriod = 'day'; // day, month, year
     this.init();
   }
 
@@ -125,8 +126,7 @@ class B3App {
 
     // Protection for dividends page
     if (name === 'dividends' && !this.user) {
-      this.toast('Acesse sua conta para ver esta seção exclusiva', 'warning');
-      this.showPage('members');
+      this.openMembershipModal('dividends');
       return;
     }
 
@@ -451,7 +451,7 @@ class B3App {
     if (!this.user && editIndex === null) {
       const uniqueTickers = new Set(this.portfolio.positions.map(p => p.ticker));
       if (uniqueTickers.size >= 5) {
-        this.openMembershipModal();
+        this.openMembershipModal('limit');
         return;
       }
     }
@@ -497,8 +497,38 @@ class B3App {
     }
   }
 
-  openMembershipModal() {
+  openMembershipModal(reason = 'general') {
+    const title = this.$('membershipModalTitle');
+    const text = this.$('membershipModalText');
+    const leadEmail = this.$('leadEmail');
+
+    // Clear extra buttons if any
+    const extraActions = this.$('membershipExtraActions');
+    if (extraActions) extraActions.innerHTML = '';
+
+    if (reason === 'limit') {
+      title.textContent = 'Limite Atingido';
+      text.innerHTML = 'Você atingiu o limite de <strong>5 ativos</strong> para usuários não cadastrados.<br><br>Para gerenciar um portfólio ilimitado, acessar análises avançadas e sincronizar seus dados na nuvem, torne-se um membro.';
+    } else if (reason === 'registration') {
+      title.textContent = 'Solicitar Cadastramento';
+      text.textContent = 'Preencha seu e-mail abaixo para solicitar seu cadastro no Plano Pro e ter acesso a todas as funcionalidades exclusivas. Desta forma, você sinaliza que viu as condições e concorda.';
+    } else if (reason === 'dividends') {
+      title.textContent = 'Área de Membros';
+      text.textContent = 'A seção de Proventos é exclusiva para membros. Faça login ou solicite seu cadastramento abaixo para ter acesso.';
+
+      if (extraActions) {
+        extraActions.innerHTML = `
+          <button class="btn btn-outline" style="width: 100%; margin-bottom: 1rem;" onclick="app.closeMembershipModal(); app.showPage('members');">Já sou membro (Fazer Login)</button>
+          <div style="text-align: center; margin-bottom: 1rem; font-size: 0.8rem; color: var(--text-muted);">OU</div>
+        `;
+      }
+    } else {
+      title.textContent = 'Seja Membro';
+      text.textContent = 'Para gerenciar um portfólio ilimitado, acessar análises avançadas e sincronizar seus dados na nuvem, torne-se um membro da nossa plataforma.';
+    }
+
     this.$('membershipModalOverlay').classList.add('show');
+    if (leadEmail) leadEmail.focus();
   }
 
   closeMembershipModal() {
@@ -810,6 +840,26 @@ class B3App {
     this.$('marketInsightText').textContent = this.marketNews.market_summary || 'Sem resumo geral.';
     this.$('newsLastUpdate').textContent = `Última atualização: ${new Date(this.marketNews.last_update).toLocaleString('pt-BR')}`;
 
+    // Render Ibovespa Header in Market Research
+    const ibov = this.marketNews.ibov;
+    const ibovCard = this.$('ibovHeaderCard');
+    if (ibov && ibovCard) {
+      ibovCard.style.display = 'block';
+      this.$('ibovScore').textContent = ibov.last_close.toLocaleString('pt-BR', { maximumFractionDigits: 0 }) + ' pts';
+
+      const renderDelta = (id, val, label) => {
+        const el = this.$(id);
+        const sign = val > 0 ? '+' : '';
+        const color = val >= 0 ? 'var(--green)' : 'var(--red)';
+        el.textContent = `${label}: ${sign}${(val * 100).toFixed(2)}%`;
+        el.style.color = color;
+      };
+
+      renderDelta('ibovDay', ibov.daily_delta, 'D');
+      renderDelta('ibovMonth', ibov.monthly_delta, 'M');
+      renderDelta('ibovYear', ibov.yearly_delta, 'A');
+    }
+
     const grid = this.$('newsAssetsGrid');
     grid.innerHTML = '';
 
@@ -835,13 +885,27 @@ class B3App {
 
       let performanceHtml = '';
       if (data.last_close != null && data.daily_delta != null) {
-        const delta = (data.daily_delta * 100).toFixed(2);
-        const colorClass = data.daily_delta >= 0 ? 'var-up' : 'var-down';
-        const sign = data.daily_delta > 0 ? '+' : '';
+        const d_delta = (data.daily_delta * 100).toFixed(2);
+        const d_color = data.daily_delta >= 0 ? 'var-up' : 'var-down';
+        const d_sign = data.daily_delta > 0 ? '+' : '';
+
+        let extraDeltas = '';
+        if (data.monthly_delta != null && data.yearly_delta != null) {
+          const m_delta = (data.monthly_delta * 100).toFixed(1);
+          const y_delta = (data.yearly_delta * 100).toFixed(1);
+          extraDeltas = `
+            <div style="font-size: 0.65rem; color: var(--text-muted); margin-top: 2px;">
+              M: <span class="${data.monthly_delta >= 0 ? 'var-up' : 'var-down'}">${data.monthly_delta > 0 ? '+' : ''}${m_delta}%</span> |
+              A: <span class="${data.yearly_delta >= 0 ? 'var-up' : 'var-down'}">${data.yearly_delta > 0 ? '+' : ''}${y_delta}%</span>
+            </div>
+          `;
+        }
+
         performanceHtml = `
           <div class="news-card-perf">
             <span class="news-perf-price">R$ ${data.last_close.toFixed(2)}</span>
-            <span class="news-perf-delta ${colorClass}">${sign}${delta}%</span>
+            <span class="news-perf-delta ${d_color}">${d_sign}${d_delta}%</span>
+            ${extraDeltas}
           </div>
         `;
       }
@@ -928,15 +992,25 @@ class B3App {
       const url = `./data/market_summary.json?t=${new Date().getTime()}`;
       const res = await fetch(url);
       if (!res.ok) return;
-      const summary = await res.json();
-      this.renderMarketSummary(summary);
+      this.marketSummaryData = await res.json();
+      this.renderMarketSummary();
 
-      if (summary.all_assets) {
-        this.renderMarketTreemap(summary.all_assets);
+      if (this.marketSummaryData.all_assets) {
+        this.renderMarketTreemap();
       }
     } catch (err) {
       console.warn('Resumo de mercado não disponível');
     }
+  }
+
+  setSummaryPeriod(period) {
+    this.summaryPeriod = period;
+    document.querySelectorAll('.btn-period').forEach(b => b.classList.remove('active'));
+    const btn = this.$(`btn-period-${period}`);
+    if (btn) btn.classList.add('active');
+
+    this.renderMarketSummary();
+    this.renderMarketTreemap();
   }
 
   async loadAssets() {
@@ -1996,14 +2070,31 @@ class B3App {
      Rendering — Market Summary
      original com o nome do ativo na linha 1451: <td><strong>${item.ticker.replace('.SA', '')}</strong><br><small style="color:var(--text-muted)">${item.name}</small></td>
   ------------------------------------------------------------------ */
-  renderMarketSummary(summary) {
-    if (!summary || !summary.gainers || !summary.losers) return;
+  renderMarketSummary() {
+    const summary = this.marketSummaryData;
+    if (!summary) return;
 
     this.$('summaryDateFull').textContent = `Dados atualizados em ${summary.date} (referente à coleta de ${summary.last_update.split('T')[0]})`;
 
+    let gainers, losers, deltaKey;
+    if (this.summaryPeriod === 'month') {
+      gainers = summary.gainers_month;
+      losers = summary.losers_month;
+      deltaKey = 'monthly_delta';
+    } else if (this.summaryPeriod === 'year') {
+      gainers = summary.gainers_year;
+      losers = summary.losers_year;
+      deltaKey = 'yearly_delta';
+    } else {
+      gainers = summary.gainers;
+      losers = summary.losers;
+      deltaKey = 'daily_delta';
+    }
+
     const renderRows = (data, isGainer) => {
+      if (!data) return '<tr><td colspan="4" class="empty-state">Sem dados para este período</td></tr>';
       return data.map(item => {
-        const deltaVal = item.daily_delta !== undefined ? item.daily_delta : item.delta;
+        const deltaVal = item[deltaKey] || 0;
         const delta = (deltaVal * 100).toFixed(2);
         const icon = isGainer ? '🚀' : '📉';
         const cssClass = isGainer ? 'var-up' : 'var-down';
@@ -2011,35 +2102,37 @@ class B3App {
         const volVal = item.delta_volume !== undefined ? item.delta_volume : 0;
         const volPct = (volVal * 100).toFixed(0);
         const volClass = volVal > 0 ? 'var-up' : 'var-down';
-        const volIcon = volVal > 1 ? '⬆️😲' : '';
+        const volIcon = (this.summaryPeriod === 'day' && volVal > 1) ? '⬆️😲' : '';
 
         return `
           <tr>
             <td><strong>${item.ticker.replace('.SA', '')}</strong></td>            
             <td>R$${item.last_close.toFixed(2)}</td>
-            <td class="${cssClass}">${(deltaVal > 0 && isGainer) ? '+' : ''}${delta}% ${icon}</td>
-            <td class="${volClass}">${volVal > 0 ? '+' : ''}${volPct}% ${volIcon}</td>
+            <td class="${cssClass}">${(deltaVal > 0) ? '+' : ''}${delta}% ${icon}</td>
+            <td class="${volClass}">${this.summaryPeriod === 'day' ? (volVal > 0 ? '+' : '') + volPct + '% ' + volIcon : '—'}</td>
           </tr>
         `;
       }).join('');
     };
 
-    this.$('gainersBody').innerHTML = renderRows(summary.gainers, true);
-    this.$('losersBody').innerHTML = renderRows(summary.losers, false);
+    this.$('gainersBody').innerHTML = renderRows(gainers, true);
+    this.$('losersBody').innerHTML = renderRows(losers, false);
   }
 
-  renderMarketTreemap(allAssets) {
+  renderMarketTreemap() {
+    const allAssets = this.marketSummaryData ? this.marketSummaryData.all_assets : null;
+    if (!allAssets) return;
     const ctx = this.$('marketTreemap');
     if (!ctx) return;
     if (this.charts.treemap) this.charts.treemap.destroy();
 
-    console.log('Rendering Treemap with assets:', allAssets.length);
+    const deltaKey = this.summaryPeriod === 'month' ? 'monthly_delta' : (this.summaryPeriod === 'year' ? 'yearly_delta' : 'daily_delta');
 
     // Filter and prepare data
-    const validAssets = allAssets.filter(a => a.daily_delta !== undefined);
+    const validAssets = allAssets.filter(a => a[deltaKey] !== undefined && a.ticker !== '^BVSP');
 
-    const posPriceAssets = validAssets.filter(a => a.daily_delta > 0);
-    const negPriceAssets = validAssets.filter(a => a.daily_delta < 0);
+    const posPriceAssets = validAssets.filter(a => a[deltaKey] > 0);
+    const negPriceAssets = validAssets.filter(a => a[deltaKey] < 0);
 
     const getQuartiles = (values) => {
       if (values.length === 0) return [0, 0, 0, 0, 0];
@@ -2078,22 +2171,25 @@ class B3App {
       let category = 0;
       let color = "#D3D3D3";
 
-      if (a.daily_delta > 0) {
+      if (a[deltaKey] > 0) {
         category = getCategory(volAbs, posQuartiles);
         color = cores_positivas[category];
-      } else if (a.daily_delta < 0) {
+      } else if (a[deltaKey] < 0) {
         category = getCategory(volAbs, negQuartiles);
         color = cores_negativas[category];
       }
 
+      const val = a[deltaKey] * 100;
+
       return {
         ticker: a.ticker.replace('.SA', ''),
         name: a.name,
-        value: Math.max(Math.abs(a.daily_delta * 100), 0.5),
+        value: Math.max(Math.abs(val), 0.5),
         daily: (a.daily_delta * 100).toFixed(2) + '%',
         monthly: (a.monthly_delta * 100).toFixed(2) + '%',
+        yearly: (a.yearly_delta * 100).toFixed(2) + '%',
         delta_volume: (a.delta_volume * 100).toFixed(2) + '%',
-        delta: a.daily_delta,
+        delta: a[deltaKey],
         color: color
       };
     });
@@ -2130,6 +2226,8 @@ class B3App {
               if (!context || !context.raw || !context.raw._data) return '';
               const item = context.raw._data;
               if (context.raw.w < 40 || context.raw.h < 30) return [item.ticker];
+              if (this.summaryPeriod === 'month') return [item.ticker, `M: ${item.monthly}`, `D: ${item.daily}`];
+              if (this.summaryPeriod === 'year') return [item.ticker, `A: ${item.yearly}`, `D: ${item.daily}`];
               return [item.ticker, `D: ${item.daily}`, `M: ${item.monthly}`];
             },
             font: (context) => {
@@ -2161,6 +2259,7 @@ class B3App {
                   `Nome: ${d.name}`,
                   `Variação Dia: ${d.daily}`,
                   `Variação Mês: ${d.monthly}`,
+                  `Variação Ano: ${d.yearly}`,
                   `Delta Volume: ${d.delta_volume}`
                 ];
               }
