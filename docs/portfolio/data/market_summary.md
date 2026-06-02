@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-06-01
+## Resumo de Mercado - 2026-06-02
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| MWET4.SA | Wetzel S.A. | R$ 17.48 | R$ 14.90 | **+17.32%** 🚀 | -87.88% ⬇️ |
-| CBEE3.SA | Ampla Energia e Serviços S.A. | R$ 13.95 | R$ 11.95 | **+16.74%** 🚀 | -42.86% ⬇️ |
-| SOND6.SA | Sondotécnica Engenharia de Solos S.A. | R$ 80.00 | R$ 70.21 | **+13.94%** 🚀 | 0.00% — |
-| RAIZ4.SA | Raízen S.A. | R$ 0.40 | R$ 0.36 | **+11.11%** 🚀 | +191.80% ⬆️ |
-| SNSY3.SA | Sansuy S.A. | R$ 11.95 | R$ 10.85 | **+10.14%** 🚀 | 0.00% — |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.09 | R$ 0.08 | **+12.50%** 🚀 | +76.60% ⬆️ |
+| VVEO3.SA | CM Hospitalar S/A | R$ 1.48 | R$ 1.34 | **+10.45%** 🚀 | +46.15% ⬆️ |
+| CBEE3.SA | Ampla Energia e Serviços S.A. | R$ 15.31 | R$ 13.95 | **+9.75%** 🚀 | -39.13% ⬇️ |
+| BNBR3.SA | Banco do Nordeste do Brasil S.A. | R$ 119.75 | R$ 110.00 | **+8.86%** 🚀 | +11.11% ⬆️ |
+| CSNA3.SA | Companhia Siderúrgica Nacional | R$ 7.13 | R$ 6.55 | **+8.85%** 🚀 | +154.86% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.08 | R$ 0.12 | **-33.33%** 📉 | +872.42% ⬆️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.27 | R$ 0.33 | **-18.18%** 📉 | +69.94% ⬆️ |
-| RPMG3.SA | Refinaria de Petróleos de Manguinhos S.A. | R$ 1.60 | R$ 1.87 | **-14.44%** 📉 | +67.85% ⬆️ |
-| AXIA5.SA | AXIA Energia SA | R$ 55.50 | R$ 64.63 | **-14.13%** 📉 | +300.00% ⬆️ |
-| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 1.61 | R$ 1.86 | **-13.44%** 📉 | +134.17% ⬆️ |
+| MWET4.SA | Wetzel S.A. | R$ 14.00 | R$ 17.48 | **-19.91%** 📉 | -75.76% ⬇️ |
+| RPMG3.SA | Refinaria de Petróleos de Manguinhos S.A. | R$ 1.40 | R$ 1.60 | **-12.50%** 📉 | +122.24% ⬆️ |
+| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 0.18 | R$ 0.20 | **-10.00%** 📉 | +93.12% ⬆️ |
+| OBTC3.SA | Oranjebtc S.A. - Educação e Investimento | R$ 6.09 | R$ 6.72 | **-9.38%** 📉 | +135.25% ⬆️ |
+| FIEI3.SA | Fica Empreendimentos Imobiliarios S.A | R$ 11.49 | R$ 12.60 | **-8.81%** 📉 | 0.00% — |
