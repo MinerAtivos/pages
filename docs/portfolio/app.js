@@ -864,12 +864,6 @@ class B3App {
     grid.innerHTML = '';
 
     // Sanitization helper
-    const escapeHTML = (str) => {
-      if (!str) return '';
-      return str.replace(/[&<>"']/g, m => ({
-        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-      }[m]));
-    };
 
     const assets = Object.keys(this.marketNews.assets);
     const movers = this.marketNews.market_movers || [];
@@ -917,17 +911,18 @@ class B3App {
 
       const displayDate = data.price_date ? data.price_date.split('-').reverse().join('/') : new Date(data.updated_at).toLocaleDateString('pt-BR');
 
+      const tickerClean = this.escapeHTML(ticker.replace('.SA', ''));
       card.innerHTML = `
         <div class="news-card-header">
           <div style="display:flex; flex-direction:column">
-            <span class="news-card-ticker">${escapeHTML(ticker.replace('.SA', ''))}</span>
+            <a href="monitor.html?ticker=${tickerClean}&from=news" class="ticker-link news-card-ticker">${tickerClean}</a>
             <span style="font-size: 0.65rem; color: var(--text-muted);">${displayDate}</span>
           </div>
           ${performanceHtml}
         </div>
         ${outdatedBadge}
-        <div class="news-card-summary">${escapeHTML(data.summary)}</div>
-        <button class="btn btn-outline btn-sm" onclick="app.showAssetNews('${escapeHTML(ticker)}')" style="margin-top:auto">Ver Mais</button>
+        <div class="news-card-summary">${this.escapeHTML(data.summary)}</div>
+        <button class="btn btn-outline btn-sm" onclick="app.showAssetNews('${this.escapeHTML(ticker)}')" style="margin-top:auto">Ver Mais</button>
       `;
       grid.appendChild(card);
     });
@@ -1776,6 +1771,7 @@ class B3App {
     let html = '';
     consolidated.forEach(item => {
       const a = analysisMap[item.ticker] || {};
+      const tickerClean = this.escapeHTML(item.ticker.replace('.SA', ''));
       const rent = a.rentability_real;
       const rentClass = rent !== undefined ? (rent >= 0 ? 'positive' : 'negative') : '';
       const rentText = rent !== undefined ? ((rent > 0 ? '+' : '') + rent.toFixed(2) + '%') : '—';
@@ -1785,7 +1781,7 @@ class B3App {
       ` : '';
 
       html += `<tr>
-        <td><strong>${item.ticker.replace('.SA', '')}</strong><br><small style="color:var(--text-muted)">${a.name || item.ticker}</small></td>
+        <td><a href="monitor.html?ticker=${tickerClean}&from=positions" class="ticker-link">${tickerClean}</a><br><small style="color:var(--text-muted)">${a.name || item.ticker}</small></td>
         <td>${item.totalQty}</td>
         <td>R$ ${item.avgPrice.toFixed(2)}</td>
         <td>${this.formatCurrency(item.totalInvested)}</td>
@@ -2094,6 +2090,7 @@ class B3App {
     const renderRows = (data, isGainer) => {
       if (!data) return '<tr><td colspan="4" class="empty-state">Sem dados para este período</td></tr>';
       return data.map(item => {
+        const tickerClean = this.escapeHTML(item.ticker.replace('.SA', ''));
         const deltaVal = item[deltaKey] || 0;
         const delta = (deltaVal * 100).toFixed(2);
         const icon = isGainer ? '🚀' : '📉';
@@ -2106,7 +2103,7 @@ class B3App {
 
         return `
           <tr>
-            <td><strong>${item.ticker.replace('.SA', '')}</strong></td>            
+            <td><a href="monitor.html?ticker=${tickerClean}&from=summary" class="ticker-link">${tickerClean}</a></td>
             <td>R$${item.last_close.toFixed(2)}</td>
             <td class="${cssClass}">${(deltaVal > 0) ? '+' : ''}${delta}% ${icon}</td>
             <td class="${volClass}">${this.summaryPeriod === 'day' ? (volVal > 0 ? '+' : '') + volPct + '% ' + volIcon : '—'}</td>
@@ -2298,6 +2295,13 @@ class B3App {
   }
 
   $(id) { return document.getElementById(id); }
+
+  escapeHTML(str) {
+    if (!str) return '';
+    return str.replace(/[&<>"']/g, m => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    }[m]));
+  }
 
   toast(message, type = 'info') {
     const container = this.$('toastContainer');

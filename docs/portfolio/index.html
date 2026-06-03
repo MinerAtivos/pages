@@ -380,7 +380,7 @@
             ⚖️ Calcular Alocação Sugerida
           </button>
           <button class="btn btn-outline" id="btnRequestExpertAnalysis" title="Disponível para Membros">
-            📩 Solicitar Simulação Especializada
+            📩 Solicitar Análise Especializada (Python)
           </button>
         </div>
       </div>
@@ -852,24 +852,22 @@
   <!-- <script src="app.js"></script> -->
 
 
-    <!-- script para abrir mercado oriundo da página minerativos.com -->
+    <!-- script para abrir mercado oriundo da página minerativos.com ou links internos -->
       <script>
         window.addEventListener('load', function() {
           const urlParams = new URLSearchParams(window.location.search);
           const targetSection = urlParams.get('section');
       
-          if (targetSection === 'summary') {
-            const btn = document.getElementById('nav-summary');
-            // Tenta encontrar a seção real que o botão ativa (geralmente tem o ID do data-section)
-            const section = document.getElementById('summary') || document.querySelector('[data-section="summary"]');
+          if (targetSection) {
+            const btn = document.getElementById('nav-' + targetSection) || document.querySelector(`[data-section="${targetSection}"]`);
+            // Tenta encontrar a seção real que o botão ativa
+            const section = document.getElementById(targetSection) || document.querySelector(`[data-page="${targetSection}"]`) || document.querySelector(`[data-section="${targetSection}"]`);
       
             if (btn) {
               setTimeout(() => {
                 btn.click(); // Ativa a lógica do site
       
                 if (section) {
-                  // Ajustar aqui: 80 é a altura estimada do menu fixo na parte superior da página. 
-                  // Se o menu for maior, aumentar esse número.
                   const menuHeight = 0; 
                   const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - menuHeight;
       
@@ -878,7 +876,7 @@
                     behavior: 'smooth'
                   });
                 }
-              }, 500); // Aumentamos o tempo para garantir que o layout estabilizou
+              }, 500); // Garante que o layout estabilizou
             }
           }
         });

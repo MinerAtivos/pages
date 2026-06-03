@@ -888,6 +888,18 @@ input[type="number"]:focus, select:focus {
 .var-up { color: var(--green); }
 .var-down { color: var(--red); }
 
+.ticker-link {
+  color: var(--accent-light);
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.ticker-link:hover {
+  color: var(--accent);
+}
+
 .btn-period {
   background: transparent;
   color: var(--text-secondary);
@@ -903,6 +915,25 @@ input[type="number"]:focus, select:focus {
   background: var(--accent);
   color: #fff;
   box-shadow: 0 2px 8px var(--accent-glow);
+}
+
+.btn-voltar {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition);
+}
+
+.btn-voltar:hover {
+  background: var(--accent-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px var(--accent-glow);
 }
 
 .ibov-header-card {
