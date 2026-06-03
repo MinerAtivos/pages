@@ -140,7 +140,7 @@ def get_ai_summary(ticker, context, is_priority=False):
             if response and len(response) > 15:
                 return response.strip()
         except: continue
-    return f"Resumo: {context[:200]}..."
+    return f"Resumo: {context[:300]}..."
 
 def main():
     print("🚀 Iniciando Multi-Source News Fetcher...")
