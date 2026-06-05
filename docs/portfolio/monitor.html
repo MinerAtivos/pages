@@ -710,6 +710,36 @@
         <div id="tradingview_chart"></div>
     </div>
 
+<!-- Div Pai externa que funciona como a máscara de corte -->
+<div style="width: 425px; height: 1120px; overflow: hidden; position: relative;">
+  <!-- Div Interna que move o gráfico 20px para cima -->
+	<div style="position: absolute; top: -50px; left: 0; width: 100%;">
+		<!-- TradingView Widget BEGIN -->
+		<div class="tradingview-widget-container">
+		  <div class="tradingview-widget-container__widget"></div>
+		  <!--<div class="tradingview-widget-copyright"><a href="https://br.tradingview.com/symbols/BMFBOVESPA-RAIZ4/technicals/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>-->
+		  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+		  {
+		  "colorTheme": "light",
+		  "displayMode": "multiple",
+		  "isTransparent": false,
+		  "locale": "br",
+		  "interval": "1D",
+		  "disableInterval": false,
+		  "width": 425,
+		  "height": 1200,
+		  "symbol": "BMFBOVESPA:RAIZ4",
+		  "showIntervalTabs": true
+		}
+		  </script>
+		</div>
+		<!-- TradingView Widget END -->
+	</div>
+</div>
+
+
+
+	
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 
     <script type="text/javascript">
