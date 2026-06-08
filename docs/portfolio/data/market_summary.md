@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-06-05
+## Resumo de Mercado - 2026-06-08
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| TOKY3.SA | TOKY3.SA | R$ 0.48 | R$ 0.14 | **+242.86%** 🚀 | -83.20% ⬇️ |
-| BDLL3.SA | Bardella S.A. Indústrias Mecânicas | R$ 7.90 | R$ 6.00 | **+31.67%** 🚀 | +40.00% ⬆️ |
-| RVEE3.SA | RVEE3.SA | R$ 1.08 | R$ 0.84 | **+28.57%** 🚀 | +283.72% ⬆️ |
-| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 0.19 | R$ 0.17 | **+11.76%** 🚀 | +316.66% ⬆️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.31 | R$ 0.28 | **+10.71%** 🚀 | -3.45% ⬇️ |
+| CBEE3.SA | Ampla Energia e Serviços S.A. | R$ 21.90 | R$ 15.31 | **+43.04%** 🚀 | +161.22% ⬆️ |
+| TPIS3.SA | Triunfo Participações e Investimentos S.A. | R$ 10.68 | R$ 9.25 | **+15.46%** 🚀 | +189.62% ⬆️ |
+| BOBR4.SA | Bombril S.A. | R$ 1.30 | R$ 1.17 | **+11.11%** 🚀 | -79.26% ⬇️ |
+| RAIZ4.SA | Raízen S.A. | R$ 0.44 | R$ 0.40 | **+10.00%** 🚀 | +34.34% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 0.12 | R$ 0.11 | **+9.09%** 🚀 | +244.87% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| BPAC3.SA | Banco BTG Pactual S.A. | R$ 22.23 | R$ 24.79 | **-10.33%** 📉 | +746.03% ⬆️ |
-| CSNA3.SA | Companhia Siderúrgica Nacional | R$ 6.00 | R$ 6.68 | **-10.18%** 📉 | +152.93% ⬆️ |
-| ATED3.SA | ATED3.SA | R$ 2.14 | R$ 2.37 | **-9.70%** 📉 | +1083.51% ⬆️ |
-| RCSL4.SA | Recrusul S/A | R$ 0.50 | R$ 0.55 | **-9.09%** 📉 | +65.19% ⬆️ |
-| JFEN3.SA | João Fortes Engenharia S.A. | R$ 0.53 | R$ 0.58 | **-8.62%** 📉 | +12.34% ⬆️ |
+| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 2.62 | R$ 2.93 | **-10.58%** 📉 | -76.19% ⬇️ |
+| ENMT4.SA | Energisa Mato Grosso - Distribuidora de Energia S/A | R$ 37.99 | R$ 42.00 | **-9.55%** 📉 | +211.28% ⬆️ |
+| ENMT3.SA | Energisa Mato Grosso - Distribuidora de Energia S/A | R$ 35.51 | R$ 39.00 | **-8.95%** 📉 | +56.86% ⬆️ |
+| TOKY3.SA | TOKY3.SA | R$ 0.44 | R$ 0.48 | **-8.33%** 📉 | -91.76% ⬇️ |
+| FICT3.SA | Fictor Alimentos S.A. | R$ 0.23 | R$ 0.25 | **-8.00%** 📉 | -65.87% ⬇️ |
