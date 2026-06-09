@@ -20,6 +20,7 @@ class B3App {
     this.charts = {};
     this.isDiscoveryMode = false;
     this.currentPage = 'dashboard';
+    this.previousPage = 'dashboard';
     this.summaryPeriod = 'day'; // day, month, year
     this.init();
   }
@@ -60,6 +61,7 @@ class B3App {
     this.$('btnRunRebalance').addEventListener('click', () => this.runRebalance());
     this.$('btnRequestExpertAnalysis').addEventListener('click', () => this.requestExpertAnalysis());
     this.$('btnAddBulk').addEventListener('click', () => this.openBulkModal());
+    this.$('btnVoltarMonitor').addEventListener('click', () => this.showPage(this.previousPage));
 
     // Mobile
     this.$('hamburger').addEventListener('click', () => this.toggleSidebar());
@@ -123,6 +125,9 @@ class B3App {
 
   showPage(name) {
     console.log('Showing page:', name);
+    if (this.currentPage !== 'monitor') {
+      this.previousPage = this.currentPage;
+    }
 
     // Protection for dividends page
     if (name === 'dividends' && !this.user) {
@@ -915,7 +920,7 @@ class B3App {
       card.innerHTML = `
         <div class="news-card-header">
           <div style="display:flex; flex-direction:column">
-            <a href="monitor.html?ticker=${tickerClean}&from=news" class="ticker-link news-card-ticker">${tickerClean}</a>
+            <a href="#" onclick="event.preventDefault(); app.showMonitor('${tickerClean}')" class="ticker-link news-card-ticker"><strong>${tickerClean}</strong></a>
             <span style="font-size: 0.65rem; color: var(--text-muted);">${displayDate}</span>
           </div>
           ${performanceHtml}
@@ -1023,14 +1028,15 @@ class B3App {
 
   populateAssetDatalist() {
     const datalist = this.$('assetList');
-    if (!datalist) return;
-    datalist.innerHTML = '';
-    this.assets.forEach(a => {
-      const option = document.createElement('option');
-      option.value = a.ticker;
-      option.textContent = `${a.ticker} — ${a.name}`;
-      datalist.appendChild(option);
-    });
+    if (datalist) {
+      datalist.innerHTML = '';
+      this.assets.forEach(a => {
+        const option = document.createElement('option');
+        option.value = a.ticker;
+        option.textContent = `${a.ticker} — ${a.name}`;
+        datalist.appendChild(option);
+      });
+    }
   }
 
   async loadPortfolio() {
@@ -1781,7 +1787,7 @@ class B3App {
       ` : '';
 
       html += `<tr>
-        <td><a href="monitor.html?ticker=${tickerClean}&from=positions" class="ticker-link">${tickerClean}</a><br><small style="color:var(--text-muted)">${a.name || item.ticker}</small></td>
+        <td><a href="#" onclick="event.preventDefault(); app.showMonitor('${tickerClean}')" class="ticker-link"><strong>${tickerClean}</strong><br><small style="color:var(--text-muted)">${a.name || item.ticker}</small></a></td>
         <td>${item.totalQty}</td>
         <td>R$ ${item.avgPrice.toFixed(2)}</td>
         <td>${this.formatCurrency(item.totalInvested)}</td>
@@ -2103,7 +2109,7 @@ class B3App {
 
         return `
           <tr>
-            <td><a href="monitor.html?ticker=${tickerClean}&from=summary" class="ticker-link">${tickerClean}</a></td>
+            <td><a href="#" onclick="event.preventDefault(); app.showMonitor('${tickerClean}')" class="ticker-link"><strong>${tickerClean}</strong></a></td>
             <td>R$${item.last_close.toFixed(2)}</td>
             <td class="${cssClass}">${(deltaVal > 0) ? '+' : ''}${delta}% ${icon}</td>
             <td class="${volClass}">${this.summaryPeriod === 'day' ? (volVal > 0 ? '+' : '') + volPct + '% ' + volIcon : '—'}</td>
@@ -2301,6 +2307,51 @@ class B3App {
     return str.replace(/[&<>"']/g, m => ({
       '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
     }[m]));
+  }
+
+  showMonitor(ticker) {
+    console.log('Showing monitor for:', ticker);
+    const tickerClean = ticker.replace('.SA', '').toUpperCase();
+    this.showPage('monitor');
+
+    // Garantir que o container está visível e dimensionado antes de renderizar
+    // O fadeUp leva 0.4s, então vamos aguardar um pouco mais para garantir
+    setTimeout(() => {
+        this.renderChart(tickerClean);
+    }, 450);
+  }
+
+  renderChart(ticker) {
+    if (!ticker) return;
+    const containerId = "tradingview_chart_spa";
+    const container = this.$(containerId);
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    if (typeof TradingView !== "undefined") {
+      new TradingView.widget({
+        "autosize": true,
+        "symbol": "BMFBOVESPA:" + ticker,
+        "interval": "D",
+        "timezone": "America/Sao_Paulo",
+        "theme": "dark",
+        "style": "1",
+        "locale": "br",
+        "enable_publishing": false,
+        "hide_side_toolbar": false,
+        "allow_symbol_change": true,
+        "container_id": containerId,
+            "studies": [
+            "STD;Bollinger_Bands",
+            "STD;MACD",
+            "STD;Divergence%1Indicator",
+            "STD;Stochastic_RSI"
+            ]
+      });
+    } else {
+      container.innerHTML = '<p class="empty-state">Erro ao carregar o TradingView. Verifique sua conexão.</p>';
+    }
   }
 
   toast(message, type = 'info') {
