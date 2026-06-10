@@ -1462,7 +1462,7 @@ class B3App {
     } else {
       let bestMetric = -Infinity;
       let bestWeights = {};
-      const numSimulations = 3000;
+      const numSimulations = 10000;
 
       for (let i = 0; i < numSimulations; i++) {
         let w = assetsData.map(() => Math.random());
