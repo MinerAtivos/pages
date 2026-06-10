@@ -2340,7 +2340,7 @@ class B3App {
         "locale": "br",
         "enable_publishing": false,
         "hide_side_toolbar": false,
-        "allow_symbol_change": true,
+        "allow_symbol_change": false,
         "container_id": containerId,
             "studies": [
             "STD;Bollinger_Bands",
