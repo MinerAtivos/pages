@@ -8,7 +8,7 @@ from datetime import datetime
 SOURCE_DIR = 'blog_posts_source'
 OUTPUT_DIR = 'docs/blog/posts'
 POSTS_JSON = 'docs/blog/posts.json'
-DEFAULT_IMAGE = 'assets/blog/old_favicon.png' #default-cover.png' # Imagem padrão caso não encontre nenhuma
+DEFAULT_IMAGE = '../assets/logo4.png' #default-cover.png' # Imagem padrão caso não encontre nenhuma
 
 def extract_metadata(content):
     metadata = {}
