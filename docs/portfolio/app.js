@@ -2103,7 +2103,7 @@ class B3App {
         const tickerClean = this.escapeHTML(item.ticker.replace('.SA', ''));
         const deltaVal = item[deltaKey] || 0;
         const delta = (deltaVal * 100).toFixed(2);
-        const icon = isGainer ? '🚀' : '📉';
+        const icon = isGainer ? '' : '';
         const cssClass = isGainer ? 'var-up' : 'var-down';
 
         const logoHtml = this.getAssetLogoHTML(item.ticker, 24);
@@ -2166,7 +2166,7 @@ class B3App {
           },
           {
             data: avgLine,
-            borderColor: 'rgba(148, 163, 184, 0.3)',
+            borderColor: 'rgba(250, 250, 250, 0.7)',
             borderWidth: 1,
             borderDash: [3, 3],
             pointRadius: 0,
@@ -2351,8 +2351,8 @@ class B3App {
     const tickerClean = this.escapeHTML(ticker.replace('.SA', '').toUpperCase());
     const logoUrl = `../assets/logos/${tickerClean}.svg`;
     const fallbackUrl = `../assets/logo4.png`;
-    return `<img src="${logoUrl}" alt="${tickerClean}" width="${size}" height="${size}" 
-                 style="vertical-align: middle; margin-right: 8px; border-radius: 4px; object-fit: contain; background: #fff; padding: 1px;" 
+    return `<img src="${logoUrl}" alt="${tickerClean}" width="${size}" height="${size}"
+                 style="vertical-align: middle; margin-right: 8px; border-radius: 4px; object-fit: contain; background: #fff; padding: 1px;"
                  onerror="this.src='${fallbackUrl}'; this.onerror=null;">`;
   }
 
