@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@3.0.0/dist/chartjs-chart-treemap.min.js"></script>
+  <script src="https://s3.tradingview.com/tv.js"></script>
   <link rel="stylesheet" href="style.css">
   <script src="../cookie-consent.js"></script>
   <script src="app.js"></script>
@@ -21,8 +22,8 @@
   <!-- Sidebar Navigation -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-      <span class="sidebar-logo">📊</span>
-      <span class="sidebar-title">MinerAtivos<br><small>Portfólio</small></span>
+	<img src="../assets/logo4_2.png" alt="MinerAtivos" style="height: 60px; width: auto; vertical-align: middle;">
+      <span class="sidebar-title">Gestão<br><small>Portfólio</small></span>
     </div>
     <nav class="sidebar-nav">
       <div id="userProfile" class="user-profile-sidebar" style="display: none; padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 0.5rem; align-items: center; gap: 1rem;">
@@ -70,11 +71,11 @@
     <!-- <span class="mobile-title">📊 MinerAtivos - Rebalanceamento de Portfólio</span> -->
 	<hgroup>
     <h1 class="mobile-title">
-        📊 MinerAtivos
+        <img src="../assets/logo4_2.png" alt="MinerAtivos" style="height: 60px; width: auto; vertical-align: middle;"><!--📊 MinerAtivos-->
     </h1>
-    <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">
+    <!--<p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">
         Mercado e Balanceamento de Portfólio
-    </p>
+    </p>-->
 </hgroup>
   </header>
   <div class="overlay" id="overlay"></div>
@@ -91,7 +92,7 @@
         <p class="subtitle">Visão geral do seu portfólio de investimentos na B3</p>
       </div>
 
-      <div class="stats-grid" id="statsGrid">
+      <div class="stats-grid stats-grid-main" id="statsGrid">
         <div class="stat-card glass">
           <div class="stat-icon">💰</div>
           <div class="stat-label">Patrimônio Total</div>
@@ -121,6 +122,11 @@
           <div class="stat-icon">⚡</div>
           <div class="stat-label">Volatilidade</div>
           <div class="stat-value" id="statVolatility">0%</div>
+        </div>
+        <div class="stat-card glass">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-label">Índice Sharpe</div>
+          <div class="stat-value accent" id="statSharpe">0.00</div>
         </div>
       </div>
 
@@ -338,18 +344,50 @@
     <section class="page" data-page="rebalance" id="page-rebalance">
       <div class="page-header">
         <h1>Rebalanceamento Inteligente</h1>
-        <p class="subtitle">Otimização de alocação baseada em Volatilidade Inversa</p>
+        <p class="subtitle">Otimização de alocação baseada em Teoria Moderna de Portfólio</p>
+      </div>
+
+      <div class="card glass" style="margin-bottom: 1.5rem; padding: 1.25rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="rebalanceStrategy">Estratégia de Otimização</label>
+            <select id="rebalanceStrategy">
+              <option value="sharpe">Máximo Sharpe (Risco x Retorno)</option>
+              <option value="return">Maior Retorno Esperado</option>
+              <option value="risk">Mínimo Risco (Variância)</option>
+              <option value="volatility">Volatilidade Inversa (Tradicional)</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="maxAssetWeight">Peso Máx. por Ativo (%)</label>
+            <input type="number" id="maxAssetWeight" value="100" min="5" max="100" step="5">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="analysisPeriod">Período de Análise (Meses)</label>
+            <select id="analysisPeriod">
+              <option value="6">6 Meses</option>
+              <option value="12" selected>12 Meses</option>
+              <option value="24">24 Meses</option>
+              <option value="60">5 Anos</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="riskFreeRate">Taxa Livre de Risco (% a.a.)</label>
+            <input type="number" id="riskFreeRate" value="10" min="0" max="30" step="0.5">
+          </div>
+        </div>
+        <div class="form-actions" style="margin-top: 1.25rem; justify-content: flex-start;">
+          <button class="btn btn-primary" id="btnRunRebalance">
+            ⚖️ Calcular Alocação Sugerida
+          </button>
+          <button class="btn btn-outline" id="btnRequestExpertAnalysis" title="Disponível para Membros">
+            📩 Solicitar Análise Especializada (Python)
+          </button>
+        </div>
       </div>
 
       <div class="toolbar">
         <div class="toolbar-group">
-          <div class="form-inline">
-            <label for="riskFreeRate">Taxa Livre de Risco (% a.a.):</label>
-            <input type="number" id="riskFreeRate" value="10" min="0" max="30" step="0.5" class="input-sm">
-          </div>
-          <button class="btn btn-primary" id="btnRunRebalance">
-            ⚖️ Otimizar Portfólio
-          </button>
         </div>
         <div class="form-inline">
           <label for="sortRebalance">Ordenar por:</label>
@@ -362,7 +400,7 @@
       </div>
 
       <div class="rebalance-results" id="rebalanceResults" style="display:none;">
-        <div class="stats-grid stats-grid-3">
+      <div class="stats-grid stats-grid-main" id="statsGrid">
           <div class="stat-card glass">
             <div class="stat-label">Retorno Esperado</div>
             <div class="stat-value accent" id="rebReturn">—</div>
@@ -424,7 +462,18 @@
 
       <div id="newsContent">
         <div class="card glass news-insight-card" style="margin-bottom: 2rem; border-left: 4px solid var(--accent);">
-          <h2 class="card-title">🌍 Panorama Geral do Mercado</h2>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+            <h2 class="card-title" style="margin-bottom: 0;">🌍 Panorama Geral do Mercado</h2>
+            <div id="ibovHeaderCard" class="ibov-header-card glass" style="padding: 0.5rem 1rem; border-radius: 8px; display: none;">
+              <span style="font-weight: 700; color: var(--text-secondary); font-size: 0.8rem;">IBOVESPA:</span>
+              <span id="ibovScore" style="font-weight: 800; font-size: 1.1rem; margin-left: 0.5rem;">—</span>
+              <div style="display: flex; gap: 0.75rem; margin-top: 0.25rem; font-size: 0.75rem; font-weight: 600;">
+                <span id="ibovDay" title="Variação Dia">—</span>
+                <span id="ibovMonth" title="Variação Mês (30d)">—</span>
+                <span id="ibovYear" title="Variação Ano (365d)">—</span>
+              </div>
+            </div>
+          </div>
           <p id="marketInsightText" style="font-size: 1.1rem; line-height: 1.6; color: var(--text-primary);">Carregando insights...</p>
           <p class="subtitle" id="newsLastUpdate" style="margin-top: 1rem; font-size: 0.8rem;"></p>
         </div>
@@ -452,7 +501,15 @@
     <section class="page" data-page="summary" id="page-summary">
       <div class="page-header">
         <h1>Resumo do Mercado</h1>
-        <p class="subtitle" id="summaryDateFull">Visão diária dos ativos que mais se movimentaram</p>
+        <p class="subtitle" id="summaryDateFull">Visão dos ativos que mais se movimentaram</p>
+      </div>
+
+      <div class="toolbar" style="justify-content: center; margin-bottom: 2rem;">
+        <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: 12px; gap: 4px;">
+          <button class="btn btn-sm btn-period active" onclick="app.setSummaryPeriod('day')" id="btn-period-day" style="width: auto;">Dia</button>
+          <button class="btn btn-sm btn-period" onclick="app.setSummaryPeriod('month')" id="btn-period-month" style="width: auto;">Mês</button>
+          <button class="btn btn-sm btn-period" onclick="app.setSummaryPeriod('year')" id="btn-period-year" style="width: auto;">Ano</button>
+        </div>
       </div>
 
       <div class="summary-grid">
@@ -501,7 +558,7 @@
 
       <div class="card glass" style="margin-top: 1.5rem;">
         <h2 class="card-title">🗺️ Mapa do Mercado (Treemap)</h2>
-        <p class="subtitle" style="margin-bottom: 1rem;">O tamanho dos blocos representa a variação absoluta do dia. Cores: Verde (Alta) e Laranja/Vermelho (Baixa).</p>
+        <p class="subtitle" id="treemapSubtitle" style="margin-bottom: 1rem;">O tamanho dos blocos representa a variação absoluta do período. Cores: Verde (Alta) e Laranja/Vermelho (Baixa).</p>
         <div class="chart-container" style="height: 600px;">
           <canvas id="marketTreemap"></canvas>
         </div>
@@ -535,6 +592,9 @@
           </div>
           <p style="margin-top: 1rem; text-align: center; font-size: 0.85rem;">
             <a href="mailto:minerativos+esquecisenha@gmail.com" style="color: var(--text-muted); text-decoration: none;">Esqueceu a senha? Entre em contato com o suporte</a>
+          </p>
+          <p style="margin-top: 0.5rem; text-align: center; font-size: 0.85rem;">
+            Novo por aqui? <a href="#" onclick="app.openMembershipModal('registration')" style="color: var(--accent); text-decoration: underline;">Clique aqui e solicite cadastramento</a>
           </p>
         </form>
       </div>
@@ -604,6 +664,25 @@
     <!-- ============================================================ -->
     <!-- SOBRE -->
     <!-- ============================================================ -->
+    <!-- ============================================================ -->
+    <!-- MONITOR DE GRÁFICOS (Análise Avançada) -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="monitor" id="page-monitor">
+      <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <h1>Análise Gráfica</h1>         
+        </div>
+        <button class="btn btn-primary btn-voltar" id="btnVoltarMonitor">
+          <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+      </div>
+
+      <div class="card glass" style="height: calc(100vh - 180px); min-height: 500px; padding: 0; overflow: hidden; border-radius: var(--radius); display: flex; flex-direction: column;">
+        <div id="tradingview_chart_spa" style="flex: 1; width: 100%;"></div>
+      </div>
+		  <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;"></strong>Fonte do gráfico: TradingView.</p> 
+    </section>
+
     <section class="page" data-page="about" id="page-about">
       <div class="page-header">
         <h1>Sobre o Projeto</h1>
@@ -729,12 +808,13 @@
   <div class="modal-overlay" id="membershipModalOverlay">
     <div class="modal glass" id="membershipModal">
       <div class="modal-header">
-        <h2>Seja Membro</h2>
+        <h2 id="membershipModalTitle">Seja Membro</h2>
         <button class="modal-close" id="membershipModalClose">&times;</button>
       </div>
       <div class="membership-content">
-        <p>Você atingiu o limite de <strong>5 ativos</strong> para usuários não cadastrados.</p>
-        <p>Para gerenciar um portfólio ilimitado, acessar análises avançadas e sincronizar seus dados na nuvem, torne-se um membro da nossa plataforma.</p>
+        <p id="membershipModalText">Para gerenciar um portfólio ilimitado, acessar análises avançadas e sincronizar seus dados na nuvem, torne-se um membro da nossa plataforma.</p>
+
+        <div id="membershipExtraActions" style="margin-top: 1.5rem;"></div>
 
         <div class="membership-plans" style="margin: 1.5rem 0; padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
           <h3 style="color: var(--accent); margin-bottom: 0.5rem;">Plano Pro</h3>
@@ -792,24 +872,31 @@
   <!-- <script src="app.js"></script> -->
 
 
-    <!-- script para abrir mercado oriundo da página minerativos.com -->
+    <!-- script para abrir mercado oriundo da página minerativos.com ou links internos -->
       <script>
         window.addEventListener('load', function() {
           const urlParams = new URLSearchParams(window.location.search);
           const targetSection = urlParams.get('section');
+          const ticker = urlParams.get('ticker');
       
-          if (targetSection === 'summary') {
-            const btn = document.getElementById('nav-summary');
-            // Tenta encontrar a seção real que o botão ativa (geralmente tem o ID do data-section)
-            const section = document.getElementById('summary') || document.querySelector('[data-section="summary"]');
+          // Se houver ticker na URL, abre o monitor SPA
+          if (ticker && window.app) {
+              setTimeout(() => {
+                  window.app.showMonitor(ticker);
+              }, 800); // Aguarda inicialização dos dados
+              return;
+          }
+
+          if (targetSection) {
+            const btn = document.getElementById('nav-' + targetSection) || document.querySelector(`[data-section="${targetSection}"]`);
+            // Tenta encontrar a seção real que o botão ativa
+            const section = document.getElementById(targetSection) || document.querySelector(`[data-page="${targetSection}"]`) || document.querySelector(`[data-section="${targetSection}"]`);
       
             if (btn) {
               setTimeout(() => {
                 btn.click(); // Ativa a lógica do site
       
                 if (section) {
-                  // Ajustar aqui: 80 é a altura estimada do menu fixo na parte superior da página. 
-                  // Se o menu for maior, aumentar esse número.
                   const menuHeight = 0; 
                   const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - menuHeight;
       
@@ -818,7 +905,7 @@
                     behavior: 'smooth'
                   });
                 }
-              }, 500); // Aumentamos o tempo para garantir que o layout estabilizou
+              }, 500); // Garante que o layout estabilizou
             }
           }
         });

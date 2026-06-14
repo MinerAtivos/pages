@@ -917,11 +917,15 @@ class B3App {
       const displayDate = data.price_date ? data.price_date.split('-').reverse().join('/') : new Date(data.updated_at).toLocaleDateString('pt-BR');
 
       const tickerClean = this.escapeHTML(ticker.replace('.SA', ''));
+      const logoHtml = this.getAssetLogoHTML(ticker, 32);
       card.innerHTML = `
         <div class="news-card-header">
-          <div style="display:flex; flex-direction:column">
-            <a href="#" onclick="event.preventDefault(); app.showMonitor('${tickerClean}')" class="ticker-link news-card-ticker"><strong>${tickerClean}</strong></a>
-            <span style="font-size: 0.65rem; color: var(--text-muted);">${displayDate}</span>
+          <div style="display:flex; align-items:center; gap:0.75rem">
+            ${logoHtml}
+            <div style="display:flex; flex-direction:column">
+              <a href="#" onclick="event.preventDefault(); app.showMonitor('${tickerClean}')" class="ticker-link news-card-ticker"><strong>${tickerClean}</strong></a>
+              <span style="font-size: 0.65rem; color: var(--text-muted);">${displayDate}</span>
+            </div>
           </div>
           ${performanceHtml}
         </div>
@@ -2095,24 +2099,27 @@ class B3App {
 
     const renderRows = (data, isGainer) => {
       if (!data) return '<tr><td colspan="4" class="empty-state">Sem dados para este período</td></tr>';
-      return data.map(item => {
+      return data.map((item, idx) => {
         const tickerClean = this.escapeHTML(item.ticker.replace('.SA', ''));
         const deltaVal = item[deltaKey] || 0;
         const delta = (deltaVal * 100).toFixed(2);
         const icon = isGainer ? '🚀' : '📉';
         const cssClass = isGainer ? 'var-up' : 'var-down';
 
-        const volVal = item.delta_volume !== undefined ? item.delta_volume : 0;
-        const volPct = (volVal * 100).toFixed(0);
-        const volClass = volVal > 0 ? 'var-up' : 'var-down';
-        const volIcon = (this.summaryPeriod === 'day' && volVal > 1) ? '⬆️😲' : '';
+        const logoHtml = this.getAssetLogoHTML(item.ticker, 24);
+        const canvasId = `spark-${isGainer ? 'up' : 'down'}-${idx}`;
 
         return `
           <tr>
-            <td><a href="#" onclick="event.preventDefault(); app.showMonitor('${tickerClean}')" class="ticker-link"><strong>${tickerClean}</strong></a></td>
+            <td>
+              <div style="display: flex; align-items: center;">
+                ${logoHtml}
+                <a href="#" onclick="event.preventDefault(); app.showMonitor('${tickerClean}')" class="ticker-link"><strong>${tickerClean}</strong></a>
+              </div>
+            </td>
             <td>R$${item.last_close.toFixed(2)}</td>
             <td class="${cssClass}">${(deltaVal > 0) ? '+' : ''}${delta}% ${icon}</td>
-            <td class="${volClass}">${this.summaryPeriod === 'day' ? (volVal > 0 ? '+' : '') + volPct + '% ' + volIcon : '—'}</td>
+            <td style="padding: 2px 5px;"><canvas id="${canvasId}" width="80" height="30"></canvas></td>
           </tr>
         `;
       }).join('');
@@ -2120,6 +2127,65 @@ class B3App {
 
     this.$('gainersBody').innerHTML = renderRows(gainers, true);
     this.$('losersBody').innerHTML = renderRows(losers, false);
+
+    // Render sparklines
+    if (!this.sparkCharts) this.sparkCharts = [];
+    this.sparkCharts.forEach(c => c.destroy());
+    this.sparkCharts = [];
+
+    if (gainers) gainers.forEach((item, idx) => this.renderSparkline(item.ticker, `spark-up-${idx}`));
+    if (losers) losers.forEach((item, idx) => this.renderSparkline(item.ticker, `spark-down-${idx}`));
+  }
+
+  renderSparkline(ticker, canvasId) {
+    const asset = this.marketData && this.marketData.assets[ticker];
+    if (!asset || !asset.history || !asset.history.closes) return;
+
+    const ctx = document.getElementById(canvasId);
+    if (!ctx) return;
+
+    const data = asset.history.closes.slice(-15);
+    if (data.length === 0) return;
+
+    const avg = data.reduce((a, b) => a + b, 0) / data.length;
+    const avgLine = data.map(() => avg);
+    const isUp = data[data.length - 1] >= data[0];
+
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: data.map((_, i) => i),
+        datasets: [
+          {
+            data: data,
+            borderColor: isUp ? '#22c55e' : '#ef4444',
+            borderWidth: 1.5,
+            pointRadius: 0,
+            fill: false,
+            tension: 0.3
+          },
+          {
+            data: avgLine,
+            borderColor: 'rgba(148, 163, 184, 0.3)',
+            borderWidth: 1,
+            borderDash: [3, 3],
+            pointRadius: 0,
+            fill: false
+          }
+        ]
+      },
+      options: {
+        events: [],
+        responsive: false,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { enabled: false } },
+        scales: {
+          x: { display: false },
+          y: { display: false }
+        }
+      }
+    });
+    this.sparkCharts.push(chart);
   }
 
   renderMarketTreemap() {
@@ -2277,7 +2343,17 @@ class B3App {
      Utilities
   ------------------------------------------------------------------ */
   formatCurrency(v) {
+    if (v == null) return 'R$ 0,00';
     return 'R$ ' + v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  getAssetLogoHTML(ticker, size = 24) {
+    const tickerClean = this.escapeHTML(ticker.replace('.SA', '').toUpperCase());
+    const logoUrl = `../assets/logos/${tickerClean}.svg`;
+    const fallbackUrl = `../assets/logo4.png`;
+    return `<img src="${logoUrl}" alt="${tickerClean}" width="${size}" height="${size}" 
+                 style="vertical-align: middle; margin-right: 8px; border-radius: 4px; object-fit: contain; background: #fff; padding: 1px;" 
+                 onerror="this.src='${fallbackUrl}'; this.onerror=null;">`;
   }
 
   palette(n) {
