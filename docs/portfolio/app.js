@@ -160,6 +160,10 @@ class B3App {
     if (name === 'news') {
       this.renderMarketNews();
     }
+
+    if (name === 'summary') {
+      this.renderMarketSummary();
+    }
   }
 
   toggleSidebar(force) {
@@ -2103,7 +2107,7 @@ class B3App {
         const tickerClean = this.escapeHTML(item.ticker.replace('.SA', ''));
         const deltaVal = item[deltaKey] || 0;
         const delta = (deltaVal * 100).toFixed(2);
-        const icon = isGainer ? '' : '';
+        const icon = isGainer ? '🚀' : '📉';
         const cssClass = isGainer ? 'var-up' : 'var-down';
 
         const logoHtml = this.getAssetLogoHTML(item.ticker, 24);
@@ -2133,8 +2137,11 @@ class B3App {
     this.sparkCharts.forEach(c => c.destroy());
     this.sparkCharts = [];
 
-    if (gainers) gainers.forEach((item, idx) => this.renderSparkline(item.ticker, `spark-up-${idx}`));
-    if (losers) losers.forEach((item, idx) => this.renderSparkline(item.ticker, `spark-down-${idx}`));
+    // Render sparklines with small delay to ensure DOM is ready
+    setTimeout(() => {
+      if (gainers) gainers.forEach((item, idx) => this.renderSparkline(item.ticker, `spark-up-${idx}`));
+      if (losers) losers.forEach((item, idx) => this.renderSparkline(item.ticker, `spark-down-${idx}`));
+    }, 50);
   }
 
   renderSparkline(ticker, canvasId) {
@@ -2142,7 +2149,10 @@ class B3App {
     if (!asset || !asset.history || !asset.history.closes) return;
 
     const ctx = document.getElementById(canvasId);
-    if (!ctx) return;
+    if (!ctx) {
+      console.warn(`Canvas ${canvasId} not found for ${ticker}`);
+      return;
+    }
 
     const data = asset.history.closes.slice(-15);
     if (data.length === 0) return;
@@ -2159,16 +2169,16 @@ class B3App {
           {
             data: data,
             borderColor: isUp ? '#22c55e' : '#ef4444',
-            borderWidth: 1.5,
+            borderWidth: 1.8,
             pointRadius: 0,
             fill: false,
             tension: 0.3
           },
           {
             data: avgLine,
-            borderColor: 'rgba(250, 250, 250, 0.7)',
-            borderWidth: 1,
-            borderDash: [3, 3],
+            borderColor: 'rgba(255, 255, 255, 0.85)',
+            borderWidth: 1.5,
+            borderDash: [5, 2],
             pointRadius: 0,
             fill: false
           }
