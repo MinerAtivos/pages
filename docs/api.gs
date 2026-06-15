@@ -56,6 +56,8 @@ function processRequest(e) {
     return handleUpdatePassword(data.username, data.old_password, data.new_password);
   } else if (action === "status") {
     return handleStatus(data.username, data.session_token);
+  } else if (action === "status_and_portfolio") {
+    return handleStatusAndPortfolio(data.username, data.session_token);
   } else if (action === "get_all_tickers") {
     return handleGetAllTickers();
   } else if (action === "request_rebalance") {
@@ -110,6 +112,21 @@ function handleStatus(username, token) {
   const user = findUser(username);
   if (user) {
     return { logged_in: true, username: user.username, is_admin: user.is_admin };
+  }
+  return { logged_in: false };
+}
+
+function handleStatusAndPortfolio(username, token) {
+  if (!username || !token) return { logged_in: false };
+  const user = findUser(username);
+  if (user) {
+    const portfolio = handleGetPortfolio(username, token);
+    return {
+      logged_in: true,
+      username: user.username,
+      is_admin: user.is_admin,
+      portfolio: portfolio
+    };
   }
   return { logged_in: false };
 }
