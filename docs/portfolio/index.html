@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MinerAtivos - Rebalanceamento de Portfólio</title>
-  <meta name="description" content="Plataforma inteligente de análise e rebalanceamento de portfólios de investimentos na B3.">  
+  <meta name="description" content="Plataforma inteligente de análise e rebalanceamento de portfólios de investimentos na B3.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,9 +15,18 @@
   <script src="../cookie-consent.js"></script>
   <script src="app.js"></script>
 </head>
-<body>
+<body class="loading">
 
-
+  <!-- Splash Screen -->
+  <div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+      <img src="../assets/logo4_2.png" alt="MinerAtivos" class="splash-logo">
+      <div class="splash-loader">
+        <div class="spinner"></div>
+        <p id="splashMessage">Carregando ambiente...</p>
+      </div>
+    </div>
+  </div>
 
   <!-- Sidebar Navigation -->
   <aside class="sidebar" id="sidebar">
@@ -144,9 +153,9 @@
           </div>
         </div>
       </div>
-	  	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 
+		   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
     </section>
-	  	   
+
     <!-- ============================================================ -->
     <!-- POSIÇÕES -->
     <!-- ============================================================ -->
@@ -203,9 +212,9 @@
           </table>
         </div>
       </div>
-	  	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 
+		   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
     </section>
-	  
+
     <!-- ============================================================ -->
     <!-- PROVENTOS -->
     <!-- ============================================================ -->
@@ -335,7 +344,7 @@
         <div class="summary-item"><span class="dot dot-yellow"></span> Manter: <strong id="barsiHold">0</strong></div>
         <div class="summary-item"><span class="dot dot-red"></span> Diminuir: <strong id="barsiSell">0</strong></div>
       </div>
-	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 	  
+	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
     </section>
 
     <!-- ============================================================ -->
@@ -448,9 +457,9 @@
       <div class="card glass" id="rebalancePlaceholder">
         <p class="empty-state" style="padding:2rem;">Clique em <strong>"Otimizar Portfólio"</strong> para calcular a alocação ótima usando a Teoria de Markowitz.</p>
       </div>
-	  	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 
+		   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
     </section>
-	  
+
     <!-- ============================================================ -->
     <!-- INSIGHTS DE MERCADO (IA) -->
     <!-- ============================================================ -->
@@ -482,17 +491,17 @@
           <!-- Asset news cards will be injected here -->
         </div>
       </div>
-	  
+
       <div class="alert alert-info glass hidden" id="newsGuestTip">
         <strong>💡 Dica:</strong> Você está vendo os insights dos ativos que foram destaque no dia. Para ver insights de todos os ativos da sua carteira, é necessário estar logado e clicar no ícone 🤖 localizado no final da linha de cada ativo listado em <a href="#" onclick="app.showPage('positions')" style="color: var(--accent); text-decoration: underline;">Posições</a>.
       </div>
-	  <!-- 
+	  <!--
 	  <div class="alert alert-info glass" style="margin-top:1.5rem;">
         <strong>💡 Dica:</strong> Você está vendo os insights dos ativos que foram destaque no dia. Para ver insights de todos os ativos da sua carteira, é necessário estar logado e clicar no ícone 🤖 localizado no final da linha de cada ativo listado em <a href="#" onclick="app.showPage('positions')" style="color: var(--accent); text-decoration: underline;">Posições</a>.
       </div>
 	  -->
-	  <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️ Este conteúdo foi consolidado por inteligência artificial com base em padrões de linguagem e probabilidade, podendo conter erros. Além disso, o conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 
-	  
+	  <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️ Este conteúdo foi consolidado por inteligência artificial com base em padrões de linguagem e probabilidade, podendo conter erros. Além disso, o conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
+
     </section>
 
     <!-- ============================================================ -->
@@ -563,7 +572,7 @@
           <canvas id="marketTreemap"></canvas>
         </div>
       </div>
-	  	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p> 
+		   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
     </section>
 
     <!-- ============================================================ -->
@@ -629,7 +638,7 @@
             </div>
 
             <div class="alert alert-info glass">
-              
+
             </div>
           </div>
 
@@ -670,7 +679,7 @@
     <section class="page" data-page="monitor" id="page-monitor">
       <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
         <div>
-          <h1>Análise Gráfica</h1>         
+          <h1>Análise Gráfica</h1>
         </div>
         <button class="btn btn-primary btn-voltar" id="btnVoltarMonitor">
           <i class="fas fa-arrow-left"></i> Voltar
@@ -680,7 +689,7 @@
       <div class="card glass" style="height: calc(100vh - 180px); min-height: 500px; padding: 0; overflow: hidden; border-radius: var(--radius); display: flex; flex-direction: column;">
         <div id="tradingview_chart_spa" style="flex: 1; width: 100%;"></div>
       </div>
-		  <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;"></strong>Fonte do gráfico: TradingView.</p> 
+		  <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;"></strong>Fonte do gráfico: TradingView.</p>
     </section>
 
     <section class="page" data-page="about" id="page-about">
@@ -703,7 +712,7 @@
         </ul>
 
         <h2>🛠️ Tecnologias</h2>
-        <div class="tech-grid">          
+        <div class="tech-grid">
           <span class="tech-badge">HTML5 / CSS3</span>
           <span class="tech-badge">JavaScript (ES6+)</span>
           <span class="tech-badge">Chart.js</span>
@@ -878,7 +887,7 @@
           const urlParams = new URLSearchParams(window.location.search);
           const targetSection = urlParams.get('section');
           const ticker = urlParams.get('ticker');
-      
+
           // Se houver ticker na URL, abre o monitor SPA
           if (ticker && window.app) {
               setTimeout(() => {
@@ -891,15 +900,15 @@
             const btn = document.getElementById('nav-' + targetSection) || document.querySelector(`[data-section="${targetSection}"]`);
             // Tenta encontrar a seção real que o botão ativa
             const section = document.getElementById(targetSection) || document.querySelector(`[data-page="${targetSection}"]`) || document.querySelector(`[data-section="${targetSection}"]`);
-      
+
             if (btn) {
               setTimeout(() => {
                 btn.click(); // Ativa a lógica do site
-      
+
                 if (section) {
-                  const menuHeight = 0; 
+                  const menuHeight = 0;
                   const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - menuHeight;
-      
+
                   window.scrollTo({
                     top: sectionTop,
                     behavior: 'smooth'
@@ -909,13 +918,13 @@
             }
           }
         });
-		
+
 		//força navegação dos links do menu, pois o que ia para página inicial não estava funcionando
 		document.querySelectorAll('.nav-link').forEach(link => {
 			link.addEventListener('click', function(e) {
 				// Pega o href do link clicado
 				const href = this.getAttribute('href');
-				
+
 				// Se for um link externo (começa com http), força a navegação
 				if (href && href.startsWith('http')) {
 					window.location.href = href;
@@ -923,15 +932,15 @@
 			});
 		});
 
-		
-		
+
+
       </script>
     <!-- script para abrir mercado oriundo da página minerativos.com -->
-  
-  
-  
-  
-  
+
+
+
+
+
 </body>
 
 </html>

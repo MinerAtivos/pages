@@ -632,6 +632,51 @@ input[type="number"]:focus, select:focus {
 }
 .modal-close:hover { color: var(--red); }
 
+/* -- Splash Screen ----------------------------------------------------- */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-primary);
+  z-index: 10000; /* Higher than cookie banner (9999) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+.splash-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.splash-content {
+  text-align: center;
+  animation: splashFadeIn 0.8s ease-out;
+}
+@keyframes splashFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.splash-logo {
+  height: 100px;
+  width: auto;
+  margin-bottom: 2rem;
+}
+.splash-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+#splashMessage {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  min-height: 1.5em;
+}
+body.loading {
+  overflow: hidden;
+}
+
 /* -- Loading overlay --------------------------------------------------- */
 .loading-overlay {
   display: none;

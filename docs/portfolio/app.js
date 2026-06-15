@@ -34,23 +34,32 @@ class B3App {
     this.setupModal();
     this.setupAuth();
 
-    // 1. Carregar status de autenticação primeiro (rápido)
-    // Mantemos o await aqui pois o portfólio depende do usuário logado
+    this.setSplashMessage('Verificando sessão...');
+    // 1. Carregar status de autenticação e portfólio (Unificado)
     await this.checkAuthStatus();
 
-    // 2. Carregar todos os recursos em paralelo (Progressivo)
-    // loadMarketData agora é interno e não bloqueante para os históricos
+    this.setSplashMessage('Carregando mercado...');
+    // 2. Carregar recursos essenciais para o Dashboard (Progressivo)
     await Promise.all([
       this.loadAssets(),
       this.loadMarketNews(),
       this.loadMarketSummary(),
       this.loadPortfolio(),
-      this.loadMarketData() // O loadMarketData agora faz o await apenas do necessário
+      this.loadMarketData(true) // true = load only essential market_data.json
     ]);
 
-    // 3. Análise final do boot (garante que tudo que foi carregado até agora seja processado)
+    // 3. Análise inicial para liberar o dashboard rapidamente
+    this.setSplashMessage('Sincronizando portfólio...');
     await this.runAnalysis();
     this.renderPositions();
+
+    // 4. Liberar a UI
+    this.hideSplashScreen();
+
+    // 5. Carregar históricos pesados em segundo plano (Não bloqueante)
+    if (this.user) {
+      this.loadMarketData(false); // Carregar histórico completo para membros
+    }
   }
 
   bindUI() {
@@ -209,7 +218,7 @@ class B3App {
           method: 'POST',
           mode: 'cors',
           body: JSON.stringify({
-            action: 'status',
+            action: 'status_and_portfolio',
             username: user.username,
             session_token: user.session_token
           })
@@ -218,6 +227,9 @@ class B3App {
         if (data.logged_in) {
           this.user = { ...user, is_admin: !!data.is_admin };
           this.updateAuthUI(data);
+          if (data.portfolio) {
+            this.portfolio = data.portfolio;
+          }
         } else {
           this.logout();
         }
@@ -676,7 +688,7 @@ class B3App {
   /* ------------------------------------------------------------------
      Data loading
   ------------------------------------------------------------------ */
-  async loadMarketData() {
+  async loadMarketData(essentialOnly = false) {
     try {
       // 1. Carregar manifest para saber quais arquivos existem
       const manifestUrl = `./data/manifest.json?t=${new Date().getTime()}`;
@@ -688,10 +700,8 @@ class B3App {
         files = manifest.market_data_files || files;
       }
 
-      // Performance Optimization: Guests only load the main market_data.json
-      // Members load everything including large historical files
-      if (!this.user) {
-        console.log('Modo Visitante: Carregando apenas dados recentes para performance.');
+      // Performance Optimization: Guests or essential load only the main market_data.json
+      if (!this.user || essentialOnly) {
         files = ['market_data.json'];
       }
 
@@ -715,7 +725,16 @@ class B3App {
       }
 
       // 3. Mesclar dados (Merge)
-      this.marketData = this.mergeMarketData(dataList);
+      const newData = this.mergeMarketData(dataList);
+
+      // Se já temos dados carregados (essential), mesclamos com o novo histórico completo
+      if (this.marketData && !essentialOnly) {
+        this.marketData = this.mergeMarketData([this.marketData, newData]);
+        // Re-analisar para habilitar ferramentas que dependem do histórico completo
+        this.runAnalysis();
+      } else {
+        this.marketData = newData;
+      }
 
       // 4. Se for visitante, garantir restrição de 2 anos no histórico para economia de memória
       if (!this.user) {
@@ -725,7 +744,9 @@ class B3App {
       console.log('Dados de mercado carregados e mesclados com sucesso');
     } catch (err) {
       console.error('Erro ao carregar dados de mercado:', err);
-      this.toast('Erro ao carregar dados históricos: ' + err.message, 'error');
+      if (!essentialOnly) {
+          this.toast('Erro ao carregar dados históricos: ' + err.message, 'error');
+      }
     }
   }
 
@@ -1048,12 +1069,9 @@ class B3App {
   }
 
   async loadPortfolio() {
+    // Portfolio loading is now handled unified in checkAuthStatus for members
     if (this.user) {
-      const serverData = await this.loadPortfolioFromServer();
-      if (serverData && !serverData.error) {
-        this.portfolio = serverData;
         return;
-      }
     }
 
     // Fallback para localStorage
@@ -2107,7 +2125,7 @@ class B3App {
         const tickerClean = this.escapeHTML(item.ticker.replace('.SA', ''));
         const deltaVal = item[deltaKey] || 0;
         const delta = (deltaVal * 100).toFixed(2);
-        const icon = isGainer ? '🚀' : '📉';
+        const icon = isGainer ? '' : '';
         const cssClass = isGainer ? 'var-up' : 'var-down';
 
         const logoHtml = this.getAssetLogoHTML(item.ticker, 24);
@@ -2176,8 +2194,8 @@ class B3App {
           },
           {
             data: avgLine,
-            borderColor: 'rgba(255, 255, 255, 0.85)',
-            borderWidth: 1.5,
+            borderColor: 'rgba(255, 255, 255, 0.7)',
+            borderWidth: 1.0,
             borderDash: [5, 2],
             pointRadius: 0,
             fill: false
@@ -2384,6 +2402,20 @@ class B3App {
 
   hideLoading() {
     this.$('loadingOverlay').classList.remove('show');
+  }
+
+  setSplashMessage(text) {
+    const el = this.$('splashMessage');
+    if (el) el.textContent = text;
+  }
+
+  hideSplashScreen() {
+    const splash = this.$('splashScreen');
+    if (splash) {
+      splash.classList.add('hide');
+      document.body.classList.remove('loading');
+      setTimeout(() => splash.remove(), 600);
+    }
   }
 
   $(id) { return document.getElementById(id); }
