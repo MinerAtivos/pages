@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-06-15
+## Resumo de Mercado - 2026-06-16
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| IFCM3.SA | Infracommerce CXaaS S.A. | R$ 0.68 | R$ 0.58 | **+17.24%** 🚀 | +288.18% ⬆️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.08 | R$ 0.07 | **+14.29%** 🚀 | -37.37% ⬇️ |
-| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 1.76 | R$ 1.55 | **+13.55%** 🚀 | +133.36% ⬆️ |
-| GFSA3.SA | Gafisa S.A. | R$ 1.15 | R$ 1.03 | **+11.65%** 🚀 | +135.31% ⬆️ |
-| OBTC3.SA | Oranjebtc S.A. - Educação e Investimento | R$ 6.49 | R$ 5.90 | **+10.00%** 🚀 | -44.53% ⬇️ |
+| JFEN3.SA | João Fortes Engenharia S.A. | R$ 0.68 | R$ 0.57 | **+19.30%** 🚀 | +321.86% ⬆️ |
+| ARND3.SA | Arandu Investimentos S.A. | R$ 0.73 | R$ 0.63 | **+15.87%** 🚀 | -44.09% ⬇️ |
+| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 1.93 | R$ 1.76 | **+9.66%** 🚀 | +335.00% ⬆️ |
+| FICT3.SA | Fictor Alimentos S.A. | R$ 0.26 | R$ 0.24 | **+8.33%** 🚀 | -83.32% ⬇️ |
+| ESPA3.SA | MPM Corpóreos S.A. | R$ 7.49 | R$ 7.08 | **+5.79%** 🚀 | -4.76% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| CBEE3.SA | Ampla Energia e Serviços S.A. | R$ 12.85 | R$ 19.90 | **-35.43%** 📉 | +326.53% ⬆️ |
-| TOKY3.SA | TOKY3.SA | R$ 0.39 | R$ 0.47 | **-17.02%** 📉 | +122.17% ⬆️ |
-| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 0.17 | R$ 0.20 | **-15.00%** 📉 | +78.81% ⬆️ |
-| SNSY5.SA | Sansuy S.A. | R$ 1.38 | R$ 1.56 | **-11.54%** 📉 | +430.29% ⬆️ |
-| CEDO3.SA | Companhia de Fiação e Tecidos Cedro e Cachoeira S.A. | R$ 9.00 | R$ 10.00 | **-10.00%** 📉 | -77.27% ⬇️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.06 | R$ 1.20 | **-11.67%** 📉 | +17.28% ⬆️ |
+| CTAX3.SA | Contax Participações S.A. | R$ 0.48 | R$ 0.54 | **-11.11%** 📉 | +556.07% ⬆️ |
+| BRKM5.SA | Braskem S.A. | R$ 8.46 | R$ 9.32 | **-9.23%** 📉 | +158.96% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 0.10 | R$ 0.11 | **-9.09%** 📉 | -57.36% ⬇️ |
+| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.40 | R$ 3.70 | **-8.11%** 📉 | -95.92% ⬇️ |
