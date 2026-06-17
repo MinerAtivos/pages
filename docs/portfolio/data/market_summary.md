@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-06-16
+## Resumo de Mercado - 2026-06-17
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| JFEN3.SA | João Fortes Engenharia S.A. | R$ 0.68 | R$ 0.57 | **+19.30%** 🚀 | +321.86% ⬆️ |
-| ARND3.SA | Arandu Investimentos S.A. | R$ 0.73 | R$ 0.63 | **+15.87%** 🚀 | -44.09% ⬇️ |
-| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 1.93 | R$ 1.76 | **+9.66%** 🚀 | +335.00% ⬆️ |
-| FICT3.SA | Fictor Alimentos S.A. | R$ 0.26 | R$ 0.24 | **+8.33%** 🚀 | -83.32% ⬇️ |
-| ESPA3.SA | MPM Corpóreos S.A. | R$ 7.49 | R$ 7.08 | **+5.79%** 🚀 | -4.76% ⬇️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.35 | R$ 0.31 | **+12.90%** 🚀 | +92.45% ⬆️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.18 | R$ 1.06 | **+11.32%** 🚀 | +49.63% ⬆️ |
+| GFSA3.SA | Gafisa S.A. | R$ 1.31 | R$ 1.20 | **+9.17%** 🚀 | +344.51% ⬆️ |
+| SNSY5.SA | Sansuy S.A. | R$ 1.57 | R$ 1.44 | **+9.03%** 🚀 | -85.50% ⬇️ |
+| TASA4.SA | Taurus Armas S.A. | R$ 4.54 | R$ 4.20 | **+8.10%** 🚀 | +109.62% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.06 | R$ 1.20 | **-11.67%** 📉 | +17.28% ⬆️ |
-| CTAX3.SA | Contax Participações S.A. | R$ 0.48 | R$ 0.54 | **-11.11%** 📉 | +556.07% ⬆️ |
-| BRKM5.SA | Braskem S.A. | R$ 8.46 | R$ 9.32 | **-9.23%** 📉 | +158.96% ⬆️ |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 0.10 | R$ 0.11 | **-9.09%** 📉 | -57.36% ⬇️ |
-| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.40 | R$ 3.70 | **-8.11%** 📉 | -95.92% ⬇️ |
+| BDLL3.SA | Bardella S.A. Indústrias Mecânicas | R$ 6.51 | R$ 7.90 | **-17.59%** 📉 | -62.50% ⬇️ |
+| CEED3.SA | Companhia Estadual de Distribuição de Energia Elétrica | R$ 8.15 | R$ 9.79 | **-16.75%** 📉 | 0.00% — |
+| TOKY3.SA | TOKY3.SA | R$ 0.32 | R$ 0.38 | **-15.79%** 📉 | +802.92% ⬆️ |
+| CBEE3.SA | Ampla Energia e Serviços S.A. | R$ 11.00 | R$ 12.95 | **-15.06%** 📉 | +49.64% ⬆️ |
+| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 1.68 | R$ 1.93 | **-12.95%** 📉 | +207.84% ⬆️ |
