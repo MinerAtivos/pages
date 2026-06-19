@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-06-18
+## Resumo de Mercado - 2026-06-19
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| NORD3.SA | Nordon Indústrias Metalúrgicas S/A | R$ 2.12 | R$ 1.90 | **+11.58%** 🚀 | +984.93% ⬆️ |
-| LIGT3.SA | Light S.A. | R$ 2.73 | R$ 2.48 | **+10.08%** 🚀 | -13.25% ⬇️ |
-| GFSA3.SA | Gafisa S.A. | R$ 1.41 | R$ 1.31 | **+7.63%** 🚀 | +151.56% ⬆️ |
-| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 1.80 | R$ 1.68 | **+7.14%** 🚀 | +60.88% ⬆️ |
-| SYNE3.SA | Syn Prop & Tech S.A. | R$ 3.87 | R$ 3.66 | **+5.74%** 🚀 | +218.33% ⬆️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.45 | R$ 1.17 | **+23.93%** 🚀 | +57.44% ⬆️ |
+| HAGA3.SA | HAGA S/A Indústria e Comércio | R$ 2.90 | R$ 2.46 | **+17.89%** 🚀 | +182.55% ⬆️ |
+| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 2.03 | R$ 1.80 | **+12.78%** 🚀 | +60.12% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 0.11 | R$ 0.10 | **+10.00%** 🚀 | -25.90% ⬇️ |
+| AZZA3.SA | Azzas 2154 S.A. | R$ 17.56 | R$ 16.21 | **+8.33%** 🚀 | +65.17% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| BDLL3.SA | Bardella S.A. Indústrias Mecânicas | R$ 6.60 | R$ 7.90 | **-16.46%** 📉 | -33.33% ⬇️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.30 | R$ 0.35 | **-14.29%** 📉 | -4.44% ⬇️ |
-| ESPA3.SA | MPM Corpóreos S.A. | R$ 6.00 | R$ 6.95 | **-13.67%** 📉 | +417.58% ⬆️ |
-| OIBR4.SA | Oi S.A. | R$ 1.00 | R$ 1.15 | **-13.04%** 📉 | +4165.40% ⬆️ |
-| BRKM5.SA | Braskem S.A. | R$ 7.51 | R$ 8.37 | **-10.27%** 📉 | +88.17% ⬆️ |
+| OSXB3.SA | OSX Brasil S.A. | R$ 1.03 | R$ 1.32 | **-21.97%** 📉 | +575.23% ⬆️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 3.28 | R$ 4.00 | **-18.00%** 📉 | -89.81% ⬇️ |
+| GFSA3.SA | Gafisa S.A. | R$ 1.21 | R$ 1.41 | **-14.18%** 📉 | +242.63% ⬆️ |
+| TOKY3.SA | TOKY3.SA | R$ 0.29 | R$ 0.31 | **-6.45%** 📉 | +84.41% ⬆️ |
+| NUTR3.SA | Nutriplant Indústria e Comércio S/A | R$ 2.20 | R$ 2.35 | **-6.38%** 📉 | -29.96% ⬇️ |
