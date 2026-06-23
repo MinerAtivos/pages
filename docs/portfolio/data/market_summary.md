@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-06-22
+## Resumo de Mercado - 2026-06-23
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 3.99 | R$ 3.28 | **+21.65%** 🚀 | -94.44% ⬇️ |
-| RCSL4.SA | Recrusul S/A | R$ 0.56 | R$ 0.47 | **+19.15%** 🚀 | +180.31% ⬆️ |
-| AZZA3.SA | Azzas 2154 S.A. | R$ 19.40 | R$ 17.56 | **+10.48%** 🚀 | +270.43% ⬆️ |
-| FICT3.SA | Fictor Alimentos S.A. | R$ 0.25 | R$ 0.23 | **+8.70%** 🚀 | -70.74% ⬇️ |
-| RCSL3.SA | Recrusul S/A | R$ 0.39 | R$ 0.36 | **+8.33%** 🚀 | +269.41% ⬆️ |
+| GSHP3.SA | General Shopping e Outlets do Brasil S.A. | R$ 3.88 | R$ 2.77 | **+40.07%** 🚀 | +416.67% ⬆️ |
+| LAND3.SA | Terra Santa Propriedades Agrícolas S.A. | R$ 9.24 | R$ 8.10 | **+14.07%** 🚀 | +12.70% ⬆️ |
+| EQPA3.SA | Equatorial Pará Distribuidora de Energia S.A. | R$ 6.45 | R$ 5.78 | **+11.59%** 🚀 | +1819.77% ⬆️ |
+| GFSA3.SA | Gafisa S.A. | R$ 1.33 | R$ 1.21 | **+9.92%** 🚀 | +86.09% ⬆️ |
+| MBRF3.SA | MBRF Global Foods Company S.A. | R$ 16.80 | R$ 15.29 | **+9.88%** 🚀 | +30.63% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 0.10 | R$ 0.11 | **-9.09%** 📉 | -70.60% ⬇️ |
-| SNSY5.SA | Sansuy S.A. | R$ 1.45 | R$ 1.59 | **-8.81%** 📉 | -89.32% ⬇️ |
-| OIBR3.SA | Oi S.A. | R$ 0.11 | R$ 0.12 | **-8.33%** 📉 | +49.04% ⬆️ |
-| CBEE3.SA | Ampla Energia e Serviços S.A. | R$ 10.15 | R$ 10.99 | **-7.64%** 📉 | -54.72% ⬇️ |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.36 | R$ 1.45 | **-6.21%** 📉 | -25.16% ⬇️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 3.11 | R$ 3.99 | **-22.06%** 📉 | -55.56% ⬇️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.08 | **-12.50%** 📉 | -94.27% ⬇️ |
+| HAGA3.SA | HAGA S/A Indústria e Comércio | R$ 2.53 | R$ 2.82 | **-10.28%** 📉 | +297.98% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 0.09 | R$ 0.10 | **-10.00%** 📉 | +85.36% ⬆️ |
+| TCSA3.SA | Tecnisa S.A. | R$ 0.86 | R$ 0.95 | **-9.47%** 📉 | +260.46% ⬆️ |
