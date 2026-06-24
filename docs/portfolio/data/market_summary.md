@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-06-23
+## Resumo de Mercado - 2026-06-24
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| GSHP3.SA | General Shopping e Outlets do Brasil S.A. | R$ 3.88 | R$ 2.77 | **+40.07%** 🚀 | +416.67% ⬆️ |
-| LAND3.SA | Terra Santa Propriedades Agrícolas S.A. | R$ 9.24 | R$ 8.10 | **+14.07%** 🚀 | +12.70% ⬆️ |
-| EQPA3.SA | Equatorial Pará Distribuidora de Energia S.A. | R$ 6.45 | R$ 5.78 | **+11.59%** 🚀 | +1819.77% ⬆️ |
-| GFSA3.SA | Gafisa S.A. | R$ 1.33 | R$ 1.21 | **+9.92%** 🚀 | +86.09% ⬆️ |
-| MBRF3.SA | MBRF Global Foods Company S.A. | R$ 16.80 | R$ 15.29 | **+9.88%** 🚀 | +30.63% ⬆️ |
+| JFEN3.SA | João Fortes Engenharia S.A. | R$ 0.81 | R$ 0.61 | **+32.79%** 🚀 | +295.88% ⬆️ |
+| GPAR3.SA | Companhia CELG de Participações S/A | R$ 12.00 | R$ 10.00 | **+20.00%** 🚀 | 0.00% — |
+| RCSL3.SA | Recrusul S/A | R$ 0.44 | R$ 0.37 | **+18.92%** 🚀 | +1322.52% ⬆️ |
+| RCSL4.SA | Recrusul S/A | R$ 0.64 | R$ 0.56 | **+14.29%** 🚀 | +169.47% ⬆️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.08 | R$ 0.07 | **+14.29%** 🚀 | -90.64% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 3.11 | R$ 3.99 | **-22.06%** 📉 | -55.56% ⬇️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.08 | **-12.50%** 📉 | -94.27% ⬇️ |
-| HAGA3.SA | HAGA S/A Indústria e Comércio | R$ 2.53 | R$ 2.82 | **-10.28%** 📉 | +297.98% ⬆️ |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 0.09 | R$ 0.10 | **-10.00%** 📉 | +85.36% ⬆️ |
-| TCSA3.SA | Tecnisa S.A. | R$ 0.86 | R$ 0.95 | **-9.47%** 📉 | +260.46% ⬆️ |
+| WEST3.SA | Westwing Comércio Varejista S.A. | R$ 3.41 | R$ 3.87 | **-11.89%** 📉 | +200.44% ⬆️ |
+| USIM6.SA | Usinas Siderúrgicas de Minas Gerais S.A. | R$ 8.65 | R$ 9.79 | **-11.64%** 📉 | -40.00% ⬇️ |
+| ATED3.SA | ATED3.SA | R$ 1.70 | R$ 1.90 | **-10.53%** 📉 | -98.49% ⬇️ |
+| FICT3.SA | Fictor Alimentos S.A. | R$ 0.22 | R$ 0.24 | **-8.33%** 📉 | -41.40% ⬇️ |
+| LAND3.SA | Terra Santa Propriedades Agrícolas S.A. | R$ 8.50 | R$ 9.24 | **-8.01%** 📉 | -80.62% ⬇️ |
