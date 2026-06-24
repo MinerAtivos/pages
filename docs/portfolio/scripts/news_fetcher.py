@@ -126,8 +126,13 @@ def get_ai_summary(ticker, context, is_priority=False):
         return "Ativo com baixa frequência de notícias recentes."
 
     prompt = (
-        f"Aja como um analista sênior especialista em ações listadas na B3. Resuma em português e em 2 frases objetivas as notícias de {ticker}."
-        f"Seja direto sobre o sentimento (positivo/negativo/neutro).\nNotícias de múltiplas fontes:\n{context}"
+            f"Aja como um analista experiente da B3. Analise e resuma com profundidade as notícias de {ticker}.\n"
+            f"Contexto (manchetes): {context}\n\n"
+            f"Instruções:\n"
+            f"1. Identifique os fatos principais que impactam o papel.\n"
+            f"2. Extraia o sentimento do mercado (otimista, pessimista ou neutro) e explique brevemente.\n"
+            f"3. Resumo em português, fluído, entre 3 a 4 frases.\n"
+            f"4. Foque em inteligência e tendências, indo além de apenas repetir títulos."
     )
 
     for provider in [g4f.Provider.PollinationsAI, g4f.Provider.PuterJS]:
