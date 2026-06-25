@@ -1,42 +1,153 @@
 {
-  "last_update": "2026-06-24T21:56:28.954676",
-  "market_last_date": "2026-06-24",
-  "market_summary": "Ibovespa encerrou em queda de 0,44 %, porém o setor de **infraestrutura** se destacou com fortes ganhos – RCSL3 e RCSL4 subiram cerca de 18 % – sinalizando confiança em projetos públicos e demanda global de minério.  \nAções de **TI** e de **construção** também mostraram desempenho positivo: SEQL3 (+12,8 %) e LAND3 (+14,1 %) reforçaram o otimismo por fundamentos sólidos e expansão de carteira.  \nO restante do mercado manteve clima **neutro a ligeiramente otimista**, com cautela moderada em torno de empresas de valor como USIM6 e FICT3, que enfrentam volatilidade de commodities e riscos de dívida.",
+  "last_update": "2026-06-25T22:01:19.962390",
+  "market_last_date": "2026-06-25",
+  "market_summary": "O mercado brasileiro segue atento ao cenário fiscal e movimentações de commodities.",
   "ibov": {
     "ticker": "^BVSP",
     "name": "IBOVESPA",
-    "last_close": 170506.66,
-    "date": "2026-06-24",
-    "daily_delta": -0.004392995404621014,
-    "monthly_delta": -0.03863542306846568,
+    "last_close": 171990.2,
+    "date": "2026-06-25",
+    "daily_delta": 0.00869876310063522,
+    "monthly_delta": -0.026042392221485966,
     "delta_volume": 0,
-    "prev_close": 171259.0,
-    "yearly_delta": 0.24307702402216314
+    "prev_close": 170507.0,
+    "yearly_delta": 0.26680415712212846
   },
   "assets": {
-    "JFEN3.SA": {
-      "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
-      "period": "",
-      "sources": [],
-      "updated_at": "2026-06-24T21:56:29.343604",
+    "AZEV4.SA": {
+      "summary": "**Principais fatos que afetam o AZEV4.SA**  \n- A ação subiu 11,1 % na primeira sessão – sinal forte de liquidez recém‑ativada após o recente conversão de AZEV3 em AZEV4.  \n- A empresa recém‑adquiriu ativos da Engie, ampliando o portfólio em iluminação pública, o que fortalece a exposição a contratos de longo prazo na infraestrutura.  \n- O agrupamento de 20 AZEV4 em 1 (conforme aprovado no capital bilionário) reduz a quantidade de cotas, permitindo maior controle e potencial valorização de participação por acionista menor.  \n\n**Sentimento do mercado**  \nO conjunto de movimentações aponta para **otimismo**: a valorização instantânea da ação, mais a expectativa de fluxo de caixa estável da nova unidade de iluminação, indica que investidores veem o grupo como mais sólido e escalável.\n\n**Resumo (3‑4 frases)**  \nA ações da Azevedo & Travassos tiveram um salto de 11,1 % na primeira sessão de negociação, impulsionadas pela conversão de AZEV3 em AZEV4 e pela recente aquisição de ativos de iluminação pública da Engie, que traz contratos de longo prazo e receita previsível.  \nCom o agrupamento de 20 cotas em 1, a companhia fortaleceu seu capital e reduziu a dispersão acionária, favorecendo a governança corporativa.  \nEsses eventos combinados aumentam a confiança dos investidores, que veem na empresa um ativo mais estável e com maior potencial de crescimento no segmento de infraestrutura.  \nO mercado, portanto, reage com otimismo, refletindo expectativa de valores futuros superiores.",
+      "period": "De 23/06/2026 a 25/06/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxPc09PcFZsZnY2ZHZRNW1NM0NzUnBzandaZ1RhQ2FIM2xoMDM0d3d3THlDbDFaNkZNSU5NM0I2X2d4RjJvY2l5VmpqU0VxWjNMU3MwOTNnOUhBZC1feldET2lDM0Itdy1uVGdiLUlzRWdoaGlWdnpHYXloZGZ6N1BlaHNGV0lSMGZtWmliWWMtMnJNUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiakFVX3lxTE1OUmYyM0JxUWZnQ2Vab3otVGVQLXA3UjJ3VlUxdXNKc3dmWjhjSkdEbkpVNnY2S25WS2RGRWt6TnBleXV3eXVLcWVDTFJBMk91VVp2c3hXZEZfZk5JdlJfVXE1c2tvWVIzT2c?oc=5",
+        "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNMmZLOGZ3T2hiSGQ1a3pxN3laS2VESm5wRUZ1SklzNzRXdzJKNGFYSUJLVmEtSldlWFN2YnNaeTZ0TjdjU3lLZFlEZ2VNUm5NcVp1OG1aMzI3dm96NUp4Ukk5ZFJTczluWjlmQUZOSnYtWExoaG1KZE96VXB5MmlLSXBzSENCU1NSMVRqNS1kazlvTFl2V2VwODNKekJxRHllWmY0Z3Z4M1BRcGtHOUVJVGFzTmtrZGNxRy1LUzRlOUhfMk1DSUNRUlk1S0h1aTRxMVNNbFBfY0xPQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxNMkdmdnVCWnVMV2ozdWF4VmM3RUxFXzQzd25URkYwclQ0Z0VJRy0yYTFUM0ZtXzRpLTZUdGVtUlZaakkxMzg2bFFsdlBLc0FzV3c4TUpVOVFndVZKa01HNzN2RE84LU0xazBpQW9ISHZtRjFvcWM4QklMQWhMXzFjVzdOa2M0Vy00R3FCc3VVTlBMNVdsLS1GbGNPdnVZY0lyRzJJQ2tNQdIBpwFBVV95cUxNMkdmdnVCWnVMV2ozdWF4VmM3RUxFXzQzd25URkYwclQ0Z0VJRy0yYTFUM0ZtXzRpLTZUdGVtUlZaakkxMzg2bFFsdlBLc0FzV3c4TUpVOVFndVZKa01HNzN2RE84LU0xazBpQW9ISHZtRjFvcWM4QklMQWhMXzFjVzdOa2M0Vy00R3FCc3VVTlBMNVdsLS1GbGNPdnVZY0lyRzJJQ2tNQQ?oc=5"
+      ],
+      "updated_at": "2026-06-25T22:01:48.013651",
       "is_outdated": false,
-      "last_close": 0.81,
-      "daily_delta": 0.32786885245901654,
-      "monthly_delta": 0.2272727272727273,
-      "yearly_delta": -0.5668449197860963,
-      "price_date": "2026-06-24"
+      "last_close": 0.11,
+      "daily_delta": 0.22222222222222232,
+      "monthly_delta": -0.15384615384615385,
+      "yearly_delta": -0.8135593220338984,
+      "price_date": "2026-06-25"
     },
-    "GPAR3.SA": {
+    "WEST3.SA": {
+      "summary": "Resumo: [Google News] Azevedo & Travassos amplia atuação em infraestrutura com aquisição de ativos da Engie em iluminação pública - ADVFN. ...",
+      "period": "Em 24/06/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPeEZMMnAxVFNjOW16dkZpTWVaTVQ4VG8yeWoyM0JKTlNlTGd1czByRWlFY21JcW9FRnNJN0N2TTFyZ2xtYVU1U2JtT0lOT0pfNVc3QVZtNjJuZE5uRUR6QWZmRENWdmJ3cnNleFZHV0JBVXZ1QUlsQnhYaU02NVBaMl9ndlJoSTYzUFhDNXpPa3RVZllkUlp5VFkta3p4ZUlza2taeVV1ZTg3TUU4MkMtYXF4WVFVemhPQUtkTmwtdTZHbmxzb29QcTM4UFV5dDlocWtoSXM0NUVEN0E2MEE?oc=5"
+      ],
+      "updated_at": "2026-06-25T22:02:49.005352",
+      "is_outdated": true,
+      "last_close": 3.98,
+      "daily_delta": 0.1671554252199412,
+      "monthly_delta": 0.18452380952380953,
+      "yearly_delta": 1.45679012345679,
+      "price_date": "2026-06-25"
+    },
+    "FICT3.SA": {
+      "summary": "Resumo: [Google News] Fictor Alimentos apresenta plano de recuperação judicial e propõe fundo de ativos ou financiamento DIP a credores - atlaspublico.com.br. [Google News] Bitcoin (BTC) recua mais de 3% com juros no radar - Investidor10. [Google News] Fictor (FICT3) despenca quase 5% após proposta de recup...",
+      "period": "Em 24/06/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbmNxS0dqYkRyNXNraEd6NXZLNl9jVU5FMVRheFRmX0JWWmZHYVFDdmltVU41M050RERVei0xSjgtM256VEJOcVMyNkJweHBEZ0xnYzRINVh2OFRZS3RwemdGZmlPamtaTHNySTZ4SW5OZHRmcFlLbXV1QV9qdTk0MlNCRWJSSGxhN21EUWdDTkF0THlmTHJ2dV9pdzBqWHNJVHh4anB1Zm8?oc=5",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPT3FESjFIREs2MUZVdWxBLWNwUGlHQkV1UXV2dWQwa3JiQzVMVlRsNFA2a0ZybmhtdU9pQ0lOVTB2OFVhWVRNRzRvcTdnQ1h4c2xUZm1hbnNWWUlxZ2Q1YXllQnVKd09LRTZ6S25XRGxRczdhVXhFM1BpTG5uNkNOenlOU3puTDJ6OGVvbXNmMi1sTmJTTUZ4Xzdsd9IBmwFBVV95cUxPT3FESjFIREs2MUZVdWxBLWNwUGlHQkV1UXV2dWQwa3JiQzVMVlRsNFA2a0ZybmhtdU9pQ0lOVTB2OFVhWVRNRzRvcTdnQ1h4c2xUZm1hbnNWWUlxZ2Q1YXllQnVKd09LRTZ6S25XRGxRczdhVXhFM1BpTG5uNkNOenlOU3puTDJ6OGVvbXNmMi1sTmJTTUZ4Xzdsdw?oc=5",
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRWRQc2hZRmpPTndYTjNBYm5CLW5QQjZkaEM5YnNsbW4zSjBKWWRkaUYtSkxGRVgyMlloZWhVMmEybUhwY1BVMHBZSFpKaDJhX3d3UkUzRkhxeXl3bTBuM3BYN0RDb3M1ZG1zd0hGT3FkZVdqWjJtVmtnWFoyYWVyMDB0NWlzVEU4Rmg4UmE2ai1ZX21GQ3M5T1FKYlNaOE5BZVVET2IyaHVtTUlIWkhLc0ZR0gG3AUFVX3lxTE1oRmU5S0llOW9VNzY3bTBjMXdEcXpNeFlfcEVMQ2gxOXpPMlkyem42OWdpWU5yLUlzZmpySGZQNDN4YkFqaTh4T1dJVWxEUUhLOVA4QnVaUFhucWEtTklERTdYQ2k5NWRMTm8zdHZBT3NGb005dFgyNGRkb3hnMjBUbmVsV1VCUG9rRTFYVG1kblNSQ3Yxc2pzYWZMZkhia2JwTm5NdVFhQzNORnFWcFlOOFdaOEV2cw?oc=5"
+      ],
+      "updated_at": "2026-06-25T22:02:51.178164",
+      "is_outdated": true,
+      "last_close": 0.24,
+      "daily_delta": 0.09090909090909083,
+      "monthly_delta": 0.1428571428571428,
+      "yearly_delta": -0.9323943661971831,
+      "price_date": "2026-06-25"
+    },
+    "ONCO3.SA": {
+      "summary": "Resumo: [Google News] Por que as ações da Oncoclínicas (ONCO3) do Brasil estão disparando hoje? - Investing.com Brasil - Finanças, Câmbio e Investimentos. [Google News] Oncoclínicas dispara dois dígitos com caminho para recuperação extrajudicial - Valor Investe. ...",
+      "period": "Em 19/06/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxPRlZYNk5mNl8zNkpsRjZRcVJUSmZsVlhfWDhVQVpuejh4MWVhRGt3SGpETDNyZlNmVVRMNlVFSFZGUGdYRHFSdFF3MFprZnFKd2k4VjJaSzBNeEh1Vkt5NHplN3llYURVNXM1VkxDVnVETHlxbXg3SXBaWGM2S3A4T05zaEYzcnBPeWFMLVd3T0xtb21CVWg2aDB3VkJvdGhicDNYU3dndmNFWXc1bzZlTk5xdnIwR1Fldi0xZElKSnRXb0dx?oc=5",
+        "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQOGlpM1E0eXhhUGJfcnRyLV9ZbDY2MjAxVi1pNjJJY2Y4MDZwdUZPRXlycm1VTlBVcEk5NnNaX09LeWhQTjRIbnd1aG9qa3MxMGlza0NTWFkwSi1ydU44bHhTc3dWSmhJcHE3MkJHclZjVUM5a3Naejh4OW1nLUhjNmZnc2JLTVFMY0hYRVpMMXRmVWZwYTdZal9sMFBqaFh4aTZtXzNaYk90WGNpc05Canl3TVJkSm9kV2lxbHYwVXdheG9pN3dLUzB2SkxFbWM5aXg3Qk80ajJVaUNZcjZkSF9neER4RFJSUUtKQ1NtSdIB_gFBVV95cUxPQXZxS2JJYmtCMTg3S0pkdlhhdTE1SVZVTUE3RGwzUi1oNFlOSzlXbnJzdnlfT3gyYzdOWFF2U3RrV1dqQ2dsNWx6amNhR0pmNldhY0h3QVdZT3F2NHRWQjlMVWVDOG5TckN5aTZWUWlfekdXWWZLcWFMdnJrOXNfOV9rS0tSYUJJTFlDQ3BEeUhVRVlRbHdaYTBvYjBacUNRVDI3c2x6dzZGV1hxWkItcGwtbHBDanlxQk13YlFMUXBCMXprcGY0THMyMHBQQWpyS1BWNFJtamdmTnM1RzBNN0VuYl9QN2dwRU5FcXM0UjZaY2ZTN0xma1AxMFVIZw?oc=5"
+      ],
+      "updated_at": "2026-06-25T22:02:53.210685",
+      "is_outdated": true,
+      "last_close": 1.49,
+      "daily_delta": 0.0875912408759123,
+      "monthly_delta": 0.020547945205479534,
+      "yearly_delta": -0.702,
+      "price_date": "2026-06-25"
+    },
+    "AZEV3.SA": {
+      "summary": "Resumo: [Google News] Azevedo & Travassos (AZEV3) anuncia aquisição de ESIP por R$ 1 - Visno Invest. [Google News] Azevedo & Travassos (AZEV3; AZEV4) aprova grupamento de 20 ações para 1 após aumento bilionário de capital - Guia do Investidor. [Google News] Raízen, Yduqs, Axia, MRV, Cogna e mais ações para ...",
+      "period": "Em 23/06/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxQYVM2eEI3dV9NU2Fza2pIVy1xUXlyd2NReENrYWhlREk5YUdMVFMwRDhyY25jUV9sZkFkeGV4MnI0cUxnbUlBVlZ2NnZjWkhneWl0eG9SYl9zTjk5TzByMlFFdjlRa2djUHprVVJxLWxjTVZBR1g2NEtHcUpnNU5PaEo2WG9wSXJEUnJKbFNlVkpxbklEdDFpdDlLSQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNMmZLOGZ3T2hiSGQ1a3pxN3laS2VESm5wRUZ1SklzNzRXdzJKNGFYSUJLVmEtSldlWFN2YnNaeTZ0TjdjU3lLZFlEZ2VNUm5NcVp1OG1aMzI3dm96NUp4Ukk5ZFJTczluWjlmQUZOSnYtWExoaG1KZE96VXB5MmlLSXBzSENCU1NSMVRqNS1kazlvTFl2V2VwODNKekJxRHllWmY0Z3Z4M1BRcGtHOUVJVGFzTmtrZGNxRy1LUzRlOUhfMk1DSUNRUlk1S0h1aTRxMVNNbFBfY0xPQQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxQNmFOYTcxYWVnWk5DLUUwTzlkT19xZzUwWk1xWjJnQmIxdmx4Mm0yajkyTzg4VV94dy1vczFkVG1BTlJYWm1nNE1pbHhxMTJodHR2OFdYZWlHZV9SV0UxQ3ZNdXZ0dWVXNmhtSlhqcUgxMWlFVFZkV3pkSVlaTkpLa0dIaWJTeEI0cDBVNjFLamFCMXc4cUNUcXNPXzduNVUtelHSAacBQVVfeXFMTTJHZnZ1Qlp1TFdqM3VheFZjN0VMRV80M3duVEZGMHJUNGdFSUctMmExVDNGbV80aS02VHRlbVJWWmpJMTM4NmxRbHZQS3NBc1d3OE1KVTlRZ3VWSmtNRzczdkRPOC1NMWswaUFvSEh2bUYxb3FjOEJJTEFoTF8xY1c3TmtjNFctNEdxQnN1VU5QTDVXbC0tRmxjT3Z1WWNJckcySUNrTUE?oc=5",
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxOclF5Z0NGc3JjcUVzbGF2X2VYREtFYnNPUV9KYzIzZFVQdXRtaTNUZjBuV3otM1U5YU5tc3NCVWprc2MxSm0tS0d2eXJid1BWMHlTOUEwMkExX01Wek1vSG9CZGR3S3YteENNODRuZUNNOUFSZm9Hb191dDdOVzJnb0dFMzNfdDNOVnFrbXpmeVF0MEdsajVvRmR6X0pWNk9ldU5ydHlUa3dkU1BlbmfSAbMBQVVfeXFMTVVnTjdPVllkZkVjQWFGQ284ZF9vR2Z2UnpZb0hVaEdMYjFZeDFxWm0yVHZSZEI5WjhxaTlmcnRGS2dXWWdCVDJLaFlidlNIbUpFTlV2d01vTGlyUHoxS19Sdk1ZRmtSNzJQYk5mUW9tQU13ZDZHRDFoa1B3N2lHZkJOeEwwMjJTWk13OGhIRUgzMURfdTVFNW9STXh4UzRaZ1NQWks3VTNvQlpHZThDeEdoOUU?oc=5"
+      ],
+      "updated_at": "2026-06-25T22:02:55.040671",
+      "is_outdated": true,
+      "last_close": 0.14,
+      "daily_delta": 0.0769230769230771,
+      "monthly_delta": -0.2222222222222221,
+      "yearly_delta": -0.6818181818181818,
+      "price_date": "2026-06-25"
+    },
+    "EQPA5.SA": {
+      "summary": "Resumo: [Yahoo Finance] Equatorial Para Distribuidora De Energia SA (BSP:EQPA3) Q1 2026 Earnings Call Highlights: .... [Yahoo Finance] Equatorial Para Distribuidora De Energia SA (BSP:EQPA3) Q4 2025 Earnings Call Highlights: .... ...",
+      "period": "De 01/04/2026 a 19/05/2026",
+      "sources": [
+        "https://finance.yahoo.com/sectors/energy/articles/equatorial-para-distribuidora-energia-sa-010224795.html",
+        "https://finance.yahoo.com/sectors/energy/articles/equatorial-para-distribuidora-energia-sa-010056602.html"
+      ],
+      "updated_at": "2026-06-25T22:02:56.786842",
+      "is_outdated": true,
+      "last_close": 10.5,
+      "daily_delta": -0.3597560975609756,
+      "monthly_delta": -0.3597560975609756,
+      "yearly_delta": 0.4227642276422765,
+      "price_date": "2026-06-25"
+    },
+    "IFCM3.SA": {
       "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
       "period": "",
       "sources": [],
-      "updated_at": "2026-06-24T21:56:30.168684",
+      "updated_at": "2026-06-25T22:02:57.680205",
       "is_outdated": false,
-      "last_close": 12.0,
-      "daily_delta": 0.19999999999999996,
-      "monthly_delta": 0.19999999999999996,
-      "yearly_delta": -0.41262848751835535,
-      "price_date": "2026-06-24"
+      "last_close": 0.48,
+      "daily_delta": -0.12727272727272743,
+      "monthly_delta": -0.22580645161290325,
+      "yearly_delta": -0.976,
+      "price_date": "2026-06-25"
+    },
+    "BRKM5.SA": {
+      "summary": "Resumo: [Google News] Braskem (BRKM5) recorre à Justiça para conter pressão dos bancos e ganhar tempo na renegociação da dívida - Seu Dinheiro. [Google News] Ibovespa hoje: Ambev (ABEV3) salta 15% após balanço; Braskem (BRKM5) lidera quedas - Estadão. [Yahoo Finance] Elliott, SVP Buy Braskem Debt Amid Restr...",
+      "period": "De 19/06/2026 a 25/06/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPazhVWnZiX3pmbWVhc3M4X1BCcl9pd2RMNERxYmhyYV9McmtHMXB1THFPSmFlaURfZnZaTEVlUDdfWUZ6bVdyb2pkVWlBVXZCUnVGYUdtWEVubGJxajlDTnZVWkpvT3NpaWJvcHUyQUlQWW5wMjhwd29kM2lqVW1OSE5EekNaWnpKZjZzUF9iMElzMy1ZYkRiZGJlWi1YelRsT3RnWDRycVZaaUdtMno4ZE5LNWwtdGdHTkp4d3UxUWUtcExacW1vNHRqZTNxMHk5MWlDM1pUQXlBdVJqS0tOVjFRWG1ldw?oc=5",
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxOUG5CYW8tREF4eFlpQjRLQ09CUlpWX3VhWmhnRi1xUHJNYV9FWjVva3JuSEFsUHkxdHFvM3ItM19ON2FMMHpRMUdoWk9VLWRzRFBNN2h6cWhkSXVoMU5vdWc3OGRhZFV6aUdsaHRrVlR5RWNoRENKY2VSUGlKYUR4ay0yNEpkX05RUkV0b2JwWlIxSWtLeEszOUJwenV5U2FOWXJPTGpYSnFEQXdyeVRWWnNCRGpUOEtON1hlalZTZ2NQTmIz0gHKAUFVX3lxTE16VDgtTERVaklkRGJnY05TakV1OVJWX1pwZWZHLWY4WXRXZ0hUeF9OalBEZENTRUtwRVhfYmxIX0tZT051QjN5ZGNQZkNKdnVWWWViRFZvNXRBZXBKWDNmUHRSeGNlQlVFbWZBSGphcnVTd2doUkw0VHQ3Z1E4XzV5V1J5bXc4QVhXTTFnZEhqakppdFEyaHE4bU1DajI2aURMYmh5Snl1VURLNDRlN181bjFCU0FiQzFtejcxRHktTlhLSkxSSmNMUEE?oc=5",
+        "https://finance.yahoo.com/markets/stocks/articles/elliott-svp-buy-braskem-debt-225757713.html",
+        "https://finance.yahoo.com/markets/stocks/articles/braskem-bak-loses-38-6-133501199.html"
+      ],
+      "updated_at": "2026-06-25T22:02:59.632372",
+      "is_outdated": false,
+      "last_close": 6.82,
+      "daily_delta": -0.10498687664041995,
+      "monthly_delta": -0.41609589041095885,
+      "yearly_delta": -0.24222222222222223,
+      "price_date": "2026-06-25"
+    },
+    "CEDO4.SA": {
+      "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
+      "period": "",
+      "sources": [],
+      "updated_at": "2026-06-25T22:03:00.584857",
+      "is_outdated": false,
+      "last_close": 5.02,
+      "daily_delta": -0.08561020036429878,
+      "monthly_delta": -0.15488215488215495,
+      "yearly_delta": -0.7131428571428572,
+      "price_date": "2026-06-25"
     },
     "RCSL3.SA": {
       "summary": "**Principais fatos que movem o papel Recrusul (RCSL3.SA):**  \n- Os relatórios de preço da ADVFN e do MoneyTimes apontam a cotação atual, volume de negociações e variação percentual do dia, mas não indicam nenhum anúncio corporativo relevante, já que a companhia não divulgou resultados, dividendos nem mudanças na gestão neste período.  \n- A Recrusul permanece no radar dos investidores porque faz parte de um bloco de empresas de infraestrutura que tem estado em alta devido às expectativas de expansão de projetos públicos, o que acaba influenciando a percepção de “benchmarking” das ações de companhias semelhantes.  \n- Em alguns flashes a mídia destaca margens de lucro estáveis e a manutenção de contratos de longo prazo com parceiros regionais, o que apoia a relação de confiança da perícia de mercado sobre a companhia.\n\n**Sentimento do mercado:**  \nNeutro, com leve otimismo. A ausência de notícias negativas mantém o preço estável, e a dinâmica de alta do setor de infraestrutura gera expectativa de continuidade de desempenho, mas sem impulsionar a ação a patamares de compra agressiva.\n\n**Resumo em 3‑4 frases:**  \nA Recrusul (RCSL3.SA) não teve decisões corporativas significativas recentemente, e a cobertura de mercado concentra-se apenas nos dados de preço e volume. A ação permanece em um estado de equilíbrio, suportada pela tendência de valorização geral do setor de infraestrutura. A expectativa de contratos futuros e a estabilidade de margens mantêm o apoio dos investidores, mesmo sem um anúncio decisivo que mova o preço de forma drástica. No geral, a percepção permanece neutra, com ligeiro otimismo em decorrência das perspectivas de crescimento do segmento.",
@@ -45,133 +156,129 @@
         "https://news.google.com/rss/articles/CBMiigFBVV95cUxNNThsUEpkT3lnc25GMUtGdFNwVG5YcGtIX0cwWmJoeENmNV85aWFnVmJpSmlaN0RtOUhjM3hueDUybDVQd3FnU3pWZ0Zwcno0eDRJSzlaZU50bTlXMTdXN0N4amV6V1hHOFdPNFFhUUs1MXNGdW50a1NUN2dVRkZsbWNzeUdOUmFaOEE?oc=5",
         "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9WT3VPZ2lsRnpYbVlSZTFoSTNWS3FPUGpUM0dCbTJIMk1wVERNX2RlajViQk9GYUxGLVJuN2pzUElJc0NmdVE5S3Jtbk1kSW9wbU94Y0FfMA?oc=5"
       ],
-      "updated_at": "2026-06-24T21:56:44.200784",
+      "updated_at": "2026-06-25T22:03:01.887937",
       "is_outdated": true,
-      "last_close": 0.44,
-      "daily_delta": 0.18918918918918926,
-      "monthly_delta": 0.1578947368421053,
-      "yearly_delta": -0.2542372881355932,
-      "price_date": "2026-06-24"
+      "last_close": 0.41,
+      "daily_delta": -0.06818181818181823,
+      "monthly_delta": 0.07894736842105265,
+      "yearly_delta": -0.2931034482758621,
+      "price_date": "2026-06-25"
     },
-    "RCSL4.SA": {
-      "summary": "**Fatos principais que afetam o RCSL4.SA**\n\n1. **Poder de compra dos investidores** – o bloco RCSL4 disparou 14‑18 % enquanto o Ibovespa se contraiu 0,5‑0,6 %, sinalizando que o movimento não é MV‑wide, mas lida com algum catalisador específico do RCSL.  \n2. **Gestão de dívida da Petrobras** – a companhia está antecipando um resgate de US$ 681 m milhões em títulos globais e ajustando sua estrutura de dívida; o efeito spill‑over pode aumentar a demanda por commodities e, consequentemente, o preço de produtos minerais que a RCSL produz.  \n3. **Ambiente global de negócios** – a melhora no índice Ifo da Alemanha indica recuperação setorial, o que reforça expectativas de crescimento da demanda por minério de ferro e outras matérias-primas – indicativo benéfico para a RCSL.  \n4. **Possível mudança regulatória** – rumores de revisão de impostos sobre mineração e/ou reduzida taxa de CIDE têm circulado nas redes; se materializar, a margem de lucro dos operadores de blocos, incluindo a RCSL, poderia expandir.\n\n**Sentimento do mercado**\n\nO comportamento do RCSL4 aponta para um **sentimento otimista**: a valorização do bloco em um cenário de queda geral do índice reflete confiança de que a RCSL pode capitalizar sobre a melhora da procura global e sobre potenciais ganhos de margem. Os avanços nas condições de crédito da Petrobras e a perspectiva de recuperação setorial na Alemanha são interpretados como sinais de que a demanda por minério de ferro está forte, empurrando o preço do bloco a um patamar atrativo.\n\n**Resumo**\n\nO RCSL4 teve 17,9 % de ganho, mesmo com o Ibovespa em queda de 0,6 %. O forte desempenho parece ser impulsionado por expectativas de recuperação na demanda global por minério de ferro, reforçadas pelo fortalecimento do ambiente de negócios na Alemanha e pela redução das taxas de juros no Brasil que favorece a emissão de dívida. A antecipação de Petrobras em resgatar US$ 681 m milhões em títulos globais sugere que a taxa de juros continua a baixar, melhorando o custo de capital das mineradoras e, assim, beneficiando o RCSL4. O resultado indica um clima otimista para o bloco, sendo observador atento a possíveis mudanças nas políticas fiscais e no mercado de commodities.",
-      "period": "Em 24/06/2026",
+    "BBDC4.SA": {
+      "summary": "Resumo: [Google News] Bradesco (BBDC4) passa a ser acionista direto da Odontoprev (ODPV3) - Estadão. [Google News] BBDC4 - Banco Bradesco - Resultados, Dividendos, Cotação e Indicadores - Investidor10. [Google News] Bradesco (BBDC4) anuncia pagamento de R$ 3,5 bilhões em juros sobre capital próprio - InfoMo...",
+      "period": "De 23/06/2026 a 25/06/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMijgFBVV95cUxOd1NMZE54MDdrdHZXam9iYzloQjRHa3BUYS1sVnpndjhZS01YakhYal9Xell6LU51MHRVTUZMbGplN3drV3BSekNEckVrVWFBWk1EbDZSRFp2UGs4dEJBNnNOdEpqbTFJbGVjaGdhNjlSMXVBTjFFbl8zN1RKZTIydXpUUGVoelBreWJNQ1lB?oc=5",
-        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMzhQRTRLWHFsMlpIUDlBd08zVV9ndkJwWGE3NWttVzkxUnc0aWFmZGl6d2JtTUFUdkJrX25lZXJqY0cwbVd5Vjc0RjRNcGFYY25mSHktR2ZUWG1jeERoQW1TWDcwSTdtWmlVRHlRdlhBcy1tWnVDYXg2bVBxeGJNX0xvUEM2SFlWcHNRXw?oc=5",
-        "https://news.google.com/rss/articles/CBMiakFVX3lxTE9IR1BUQnVpQXExMlUtVmdoVHNhRWZ2dVh5OFItbGFTS2liMUw2d3ZrWWxkUEQ5TEpJYm9uMVRXd29aVl9jZFpWVU1ZVG42STc5V21hQUxvMlN4SllxOG5PeldDTzE1RVhwY3c?oc=5",
-        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQNW5aNWVkVldCekRBTGduVlRtNGw4eEc3bG0tQVNqLVhseDBxdmRPSnlIXzBrRE5VMmxzVXRpU1pRWFVaUEctR3pqM2ZQanZxTUlCS0hNSm11cTg1YUdXcEFDbVNHcExQLTNSWnBkQXVvVERMZEp1SUI4c2hYTW9xdGZ6cmdFZEtVajVFWmZ5VmYzUjhGbHJGcDk1OGdSQzZKYS05bW5qaDF0dGFySEs1WGpfUVVraE1ma1dLRllQNEdmUnVvdjg1YUNOV1JjRUhEM21wd2JnQWhKYVIxbmlVX01XLXktdw?oc=5"
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUnpsSWNOTFhaR1hLX2pTV0V5UFRtRzhkUGs3M3ZPWWMxMEVSUndTMHZHRWtKdmx1VUctZUVRTTVZNG5OZHplRnJQaGVWNjE5Ql8tTE5wOXZNOFdsWS1XX3JTbG9tTDVwQjVkcmFaTHhYbzh3N1c2eURvTlpORnp2cUxRNFR6RkRDOUtQYm5aaTRCT1NYWHFvY2Jkc1VCMXpkVU9BTzg0bVA4MWp2Q1JtUGtwazJOcHpHa0lWZGVZTlRaNjYxNXfSAcsBQVVfeXFMTkIxc0RCcjJhYTIyRE00WHVfQjNxcmx1YmFrb2VxcmQzaWdoLVZZdW5vQkhQVVI5SXotdEs2U0ZvRDJxUzBmU09LZElqNFNrWnJuWTNQQUlDRUc2cGRQY1Z6eGZmSzA1cUVld2VRaXlLZnA5bzQxVV9LWDU5dHFnMHFwWEU1M29WOVAwMVJLYWJ6VndCSjk4TVY2QjJmWTVVVDdFUTBpd1c0b3BGcGRIZ0xPVUk1aDhyakI4S3UxVGlNd3JoTTN1NGVhcms?oc=5",
+        "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1Eenpqb3dobnYyTWppWnFRazg2dk9jX05vaUlnYlRMVG81M1haOTJrY0huSTN2RTFaVjRUdURteW95amNmb3BJVjYxTFZESDR3bWc?oc=5",
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQWJwcFM4b19WZmRGaGxPU0JTNGJlcDZTaGlWMndwaHV1TkF6X1ZXZGhndjJENk44cEd0WFI5RkVwZ1hob0dpeFBvNzBPTW5VdGQwY0ltYlRfeklGZjFqanh3VGFhXy10OEVRNEVVcmE4MG1YOVVCLTFKUEpFTk5yNGsyN085MDBVaXp6NkdxMzFmQlhtWElBUVlnQ0dodGljN0pFSEZpVlRxcEhyZTdZXzJMU1BNM3VUQXfSAb8BQVVfeXFMUHlGRkMtQlo3WkVPUnhHYl9Ed2ZjWks2eG9hMjhTbFE1QnBvblBHSmNSS3NtaUhWWDdJaFpJamZnUENPeUlvYUd3S3NJSDFwRnNETmMyZ0R2djNwQS1fUVdJeFI3SlJ3QTZWMFRFc2tRSUx3ZEJQMFZRT01ac3hfVHQ0S2VRVnBJVzVOdmhueEJNT2dYU0I0d2ZiV3ZQSWdFNXFVZENyeGt4aU5GVExJLVhMcFJ3TGRxT2UwOGxkVVk?oc=5",
+        "https://news.google.com/rss/articles/CBMickFVX3lxTE56NWdqVDVPdUdUY3RNU1FKNkNNMi12Zkx0Q0J2UVlwWU03VjRpODhnUHdlOUh5YmZHY3I5OVI4MktuMmZ1emlnamdSSkFEYWpiQWZ2LUlFZ0IzTDRMYTFyWDEzTjYwbThwMUttU01JemZxUQ?oc=5"
       ],
-      "updated_at": "2026-06-24T21:57:12.999688",
+      "updated_at": "2026-06-25T22:03:04.070420",
       "is_outdated": false,
-      "last_close": 0.64,
-      "daily_delta": 0.1428571428571428,
-      "monthly_delta": 0.2075471698113207,
-      "yearly_delta": 1.666666666666667,
-      "price_date": "2026-06-24"
+      "last_close": 17.62,
+      "daily_delta": -0.0016997167138809166,
+      "monthly_delta": -0.011223344556677839,
+      "yearly_delta": 0.16843501326259958,
+      "price_date": "2026-06-25"
     },
-    "SEQL3.SA": {
-      "summary": "**Principais fatos que movimentaram o SEQL3.SA**\n\n1. **Anúncio de dividendos e distribuição de caixa** – A empresa divulgou uma política de remuneração aos acionistas que incluiu um pagamento de dividendos superior ao histórico, o que fortaleceu a percepção de solvência e gestão voltada ao caixa.\n2. **Operação de recompra de ações** – A SEQUEL executou a recompra de 2,5 milhões de ações, sinalizando confiança interna no valuation e pegando força no horizon intraday.\n3. **Alinhamento de controle familiar** – Houve confirmação de que a família de controle firmou acordo de consolidação, reduzindo incerteza de governança e de potenciais disputas.\n4. **Indicador macro: IBMA** – O setor de TI, do qual a SEQUEL faz parte, registrou crescimento de 3,2% no trimestre, impulsionando a percepção de demanda futura.\n\n**Sentimento do mercado**\n\n- **Otimista** – A resposta rápida de +12,8 % no preço, acompanhado de fluxo de caixa positivo, confirma que investidores viram a recompra e o dividend payout como sinais de forte governança e potencial de valorização.\n\n**Resumo rápido**\n\nA SEQUEL (SEQL3.SA) firmou-se em sua posição de governança ao fechar acordo de consolidação familiar, ao mesmo tempo que recompra ações e oferece dividendos robustos, gerando confiança que se refletiu em uma alta de quase 13 %. O desempenho acompanha o crescimento do setor de TI, positioning a empresa como player de alto valor em ambientes de demanda crescente e estabilidade de caixa. Esse conjunto de fatores cria um cenário de impulso técnico aliado a fundamentos sólidos, favorecendo expectativas positivas de valorização contínua.",
-      "period": "De 22/06/2026 a 23/06/2026",
+    "PETR4.SA": {
+      "summary": "Resumo: [Yahoo Finance] Petrobras and Finep Launch R$150 Million Electrolyzer Initiative. [Yahoo Finance] Petrobras' Búzios Oil Field Sets New Output Record at 1.1 Million Bpd. [Google News] Por que a Petrobras (PETR4) impulsiona e trava o Ibovespa rumo aos 200 mil pontos - Estadão. [Yahoo Finance] Petrobra...",
+      "period": "De 24/06/2026 a 25/06/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRFh1U19LTVRjbWZHcl9LQ2lSOVVpRVpmcmt4Qjl6czdwUXBvQ1JxMXkwd3NHLWdxaEd1TTRhMGdLcHhYc2EwNHByTzZVRTNaRk5HRkljX1l0bGI3NmRYM3hycllqQ1VDWE8tZTdfcXd6UlVmWEhvcWJQVDAwTGExTmwwcW9IS0RjdWE4T0k4VEh2dw?oc=5",
-        "https://news.google.com/rss/articles/CBMijAFBVV95cUxQQk02YW9UaFFIaWNsV2RRMVdfRVhDRU5qSGdDSm1manMzcDBOZVhYZnNCX2Y5VjhXaU9MYUVuMGwyYnpDVkpNbUtOSFloWUNVcWRTTGxhdzhMZ0dBanlTMzdabkJpaGhYUWpRVXUxTUdCQzd5Vkplb0Q4NWlOSjRWYW16RERTR1VpNUVMbQ?oc=5",
-        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNampSVVNfQktLQTR3LWR5SmZQR2Vpb25TcldpRlB2Slh0WS1JM3JhcmVKM0dHaFo5Z3B4U1V1N3I2ZEZNMF9BcW5TSUgzWWJSOHozMWFkNzVZaUxiNzg2RGNQT2JlYzJPaWk2djFjN1lyVU5fSFhnY1JESGpBQmwwRFpPZjFFYWNhRGM4?oc=5",
-        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNeFp1bUZxUm1FZGVVaC1xcExXSUI5OURSLTI5YjFNX3RIc044STFkelBmTjBSU1BMSmJydHpMeWx3QlhCdnpXTzZocjcycmZCaDBuTnBBTmtiV2NQUE5GRFFYanFubWtJN2xfZTZrbl8yS3FSY0RWaVY3V2VHZkhOVGxsR19EQldtSC1n?oc=5"
+        "https://finance.yahoo.com/energy/articles/petrobras-finep-launch-r-150-135000182.html",
+        "https://finance.yahoo.com/energy/articles/petrobras-b-zios-oil-field-071500099.html",
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUjVXMFM3a2hmWnBvaUt4V3p1Y0Y0cHFzR0RzeFY3UTVRTWlhVi0wdFBTbUJ0NFY0X1FaUzN5bEo0Rno5MTNpQzFpTk9UU1RGZVFxZC0xdEZVVDdBcU5xN0xqdUtDMHdzSmN6V2JjM014cE1nMXpSUFFka2lDaDV4TTBWWVlRbjEtenhkSFJ0YXRlQ1JuMV9UM05jY3A0Q2VDbVhoSjM3QURKUnF1Vmo4XzJLdlgtMW5aLWVLYjZDVkrSAcYBQVVfeXFMUGV5LVlIazM0MkNlS3h4X01JdTJSdnRWcFhXQ0pHbHRFcGN1NmhCdGNhUG91MUMtcUVZNnUxNkE5emNTSThucmpacWpsNjEtempfM2VnUV9IZGhhandBckJ4RTVaVG1sdE5lUGxfR3NHNl91QW9HdXREcFRMZm0xV0czb0lJX3VOcXZGaE4zNkxXTmFHb1E5c3dZZ2tBNl93YXhwX25ZMzREa0dnSkxMc0RfclptazJiaktMdEtqaGMxYXZBRm9R?oc=5",
+        "https://finance.yahoo.com/energy/articles/petrobras-pemex-sign-mou-boost-122700628.html"
       ],
-      "updated_at": "2026-06-24T21:57:38.213144",
+      "updated_at": "2026-06-25T22:03:06.170477",
+      "is_outdated": false,
+      "last_close": 38.45,
+      "daily_delta": 0.004178636719770257,
+      "monthly_delta": -0.09995318352059912,
+      "yearly_delta": 0.3401882188915999,
+      "price_date": "2026-06-25"
+    },
+    "MGLU3.SA": {
+      "summary": "Resumo: [Google News] Magalu (MGLU3), Americanas (AMER3), Casas Bahia (BHIA3) e mais: ações do varejo acumulam quedas de até 99% ante máximas históricas - Money Times. [Google News] Magalu: ação cai 50% no ano e é maior baixa do Ibovespa; varejista pode virar o jogo? - InfoMoney. [Google News] Ibovespa hoje...",
+      "period": "De 20/06/2026 a 25/06/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOUUpfOGVVd2I3Vkd1U0RsRm9Lekh3N20ycU1uWFVXcmxoRk5hZ2o0ZkpSdkNVWWF3bmpaMjc2aXduOTh0VG50MjhDUmYza1pUU1BHSFR4YllLUlRsdXgydldJTkdNbmx3MFIwUHI2Vi04SHE4ZVRoemx2aHdSdjNzV1JTOExhOFhTWFQ1R09ReXVhejlCeFlubzRISTVTNGQ2b3d5aFJIYWc1eWpBWUt0a1NuTlFwWElLMzc2RjBnN01kM05fQ0I1XzJkbzJFUTRSZF80ZEt2VTFRVGNRNG9MNnhlQnF3ZkxseFdRVw?oc=5",
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZk04cklUcXJzOWUxNkZqVjZJeU5lM3VjUnExQWs5UmdGTkhnQTZLaG9CcVlhR2prVUNNXzJDRzBtRkhNVkJXdVdYSXlvQVh3c3lTNEVSdVBfUzRraVhBd0haTk51U0tOTHE5NVFqRkh6Vm4ySEc1N0hPcGtnYzNiMno2TzlwNER6TEZDUUZwaUNsQ0NRdnVvMkRtcGlpSndqTWxmQkZEby1fSU4xTTZtdjhzbVpWRTZOMGZiT9IBwgFBVV95cUxPaUhtX0VZQ2c3M2h1cElWWnJrVDRFZlM2X2RQUUJ3a2ZwcWkwX19JVjJfeVV1Ym15ZGV3akQyWGJiRmk2UWpwU1BrbER6QVZfREE1ZkV2QTVWZm9tNzFYM3RXdnRqU0dmTWh4UzRraVhhZmRFa2NCbjBPSUxVX1FVM1dRZVhSQjRPcjQzUHNDWFFXVERoZVJLMkV2Ym14aVdxVnBIOFY2UHV4XzIxenIxY0dJS1VQQTVtNWwyc2lDQVJCdw?oc=5",
+        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQaEgtcTZ5emJWUUI0VnRaWEJBZ1lNOU1sQ3dIbEwtb18takRTeU5GbmhITzNqTWxCaF9kVGJTT3NMdko2SzZXdmFkWWhHMHhORjllMks1LXUxQVBmWUxqalhTUXNFMG5YSHVXY3pHSHZ0RjExXzhpS0RZOFpmOUpZcUtOZGR2eFR3cWRnOTR5Sl9WWTVucEIzbUpLSEwydXFIWG1nYWs0MU9CNnV3d0VjRzVjMUk4ZnlGN3p2U0R5SHZyWHVVVDg5VkNlY1Z3VHlOdXNBbTJ4a2Yza3PSAeABQVVfeXFMUGxrRVROTFI5QURGTUpEazJsSXlCWUphQzJGRkVSQmtMa3pyX3dEWXVxbDBNbWJnVjRSTU53cmFWYld4NThQV3pmeWF5ZUVyMFA3Qm41dDRNTlJSMkZOZGVtSW00aGYyaURLTEgxTHNMWVdWMXpXMVpWcE10M05YQXRhbnBmdENubUxDS2hKWGQyTkN0b1NPaE5VNkl0UjR4aUphMUlkTmpwNkxOQWRUbU1IY0w5QWhaUEt6UkZuWXl0cHNrTHJieXQ2QmlzZmdkVEhNYUJfSGF2NUtXWDg3Szg?oc=5",
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPc1YxR2hMZFRvUnB4UjNrVUdQNVk5ZWRra1lvQ0kyZDRsWFhXS1czeUQ5WDB2YTV6eFp2VnhEbjQzeVdHb2FuazVXT29ydU1xeVU1YkJSdFNFTFhHVTh6ZXVrNFdmTUlZblc5ajFXT3h4UzJYelg2SmNYQ1V1NGFDR3hxUjhzdDR5SFJ0UldhNjM?oc=5"
+      ],
+      "updated_at": "2026-06-25T22:03:08.222922",
+      "is_outdated": false,
+      "last_close": 4.42,
+      "daily_delta": 0.013761467889908063,
+      "monthly_delta": -0.3353383458646617,
+      "yearly_delta": -0.48664343786295006,
+      "price_date": "2026-06-25"
+    },
+    "VALE3.SA": {
+      "summary": "Resumo: [Yahoo Finance] VALE S.A. (VALE) is Attracting Investor Attention: Here is What You Should Know. [Yahoo Finance] VALE S.A. (VALE) Sees a More Significant Dip Than Broader Market: Some Facts to Know. [Google News] Vale (VALE3) aposta na diversificação por meio dos metais básicos; é o momento de inves...",
+      "period": "De 23/06/2026 a 25/06/2026",
+      "sources": [
+        "https://finance.yahoo.com/markets/stocks/articles/vale-vale-attracting-investor-attention-130004647.html",
+        "https://finance.yahoo.com/markets/stocks/articles/vale-vale-sees-more-significant-220003583.html",
+        "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUl9SVTlXc3VhcjJkek1RSU9GdVhMQW9QclJYbGQzTVl6d3BrXzJ2WHkzdzByeEF4NWwyVnY5YWhZNjFIakplSHpFNHdpaGxYVXkwd192WFBGOGN6dmZveExCaVI4Y3ZpVWVVZ0FkQjJROFNMeFd6YzY1VU9kdlpObmxUUC12YVdpdzZiTDdsZ0hzNHhJWlIzcGtIa2hJNE52c0JqdzlyRlJDWTFJMDQ0MUdtVmdoSTY0dG9fQ0hmYXFRa2pBNFhxYURHTGpMU3VoaWNkVzBKb25hM3pEVVpEeFFJQQ?oc=5",
+        "https://finance.yahoo.com/markets/stocks/articles/vale-vale-falls-more-steeply-221504553.html"
+      ],
+      "updated_at": "2026-06-25T22:03:10.428205",
+      "is_outdated": false,
+      "last_close": 78.66,
+      "daily_delta": 0.011964492473948152,
+      "monthly_delta": -0.05308775731310944,
+      "yearly_delta": 0.6974536037980146,
+      "price_date": "2026-06-25"
+    },
+    "ITUB4.SA": {
+      "summary": "Resumo: [Yahoo Finance] UMBF's Arm Expands Fund Platform With iCapital Blockchain Network. [Yahoo Finance] Brazil Week: Itaú Unibanco Executive on the Value of a Tech-First Strategy. [Google News] ITUB4 Itaú Unibanco - Visno Invest. ...",
+      "period": "De 19/06/2026 a 23/06/2026",
+      "sources": [
+        "https://finance.yahoo.com/technology/ai/articles/umbfs-arm-expands-fund-platform-173000988.html",
+        "https://finance.yahoo.com/video/brazil-week-ita-unibanco-executive-182818460.html",
+        "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBPU0JKWnNNYTZBT2ltLTJ0VlpYN3F4MkhTQVI0bWtXcFc5WHlmSWRMQ0l6MWNnYXpUYmhYcC1aUnFtNHVLRDE3QXAxbndubVY5?oc=5"
+      ],
+      "updated_at": "2026-06-25T22:03:12.322945",
       "is_outdated": true,
-      "last_close": 0.08,
-      "daily_delta": 0.1428571428571428,
-      "monthly_delta": -0.33333333333333326,
-      "yearly_delta": -0.9920713577799802,
-      "price_date": "2026-06-24"
+      "last_close": 41.7,
+      "daily_delta": 0.017817915547962082,
+      "monthly_delta": 0.050907258064516236,
+      "yearly_delta": 0.28189363664309863,
+      "price_date": "2026-06-25"
     },
-    "WEST3.SA": {
-      "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
-      "period": "",
-      "sources": [],
-      "updated_at": "2026-06-24T21:57:39.036243",
-      "is_outdated": false,
-      "last_close": 3.41,
-      "daily_delta": -0.11886304909560719,
-      "monthly_delta": 0.01488095238095255,
-      "yearly_delta": 1.0792682926829271,
-      "price_date": "2026-06-24"
-    },
-    "USIM6.SA": {
-      "summary": "**Fatos principais que movem USIM6.SA** – A companhia registra uma forte liquidez relativamente baixa em relação ao seu faturamento, mas com dívida já descontingida em 2023, o que reduz o alarmismo sobre o endividamento. A cadeia de valor de USIM6 se beneficia da tendência de recuperação da demanda por ferro‑e‑aço, especialmente nas exportações para a China, e já firmou contratos de fornecimento que amortizam a volatilidade do preço do minério. Enquanto a margem bruta está sob pressão no curto prazo, o plano de corte de custos e a reestruturação de ativos não operacionais devem recuperar a rentabilidade em 2024.\n\n**Sentimento de mercado** – O clima é *otimista moderado*: investidores de valor veem a empresa como subavaliada em relação a múltiplos de EBITDA e preço‑livre, mas a liquidez fraca e o risco de ciclos de commodities mantêm cautela.\n\n**Resumo** – USIM6.SA aparece como uma opção de valor em cenários de alta demanda por aço, com dívida controlada e contratos futuros que protegem parte das receitas. Contudo, investidores devem observar a volatilidade dos preços do minério de ferro e a capacidade de executar cortes de custo. Se os planos internos forem cumpridos, a empresa tem potencial de retorno acima das médias setoriais, embora sua sensibilidade a ciclos de commodities mantenha o risco moderado.",
-      "period": "Em 22/06/2026",
+    "ABEV3.SA": {
+      "summary": "Resumo: [Yahoo Finance] Ambev (ABEV) Moves to Buy: Rationale Behind the Upgrade. [Yahoo Finance] Why Does Boston Beer Expect Lower Volume Growth in 2026?. [Yahoo Finance] Are Consumer Staples Stocks Lagging  Ambev (ABEV) This Year?. [Google News] ABEV3 tem recomendação de compra e sinais de alta - Acionista...",
+      "period": "Em 25/06/2026",
       "sources": [
-        "https://finance.yahoo.com/markets/stocks/articles/value-investors-buy-usinas-siderurgicas-134007037.html"
+        "https://finance.yahoo.com/markets/stocks/articles/ambev-abev-moves-buy-rationale-160005366.html",
+        "https://finance.yahoo.com/markets/stocks/articles/why-does-boston-beer-expect-144000502.html",
+        "https://finance.yahoo.com/markets/stocks/articles/consumer-staples-stocks-lagging-ambev-134002372.html",
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxNekVuWElJLWV6SVFvdVY4M2pyTDFQSEIzVmhkS3RIN1R0ZVJsTzJ5djlnNXZjMlpqYjZIMzhkamlYOVFZdHJpaHZQN3ZuRlFQSHg4VlhaS2puekZBUlpHa3ZNQnpuaS03aXdpa1Jack8xdFhBOGE4WTVSMTUyRmxlUA?oc=5"
       ],
-      "updated_at": "2026-06-24T21:58:16.057653",
-      "is_outdated": true,
-      "last_close": 8.65,
-      "daily_delta": -0.11644535240040843,
-      "monthly_delta": 0.08125000000000004,
-      "yearly_delta": 0.08125000000000004,
-      "price_date": "2026-06-24"
-    },
-    "ATED3.SA": {
-      "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
-      "period": "",
-      "sources": [],
-      "updated_at": "2026-06-24T21:58:16.890282",
+      "updated_at": "2026-06-25T22:03:14.261354",
       "is_outdated": false,
-      "last_close": 1.7,
-      "daily_delta": -0.10526315789473684,
-      "monthly_delta": -0.23076923076923073,
-      "yearly_delta": -0.07608695652173925,
-      "price_date": "2026-06-24"
-    },
-    "FICT3.SA": {
-      "summary": "**FICT3.SA – Resumo Profundo**\n\n1. **Fatos Principais**  \n   - A Fictor recebeu uma proposta de recuperação judicial, mas somente após a análise de seu próprio endividamento e das garantias já em vigor.  \n   - O pagamento de juros altos e a falta de capital de giro viram a empresa acusar reincidência de inadimplência, levando ao pedido.  \n   - Em decorrência, o ADR caiu quase 5% na sessão, refletindo a crescente incerteza sobre a viabilidade de reestruturação e a possibilidade de liquidação.\n\n2. **Sentimento do Mercado**  \n   - Pessimista, pois a queda acentuada indica que os investidores não acreditam no plano imediato para a empresa; a possibilidade de liquidação ou venda de ativos a preços descontados conivem com alta volatilidade.\n\n3. **Resumo**  \n   A Fictor encaminha pedido de recuperação judicial, adicionando à sua lista de desafios financeiros e levantando questões sobre a viabilidade de reestruturação. A queda de quase 5% na ação evidencia um sentimento de precaução, com o mercado refletindo a recepção negativa das negociações. No contexto mais amplo, a reorientação do mercado de commodities e a volatilidade das criptomoedas estão impactando o apetite por ações de risco, influenciando diretamente o comportamento de investidores em protocolos de dívida não garantida. O próximo passo crítico será o resultado formal do pedido e possíveis propostas de mantenção de valores patrimoniais para evitar a liquidação completa.",
-      "period": "Em 24/06/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTy1MT1ZSdVdicHZwTXg5UkpEVW4zaS1kZ3JmOTEyOFlVWDBxZ2pEdThLMGxMSS1IY3RpTXk4UlpGbG9oUy1uSldoanpOSncyOGtlNTVJOEVnTXlrMWwwMWQwT0xwdnZ1M3dOczY2OGJNN0s1MUlBUE1fV3liNzI2RVBrZGtXTWxJZ1Q3M3c4OVJiNHJWYWxfYnJYa01IbmE2OTRtUUNqcG8xWkc1WHfSAa4BQVVfeXFMT08tTE9WUnVXYnB2cE14OVJKRFVuM2ktZGdyZjkxMjhZVVgwcWdqRHU4SzBsTEktSGN0aU15OFJaRmxvaFMtbkpXaGp6Tkp3MjhrZTU1SThFZ015azFsMDFkME9McHZ2dTN3TnM2NjhiTTdLNTFJQVBNX1d5YjcyNkVQa2RrV01sSWdUNzN3ODlSYjRyVmFsX2JyWGtNSG5hNjk0bVFDanBvMVpHNVh3?oc=5",
-        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPT3FESjFIREs2MUZVdWxBLWNwUGlHQkV1UXV2dWQwa3JiQzVMVlRsNFA2a0ZybmhtdU9pQ0lOVTB2OFVhWVRNRzRvcTdnQ1h4c2xUZm1hbnNWWUlxZ2Q1YXllQnVKd09LRTZ6S25XRGxRczdhVXhFM1BpTG5uNkNOenlOU3puTDJ6OGVvbXNmMi1sTmJTTUZ4Xzdsd9IBmwFBVV95cUxPT3FESjFIREs2MUZVdWxBLWNwUGlHQkV1UXV2dWQwa3JiQzVMVlRsNFA2a0ZybmhtdU9pQ0lOVTB2OFVhWVRNRzRvcTdnQ1h4c2xUZm1hbnNWWUlxZ2Q1YXllQnVKd09LRTZ6S25XRGxRczdhVXhFM1BpTG5uNkNOenlOU3puTDJ6OGVvbXNmMi1sTmJTTUZ4Xzdsdw?oc=5",
-        "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRWRQc2hZRmpPTndYTjNBYm5CLW5QQjZkaEM5YnNsbW4zSjBKWWRkaUYtSkxGRVgyMlloZWhVMmEybUhwY1BVMHBZSFpKaDJhX3d3UkUzRkhxeXl3bTBuM3BYN0RDb3M1ZG1zd0hGT3FkZVdqWjJtVmtnWFoyYWVyMDB0NWlzVEU4Rmg4UmE2ai1ZX21GQ3M5T1FKYlNaOE5BZVVET2IyaHVtTUlIWkhLc0ZR0gG3AUFVX3lxTE1oRmU5S0llOW9VNzY3bTBjMXdEcXpNeFlfcEVMQ2gxOXpPMlkyem42OWdpWU5yLUlzZmpySGZQNDN4YkFqaTh4T1dJVWxEUUhLOVA4QnVaUFhucWEtTklERTdYQ2k5NWRMTm8zdHZBT3NGb005dFgyNGRkb3hnMjBUbmVsV1VCUG9rRTFYVG1kblNSQ3Yxc2pzYWZMZkhia2JwTm5NdVFhQzNORnFWcFlOOFdaOEV2cw?oc=5"
-      ],
-      "updated_at": "2026-06-24T21:58:39.265794",
-      "is_outdated": false,
-      "last_close": 0.22,
-      "daily_delta": -0.08333333333333326,
-      "monthly_delta": 0.04761904761904767,
-      "yearly_delta": -0.9380281690140845,
-      "price_date": "2026-06-24"
-    },
-    "LAND3.SA": {
-      "summary": "**Principais fatos que movem o LAND3**\n\n- **Resultado operacional robusto**: O relatório de fim de trimestre mostrou aumento de 18 % nas receitas e margem bruta reforçada pela retomada de contratos de longo prazo, o que desencadeou a alta de 14,1 %.  \n- **Expansão de pipeline**: Novos empreendimentos foram anunciados, incluindo um conjunto de unidades residenciais no Sudeste, gerando expectativas de endowment de caixa adicional.  \n- **Reforço de tesouraria**: Em agosto, LAND3 liberou R$ 200  milhões em financiamento à taxa de juros atraente, reduzindo a dívida de longo prazo em 12 %.  \n\n**Sentimento de mercado**\n\nA movimentação de positivo para LAND3, combinada com a alta abrupta do RCSL4 (até 17,9 % em dias de volatilidade baixa), sugere um otimismo segmentado. O mercado parece apostar no potencial de crescimento claro do papel, apesar do Ibovespa se manter quase estático.\n\n**Resumo em 3‑4 frases**\n\nLAND3 subiu 14,1 % após divulgar um relatório de alta na receita e margem, impulsionado por novos contratos e melhor fluxo de caixa. A empresa também otimizou sua estrutura de capital com um financiamento de curto prazo, fortalecendo a perspectiva de crescimento. O movimento positivo do LAND3, aliado ao salto do RCSL4, reflete um sentimento otimista nos tranches relacionados ao setor, enquanto o Ibovespa permanece relativamente estável. Esses itens indicam que investidores estão mirando nos fundamentos sólidos da companhia e na possibilidade de consolidar lucros nos próximos trimestres.",
-      "period": "De 23/06/2026 a 24/06/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMijgFBVV95cUxOd1NMZE54MDdrdHZXam9iYzloQjRHa3BUYS1sVnpndjhZS01YakhYal9Xell6LU51MHRVTUZMbGplN3drV3BSekNEckVrVWFBWk1EbDZSRFp2UGs4dEJBNnNOdEpqbTFJbGVjaGdhNjlSMXVBTjFFbl8zN1RKZTIydXpUUGVoelBreWJNQ1lB?oc=5",
-        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNMzhQRTRLWHFsMlpIUDlBd08zVV9ndkJwWGE3NWttVzkxUnc0aWFmZGl6d2JtTUFUdkJrX25lZXJqY0cwbVd5Vjc0RjRNcGFYY25mSHktR2ZUWG1jeERoQW1TWDcwSTdtWmlVRHlRdlhBcy1tWnVDYXg2bVBxeGJNX0xvUEM2SFlWcHNRXw?oc=5",
-        "https://news.google.com/rss/articles/CBMijAFBVV95cUxOUlFYaVdzdnZhZGRlQ2t2eTRrVzV0dHQwRXUxU1Btc1Zxd0J0c0N3UHR0NW5HdjR0RzJYQUloRlB5RlN5anhneFlqX2ZVOEdrdmEtbmVTNXFYbWFheEdEVzMydnlNVHdHc2d5MUR4cy1FbGFzdjlYUHl4R3UzM3J3aUtRZ3VHeV9nenRfYg?oc=5",
-        "https://news.google.com/rss/articles/CBMikgFBVV95cUxQRFh1U19LTVRjbWZHcl9LQ2lSOVVpRVpmcmt4Qjl6czdwUXBvQ1JxMXkwd3NHLWdxaEd1TTRhMGdLcHhYc2EwNHByTzZVRTNaRk5HRkljX1l0bGI3NmRYM3hycllqQ1VDWE8tZTdfcXd6UlVmWEhvcWJQVDAwTGExTmwwcW9IS0RjdWE4T0k4VEh2dw?oc=5"
-      ],
-      "updated_at": "2026-06-24T21:59:18.927431",
-      "is_outdated": false,
-      "last_close": 8.5,
-      "daily_delta": -0.0800865800865801,
-      "monthly_delta": -0.005847953216374324,
-      "yearly_delta": -0.1542288557213931,
-      "price_date": "2026-06-24"
+      "last_close": 16.39,
+      "daily_delta": 0.0006105006105006083,
+      "monthly_delta": -0.009068923821039854,
+      "yearly_delta": 0.3070175438596492,
+      "price_date": "2026-06-25"
     },
     "WEGE3.SA": {
-      "summary": "WEGE3.SA impulsionou o Ibovespa ao marcar as maiores variações positivas do dia, beneficiada pela alta do dólar que reforça as margens em dólar de seus clientes globais. A empresa vem revelando resultados operacionais mais robustos nas plataformas de energia renovável e, ao mesmo tempo, anunciou um acordo de parceria estratégico com uma multinacional de tecnologia, sinalizando expansão de cumprimento de metas de energia limpa. O mercado está, portanto, otimista, interpretando a valorização como confirmação de posicionamento de “blue‑chip” em setores de crescimento sustentável, enquanto a queda de Braskem reforça a narrativa de desequilíbrio entre setores industriais e de energia limpa. Em síntese, o forte desempenho da WEG indica que sua combinação de receitas em dólar, inovação em produtos e acordos estratégicos está consolidando sua posição como líder de mercado no contexto econômico atual.",
-      "period": "Em 18/06/2026",
+      "summary": "Resumo: [Google News] Ibovespa hoje: Weg (WEGE3) lidera ganhos com dólar em alta; Braskem (BRKM5) afunda 10% - Estadão. [Google News] WEG (WEGE3) vai pagar mais de R$ 400 milhões em JCP; confira quem recebe e quanto - Valor Investe. ...",
+      "period": "De 16/06/2026 a 18/06/2026",
       "sources": [
         "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQak5wRm4wX2VHbzBfdWJUcm8teUdqdmVYcGx5cFdmYkQyYUpzalI1NEdGbERzTlJMaTZPaGJjd3ZoelJNVXFhWVNhMVVEU3Q1cWJnVUJsRXhwQzFSZDlkQ04xaEJ0TlA2Nmo1LUhWMWMzWEo1MzZwVmRxYmJscm5iVjZEcjV4ZVdaUUxVUmhtT3JPeEl5eFVzT2ptc1B2ci1Gc3BHQVFta2VlTnFiUmMyOU5QSUUtbUltV1FHc3ZNWU1saG9ITnZBUW14SEZhZ0dwQW9BbdIB2gFBVV95cUxOOW5sRmlkV0k2LWQ4T0Y4WS1CbGtmLVVhRXFmSzhqTnluYlRHZGx5SDRGUV8wdEZDbjd3Q1ROeV9BcWctNmlRdXpSeVR3ZjBoUzhkdlluUjFjWUs3bkRzMGFCTWFYSmFYLXJWSDFvOUxYeVpVcVFDX1RqNGdaT2lNSm9hUzZWeVZCOW5yQlhZemIwMFhfZXpYZU42QkpyMFdjckRiT1lHa1dOd0l5V1lEVHRDVDFGbFZDOVJJOVlfRmZKTktnb2dFNVZlVnZHeV9Na0hxT05WQXJndw?oc=5",
-        "https://news.google.com/rss/articles/CBMiowFBVV95cUxONkY2X1VDVTRDU2llWkJGVXdLNUd3ampyNENtQ0N4SVZPT0xUdU1fZS1NdjctVlh6RkROZE8tZmVQdzZVZmRwNERnN1RYb1hteVhZX2hKZ1FFWWNTRkk1T1BxTGhmX3E3MVFibElHVC1ld2pxSU9NR0FmQ0l0WGxINDdDWi1DczJpT3dJQVpMOE85ZHFhMFFhM3pkaFMwM0Z3UjEw?oc=5"
+        "https://news.google.com/rss/articles/CBMi-gFBVV95cUxPcFlTUHRsN043MF8yQjlFdVpDSW9qWmpreE9ENVF3di1mNEdibEFaUmN5QVRyTTJjVTZDUDE1NjhqVDNwenYwZGVLRFVPU3Uyd2s0a2RfckhseVdGSUxLUTBsZHVDUUswWFlIdWlQSUV3OExBZ0NDdWlabzZOTWlNdG5BWFl5Q0J1ZDU4V0R1XzgtM2lUcUY0ckdrbkVaWW1aa1MycmpqdUlXcFlsUlFna3hVTkNfLWxCM3k0VmItaXhKSS10UDg5Y1RBaWIxeWtUX2pDWTFtUVVjd1ZaelU2cXpzOTh1a0NZLUZoajJQSVQyWWhZUWNsem9n0gGIAkFVX3lxTE1TMGpTSHJnQnpSdU01UXBNckJMckpDbFRKdHU2ZTFnLTVPaHdWc3pmOElJMTJ6Q1hOSU1mZ1dqRlZGeUwycGM2aDc2YlVPYzFFSkFaLXNaTFpSNE1HUGNST2k5TFkzVGdKZHhRVi01em1MdS04UnNadlI5MURvallzekU3akpJRXdCRGVMaHBpOFM0NWxvRFoxal9GQlQwcjBxSDJISkRLTUprRUItRjZGQXB3ejh1dl9JOGl4M2U5WjdhSFFiUUFZNVllS0ZBLVhTUzRmOTI4NHdaTGJnaXNvd3REWnJVWHF6Q1MxbHZXcTJkWkVpbjRfak1taWIyVkp4VGpNY0tNVw?oc=5"
       ],
-      "updated_at": "2026-06-24T21:59:36.710345",
+      "updated_at": "2026-06-25T22:03:16.187100",
       "is_outdated": true,
-      "last_close": 46.61,
-      "daily_delta": 0.019689345876175768,
-      "monthly_delta": 0.07868548947002996,
-      "yearly_delta": 0.1797013414325488,
-      "price_date": "2026-06-24"
+      "last_close": 46.5,
+      "daily_delta": -0.002360008581849371,
+      "monthly_delta": 0.07291185971389003,
+      "yearly_delta": 0.1659979939819458,
+      "price_date": "2026-06-25"
     },
     "BBAS3.SA": {
       "summary": "**Principais fatos que impactam BBAS3**\n\n- Lucro 4º trimestre de 2025 descende 40 % em relação ao mesmo período do ano anterior, de acordo com pesquisa de Nord Investimentos.  \n- A queda reflete maior custo com liquidez e depreciação de créditos, além de sobrecarga regulatória e desafios operacionais em cenários econômico‑financeiros voláteis.  \n- O resultado inferior ao consenso tem reforçado a avaliação pessimista de analistas, que já apontavam pressão nas caprizes por excesso de liquidity management e risco de crédito.\n\n**Sentimento de mercado**\n\nPessimista. A magnitude da queda no lucro gera questionamentos sobre a eficiência operacional e o potencial de crescimento futuro. Investidores estão cautelosos, pressionando o preço às proximidades dos níveis de suporte de curto prazo.\n\n**Resumo em 3‑4 frases**\n\nO Banco do Brasil registrou queda de 40 % no lucro do quarto trimestre de 2025, refletindo custos crescentes de liquidez e ajustes regulatórios que impactaram a eficiência. Esse resultado, abaixo do consenso, reforça a visão cautelosa dos analistas, que alertam para riscos adicionais de crédito e sobrecarga de capital. No curto prazo, o papel permanece sensível a pressões de mercado, exigindo monitoramento próximo de indicadores de margem e de custo de captação. A tendência indica que, a menos que haja ação corretiva nas operações de crédito e melhoria no ambiente macro‑econômico, a valorização será limitada.",
@@ -179,122 +286,25 @@
       "sources": [
         "https://news.google.com/rss/articles/CBMihwFBVV95cUxObEJDbmMyMmFkb1ktTjJhdjJDeG1ReVAtYlJDSWsxZlI2blJRdVlieWstdzZaM3NEMTVoM3V1aEplajQySFpwanU0UVRDRVFTN3VVRVh2WFdLSmlrSFFKSXBiS3VPakZWa3NjRVNPNE9ISUc1TlpacHBZLVRsWmw3endtSjdUbU3SAYwBQVVfeXFMTlV0aHJhdjczQ2xpcWNfUTVKRFN1cVNsSVdJa1NPRklUQWFOQ3IwRHlwRnFPQ2FfdkpxT0czbE45N3hHUjZiWVR5dmtmbWdXZ0RJcTFSSGh6OUtja0NUQWF5QlMtWU5haFVUREZIY3FUZ0pXMnhkWmlxYlVTSGxmdDQ5c3BQVlFDV2FOYjE?oc=5"
       ],
-      "updated_at": "2026-06-24T22:00:09.926716",
+      "updated_at": "2026-06-25T22:03:17.772520",
       "is_outdated": true,
-      "last_close": 19.73,
-      "daily_delta": -0.00654582074521648,
-      "monthly_delta": -0.08232558139534885,
-      "yearly_delta": -0.05823389021479708,
-      "price_date": "2026-06-24"
-    },
-    "MGLU3.SA": {
-      "summary": "1. **Fatos por trás da queda** – O diário do Copom sinalizou a possibilidade de aperto monetário, indicando que a taxa Selic pode subir mais ou permanecer elevada.  Para o varejo eletrônico, isso significa mais custo de crédito para o consumidor e uma redução na rotatividade de compras.  \n2. **Impacto no MGLU3** – As ações da Magazine Luiza caíram ~5%, refletindo o receio de que o aumento da taxa atenue a margem de contribuição já pressionada pelos custos logísticos e pela competitividade.  \n3. **Sentimento do mercado** – Pessimista. O consenso aponta que o cenário de juros mais altos pode frear o crescimento das vendas e elevar o custo de capital, diminuindo a atratividade do título.  \n4. **Resumo** – A quebra de 5% das ações da Magazine Luiza ocorreu após os comunicados do Copom, que indicam endurecimento da política monetária e maior vulnerabilidade de consumo. O aumento de juros poderia reduzir a taxa de conversão de visitas em compra no e‑commerce, pressionando margens e projetos de expansão. Investidores e analistas sentem a tendência de desaceleração, o que acentua a percepção de risco a curto prazo para o papel.",
-      "period": "Em 23/06/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQaEgtcTZ5emJWUUI0VnRaWEJBZ1lNOU1sQ3dIbEwtb18takRTeU5GbmhITzNqTWxCaF9kVGJTT3NMdko2SzZXdmFkWWhHMHhORjllMks1LXUxQVBmWUxqalhTUXNFMG5YSHVXY3pHSHZ0RjExXzhpS0RZOFpmOUpZcUtOZGR2eFR3cWRnOTR5Sl9WWTVucEIzbUpLSEwydXFIWG1nYWs0MU9CNnV3d0VjRzVjMUk4ZnlGN3p2U0R5SHZyWHVVVDg5VkNlY1Z3VHlOdXNBbTJ4a2Yza3PSAeABQVVfeXFMUGxrRVROTFI5QURGTUpEazJsSXlCWUphQzJGRkVSQmtMa3pyX3dEWXVxbDBNbWJnVjRSTU53cmFWYld4NThQV3pmeWF5ZUVyMFA3Qm41dDRNTlJSMkZOZGVtSW00aGYyaURLTEgxTHNMWVdWMXpXMVpWcE10M05YQXRhbnBmdENubUxDS2hKWGQyTkN0b1NPaE5VNkl0UjR4aUphMUlkTmpwNkxOQWRUbU1IY0w5QWhaUEt6UkZuWXl0cHNrTHJieXQ2QmlzZmdkVEhNYUJfSGF2NUtXWDg3Szg?oc=5"
-      ],
-      "updated_at": "2026-06-24T22:00:42.314804",
-      "is_outdated": true,
-      "last_close": 4.36,
-      "daily_delta": -0.013574660633484115,
-      "monthly_delta": -0.35598227474150657,
-      "yearly_delta": -0.49243306169965073,
-      "price_date": "2026-06-24"
-    },
-    "ITUB4.SA": {
-      "summary": "**Fatos principais que impactam ITUB4.SA**  \n- A expansão da plataforma de fundos da UMBF para integrar a rede blockchain da iCapital reforça o ecossistema de fintechs e tokenização de ativos que estão se misturando com os produtos de investimento tradicionais do Itaú Unibanco.  \n- No mesmo período, um executivo da gestão da empresa enfatiza que a estratégia “tech‑first” – aceleração de serviços digitais, automação de processos e análise de dados avançada – será prioridade para aumentar eficiência e capturar novos clientes, especialmente na modalidade Digital Bank.  \n\n**Sentimento do mercado**  \nA reação geral tem sido **otimista**. A cobertura da UMBF indica avanço na adoção de infra‑estrutura blockchain, algo que os investidores veem como diferencial competitivo. A declaração do executivo reforça a confiança na capacidade do banco de inovar e manter sua liderança no Brasil, sinalizando crescimento para o curto‑e médio prazo.  \n\n**Resumo em 3–4 frases**  \nITUB4 ganha tração graças à integração da UMBF com a iCapital, que traz tokenização de ativos para o portfólio de fundos do Itaú, sinalizando uma aposta na tecnologia de blockchain. Paralelamente, a ênfase do executivo em uma estratégia “tech‑first” mostra que o banco pretende intensificar sua presença digital e automação interna. Esses movimentos posicionam o Banco como um player ágil perante a corrida fintech, gerando expectativas de aumento de eficiência e expansão de receita. A perspectiva do mercado é suficientemente positiva para respaldar a valorização das ações no curto prazo.",
-      "period": "De 19/06/2026 a 23/06/2026",
-      "sources": [
-        "https://finance.yahoo.com/technology/ai/articles/umbfs-arm-expands-fund-platform-173000988.html",
-        "https://finance.yahoo.com/video/brazil-week-ita-unibanco-executive-182818460.html"
-      ],
-      "updated_at": "2026-06-24T22:01:10.165772",
-      "is_outdated": true,
-      "last_close": 40.97,
-      "daily_delta": -0.0019488428745432218,
-      "monthly_delta": 0.02578868302453685,
-      "yearly_delta": 0.23664352550558387,
-      "price_date": "2026-06-24"
-    },
-    "PETR4.SA": {
-      "summary": "A análise revela três impulsionadores claros para o PETR4. Primeiro, a Petrobras continua a ser o diferencial do Ibovespa enquanto a alta do mercado petroleiro sustenta a bússola de 200 mil pontos, sinalizando forte exposição a preços de Brent e capacidade de cobertura de entrada. Em segundo lugar, o Memorando de Entendimento firmado com a Pemex alavanca a produção na região do Golfo do México, ampliando a margem de receita em condição de mercado favorável e reforçando a posição de liderança da Petrobras no bloco da América Latina. Por fim, a aprovação do FID para o projeto RPBC – biorefinaria de biomassa – indica um investimento estratégico em diversificação energética, o que deve portear a valorização das contas de produção nos próximos trimestres.\n\nO mercado responde com otimismo: a combinação de alta de preços, expansão de capacidade de produção e investimento em renováveis projeta margens de lucro mais robustas, influenciando positivamente o setor de energia. As movimentações recentes nas ações de energia – como a alta late‑afternoon – reforçam este sentimento, lançando a Petrobras como pilar de crescimento no índice. Em síntese, PETR4 está em caminho de subir, impulsionada por ganhos operacionais e estratégicos que ultrapassam a simples correlação com o preço do petróleo.",
-      "period": "De 23/06/2026 a 24/06/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUjVXMFM3a2hmWnBvaUt4V3p1Y0Y0cHFzR0RzeFY3UTVRTWlhVi0wdFBTbUJ0NFY0X1FaUzN5bEo0Rno5MTNpQzFpTk9UU1RGZVFxZC0xdEZVVDdBcU5xN0xqdUtDMHdzSmN6V2JjM014cE1nMXpSUFFka2lDaDV4TTBWWVlRbjEtenhkSFJ0YXRlQ1JuMV9UM05jY3A0Q2VDbVhoSjM3QURKUnF1Vmo4XzJLdlgtMW5aLWVLYjZDVkrSAcYBQVVfeXFMUGV5LVlIazM0MkNlS3h4X01JdTJSdnRWcFhXQ0pHbHRFcGN1NmhCdGNhUG91MUMtcUVZNnUxNkE5emNTSThucmpacWpsNjEtempfM2VnUV9IZGhhandBckJ4RTVaVG1sdE5lUGxfR3NHNl91QW9HdXREcFRMZm0xV0czb0lJX3VOcXZGaE4zNkxXTmFHb1E5c3dZZ2tBNl93YXhwX25ZMzREa0dnSkxMc0RfclptazJiaktMdEtqaGMxYXZBRm9R?oc=5",
-        "https://finance.yahoo.com/energy/articles/petrobras-pemex-sign-mou-boost-122700628.html",
-        "https://finance.yahoo.com/energy/articles/petr-leo-brasileiro-pbr-board-121729581.html",
-        "https://finance.yahoo.com/energy/articles/sector-energy-stocks-rise-afternoon-195304673.html"
-      ],
-      "updated_at": "2026-06-24T22:01:43.215582",
-      "is_outdated": false,
-      "last_close": 38.29,
-      "daily_delta": -0.026442918891431466,
-      "monthly_delta": -0.1028584817244611,
-      "yearly_delta": 0.3276699029126213,
-      "price_date": "2026-06-24"
-    },
-    "ABEV3.SA": {
-      "summary": "**1️⃣ Fatos principais impactando a Ambev (ABEV3.SA)**  \n- O UBS BB **rebaixou a recomendação da Ambev para “venda”**, ajustando o preço‑alvo para R$ 18,00, citando expectativas de crescimento mais modesto e margens comprimidas devido à inflação e aumento de custos de matéria‑prima.  \n- A empresa continua a **dividir dividendos** e está em processo de reestruturação de sua estrutura de endividamento, o que tem sido seguido de perto pelos investidores.  \n- A volatilidade do mercado interno, aliado ao cenário de altas taxas de juros, tem pressionado o valor de ações de consumo defensivo como a Ambev.\n\n**2️⃣ Sentimento do mercado**  \nO sentimento prevalece como **cuidadosamente pessimista**: o corte de recomendação e o ajuste de preço‑alvo sinalizam desconfiança sobre a manutenção do crescimento acelerado, mesmo que a empresa preserve estabilidade de dividendos.\n\n**3️⃣ Resumo em 3‑4 frases**  \nO UBS BB rebateu a recomendação da Ambev para “venda” e reduziu o preço‑alvo, refletindo inquietações sobre margens e crescimento diante de inflação e custos elevados. No cenário econômico de juros altos, os investidores estão cautelosos com ativos de consumo defensivo. As dividendos mantêm o apelo de renda, mas a estrutura de caixa e a reestruturação de dívidas continuam a gerar dúvidas. Assim, a Ambev permanece em meio a um equilíbrio delicado entre estabilidade de pagamento e riscos de crescimento reduzido.",
-      "period": "De 22/06/2026 a 24/06/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMitgFBVV95cUxQTVhfT2V1N1owOU9UVjRVTFNYVnJHVVJJdjdwc1FYZW1ZSmgyRmZUNVQ2ejBMZUYxbHdKbDBRb0xWZ3hqM25oN285N3E2dGRTZW02VjI2SnpuZ1BWZFR3NVhPNm5rcXcyRzlRQlM4QXpIakR5Ym1ZajNobFo1WERXQTI5dnc2ODh3TWRHSzc2VlZCZFVPOFBFcFVtVy1keFNyaC1hYVJhOTNJc2Jwcm5ybmw5S0s4QdIBuwFBVV95cUxQZ2JkTFdfak15am1jMl9PcTBFejVBUndwTTJLN2tzZkJuTUU5bXJtMzh3MXdza0dRWUJaY3FKWFVycWhBSHhBdHA3R0kwcWJRU1J3eUQ5ekEyWElxcWRZWVpZQ1JRdlFnMkJoNVNqZkJRd2l1R3A4bFVvckJJdFQ2T091bTNXakZpRFhxMl9vcEU4d1VBRkFuekdNSHBhYThZckdheGF4ZXVQZEd1b2pWOUN3dE9hUXBuT2Q4?oc=5",
-        "https://news.google.com/rss/articles/CBMisAFBVV95cUxOc1VEbWp1OTVWUDRWbldJTE1Oamg0MldfTk40WVNaYXVNbzVDamZJZU1mZG5qRTBRUlp1OWpERXhKOUJRV3dGbzdiRUpjdnVZUmNLTmZOOU1HTHRDVk8tUHVSbVI2aXNzWnR6NnNONEFyVmxZcWNZeHdib0M3OG9jLVcweWxhV2lRUFJGSFRmV0lUbDYzMENYQm5kRzkzamJkQ1pzZ2ZHYThZOTdWYzhIcQ?oc=5",
-        "https://www.fool.com/investing/2026/06/24/how-770-shares-of-this-beer-giant-yield-about-100/",
-        "https://news.google.com/rss/articles/CBMitwFBVV95cUxNS2Z1S3VnVzBMWXRweVZGcUxmMVFwV1ktcXRrS0hJbmFOYUFQV1ZBdTJXdzhscVI0cGRFVi1JSTJHcWlHZ3R4dE5RME1MbFA4M3JzLUhVb0lLTmh6Y01ZeUNRU2sweW9YTE1KOENucVZ5TWpBV0x0NWNxWUxLYnRqbTlCQ0dEVVRNSVBiSXhQQWZacXgwUFRQelZnR3Z1a3dWMnBydWozNzFoUVZGSm5DTEFMUEpDLWPSAbcBQVVfeXFMTUtmdUt1Z1cwTFl0cHlWRnFMZjFRcFdZLXF0a0tISW5hTmFBUFdWQXUyV3c4bHFSNHBkRVYtSUkyR3FpR2d0eHROUTBNTGxQODNycy1IVW9JS05oemNNWXlDUVNrMHlvWExNSjhDbnFWeU1qQVdMdDVjcVlMS2J0am05QkNHRFVUTUlQYkl4UEFmWnF4MFBUUHpWZ0d2dWt3VjJwcnVqMzcxaFFWRkpuQ0xBTFBKQy1j?oc=5"
-      ],
-      "updated_at": "2026-06-24T22:02:07.405325",
-      "is_outdated": false,
-      "last_close": 16.38,
-      "daily_delta": 0.0006108735491752171,
-      "monthly_delta": 0.0018348623853210455,
-      "yearly_delta": 0.2717391304347825,
-      "price_date": "2026-06-24"
-    },
-    "BBDC4.SA": {
-      "summary": "**Fatos Principais**  \n1. O Bradesco (BBDC4) aprovou o pagamento de R$ 3,5 bilhões em Juros sobre Capital Próprio (JCP), matéria que foi publicada em diversas fontes (Estadão, Valor Investe, InfoMoney).  \n2. O valor foi destinado aos acionistas titulares do dia 31 de março de 2024, conforme divulgado nos canais oficiais da companhia, reduzindo a conta de equity disponível e gerando um fluxo de caixa confirmadamente positivo.  \n3. Além da decisão de pagamento, os relatórios de resultados da banca destacaram crescimento no lucro antes do JCP, ampliando a margem operacional e reforçando a capacidade de distribuição de caixa.  \n\n**Sentimento do Mercado**  \nO sentimento geral é **otimista**: investidores interpretam o elevado JCP como sinal de solidez financeira e maior retorno ao acionista. A percepção de que a companhia tem robustez para absorver esse desembolso sem comprometer a estrutura de capital eleva a confiança no preço das ações.  \n\n**Resumo**  \nO Bradesco distribuiu R$ 3,5 bilhões em JCP aos acionistas de 31 marco, reforçando o fluxo de caixa positivo e a rentabilidade do banco. Esse pagamento surge em meio a resultados que revelam crescimento da margem operacional, sinalizando força na gestão financeira. A resposta do mercado tem sido mais otimista, com traders e analistas vendo no JCP um tanto subsídio de recompra de dividendos sólido.",
-      "period": "De 23/06/2026 a 24/06/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1Eenpqb3dobnYyTWppWnFRazg2dk9jX05vaUlnYlRMVG81M1haOTJrY0huSTN2RTFaVjRUdURteW95amNmb3BJVjYxTFZESDR3bWc?oc=5",
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOX0ZTWEVoeUNQbFhzdl9JTTFzU3pfa3ZFYUFTelVKRUg3N1d4SGJuT0V4TjdFdU1Da1JtX3J1YjJmdXR4elpXRnRrdWtGZ2NhcWZ5NXlBN2xJZXhCaUlsZjZEZmJaamEwbVZpaHpwRU9MNWRpSkVzak5paEdVT2RZUktwSnM1SGFTLTZac1ppNHZYUUJjZnNEZ2N4cXRmZHJwaE1MMmE5c2ZLcUplWTlTU0Ewa3V6MHV40gG4AUFVX3lxTE5fRlNYRWh5Q1BsWHN2X0lNMXNTel9rdkVhQVN6VUpFSDc3V3hIYm5PRXhON0V1TUNrUm1fcnViMmZ1dHh6WldGdGt1a0ZnY2FxZnk1eUE3bElleEJpSWxmNkRmYlpqYTBtVmloenBFT0w1ZGlKRXNqTmloR1VPZFlSS3BKczVIYVMtNlpzWmk0dlhRQmNmc0RnY3hxdGZkcnBoTUwyYTlzZktxSmVZOVNTQTBrdXowdXg?oc=5",
-        "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOV2xkWHAxLV93bDVabVZ6R0VkenVJc1M0MmdQRk9ONUd5aGtBdDgzdjNkNnJuTmlpWnZHMnh3RklBYjZXWkxUbFFqWUxHaFgxdVFPMld0bUY5Wm9FNjZSNHVWbzJmMjBBWjZrcFB5SmJEdDkxa0tPd3EwSktWNHp2RThkWmQ5QTZ4cmxPbmJJNDJMeFFtMXpkQzZjTzZiWEt3bW1DOWNzVDQ2TGpsZm0wYXVOMy1hOWpEc2xTNU5JWU9RV1Jwb3BXc1Jlc191aTJKbVplT2c1a2FQQ3FSR0JudDRXMUJVck1iWWxCS3JYRdIB_gFBVV95cUxOZGtOeGdhZUoyV2VweHRSRWJhQ0o3WThhc3R4ZEtIWk9wc0lsUmhWR3JXb09MWVhNcnl6ZFZFdmtmS1FaWWxEaUp1aGpRYXpHZ1pUUy0wSjd2OGEtS0lvSVNjVXJFN3dPSzdFMjRHNmI0TC1pU2ZULUpRMWJnVWR4eFU2TFJISHpqUGdJTURYOTFGeEJKeElOd25nV3ItOWhFMFpjN3ZoWXdBZFVKUlNNbXRiMnpIc0lhSUUtTU5rcHdIZ1hSdk51U3E3cm0yWGFRd185dkhLNDN6UE9HOVJjUXRRLUV3T3lHaWdnb0JkZFVzQ1RNOWU4S0ctcFRFQQ?oc=5",
-        "https://news.google.com/rss/articles/CBMiugFBVV95cUxQQWJwcFM4b19WZmRGaGxPU0JTNGJlcDZTaGlWMndwaHV1TkF6X1ZXZGhndjJENk44cEd0WFI5RkVwZ1hob0dpeFBvNzBPTW5VdGQwY0ltYlRfeklGZjFqanh3VGFhXy10OEVRNEVVcmE4MG1YOVVCLTFKUEpFTk5yNGsyN085MDBVaXp6NkdxMzFmQlhtWElBUVlnQ0dodGljN0pFSEZpVlRxcEhyZTdZXzJMU1BNM3VUQXfSAb8BQVVfeXFMUHlGRkMtQlo3WkVPUnhHYl9Ed2ZjWks2eG9hMjhTbFE1QnBvblBHSmNSS3NtaUhWWDdJaFpJamZnUENPeUlvYUd3S3NJSDFwRnNETmMyZ0R2djNwQS1fUVdJeFI3SlJ3QTZWMFRFc2tRSUx3ZEJQMFZRT01ac3hfVHQ0S2VRVnBJVzVOdmhueEJNT2dYU0I0d2ZiV3ZQSWdFNXFVZENyeGt4aU5GVExJLVhMcFJ3TGRxT2UwOGxkVVk?oc=5"
-      ],
-      "updated_at": "2026-06-24T22:02:41.220232",
-      "is_outdated": false,
-      "last_close": 17.65,
-      "daily_delta": -0.01065022421524675,
-      "monthly_delta": -0.02216066481994472,
-      "yearly_delta": 0.16042077580539105,
-      "price_date": "2026-06-24"
-    },
-    "VALE3.SA": {
-      "summary": "**Fatos principais que afetam o VALE3**\n\n1. **Diversificação de portfólio** – O relatório da Empiricus destaca que a Vale está expandindo suas operações para além do minério de ferro, investindo em cobre, bauxita e em projetos de lítio. Essa mudança visa reduzir a exposição a preços voláteis e criar fontes de receita estáveis.\n\n2. **Desvalorização mais acentuada que o mercado amplo** – Segundo o Yahoo Finance, o preço das ações da Vale reculou mais que o índice de referência, sinalizando pressão nos investidores diante de custos de produção, incertezas regulatórias e questões ESG.\n\n3. **Valorização de dividendos** – Em curadoria de dividendos abaixo de R$30, a Vale aparece como uma opção, indicando que seu yield ainda atrai investidores buscando fluxos de caixa constantes.\n\n4. **Fortalecimento do setor de lítio** – A nomeação de Clovis Torres ao conselho da Lithium Ionic ressalta o interesse crescente e a maturidade de projetos de lítio na região de Carajás, potencializando a capacidade de produção da Vale nesse metal estratégico.\n\n---\n\n**Sentimento de mercado**\n\nO clima é **neutro com leves nuances otimistas**: investidores estão cautelosos pela depreciação de curto prazo, mas veem promessas nas novas linhas de produção de metais básicos e no potencial de lítio, que pode trazer valorização futura.\n\n---\n\n**Resumo (3‑4 frases)**\n\nA Vale está se reposicionando com investimento em cobre, bauxita e lítio, buscando reduzir a dependência do minério de ferro. Apesar de ter perdurado mais do que o mercado geral, o ativo mantém atrativo pelos dividendos e pela expectativa de crescimento na produção de lítio, reforçada pela atuação de Clovis Torres. A perspectiva geral é de oportunidades de longo prazo, mas com cautela frente à volatilidade da commodities e questões regulatórias. Esta trajetória pode valer a pena para quem busca diversificação dentro dos metais básicos.",
-      "period": "De 23/06/2026 a 24/06/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQUl9SVTlXc3VhcjJkek1RSU9GdVhMQW9QclJYbGQzTVl6d3BrXzJ2WHkzdzByeEF4NWwyVnY5YWhZNjFIakplSHpFNHdpaGxYVXkwd192WFBGOGN6dmZveExCaVI4Y3ZpVWVVZ0FkQjJROFNMeFd6YzY1VU9kdlpObmxUUC12YVdpdzZiTDdsZ0hzNHhJWlIzcGtIa2hJNE52c0JqdzlyRlJDWTFJMDQ0MUdtVmdoSTY0dG9fQ0hmYXFRa2pBNFhxYURHTGpMU3VoaWNkVzBKb25hM3pEVVpEeFFJQQ?oc=5",
-        "https://finance.yahoo.com/markets/stocks/articles/vale-vale-falls-more-steeply-221504553.html",
-        "https://www.marketbeat.com/articles/3-dividend-stocks-under-30-to-anchor-your-portfolio/?utm_source=yahoofinance&utm_medium=yahoofinance",
-        "https://finance.yahoo.com/markets/stocks/articles/lithium-ionic-appoints-clovis-torres-162333578.html"
-      ],
-      "updated_at": "2026-06-24T22:03:12.899449",
-      "is_outdated": false,
-      "last_close": 77.73,
-      "daily_delta": -0.020786092214663543,
-      "monthly_delta": -0.07010407943533914,
-      "yearly_delta": 0.6752155172413794,
-      "price_date": "2026-06-24"
+      "last_close": 20.05,
+      "daily_delta": 0.016218955904713672,
+      "monthly_delta": -0.04341603053435117,
+      "yearly_delta": -0.034665382763601316,
+      "price_date": "2026-06-25"
     }
   },
   "market_movers": [
-    "JFEN3.SA",
-    "GPAR3.SA",
-    "RCSL3.SA",
-    "RCSL4.SA",
-    "SEQL3.SA",
+    "AZEV4.SA",
     "WEST3.SA",
-    "USIM6.SA",
-    "ATED3.SA",
     "FICT3.SA",
-    "LAND3.SA"
+    "ONCO3.SA",
+    "AZEV3.SA",
+    "EQPA5.SA",
+    "IFCM3.SA",
+    "BRKM5.SA",
+    "CEDO4.SA",
+    "RCSL3.SA"
   ]
 }
