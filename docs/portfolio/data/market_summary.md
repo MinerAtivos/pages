@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-06-25
+## Resumo de Mercado - 2026-06-26
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 0.11 | R$ 0.09 | **+22.22%** 🚀 | +76.24% ⬆️ |
-| WEST3.SA | Westwing Comércio Varejista S.A. | R$ 3.98 | R$ 3.41 | **+16.72%** 🚀 | +211.66% ⬆️ |
-| FICT3.SA | Fictor Alimentos S.A. | R$ 0.24 | R$ 0.22 | **+9.09%** 🚀 | +11.24% ⬆️ |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.49 | R$ 1.37 | **+8.76%** 🚀 | -2.27% ⬇️ |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 0.14 | R$ 0.13 | **+7.69%** 🚀 | +136.26% ⬆️ |
+| INEP3.SA | Inepar S.A. Indústria e Construções | R$ 2.50 | R$ 1.94 | **+28.87%** 🚀 | +1272.42% ⬆️ |
+| SNSY5.SA | Sansuy S.A. | R$ 1.75 | R$ 1.46 | **+19.86%** 🚀 | -48.16% ⬇️ |
+| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 4.09 | R$ 3.50 | **+16.86%** 🚀 | -10.96% ⬇️ |
+| ESPA3.SA | MPM Corpóreos S.A. | R$ 7.00 | R$ 6.41 | **+9.20%** 🚀 | +98.04% ⬆️ |
+| ARML3.SA | Armac Locação, Logística e Serviços S.A. | R$ 3.13 | R$ 2.90 | **+7.93%** 🚀 | +25.49% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| EQPA5.SA | Equatorial Pará Distribuidora de Energia S.A. | R$ 10.50 | R$ 16.40 | **-35.98%** 📉 | +966.67% ⬆️ |
-| IFCM3.SA | Infracommerce CXaaS S.A. | R$ 0.48 | R$ 0.55 | **-12.73%** 📉 | +201.83% ⬆️ |
-| BRKM5.SA | Braskem S.A. | R$ 6.82 | R$ 7.62 | **-10.50%** 📉 | +76.58% ⬆️ |
-| CEDO4.SA | Companhia de Fiação e Tecidos Cedro e Cachoeira S.A. | R$ 5.02 | R$ 5.49 | **-8.56%** 📉 | -71.47% ⬇️ |
-| RCSL3.SA | Recrusul S/A | R$ 0.41 | R$ 0.44 | **-6.82%** 📉 | +277.11% ⬆️ |
+| VVEO3.SA | CM Hospitalar S/A | R$ 0.77 | R$ 1.23 | **-37.40%** 📉 | +2013.75% ⬆️ |
+| BRKM6.SA | Braskem S.A. | R$ 6.30 | R$ 8.00 | **-21.25%** 📉 | +87.50% ⬆️ |
+| RCSL4.SA | Recrusul S/A | R$ 0.49 | R$ 0.61 | **-19.67%** 📉 | +5.91% ⬆️ |
+| JFEN3.SA | João Fortes Engenharia S.A. | R$ 0.67 | R$ 0.80 | **-16.25%** 📉 | -13.84% ⬇️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 2.55 | R$ 2.80 | **-8.93%** 📉 | +786.95% ⬆️ |
