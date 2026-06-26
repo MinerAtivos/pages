@@ -1,0 +1,50 @@
+name: Fetch News
+
+on:
+  #schedule:
+    # Executa todos os dias úteis às 23:00 UTC (20:00 BRT), após fechamento da B3
+    #- cron: '5 22 * * 1-5'
+    #- cron: '27 20 * * 1-5'
+    
+  workflow_dispatch:  # Permite execução manual
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+      
+      #- name: Fetch market data
+      #  run: python docs/portfolio/scripts/data_fetcher.py
+
+      #- name: Generate market summary
+      #  run: python docs/portfolio/scripts/market_summary.py
+
+      - name: Generate AI News and Insights
+        run: python docs/portfolio/scripts/news_fetcher.py
+        env:
+          GAS_URL: ${{ secrets.GAS_URL }}
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/portfolio/data/market_data.json docs/portfolio/data/market_summary.json docs/portfolio/data/market_summary.md docs/portfolio/data/market_news.json
+          git commit -m "Update market data, summary and AI insights - $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git push
