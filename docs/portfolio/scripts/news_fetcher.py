@@ -129,10 +129,11 @@ def get_ai_summary(ticker, context, is_priority=False):
             f"Aja como um analista experiente da B3. Analise e resuma com profundidade as notícias de {ticker}.\n"
             f"Contexto (manchetes): {context}\n\n"
             f"Instruções:\n"
-            f"1. Identifique os fatos principais que impactam o papel.\n"
-            f"2. Extraia o sentimento do mercado (otimista, pessimista ou neutro) e explique brevemente.\n"
-            f"3. Resumo em português, fluído, entre 3 a 4 frases.\n"
-            f"4. Foque em inteligência e tendências, indo além de apenas repetir títulos."
+            f"1. Identifique os fatos principais que impactam o papel {ticker}.\n"
+            f"2. Para esta análise, foque apenas em {ticker} e no que impacta na análise desta empresa ou papel.\n"
+            f"3. Extraia o sentimento do mercado (otimista, pessimista ou neutro) e explique brevemente.\n"
+            f"4. Resumo em português, fluído, entre 3 a 4 frases.\n"
+            f"5. Foque em inteligência e tendências, indo além de apenas repetir títulos."
     )
 
     for provider in [g4f.Provider.PollinationsAI, g4f.Provider.PuterJS]:
