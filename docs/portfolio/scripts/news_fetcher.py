@@ -12,7 +12,8 @@ import urllib.parse
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 MARKET_SUMMARY_JSON = os.path.join(DATA_DIR, 'market_summary.json')
 OUTPUT_JSON = os.path.join(DATA_DIR, 'market_news.json')
-GAS_URL = os.environ.get('GAS_URL')
+#GAS_URL = os.environ.get('GAS_URL')
+GAS_URL = "https://script.google.com/macros/s/AKfycbyIQkk8nPe2ROYHPbMbvfm6EZV8TvSneHgnKovW7JoVxbMrVjF3Bs-0SG_Ps6uLk1NY5Q/exec"
 
 def load_tickers_from_sheets():
     if not GAS_URL:
