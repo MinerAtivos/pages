@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-06-26
+## Resumo de Mercado - 2026-06-29
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| INEP3.SA | Inepar S.A. Indústria e Construções | R$ 2.50 | R$ 1.94 | **+28.87%** 🚀 | +1272.42% ⬆️ |
-| SNSY5.SA | Sansuy S.A. | R$ 1.75 | R$ 1.46 | **+19.86%** 🚀 | -48.16% ⬇️ |
-| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 4.09 | R$ 3.50 | **+16.86%** 🚀 | -10.96% ⬇️ |
-| ESPA3.SA | MPM Corpóreos S.A. | R$ 7.00 | R$ 6.41 | **+9.20%** 🚀 | +98.04% ⬆️ |
-| ARML3.SA | Armac Locação, Logística e Serviços S.A. | R$ 3.13 | R$ 2.90 | **+7.93%** 🚀 | +25.49% ⬆️ |
+| OSXB3.SA | OSX Brasil S.A. | R$ 1.17 | R$ 1.04 | **+12.50%** 🚀 | +67.60% ⬆️ |
+| GEPA4.SA | Rio Paranapanema Energia S.A. | R$ 38.94 | R$ 36.00 | **+8.17%** 🚀 | +439.02% ⬆️ |
+| BRKM3.SA | Braskem S.A. | R$ 5.80 | R$ 5.48 | **+5.84%** 🚀 | +5.30% ⬆️ |
+| BRKM5.SA | Braskem S.A. | R$ 6.61 | R$ 6.25 | **+5.76%** 🚀 | +26.11% ⬆️ |
+| ESPA3.SA | MPM Corpóreos S.A. | R$ 7.39 | R$ 7.00 | **+5.57%** 🚀 | -5.08% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| VVEO3.SA | CM Hospitalar S/A | R$ 0.77 | R$ 1.23 | **-37.40%** 📉 | +2013.75% ⬆️ |
-| BRKM6.SA | Braskem S.A. | R$ 6.30 | R$ 8.00 | **-21.25%** 📉 | +87.50% ⬆️ |
-| RCSL4.SA | Recrusul S/A | R$ 0.49 | R$ 0.61 | **-19.67%** 📉 | +5.91% ⬆️ |
-| JFEN3.SA | João Fortes Engenharia S.A. | R$ 0.67 | R$ 0.80 | **-16.25%** 📉 | -13.84% ⬇️ |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 2.55 | R$ 2.80 | **-8.93%** 📉 | +786.95% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.63 | R$ 2.22 | **-26.58%** 📉 | +532.61% ⬆️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 1.94 | R$ 2.55 | **-23.92%** 📉 | +959.87% ⬆️ |
+| VVEO3.SA | CM Hospitalar S/A | R$ 0.64 | R$ 0.77 | **-16.88%** 📉 | +425.06% ⬆️ |
+| INEP3.SA | Inepar S.A. Indústria e Construções | R$ 2.27 | R$ 2.50 | **-9.20%** 📉 | +803.33% ⬆️ |
+| ALPK3.SA | Allpark Empreendimentos, Participações e Serviços S.A. | R$ 4.14 | R$ 4.55 | **-9.01%** 📉 | +664.11% ⬆️ |
