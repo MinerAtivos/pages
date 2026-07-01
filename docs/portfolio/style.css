@@ -80,6 +80,7 @@ body::after {
   flex-direction: column;
   z-index: 200;
   transition: transform var(--transition);
+   overflow: hidden; /*sidebar scrool*/
 }
 .sidebar-header {
   display: flex;
@@ -102,11 +103,18 @@ body::after {
 }
 .sidebar-nav {
   flex: 1;
-  padding: 1rem 0.75rem;
+  padding: 1rem 0.75rem 2rem; /*sidebar scrool*/
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  overflow-y: auto; /*sidebar scrool*/
+  scrollbar-width: none; /* Firefox */ /*sidebar scrool*/
+  -ms-overflow-style: none; /* IE and Edge */ /*sidebar scrool*/
 }
+
+.sidebar-nav::-webkit-scrollbar { /*sidebar scrool*/
+  display: none; /* Chrome, Safari, Opera */ /*sidebar scrool*/
+} /*sidebar scrool*/
 .nav-link {
   display: flex;
   align-items: center;
