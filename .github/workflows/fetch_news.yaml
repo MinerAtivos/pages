@@ -39,6 +39,7 @@ jobs:
       - name: Generate AI News and Insights
         run: python docs/portfolio/scripts/news_fetcher.py
         env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GAS_URL: ${{ secrets.GAS_URL }}
       
       - name: Commit and push changes
