@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-01
+## Resumo de Mercado - 2026-07-02
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.85 | R$ 1.63 | **+13.50%** 🚀 | +192.63% ⬆️ |
-| RVEE3.SA | RVEE3.SA | R$ 0.95 | R$ 0.86 | **+10.47%** 🚀 | +48.80% ⬆️ |
-| SEER3.SA | Ser Educacional S.A. | R$ 11.80 | R$ 11.11 | **+6.21%** 🚀 | +139.97% ⬆️ |
-| EPAR3.SA | Embpar Participacoes S.A. | R$ 1.72 | R$ 1.63 | **+5.52%** 🚀 | -26.32% ⬇️ |
-| RAIZ4.SA | Raízen S.A. | R$ 0.40 | R$ 0.38 | **+5.26%** 🚀 | +238.87% ⬆️ |
+| TOKY3.SA | TOKY3.SA | R$ 0.30 | R$ 0.26 | **+15.38%** 🚀 | +201.18% ⬆️ |
+| OIBR3.SA | Oi S.A. | R$ 0.11 | R$ 0.10 | **+10.00%** 🚀 | -14.50% ⬇️ |
+| GGPS3.SA | GPS Participações e Empreendimentos S.A. | R$ 12.46 | R$ 11.66 | **+6.86%** 🚀 | +83.85% ⬆️ |
+| ATED3.SA | ATED3.SA | R$ 1.92 | R$ 1.80 | **+6.67%** 🚀 | -90.73% ⬇️ |
+| BALM4.SA | Baumer S.A. | R$ 16.99 | R$ 16.04 | **+5.92%** 🚀 | -54.93% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SNSY5.SA | Sansuy S.A. | R$ 1.35 | R$ 1.71 | **-21.05%** 📉 | +807.18% ⬆️ |
-| NGRD3.SA | Neogrid Participações S.A. | R$ 33.61 | R$ 40.95 | **-17.92%** 📉 | -57.21% ⬇️ |
-| AMER3.SA | Americanas S.A. | R$ 3.39 | R$ 3.84 | **-11.72%** 📉 | +296.80% ⬆️ |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.09 | R$ 1.23 | **-11.38%** 📉 | +126.49% ⬆️ |
-| CEGR3.SA | Companhia Distribuidora de Gás do Rio de Janeiro - CEG | R$ 35.00 | R$ 39.00 | **-10.26%** 📉 | 0.00% — |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.08 | **-12.50%** 📉 | +110.27% ⬆️ |
+| VVEO3.SA | CM Hospitalar S/A | R$ 0.63 | R$ 0.70 | **-10.00%** 📉 | +44.67% ⬆️ |
+| PDTC3.SA | Padtec Holding S.A. | R$ 1.34 | R$ 1.48 | **-9.46%** 📉 | +235.38% ⬆️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.23 | R$ 0.25 | **-8.00%** 📉 | +24.47% ⬆️ |
+| BMEB4.SA | Banco Mercantil do Brasil S.A. | R$ 61.25 | R$ 66.18 | **-7.45%** 📉 | +31.69% ⬆️ |
