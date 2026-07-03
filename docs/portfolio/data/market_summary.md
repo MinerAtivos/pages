@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-02
+## Resumo de Mercado - 2026-07-03
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| TOKY3.SA | TOKY3.SA | R$ 0.30 | R$ 0.26 | **+15.38%** 🚀 | +201.18% ⬆️ |
-| OIBR3.SA | Oi S.A. | R$ 0.11 | R$ 0.10 | **+10.00%** 🚀 | -14.50% ⬇️ |
-| GGPS3.SA | GPS Participações e Empreendimentos S.A. | R$ 12.46 | R$ 11.66 | **+6.86%** 🚀 | +83.93% ⬆️ |
-| ATED3.SA | ATED3.SA | R$ 1.92 | R$ 1.80 | **+6.67%** 🚀 | -90.73% ⬇️ |
-| BALM4.SA | Baumer S.A. | R$ 16.99 | R$ 16.04 | **+5.92%** 🚀 | -54.93% ⬇️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.29 | R$ 1.09 | **+18.35%** 🚀 | +43.49% ⬆️ |
+| TOKY3.SA | TOKY3.SA | R$ 0.35 | R$ 0.30 | **+16.67%** 🚀 | +53.36% ⬆️ |
+| EUCA4.SA | Eucatex S.A. Indústria e Comércio | R$ 24.58 | R$ 23.01 | **+6.82%** 🚀 | -39.36% ⬇️ |
+| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 2.55 | R$ 2.39 | **+6.69%** 🚀 | -64.36% ⬇️ |
+| VVEO3.SA | CM Hospitalar S/A | R$ 0.67 | R$ 0.63 | **+6.35%** 🚀 | -50.61% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.08 | **-12.50%** 📉 | +111.95% ⬆️ |
-| VVEO3.SA | CM Hospitalar S/A | R$ 0.63 | R$ 0.70 | **-10.00%** 📉 | +46.73% ⬆️ |
-| PDTC3.SA | Padtec Holding S.A. | R$ 1.34 | R$ 1.48 | **-9.46%** 📉 | +239.31% ⬆️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.23 | R$ 0.25 | **-8.00%** 📉 | +43.94% ⬆️ |
-| BMEB4.SA | Banco Mercantil do Brasil S.A. | R$ 61.25 | R$ 66.18 | **-7.45%** 📉 | +33.45% ⬆️ |
+| ATED3.SA | ATED3.SA | R$ 1.76 | R$ 1.92 | **-8.33%** 📉 | +24.09% ⬆️ |
+| BGIP3.SA | Banco do Estado de Sergipe S.A. | R$ 49.32 | R$ 52.43 | **-5.93%** 📉 | +50.00% ⬆️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.22 | R$ 0.23 | **-4.35%** 📉 | -4.25% ⬇️ |
+| FICT3.SA | Fictor Alimentos S.A. | R$ 0.22 | R$ 0.23 | **-4.35%** 📉 | -88.31% ⬇️ |
+| ISAE4.SA | ISA Energía Brasil S.A. | R$ 27.80 | R$ 28.89 | **-3.77%** 📉 | +93.43% ⬆️ |
