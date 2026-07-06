@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-03
+## Resumo de Mercado - 2026-07-06
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| TOKY3.SA | TOKY3.SA | R$ 0.37 | R$ 0.30 | **+23.33%** 🚀 | +106.01% ⬆️ |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.22 | R$ 1.09 | **+11.93%** 🚀 | +135.11% ⬆️ |
-| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 2.63 | R$ 2.39 | **+10.04%** 🚀 | -35.69% ⬇️ |
-| OIBR3.SA | Oi S.A. | R$ 0.12 | R$ 0.11 | **+9.09%** 🚀 | +74.41% ⬆️ |
-| LUXM4.SA | Trevisa Investimentos S.A. | R$ 3.22 | R$ 3.00 | **+7.33%** 🚀 | +84.46% ⬆️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | -57.97% ⬇️ |
+| RVEE3.SA | RVEE3.SA | R$ 1.02 | R$ 0.92 | **+10.87%** 🚀 | +126.85% ⬆️ |
+| FICT3.SA | Fictor Alimentos S.A. | R$ 0.25 | R$ 0.23 | **+8.70%** 🚀 | +58.95% ⬆️ |
+| SNSY5.SA | Sansuy S.A. | R$ 1.51 | R$ 1.39 | **+8.63%** 🚀 | +3.01% ⬆️ |
+| AMER3.SA | Americanas S.A. | R$ 3.85 | R$ 3.58 | **+7.54%** 🚀 | +108.99% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | -48.10% ⬇️ |
-| BDLL3.SA | Bardella S.A. Indústrias Mecânicas | R$ 6.69 | R$ 7.49 | **-10.68%** 📉 | -9.09% ⬇️ |
-| ATED3.SA | ATED3.SA | R$ 1.74 | R$ 1.92 | **-9.38%** 📉 | +27.52% ⬆️ |
-| BGIP3.SA | Banco do Estado de Sergipe S.A. | R$ 49.74 | R$ 52.43 | **-5.13%** 📉 | +7100.00% ⬆️ |
-| LUPA3.SA | Lupatech S.A. | R$ 0.66 | R$ 0.69 | **-4.35%** 📉 | +228.70% ⬆️ |
+| GFSA3.SA | Gafisa S.A. | R$ 0.69 | R$ 1.00 | **-31.00%** 📉 | +502.27% ⬆️ |
+| HBOR3.SA | Helbor Empreendimentos S.A. | R$ 1.75 | R$ 2.36 | **-25.85%** 📉 | +964.60% ⬆️ |
+| HBRE3.SA | HBR Realty Empreendimentos Imobiliários S.A. | R$ 2.05 | R$ 2.59 | **-20.85%** 📉 | +2017.69% ⬆️ |
+| BOBR4.SA | Bombril S.A. | R$ 1.21 | R$ 1.37 | **-11.68%** 📉 | +105.13% ⬆️ |
+| INEP3.SA | Inepar S.A. Indústria e Construções | R$ 1.96 | R$ 2.21 | **-11.31%** 📉 | +164.00% ⬆️ |
