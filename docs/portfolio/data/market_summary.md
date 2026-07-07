@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-06
+## Resumo de Mercado - 2026-07-07
 
 ### 📈 Maiores Altas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | -57.97% ⬇️ |
-| RVEE3.SA | RVEE3.SA | R$ 1.02 | R$ 0.92 | **+10.87%** 🚀 | +126.85% ⬆️ |
-| FICT3.SA | Fictor Alimentos S.A. | R$ 0.25 | R$ 0.23 | **+8.70%** 🚀 | +58.95% ⬆️ |
-| SNSY5.SA | Sansuy S.A. | R$ 1.51 | R$ 1.39 | **+8.63%** 🚀 | +3.01% ⬆️ |
-| AMER3.SA | Americanas S.A. | R$ 3.85 | R$ 3.58 | **+7.54%** 🚀 | +108.99% ⬆️ |
+| SNSY5.SA | Sansuy S.A. | R$ 1.75 | R$ 1.51 | **+15.89%** 🚀 | +143.18% ⬆️ |
+| COCE3.SA | Companhia Energética do Ceará - COELCE | R$ 36.00 | R$ 31.72 | **+13.49%** 🚀 | -50.00% ⬇️ |
+| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 1.85 | R$ 1.70 | **+8.82%** 🚀 | +149.43% ⬆️ |
+| CASH3.SA | Méliuz S.A. | R$ 4.60 | R$ 4.24 | **+8.49%** 🚀 | +273.48% ⬆️ |
+| OIBR3.SA | Oi S.A. | R$ 0.13 | R$ 0.12 | **+8.33%** 🚀 | -52.76% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| GFSA3.SA | Gafisa S.A. | R$ 0.69 | R$ 1.00 | **-31.00%** 📉 | +502.27% ⬆️ |
-| HBOR3.SA | Helbor Empreendimentos S.A. | R$ 1.75 | R$ 2.36 | **-25.85%** 📉 | +964.60% ⬆️ |
-| HBRE3.SA | HBR Realty Empreendimentos Imobiliários S.A. | R$ 2.05 | R$ 2.59 | **-20.85%** 📉 | +2017.69% ⬆️ |
-| BOBR4.SA | Bombril S.A. | R$ 1.21 | R$ 1.37 | **-11.68%** 📉 | +105.13% ⬆️ |
-| INEP3.SA | Inepar S.A. Indústria e Construções | R$ 1.96 | R$ 2.21 | **-11.31%** 📉 | +164.00% ⬆️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 2.60 | R$ 3.17 | **-17.98%** 📉 | +100.00% ⬆️ |
+| FIEI3.SA | Fica Empreendimentos Imobiliarios S.A | R$ 10.10 | R$ 11.49 | **-12.10%** 📉 | 0.00% — |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 1.56 | R$ 1.72 | **-9.30%** 📉 | -6.42% ⬇️ |
+| MDNE3.SA | Moura Dubeux Engenharia S.A. | R$ 27.28 | R$ 29.97 | **-8.98%** 📉 | +340.36% ⬆️ |
+| CALI3.SA | Construtora Adolpho Lindenberg S.A. | R$ 25.75 | R$ 28.00 | **-8.04%** 📉 | +60.00% ⬆️ |
