@@ -1116,7 +1116,8 @@ body.loading {
   transition: all 0.2s;
 }
 
-.btn-period.active {
+.btn-period.active,
+.btn-summary-filter.active {
   background: var(--accent);
   color: #fff;
   box-shadow: 0 2px 8px var(--accent-glow);
