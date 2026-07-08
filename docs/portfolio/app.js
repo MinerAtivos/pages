@@ -22,6 +22,7 @@ class B3App {
     this.currentPage = 'dashboard';
     this.previousPage = 'dashboard';
     this.summaryPeriod = 'day'; // day, month, year
+    this.summaryFilter = 'geral'; // geral, liquid, ibov
     this.taxConfig = null;
     this.fiscalData = { dt_loss: 0, st_loss: 0, irrf_balance: 0, tax_balance: 0 };
     this.init();
@@ -1276,6 +1277,16 @@ class B3App {
     this.renderMarketTreemap();
   }
 
+  setSummaryFilter(filter) {
+    this.summaryFilter = filter;
+    document.querySelectorAll('.btn-summary-filter').forEach(b => b.classList.remove('active'));
+    const btn = this.$(`btn-filter-${filter}`);
+    if (btn) btn.classList.add('active');
+
+    this.renderMarketSummary();
+    this.renderMarketTreemap();
+  }
+   
   async loadAssets() {
     try {
       const res = await fetch('./assets.json');
@@ -2457,17 +2468,19 @@ class B3App {
     this.$('summaryDateFull').textContent = `Dados atualizados em ${new Date(summary.date + 'T00:00:00').toLocaleDateString('pt-BR')} (referente à coleta de ${new Date(summary.last_update).toLocaleDateString('pt-BR', {timeZone:'America/Sao_Paulo'})})`;
 
     let gainers, losers, deltaKey;
+    const filterSuffix = this.summaryFilter === 'geral' ? '' : `_${this.summaryFilter}`;
+
     if (this.summaryPeriod === 'month') {
-      gainers = summary.gainers_month;
-      losers = summary.losers_month;
+      gainers = summary[`gainers_month${filterSuffix}`];
+      losers = summary[`losers_month${filterSuffix}`];
       deltaKey = 'monthly_delta';
     } else if (this.summaryPeriod === 'year') {
-      gainers = summary.gainers_year;
-      losers = summary.losers_year;
+      gainers = summary[`gainers_year${filterSuffix}`];
+      losers = summary[`losers_year${filterSuffix}`];
       deltaKey = 'yearly_delta';
     } else {
-      gainers = summary.gainers;
-      losers = summary.losers;
+      gainers = summary[`gainers${filterSuffix}`];
+      losers = summary[`losers${filterSuffix}`];
       deltaKey = 'daily_delta';
     }
 
@@ -2934,7 +2947,15 @@ class B3App {
     const deltaKey = this.summaryPeriod === 'month' ? 'monthly_delta' : (this.summaryPeriod === 'year' ? 'yearly_delta' : 'daily_delta');
 
     // Filter and prepare data
-    const validAssets = allAssets.filter(a => a[deltaKey] !== undefined && a.ticker !== '^BVSP');
+    let filteredAssets = allAssets;
+    if (this.summaryFilter === 'liquid') {
+      filteredAssets = allAssets.filter(a => a.is_liquid);
+    } else if (this.summaryFilter === 'ibov') {
+      filteredAssets = allAssets.filter(a => a.is_ibov);
+    }
+
+    const validAssets = filteredAssets.filter(a => a[deltaKey] !== undefined && a.ticker !== '^BVSP');
+
 
     const posPriceAssets = validAssets.filter(a => a[deltaKey] > 0);
     const negPriceAssets = validAssets.filter(a => a[deltaKey] < 0);
