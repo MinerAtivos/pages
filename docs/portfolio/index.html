@@ -635,14 +635,18 @@
         <p class="subtitle" id="summaryDateFull">Visão dos ativos que mais se movimentaram</p>
       </div>
 
-      <div class="toolbar" style="justify-content: center; margin-bottom: 2rem;">
+      <div class="toolbar" style="justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
         <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: 12px; gap: 4px;">
           <button class="btn btn-sm btn-period active" onclick="app.setSummaryPeriod('day')" id="btn-period-day" style="width: auto;">Dia</button>
           <button class="btn btn-sm btn-period" onclick="app.setSummaryPeriod('month')" id="btn-period-month" style="width: auto;">Mês</button>
           <button class="btn btn-sm btn-period" onclick="app.setSummaryPeriod('year')" id="btn-period-year" style="width: auto;">Ano</button>
         </div>
       </div>
-
+        <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: 12px; gap: 4px;">
+          <button class="btn btn-sm btn-summary-filter active" onclick="app.setSummaryFilter('geral')" id="btn-filter-geral" style="width: auto;">Geral</button>
+          <button class="btn btn-sm btn-summary-filter" onclick="app.setSummaryFilter('liquid')" id="btn-filter-liquid" style="width: auto;">Liquidez</button>
+          <button class="btn btn-sm btn-summary-filter" onclick="app.setSummaryFilter('ibov')" id="btn-filter-ibov" style="width: auto;">IBOV</button>
+        </div>
       <div class="summary-grid">
         <div class="card glass">
           <h2 class="card-title" style="color: var(--green); display: flex; align-items: center; gap: 0.5rem;">
