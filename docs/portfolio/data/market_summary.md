@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-13
+## Resumo de Mercado - 2026-07-14
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 1.41 | R$ 1.13 | **+24.78%** 🚀 | +225.98% ⬆️ |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 1.46 | R$ 1.26 | **+15.87%** 🚀 | +674.12% ⬆️ |
-| BGIP3.SA | Banco do Estado de Sergipe S.A. | R$ 51.82 | R$ 48.01 | **+7.94%** 🚀 | -96.90% ⬇️ |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.30 | R$ 1.21 | **+7.44%** 🚀 | +340.20% ⬆️ |
-| HBOR3.SA | Helbor Empreendimentos S.A. | R$ 2.13 | R$ 2.02 | **+5.45%** 🚀 | +23.73% ⬆️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 0.96 | R$ 0.76 | **+26.32%** 🚀 | +79.90% ⬆️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.28 | R$ 0.24 | **+16.67%** 🚀 | +130.48% ⬆️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | -75.19% ⬇️ |
+| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 1.38 | R$ 1.25 | **+10.40%** 🚀 | +203.51% ⬆️ |
+| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 2.63 | R$ 2.40 | **+9.58%** 🚀 | +130.23% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | -65.04% ⬇️ |
-| GFSA3.SA | Gafisa S.A. | R$ 0.58 | R$ 0.63 | **-7.94%** 📉 | +78.91% ⬆️ |
-| AMER3.SA | Americanas S.A. | R$ 3.78 | R$ 4.10 | **-7.80%** 📉 | +34.65% ⬆️ |
-| EPAR3.SA | Embpar Participacoes S.A. | R$ 1.50 | R$ 1.62 | **-7.41%** 📉 | +823.58% ⬆️ |
-| BPAC5.SA | Banco BTG Pactual S.A. | R$ 18.15 | R$ 19.50 | **-6.92%** 📉 | +440.70% ⬆️ |
+| PATI4.SA | Panatlântica S.A. | R$ 29.50 | R$ 32.00 | **-7.81%** 📉 | +400.00% ⬆️ |
+| BGIP3.SA | Banco do Estado de Sergipe S.A. | R$ 48.08 | R$ 51.82 | **-7.22%** 📉 | -76.92% ⬇️ |
+| CMIN3.SA | CSN Mineração S.A. | R$ 5.10 | R$ 5.45 | **-6.42%** 📉 | +68.41% ⬆️ |
+| RAIZ4.SA | Raízen S.A. | R$ 0.31 | R$ 0.33 | **-6.06%** 📉 | -13.88% ⬇️ |
+| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 2.45 | R$ 2.59 | **-5.41%** 📉 | -44.23% ⬇️ |
