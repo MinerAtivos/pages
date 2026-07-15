@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-14
+## Resumo de Mercado - 2026-07-15
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 0.96 | R$ 0.76 | **+26.32%** 🚀 | +79.90% ⬆️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.28 | R$ 0.24 | **+16.67%** 🚀 | +130.48% ⬆️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | -75.19% ⬇️ |
-| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 1.38 | R$ 1.25 | **+10.40%** 🚀 | +203.51% ⬆️ |
-| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 2.63 | R$ 2.40 | **+9.58%** 🚀 | +130.23% ⬆️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.33 | R$ 0.28 | **+17.86%** 🚀 | +468.08% ⬆️ |
+| ENJU3.SA | Enjoei S.A. | R$ 0.93 | R$ 0.84 | **+10.71%** 🚀 | +34.35% ⬆️ |
+| AHEB3.SA | São Paulo Turismo S.A. | R$ 23.90 | R$ 22.20 | **+7.66%** 🚀 | -16.67% ⬇️ |
+| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 2.62 | R$ 2.45 | **+6.94%** 🚀 | +61.42% ⬆️ |
+| PDTC3.SA | Padtec Holding S.A. | R$ 1.99 | R$ 1.88 | **+5.85%** 🚀 | +338.31% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| PATI4.SA | Panatlântica S.A. | R$ 29.50 | R$ 32.00 | **-7.81%** 📉 | +400.00% ⬆️ |
-| BGIP3.SA | Banco do Estado de Sergipe S.A. | R$ 48.08 | R$ 51.82 | **-7.22%** 📉 | -76.92% ⬇️ |
-| CMIN3.SA | CSN Mineração S.A. | R$ 5.10 | R$ 5.45 | **-6.42%** 📉 | +68.41% ⬆️ |
-| RAIZ4.SA | Raízen S.A. | R$ 0.31 | R$ 0.33 | **-6.06%** 📉 | -13.88% ⬇️ |
-| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 2.45 | R$ 2.59 | **-5.41%** 📉 | -44.23% ⬇️ |
+| ANIM3.SA | Ânima Holding S.A. | R$ 1.93 | R$ 2.87 | **-32.75%** 📉 | +1322.66% ⬆️ |
+| CAML3.SA | Camil Alimentos S.A. | R$ 4.41 | R$ 5.39 | **-18.18%** 📉 | +904.82% ⬆️ |
+| GFSA3.SA | Gafisa S.A. | R$ 0.49 | R$ 0.56 | **-12.50%** 📉 | +129.42% ⬆️ |
+| MEAL3.SA | International Meal Company Alimentação S.A. | R$ 0.72 | R$ 0.78 | **-7.69%** 📉 | +163.14% ⬆️ |
+| OIBR4.SA | Oi S.A. | R$ 0.60 | R$ 0.65 | **-7.69%** 📉 | -78.30% ⬇️ |
