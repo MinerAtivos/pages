@@ -1,270 +1,199 @@
 {
-  "last_update": "2026-07-17T21:15:40.693141",
-  "market_last_date": "2026-07-17",
-  "market_summary": "O mercado brasileiro segue atento ao cenário fiscal e movimentações de commodities.",
+  "last_update": "2026-07-20T21:42:03.185471",
+  "market_last_date": "2026-07-20",
+  "market_summary": "O Ibovespa registrou uma leve realização de lucros nesta sessão ao recuar 0,20% e fechar aos 173.371 pontos, um ajuste técnico que, contudo, não compromete a sólida trajetória de valorização de 2,84% no mês e os expressivos 29,98% acumulados no ano. A dinâmica do dia refletiu uma postura mais seletiva por parte dos agentes financeiros, os quais se mostraram altamente reativos a notícias corporativas específicas e a realocações de fluxo institucional. Essa sensibilidade penalizou de forma mais acentuada os papéis expostos a desinvestimentos de acionistas de referência e a revisões desfavoráveis de recomendação por grandes bancos de investimento. Em contrapartida, movimentos de rotação setorial e disputas de narrativa acionária sustentaram a volatilidade pontual, consolidando um pregão de acomodação de preços enquanto o mercado consolida o robusto rali de médio prazo.",
   "ibov": {
     "ticker": "^BVSP",
     "name": "IBOVESPA",
-    "last_close": 173714.08,
-    "date": "2026-07-17",
-    "daily_delta": -0.0006381130447289385,
-    "monthly_delta": 0.03122561648877431,
-    "yearly_delta": 0.2814080330468778,
+    "last_close": 173371.34,
+    "date": "2026-07-20",
+    "daily_delta": -0.00197255258643525,
+    "monthly_delta": 0.02844616078208051,
+    "yearly_delta": 0.29981061912401974,
     "delta_volume": 0,
     "is_liquid": true,
     "is_ibov": false,
-    "prev_close": 173825.0
+    "prev_close": 173714.0
   },
   "assets": {
-    "RCSL4.SA": {
-      "summary": "RCSL4 demonstrou notável força relativa no pregão, avançando 7,0% em um dia em que o Ibovespa recuou 0,8%. Esse desempenho superior indica que a ação está reagindo a drivers específicos e positivos da companhia ou do seu setor, conseguindo desassociar-se da tendência de baixa do índice geral. O forte movimento de alta, na contramão do mercado mais amplo, reflete um sentimento de mercado claramente otimista em relação a RCSL4, apontando para uma percepção de valorização ou notícias corporativas positivas que podem estar impulsionando o papel.",
-      "period": "Em 16/07/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMijgFBVV95cUxQaDFqc3k4RUQ0RW1UWDdka191VXhUQ2dnZWh5LUtsQUMwNm9IR05LRnhYaWpUZmdaV2JtQlBJcU1DbU1jQjZ3V2xLanFlSURfN1VZR3dIWktXUHJ2NmVFSk12VkEtN2dKZHZIQWVEMXJlbnBXdVFvOGV3aS1DMUhMREppYlJISWE4aGhQQXRB?oc=5",
-        "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVU0xMFh0TUJzZEVBM1JUZVc2OE5PUWcwTzlGa3lnT0lGLXpYMWNtbkRrN2pmbWhZeGZCY0dheU9pMGZzVF9FYURhQjA4VWlwNGdqMTlZbl81bkctOEJKc2szVEtsQ0FGeDI2RVQtVnI5dXZTb3lTV1VTN2FFOWl5R015Z2dhOHkxUGhJR0Fn?oc=5",
-        "https://news.google.com/rss/articles/CBMikAFBVV95cUxNaksxckxTVXQ3M1o2bmFaRHgxR2loazBla2VlZ090b3FiTTNjVTVlVmxRb0xTU3lrSGg5eTcxNkV5NEs1RWxSczdFYWgwSUx0Unp4NUFFOEJUeW9wT1FGS1Jwb2J5bHhzZHhSdGhJX2pfTzE0LXhXS2dLeHIyVHBuNWFvT0tLRnE5Y1ZsbmZQWDQ?oc=5",
-        "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZWZPX0c4MGlsdE9JMGZqOUxfMVJsWEp5VVM2UFpVZndtb3RfRUdQaS1KMkJ0T1ZYeDdDNXRxRHFHa282UmhWbS1OLXRfbklKMlBQY09sbGxRejhDb1E2eWlFUTBtLU90VG1ZcWdXVF9SbGRYN3JFSE13cnpIX05VNmJhNWdTYmloaEo2a0xR?oc=5"
-      ],
-      "updated_at": "2026-07-17T21:15:51.514716",
-      "is_outdated": true,
-      "last_close": 0.51,
-      "daily_delta": 0.1333333333333333,
-      "monthly_delta": 0.020000000000000018,
-      "yearly_delta": 0.8888888888888888,
-      "price_date": "2026-07-17"
-    },
-    "PMAM3.SA": {
-      "summary": "Paranapanema (PMAM3), que se encontra em recuperação judicial, recebeu uma proposta de investimento de US$ 40 milhões de uma holding de Dubai, um fato que pode injetar capital vital e oferecer um \"novo fôlego\" à companhia. Este desenvolvimento é um ponto de atenção positivo e crucial, indicando um potencial caminho para a reestruturação e a manutenção das operações, dada a grave situação financeira. No entanto, o cenário permanece de alta complexidade e risco, evidenciado pela recente notificação da B3 que concedeu à empresa um novo prazo para reenquadrar o preço de suas ações, sinalizando uma persistente desvalorização no mercado e a pressão regulatória. Consequentemente, o sentimento do mercado é profundamente ambivalente: um otimismo especulativo em torno da possível salvação via investimento é contrabalanceado pelo pessimismo intrínseco à recuperação judicial e à ameaça de não conformidade com as regras da bolsa, tornando o papel altamente volátil e de risco elevado.",
-      "period": "De 13/07/2026 a 16/07/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPWmlodUlZRG42ZFFZMkxsQTVZTC1IVDNGZnQ0VXVTQXJJdDBrWkxsRkJrSks3SHUtVHdtanJ1OVp2Rmp4RlkyREpRTmNNS2ZOdGpRQVFxSVZaRVJ4OWhJaDBZeWVpQl9kZnlsaFFVMEd5dlUtUDhwY2R6WU5MSEU5Vk1kZ3d6X3Z4TERONzlLc0QtWmRJWGR4LXRSbFhUWXNQOWdON0RWTFFCSkJkMHkzc0pwT211OEFsR1o2RzZlN0dPN0lDWXU2SV9iY0xsZzVISWZsRTFOWXB4MXF0QURGaWRCenFzbkJPYVppT0d3?oc=5",
-        "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOamNRdWhqRmFROWxzMTJTYnRfVXctbDlnZ1A3ZWVrOU5rblF5Qzd4N0dTdHdtYndnZlEwQm1aMDRYWlFJQ3p4d1g1TTlOZDhNV3VHV1hYYXFkRkhaMGJUekxvYjV5MDhmTG00NDNBNWtERU5GWWExVzdzTmctN0VkLUpMakxod09ocW1YTHlxdEMzUHU5c2haWVF3Mko1YkFlQ2poc2UxRnJUMTRJaXdfXzNzM2MzVHprd0duT3ZKYWctZkI1Q0FKZzV1YWpnWGJ5c3diM2Y5TGlIZw?oc=5",
-        "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRTJhUTZrSXl5TDQtVXptbXFabVlsbWhYU21NQUhCWHRsRmtFaHVDdjZkQzkxWDMxeVVRY1l6VGhKZFg2T1c0THVHdkhjX0NlMXNDWTZYdEp6RVNTVDFiRU1BYmtfdUJ1YVNXS2NqMVpUaEVySW9oSVhuRVA1aEN6RzM3Q3lkc2FzQTUwV1VILUx3aldRQ2hJS25hTGVNU05LQjJQVlR3?oc=5",
-        "https://news.google.com/rss/articles/CBMixgFBVV95cUxNdnUxeXdZeVp6aGh6V1JZR3NJclBvR3dUbjNMZ2lsNzYtbjZDOUN4N2VIc1NjNzk0eXFWLUR6anFrY0JwVjhMZ1dhUXNBTG9uMHh1Z3hCRjdPOXNVSnFsbWdrcGZKdV9wdUlBVGpJa1gxX1JhNmw1YkZSTW9XYjIzQnB2aGpIMXBuVUJrY3BxNEd2SEhYWFVzcFZMa3FaS2FrbHFPUlpITWR1VzNxLVFHeGxRMUx3WFBTU1AzZ3IyWTE4ZDVqR3fSAcsBQVVfeXFMT3hCdDF1MDY1dG8tcVJwLXV3a2IxUVNmRy1lazNfSm9xSGgybXpwQmliSzg2Q1dwVDQ4dGRwbGhWdFRtZGxPTHBBUFpKWHVmNnd5RXZiMlo4MkNQS2o4UThGS2JwVVVjdWIxZVZkaUlxNldwdVN4dWpUcGUyYjNXc3J4cWl6cXlwX1I0OXFXV0dlM01UaEk2elFXelFMZmVmZjUtTEVaSmNsd0N5Z3JibEdDRzB6WmNvWTZGNjVEYzhpYkp6Y0l3M1h2VDg?oc=5"
-      ],
-      "updated_at": "2026-07-17T21:16:03.552701",
-      "is_outdated": true,
-      "last_close": 0.38,
-      "daily_delta": 0.11764705882352944,
-      "monthly_delta": 0.08571428571428585,
-      "yearly_delta": -0.7724550898203593,
-      "price_date": "2026-07-17"
-    },
-    "RCSL3.SA": {
-      "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
-      "period": "",
-      "sources": [],
-      "updated_at": "2026-07-17T21:16:05.372416",
-      "is_outdated": false,
-      "last_close": 0.44,
-      "daily_delta": 0.09999999999999987,
-      "monthly_delta": 0.18918918918918926,
-      "yearly_delta": -0.18518518518518523,
-      "price_date": "2026-07-17"
-    },
-    "TOKY3.SA": {
-      "summary": "O Grupo Toky, controlador da Tok&Stok, teve seu pedido de recuperação judicial formalmente deferido pela Justiça de São Paulo. Esta decisão crucial suspende as execuções contra a empresa por 180 dias, concedendo um período de alívio essencial para que a companhia possa reestruturar suas dívidas e apresentar um plano de recuperação. O fato principal é a entrada em RJ, que sinaliza uma grave crise financeira e coloca em risco a viabilidade de longo prazo, impactando negativamente o papel TOKY3.SA. O sentimento de mercado é predominantemente pessimista, pois a recuperação judicial implica em alta incerteza para o negócio e potencial diluição significativa ou perda para os acionistas.",
-      "period": "Em 13/07/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSHduU3RFRWQzaEFRV3RvNmp4emwwV1Y5aUJ4M2lOV25VM0xId056cXZUVHMxc3ZwVkRxY2lLS1NNR3VSOHNnLVZoaGQ5YzNhN1ZsWUFhb3g2UzQ4aFdNMlBrVXRCbmhxZHN2VEwxWDJ1bW1aT092VWM5LXU2UjRwZnQwNmdpbWlETUpjS0ZuZnVXM25QMHdqQVNWUUUyVV9DZXBuSUFSNFV3SDh6d0JmX1lqaw?oc=5",
-        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPQjk1M05fZTBGMXgySlZ0MWJPeVBWS25sdXd2UkVubFlPNUVvSlYwdkQxaG43UGlTaDJQZ21XRGFMZG5jS0EyNC0yb25LdmwwM3A1cnp5VlAtZVlXYkpPZFZzUGtDbDZUdzJxdjlqOE8tQldvSjlHQkN4UzZ4ejVjbUlCTEZGRzFXUEN0SlFpT1Q3cEJGMGp1cENkYTV4SWZ2?oc=5",
-        "https://news.google.com/rss/articles/CBMizAFBVV95cUxQbHAxV25DVEhMX18zNG9abkc5aHVob2lFdFY3VWVKejByWGVmZlNucG9MYTc2Z2JNOW9OR21Fc1RyNFRVcHk3WHczS2txSFlodjdBajZqeDhNQmNoVlE1dEVRZW1rWEhManJvTXd3MDhFZThMR3NYRzlCbVktMElUeHh4UVdhTUVITHBmazBydWVGc3k2T3lTcTZDVlRyNzVYeHNvdk40N1RNVlc5Q3VrQk1URGFaVElnS3p1eTVqZmRjbjRmNHhlRi0xN0o?oc=5",
-        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQal85Z3Z2SGNGX0VPUHR0Nmk3WnlIQmtuSUs3MmtYTHdRYU5tY00tVVZ5d3F6dmRaR2djYTRIRTExRGlzS0VkbG1jcmZKelZIMU5TRXdpSTRBdzJ0blJPc2R4UHl2a2hTcms4dEZjNk9oQjl4NFphd2hGVkhrX2JlYXFPNVBQaWxyRFo3QTBNZU9uaVdBZUNaUlJlc0dlWU9rY18xX3pTN2NzT2o0T0ZUV1oxUXE5ZVBjdXM40gHAAUFVX3lxTE1tRjNzTEM3S2xqbExiNWV2bmFuZzctZUd5TDlQZmZXMkJoQTRSSlFnWHZCU05PekNXVWgzV3NiSEtOQ19MUXhoQXhvQUo2QkFGY2lKMmk5Vjhob1QzZllMNnMwQ1pfcm8yS2hBOHdCZzJMX0FRb2lXVDN1OUlZOUpGTVluLXhLM2ZYTUZWUWNpQUFTaFV3eDBSMmVIc0RSRFpvQWJwbUU1bndId3NDaFcwekpfSWJkQ1pVX2RtdnVwNw?oc=5"
-      ],
-      "updated_at": "2026-07-17T21:16:20.367853",
-      "is_outdated": true,
-      "last_close": 0.47,
-      "daily_delta": 0.06818181818181812,
-      "monthly_delta": 0.4687499999999998,
-      "yearly_delta": -0.8816120906801008,
-      "price_date": "2026-07-17"
-    },
-    "AMER3.SA": {
-      "summary": "As notícias sobre AMER3.SA revelam uma contradição flagrante no mesmo período: enquanto uma manchete destaca um avanço expressivo de 7,5% das ações no pregão, sugerindo um rali de curto prazo ou otimismo pontual, outra questiona a queda do papel \"hoje\". Essa dicotomia ressalta a extrema volatilidade e a profunda incerteza que ainda permeiam o ativo da Americanas, com movimentos de preços que podem ser impulsionados tanto por fatores técnicos quanto por reações a notícias pontuais. O sentimento do mercado, portanto, é altamente fragmentado e oscilante, sem uma direção clara ou consensual, indicando que investidores devem interpretar qualquer movimento isolado com grande cautela, dada a persistente ausência de fundamentos sólidos para uma recuperação estável.",
-      "period": "De 13/07/2026 a 17/07/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMzlhajlLRGx2VFQ3R2ozSjFIZF9XV1czcTl2amZSNktOMWtCdExsNVFPZVk0OUZyTlNpajN5ZWx4R0pJWmMxSkVXSF9UQXU5S3BpanB2dlpDb2hacjE0RlBZVUp0dUhWR1U0MFVqVERqdWc2TDVsa2NLVGwyX2ZJZDZVdlpnb3RmejFHQ3FPTzRURFptVlBz?oc=5",
-        "https://news.google.com/rss/articles/CBMisgFBVV95cUxPY285dDE1TlZueklUblZlVFVpLTdKQjdjdndUbUwwTTVVbWl4akRfYVNGUVA5b0p6cURDZ29fSWlncVp6aW1WcFhuRG9fdFl3M0ZLRFNtUXNzNC1SRFUzRWJ2a1FESXVHdlBuV05tQTk2RFppVGxKeDFLTUIxV3RuVy1FdGhndWJvbmY0T2hyd2ZDM0pNOTZ2Z0pxMTdUa2U4WjBlRGFoX2VNbmlySllXNHR3?oc=5"
-      ],
-      "updated_at": "2026-07-17T21:16:33.219629",
-      "is_outdated": false,
-      "last_close": 4.0,
-      "daily_delta": 0.06666666666666665,
-      "monthly_delta": -0.11308203991130816,
-      "yearly_delta": -0.21568627450980382,
-      "price_date": "2026-07-17"
-    },
     "SEQL3.SA": {
-      "summary": "O agrupamento de ações da SEQL3.SA indica que o papel vinha sendo negociado em patamares muito baixos, provavelmente abaixo do valor de R$1,00, o que é um sinal de alerta da B3 e pode afastar investidores institucionais. Essa medida, embora técnica e sem alteração no valor de mercado total da companhia ou na participação dos acionistas, reflete um histórico de desvalorização e desafios subjacentes que levaram à queda do preço. O mercado tende a reagir com sentimento neutro a ligeiramente cauteloso, pois o agrupamento por si só não resolve os problemas operacionais ou financeiros que causaram a desvalorização inicial; é uma correção estética para compliance e percepção, não uma melhora fundamental.",
-      "period": "Em 10/07/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWlpJRTA5dTIyWEJPbk9VNEpYU3lic241M280UUZFVGZFZ0RhTncydmZ1MGtwR2pjeTRSSDhDdE1EZDN4TUROYldEai02RkpMU1RWXy12aDFVcGszZDduOW52UlJySjNsMVBrd08zY1FrWmEtb3pWU3E0WXVia0Y1b05oaWpMMEdJVlJ5RUNGWk0wVE5zUzQyZUdYQWlsNVNOZDBN0gGoAUFVX3lxTE0yeDNXWUh4NVZUSTlLTUR2WkFQVzczTFhQaG83RE5MeWt3RE44TmtfZE9GUlRaTXE2LUI2TGpabzNkSi13UVE1RkVMdTFPcUpPZE9BX0VkZmFKU205QkxLMnBDcmRhVjNtVnJwcW9fbFc4dHFFS09TVkJ2bUhGOUdmeFlUMWh6cmZYWFRYdVl4Q0JGTldRVHRwLTB1Z0w4SmpaNERndTVLeQ?oc=5"
-      ],
-      "updated_at": "2026-07-17T21:16:46.953938",
-      "is_outdated": true,
-      "last_close": 0.06,
-      "daily_delta": -0.14285714285714302,
-      "monthly_delta": -0.25,
-      "yearly_delta": -0.9935064935064936,
-      "price_date": "2026-07-17"
-    },
-    "BDLL4.SA": {
       "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
       "period": "",
       "sources": [],
-      "updated_at": "2026-07-17T21:16:48.717235",
+      "updated_at": "2026-07-20T21:42:03.644890",
       "is_outdated": false,
-      "last_close": 3.6,
-      "daily_delta": -0.11980440097799505,
-      "monthly_delta": 0.014084507042253502,
-      "yearly_delta": -0.5167785234899329,
-      "price_date": "2026-07-17"
+      "last_close": 0.07,
+      "daily_delta": 0.16666666666666674,
+      "monthly_delta": -0.12499999999999989,
+      "yearly_delta": -0.9922651933701657,
+      "price_date": "2026-07-20"
     },
-    "CVCB3.SA": {
-      "summary": "O encerramento da cobertura do Itaú BBA sobre CVCB3.SA é um evento materialmente negativo que já provocou uma queda de aproximadamente 6% nas ações da companhia. Essa decisão implica uma perda significativa de visibilidade para o papel no mercado, removendo uma importante fonte de análise independente e tese de investimento para investidores institucionais e de varejo. A ausência de cobertura por um grande player como o Itaú BBA pode sinalizar uma redução do interesse do banco na companhia ou dificuldades em projetar seu desempenho futuro, o que justifica a reação pessimista imediata do mercado à notícia.",
-      "period": "Em 17/07/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMHYxWGlQeHBDc1g0Vjk1RWpqZHpmckwyN3lxdVVfVUVUQVQtelN2RmI2ZWFwTkItVGIyMTkwUU54RVlNMGhjd29UWEgxNmNjR2ZkcDYtQVRaa3NrTXJoNzdEQTgzU1JJdE85c3p2UnVlZWp4VENpLTdZNU5ZTkdCZ0Fqa1dNcFhaZDFXOA?oc=5",
-        "https://news.google.com/rss/articles/CBMixAFBVV95cUxNUDhQOWgzdS1KOE44bmRubmZraVpWZ21UOVVkSjJrUENKYS1yUFVxd240V2ExbVVSZVpzYkVuUU56V3ZIZzNRRkZXSWpzcmpyZjdCeWhLenoySGU1MUEtZjZ6aFRfZGI1b2NnRGVFdjlVNHRkWWZHSVdqZG1RTzF6c2NKMzU5Y25CNkRNcmlOdmxzUkRRWFl1U0FRLWJfMVpsdlhSelNwWTMteDRmZUtJTVdPXzZVSUMxWHdqZzJkTThvTmIw0gHEAUFVX3lxTE1QOFA5aDN1LUo4TjhuZG5uZmtpWlZnbVQ5VWRKMmtQQ0phLXJQVXF3bjRXYTFtVVJlWnNiRW5RTnpXdkhnM1FGRldJanNyanJmN0J5aEt6ejJIZTUxQS1mNnpoVF9kYjVvY2dEZUV2OVU0dGRZZkdJV2pkbVFPMXpzY0ozNTljbkI2RE1yaU52bHNSRFFYWXVTQVEtYl8xWmx2WFJ6U3BZMy14NGZlS0lNV09fNlVJQzFYd2pnMmRNOG9OYjA?oc=5",
-        "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTFJLb3lJTmJuRWpIMktmd0p5RjJtc1hVSzkyaEl0ZUJkVi0xdVNyd281TmwzMHVta19sYThvYmRZRS1mX3hxeDNFblNnT0dDSmFkUXB5RWRSYjJlUnh6MkxkY0lmV1JaUkNPRE5RWGZsaUgwRWswa1ZSeUZLQ1dja2x6alVRM1NZV1cwTV9Wdw?oc=5"
-      ],
-      "updated_at": "2026-07-17T21:16:58.449898",
+    "SNSY5.SA": {
+      "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
+      "period": "",
+      "sources": [],
+      "updated_at": "2026-07-20T21:42:05.429962",
       "is_outdated": false,
-      "last_close": 1.22,
-      "daily_delta": -0.09629629629629632,
-      "monthly_delta": -0.06870229007633588,
-      "yearly_delta": -0.512,
-      "price_date": "2026-07-17"
+      "last_close": 2.37,
+      "daily_delta": 0.07727272727272716,
+      "monthly_delta": 0.49056603773584895,
+      "yearly_delta": -0.33798882681564246,
+      "price_date": "2026-07-20"
+    },
+    "COCE5.SA": {
+      "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
+      "period": "",
+      "sources": [],
+      "updated_at": "2026-07-20T21:42:07.261396",
+      "is_outdated": false,
+      "last_close": 31.79,
+      "daily_delta": 0.05931356214595129,
+      "monthly_delta": 0.020545746388443087,
+      "yearly_delta": 0.19601203912716336,
+      "price_date": "2026-07-20"
+    },
+    "CASH3.SA": {
+      "summary": "A redução da participação acionária do BTG Pactual na Méliuz (CASH3), conforme noticiado, é um evento de relevância para o mercado, sinalizando um sentimento majoritariamente pessimista ou, no mínimo, cauteloso em relação ao papel. A diminuição da exposição por um investidor institucional do porte do BTG pode ser interpretada como uma reavaliação do potencial de crescimento ou da percepção de risco da Méliuz, mesmo que a motivação formal possa ser um simples rebalanceamento de portfólio. Este movimento tende a aumentar a oferta de ações no mercado, gerando pressão vendedora e podendo impactar negativamente a cotação da ação no curto prazo, levando a questionamentos sobre a confiança no futuro da companhia. O principal impacto reside na percepção de desalinhamento de um investidor estratégico, afetando a confiança dos demais participantes.",
+      "period": "Em 20/07/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxQckh1NEJzLVJaaXhhQXBQSjVka1RuRzhwdHVVU3RmajduNi1kZldFVWRacTlhQnlScnNHQXhwZmxyVm52aURuRkhzOTJiR0RWeU5VSXljWGVHSy14VFIyREw5Q2RBMXhKTGN5aVN5THVHYk1SSlRrblpON3gxVjl6LUtJVGZlWWJjc3AyTnpoZUE4Q1lWdENHNDJNMVdTUQ?oc=5"
+      ],
+      "updated_at": "2026-07-20T21:42:19.124215",
+      "is_outdated": false,
+      "last_close": 4.54,
+      "daily_delta": 0.05092592592592582,
+      "monthly_delta": 0.11002444987775073,
+      "yearly_delta": -0.32840236686390534,
+      "price_date": "2026-07-20"
+    },
+    "AZTE3.SA": {
+      "summary": "As manchetes fornecidas, que reportam a BlackRock atingindo 10% da B3 (B3SA3) e a Vale (VALE3) anunciando um novo presidente do conselho de administração, não possuem impacto direto sobre o papel AZTE3.SA. A notícia referente à B3SA3 sinaliza um voto de confiança de um grande gestor institucional na infraestrutura do mercado de capitais brasileiro, um evento macro relevante para o ambiente de investimentos, mas sem implicação específica para a Azteca. Similarmente, a mudança na governança da Vale é um desenvolvimento intrínseco à VALE3, relevante para seus acionistas e para a percepção de sua gestão, mas sem conexão direta com as operações ou valuation de AZTE3.SA.\n\nOs fatos principais extraídos destas manchetes não são aplicáveis ou impactantes para AZTE3.SA, pois se referem a empresas de setores distintos e com dinâmicas próprias. Dada a ausência de informações diretas nas notícias apresentadas sobre AZTE3.SA, não é possível determinar um sentimento de mercado específico (otimista, pessimista ou neutro) para o papel com base exclusivamente neste contexto. O desempenho e o sentimento do mercado para AZTE3.SA seriam impulsionados por notícias específicas da companhia, seu setor ou indicadores macroeconômicos.\n\nAs notícias sobre a participação da BlackRock na B3 (B3SA3) e a mudança na presidência do conselho da Vale (VALE3) são eventos relevantes para o mercado brasileiro e para as respectivas empresas, sinalizando confiança institucional na bolsa e aprimoramento da governança na mineradora. Contudo, esses fatos não possuem qualquer conexão direta ou impacto específico sobre as perspectivas ou valuation de AZTE3.SA. Portanto, a análise de AZTE3.SA exigiria informações próprias da companhia para extrair fatos impactantes e determinar o sentimento do mercado.",
+      "period": "De 14/07/2026 a 15/07/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMieEFVX3lxTE12aE1UMkdiSTNqWjlIZU5ISEtReTRfVHJCVU9ZZ3I4dHJnR3BpQlVSczZZLWV1eXRQNVZGeDNrSFhISWRNbFREZUptN0RrMEZkRHRjUXhubW5TbDd4QTFELXJhYkRfVndmOGlOdWpYcmNLeG9QdkY5ZQ?oc=5",
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxPeThQcmJuOXZYMlkzdkdoVE56LTJFXzc5SEVsSDAwRTQ5NktoWTRZS3BqYjNVZ1hXeGd4VHhaZVpYRGM5RDBOLXF6YUNsQzZoX2FRSUhLVUJhdExfRFAzX25IMHVkUzlkN01pZGNfRUFHN3JkenhTOF81ZE5tOVRZOWVJWjJ5YUxUU1M1ZUJUVFFIM1VCZ3lMVmpjZUJmUFZJTW4w?oc=5"
+      ],
+      "updated_at": "2026-07-20T21:42:31.501458",
+      "is_outdated": true,
+      "last_close": 1.3,
+      "daily_delta": 0.048387096774193505,
+      "monthly_delta": -0.2777777777777778,
+      "yearly_delta": -0.7758620689655172,
+      "price_date": "2026-07-20"
+    },
+    "IFCM3.SA": {
+      "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
+      "period": "",
+      "sources": [],
+      "updated_at": "2026-07-20T21:42:33.389912",
+      "is_outdated": false,
+      "last_close": 1.7,
+      "daily_delta": -0.15000000000000002,
+      "monthly_delta": -0.46031746031746035,
+      "yearly_delta": -0.9785461887935386,
+      "price_date": "2026-07-20"
     },
     "ONCO3.SA": {
-      "summary": "As notícias sinalizam uma crise significativa na Oncoclínicas, destacando a iminente possibilidade de um pedido de recuperação extrajudicial, o que aponta para sérias dificuldades financeiras e a necessidade de reestruturação de dívidas. Esse cenário já provoca forte queda nas ações ONCO3, evidenciando um sentimento de mercado predominantemente pessimista, preocupado com a capacidade da empresa de sustentar suas operações e o impacto potencial nos acionistas. Embora o Investidor10 mencione a análise de resultados e dividendos, a gravidade da crise e a ameaça de reestruturação financeira tornam esses indicadores secundários frente ao alto risco percebido.",
-      "period": "De 13/07/2026 a 17/07/2026",
+      "summary": "A recente redução da participação da Josephina III para 9% na Oncoclínicas (ONCO3) representa um fato crucial, indicando uma potencial diminuição da confiança de um grande investidor institucional ou uma readequação estratégica de portfólio. Esse movimento de divestimento pode gerar pressão de venda sobre o papel e ser interpretado negativamente pelo mercado, que frequentemente acompanha as decisões de grandes acionistas. Enquanto o mercado monitora ativamente os resultados financeiros, dividendos e indicadores da empresa, a saída de um acionista relevante sinaliza um sentimento de cautela ou pessimismo quanto às perspectivas futuras de ONCO3, levantando questionamentos sobre a percepção de valor e performance da companhia.",
+      "period": "De 17/07/2026 a 20/07/2026",
       "sources": [
         "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBuTllSaEdvb01peEVnTFlCN1pudkNUUmJNNGo1ZXVuMGJ2ck1mR3RnTmZOdzJ1MnYzc0F6YXZYWThaVTZtbllOT0thRldJSHYwYWc?oc=5",
-        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQZmpXZWh0RHQ5bVBGUzJWYnBYcWR0WS1yQzZwV2QtN2Ztd0M3U3dSMGVuSnlpdWNGMGlkcFlTV184ZWdoTkFOaEtrRG1tTGhnSE12MVBlVnU4b1hGbzVYT1FQQkMwMlNLVGhQd1FhV0NUSzhDTnIzT0tPRXM1OUh3MmZ2bnNBdl9RYkFBeE45YzJtTGlKMXVrUzJwMmFONjlyTmlQbEtUOUpKSE1wMkx1WkF5X3JYbzBnbnRkZlR5RHVBQQ?oc=5",
-        "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSU1TMVZFMTc4UVkycXB1YjNzU0tzcGxOUnY0REx5QmgtUHM5YTRwMnhNbTl6aWxrYXJSUE5Fd3ZJdTRfS19ReWdreUxtZkthcUlUTk43Q2dwbFpfYUZyakhGdU9QVWtqRENjaXhyZG9qLXJrVDE1cE1IaE9oNXU5UUIySWl3UHdXaE83UHdsS01LVmRPUERRN2hOR3F0ZlEzUVlmMVJ6dDBBYXRBTldBMnEwY00?oc=5"
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQUpUeDlmQnNOUHVjSUJhVjM0ZXFSRHQ1TnZyR3lMcnpYQng5b3plM0RYeTJoak54YnBMZzUyUmlWMkxXLVZGTzY5MW5BbjNBUVVsNmd6M1lJMUdKUnMxelVOdWFoRWJjdDdQcm5uU0R3UHY5UmRyV2tWQ2tSbFVXV3k0SzBxX3JBdk9XV0hLYk4tajM1SWI0U2c3TGgyY1Vn?oc=5"
       ],
-      "updated_at": "2026-07-17T21:17:13.157991",
+      "updated_at": "2026-07-20T21:42:46.013148",
       "is_outdated": false,
-      "last_close": 0.78,
-      "daily_delta": -0.08235294117647052,
-      "monthly_delta": -0.3389830508474576,
-      "yearly_delta": -0.8636363636363636,
-      "price_date": "2026-07-17"
+      "last_close": 0.68,
+      "daily_delta": -0.1282051282051282,
+      "monthly_delta": -0.5310344827586206,
+      "yearly_delta": -0.8756855575868373,
+      "price_date": "2026-07-20"
     },
     "GFSA3.SA": {
-      "summary": "O Fundo Ravello elevou significativamente sua participação na Gafisa (GFSA3) para 26,30% do capital social, indicando um posicionamento estratégico e uma aposta substancial no futuro da companhia. Paralelamente, a Suno também adquiriu 4,6% das ações, com o objetivo explicitamente declarado de investimento, reforçando a percepção de valor. A confluência desses movimentos, com dois players institucionais de relevo acumulando posições, sugere um sentimento predominantemente otimista do mercado quanto ao potencial de apreciação e reestruturação da Gafisa. Esses fatos principais sinalizam uma validação da tese de investimento por parte de grandes players, embora a concentração de capital nas mãos do Fundo Ravello possa merecer atenção quanto a futuras implicações na governança corporativa.",
-      "period": "De 11/07/2026 a 15/07/2026",
+      "summary": "A gestora que administrava um fundo ligado ao grupo Vorcaro/Tanure está desmontando sua posição em GFSA3, o que pode indicar que sua tese de investimento, possivelmente focada em reestruturação ou valorização via ativismo, foi esgotada ou abandonada. Em contraste direto, a LAD Capital elevou sua participação para significativos 14% da Gafisa, sinalizando uma forte convicção no potencial de destravamento de valor da companhia e exercendo pressão compradora notável. Esse cenário gera um sentimento de mercado ambivalente e complexo: a saída de um investidor com histórico de atuação estratégica é contraposta pela entrada agressiva de outro, sugerindo que enquanto um grupo vê o fim de um ciclo, outro enxerga uma nova oportunidade robusta na Gafisa. Ações da GFSA3 tendem a refletir essa disputa de narrativas, podendo gerar volatilidade com o mercado tentando precificar o impacto desses movimentos opostos de capital.",
+      "period": "De 17/07/2026 a 20/07/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMid0FVX3lxTFBFb0lVaThrOVJNelZHSFRGODNPZmRFaVVtR21wVTFtNGFhVVZwSWhDdHphSFpBTkRaRlhkaHJRdURuMlZlbmRZX3BXbW5KY3FpUFBZeUxybTVaQ21La2ZlZk1JZkdoQmVKVEdpMVdWbVE1S21hbmJj?oc=5",
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbTB6amRrSXBlM2tpajkwTFFwSEV4ZFY2X0llNmw1aXdCRDMzQUdxVTJadmFIWGN6M0JrOUVLNlRubEdmZ2h3UV9YRnVNUGVxRGpDYUJvZkdsMmlIRWlHbUd3YW95clJJLWtyM2hhM0RrQ2pJcFhnaFl2WHF4VUdMamJzaHhkcjQtMHFzeTViVkNqRXdva2ttR2tpc2NzdlM5dkRUNVFiblc1MHN2dVNBWGhDX0dDUlky?oc=5"
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOTQzTWN4ZkZBMi0yUGhUaXZfeGp6R2wzcE1LUUdkdUlRd1p2OVVheklORmw5cXNWMmV4a0lKeUJqaTRIME5uVWw3YXFZWGV2eElmQTRONGhYa3JwUlhiNEc2Z3hWVWtFeklSa2NwWUk2bV9MREF4QzBQUHpVT2ZONDlFeEpiWE5CbDc5TWZfaWsyV0xuVDRQZnJzN1l2LWNDRm4zcDlUMFhSRHlPcDlQc2NmVEFCV0F0Wnk2eg?oc=5",
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxPbUpQQlRhbW9WV0JkSmlmSnc0MVdwd3BSV1FPcG9ZVUlGamczRFRRWmVwb3ZaQVdTenNXSHFkMXZYV1ZOQWdyQzQzZFdXekU4Zm1RZlVFbjVxRGxFMG9YZ2ZSYzlQbUtBV1NwSjZod2JrVEN4OVFoVXFtZEYtZlhKZQ?oc=5"
       ],
-      "updated_at": "2026-07-17T21:17:25.202838",
-      "is_outdated": true,
-      "last_close": 0.41,
-      "daily_delta": -0.06818181818181823,
-      "monthly_delta": -0.6870229007633588,
-      "yearly_delta": -0.9772853185595568,
-      "price_date": "2026-07-17"
-    },
-    "BBAS3.SA": {
-      "summary": "A notícia de um lucro do Banco do Brasil (BBAS3) despencando 40% no 4T25 sinaliza uma drástica deterioração das expectativas de rentabilidade futura, o que pressionaria negativamente a avaliação do papel e a capacidade de distribuição de dividendos. O fato principal é a projeção de uma queda tão acentuada, que, se confirmada, indicaria desafios operacionais ou macroeconômicos significativos para a instituição. Contudo, a menção a \"4T25\" (quarto trimestre de 2025) é um ponto de atenção crítico: pode ser uma projeção extremamente pessimista da Nord Investimentos ou, mais provável, um erro de digitação no ano para um resultado já divulgado ou iminente. Independentemente da natureza exata, a manchete gera um sentimento de mercado claramente pessimista, exigindo cautela e análise aprofundada dos fatores por trás de tal projeção.",
-      "period": "Em 17/07/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMihwFBVV95cUxObEJDbmMyMmFkb1ktTjJhdjJDeG1ReVAtYlJDSWsxZlI2blJRdVlieWstdzZaM3NEMTVoM3V1aEplajQySFpwanU0UVRDRVFTN3VVRVh2WFdLSmlrSFFKSXBiS3VPakZWa3NjRVNPNE9ISUc1TlpacHBZLVRsWmw3endtSjdUbU3SAYwBQVVfeXFMTlV0aHJhdjczQ2xpcWNfUTVKRFN1cVNsSVdJa1NPRklUQWFOQ3IwRHlwRnFPQ2FfdkpxT0czbE45N3hHUjZiWVR5dmtmbWdXZ0RJcTFSSGh6OUtja0NUQWF5QlMtWU5haFVUREZIY3FUZ0pXMnhkWmlxYlVTSGxmdDQ5c3BQVlFDV2FOYjE?oc=5"
-      ],
-      "updated_at": "2026-07-17T21:17:45.137609",
+      "updated_at": "2026-07-20T21:42:59.294010",
       "is_outdated": false,
-      "last_close": 20.49,
-      "daily_delta": -0.013005780346820983,
-      "monthly_delta": 0.0556414219474497,
-      "yearly_delta": 0.011352418558736366,
-      "price_date": "2026-07-17"
+      "last_close": 0.36,
+      "daily_delta": -0.12195121951219512,
+      "monthly_delta": -0.7024793388429752,
+      "yearly_delta": -0.9798206278026906,
+      "price_date": "2026-07-20"
     },
-    "TAEE11.SA": {
-      "summary": "A atratividade de TAEE11, impulsionada por seus dividendos consistentes, encontra um contraponto significativo na preocupação com o nível de sua dívida, levantando questões sobre a sustentabilidade futura da distribuição de proventos e a capacidade de investimento próprio. Contudo, a notícia de que a ISA Energia, controladora da Taesa, está lançando uma oferta primária para captar até R$1,3 bilhão especificamente para investimentos em transmissão, sugere uma potencial via para acelerar a expansão sem agravar o endividamento direto da TAEE11. Essa captação pela controladora pode aliviar a pressão financeira sobre a Taesa para financiar novos projetos, transformando a preocupação com a dívida interna em uma perspectiva mais otimista para o crescimento setorial, possivelmente via injeção de capital ou alocação de novos empreendimentos estratégicos. O sentimento de mercado transita de uma cautela mista em relação ao balanço para um otimismo moderado sobre o potencial de crescimento e a manutenção de dividendos, condicionado à destinação efetiva desse capital em benefício dos ativos da Taesa.",
-      "period": "De 15/07/2026 a 16/07/2026",
+    "CVCB3.SA": {
+      "summary": "CVCB3 experimentou uma acentuada desvalorização, oscilando entre 6% e 9%, impulsionada diretamente pelo encerramento da cobertura de análise do Itaú BBA. Esta retirada sinaliza uma potencial redução de convicção ou de prioridade de pesquisa por parte de um player institucional relevante, o que foi interpretado pelo mercado como um fator de risco adicional para a tese de investimento da CVC. O sentimento em torno da CVC é nitidamente pessimista, evidenciado pela queda expressiva do papel em um dia de alta para o Ibovespa, sugerindo preocupações persistentes com seus fundamentos e perspectivas futuras, apesar do otimismo generalizado no índice.",
+      "period": "De 14/07/2026 a 20/07/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMinwFBVV95cUxOb3REWGNEaUgyaHBkUGtvdFVJSzd4REE4d1hLUE5mV2pmbkZ1bm8yZGZwakdNUVNJUjdqOGR5ZEtOZjcwb1ctb0tNX2xzV2tLeU9tNENJVTZrTk1lbzh2X0MtdmFYdlFqS1I0cTJNQmhoWXpucFlMRmd5Qk4wTG9XdUxYLUVZYml5emx1Tm5BQVVuYVoyTHNkeUpPQjE5ZDQ?oc=5",
-        "https://news.google.com/rss/articles/CBMiakFVX3lxTE5yeHY0dDVvNkR3ZklfUVBqQk82ZzdEaTY0YTFfV0JwNWRGcEpid3VRQVR4LTFncGExSXNzSGZMd2h1SEowRzdWZkVrOWtfVUNYLUh6MW9VQmpJNEVUb0tnNnF6ajNwd21vUmc?oc=5"
+        "https://news.google.com/rss/articles/CBMiygFBVV95cUxPRnRWZDVjZEZ4ZUxrd29XZTJRcXptdXBnOHQ5YWl1WUhhbzQ2Q2pjUXdPbVA0Y1VMME9XWnVoREw0QnhKYnhvLUxfTVVSYVNqR3ZYeDBwUlROSWNMdmdWd0hlX19iWC1CY20tc21EOU5OMk4yYTh0Vkh3Mk1hbXBabjNUeS1CWUFFZjhmUUVwYktkeXpoUE5rRXRTcU9qRXRMM3RtSGYxY0xlcDNDdXJTMnFEdUpKc2t6WjlXS29IaFFXLVRDbURYYW1R?oc=5",
+        "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1KbFI1bkxDaWhwczZSVXhRTDBPeHlGM3IzbXRKZ1FmaDdYR2RYdTV0bk9RNkVHTFdaemlhRkV1RWJrYlRjd0NzSEVR?oc=5",
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxQTFJLb3lJTmJuRWpIMktmd0p5RjJtc1hVSzkyaEl0ZUJkVi0xdVNyd281TmwzMHVta19sYThvYmRZRS1mX3hxeDNFblNnT0dDSmFkUXB5RWRSYjJlUnh6MkxkY0lmV1JaUkNPRE5RWGZsaUgwRWswa1ZSeUZLQ1dja2x6alVRM1NZV1cwTV9Wdw?oc=5",
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPYkdaQkRsbnVkZTNfX1cxTEpNRG4wazBrZExtTUxGbW9WaVJReGZ6WWt6bDN3emFNbnl1aGZvTlFPWGtEb3dwb2lZR0Q0RmFsaEZlX2hQZzJXWjh0clY1dnlzbWlVUldNVnlaS0VJUThfZDVjb2JiVGY2SURKV25rRWNnT2lVMGZncG9ZcFRjbw?oc=5"
       ],
-      "updated_at": "2026-07-17T21:18:03.607918",
+      "updated_at": "2026-07-20T21:43:11.106510",
+      "is_outdated": false,
+      "last_close": 1.08,
+      "daily_delta": -0.11475409836065564,
+      "monthly_delta": -0.11475409836065564,
+      "yearly_delta": -0.5481171548117154,
+      "price_date": "2026-07-20"
+    },
+    "TOKY3.SA": {
+      "summary": "O desempenho do setor de Petróleo, Gás e Biocombustíveis, que avançou 2,2% na semana, indica um forte vento favorável para TOKY3.SA, assumindo sua principal exposição a este segmento de mercado, provavelmente impulsionado por valorização de commodities ou expectativas de demanda. Esse movimento positivo é reforçado pelo fluxo de capital para setores mais resilientes ou ligados a recursos básicos, evidenciado pela queda de 4,9% no Consumo Cíclico no mesmo período, conforme dados da Visno Invest. O cenário sugere uma rotação de mercado que beneficia empresas como TOKY3.SA. O sentimento do mercado para o papel é, portanto, otimista, alicerçado no bom momento do seu setor principal e na dinâmica de alocação de recursos.",
+      "period": "Em 19/07/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUkFNNnBoSzlmc3M2SUk5amtOdnQwazBwVXBhZEpfRXh1Z2MxZmV5SExBcGxJOVRoUlNuSDJvMnktdHdVcnUwOWZhQmVFbWRYekN6eXBSclUxT3YwVWdjSEhFZzk2c2ZrWmhhbHJzdWMzUWUyLVhTQlNSLU5xNjJwMnRKQjl5dThqYVdnaFUzQ3pGTUJ2dHZrczViVHV1c3RPQVZvUw?oc=5"
+      ],
+      "updated_at": "2026-07-20T21:43:24.622797",
       "is_outdated": true,
-      "last_close": 40.89,
-      "daily_delta": -0.003412137460394815,
-      "monthly_delta": 0.05169753086419737,
-      "yearly_delta": 0.32159017453135097,
-      "price_date": "2026-07-17"
+      "last_close": 0.42,
+      "daily_delta": -0.10638297872340419,
+      "monthly_delta": 0.4482758620689655,
+      "yearly_delta": -0.8942065491183879,
+      "price_date": "2026-07-20"
+    },
+    "VALE3.SA": {
+      "summary": "Observa-se uma contradição no cenário: enquanto um fundo brasileiro de referência aponta para um otimismo geral com o mercado nacional, com valorização de 30% no ano, a VALE3 tem performado abaixo da média, gerando preocupações específicas com a empresa. A prévia operacional (provavelmente 2T24, apesar da indicação 2T26) revela uma reação positiva no volume, sinalizando recuperação da produção, o que é um fator positivo. No entanto, os custos operacionais atingiram seu ápice, pressionando a rentabilidade no curto prazo, mesmo que sejam considerados transitórios. O sentimento de mercado é, portanto, cauteloso, misturando o impulso do volume e o cenário macro potencialmente favorável com as incertezas geradas pelos custos elevados e a desvalorização relativa do papel.",
+      "period": "De 16/07/2026 a 18/07/2026",
+      "sources": [
+        "https://247wallst.com/investing/2026/07/18/forget-ewz-franklins-brazil-twin-charges-two-thirds-less-and-its-up-30-this-year/",
+        "https://news.google.com/rss/articles/CBMiR0FVX3lxTFAtSG55T19tUnJ4RldkbnZkSmd4c3RNMWtYOUZnbGFIbDMxeVZKMldRaDUwcEE4UGNjQkExUWFXNy1FYUo5RWxr?oc=5",
+        "https://finance.yahoo.com/markets/stocks/articles/vale-vale-declines-more-market-221505173.html",
+        "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVG02azZtcUQxd1ZSQ1g1WmY1Ukl6Rks5LTNtQzFyWXBKMjRnOV9RYlhYc0RMM01SalZJbzF3eXRhaThKN3FJc09tc1JnRFFsQmI5ZURlM1AwczFpRXNTOXpOV3AyY1pYLWNtTVQ4cUszclVjYnB1MDZvM3BCcmZUZHhXZGhEWXd3OWtTUi1yNFJfLWthTjlGZ2ZicWhWZ2t0RWxSOWdXSXhMYjZYLVgteVhaeURlTHo2elBOUzRYa3J5MWtBX3o4?oc=5"
+      ],
+      "updated_at": "2026-07-20T21:43:39.308502",
+      "is_outdated": true,
+      "last_close": 71.93,
+      "daily_delta": -0.013846997532218186,
+      "monthly_delta": -0.10922600619195033,
+      "yearly_delta": 0.43601517268915946,
+      "price_date": "2026-07-20"
     },
     "ABEV3.SA": {
-      "summary": "A InvesTalk emitiu um alerta estratégico de venda para ABEV3 em modalidade de swing trade com stop em 16/7/2026, sinalizando uma expectativa de desvalorização no papel no curto a médio prazo. Complementarmente, o Safra projeta uma pressão nos resultados da Ambev no 2T26, atribuindo-a diretamente à saída precoce do Brasil da Copa, evento que historicamente impulsiona o consumo de bebidas. Ambas as notícias convergem para um sentimento de mercado nitidamente pessimista, com um alerta técnico de venda e uma análise fundamentalista que aponta para um impacto negativo na receita futura da companhia.",
-      "period": "De 15/07/2026 a 16/07/2026",
+      "summary": "A Ambev (ABEV3) enfrenta um cenário majoritariamente pessimista, com analistas técnicos emitindo um alerta de venda para swing trade, sinalizando fraqueza no curto prazo. Fundamentalmente, embora o foco esteja nos resultados, dividendos e indicadores gerais, a projeção do Safra de uma pressão nas vendas do 2T26 devido à saída antecipada do Brasil da Copa do Mundo aponta para um impacto negativo concreto nos lucros futuros. Este conjunto de fatores, que inclui um sinal de baixa técnico e um revés fundamental esperado, reforça um viés de cautela e pessimismo para o papel. Não há contradições diretas entre as notícias, mas sim a construção de uma perspectiva desfavorável a partir de diferentes ângulos.",
+      "period": "De 15/07/2026 a 20/07/2026",
       "sources": [
+        "https://news.google.com/rss/articles/CBMiUkFVX3lxTE50NmFxeFpFZk5YdjhiQ3ktM2pUWEpBRDR2alhWaVZ2Tk9BS3VWNzMyMks0NmtyV0VVd3lPS3JfNUVhdGpYQVk5VkJac2VjcXN2Qnc?oc=5",
         "https://news.google.com/rss/articles/CBMic0FVX3lxTE0wUE5KRnhOSHJKZk5sMHU3MHNxd19UblVCNXN4S2JtRlVxaDU0ZS1DcTRPWHRJTXFsWkx3X3Bpak5VWDYteU5ibTVTMWZzRl9tcjZBRnFDLWxldU1TNEg0VndjZG1sNjZ3ckJOOFBjaUxabWM?oc=5",
         "https://news.google.com/rss/articles/CBMiekFVX3lxTE84cHZiQW1RNlJzWDlmNE5TaHRZSWFUZlRwdmJ0TG16emExOVVNM29sUE92ZTBoVHFEdkJma1lrU2RUa0dyUFEwSXZiZkh0TnZiX2IxUlZITnVyT2lXVC1jbFdmY29BUF81YXluYVFkNWgzLTFFQ3pON3JR?oc=5"
       ],
-      "updated_at": "2026-07-17T21:18:14.873650",
-      "is_outdated": true,
-      "last_close": 15.63,
-      "daily_delta": 0.0019230769230769162,
-      "monthly_delta": -0.03219814241486052,
-      "yearly_delta": 0.2182385035074046,
-      "price_date": "2026-07-17"
-    },
-    "BBDC4.SA": {
-      "summary": "A aprovação do pagamento de R$ 3,5 bilhões em Juros Sobre Capital Próprio é um fato positivo para o Bradesco, sinalizando um retorno direto aos acionistas e indicando capacidade de geração de lucro. Contudo, o mercado demonstra cautela em relação à performance da BBDC4 na iminente temporada de balanços do 2T24 (provavelmente referido como \"2T26\" nas manchetes), com a XP projetando apenas um \"ganhador\" entre os grandes bancos, o que coloca o Bradesco sob intenso escrutínio competitivo. Este cenário estabelece um sentimento misto: otimismo derivado do JCP, porém com um viés de preocupação e expectativa sobre a capacidade do banco de entregar resultados que o destaquem positivamente frente aos seus pares, especialmente considerando os desafios de sua reestruturação.",
-      "period": "De 13/07/2026 a 16/07/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMivgFBVV95cUxQb2VqVDdod1B2bWM2a1U3aTlzOXZ2ajhVcnBTX09qNVU2ekY3NW1IZjdDTjNaV3hNbXYxWDJMd09yZmlINmJ0YWlUc2ZfTVN3U3JqRTFzX2YtUVZaMDRFSzNZcWVZdDUzeTRTdmJFY3U3REhWUC1wU1FVcmxjOWtOaXpTQkFvMENyTlVtaGxCdUFQOVJtZ2RFbnJfendIdnBTNGFPeVBpM1U0QUhMUzFGNWFtS2xKdnp0Y3JJVlRB?oc=5",
-        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQOWpVWVNOcjRVcUVXeV9LeDVaRHRLOE1WaVQ4enJiemFuRUE4Zkc4bnNkeFM2NXA2N280V0hXOTlpZ3JVbTc5WkhpWGVKOXNJRFhxMkltYk5EalBYa2s2NmJLeEIyZ0pCbDlXRXY2Ql9vRGhTSFJPR2lfVnlBancycTdXM0c0VzdERkpxS1ZsRFJ1MFhlUThZek9GdFg1MnNpTllrVDBuUGFIWkFJWk5N?oc=5",
-        "https://news.google.com/rss/articles/CBMiogFBVV95cUxPLUpZZEQ3MUhSRWJlSFBHMk9rV3Fvck5zQi1UZk1hWGxBWUtacEtxQzNFU054ek1FQy1QYXR1a21uMW9Pa2xkYzJheTVBdkNMNnV2cU00VEZoR0RTNXpYZmZTLVk4ZmRGcXZzd0FFX2NBZjJIT2tLTFRtcGdrVzFBNXRHSlNtcXVnbFJxSW05SzRHSVUtZVpQZ2pZOEdjaUpLb2c?oc=5",
-        "https://finance.yahoo.com/markets/stocks/articles/kb-financial-kb-soars-6-115700024.html"
-      ],
-      "updated_at": "2026-07-17T21:18:30.626785",
-      "is_outdated": true,
-      "last_close": 18.29,
-      "daily_delta": -0.006518196632265161,
-      "monthly_delta": 0.06337209302325575,
-      "yearly_delta": 0.24252717391304346,
-      "price_date": "2026-07-17"
-    },
-    "MGLU3.SA": {
-      "summary": "A elevação da recomendação do Magazine Luiza (MGLU3) pelo Citi de \"venda\" para \"neutra\", mesmo com um corte no preço-alvo, é o fato principal que impacta o papel, sinalizando uma reavaliação do perfil de risco-retorno. Essa dinâmica complexa sugere que, embora os desafios fundamentais persistam e justifiquem um preço-alvo mais baixo, a casa de análise entende que grande parte dos riscos negativos já está precificada ou que o cenário macroeconômico (como a queda de juros) atenua pressões anteriores. O sentimento de mercado, portanto, transita de pessimista para um espectro mais neutro, com um claro alívio da pressão de venda, dado que o *downside* extremo percebido diminuiu consideravelmente. A contínua proeminência da MGLU3 em artigos sobre como investir, por sua vez, reforça o alto interesse do investidor pessoa física, garantindo liquidez e acompanhamento constante do papel.",
-      "period": "De 15/07/2026 a 16/07/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQTHpfNWxNcjJRZ0F4dUJCd1RFbUdiRkYwcndZVUdRcFNxVFYxWG9JeEFrRjhxSXZRT253b0toOUs3eERqajY2bHMzZHR1N1BYaTdDb3RBQWV5eTdianVBSjlweXBkX19CRmpxVEFIYnd3OUF4V3BkSTdlWmFweG5JOTNjdmpWWnBaVDc0ZDJEcElQdGxvVWkwMnZ6MlViVTlaRW5DYzNrLU9yT3ZwX21BNEpCM1dlQ1V2eWduMTlMaExrY09FYy03a0tYNTYxaFFNNk5oTTctOHZENE5Yc01tWWpmZ1kxbzloQ2FVRHB3?oc=5",
-        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTHNlWGtvMzhXTHU2aDE4cDJqVTZtMmcySzczdFpYSEU0VmVGdmxQV3Q5SGFJcC0zZkFKSnNCakpFSzNJdjBpVkpvaVkxbkx5d2FudTZ5XzNmdjBUV3JyX2Vyb2VZX2FuMXVZVlMxOHNHNUVYVndmUVNGMzAtd09USFVSZjFpRkJtWlFqYVVSeUtiMUpqQXdqSk5Ld9IBoAFBVV95cUxOS1NnRWY1WE1Sb2dzdl9ydmJ6UlBnOGN5NWJHWUZlaFBGN2dSdFM0dEhZRGxuTjFoQ05rWF9oUWxsOFVad25UakxZV016OWo1enN0NlA4TWt2SFZOcHJxZHgydTEtazMxTmdkcWVSdFVaOHpWTkIxdUNnZ19nOHpvS014enZoT1ZuT1dvU3NBaDI5NkFBTlNsRU5oWl83eDdP?oc=5"
-      ],
-      "updated_at": "2026-07-17T21:18:45.336573",
-      "is_outdated": true,
-      "last_close": 4.92,
-      "daily_delta": 0.0,
-      "monthly_delta": 0.03797468354430378,
-      "yearly_delta": -0.3643410852713178,
-      "price_date": "2026-07-17"
-    },
-    "VALE3.SA": {
-      "summary": "A VALE3 tem performado abaixo do mercado, sinalizando uma preocupação dos investidores que contrasta com a prévia operacional do 2T26, a qual aponta para uma reação positiva nos volumes. Apesar do custo de produção estar no ápice, é considerado transitório pela Genial, atenuando o impacto nas margens. O CFO da Vale reforça a visão de forte demanda por minério de ferro e cobre, embora o risco geopolítico da guerra no Irã paire como uma incerteza global. O sentimento de mercado é, portanto, misto, com a solidez da demanda e volumes reagindo confrontada pelo custo elevado e a volatilidade geopolítica, exigindo monitoramento da materialização da transitoriedade dos custos e do cenário externo.",
-      "period": "De 14/07/2026 a 16/07/2026",
-      "sources": [
-        "https://finance.yahoo.com/markets/stocks/articles/vale-vale-declines-more-market-221505173.html",
-        "https://news.google.com/rss/articles/CBMixwFBVV95cUxNVG02azZtcUQxd1ZSQ1g1WmY1Ukl6Rks5LTNtQzFyWXBKMjRnOV9RYlhYc0RMM01SalZJbzF3eXRhaThKN3FJc09tc1JnRFFsQmI5ZURlM1AwczFpRXNTOXpOV3AyY1pYLWNtTVQ4cUszclVjYnB1MDZvM3BCcmZUZHhXZGhEWXd3OWtTUi1yNFJfLWthTjlGZ2ZicWhWZ2t0RWxSOWdXSXhMYjZYLVgteVhaeURlTHo2elBOUzRYa3J5MWtBX3o4?oc=5",
-        "https://www.barrons.com/articles/vale-cfo-iron-ore-copper-iran-war-china-supply-demand-42556873?siteid=yhoof2&yptr=yahoo",
-        "https://news.google.com/rss/articles/CBMiR0FVX3lxTFAtSG55T19tUnJ4RldkbnZkSmd4c3RNMWtYOUZnbGFIbDMxeVZKMldRaDUwcEE4UGNjQkExUWFXNy1FYUo5RWxr?oc=5"
-      ],
-      "updated_at": "2026-07-17T21:19:02.928524",
-      "is_outdated": true,
-      "last_close": 72.94,
-      "daily_delta": -0.0005480953685942369,
-      "monthly_delta": -0.08573577337678617,
-      "yearly_delta": 0.46318956870611827,
-      "price_date": "2026-07-17"
+      "updated_at": "2026-07-20T21:43:52.006252",
+      "is_outdated": false,
+      "last_close": 15.79,
+      "daily_delta": 0.010236724248240403,
+      "monthly_delta": -0.013741411617739008,
+      "yearly_delta": 0.24330708661417333,
+      "price_date": "2026-07-20"
     },
     "RAIZ3.SA": {
-      "summary": "Sem notícias recentes de impacto encontradas nos principais canais financeiros.",
-      "period": "",
-      "sources": [],
-      "updated_at": "2026-07-17T21:19:04.723157",
+      "summary": "A queda de 5% no preço das ações da RAIZ3.SA, conforme noticiado, reflete um alarme significativo do mercado impulsionado pelas preocupações com o endividamento da companhia e a sustentabilidade de suas margens futuras. Este movimento aponta para um sentimento nitidamente pessimista, com investidores reagindo à perspectiva de maiores riscos financeiros e operacionais que podem impactar a rentabilidade e a saúde do balanço da empresa. A pressão sobre as margens e a dívida indica que a capacidade da companhia de gerar fluxo de caixa livre e manter um crescimento lucrativo está sob escrutínio, elevando a incerteza sobre seu valuation.",
+      "period": "Em 20/07/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUTJrVUltVG05Wm1EMmp6b1c0bTdLOWdyV0VidVhzQ1JpcFBHcVBJTVRpeV9jUmRnLUtVVUR6TzlGSHZFeUhwelBuTHlJbGVqTGVTVTY2VVYyXzNHYnU3clBVSDBiaE9NMDktd3IyMUV5bXlOR1Mwakw2TVhnZFJLd0xHbHZ4MmNmLUc5SUZ0LU42M3VDalhjang5MTREREE?oc=5"
+      ],
+      "updated_at": "2026-07-20T21:44:03.726712",
       "is_outdated": false,
       "last_close": null,
       "daily_delta": null,
@@ -272,81 +201,142 @@
       "yearly_delta": null,
       "price_date": null
     },
-    "RAIZ4.SA": {
-      "summary": "A notícia sobre a Raízen (RAIZ4) aponta para uma situação de severo estresse financeiro, onde a consideração de uma recuperação extrajudicial é o fato principal, indicando a incapacidade da empresa em cumprir suas obrigações e a necessidade urgente de reestruturação de dívidas. A possível venda para gestoras, embora possa injetar capital ou reestruturar a gestão, reforça a gravidade da situação, sugerindo uma transação sob pressão e levantando questões sobre a valoração e o tratamento de acionistas e credores. O mercado reage com um sentimento predominantemente pessimista, pois a incerteza sobre o destino dos credores e a reestruturação da empresa implica alto risco e potencial diluição ou perdas para os investidores atuais. A resolução dessas questões fundamentais será crucial para determinar o futuro da companhia.",
-      "period": "Em 13/07/2026",
+    "PETR4.SA": {
+      "summary": "A Petrobras (PETR4) demonstra notável resiliência e força relativa, atuando como um pilar de sustentação para o Ibovespa ao contrariar sua queda em um ambiente de aversão a risco e alta do dólar. O sentimento do mercado é predominantemente otimista para a ação, que ganha destaque mesmo quando o mercado geral recua, indicando que investidores a percebem como um ativo de valor ou refúgio em momentos de incerteza. Adicionalmente, análises como a do BTG Pactual apontam um \"catalisador oculto\" com potencial de valorização de até 40%, solidificando as perspectivas positivas e o fluxo de capital para a empresa. Não há contradições nas notícias apresentadas, que consistentemente retratam um cenário favorável para o papel.",
+      "period": "De 17/07/2026 a 20/07/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNLXB3TVJxaUFOaXhicVIzWlVhSFNSYUhXdFYtVGxUQW5iTlNEUDdBR0tZQUFCVjRBN2ctbEZfV1pqTC1qVWY5TFgtalI0VnQtNE0yelA3eGlSWHd5eG1KLXQyVFZ5MmpMSVpUaGJteEh6VUlwemllM3NGeEl0YlZzRW5CNE9iUGxfZzNUZlB3WTJDdlR3VGRySGRsYXJUNFpILW1DLW02Yy04RXJ1XzZ0VmVNS3ExMjZXdjBuTTlHcUtSR3I0WjFwRUY3aFB1enJXZWFYLWdybEREWFpQMklXbnRRaWM?oc=5"
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxPT3N2TC0zWFVIODRLYlhxb29Yc1dSVmpZUl8zTEZKcjcweDR2NERRQm9vcUstMkhGZ0hDWTlkWE1TM2JvS3htWmFRV2szQV9tSllHTlA3QUtkVm5YOTFkS2JXSWhOT3BuWGduZS12b2tHbHRrTHRVU0puR3lpNHNTc0V6ZnlzdGcwUGNYWHdxYjgtMG5SOTdwVUdna1AyUFdjbk45RFUxV2paRTNIb0JqOS1CYXVtMUJNX241elJKTTFnSUlpRVE?oc=5",
+        "https://247wallst.com/investing/2026/07/18/forget-ewz-franklins-brazil-twin-charges-two-thirds-less-and-its-up-30-this-year/",
+        "https://finance.yahoo.com/markets/stocks/articles/why-market-dipped-petrobras-pbr-215006228.html",
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeVRHcVkzTkNXOHZFYWxZTGlZVGVtc2N1dTN0cXdWZDAwLVIyOGJkaVZNQ1dnQ3dkZVdwdDFteE9mOGRNeFZMLURncFZSRkM4WXBhLVRZakl6bGxaVmV4QWVjaXNNSXQ5bFdrMTk1UmVqeTN2NDVnaUFmYl93MlMtanBEUk5iUlIyVkFnNXQ3X1NkempUV0NoVmZFMU16eUxfcXR6cDZoOEF5cTdfeWhnLVZwSzJ5d01vaVJlc1ZfcXpUMVlrbzhRa1FiUzJQdUZpckHSAeABQVVfeXFMTm5WVE5YSUQ5STVBS3U5R2N2MG5ZUjJBbHFWLVduSzJ6Q09OS0ZwMERmZl9odDNLaUhMVjVFdk9KbUJNaERqU1lhSkdMWjlOWmlrRWQ3NllHMDBnRFdQVGRLRVJjMG5CUFZ2bG44bllRWFotenJZQmRSYnV6SlBsTFloTHVUMkE0cWxqd2NrUmdhUExSMkZ1VUN5aDhfMld6Mktsbl9PUE50TFhjRU8tRkxPUnFZR3BWSEhqR2ttYWFmU0pYeDVoay05UHZHNV8wWDdGZEViTHdoZVBZeDFvckM?oc=5"
       ],
-      "updated_at": "2026-07-17T21:19:22.236284",
-      "is_outdated": true,
-      "last_close": 0.29,
-      "daily_delta": 0.0,
-      "monthly_delta": -0.30952380952380953,
-      "yearly_delta": -0.8092105263157895,
-      "price_date": "2026-07-17"
+      "updated_at": "2026-07-20T21:44:17.722829",
+      "is_outdated": false,
+      "last_close": 41.15,
+      "daily_delta": 0.006112469437652868,
+      "monthly_delta": 0.06056701030927836,
+      "yearly_delta": 0.44436644436644435,
+      "price_date": "2026-07-20"
     },
-    "WEGE3.SA": {
-      "summary": "As notícias convergem para uma forte expectativa de um trimestre desafiador para a WEG, sendo este o principal fato que impacta negativamente o papel. A queda de 4,5% na ação, explicitamente ligada à antecipação de um desempenho operacional fraco, e o alerta de \"Swing Trade Venda\" da InvesTalk, reforçam a pressão baixista no curto prazo. O Citi corrobora essa visão, mantendo sua recomendação neutra para a WEGE3 enquanto projeta mais um período difícil, o que sugere cautela e ausência de catalisadores positivos imediatos. O sentimento do mercado é predominantemente pessimista no curto prazo, dada a unanimidade das análises sobre a dificuldade do próximo trimestre e a reação negativa dos investidores.",
-      "period": "De 13/07/2026 a 14/07/2026",
+    "RAIZ4.SA": {
+      "summary": "A Raízen (RAIZ4) recebeu um alívio pontual com a concretização da venda de uma usina e a concessão de um prazo estendido pela B3 para que suas ações elevem a cotação acima de R$1, evitando assim sanções regulatórias imediatas. Embora esses movimentos deem fôlego à empresa e sejam vistos como um \"alívio\", as notícias ressaltam consistentemente que tais medidas \"não resolvem os problemas\" subjacentes da gigante, indicando desafios estruturais e financeiros persistentes. O sentimento do mercado, portanto, oscila entre um otimismo muito cauteloso devido à remoção de pressões imediatas, e um ceticismo contínuo quanto à capacidade da empresa de reverter sua desvalorização e endereçar as preocupações de longo prazo, incluindo a menção aos credores. A necessidade contínua de intervenções regulatórias e comerciais para sustentar o valor da ação acima do patamar mínimo da B3 permanece como um ponto de atenção crucial.",
+      "period": "De 17/07/2026 a 20/07/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPazhieGVMbTU4X25WdUwxU0xLU0RqYlBIWmZjMTlZbE54Y3Y3RWU3elliX0hfamd3RkZfYVUtMm9pbW5LRVV4cVpPQTlvcnAtLUxPSnVOazJ1Tk9kbnJVdkU1M1BCUVRnRVFBeDNxMDRKNXRkY1hWYjVBZ1ptWmoycVg1ai1zbTBtRTRncnVwVlJFZmlPcXZUdG5qNnFsRUNnYlhzY0tMVnJaelJUZEtXQnFkdjBsTWlVMGFNQzVMd2E0ekp1dWN3QURXY3MydGRpMThSUHNwQVgyQ0ZoY0JkcWEwY2FNUdIB6wFBVV95cUxNS05uTDJnTjhxVXlfYm56SnFxdmRxc3p2WUw1WGZ2b3JkVGVya1RYOGJiWC1qSVg5bFc1RlFkVnl2bzd3MFRraHpmbWk1N1pDMXhTaXFyTXg5M3JSMzB0NlY5ekVROWcxYzFMYnVQZkR4dWZydkJVazJ6c2NzcC14MzA0aXpUMm41QnZ2X05rMWdRXzBQUHBvWmhfNXhxbGt4MURxZ0xGMExWMHZaT0tndVBQWC1LQnpxUkJqaFFYQlhqOVltV3N4WFFsemkzQzZCaEVUTEZvS2tVSFZ6Rk5yUlB6LUVGN2cySEtF?oc=5",
-        "https://news.google.com/rss/articles/CBMic0FVX3lxTE5PRmtyd3E5amloMy1HN1l2S1dWdmVhZEU3ckQ0eThTcWpNM1pqYzdnYS1zWV8wRWVDLVp3YmUwbmNtSUp2RjFHVmg4d1c2ZE40QzVoTXJFLVRXblhJUENGYTNQWmJVYWdUb0s1ejRpMEY4Snc?oc=5",
-        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPV3VjTHVpdkM4QXBBZWJPamhxNDY3VnJzc0xMUmc3dGhrcXFBbHdpSXFwMEdIYWc3eUE5VjFaR2tDMi04VDRHRExjUTZxVkFKYnRqOElBY25zUjhsTTNpOVJXOFpSc0s5aVNoMFNoUzF3QmNGa0pUV2xHV1R6Zi1zeWsxbUZEZVZUVXd1MzdjaDFwY0xDdXlPTVlnN01USGZOaHd5cWVtOEpOcDJJTXlxcnVnNGxMcnNC0gG-AUFVX3lxTFBlZTd0VWdpd0FON2Nzc09ENXNJcm1FNXFSenF5WGdJclpaLXJuMlBqTFdOS1BRak1aUm9HTDFYVlRuclRuN1IyU0N1dm5pTUQyY0R3TFE1djhHdDJwbzNCU3NGZ21nWW9JZEV6TWdkaGlQT3ZiTXNKcGZVZkJVQzFMYUtwRXlYajc1Y2l2TzJHS29yTkE5X3czUEpXMWw4ekJudm1uWUl0LTAxWTVmYl9Lb0NvNV85c0tpczdINVE?oc=5"
+        "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNM2tTY1RVbXd3c2FremNYUTRka083MXlnbmdVYTVfLVJ4OUhNRllhdnRWd3hKQXExX19hVDZKZzdGUnR1NmV4VTVwRU9kYndfYkRFRTdpV0stRWRaZFVDMHhLTDU2ZFBMQV9uMVBiYnVaR2haUExVZEIyN3NvR0ZXUTRqaEE2MFFmRjdZTFktMndqYWZOUlBBX2pmT1FDZkR2UFV3S0JZMEY4aGRDNklJVVRWWkFFT2J0NUs3Tk94aWd0a20tYzRyZV9GeHU3ckVRb1NVTW5WTGtfRUF0dTUzME5DaXhQUTE3aFNNbUFQMUQ?oc=5",
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxNUFpLRFlsaXdwcjZ3aW9CWEZKUkpyWVBraGVtR1Y0Z2VEYUxZTXVWZzl0eldyaDdUV0dES3hTcEdBQ0VLOEVlMml2SVRfODRZdldaREVMWW1fZFR5Z1Z1MXBKMS05MHJRRzZKYWVuT3hONmZ0SGhYRlpKdWNtTHc3NlA2dVFnazJGc3FMb0U4NlRCNHRuUklOd3R6cHRWRVhGQmlLSEYzRUlPV1FEZE5vNQ?oc=5",
+        "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOX3BRZXkyM2FPUU1SOWVUaFhSRFVpT3MwRTdTSU9SSmVKLWFxZjQ0ZFNKNXN5VUdNV0lwNjJETkxCa0dpbVZSZlVWLTl4VzVqMzVGQWg2ZWVxUGllRXQ2WERtLXp0Q3kwOUVFODhEbURiMjR1TG1idjBubS13RUQwZWU5QTdSdGlQRGhPc0R1RlFlV3c0WlpGaUZEZi1nMC1tRkQ0OWlCd1hzanRiTHc2YWNwXzNsaUN1eVpBQXhHR0dYV1VEcGxCRE43a202b2RyQjloVnFWdFR2Ykx4ZDlxUWw2M2Mwd1pMWkpPN1NPaDUwZFFiSi1uRFVWVVV5YU0?oc=5",
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxPTUt3V0daRGJsN2tIekk4SGxHUGFod195UFlwQkswSW1UaW9nOVJydFBxeU9GZEoxWjM4VENqWElQNC1YeVNocVhHYjRSVTB2dW1mN3R6NTJaRGRKY0VsRFNjUk54bzZMdmlHaC1tdkdTU21LQlBaeFduSHAwM3JSY3RDOFFWbEtBeUlBdE1qZFhkdld6aFlNT2h0aGdhbzI0?oc=5"
       ],
-      "updated_at": "2026-07-17T21:19:34.906832",
+      "updated_at": "2026-07-20T21:44:30.769863",
+      "is_outdated": false,
+      "last_close": 0.27,
+      "daily_delta": -0.06896551724137923,
+      "monthly_delta": -0.3571428571428571,
+      "yearly_delta": -0.8223684210526316,
+      "price_date": "2026-07-20"
+    },
+    "TAEE11.SA": {
+      "summary": "A política de distribuição integral dos lucros da TAEE11, que cativa investidores focados em dividendos e sinaliza um forte compromisso com o retorno aos acionistas, contrasta fortemente com o alarmante nível de endividamento de R$ 10,20 bilhões. Esse montante elevado de dívida gera um alerta substancial no mercado, especialmente com a proximidade dos resultados do 2º trimestre, pois levanta dúvidas cruciais sobre a sustentabilidade futura dos pagamentos, a capacidade de investimento e a saúde financeira da companhia no longo prazo. O sentimento predominante do mercado é de cautela, oscilando entre a atração pelos generosos dividendos e a preocupação com a alavancagem, indicando que a capacidade da empresa de gerenciar seu endividamento será o fator crítico para a percepção de valor e segurança do investimento. Portanto, os resultados do Q2 serão determinantes para o mercado avaliar como a companhia planeja equacionar a manutenção de um payout elevado frente à necessidade de desalavancagem.",
+      "period": "De 16/07/2026 a 19/07/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPVWtyMzduWjBqSEZGOU5senUxV0ZoVjR1c0tzdURrVnh1S0k2dndJcXE3U3pOZUJnX1dSSExrdmdaM2k1SndfRDNlWGhKWF8xeTE2eFBUMVRud1Z6ZXhuSUJWc1FidXVScjhGaGU3Uzc5TjBXY19GWEN0U25JVGlDcFV1aTJVbEhXOElHVWVYMS1McGZsUExsbldhNUtHc0lnMUE4NF92Q0VRRHN6aER5MzNKNVJVRFotSGRDYmNXTWpqVUFyZHJVczhaVllFdDdqSEwxQw?oc=5",
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxOb3REWGNEaUgyaHBkUGtvdFVJSzd4REE4d1hLUE5mV2pmbkZ1bm8yZGZwakdNUVNJUjdqOGR5ZEtOZjcwb1ctb0tNX2xzV2tLeU9tNENJVTZrTk1lbzh2X0MtdmFYdlFqS1I0cTJNQmhoWXpucFlMRmd5Qk4wTG9XdUxYLUVZYml5emx1Tm5BQVVuYVoyTHNkeUpPQjE5ZDQ?oc=5"
+      ],
+      "updated_at": "2026-07-20T21:44:45.553370",
       "is_outdated": true,
-      "last_close": 43.63,
-      "daily_delta": 0.0032191308346747327,
-      "monthly_delta": -0.0016018306636155222,
-      "yearly_delta": 0.0872165462247696,
-      "price_date": "2026-07-17"
+      "last_close": 41.15,
+      "daily_delta": 0.0063585228662264015,
+      "monthly_delta": 0.04707379134860057,
+      "yearly_delta": 0.3210272873194222,
+      "price_date": "2026-07-20"
+    },
+    "BBDC4.SA": {
+      "summary": "O Bradesco (BBDC4) aprovou um pagamento de R$ 3,5 bilhões em Juros Sobre Capital Próprio, um fato principal que sinaliza a manutenção do retorno aos acionistas e uma gestão de capital ativa. Contudo, o sentimento de mercado é predominantemente cauteloso, com o BBA reconhecendo um setor bancário descontado, mas alertando para a falta de consenso e para a necessidade de o Bradesco provar que \"desta vez será diferente\", implicando em desafios de superação de expectativas passadas. Essa prudência é acentuada pela XP, que projeta apenas um ganhador entre os grandes bancos no 2T26, levantando um ponto de atenção significativo sobre a competitividade futura de BBDC4 e seu potencial de underperformance em relação aos pares. A dicotomia entre uma ação de valor ao acionista (JCP) e a persistente desconfiança do mercado quanto ao seu desempenho relativo e à superação de entraves históricos constitui o cerne das tensões que impactam o papel.",
+      "period": "De 16/07/2026 a 20/07/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxOTG1fUFdDVlpLMjhPdlFSVWVoTnVfSF8xVkU5SXVNNjlUUkpyQ0FveDlEWHpob3dBY09XSlU1V25iZXg2TUw3WUpxMWVZa0hydFpsMG41ZzNZN2ltUlFPemR5ZGRnZ3M2VXFCUF9WVGk0TWhTNHk0a2dxR3NST1dscEJRdTRFbzN6aDFfSXZkdGNOaU5HVnhxb2Nzekhxb3FjSUs5MkV2U2U3ZkhBVHpRTktRNXJ2aXh2UTlVVVFNb9IBxAFBVV95cUxNNWxFMnVuREg4ZFRfYmdKZzNxQklSZnNwcmE2M3dIZVFkaDFnNUFRZ3ZmWUp3X1dlTkptOUROMXVTOHh6R0xtSW9ZSm5KVEpzb2NaUlhvSS1OMnJRQmQ5RUhGTVRtZnhfS1pBa3RjM0pnTmU1R1FIUE1DUDBEb256aVFjN1Q5TDcxZm9mNmxOS1hPN1hMRGZqZS1TWmpUc014VXZYbEQ4bmlEQkhZV21tVHhIOG02WFZiM0ZMRi1nY0NpVk8z?oc=5",
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxQb2VqVDdod1B2bWM2a1U3aTlzOXZ2ajhVcnBTX09qNVU2ekY3NW1IZjdDTjNaV3hNbXYxWDJMd09yZmlINmJ0YWlUc2ZfTVN3U3JqRTFzX2YtUVZaMDRFSzNZcWVZdDUzeTRTdmJFY3U3REhWUC1wU1FVcmxjOWtOaXpTQkFvMENyTlVtaGxCdUFQOVJtZ2RFbnJfendIdnBTNGFPeVBpM1U0QUhMUzFGNWFtS2xKdnp0Y3JJVlRB?oc=5",
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxNYUd2Y3NQUEdnM3RkXzlQQ1VNV09SVkFXRUoyR2RBZmVINGZKLUpnaFpsU2xYQkxScWNIRW5Rb2VSQ0ZkejRWWVlWcl8yTDYyNDY0TGk1NW5GVF9iUUZPdnU3Mm40aVBaaF91bzZGTEZIeWxEYi1vdERtcGs0cWt6RnlPTl9PMnYxdlE?oc=5",
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxQOWpVWVNOcjRVcUVXeV9LeDVaRHRLOE1WaVQ4enJiemFuRUE4Zkc4bnNkeFM2NXA2N280V0hXOTlpZ3JVbTc5WkhpWGVKOXNJRFhxMkltYk5EalBYa2s2NmJLeEIyZ0pCbDlXRXY2Ql9vRGhTSFJPR2lfVnlBancycTdXM0c0VzdERkpxS1ZsRFJ1MFhlUThZek9GdFg1MnNpTllrVDBuUGFIWkFJWk5N?oc=5"
+      ],
+      "updated_at": "2026-07-20T21:44:58.212171",
+      "is_outdated": false,
+      "last_close": 18.41,
+      "daily_delta": 0.006560962274466897,
+      "monthly_delta": 0.07535046728971961,
+      "yearly_delta": 0.27936066712995133,
+      "price_date": "2026-07-20"
+    },
+    "BBAS3.SA": {
+      "summary": "A notícia sinaliza que o Banco do Brasil (BBAS3) está começando a demonstrar sinais de recuperação, indicando uma melhora na percepção de mercado sobre a tese de investimento no papel. A frase \"o pior já passou?\" levanta a questão de que a fase de maiores desafios e riscos para a instituição – possivelmente relacionados a juros, inadimplência ou cenários político-econômicos – pode ter sido superada, gerando um otimismo cauteloso entre os investidores. O sentimento do mercado, portanto, é de um otimismo nascente, mas que ainda busca confirmação sobre a robustez e durabilidade dessa virada. Este cenário sugere que a ação pode estar em um ponto de inflexão, com investidores avaliando se os fundamentos da empresa e o ambiente operacional continuarão a dar suporte a essa retomada.",
+      "period": "Em 17/07/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxQNGhNeEdrQnQyU3diLUFSWkZ4MktEbkJTM08waDd6UDQwWTV4LURiSzhUVEdlVkh0SGJ4WncxejJBbjB1WUVGRDJuTFkwM0d0QTVNRmRoOHRhT212MzRLYV9WZTYwNVBpTEdacmg0RHgxWnk2dm1HdElmcndXYzZSVWo5N0xTbjlMZ1J0TXhPT2x1bnpxanNaSWhWdETSAaIBQVVfeXFMUFBZN2d6Z09jSHJ0ZTlMb1BLOUI3bExCcWlkWFlMUHRtY3otRG9tQVlUd2ZGVzhmeTJKcV9BVkVLdTBHZXJzRWZEbkRTeEtmRjFLcDUtLW9BV2YzQUlCRmdVWjFFazRleWRwX29BTDlVbU5pRlVJbVM0eE8wUU0xMVpGc0VXbFNiV1dfSk81Z24zRVJNcGZmNTNTek9iaVBUdmRB?oc=5"
+      ],
+      "updated_at": "2026-07-20T21:45:09.075273",
+      "is_outdated": true,
+      "last_close": 20.17,
+      "daily_delta": -0.015617374328940836,
+      "monthly_delta": 0.038619979402677584,
+      "yearly_delta": 0.01868686868686864,
+      "price_date": "2026-07-20"
     },
     "ITUB4.SA": {
-      "summary": "As recentes movimentações do Itaú (ITUB4) sinalizam uma gestão financeira proativa e multifacetada. A recompra de R$ 1,4 bilhão em títulos de renda fixa, simultânea à emissão de R$ 3 bilhões em letras financeiras, não representa uma contradição, mas sim uma estratégia de otimização da estrutura de capital: enquanto a recompra pode visar a melhoria do custo de funding ou o ajuste de passivos de curto prazo, a emissão busca alongar o perfil da dívida e captar recursos para financiar o crescimento orgânico, novos investimentos ou reforçar a liquidez em um cenário de expansão. Esse dinamismo na gestão de passivos, combinado com a valorização que aproxima o banco dos R$ 500 bilhões em valor de mercado em um dia favorável para o setor, reflete um sentimento de mercado claramente otimista, impulsionado pela percepção de solidez, eficiência operacional e confiança nas perspectivas macroeconômicas para o segmento bancário brasileiro.",
-      "period": "De 10/07/2026 a 15/07/2026",
+      "summary": "A negação do Pão de Açúcar sobre conflito de interesses envolvendo o Itaú (ITUB4) e privilégio a credores na reestruturação da dívida é um fato neutro a ligeiramente positivo para o papel. Embora a própria existência da controvérsia possa gerar um ruído de mercado, a refutação por parte do PCAR3 mitiga o risco reputacional e de potenciais questionamentos legais para o Itaú como um dos principais credores, permitindo que o banco se mantenha focado em suas operações.\n\nEm contraste, o anúncio da recompra de R$ 1,4 bilhão em Letras Financeiras Subordinadas (LFSN) pelo Itaú é um movimento inequivocamente otimista. Essa ação de gestão de capital sinaliza a robusta posição de liquidez e capital do banco, permitindo otimizar sua estrutura de capital ao reduzir dívidas que contam para o capital Tier 2, além de potencialmente diminuir despesas financeiras futuras. Tal iniciativa demonstra confiança da administração na performance e nas perspectivas do banco.\n\nO sentimento geral para ITUB4 é otimista, impulsionado principalmente pela estratégia ativa de gestão de capital via recompra de LFSN, que reforça a solidez e a disciplina financeira do banco. A elucidação sobre o Pão de Açúcar, embora menos impactante, evita um potencial vetor de incerteza, contribuindo para um cenário de estabilidade. As notícias indicam uma gestão proativa e uma posição financeira confortável, elementos favoráveis à valorização do papel.",
+      "period": "De 15/07/2026 a 20/07/2026",
       "sources": [
-        "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZEhNR1pKZjNJOVZubVpQSFk5RUpNVkRuX0tKUE9PZml2QXllRWJibWZ4c0lFMUE3RkEwaHllM1ZOVEdxOU9RUy1fYlptWlozTUhRczdwZlZlNEEwX0dFQms3Z2pIbm10THlFNEp4cXFQNEJ2UElwTFdjenZnei04cGozNFcwQy10M21UZmFVcURlQnRkYU5pR3JONA?oc=5",
-        "https://news.google.com/rss/articles/CBMiygFBVV95cUxPbjFlbTFoTmZ2c1N2bHl4MWRtUTZxamVwM3pOV2g1cEFtOVFrMFVmZ2Y0UndPbk5IMHBIdXhYZlE3eHVNR1FiSVJnRVBuNUh6WXl0aXIxUGFEeWw3X25kME1FTm1mLVFXYVhlWEhNbmNOM2thQlZWRWdOYl9sS0pYWlk3V3ZhbmpNYzRYZkkzTGhxenMtNVk1VGxfTGpkTkxULUVraVMxMkJpbmxMVmtIRXBTT0I0d2RiNnZmaE1JR3o4aTkwcm1LVERR?oc=5",
-        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNanF0UXhnVzVDRF8zMy1LZ1BCNzNfaFlBLWxaRHp6X2JETzFYMnJNR2UxTGFtMXdxa2o1MVhGX05VUDY5ZF90QndNSm5xUmc3SFZfVm96XzFIZDhHX0FzZGx1SkdmTEVtUG9lUVM5cDdPWXBPOFEtUzhVaGMzMGlzb2t5djV0Y2ZQUUIzcm5yMkRMT1hNdVNEVGJ0NFZRUHFqbVBycEt4cFFBc0HSAbABQVVfeXFMUDFzcHByczBWTkVhQ0lmMFRSY3NoeXlZVndTUzB3UE9fenJHOEZzUW1kMWZ5M252NGhmbzFLZDVvd3NVQ3pjSDl3TFpwdktuNGgxTnVNN1RXU1BLeG5wMm93LWtNUWNYN0w1a24zRVBvZjNwYmJ6T2t1VXdXRXJZZlMwR0FNU0hUQVFvN0VwaHVybm1ONE1LczI4RkdBN2x2X21XQmgzcnJuR2RKcldCQnQ?oc=5",
-        "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNa0pGVTdsLTR1ME5xanlPUGprYm9jd0k4eTlOa21WUFNKeHJkLVZQOEk3VjhNa1F6YnZaaVdXMS1nV0VnTmVfUnE4THF3SjlSRzNSQW1oTVppMExaSVNOekRYUlRONHZmQ0hVUjQta0FodThqbUw1WGVRbzI2MTFBUmRFS2NPdjhyTjJZTWFsQW0xYWd0M25uelZuUTVuYmxlRm5LZWRHUEs0TFppMC1OX05jdFpCbHc5QldmUlVtcml1YzN2X2thSzdZN2llRkVtc3l5cElOR2syYk0wVlAtN0toV2ZxaU10UlBj?oc=5"
+        "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNaTVfU0VDcXRtYmFUSWlRQkNMRmtBV3hmY0hsaTNLQndpMDhsV25SZFkybDhoZjhBQ01iLXhUSWNiQzBrZlFMZGs0OEhHNElSNGliMDhyOERwVEZtcVlVNHo2OGVEWWFUX0xyRjBOLWVzMlZlSXpLOWJJY253eUtYTFdMd2tjeUhFYy1fQjhIZFlyRmFDbWstRGxGaTlFeDQ1bVQ5dHgycHRlRXVZMnluNFJpNjhJNmt3MmRjNzYxS2pMWTFWalA5SXhkMWxsakhHUnIzaEF1U0JnVXRsc0YwX3BiSXVPOXhHcnfSAe8BQVVfeXFMTlQzNldlcDh0N0plZHVsREk4bjllSWxqZFdqWlA4MG84YUg1Zi0yUGNhM1NNOHJSMVdxTVVQYkUtSnI4Q3BLYlVLa0d6R0g4cGdQSXVBX1RheUNaeFhybWRQVzhrZEtCRDB0S0VXc3ZCeFVRakozUldOVkFiWEx1bEw2RGtpLTVtM2FtZm0tcTlpRUpTYzRrMkRKUl83bk9WMGdBd1VCeUdMbFFpbmh4bHBQOWVjWktKM3V0VXFtaVNiRGlmUHlIUkNqNVN6OW5aNjhsMFpkVnlSWld1cE9hSktIY2RvWm5Mdm5CemswaEU?oc=5",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZEhNR1pKZjNJOVZubVpQSFk5RUpNVkRuX0tKUE9PZml2QXllRWJibWZ4c0lFMUE3RkEwaHllM1ZOVEdxOU9RUy1fYlptWlozTUhRczdwZlZlNEEwX0dFQms3Z2pIbm10THlFNEp4cXFQNEJ2UElwTFdjenZnei04cGozNFcwQy10M21UZmFVcURlQnRkYU5pR3JONA?oc=5"
       ],
-      "updated_at": "2026-07-17T21:19:52.313363",
-      "is_outdated": true,
-      "last_close": 41.96,
-      "daily_delta": -0.0138660399529964,
-      "monthly_delta": 0.038099950519544734,
-      "yearly_delta": 0.32074283915643687,
-      "price_date": "2026-07-17"
-    },
-    "PETR4.SA": {
-      "summary": "A Petrobras (PETR4) exibe uma forte valorização, impulsionada diretamente pelo avanço dos preços do petróleo decorrente do conflito EUA-Irã, conferindo-lhe um papel crucial de sustentação para o Ibovespa mesmo em momentos de aversão a risco. Essa performance robusta, somada à sua comprovada capacidade de pagar dividendos expressivos nos últimos 12 meses, gera um sentimento de mercado predominantemente otimista para o papel, atraindo investidores focados em valorização e renda. No entanto, sua dimensão no índice cria um efeito dicotômico de \"impulsionar e travar\": embora seja um motor de alta, sua própria magnitude e a possibilidade de realização de lucros podem, em determinados momentos, atuar como um freio para a performance geral do Ibovespa, exigindo atenção à sua volatilidade e impacto sistêmico.",
-      "period": "De 16/07/2026 a 17/07/2026",
-      "sources": [
-        "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcU5CRms5TjZBb0VDSFR2Uzh2ZVZZTGVEbEFudldvRTVsS0VvWEhoQXQ1S3c1azFzY0FRNWptRnpxZ0dOSU1MTXVEQXNSaE9pakU0cmtNbkdNa3Q1SUhtV2RnVEV0a1RpcUtUMGVuRFgtd3F2SU9Jc1Z5WGFnaDZuMDR3d0pTS1lpaDM2bGtTeEMtb3pvTWFmV1NsZ2lfaUFNbEJLVzgyNEx5dmRfRnN1eUJFLXlqdm9wQlHSAb8BQVVfeXFMTjVyeHhDZDRqNjdMcm1ycXcxc3dSaWlVanNLWDJHc3Bjb0xXeUhVV2U0LVk2VzBQQ2dCQkFrbzExYmtLbkpXQU5jeWdhODNmYl9HN01teFd0V29udkVmVm1aSTB4cjBjU3hCYzF4eHlVUXJqQ0d0SE9ydXYyVzFQbE9iakYzckJtbHlSdzNOdko5ZDJ2ZWFULWRDVGk3VDFOS2tGcmNob2FRMVV2eXFIN2NhRUo2MHluUnlTbXNhZEE?oc=5",
-        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeVRHcVkzTkNXOHZFYWxZTGlZVGVtc2N1dTN0cXdWZDAwLVIyOGJkaVZNQ1dnQ3dkZVdwdDFteE9mOGRNeFZMLURncFZSRkM4WXBhLVRZakl6bGxaVmV4QWVjaXNNSXQ5bFdrMTk1UmVqeTN2NDVnaUFmYl93MlMtanBEUk5iUlIyVkFnNXQ3X1NkempUV0NoVmZFMU16eUxfcXR6cDZoOEF5cTdfeWhnLVZwSzJ5d01vaVJlc1ZfcXpUMVlrbzhRa1FiUzJQdUZpckHSAeABQVVfeXFMTm5WVE5YSUQ5STVBS3U5R2N2MG5ZUjJBbHFWLVduSzJ6Q09OS0ZwMERmZl9odDNLaUhMVjVFdk9KbUJNaERqU1lhSkdMWjlOWmlrRWQ3NllHMDBnRFdQVGRLRVJjMG5CUFZ2bG44bllRWFotenJZQmRSYnV6SlBsTFloTHVUMkE0cWxqd2NrUmdhUExSMkZ1VUN5aDhfMld6Mktsbl9PUE50TFhjRU8tRkxPUnFZR3BWSEhqR2ttYWFmU0pYeDVoay05UHZHNV8wWDdGZEViTHdoZVBZeDFvckM?oc=5",
-        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUjVXMFM3a2hmWnBvaUt4V3p1Y0Y0cHFzR0RzeFY3UTVRTWlhVi0wdFBTbUJ0NFY0X1FaUzN5bEo0Rno5MTNpQzFpTk9UU1RGZVFxZC0xdEZVVDdBcU5xN0xqdUtDMHdzSmN6V2JjM014cE1nMXpSUFFka2lDaDV4TTBWWVlRbjEtenhkSFJ0YXRlQ1JuMV9UM05jY3A0Q2VDbVhoSjM3QURKUnF1Vmo4XzJLdlgtMW5aLWVLYjZDVkrSAcYBQVVfeXFMUGV5LVlIazM0MkNlS3h4X01JdTJSdnRWcFhXQ0pHbHRFcGN1NmhCdGNhUG91MUMtcUVZNnUxNkE5emNTSThucmpacWpsNjEtempfM2VnUV9IZGhhandBckJ4RTVaVG1sdE5lUGxfR3NHNl91QW9HdXREcFRMZm0xV0czb0lJX3VOcXZGaE4zNkxXTmFHb1E5c3dZZ2tBNl93YXhwX25ZMzREa0dnSkxMc0RfclptazJiaktMdEtqaGMxYXZBRm9R?oc=5",
-        "https://news.google.com/rss/articles/CBMihAFBVV95cUxOblFZUFVoTzJYZks0Mmh2cW5HLVVTdFk2R1ducUlrQWh5X2lXelFWamZrbmRiaVhZQzItR0sxQjE4a3FlUzVUeHotSGNTYy0zTU8wR1hmQlpESFM0Y2FsRV9kTzdlZ1RSYzJLYzJ0SlIxQkJVQWJPSGh6cElTZ1ZqMzY4Um3SAYoBQVVfeXFMTVNTU04wWDFuMnJYVHNwNFQtMGdpWTJJTG4xWExpano5c2t5ZmZjaHZxbGRGWTZDcmhTX2xqVnhUbnRHN3gyWDdOTzd3bnhPc3puc3VVNlpVLU84cF9HYmZmMFNhVFl6VHZyU044bHBRSUZOUzdtSHM1R3dGYTZVVFVvcFh2TnNZY25R?oc=5"
-      ],
-      "updated_at": "2026-07-17T21:20:07.578777",
+      "updated_at": "2026-07-20T21:45:22.024272",
       "is_outdated": false,
-      "last_close": 40.9,
-      "daily_delta": 0.025319628979694198,
-      "monthly_delta": 0.060409644801659335,
-      "yearly_delta": 0.4137573453162806,
-      "price_date": "2026-07-17"
+      "last_close": 42.3,
+      "daily_delta": 0.008102955195424144,
+      "monthly_delta": 0.06148055207026348,
+      "yearly_delta": 0.3562039115100992,
+      "price_date": "2026-07-20"
+    },
+    "MGLU3.SA": {
+      "summary": "A elevação da recomendação do Magazine Luiza (MGLU3) pelo Citi para neutra, vindo de uma postura provavelmente mais pessimista, sinaliza uma melhora na percepção de risco da tese de investimento, mesmo com um corte no preço-alvo. Este ajuste implica que, embora o potencial de valorização de curto prazo seja moderado, a gestora vê menos riscos de queda e uma estabilização nos fundamentos da empresa, afastando-se de uma visão negativa. O sentimento do mercado, portanto, transita para um campo mais neutro e de cauteloso otimismo, focado na recuperação e desalavancagem, enquanto a visibilidade constante sobre a MGLU3 em portais de investimento reflete um interesse persistente do público.",
+      "period": "De 15/07/2026 a 16/07/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQTHpfNWxNcjJRZ0F4dUJCd1RFbUdiRkYwcndZVUdRcFNxVFYxWG9JeEFrRjhxSXZRT253b0toOUs3eERqajY2bHMzZHR1N1BYaTdDb3RBQWV5eTdianVBSjlweXBkX19CRmpxVEFIYnd3OUF4V3BkSTdlWmFweG5JOTNjdmpWWnBaVDc0ZDJEcElQdGxvVWkwMnZ6MlViVTlaRW5DYzNrLU9yT3ZwX21BNEpCM1dlQ1V2eWduMTlMaExrY09FYy03a0tYNTYxaFFNNk5oTTctOHZENE5Yc01tWWpmZ1kxbzloQ2FVRHB3?oc=5",
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTHNlWGtvMzhXTHU2aDE4cDJqVTZtMmcySzczdFpYSEU0VmVGdmxQV3Q5SGFJcC0zZkFKSnNCakpFSzNJdjBpVkpvaVkxbkx5d2FudTZ5XzNmdjBUV3JyX2Vyb2VZX2FuMXVZVlMxOHNHNUVYVndmUVNGMzAtd09USFVSZjFpRkJtWlFqYVVSeUtiMUpqQXdqSk5Ld9IBoAFBVV95cUxOS1NnRWY1WE1Sb2dzdl9ydmJ6UlBnOGN5NWJHWUZlaFBGN2dSdFM0dEhZRGxuTjFoQ05rWF9oUWxsOFVad25UakxZV016OWo1enN0NlA4TWt2SFZOcHJxZHgydTEtazMxTmdkcWVSdFVaOHpWTkIxdUNnZ19nOHpvS014enZoT1ZuT1dvU3NBaDI5NkFBTlNsRU5oWl83eDdP?oc=5"
+      ],
+      "updated_at": "2026-07-20T21:45:38.681878",
+      "is_outdated": true,
+      "last_close": 4.86,
+      "daily_delta": -0.012195121951219412,
+      "monthly_delta": 0.051948051948051965,
+      "yearly_delta": -0.3458950201884252,
+      "price_date": "2026-07-20"
+    },
+    "WEGE3.SA": {
+      "summary": "As expectativas de resultados fracos para WEG (WEGE3) já estão amplamente precificadas, levando alguns analistas a enxergarem uma oportunidade para surpresas positivas caso a empresa supere as projeções baixas. Contraditoriamente, uma recomendação de 'swing trade' para venda aponta para um sentimento técnico de baixa no curto prazo, sugerindo pressão vendedora no papel. Essa dualidade reflete uma divergência entre a visão fundamentalista, que vê potencial de valorização a partir de um patamar já descontado, e uma perspectiva técnica de mercado que sinaliza cautela ou movimento de queda. O cenário para WEGE3, portanto, oscila entre um otimismo fundamental baseado em expectativas deprimidas e um pessimismo tático de curto prazo.",
+      "period": "De 14/07/2026 a 17/07/2026",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxNemRiajVZWEtHbzltdThLZ1RpZFR0Y3VFWHFmUmk0YkxoNmJPdXJON3cwSmp4YkYxYVlpLUJGanVvbm5aLThLbzF0TVVQT1Vmem9DaGVPUld4b21PU1hROHhvUmdRRDhrdnZUQ2ZkNEJCMlFPWTV4Y1JYTGxBaW1fV2N6TzhqSmZFMFpDWTF2bXpQQkZfTHNMTWVVcHJfSExaalgwR05Sck5WenFYS0VkZ3pvMkVKWHlSU0FXdXMzRHNGX2Vp?oc=5",
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE5PRmtyd3E5amloMy1HN1l2S1dWdmVhZEU3ckQ0eThTcWpNM1pqYzdnYS1zWV8wRWVDLVp3YmUwbmNtSUp2RjFHVmg4d1c2ZE40QzVoTXJFLVRXblhJUENGYTNQWmJVYWdUb0s1ejRpMEY4Snc?oc=5"
+      ],
+      "updated_at": "2026-07-20T21:45:54.255443",
+      "is_outdated": true,
+      "last_close": 43.13,
+      "daily_delta": -0.01146000458400187,
+      "monthly_delta": -0.042831779849090146,
+      "yearly_delta": 0.06757425742574275,
+      "price_date": "2026-07-20"
     }
   },
   "market_movers": [
-    "RCSL4.SA",
-    "PMAM3.SA",
-    "RCSL3.SA",
-    "TOKY3.SA",
-    "AMER3.SA",
     "SEQL3.SA",
-    "BDLL4.SA",
-    "CVCB3.SA",
+    "SNSY5.SA",
+    "COCE5.SA",
+    "CASH3.SA",
+    "AZTE3.SA",
+    "IFCM3.SA",
     "ONCO3.SA",
-    "GFSA3.SA"
+    "GFSA3.SA",
+    "CVCB3.SA",
+    "TOKY3.SA"
   ]
 }
