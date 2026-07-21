@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@3.0.0/dist/chartjs-chart-treemap.min.js"></script>
   <script src="https://s3.tradingview.com/tv.js"></script>
   <link rel="stylesheet" href="style.css">
@@ -790,19 +791,166 @@
     <!-- MONITOR DE GRÁFICOS (Análise Avançada) -->
     <!-- ============================================================ -->
     <section class="page" data-page="monitor" id="page-monitor">
-      <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="page-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
         <div>
-          <h1>Análise Gráfica</h1>
+          <h1 id="monitorPageTitle" style="margin-bottom: 0.25rem;">Análise de Ativo</h1>
+          <p class="subtitle" id="monitorPageSubtitle" style="margin: 0;">Gráficos e comparativos fundamentalistas de pares</p>
         </div>
-        <button class="btn btn-primary btn-voltar" id="btnVoltarMonitor">
+
+        <!-- Bloco de Comparação Personalizada (Adicionar até 3 ativos) -->
+        <div id="monitorComparisonContainer" class="glass" style="display: none; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); max-width: 500px; flex: 1; min-width: 280px;">
+          <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; white-space: nowrap;">Comparar +:</span>
+          <div style="display: flex; gap: 0.25rem; flex: 1; align-items: center;">
+            <input type="text" id="monitorCompInput" placeholder="Ex: ITUB4" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); color: #fff; padding: 0.35rem 0.5rem; border-radius: 4px; font-size: 0.8rem; width: 80px; text-transform: uppercase;" />
+            <button class="btn btn-primary" id="btnMonitorCompAdd" style="padding: 0.35rem 0.75rem; font-size: 0.8rem; border-radius: 4px; background: var(--accent); color: #fff; border: none; cursor: pointer; font-weight: 600;">+</button>
+          </div>
+          <div id="monitorCompBadges" style="display: flex; gap: 0.35rem; flex-wrap: wrap;"></div>
+        </div>
+
+        <button class="btn btn-primary btn-voltar" id="btnVoltarMonitor" style="margin-left: auto;">
           <i class="fas fa-arrow-left"></i> Voltar
         </button>
       </div>
 
-      <div class="card glass" style="height: calc(100vh - 180px); min-height: 500px; padding: 0; overflow: hidden; border-radius: var(--radius); display: flex; flex-direction: column;">
-        <div id="tradingview_chart_spa" style="flex: 1; width: 100%;"></div>
+      <!-- Sistema de Abas do Monitor -->
+      <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: var(--radius-sm); gap: 4px; margin-bottom: 1rem; width: fit-content;">
+        <button class="btn btn-sm btn-summary-filter active" id="btnMonitorTabTechnical" style="width: auto; padding: 0.5rem 1rem;">📈 Análise Técnica</button>
+        <button class="btn btn-sm btn-summary-filter" id="btnMonitorTabFundamental" style="width: auto; padding: 0.5rem 1rem;">📊 Análise Fundamentalista & Pares</button>
       </div>
-		  <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;"></strong>Fonte do gráfico: TradingView.</p>
+
+      <!-- Conteúdo da Aba Técnica -->
+      <div id="monitorTabContentTechnical" class="monitor-tab-panel active">
+        <div class="card glass" style="height: calc(100vh - 240px); min-height: 450px; padding: 0; overflow: hidden; border-radius: var(--radius); display: flex; flex-direction: column;">
+          <div id="tradingview_chart_spa" style="flex: 1; width: 100%;"></div>
+        </div>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">Fonte do gráfico: TradingView.</p>
+      </div>
+
+      <!-- Conteúdo da Aba Fundamentalista -->
+      <div id="monitorTabContentFundamental" class="monitor-tab-panel" style="display: none; flex-direction: column; gap: 1.5rem; overflow-y: auto; max-height: calc(100vh - 230px); padding-right: 0.5rem;">
+
+        <!-- KPI Cards Principais do Ativo -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+          <div class="card glass" style="padding: 1rem;">
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Valor de Mercado</p>
+            <h3 id="fundKpiMarketCap" style="margin: 0.25rem 0 0 0; font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">—</h3>
+          </div>
+          <div class="card glass" style="padding: 1rem;">
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Preço / Lucro (P/L)</p>
+            <h3 id="fundKpiPE" style="margin: 0.25rem 0 0 0; font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">—</h3>
+          </div>
+          <div class="card glass" style="padding: 1rem;">
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Preço / V.Patrimonial (P/VP)</p>
+            <h3 id="fundKpiPB" style="margin: 0.25rem 0 0 0; font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">—</h3>
+          </div>
+          <div class="card glass" style="padding: 1rem;">
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Dividend Yield</p>
+            <h3 id="fundKpiDY" style="margin: 0.25rem 0 0 0; font-size: 1.4rem; font-weight: 700; color: var(--green);">—</h3>
+          </div>
+          <div class="card glass" style="padding: 1rem;">
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">ROE (TTM)</p>
+            <h3 id="fundKpiROE" style="margin: 0.25rem 0 0 0; font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">—</h3>
+          </div>
+        </div>
+
+        <!-- Seção: Comparativo de Fechamento Rescalonado (Base 100) e Sparklines de Preço -->
+        <div class="card glass" style="padding: 1.5rem;">
+          <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Desempenho de Cotação Comparada (Base 100)</h2>
+          <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Evolução das cotações rescalonadas para base 100 no início do período, comparando o ativo principal com seus pares e a média dos pares.</p>
+          <div style="height: 320px; position: relative; width: 100%;">
+            <canvas id="chartPerformanceBase100"></canvas>
+          </div>
+        </div>
+
+        <!-- Grid de Gráficos Financeiros e de Pares -->
+        <div class="fund-charts-grid">
+
+          <!-- 1. Receita Anual -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Receita Anual</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Histórico da Receita Líquida comparado com a média do segmento ao longo dos anos.</p>
+            <div style="height: 250px; position: relative;">
+              <canvas id="chartAnnualRevenue"></canvas>
+            </div>
+          </div>
+
+          <!-- 2. Margem Operacional -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Margem Operacional</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Evolução da margem operacional em relação à média do segmento.</p>
+            <div style="height: 250px; position: relative;">
+              <canvas id="chartOperatingMargin"></canvas>
+            </div>
+          </div>
+
+          <!-- 3. Liquidez Corrente / Razão Atual -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Índice de Liquidez Corrente em Comparação com os Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Capacidade de cobrir obrigações de curto prazo com ativos circulantes de curto prazo.</p>
+            <div class="fund-sub-grid">
+              <div style="height: 220px; position: relative;">
+                <canvas id="chartLiquidityPeers"></canvas>
+              </div>
+              <div style="height: 220px; position: relative;">
+                <canvas id="chartLiquidityHistory"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. ROE x Pares -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Retorno sobre o Capital Próprio (ROE TTM) versus Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Retorno financeiro gerado em relação ao patrimônio líquido da empresa.</p>
+            <div style="height: 220px; position: relative;">
+              <canvas id="chartRoePeers"></canvas>
+            </div>
+          </div>
+
+          <!-- 5. Relação Dívida / Patrimônio -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Índice Dívida/Patrimônio em Comparação com os Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Nível de endividamento bruto comparado com o capital próprio dos acionistas.</p>
+            <div class="fund-sub-grid">
+              <div style="height: 220px; position: relative;">
+                <canvas id="chartDebtEquityPeers"></canvas>
+              </div>
+              <div style="height: 220px; position: relative;">
+                <canvas id="chartDebtEquityHistory"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. EV/EBITDA versus Pares (Proposto: Novo comparativo comum ao mercado de ações) -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Múltiplo de Valor da Firma / EBITDA (EV/EBITDA) versus Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Múltiplo de valor para avaliar a atratividade do ativo em relação à sua capacidade de geração de caixa operacional.</p>
+            <div style="height: 220px; position: relative;">
+              <canvas id="chartEvEbitdaPeers"></canvas>
+            </div>
+          </div>
+
+          <!-- 7. Preço / Lucro (P/L) versus Pares -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Preço / Lucro (P/L) versus Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Múltiplo de preço sobre lucro líquido. Avalia em quantos anos o investidor reaveria o capital investido se os lucros fossem distribuídos.</p>
+            <div style="height: 220px; position: relative;">
+              <canvas id="chartPLPeers"></canvas>
+            </div>
+          </div>
+
+          <!-- 8. Preço / Valor Patrimonial (P/VP) versus Pares -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Preço / Valor Patrimonial (P/VP) versus Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Múltiplo que relaciona o preço da ação ao valor patrimonial por ação. Avalia se o ativo está descontado ou prêmiado.</p>
+            <div style="height: 220px; position: relative;">
+              <canvas id="chartPVPeers"></canvas>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
 
     <section class="page" data-page="about" id="page-about">

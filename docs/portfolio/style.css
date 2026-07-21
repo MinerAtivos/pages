@@ -1147,8 +1147,28 @@ body.loading {
   border: 1px solid var(--border-glass);
 }
 
+/* -- Responsive Fundamental Dashboards -- */
+.fund-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 1.5rem;
+}
+.fund-sub-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
 /* -- Responsive -------------------------------------------------------- */
 @media (max-width: 768px) {
+  .fund-charts-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .fund-sub-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
   .sidebar {
     transform: translateX(-100%);
   }
