@@ -1,0 +1,62 @@
+name: Validar e Atualizar Arquivos Estáticos
+
+on:
+  push:
+    branches:
+      - main # Altere para 'master' se for o nome da sua branch principal
+    paths:
+      - '**.html'
+      - '**.md'
+      - 'robots.txt'
+
+jobs:
+  update-static-files:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permite commit de volta no repositório
+
+    steps:
+      # 1. Baixa o código do repositório
+      - name: Checkout do código
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. Garante que o robots.txt existe e está atualizado
+      - name: Verificar/Criar robots.txt
+        run: |
+          if [ ! -f robots.txt ]; then
+            echo "Criando robots.txt padrão..."
+            cat <<EOT > robots.txt
+          User-agent: *
+          Allow: /
+
+          # Bloqueio de Bots e Crawlers de IA
+          User-agent: GPTBot
+          Disallow: /
+          User-agent: ClaudeBot
+          Disallow: /
+          User-agent: PerplexityBot
+          Disallow: /
+          User-agent: CCBot
+          Disallow: /
+
+          Sitemap: https://minerativos.github.io/pages/sitemap.xml
+          EOT
+          fi
+
+      # 3. Gera o sitemap.xml automaticamente
+      - name: Gerar Sitemap XML
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://minerativos.github.io/pages/
+          sitemap-path: sitemap.xml
+          drop-html-extension: true
+          omit-unreachable-files: true
+
+      # 4. Commit e Push das alterações caso os arquivos tenham mudado
+      - name: Commit e Push das atualizações
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(ci): atualiza sitemap.xml e valida robots.txt [skip ci]"
+          file_pattern: "sitemap.xml robots.txt"
