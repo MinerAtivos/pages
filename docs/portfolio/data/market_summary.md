@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-21
+## Resumo de Mercado - 2026-07-22
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 1.90 | R$ 1.65 | **+15.15%** 🚀 | +640.91% ⬆️ |
-| TOKY3.SA | TOKY3.SA | R$ 0.48 | R$ 0.42 | **+14.29%** 🚀 | -39.98% ⬇️ |
-| ATED3.SA | ATED3.SA | R$ 1.68 | R$ 1.55 | **+8.39%** 🚀 | +301.17% ⬆️ |
-| VVEO3.SA | CM Hospitalar S/A | R$ 0.61 | R$ 0.57 | **+7.02%** 🚀 | -63.17% ⬇️ |
-| NORD3.SA | Nordon Indústrias Metalúrgicas S/A | R$ 1.96 | R$ 1.84 | **+6.52%** 🚀 | -28.97% ⬇️ |
+| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 1.27 | R$ 1.12 | **+13.39%** 🚀 | +187.32% ⬆️ |
+| WEGE3.SA | WEG S.A. | R$ 46.74 | R$ 42.47 | **+10.05%** 🚀 | +459.69% ⬆️ |
+| OIBR3.SA | Oi S.A. | R$ 0.13 | R$ 0.12 | **+8.33%** 🚀 | -16.26% ⬇️ |
+| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.90 | R$ 3.60 | **+8.33%** 🚀 | -70.00% ⬇️ |
+| SNSY5.SA | Sansuy S.A. | R$ 2.56 | R$ 2.38 | **+7.56%** 🚀 | -47.95% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 0.91 | R$ 1.01 | **-9.90%** 📉 | +219.91% ⬆️ |
-| ENJU3.SA | Enjoei S.A. | R$ 0.86 | R$ 0.93 | **-7.53%** 📉 | +18.09% ⬆️ |
-| MOVI3.SA | Movida Participações S.A. | R$ 8.00 | R$ 8.61 | **-7.08%** 📉 | +91.83% ⬆️ |
-| VSTE3.SA | Veste S.A. Estilo | R$ 2.61 | R$ 2.80 | **-6.79%** 📉 | +87.09% ⬆️ |
-| LIGT3.SA | Light S.A. | R$ 3.07 | R$ 3.27 | **-6.12%** 📉 | -35.50% ⬇️ |
+| OIBR4.SA | Oi S.A. | R$ 0.40 | R$ 0.56 | **-28.57%** 📉 | -33.86% ⬇️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | -52.10% ⬇️ |
+| OSXB3.SA | OSX Brasil S.A. | R$ 0.88 | R$ 1.01 | **-12.87%** 📉 | +94.46% ⬆️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 0.61 | R$ 0.70 | **-12.86%** 📉 | +22.99% ⬆️ |
+| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 0.83 | R$ 0.91 | **-8.79%** 📉 | +398.37% ⬆️ |
