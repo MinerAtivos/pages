@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-22
+## Resumo de Mercado - 2026-07-23
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 1.27 | R$ 1.12 | **+13.39%** 🚀 | +187.32% ⬆️ |
-| WEGE3.SA | WEG S.A. | R$ 46.74 | R$ 42.47 | **+10.05%** 🚀 | +459.69% ⬆️ |
-| OIBR3.SA | Oi S.A. | R$ 0.13 | R$ 0.12 | **+8.33%** 🚀 | -16.26% ⬇️ |
-| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.90 | R$ 3.60 | **+8.33%** 🚀 | -70.00% ⬇️ |
-| SNSY5.SA | Sansuy S.A. | R$ 2.56 | R$ 2.38 | **+7.56%** 🚀 | -47.95% ⬇️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 2.38 | R$ 1.85 | **+28.65%** 🚀 | +247.17% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.29 | R$ 1.18 | **+9.32%** 🚀 | +86.24% ⬆️ |
+| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 1.42 | R$ 1.30 | **+9.23%** 🚀 | +296.68% ⬆️ |
+| DOTZ3.SA | Dotz S.A. | R$ 4.63 | R$ 4.24 | **+9.20%** 🚀 | +158.28% ⬆️ |
+| LAND3.SA | Terra Santa Propriedades Agrícolas S.A. | R$ 8.19 | R$ 7.74 | **+5.81%** 🚀 | +1712.05% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| OIBR4.SA | Oi S.A. | R$ 0.40 | R$ 0.56 | **-28.57%** 📉 | -33.86% ⬇️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | -52.10% ⬇️ |
-| OSXB3.SA | OSX Brasil S.A. | R$ 0.88 | R$ 1.01 | **-12.87%** 📉 | +94.46% ⬆️ |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 0.61 | R$ 0.70 | **-12.86%** 📉 | +22.99% ⬆️ |
-| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 0.83 | R$ 0.91 | **-8.79%** 📉 | +398.37% ⬆️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.80 | R$ 2.17 | **-17.05%** 📉 | +448.15% ⬆️ |
+| TOKY3.SA | TOKY3.SA | R$ 0.46 | R$ 0.51 | **-9.80%** 📉 | -41.33% ⬇️ |
+| QUAL3.SA | Qualicorp Consultoria e Corretora de Seguros S.A. | R$ 1.39 | R$ 1.53 | **-9.15%** 📉 | +334.41% ⬆️ |
+| HAPV3.SA | Hapvida Participações e Investimentos S.A. | R$ 10.47 | R$ 11.39 | **-8.08%** 📉 | +50.96% ⬆️ |
+| OIBR3.SA | Oi S.A. | R$ 0.12 | R$ 0.13 | **-7.69%** 📉 | +37.73% ⬆️ |
