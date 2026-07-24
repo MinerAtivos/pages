@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-23
+## Resumo de Mercado - 2026-07-24
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 2.38 | R$ 1.85 | **+28.65%** 🚀 | +247.17% ⬆️ |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.29 | R$ 1.18 | **+9.32%** 🚀 | +86.24% ⬆️ |
-| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 1.42 | R$ 1.30 | **+9.23%** 🚀 | +296.68% ⬆️ |
-| DOTZ3.SA | Dotz S.A. | R$ 4.63 | R$ 4.24 | **+9.20%** 🚀 | +158.28% ⬆️ |
-| LAND3.SA | Terra Santa Propriedades Agrícolas S.A. | R$ 8.19 | R$ 7.74 | **+5.81%** 🚀 | +1712.05% ⬆️ |
+| CEDO4.SA | Companhia de Fiação e Tecidos Cedro e Cachoeira S.A. | R$ 6.11 | R$ 5.10 | **+19.80%** 🚀 | -92.86% ⬇️ |
+| AMAR3.SA | Marisa Lojas S.A. | R$ 0.60 | R$ 0.54 | **+11.11%** 🚀 | +48.46% ⬆️ |
+| WDCN3.SA | WDCN3.SA | R$ 2.48 | R$ 2.27 | **+9.25%** 🚀 | +658.82% ⬆️ |
+| OIBR3.SA | Oi S.A. | R$ 0.13 | R$ 0.12 | **+8.33%** 🚀 | -72.40% ⬇️ |
+| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.16 | R$ 0.15 | **+6.67%** 🚀 | -92.31% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.80 | R$ 2.17 | **-17.05%** 📉 | +448.15% ⬆️ |
-| TOKY3.SA | TOKY3.SA | R$ 0.46 | R$ 0.51 | **-9.80%** 📉 | -41.33% ⬇️ |
-| QUAL3.SA | Qualicorp Consultoria e Corretora de Seguros S.A. | R$ 1.39 | R$ 1.53 | **-9.15%** 📉 | +334.41% ⬆️ |
-| HAPV3.SA | Hapvida Participações e Investimentos S.A. | R$ 10.47 | R$ 11.39 | **-8.08%** 📉 | +50.96% ⬆️ |
-| OIBR3.SA | Oi S.A. | R$ 0.12 | R$ 0.13 | **-7.69%** 📉 | +37.73% ⬆️ |
+| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 1.30 | R$ 1.42 | **-8.45%** 📉 | -7.81% ⬇️ |
+| MNDL3.SA | Mundial S.A. - Produtos de Consumo | R$ 17.11 | R$ 18.50 | **-7.51%** 📉 | -5.45% ⬇️ |
+| ISAE4.SA | ISA Energía Brasil S.A. | R$ 26.46 | R$ 28.50 | **-7.16%** 📉 | +243.80% ⬆️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.70 | R$ 1.80 | **-5.56%** 📉 | -60.44% ⬇️ |
+| ANIM3.SA | Ânima Holding S.A. | R$ 2.05 | R$ 2.17 | **-5.53%** 📉 | +55.50% ⬆️ |
