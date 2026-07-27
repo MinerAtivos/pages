@@ -68,7 +68,7 @@ def load_tickers():
         except: pass
 
     # 3. Fallback/Priority básicos
-    priority = ["PETR4.SA", "VALE3.SA", "ITUB4.SA", "BBDC4.SA", "BBAS3.SA", "MGLU3.SA", "ABEV3.SA", "WEGE3.SA"]
+    priority = ["^BVSP", "PETR4.SA", "VALE3.SA", "ITUB4.SA", "BBDC4.SA", "BBAS3.SA", "MGLU3.SA", "ABEV3.SA", "WEGE3.SA"]
     tickers.update(priority)
     return list(tickers)
 
@@ -85,8 +85,11 @@ def get_market_movers():
 
 def fetch_google_news(ticker):
     """Busca notícias via Google News RSS para o ticker"""
-    clean_ticker = ticker.replace('.SA', '')
-    query = urllib.parse.quote(f"{clean_ticker}")
+    if ticker == "^BVSP":
+        query = urllib.parse.quote("IBOV OR IBOVESPA OR BVSP")
+    else:
+        clean_ticker = ticker.replace('.SA', '')
+        query = urllib.parse.quote(f"{clean_ticker}")
     url = f"https://news.google.com/rss/search?q={query}%20when%3A15d&hl=pt-BR&gl=BR&ceid=BR:pt-419"
 
     news_items = []
@@ -340,18 +343,31 @@ def main():
             google_news = fetch_google_news(ticker)
             combined_news = yahoo_news + google_news
 
+            is_ibov_ticker = (ticker == "^BVSP")
+            cutoff_date = (now - timedelta(days=2)) if is_ibov_ticker else one_week_ago
+
             seen_titles = set()
             valid_news = []
             for item in combined_news:
                 title_norm = item['title'].lower().strip()
                 if title_norm in seen_titles: continue
 
-                if item['date'] and item['date'] >= one_week_ago:
+                if item['date'] and item['date'] >= cutoff_date:
                     valid_news.append(item)
                     seen_titles.add(title_norm)
 
             if not valid_news and combined_news:
-                valid_news = sorted(combined_news, key=lambda x: x['date'] if x['date'] else datetime.min, reverse=True)[:2]
+                if is_ibov_ticker:
+                    # Tenta com 7 dias se 2 dias ficou vazio
+                    for item in combined_news:
+                        title_norm = item['title'].lower().strip()
+                        if title_norm in seen_titles: continue
+                        if item['date'] and item['date'] >= one_week_ago:
+                            valid_news.append(item)
+                            seen_titles.add(title_norm)
+
+                if not valid_news:
+                    valid_news = sorted(combined_news, key=lambda x: x['date'] if x['date'] else datetime.min, reverse=True)[:2]
 
             context = ""
             sources = []
@@ -419,8 +435,12 @@ def main():
             i = news_output["ibov"]
             ibov_info = f"O IBOVESPA fechou em {i['last_close']:.0f} pontos, com variação de {i['daily_delta']*100:.2f}% no dia, {i['monthly_delta']*100:.2f}% no mês e {i['yearly_delta']*100:.2f}% no ano.\n"
 
+        ibov_summary = ""
+        if "^BVSP" in news_output["assets"]:
+            ibov_summary = f"Notícias e fatos relevantes do IBOVESPA hoje: {news_output['assets']['^BVSP']['summary']}\n"
+
         prompt = (
-            f"Aja como um analista financeiro sênior. {ibov_info}Resuma, em português, o clima do mercado B3 hoje em 3 a 4 frases analíticas e conectadas.\n"
+            f"Aja como um analista financeiro sênior. {ibov_info}{ibov_summary}Resuma, em português, o clima do mercado B3 hoje em 3 a 4 frases analíticas e conectadas.\n"
             f"Evite apenas listar nomes de empresas, busque explicar a tendência do dia.\n"
         )
         if gainers_summaries:
