@@ -1153,6 +1153,28 @@ body.loading {
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 1.5rem;
 }
+
+/* -- Position Cards Custom Styling -- */
+.position-card {
+  min-height: 400px;
+}
+.position-card .news-card-ticker {
+  font-size: 1.15rem;
+}
+.position-card-metrics-grid .metric-item {
+  background: rgba(255, 255, 255, 0.01);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.btn-position-action {
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+.btn-position-action:hover {
+  transform: scale(1.02);
+}
 .fund-sub-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
