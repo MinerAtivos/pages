@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-24
+## Resumo de Mercado - 2026-07-27
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| CEDO4.SA | Companhia de Fiação e Tecidos Cedro e Cachoeira S.A. | R$ 6.11 | R$ 5.10 | **+19.80%** 🚀 | -92.86% ⬇️ |
-| AMAR3.SA | Marisa Lojas S.A. | R$ 0.60 | R$ 0.54 | **+11.11%** 🚀 | +48.46% ⬆️ |
-| WDCN3.SA | WDCN3.SA | R$ 2.48 | R$ 2.27 | **+9.25%** 🚀 | +658.82% ⬆️ |
-| OIBR3.SA | Oi S.A. | R$ 0.13 | R$ 0.12 | **+8.33%** 🚀 | -72.40% ⬇️ |
-| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.16 | R$ 0.15 | **+6.67%** 🚀 | -92.31% ⬇️ |
+| OSXB3.SA | OSX Brasil S.A. | R$ 1.16 | R$ 0.90 | **+28.89%** 🚀 | -41.98% ⬇️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | -58.00% ⬇️ |
+| BNBR3.SA | Banco do Nordeste do Brasil S.A. | R$ 118.48 | R$ 108.60 | **+9.10%** 🚀 | +128.57% ⬆️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.85 | R$ 1.70 | **+8.82%** 🚀 | -36.84% ⬇️ |
+| AMER3.SA | Americanas S.A. | R$ 4.33 | R$ 4.02 | **+7.71%** 🚀 | -36.77% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 1.30 | R$ 1.42 | **-8.45%** 📉 | -7.81% ⬇️ |
-| MNDL3.SA | Mundial S.A. - Produtos de Consumo | R$ 17.11 | R$ 18.50 | **-7.51%** 📉 | -5.45% ⬇️ |
-| ISAE4.SA | ISA Energía Brasil S.A. | R$ 26.46 | R$ 28.50 | **-7.16%** 📉 | +243.80% ⬆️ |
-| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.70 | R$ 1.80 | **-5.56%** 📉 | -60.44% ⬇️ |
-| ANIM3.SA | Ânima Holding S.A. | R$ 2.05 | R$ 2.17 | **-5.53%** 📉 | +55.50% ⬆️ |
+| HAGA3.SA | HAGA S/A Indústria e Comércio | R$ 2.55 | R$ 2.87 | **-11.15%** 📉 | +715.21% ⬆️ |
+| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.60 | R$ 3.90 | **-7.69%** 📉 | -66.67% ⬇️ |
+| DASA3.SA | Diagnósticos da América S.A. | R$ 2.85 | R$ 3.07 | **-7.17%** 📉 | +153.88% ⬆️ |
+| BRSR5.SA | Banco do Estado do Rio Grande do Sul S.A. | R$ 15.93 | R$ 17.02 | **-6.40%** 📉 | 0.00% — |
+| PRIO3.SA | Prio S.A. | R$ 55.71 | R$ 58.82 | **-5.29%** 📉 | +6.59% ⬆️ |
