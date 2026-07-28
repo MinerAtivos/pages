@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-07-27
+## Resumo de Mercado - 2026-07-28
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| OSXB3.SA | OSX Brasil S.A. | R$ 1.16 | R$ 0.90 | **+28.89%** 🚀 | -41.98% ⬇️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | -58.00% ⬇️ |
-| BNBR3.SA | Banco do Nordeste do Brasil S.A. | R$ 118.48 | R$ 108.60 | **+9.10%** 🚀 | +128.57% ⬆️ |
-| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.85 | R$ 1.70 | **+8.82%** 🚀 | -36.84% ⬇️ |
-| AMER3.SA | Americanas S.A. | R$ 4.33 | R$ 4.02 | **+7.71%** 🚀 | -36.77% ⬇️ |
+| CEDO4.SA | Companhia de Fiação e Tecidos Cedro e Cachoeira S.A. | R$ 7.20 | R$ 6.11 | **+17.84%** 🚀 | -56.10% ⬇️ |
+| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.91 | R$ 3.60 | **+8.61%** 🚀 | -62.50% ⬇️ |
+| AMER3.SA | Americanas S.A. | R$ 4.70 | R$ 4.33 | **+8.55%** 🚀 | +13.62% ⬆️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 2.79 | R$ 2.58 | **+8.14%** 🚀 | +106.45% ⬆️ |
+| OFSA3.SA | Ouro Fino Saúde Animal Participações S.A. | R$ 29.00 | R$ 26.99 | **+7.45%** 🚀 | -47.43% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| HAGA3.SA | HAGA S/A Indústria e Comércio | R$ 2.55 | R$ 2.87 | **-11.15%** 📉 | +715.21% ⬆️ |
-| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.60 | R$ 3.90 | **-7.69%** 📉 | -66.67% ⬇️ |
-| DASA3.SA | Diagnósticos da América S.A. | R$ 2.85 | R$ 3.07 | **-7.17%** 📉 | +153.88% ⬆️ |
-| BRSR5.SA | Banco do Estado do Rio Grande do Sul S.A. | R$ 15.93 | R$ 17.02 | **-6.40%** 📉 | 0.00% — |
-| PRIO3.SA | Prio S.A. | R$ 55.71 | R$ 58.82 | **-5.29%** 📉 | +6.59% ⬆️ |
+| TTEN3.SA | Três Tentos Agroindustrial S/A | R$ 12.80 | R$ 15.24 | **-16.01%** 📉 | +1469.78% ⬆️ |
+| TOKY3.SA | TOKY3.SA | R$ 0.37 | R$ 0.44 | **-15.91%** 📉 | +21.11% ⬆️ |
+| GFSA3.SA | Gafisa S.A. | R$ 0.30 | R$ 0.34 | **-11.76%** 📉 | +29.57% ⬆️ |
+| BNBR3.SA | Banco do Nordeste do Brasil S.A. | R$ 108.81 | R$ 118.48 | **-8.16%** 📉 | -50.00% ⬇️ |
+| AFLT3.SA | Afluente Transmissão de Energia Elétrica S.A. | R$ 7.17 | R$ 7.79 | **-7.96%** 📉 | +279.12% ⬆️ |
