@@ -176,21 +176,8 @@
 
       <div class="toolbar">
         <div class="toolbar-group">
-          <button class="btn btn-primary" id="btnAddPosition">
-            ➕ Registrar Compra
-          </button>
-          <button class="btn btn-danger" id="btnSellPosition">
-            ➖ Registrar Venda
-          </button>
-          <button class="btn btn-secondary" id="btnAddBulk">
-            📥 Adicionar Vários
-          </button>
-          <button class="btn btn-outline" onclick="app.$('fileImport').click()">
-            📄 Importar CSV
-          </button>
-          <input type="file" id="fileImport" style="display:none" accept=".csv" onchange="app.importCSV(this)">
-          <button class="btn btn-outline" id="btnAnalyze">
-            📊 Analisar Portfólio
+          <button class="btn btn-outline" id="btnToggleOperations" style="display: flex; align-items: center; gap: 0.5rem;">
+            ⚙️ Registrar movimentações <span id="operationsChevron">▼</span>
           </button>
         </div>
         <div class="form-inline">
@@ -207,6 +194,25 @@
           <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
             <input type="checkbox" id="hideClosedPositions" checked> Ocultar encerradas
           </label>
+        </div>
+      </div>
+
+      <!-- Collapsible Operations Sub-Toolbar -->
+      <div class="collapsible-operations glass" id="collapsibleOperations" style="display: none; padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(255, 255, 255, 0.02);">
+        <div class="toolbar-group" style="margin-bottom: 0;">
+          <button class="btn btn-primary" id="btnAddPosition">
+            ➕ Registrar Compra
+          </button>
+          <button class="btn btn-danger" id="btnSellPosition">
+            ➖ Registrar Venda
+          </button>
+          <button class="btn btn-secondary" id="btnAddBulk">
+            📥 Adicionar Vários
+          </button>
+          <button class="btn btn-outline" onclick="app.$('fileImport').click()">
+            📄 Importar CSV
+          </button>
+          <input type="file" id="fileImport" style="display:none" accept=".csv" onchange="app.importCSV(this)">
         </div>
       </div>
 
