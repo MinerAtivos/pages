@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-08-03
+## Resumo de Mercado - 2026-08-04
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| RAPT3.SA | Randoncorp S.A. | R$ 6.72 | R$ 4.74 | **+41.77%** 🚀 | +2536.16% ⬆️ |
-| CTAX3.SA | Contax Participações S.A. | R$ 1.35 | R$ 1.10 | **+22.73%** 🚀 | +952.48% ⬆️ |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 2.54 | R$ 2.14 | **+18.69%** 🚀 | +156.90% ⬆️ |
-| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 1.86 | R$ 1.63 | **+14.11%** 🚀 | +112.03% ⬆️ |
-| BIOM3.SA | Biomm S.A. | R$ 6.12 | R$ 5.51 | **+11.07%** 🚀 | +2.24% ⬆️ |
+| BRSR5.SA | Banco do Estado do Rio Grande do Sul S.A. | R$ 18.00 | R$ 15.93 | **+12.99%** 🚀 | 0.00% — |
+| BPAC5.SA | Banco BTG Pactual S.A. | R$ 19.82 | R$ 17.70 | **+11.98%** 🚀 | +42.54% ⬆️ |
+| TGMA3.SA | Tegma Gestão Logística S.A. | R$ 34.20 | R$ 30.67 | **+11.51%** 🚀 | +338.87% ⬆️ |
+| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.94 | R$ 3.55 | **+10.99%** 🚀 | -77.50% ⬇️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 5.20 | R$ 4.74 | **+9.70%** 🚀 | +83.13% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| GFSA3.SA | Gafisa S.A. | R$ 0.24 | R$ 0.27 | **-11.11%** 📉 | +32.84% ⬆️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.22 | R$ 0.24 | **-8.33%** 📉 | +2.26% ⬆️ |
-| CRPG6.SA | Tronox Pigmentos do Brasil S.A. | R$ 11.78 | R$ 12.80 | **-7.97%** 📉 | -73.68% ⬇️ |
-| MNDL3.SA | Mundial S.A. - Produtos de Consumo | R$ 17.03 | R$ 18.50 | **-7.95%** 📉 | +40.00% ⬆️ |
-| CSNA3.SA | Companhia Siderúrgica Nacional | R$ 4.51 | R$ 4.84 | **-6.82%** 📉 | +185.77% ⬆️ |
+| POMO4.SA | Marcopolo S.A. | R$ 4.81 | R$ 5.37 | **-10.43%** 📉 | +581.06% ⬆️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.20 | R$ 0.22 | **-9.09%** 📉 | +0.32% ⬆️ |
+| POMO3.SA | Marcopolo S.A. | R$ 4.54 | R$ 4.99 | **-9.02%** 📉 | +430.14% ⬆️ |
+| OIBR4.SA | Oi S.A. | R$ 0.34 | R$ 0.37 | **-8.11%** 📉 | -42.12% ⬇️ |
+| ESPA3.SA | MPM Corpóreos S.A. | R$ 7.54 | R$ 8.18 | **-7.82%** 📉 | +83.91% ⬆️ |
