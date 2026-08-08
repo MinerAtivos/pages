@@ -1,0 +1,44 @@
+name: Fetch financials data
+
+on:
+  schedule:
+    # Executa todos os dias úteis às 23:00 UTC (20:00 BRT), após fechamento da B3
+    #- cron: '5 22 * * 1-5'
+    - cron: '27 20 * * 5'
+    
+  workflow_dispatch:  # Permite execução manual
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+      
+      - name: Fetch market data
+        run: python docs/portfolio/scripts/financials_fetcher.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/portfolio/data/market_financials.json
+          git commit -m "Update market financials data - $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git push
