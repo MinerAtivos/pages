@@ -18,7 +18,7 @@ import pandas as pd
 # Configurações de caminhos
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 ASSETS_FILE = os.path.join(os.path.dirname(__file__), '..', 'assets.json')
-PORTFOLIO_ANALYSIS_FILE = os.path.join(DATA_DIR, 'portfolio_analysis.json')
+PORTFOLIO_ANALYSIS_FILE = os.path.join(os.path.dirname(__file__), '..', 'assets.json') #os.path.join(DATA_DIR, 'portfolio_analysis.json')
 OUTPUT_FILE = os.path.join(DATA_DIR, 'market_financials.json')
 
 def load_portfolio_and_peers():
