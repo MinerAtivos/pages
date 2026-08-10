@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-08-07
+## Resumo de Mercado - 2026-08-10
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ALPA4.SA | Alpargatas S.A. | R$ 13.53 | R$ 12.26 | **+10.36%** 🚀 | +488.37% ⬆️ |
-| FLRY3.SA | Fleury S.A. | R$ 18.95 | R$ 17.27 | **+9.73%** 🚀 | +753.53% ⬆️ |
-| CASH3.SA | Méliuz S.A. | R$ 5.07 | R$ 4.65 | **+9.03%** 🚀 | +214.70% ⬆️ |
-| OIBR3.SA | Oi S.A. | R$ 0.13 | R$ 0.12 | **+8.33%** 🚀 | -56.74% ⬇️ |
-| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 2.59 | R$ 2.45 | **+5.71%** 🚀 | -10.45% ⬇️ |
+| IFCM3.SA | Infracommerce CXaaS S.A. | R$ 2.12 | R$ 1.82 | **+16.48%** 🚀 | +56.83% ⬆️ |
+| AALR3.SA | Alliança Saúde e Participações S.A. | R$ 3.28 | R$ 3.04 | **+7.89%** 🚀 | +34.77% ⬆️ |
+| CTAX3.SA | Contax Participações S.A. | R$ 1.95 | R$ 1.81 | **+7.73%** 🚀 | -86.14% ⬇️ |
+| PRIO3.SA | Prio S.A. | R$ 61.24 | R$ 57.45 | **+6.60%** 🚀 | +46.17% ⬆️ |
+| TUPY3.SA | Tupy S.A. | R$ 15.06 | R$ 14.22 | **+5.91%** 🚀 | +220.54% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| RCSL4.SA | Recrusul S/A | R$ 0.51 | R$ 0.76 | **-32.89%** 📉 | +186.72% ⬆️ |
-| PDGR3.SA | PDG Realty S.A. Empreendimentos e Participações | R$ 1.30 | R$ 1.67 | **-22.16%** 📉 | +422.28% ⬆️ |
-| CEDO4.SA | Companhia de Fiação e Tecidos Cedro e Cachoeira S.A. | R$ 5.07 | R$ 6.24 | **-18.75%** 📉 | +123.21% ⬆️ |
-| RCSL3.SA | Recrusul S/A | R$ 0.41 | R$ 0.49 | **-16.33%** 📉 | +300.59% ⬆️ |
-| RPMG3.SA | Refinaria de Petróleos de Manguinhos S.A. | R$ 0.91 | R$ 1.08 | **-15.74%** 📉 | +623.53% ⬆️ |
+| ARND3.SA | Arandu Investimentos S.A. | R$ 0.47 | R$ 0.56 | **-16.07%** 📉 | -89.51% ⬇️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.52 | R$ 1.80 | **-15.56%** 📉 | +17.65% ⬆️ |
+| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 1.30 | R$ 1.45 | **-10.34%** 📉 | +18.42% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.57 | R$ 1.75 | **-10.29%** 📉 | -29.29% ⬇️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 0.56 | R$ 0.62 | **-9.68%** 📉 | +13.57% ⬆️ |
