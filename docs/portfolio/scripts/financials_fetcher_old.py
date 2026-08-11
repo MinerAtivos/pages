@@ -18,24 +18,69 @@ import pandas as pd
 # Configurações de caminhos
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 ASSETS_FILE = os.path.join(os.path.dirname(__file__), '..', 'assets.json')
-PORTFOLIO_ANALYSIS_FILE = os.path.join(DATA_DIR, 'portfolio_analysis.json')
+PORTFOLIO_ANALYSIS_FILE = os.path.join(os.path.dirname(__file__), '..', 'assets.json') #os.path.join(DATA_DIR, 'portfolio_analysis.json')
 OUTPUT_FILE = os.path.join(DATA_DIR, 'market_financials.json')
 
 def load_portfolio_and_peers():
     """
-    Carrega todos os ativos de assets.json sem filtragem de setores,
-    garantindo que todos os ativos sejam processados.
+    Carrega a lista de ativos de assets.json.
+    Filtra os setores correspondentes às posições atuais do portfólio para evitar
+    baixar todos os 496 ativos (o que levaria muito tempo), mantendo a execução rápida e focada.
     """
+    # 1. Carrega o assets.json completo
     if not os.path.exists(ASSETS_FILE):
         print(f"❌ Arquivo de ativos {ASSETS_FILE} não encontrado.")
         sys.exit(1)
-        
+
     with open(ASSETS_FILE, 'r', encoding='utf-8') as f:
         assets_data = json.load(f)
         all_assets = assets_data.get('assets', [])
 
-    print(f"Carregados {len(all_assets)} ativos de assets.json para comparação e download.")
-    return all_assets
+    # Cria mapa de ticker -> meta
+    asset_map = {a['ticker']: a for a in all_assets if 'ticker' in a}
+
+    # 2. Carrega as posições do usuário
+    user_tickers = []
+    if os.path.exists(PORTFOLIO_ANALYSIS_FILE):
+        try:
+            with open(PORTFOLIO_ANALYSIS_FILE, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                user_tickers = [p['ticker'] for p in data.get('positions', []) if 'ticker' in p]
+        except Exception as e:
+            print(f"⚠️ Erro ao ler {PORTFOLIO_ANALYSIS_FILE}: {e}")
+
+    # Fallback se o portfólio estiver vazio
+    if not user_tickers:
+        user_tickers = ['PETR4.SA', 'VALE3.SA', 'ITUB4.SA', 'BBDC4.SA', 'ABEV3.SA', 'WEGE3.SA']
+
+    # 3. Identifica os setores dessas posições no assets.json
+    user_sectors = set()
+    for ticker in user_tickers:
+        if ticker in asset_map:
+            user_sectors.add(asset_map[ticker]['sector'])
+        else:
+            # Se não achar com sufixo ou sem, tenta limpar
+            t_clean = ticker.split('.')[0]
+            for asset_t, asset_val in asset_map.items():
+                if asset_t.startswith(t_clean):
+                    user_sectors.add(asset_val['sector'])
+                    break
+
+    print(f"Setores do portfólio do usuário: {list(user_sectors)}")
+
+    # 4. Seleciona todos os ativos de assets.json desses mesmos setores para servirem como pares de comparação
+    selected_assets = []
+    for asset in all_assets:
+        if asset.get('sector') in user_sectors:
+            selected_assets.append(asset)
+
+    # Garante que as posições originais do usuário estejam na lista (caso alguma não estivesse nos setores acima)
+    for ticker in user_tickers:
+        if ticker in asset_map and asset_map[ticker] not in selected_assets:
+            selected_assets.append(asset_map[ticker])
+
+    print(f"Selecionados {len(selected_assets)} ativos de assets.json para comparação e download.")
+    return selected_assets
 
 def safe_float(val):
     if val is None:
@@ -50,7 +95,7 @@ def clean_series(df, row_name):
     """Extrai uma linha do dataframe do yfinance convertendo timestamps de colunas para strings YYYY."""
     if df is None or df.empty:
         return {}
-    
+
     row_name_normalized = str(row_name).lower().replace(" ", "").strip()
     matched_idx = None
     for idx in df.index:
@@ -58,10 +103,10 @@ def clean_series(df, row_name):
         if idx_normalized == row_name_normalized:
             matched_idx = idx
             break
-            
+
     if matched_idx is None:
         return {}
-        
+
     row = df.loc[matched_idx]
     res = {}
     if isinstance(row, pd.Series):
@@ -85,9 +130,9 @@ def fetch_ticker_financials(asset_meta):
     print(f"Buscando {ticker} (Setor: {sector_b3} | Segmento: {description_b3})...")
     try:
         t = yf.Ticker(ticker)
-        
+
         info = t.info or {}
-            
+
         try:
             inc = t.get_income_stmt(as_dict=False)
         except Exception:
