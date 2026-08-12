@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-08-11
+## Resumo de Mercado - 2026-08-12
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| IGTI4.SA | Iguatemi S.A. | R$ 11.50 | R$ 10.90 | **+5.50%** 🚀 | +105.88% ⬆️ |
-| TUPY3.SA | Tupy S.A. | R$ 14.70 | R$ 14.22 | **+3.38%** 🚀 | +8.36% ⬆️ |
-| PRIO3.SA | Prio S.A. | R$ 59.25 | R$ 57.45 | **+3.13%** 🚀 | +15.41% ⬆️ |
-| TECN3.SA | Technos S.A. | R$ 9.50 | R$ 9.22 | **+3.04%** 🚀 | +260.63% ⬆️ |
-| CASH3.SA | Méliuz S.A. | R$ 5.20 | R$ 5.07 | **+2.56%** 🚀 | -5.39% ⬇️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 0.69 | R$ 0.56 | **+23.21%** 🚀 | +185.98% ⬆️ |
+| SNSY5.SA | Sansuy S.A. | R$ 2.67 | R$ 2.38 | **+12.18%** 🚀 | +215.79% ⬆️ |
+| BLAU3.SA | Blau Farmacêutica S.A. | R$ 9.30 | R$ 8.35 | **+11.38%** 🚀 | +290.77% ⬆️ |
+| ATED3.SA | ATED3.SA | R$ 1.49 | R$ 1.36 | **+9.56%** 🚀 | -2.55% ⬇️ |
+| TPIS3.SA | Triunfo Participações e Investimentos S.A. | R$ 8.69 | R$ 8.10 | **+7.28%** 🚀 | +0.79% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SIMH3.SA | SIMPAR S.A. | R$ 6.15 | R$ 7.04 | **-12.64%** 📉 | +129.86% ⬆️ |
-| MOVI3.SA | Movida Participações S.A. | R$ 6.86 | R$ 7.76 | **-11.60%** 📉 | +206.31% ⬆️ |
-| CSAN3.SA | Cosan S.A. | R$ 3.28 | R$ 3.67 | **-10.63%** 📉 | +145.10% ⬆️ |
-| ARML3.SA | Armac Locação, Logística e Serviços S.A. | R$ 3.18 | R$ 3.55 | **-10.42%** 📉 | +40.05% ⬆️ |
-| FESA4.SA | Cia de Ferro Ligas da Bahia S.A. - FERBASA | R$ 5.09 | R$ 5.68 | **-10.39%** 📉 | +413.64% ⬆️ |
+| CTAX3.SA | Contax Participações S.A. | R$ 1.57 | R$ 1.95 | **-19.49%** 📉 | -34.16% ⬇️ |
+| USIM6.SA | Usinas Siderúrgicas de Minas Gerais S.A. | R$ 7.10 | R$ 8.65 | **-17.92%** 📉 | +500.00% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.29 | R$ 1.57 | **-17.83%** 📉 | -31.17% ⬇️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | -70.53% ⬇️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.30 | R$ 1.51 | **-13.91%** 📉 | -59.38% ⬇️ |
