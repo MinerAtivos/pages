@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-08-19
+## Resumo de Mercado - 2026-08-20
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 5.90 | R$ 4.76 | **+23.95%** 🚀 | +11.91% ⬆️ |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.26 | R$ 1.10 | **+14.55%** 🚀 | +292.80% ⬆️ |
-| MEAL3.SA | International Meal Company Alimentação S.A. | R$ 0.71 | R$ 0.62 | **+14.52%** 🚀 | +82.67% ⬆️ |
-| TOKY3.SA | TOKY3.SA | R$ 0.29 | R$ 0.26 | **+11.54%** 🚀 | -30.12% ⬇️ |
-| CSAN3.SA | Cosan S.A. | R$ 3.39 | R$ 3.13 | **+8.31%** 🚀 | +94.53% ⬆️ |
+| AMAR3.SA | Marisa Lojas S.A. | R$ 0.63 | R$ 0.46 | **+36.96%** 🚀 | +743.05% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.47 | R$ 1.32 | **+11.36%** 🚀 | +77.67% ⬆️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 6.51 | R$ 5.90 | **+10.34%** 🚀 | +11.95% ⬆️ |
+| RCSL4.SA | Recrusul S/A | R$ 0.66 | R$ 0.60 | **+10.00%** 🚀 | +124.95% ⬆️ |
+| CASH3.SA | Méliuz S.A. | R$ 5.40 | R$ 5.03 | **+7.36%** 🚀 | +104.35% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.45 | R$ 1.79 | **-18.99%** 📉 | -79.59% ⬇️ |
-| ATED3.SA | ATED3.SA | R$ 1.29 | R$ 1.50 | **-14.00%** 📉 | +474.71% ⬆️ |
-| SNSY5.SA | Sansuy S.A. | R$ 2.61 | R$ 2.80 | **-6.79%** 📉 | -58.63% ⬇️ |
-| MNPR3.SA | Minupar Participações S.A. | R$ 3.97 | R$ 4.24 | **-6.37%** 📉 | +274.40% ⬆️ |
-| BSLI3.SA | BRB - Banco de Brasília S.A. | R$ 2.71 | R$ 2.88 | **-5.90%** 📉 | +365.57% ⬆️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.25 | R$ 1.45 | **-13.79%** 📉 | +608.72% ⬆️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.14 | R$ 0.16 | **-12.50%** 📉 | -53.40% ⬇️ |
+| RVEE3.SA | RVEE3.SA | R$ 0.66 | R$ 0.74 | **-10.81%** 📉 | +100.96% ⬆️ |
+| OIBR3.SA | Oi S.A. | R$ 0.09 | R$ 0.10 | **-10.00%** 📉 | +35.04% ⬆️ |
+| INTB3.SA | Intelbras S.A. - Indústria de Telecomunicação Eletrônica Brasileira | R$ 13.03 | R$ 14.39 | **-9.45%** 📉 | +92.90% ⬆️ |
