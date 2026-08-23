@@ -63,8 +63,8 @@ def load_tickers():
         try:
             with open(MARKET_SUMMARY_JSON, 'r', encoding='utf-8') as f:
                 summary = json.load(f)
-            tickers.update([a['ticker'] for a in summary.get('gainers', [])])
-            tickers.update([a['ticker'] for a in summary.get('losers', [])])
+            tickers.update([a['ticker'] for a in summary.get('gainers_ibov', [])])
+            tickers.update([a['ticker'] for a in summary.get('losers_ibov', [])])
         except: pass
 
     # 3. Fallback/Priority básicos
@@ -78,8 +78,8 @@ def get_market_movers():
         try:
             with open(MARKET_SUMMARY_JSON, 'r', encoding='utf-8') as f:
                 summary = json.load(f)
-            movers.extend([a['ticker'] for a in summary.get('gainers', [])])
-            movers.extend([a['ticker'] for a in summary.get('losers', [])])
+            movers.extend([a['ticker'] for a in summary.get('gainers_ibov', [])])
+            movers.extend([a['ticker'] for a in summary.get('losers_ibov', [])])
         except: pass
     return movers
 
@@ -424,8 +424,8 @@ def main():
         if os.path.exists(MARKET_SUMMARY_JSON):
             with open(MARKET_SUMMARY_JSON, 'r', encoding='utf-8') as f:
                 ms = json.load(f)
-                gainers = [a['ticker'] for a in ms.get('gainers', [])]
-                losers = [a['ticker'] for a in ms.get('losers', [])]
+                gainers = [a['ticker'] for a in ms.get('gainers_ibov', [])]
+                losers = [a['ticker'] for a in ms.get('losers_ibov', [])]
 
         gainers_summaries = [f"{t}: {news_output['assets'][t]['summary']}" for t in gainers if t in news_output["assets"]]
         losers_summaries = [f"{t}: {news_output['assets'][t]['summary']}" for t in losers if t in news_output["assets"]]
