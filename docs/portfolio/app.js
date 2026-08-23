@@ -22,7 +22,7 @@ class B3App {
     this.currentPage = 'dashboard';
     this.previousPage = 'dashboard';
     this.summaryPeriod = 'day'; // day, month, year
-    this.summaryFilter = 'geral'; // geral, liquid, ibov
+    this.summaryFilter = 'ibov'; // geral, liquid, ibov
     this.taxConfig = null;
     this.fiscalData = { dt_loss: 0, st_loss: 0, irrf_balance: 0, tax_balance: 0 };
     this.userComparisonTickers = []; // Ativos adicionados manualmente pelo usuário para comparação
@@ -3483,7 +3483,7 @@ class B3App {
     this.$('summaryDateFull').textContent = `Dados atualizados em ${new Date(summary.date + 'T00:00:00').toLocaleDateString('pt-BR')} (referente à coleta de ${new Date(summary.last_update).toLocaleDateString('pt-BR', {timeZone:'America/Sao_Paulo'})})`;
 
     let gainers, losers, deltaKey;
-    const filterSuffix = this.summaryFilter === 'geral' ? '' : `_${this.summaryFilter}`;
+    const filterSuffix = this.summaryFilter === 'ibov' ? '' : `_${this.summaryFilter}`;
 
     if (this.summaryPeriod === 'month') {
       gainers = summary[`gainers_month${filterSuffix}`];
