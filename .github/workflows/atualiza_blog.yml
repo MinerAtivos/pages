@@ -3,7 +3,7 @@ name: Atualiza blog
 on:
   schedule:
     # Executa todos os dias úteis às 23:00 UTC (20:00 BRT), após fechamento da B3
-    - cron: '5 22 * * 1-5'
+    - cron: '5 21 * * 1-5'
 
   workflow_dispatch:  # Permite execução manual
 
@@ -28,6 +28,10 @@ jobs:
 #        run: |
 #          python -m pip install --upgrade pip
 #          python -m pip install -r requirements.txt
+
+      - name: cria post
+        run: python cria_post.py
+
       
       - name: atualiza blog
         run: python update_blog.py
