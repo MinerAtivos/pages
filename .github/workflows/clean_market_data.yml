@@ -1,0 +1,35 @@
+name: Clean Market Data
+
+on:
+  schedule:
+    # Executa todos os domingos às 03:00 UTC (00:00 BRT)
+    - cron: '0 3 * * 0'
+    
+  workflow_dispatch:  # Permite execução manual via GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  clean-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Clean market data and archive older history
+        run: python docs/portfolio/scripts/clean_market_data.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add docs/portfolio/data/market_data.json docs/portfolio/data/market_data_historical.json
+          git commit -m "Chore: Limpeza semanal de market_data.json e unificação de histórico - $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push
