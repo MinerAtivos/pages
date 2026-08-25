@@ -40,8 +40,8 @@ def format_ticker_tag(ticker):
 
 def generate_preformatted_text(summary_data):
     """Gera o bloco pré-formatado com Altas e Baixas"""
-    gainers = summary_data.get('gainers', [])
-    losers = summary_data.get('losers', [])
+    gainers = summary_data.get('gainers_ibov', [])
+    losers = summary_data.get('losers_ibov', [])
 
     lines = []
     lines.append("Altas")
