@@ -44,22 +44,22 @@ def generate_preformatted_text(summary_data):
     losers = summary_data.get('losers_ibov', [])
 
     lines = []
-    lines.append("Altas")
+    lines.append("📈Altas")
     lines.append("")
     for item in gainers:
         tag = format_ticker_tag(item['ticker'])
         close = item.get('last_close', 0.0)
         delta_pct = item.get('daily_delta', 0.0) * 100
-        lines.append(f"{tag}, {close:.2f}, +{delta_pct:.2f}%")
+        lines.append(f"{tag} {close:.2f} {delta_pct:.2f}%")
 
     lines.append("")
-    lines.append("Baixas")
+    lines.append("📉Baixas")
     lines.append("")
     for item in losers:
         tag = format_ticker_tag(item['ticker'])
         close = item.get('last_close', 0.0)
         delta_pct = item.get('daily_delta', 0.0) * 100
-        lines.append(f"{tag}, {close:.2f}, {delta_pct:.2f}%")
+        lines.append(f"{tag} {close:.2f} {delta_pct:.2f}%")
 
     return "\n".join(lines)
 
