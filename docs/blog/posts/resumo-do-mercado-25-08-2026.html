@@ -1,0 +1,597 @@
+<html lang="pt-br">
+	<head>
+		<link rel="icon" type="image/png" href="../favicon.png">
+
+    <script src="../../cookie-consent.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinerAtivos | Insights de Mercado</title>
+	                <meta name="MinerAtivos" content="Insights de mercado acionáveis. Fundamentos para análises e estratégias baseadas em dados para os mercados financeiros dinâmicos de hoje. Fornecendo insights de mercado acionáveis​para ajudar os investidores a tomarem decisões baseados em dados. Mercado de Ações, Commodities, Altas e quedas, Forecast, Algoritmos, Radar Intraday, Resumo do mercado, Balanceamento de portfólio">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+			<link rel="stylesheet" href="../style.css">
+			<script src="../script.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        dark: '#1f2937',
+                        light: '#f9fafb'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .ticker-container {
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .chart-container {
+            height: 300px;
+            position: relative;
+        }
+
+        .trend-up {
+            color: #10b981;
+        }
+
+        .trend-down {
+            color: #ef4444;
+        }
+
+        .trend-neutral {
+            color: #6b7280;
+        }
+
+	.iframe-container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      border-radius: 12px;
+      clip-path: inset(0 round 12px); /* recorte arredondado */
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 400px; /* maior que o container para mostrar só uma parte */
+      border: none;
+      pointer-events: none;
+      transform: translateY(-100px); /* move o conteúdo para cima */
+    }
+
+    #mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 75%;
+        max-width: 300px;
+        background-color: white;
+        z-index: 100;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-chart-line text-primary text-2xl"></i>
+                <h1 class="text-xl font-bold text-dark">Miner<span class="text-primary">Ativos</span></h1>
+            </div>
+            <div class="hidden md:flex md:items-center md:space-x-8">
+                <nav class="flex flex-col md:flex-row md:space-x-8">
+					<a href="../index.html" class="text-dark hover:text-primary font-medium">Início</a>
+                    <a href="#" class="text-dark hover:text-primary font-medium">Mercados</a>
+                    <!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
+					<a href="#oraculo" class="text-dark hover:text-primary font-medium">Forecast</a>
+					<a href="../metodologia.html" class="text-dark hover:text-primary font-medium">Algoritmos</a>
+					<a href="#oraculo" class="text-dark hover:text-primary font-medium">Radar Intraday</a>
+					<a href="../monitor.html" class="text-dark hover:text-primary font-medium">Monitor</a>
+					<a href="../balanceamento.html" class="text-dark hover:text-primary font-medium">Balanceamento de portfólio</a>
+                    <a href="../metodologia.html" class="text-dark hover:text-primary font-medium">Sobre</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-md font-medium" onclick="focarNoFormulario()">
+                    Seguir
+                </button>
+                <button id="hamburger-button" class="md:hidden text-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <script>
+                    function focarNoFormulario() {
+                      const campoNome = document.getElementById("nome");
+                      campoNome.scrollIntoView({ behavior: "smooth", block: "center" });
+                      campoNome.focus();
+                    }
+                </script>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <div class="flex justify-end">
+                    <button id="close-button" class="text-dark p-2">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <nav class="flex flex-col space-y-2">
+					<a href="../index.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Início</a>
+					<a href="#" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Mercados</a>
+                    <!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
+					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Forecast</a>
+					<a href="../metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Algoritmos</a>
+					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Radar Intraday</a>
+					<a href="../monitor.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Monitor</a>
+					<a href="../balanceamento.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Balanceamento de portfólio</a>
+                    <a href="../metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<!-- aqui começa o corpo da página-->
+
+<main class="full-screen-main">
+    
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <header class="mb-8">
+            <div class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
+                <time datetime="2026-08-25">25/08/2026</time>
+                <span>•</span>
+                <div class="flex"><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#resumo</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#mercado</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#b3</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#altas</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#baixas</span></div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6">Resumo do mercado 25.08.2026</h1>
+            <img src="../../assets/blog/default-cover.png" alt="Resumo do mercado 25.08.2026" class="w-full h-[400px] object-cover rounded-2xl shadow-lg mb-8">
+        </header>
+        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+            <div class="market-post-container space-y-6">
+    <h2 class="text-2xl font-bold text-gray-900 border-b pb-2 mb-4">Resumo do mercado 25.08</h2>
+
+    <div class="pre-formatted-block bg-gray-900 text-green-400 p-5 rounded-xl font-mono text-sm shadow-inner relative overflow-x-auto">
+        <button onclick="navigator.clipboard.writeText(this.nextElementSibling.innerText); alert('Copiado com sucesso!');" class="absolute top-3 right-3 bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded border border-gray-600 font-sans transition-all">
+            <i class="fas fa-copy mr-1"></i> Copiar
+        </button>
+        <pre class="whitespace-pre">Altas
+
+#MGLU3, 4.54, +9.13%
+#ASAI3, 8.96, +7.82%
+#CSAN3, 3.75, +7.14%
+#RADL3, 19.59, +6.93%
+#EZTC3, 11.76, +6.81%
+
+Baixas
+
+#BRKM5, 4.11, -13.11%
+#SMTO3, 18.46, -4.20%
+#USIM5, 6.97, -2.11%
+#PETR3, 45.98, -2.05%
+#PETR4, 41.35, -1.80%</pre>
+    </div>
+
+    <div class="news-summary-section mt-8 pt-4 border-t border-gray-200">
+        <h3 class="text-xl font-bold mb-3 text-gray-800">Panorama Geral do Mercado</h3>
+        <p class="text-gray-700 leading-relaxed bg-blue-50/50 p-4 rounded-lg border border-blue-100">O mercado brasileiro segue atento ao cenário fiscal e movimentações de commodities.</p>
+        
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800">Destaques por Ativo</h3>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li><strong>#MGLU3:</strong> A queda nas ações de MGLU3, conforme a notícia, sinaliza um forte sentimento de pessimismo do mercado em relação à empresa. Este movimento reflete, usualmente, preocupações com o cenário macroeconômico adverso, como juros elevados e inflação, que impactam diretamente o poder de compra e o acesso ao crédito do consumidor, fragilizando o setor de varejo de bens duráveis e e-commerce. Adicionalmente, a intensa concorrência no segmento e potenciais desafios de rentabilidade podem estar pressionando as expectativas dos investidores, fazendo da desvalorização do papel o fato principal impulsionado por um ambiente econômico desafiador.</li><li><strong>#ASAI3:</strong> ASAI3 registrou uma valorização expressiva de aproximadamente 7,7% em uma única sessão, superando significativamente o avanço de 0,9% do Ibovespa. Essa performance robusta indica um forte fluxo de capital e interesse comprador concentrado na ação, descolado da média do mercado, que também apresentou alta. O sentimento de mercado para Assaí é claramente otimista, refletindo uma reação positiva dos investidores a potenciais catalisadores da empresa ou a uma reavaliação de seu valor.</li><li><strong>#CSAN3:</strong> Cosan (CSAN3) demonstra um progresso financeiro e estratégico notável, evidenciado pela diminuição do prejuízo líquido e um avanço robusto em sua agenda de desalavancagem. A concretização dessa estratégia é vista nas propostas avançadas para a venda de uma fatia da Rumo (RAIL3), um movimento crucial que injetará capital para a redução de dívida e otimização do portfólio da holding. Este desinvestimento é fundamental para os acionistas, pois sinaliza um reforço na solvência da companhia e uma gestão ativa na alocação de capital, conforme o direcionamento estratégico da administração comunicado no *earnings call*. O sentimento geral do mercado é claramente otimista, refletindo a disciplina na gestão da dívida e a execução de um plano tangível para melhorar a saúde financeira e a sustentabilidade de longo prazo da Cosan.</li><li><strong>#RADL3:</strong> A RD Saúde (RADL3) demonstra um cenário multifacetado, com forte crescimento de receita no 4T23 (corrigindo o provável erro de digitação para 4T25), solidificando sua posição de destaque no setor, conforme ressaltado pelo Morgan Stanley. O "efeito Mounjaro" também sinaliza um catalisador positivo de vendas, impulsionando a demanda por novos tratamentos. Contudo, o recuo do lucro no mesmo período aponta para pressões de rentabilidade, que demandam atenção. Embora o Safra tenha ajustado o preço-alvo para baixo, a manutenção da recomendação de "compra" sugere que a tese fundamental para o papel persiste, com potencial de valorização.
+
+O sentimento de mercado para RADL3 pode ser caracterizado como cautelosamente otimista. Há um forte reconhecimento do potencial de crescimento da empresa e de sua liderança de mercado, corroborado por instituições financeiras relevantes. No entanto, a pressão sobre a lucratividade e o ajuste de preço-alvo por parte do Safra indicam que o mercado está atento à capacidade da empresa de converter esse crescimento robusto de receita em resultados financeiros mais sólidos no *bottom line*, sendo este o principal ponto de atenção e eventual contradição entre o forte desempenho operacional e o lucro final.</li><li><strong>#EZTC3:</strong> A notícia de que a Eztec (EZTC3) figura entre as maiores altas do Ibovespa, com valorização expressiva divulgada pelo Investing.com, sugere um forte otimismo do mercado em relação à ação, impulsionado pelo desempenho positivo do setor de construção. O destaque para construtoras como a Tenda no Ibovespa reforça essa percepção positiva e indica um ambiente favorável para empresas do segmento imobiliário. Embora a notícia da Suno mencione dividendos de outras empresas, a relevância da cotação da EZTC3 como um dos destaques positivos da bolsa demonstra um apetite renovado dos investidores pelo papel, provavelmente antecipando bons resultados ou fundamentais sólidos.</li><li><strong>#BRKM5:</strong> O pedido de recuperação extrajudicial da Braskem (BRKM5), anunciado com confirmação e planos detalhados, representa um movimento estratégico da empresa para reestruturar suas dívidas e garantir sua continuidade operacional, impactando diretamente os acionistas com potencial diluição ou reestruturação de seus investimentos. O mercado reage com forte pessimismo, refletido na queda expressiva das ações e sua exclusão de 18 índices da B3, sinalizando apreensão quanto à capacidade da empresa de honrar seus compromissos e à incerteza sobre os termos do plano de recuperação. Essa situação gera um cenário de atenção para os investidores, que agora monitoram os detalhes da negociação com credores e o desenrolar do processo judicial para avaliar os riscos e oportunidades futuras.</li><li><strong>#SMTO3:</strong> O lucro da São Martinho (SMTO3) apresentou um crescimento impulsionado por efeitos não recorrentes, o que sugere uma melhora pontual nos resultados, mas com a necessidade de observação contínua para avaliar a sustentabilidade. O expressivo aumento de 30% nas ações em agosto, alinhado a outros nomes do setor sucroalcooleiro como Jalles (JALL3) e Raízen (RAIZ4), indica um forte sentimento otimista do mercado, possivelmente devido a fatores macroeconômicos favoráveis à commodity ou expectativas de melhora operacional. A análise do preço justo versus o preço alvo e teto sugere que o ativo pode estar em uma fase de valorização significativa, com potencial de crescimento adicional, mas ressaltando a importância de se atentar aos fundamentos que sustentam essa trajetória positiva.</li><li><strong>#USIM5:</strong> A Usiminas (USIM5) encontra-se em um momento de acentuado otimismo no mercado, catalisado inicialmente pela projeção da Nord Investimentos de um lucro que mais que dobraria no 1T26, alcançando R$ 896 milhões, evidenciando uma forte performance operacional. No entanto, o principal motor da valorização de até 9% de suas ações é a especulação sobre um possível fechamento de capital da companhia, que inicia sua temporada de balanços do 1T26. Tal movimento, que usualmente implica uma Oferta Pública de Aquisição (OPA) com prêmio para acionistas minoritários, tem gerado um entusiasmo considerável entre os investidores. O sentimento geral é claramente otimista, combinando expectativas de bons resultados financeiros com a possibilidade de uma saída lucrativa para os acionistas.</li><li><strong>#PETR3:</strong> A Petrobras demonstra uma estratégia agressiva de expansão internacional e tecnológica, com a exploração do pré-sal em águas profundas do México e a mira em blocos offshore no Gana, visando novas fronteiras de produção. Simultaneamente, a expansão da parceria com a Halliburton em projetos de CCS (captura e armazenamento de carbono) no Brasil sublinha o compromisso da companhia com a transição energética e a sustentabilidade. Por outro lado, a notícia sobre a PetroReconcavo evitando investimentos via acordo com a Petrobras sugere uma otimização de custos ou renegociação de parcerias estratégicas que pode ser interpretada tanto como eficiência operacional quanto como um possível ajuste no escopo de projetos futuros. O sentimento geral do mercado tende a ser positivo, impulsionado pela visão de crescimento global e inovação em tecnologias verdes, embora a negociação com a PetroReconcavo adicione um matiz de cautela quanto à alocação de capital.</li><li><strong>#PETR4:</strong> A Petrobras demonstra uma estratégia clara de crescimento e sustentabilidade, buscando expandir sua presença internacional. A exploração do pré-sal em águas profundas no México com a Pemex e as negociações por blocos de exploração offshore em Gana indicam um movimento proativo para diversificar reservas e aumentar a produção futura, capitalizando sua expertise em ambientes desafiadores. Adicionalmente, o acordo de Captura e Armazenamento de Carbono (CCS) com a Halliburton no Brasil reforça seu compromisso com a descarbonização e a pauta ESG, vital para sua sustentabilidade de longo prazo. O sentimento geral é otimista, refletindo a busca por novas oportunidades de crescimento e a mitigação de riscos ambientais.</li>
+            </ul>
+            
+    </div>
+</div>
+        </div>
+        <footer class="mt-12 pt-8 border-t border-gray-200">
+            <a href="../index.html" class="text-primary hover:text-secondary font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Voltar ao Blog
+            </a>
+        </footer>
+    </article>
+    
+</main>
+
+<!-- até aqui vai o corpo da pagina-->
+
+	<!-- trecho adaptado para captação de leads -->
+
+<section class="py-16 bg-primary text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Mantenha-se à frente no mercado</h2>
+    <p class="text-xl opacity-90 max-w-2xl mx-auto mb-8">
+      Receba nossos insights e análises diárias de mercado diretamente em sua caixa de entrada.
+    </p>
+    <div id="message" class="message"></div>
+    <form id="leadForm" class="flex flex-col gap-3 items-center max-w-md mx-auto">
+      <input type="text" name="nome" id="nome" placeholder="Preencha o seu nome completo"
+        class="px-4 py-3 rounded-md text-dark w-full" required>
+      <input type="email" name="email" id="email" placeholder="Seu endereço de email"
+        class="px-4 py-3 rounded-md text-dark w-full hidden" required>
+      <button type="submit"
+        class="bg-secondary hover:bg-blue-900 px-6 py-3 rounded-md font-semibold mt-2 hidden"
+        id="submitBtn">
+        Inscrever <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </form>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('leadForm');
+  const nomeInput = document.getElementById('nome');
+  const emailInput = document.getElementById('email');
+  const submitBtn = document.getElementById('submitBtn');
+  const messageDiv = document.getElementById('message');
+
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec';
+
+  function showMessage(text, type) {
+    messageDiv.textContent = text;
+    messageDiv.className = `message ${type} show`;
+    setTimeout(() => {
+      messageDiv.classList.remove('show');
+    }, 5000);
+  }
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  async function submitToGoogleScript(formData) {
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData)
+      });
+      return { success: true };
+    } catch (error) {
+      console.error('Erro ao enviar dados:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.classList.add('loading');
+
+    try {
+      const formData = new FormData(form);
+      const nome = formData.get('nome');
+      const email = formData.get('email');
+
+      if (!nome || nome.trim().length < 2) {
+        showMessage('Por favor, insira seu nome completo.', 'error');
+        return;
+      }
+
+      if (!email || !isValidEmail(email)) {
+        showMessage('Por favor, insira um e-mail válido.', 'error');
+        return;
+      }
+
+      const result = await submitToGoogleScript(formData);
+
+      if (result.success) {
+        showMessage('Inscrição realizada com sucesso!', 'success');
+        form.reset();
+        nomeInput.classList.add('hidden');
+        emailInput.classList.add('hidden');
+        submitBtn.classList.add('hidden');
+      } else {
+        showMessage('Erro ao enviar. Tente novamente.', 'error');
+      }
+    } catch (error) {
+      console.error('Erro no envio:', error);
+      showMessage('Erro inesperado. Tente novamente mais tarde.', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('loading');
+    }
+  }
+
+  nomeInput.addEventListener('input', () => {
+    if (nomeInput.value.trim().length >= 2) {
+      emailInput.classList.remove('hidden');
+      submitBtn.classList.remove('hidden');
+    } else {
+      emailInput.classList.add('hidden');
+      submitBtn.classList.add('hidden');
+    }
+  });
+
+  form.addEventListener('submit', handleFormSubmit);
+});
+</script>
+
+
+
+<!-- trecho adaptado para captação de leads -->
+
+
+
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('leadForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const messageDiv = document.getElementById('message');
+
+        // IMPORTANTE: Substitua esta URL pela URL do seu Google Apps Script
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec';
+
+        // Função para mostrar mensagens ao usuário
+        function showMessage(text, type) {
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type} show`;
+
+            // Remove a mensagem após 5 segundos
+            setTimeout(() => {
+                messageDiv.classList.remove('show');
+            }, 5000);
+        }
+
+        // Função para validar email
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Função para formatar telefone (opcional)
+        function formatPhone(phone) {
+            // Remove todos os caracteres não numéricos
+            const cleaned = phone.replace(/\D/g, '');
+
+            // Aplica máscara brasileira se tiver 10 ou 11 dígitos
+            if (cleaned.length === 10) {
+                return cleaned.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+            } else if (cleaned.length === 11) {
+                return cleaned.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+            }
+
+            return phone; // Retorna original se não conseguir formatar
+        }
+
+        // Função para validar o formulário
+        function validateForm(formData) {
+            const errors = [];
+
+            if (!formData.get('nome') || formData.get('nome').trim().length < 2) {
+                errors.push('Nome deve ter pelo menos 2 caracteres');
+            }
+
+            if (!formData.get('email') || !isValidEmail(formData.get('email'))) {
+                errors.push('E-mail deve ter um formato válido');
+            }
+
+            return errors;
+        }
+
+        // Função para enviar dados para o Google Apps Script
+        async function submitToGoogleScript(formData) {
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // Necessário para Google Apps Script
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams(formData)
+                });
+
+                // Como usamos 'no-cors', não podemos ler a resposta
+                // Assumimos sucesso se não houve erro na requisição
+                return { success: true };
+
+            } catch (error) {
+                console.error('Erro ao enviar dados:', error);
+                return { success: false, error: error.message };
+            }
+        }
+
+        // Função principal para processar o envio do formulário
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Desabilita o botão e mostra loading
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+
+            try {
+                // Coleta os dados do formulário
+                const formData = new FormData(form);
+
+                // Formata o telefone se fornecido
+                if (formData.get('telefone')) {
+                    formData.set('telefone', formatPhone(formData.get('telefone')));
+                }
+
+                // Valida os dados
+                const validationErrors = validateForm(formData);
+                if (validationErrors.length > 0) {
+                    showMessage(validationErrors.join('. '), 'error');
+                    return;
+                }
+
+                // Envia os dados
+                const result = await submitToGoogleScript(formData);
+
+                if (result.success) {
+                    showMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+                    form.reset(); // Limpa o formulário
+                } else {
+                    showMessage('Erro ao enviar mensagem. Tente novamente.', 'error');
+                }
+
+            } catch (error) {
+                console.error('Erro no envio:', error);
+                showMessage('Erro inesperado. Tente novamente mais tarde.', 'error');
+            } finally {
+                // Reabilita o botão e remove loading
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('loading');
+            }
+        }
+
+        // Adiciona máscara de telefone em tempo real
+        const phoneInput = document.getElementById('telefone');
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+
+            if (value.length <= 11) {
+                if (value.length <= 10) {
+                    value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+                } else {
+                    value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+                }
+                e.target.value = value;
+            }
+        });
+
+        // Adiciona validação em tempo real para email
+        const emailInput = document.getElementById('email');
+        emailInput.addEventListener('blur', function(e) {
+            if (e.target.value && !isValidEmail(e.target.value)) {
+                e.target.style.borderColor = '#e74c3c';
+            } else {
+                e.target.style.borderColor = '#e1e8ed';
+            }
+        });
+
+        // Adiciona o event listener para o envio do formulário
+        form.addEventListener('submit', handleFormSubmit);
+
+        // Verifica se a URL do Google Script foi configurada
+        if (GOOGLE_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec') {
+            console.warn('⚠️ ATENÇÃO: Configure a URL do Google Apps Script na variável GOOGLE_SCRIPT_URL');
+            showMessage('Configuração pendente: URL do Google Apps Script não definida.', 'error');
+        }
+    });
+    </script>
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-chart-line text-primary text-2xl"></i>
+                        <h3 class="text-xl font-bold">Miner<span class="text-primary">Ativos</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Fornecendo insights de mercado acionáveis ​para ajudar os investidores a tomarem decisões baseados em dados.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Mercados</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mercado de Ações</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Commodities</a></li>
+                        <li><a href="#oraculo" class="text-gray-400 hover:text-white">Altas e quedas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Recursos</h4>
+                    <ul class="space-y-2">
+					<li><a href="../index.html" class="text-gray-400 hover:text-white">Início</a></li>
+					<li><a href="#" class="text-gray-400 hover:text-white">Mercados</a></li>
+                    <li><!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
+					<li><a href="#oraculo" class="text-gray-400 hover:text-white">Forecast</a></li>
+					<li><a href="../metodologia.html" class="text-gray-400 hover:text-white">Algoritmos</a></li>
+					<li><a href="#oraculo" class="text-gray-400 hover:text-white">Radar Intraday</a></li>
+					<li><a href="../monitor.html" class="text-gray-400 hover:text-white">Monitor</a></li>
+					<li><a href="../balanceamento.html" class="text-gray-400 hover:text-white">Balanceamento de portfólio</a></li>
+                    <li><a href="../metodologia.html" class="text-gray-400 hover:text-white">Sobre</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quem somos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../metodologia.html" class="text-gray-400 hover:text-white">Sobre</a></li>
+						<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 MinerAtivos.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const closeButton = document.getElementById('close-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        closeButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+</script>
+
+</body></html>
