@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-08-27
+## Resumo de Mercado - 2026-08-26
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| BRKM3.SA | Braskem S.A. | R$ 3.87 | R$ 3.10 | **+24.84%** 🚀 | +424.97% ⬆️ |
-| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 2.39 | R$ 1.96 | **+21.94%** 🚀 | -22.58% ⬇️ |
-| BRKM5.SA | Braskem S.A. | R$ 4.22 | R$ 3.52 | **+19.89%** 🚀 | +97.73% ⬆️ |
-| TOKY3.SA | Grupo Toky S.A. | R$ 0.39 | R$ 0.33 | **+18.18%** 🚀 | +156.98% ⬆️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | +179.54% ⬆️ |
+| TELB3.SA | Telecomunicações Brasileiras S.A. - Telebras | R$ 18.98 | R$ 13.80 | **+37.54%** 🚀 | +1885.09% ⬆️ |
+| TELB4.SA | Telecomunicações Brasileiras S.A. - Telebras | R$ 9.35 | R$ 7.56 | **+23.68%** 🚀 | +1473.29% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.77 | R$ 1.55 | **+14.19%** 🚀 | +13.72% ⬆️ |
+| AMAR3.SA | Marisa Lojas S.A. | R$ 0.74 | R$ 0.65 | **+13.85%** 🚀 | +158.24% ⬆️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 14.42 | R$ 12.74 | **+13.19%** 🚀 | +129.67% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 8.21 | R$ 14.42 | **-43.07%** 📉 | -3.17% ⬇️ |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.38 | R$ 1.92 | **-28.12%** 📉 | +70.91% ⬆️ |
-| FIEI3.SA | Fica Empreendimentos Imobiliarios S.A | R$ 7.52 | R$ 9.39 | **-19.91%** 📉 | 0.00% — |
-| DTCY3.SA | DTCOM - Direct to Company S.A. | R$ 2.00 | R$ 2.35 | **-14.89%** 📉 | +14600.00% ⬆️ |
-| RCSL4.SA | Recrusul S/A | R$ 0.49 | R$ 0.57 | **-14.04%** 📉 | -34.19% ⬇️ |
+| RCSL4.SA | Recrusul S/A | R$ 0.57 | R$ 0.75 | **-24.00%** 📉 | -3.28% ⬇️ |
+| BRKM5.SA | Braskem S.A. | R$ 3.52 | R$ 4.11 | **-14.36%** 📉 | +169.26% ⬆️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | -63.41% ⬇️ |
+| BRKM3.SA | Braskem S.A. | R$ 3.10 | R$ 3.50 | **-11.43%** 📉 | +340.48% ⬆️ |
+| PATI4.SA | Panatlântica S.A. | R$ 27.61 | R$ 30.57 | **-9.68%** 📉 | -10.00% ⬇️ |
