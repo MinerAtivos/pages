@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-08-26
+## Resumo de Mercado - 2026-08-28
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| TELB3.SA | Telecomunicações Brasileiras S.A. - Telebras | R$ 18.98 | R$ 13.80 | **+37.54%** 🚀 | +1885.09% ⬆️ |
-| TELB4.SA | Telecomunicações Brasileiras S.A. - Telebras | R$ 9.35 | R$ 7.56 | **+23.68%** 🚀 | +1473.29% ⬆️ |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.77 | R$ 1.55 | **+14.19%** 🚀 | +13.72% ⬆️ |
-| AMAR3.SA | Marisa Lojas S.A. | R$ 0.74 | R$ 0.65 | **+13.85%** 🚀 | +158.24% ⬆️ |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 14.42 | R$ 12.74 | **+13.19%** 🚀 | +129.67% ⬆️ |
+| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 0.40 | R$ 0.34 | **+17.65%** 🚀 | +175.01% ⬆️ |
+| TPIS3.SA | Triunfo Participações e Investimentos S.A. | R$ 10.00 | R$ 8.60 | **+16.28%** 🚀 | +346.47% ⬆️ |
+| ARND3.SA | Arandu Investimentos S.A. | R$ 0.58 | R$ 0.50 | **+16.00%** 🚀 | +130.16% ⬆️ |
+| MWET4.SA | Wetzel S.A. | R$ 25.00 | R$ 21.59 | **+15.79%** 🚀 | -81.31% ⬇️ |
+| BOBR4.SA | Bombril S.A. | R$ 1.34 | R$ 1.18 | **+13.56%** 🚀 | +498.17% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| RCSL4.SA | Recrusul S/A | R$ 0.57 | R$ 0.75 | **-24.00%** 📉 | -3.28% ⬇️ |
-| BRKM5.SA | Braskem S.A. | R$ 3.52 | R$ 4.11 | **-14.36%** 📉 | +169.26% ⬆️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | -63.41% ⬇️ |
-| BRKM3.SA | Braskem S.A. | R$ 3.10 | R$ 3.50 | **-11.43%** 📉 | +340.48% ⬆️ |
-| PATI4.SA | Panatlântica S.A. | R$ 27.61 | R$ 30.57 | **-9.68%** 📉 | -10.00% ⬇️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 4.11 | R$ 8.21 | **-49.94%** 📉 | +38.83% ⬆️ |
+| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.44 | R$ 1.84 | **-21.74%** 📉 | +11.45% ⬆️ |
+| RCSL4.SA | Recrusul S/A | R$ 0.41 | R$ 0.49 | **-16.33%** 📉 | +157.09% ⬆️ |
+| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 1.31 | R$ 1.54 | **-14.94%** 📉 | +21.36% ⬆️ |
+| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.45 | R$ 3.98 | **-13.32%** 📉 | +66.67% ⬆️ |
