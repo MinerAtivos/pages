@@ -22,7 +22,7 @@ class B3App {
     this.currentPage = 'dashboard';
     this.previousPage = 'dashboard';
     this.summaryPeriod = 'day'; // day, month, year
-    this.summaryFilter = 'geral'; // geral, liquid, ibov
+    this.summaryFilter = 'ibov'; // geral, liquid, ibov
     this.taxConfig = null;
     this.fiscalData = { dt_loss: 0, st_loss: 0, irrf_balance: 0, tax_balance: 0 };
     this.userComparisonTickers = []; // Ativos adicionados manualmente pelo usuário para comparação
