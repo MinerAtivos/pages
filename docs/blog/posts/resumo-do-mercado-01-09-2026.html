@@ -1,0 +1,595 @@
+<html lang="pt-br">
+	<head>
+		<link rel="icon" type="image/png" href="../favicon.png">
+
+    <script src="../../cookie-consent.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinerAtivos | Insights de Mercado</title>
+	                <meta name="MinerAtivos" content="Insights de mercado acionáveis. Fundamentos para análises e estratégias baseadas em dados para os mercados financeiros dinâmicos de hoje. Fornecendo insights de mercado acionáveis​para ajudar os investidores a tomarem decisões baseados em dados. Mercado de Ações, Commodities, Altas e quedas, Forecast, Algoritmos, Radar Intraday, Resumo do mercado, Balanceamento de portfólio">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+			<link rel="stylesheet" href="../style.css">
+			<script src="../script.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        dark: '#1f2937',
+                        light: '#f9fafb'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .ticker-container {
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .chart-container {
+            height: 300px;
+            position: relative;
+        }
+
+        .trend-up {
+            color: #10b981;
+        }
+
+        .trend-down {
+            color: #ef4444;
+        }
+
+        .trend-neutral {
+            color: #6b7280;
+        }
+
+	.iframe-container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      border-radius: 12px;
+      clip-path: inset(0 round 12px); /* recorte arredondado */
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 400px; /* maior que o container para mostrar só uma parte */
+      border: none;
+      pointer-events: none;
+      transform: translateY(-100px); /* move o conteúdo para cima */
+    }
+
+    #mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 75%;
+        max-width: 300px;
+        background-color: white;
+        z-index: 100;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-chart-line text-primary text-2xl"></i>
+                <h1 class="text-xl font-bold text-dark">Miner<span class="text-primary">Ativos</span></h1>
+            </div>
+            <div class="hidden md:flex md:items-center md:space-x-8">
+                <nav class="flex flex-col md:flex-row md:space-x-8">
+					<a href="../index.html" class="text-dark hover:text-primary font-medium">Início</a>
+                    <a href="#" class="text-dark hover:text-primary font-medium">Mercados</a>
+                    <!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
+					<a href="#oraculo" class="text-dark hover:text-primary font-medium">Forecast</a>
+					<a href="../metodologia.html" class="text-dark hover:text-primary font-medium">Algoritmos</a>
+					<a href="#oraculo" class="text-dark hover:text-primary font-medium">Radar Intraday</a>
+					<a href="../monitor.html" class="text-dark hover:text-primary font-medium">Monitor</a>
+					<a href="../balanceamento.html" class="text-dark hover:text-primary font-medium">Balanceamento de portfólio</a>
+                    <a href="../metodologia.html" class="text-dark hover:text-primary font-medium">Sobre</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-md font-medium" onclick="focarNoFormulario()">
+                    Seguir
+                </button>
+                <button id="hamburger-button" class="md:hidden text-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <script>
+                    function focarNoFormulario() {
+                      const campoNome = document.getElementById("nome");
+                      campoNome.scrollIntoView({ behavior: "smooth", block: "center" });
+                      campoNome.focus();
+                    }
+                </script>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <div class="flex justify-end">
+                    <button id="close-button" class="text-dark p-2">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <nav class="flex flex-col space-y-2">
+					<a href="../index.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Início</a>
+					<a href="#" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Mercados</a>
+                    <!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
+					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Forecast</a>
+					<a href="../metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Algoritmos</a>
+					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Radar Intraday</a>
+					<a href="../monitor.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Monitor</a>
+					<a href="../balanceamento.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Balanceamento de portfólio</a>
+                    <a href="../metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<!-- aqui começa o corpo da página-->
+
+<main class="full-screen-main">
+    
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <header class="mb-8">
+            <div class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
+                <time datetime="2026-09-01">01/09/2026</time>
+                <span>•</span>
+                <div class="flex"><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#resumo</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#mercado</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#b3</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#altas</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#baixas</span></div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6">Resumo do mercado 01.09.2026</h1>
+            <img src="../../assets/blog/default-cover.png" alt="Resumo do mercado 01.09.2026" class="w-full h-[400px] object-cover rounded-2xl shadow-lg mb-8">
+        </header>
+        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+            <div class="market-post-container space-y-6">
+    <h2 class="text-2xl font-bold text-gray-900 border-b pb-2 mb-4">Resumo do mercado 01.09</h2>
+
+    <div class="pre-formatted-block bg-gray-900 text-green-400 p-5 rounded-xl font-mono text-sm shadow-inner relative overflow-x-auto">
+        <button onclick="navigator.clipboard.writeText(this.nextElementSibling.innerText); alert('Copiado com sucesso!');" class="absolute top-3 right-3 bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded border border-gray-600 font-sans transition-all">
+            <i class="fas fa-copy mr-1"></i> Copiar
+        </button>
+        <pre class="whitespace-pre">📈Altas
+
+#EZTC3 13.21 11.01%
+#CSNA3 5.74 7.89%
+#SMTO3 21.21 7.39%
+#PETR3 52.37 4.14%
+#PETR4 46.87 4.11%
+
+📉Baixas
+
+#ALPA4 14.00 -6.60%
+#MGLU3 4.62 -3.95%
+#FLRY3 19.21 -2.39%
+#BRKM5 4.24 -2.08%
+#LWSA3 4.22 -1.86%</pre>
+    </div>
+
+    <div class="news-summary-section mt-8 pt-4 border-t border-gray-200">
+        <h3 class="text-xl font-bold mb-3 text-gray-800">Panorama Geral do Mercado</h3>
+        <p class="text-gray-700 leading-relaxed bg-blue-50/50 p-4 rounded-lg border border-blue-100">O mercado brasileiro segue atento ao cenário fiscal e movimentações de commodities.</p>
+        
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800">Destaques por Ativo</h3>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li><strong>#EZTC3:</strong> EZTEC anuncia o lançamento de dois novos empreendimentos com Valor Geral de Vendas (VGV) totalizando R$ 414 milhões, marcando uma clara retomada ou aceleração em sua estratégia de mercado. Essa movimentação é um fato principal que impacta positivamente o papel, sinalizando o reinvestimento e a busca por crescimento após um período que as manchetes sugerem como de menor atividade ou de preparação. O sentimento do mercado é predominantemente otimista, pois o anúncio demonstra a capacidade da companhia em gerar novas oportunidades de receita e a confiança da gestão nas condições atuais para o segmento imobiliário. Isso tende a fortalecer as expectativas sobre o desempenho futuro da EZTC3, ao indicar capital deployment e expansão do pipeline de projetos.</li><li><strong>#CSNA3:</strong> A iminente concessão de exclusividade na venda da divisão de cimentos da CSN, um movimento estratégico para desalavancagem e foco no core business, atua como o principal catalisador para o desempenho recente do papel. Essa expectativa, aliada à elevação expressiva de 25% nos preços-alvo de CSNA3 e CMIN3 pelo BofA, sinaliza uma reavaliação positiva dos fundamentos da companhia e de sua subsidiária de mineração. O mercado demonstra um sentimento marcadamente otimista, precificando o progresso na monetização de ativos e o reconhecimento de valor por parte de analistas de peso, resultando na disparada de 7% e na liderança do Ibovespa. As notícias não são contraditórias; pelo contrário, elas se complementam, validando a visão positiva sobre a direção estratégica e a percepção de valor da CSN.</li><li><strong>#SMTO3:</strong> São Martinho (SMTO3) exibe um forte sentimento otimista no mercado, evidenciado pela elevação da recomendação da XP Investimentos, que projeta um potencial de valorização superior a 50% ao considerar o impacto do El Niño como menos severo do que o inicialmente temido para a companhia. Apesar do lucro reportado ter sido impulsionado por efeitos não recorrentes, sugerindo a necessidade de observar a consistência da margem operacional central, a resiliência operacional da empresa frente a desafios climáticos reforça a confiança dos analistas. Portanto, a perspectiva atual é predominantemente altista, focada na capacidade da empresa de mitigar riscos e na significativa valorização esperada.</li><li><strong>#PETR3:</strong> A Petrobras navega em um cenário predominantemente otimista, diretamente impulsionada pela valorização do petróleo global, que atingiu novas máximas após a retomada de ataques no Estreito de Ormuz, elevando significativamente a rentabilidade de suas operações de exploração e produção. Adicionalmente, a companhia demonstra uma visão estratégica ao focar na exportação de Gás Natural Liquefeito (GNL) para o mercado asiático, aproveitando a demanda crescente e estabelecendo uma nova e robusta frente de receita e diversificação de portfólio. Contudo, o próximo rebalanceamento do índice Ibovespa, que definirá a composição de setembro a dezembro/26, é um ponto de atenção crucial, pois alterações na ponderação do papel podem influenciar a demanda institucional e sua liquidez. Em suma, o forte impulso dos preços da commodity e as novas frentes de negócio apontam para uma perspectiva positiva para PETR3.SA, embora a dinâmica do Ibovespa precise ser acompanhada de perto.</li><li><strong>#PETR4:</strong> A escalada das tensões geopolíticas no Estreito de Hormuz tem elevado os preços do petróleo, criando um cenário altamente favorável para a Petrobras e seu segmento de exploração e produção. Paralelamente, a empresa demonstra uma visão estratégica ao prospectar exportações de GNL para a Ásia, capitalizando a demanda crescente por gás e diversificando suas fontes de receita. Apesar de um lembrete contextual sobre o controle estatal em gigantes petrolíferas como a da Venezuela, este fato não tem impacto direto na avaliação da Petrobras. O sentimento de mercado para PETR4 é predominantemente otimista, sustentado pela valorização do barril e pela expansão em mercados energéticos estratégicos.</li><li><strong>#ALPA4:</strong> O lucro recorrente da Alpargatas (ALPA4) no 4º trimestre de 2021 apresentou queda, um fato negativo que pode gerar cautela no mercado, mas este evento é parcialmente ofuscado pela notícia de que a empresa realizará uma oferta de ações, indicando potencial investimento em crescimento. Simultaneamente, a XP aponta a expansão internacional como uma grande oportunidade para a companhia, sugerindo um sentimento de mercado predominantemente otimista quanto ao futuro da Alpargatas, apesar dos resultados recentes. A possível contradição reside na necessidade de captação de recursos via oferta de ações contrastando com o otimismo da expansão, levantando atenção sobre a gestão do capital e o retorno esperado dos investimentos.</li><li><strong>#MGLU3:</strong> A retomada da cobertura de MGLU3 pelo Itaú BBA, acompanhada da visão de que a empresa está capacitada para atuar em dois segmentos estratégicos, representa um forte indicativo de reavaliação positiva e clareza na tese de investimento. Esse posicionamento sugere que o Magazine Luiza possui diferenciais competitivos e potencial de crescimento em múltiplas frentes, o que tende a diversificar suas fontes de receita e fortalecer seus fundamentos a longo prazo. O sentimento geral do mercado, impulsionado por essa análise institucional detalhada sobre resultados, dividendos e indicadores, torna-se predominantemente otimista, visto que valida a capacidade da empresa de gerar valor e melhorar sua performance financeira.</li><li><strong>#FLRY3:</strong> A Fleury (FLRY3) apresenta sinais técnicos de sobrecompra, indicando um potencial excesso de valorização no curto prazo, enquanto o BofA, apesar de elevar o preço-alvo, mantém a recomendação de venda, sinalizando que, mesmo com um valor intrínseco potencialmente maior, os motivos para não comprar ou mesmo vender o papel persistem, possivelmente relacionados a riscos ou valuation atual. Essa postura contraditória do BofA destaca uma cautela significativa em relação ao investimento, mesmo diante de projeções mais otimistas de valor. Concomitantemente, especula-se que a empresa possa "surfar" a alta de casos de COVID-19, o que seria um catalisador de receita e demanda, inserindo um ponto otimista fundamental na análise. O sentimento de mercado para FLRY3 é, portanto, misto e contraditório, combinando um alerta técnico de sobrecompra, uma recomendação de venda de um player relevante (BofA) apesar do aumento de preço-alvo, e uma potencial, mas ainda especulativa, alavancagem por cenários de saúde pública.</li><li><strong>#BRKM5:</strong> Braskem (BRKM5) enfrenta um cenário duplamente desafiador com sua saída do Ibovespa, movimento que, embora de natureza técnica, implicará em pressão vendedora por parte de fundos passivos indexados e uma potencial redução da liquidez e visibilidade do papel no mercado. Complementar a essa dinâmica de fluxo, a empresa reportou um prejuízo colossal de mais de R$ 10 bilhões no último trimestre divulgado (assumindo 4T23/24), um dado fundamentalmente alarmante que aponta para sérios problemas operacionais ou provisões extraordinárias de grande vulto, como as relacionadas a Maceió, impactando drasticamente a saúde financeira e o valor patrimonial. Essa convergência de fatores negativos – perda de relevância no principal índice e deterioração acentuada dos resultados – gera um sentimento de mercado fortemente pessimista em relação ao ativo. As notícias não se contradizem; pelo contrário, reforçam uma visão de cautela e preocupação para com a Braskem.</li><li><strong>#LWSA3:</strong> A Locaweb (LWSA3) demonstra forte desempenho financeiro ao reportar lucro de R$ 69 milhões no 4T25, um resultado que superou as expectativas do mercado, sinalizando resiliência operacional e potencial de crescimento para a empresa. Complementarmente, o pagamento de dividendos reforça a capacidade da companhia de gerar e distribuir valor aos seus acionistas, indicando uma sólida saúde financeira. Ambos os fatos convergem para um sentimento de mercado claramente otimista em relação à LWSA3, visto que a combinação de resultados financeiros robustos e remuneração ao acionista tende a valorizar o papel.</li>
+            </ul>
+            
+    </div>
+</div>
+        </div>
+        <footer class="mt-12 pt-8 border-t border-gray-200">
+            <a href="../index.html" class="text-primary hover:text-secondary font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Voltar ao Blog
+            </a>
+        </footer>
+    </article>
+    
+</main>
+
+<!-- até aqui vai o corpo da pagina-->
+
+	<!-- trecho adaptado para captação de leads -->
+
+<section class="py-16 bg-primary text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Mantenha-se à frente no mercado</h2>
+    <p class="text-xl opacity-90 max-w-2xl mx-auto mb-8">
+      Receba nossos insights e análises diárias de mercado diretamente em sua caixa de entrada.
+    </p>
+    <div id="message" class="message"></div>
+    <form id="leadForm" class="flex flex-col gap-3 items-center max-w-md mx-auto">
+      <input type="text" name="nome" id="nome" placeholder="Preencha o seu nome completo"
+        class="px-4 py-3 rounded-md text-dark w-full" required>
+      <input type="email" name="email" id="email" placeholder="Seu endereço de email"
+        class="px-4 py-3 rounded-md text-dark w-full hidden" required>
+      <button type="submit"
+        class="bg-secondary hover:bg-blue-900 px-6 py-3 rounded-md font-semibold mt-2 hidden"
+        id="submitBtn">
+        Inscrever <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </form>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('leadForm');
+  const nomeInput = document.getElementById('nome');
+  const emailInput = document.getElementById('email');
+  const submitBtn = document.getElementById('submitBtn');
+  const messageDiv = document.getElementById('message');
+
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec';
+
+  function showMessage(text, type) {
+    messageDiv.textContent = text;
+    messageDiv.className = `message ${type} show`;
+    setTimeout(() => {
+      messageDiv.classList.remove('show');
+    }, 5000);
+  }
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  async function submitToGoogleScript(formData) {
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData)
+      });
+      return { success: true };
+    } catch (error) {
+      console.error('Erro ao enviar dados:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.classList.add('loading');
+
+    try {
+      const formData = new FormData(form);
+      const nome = formData.get('nome');
+      const email = formData.get('email');
+
+      if (!nome || nome.trim().length < 2) {
+        showMessage('Por favor, insira seu nome completo.', 'error');
+        return;
+      }
+
+      if (!email || !isValidEmail(email)) {
+        showMessage('Por favor, insira um e-mail válido.', 'error');
+        return;
+      }
+
+      const result = await submitToGoogleScript(formData);
+
+      if (result.success) {
+        showMessage('Inscrição realizada com sucesso!', 'success');
+        form.reset();
+        nomeInput.classList.add('hidden');
+        emailInput.classList.add('hidden');
+        submitBtn.classList.add('hidden');
+      } else {
+        showMessage('Erro ao enviar. Tente novamente.', 'error');
+      }
+    } catch (error) {
+      console.error('Erro no envio:', error);
+      showMessage('Erro inesperado. Tente novamente mais tarde.', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('loading');
+    }
+  }
+
+  nomeInput.addEventListener('input', () => {
+    if (nomeInput.value.trim().length >= 2) {
+      emailInput.classList.remove('hidden');
+      submitBtn.classList.remove('hidden');
+    } else {
+      emailInput.classList.add('hidden');
+      submitBtn.classList.add('hidden');
+    }
+  });
+
+  form.addEventListener('submit', handleFormSubmit);
+});
+</script>
+
+
+
+<!-- trecho adaptado para captação de leads -->
+
+
+
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('leadForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const messageDiv = document.getElementById('message');
+
+        // IMPORTANTE: Substitua esta URL pela URL do seu Google Apps Script
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec';
+
+        // Função para mostrar mensagens ao usuário
+        function showMessage(text, type) {
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type} show`;
+
+            // Remove a mensagem após 5 segundos
+            setTimeout(() => {
+                messageDiv.classList.remove('show');
+            }, 5000);
+        }
+
+        // Função para validar email
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Função para formatar telefone (opcional)
+        function formatPhone(phone) {
+            // Remove todos os caracteres não numéricos
+            const cleaned = phone.replace(/\D/g, '');
+
+            // Aplica máscara brasileira se tiver 10 ou 11 dígitos
+            if (cleaned.length === 10) {
+                return cleaned.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+            } else if (cleaned.length === 11) {
+                return cleaned.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+            }
+
+            return phone; // Retorna original se não conseguir formatar
+        }
+
+        // Função para validar o formulário
+        function validateForm(formData) {
+            const errors = [];
+
+            if (!formData.get('nome') || formData.get('nome').trim().length < 2) {
+                errors.push('Nome deve ter pelo menos 2 caracteres');
+            }
+
+            if (!formData.get('email') || !isValidEmail(formData.get('email'))) {
+                errors.push('E-mail deve ter um formato válido');
+            }
+
+            return errors;
+        }
+
+        // Função para enviar dados para o Google Apps Script
+        async function submitToGoogleScript(formData) {
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // Necessário para Google Apps Script
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams(formData)
+                });
+
+                // Como usamos 'no-cors', não podemos ler a resposta
+                // Assumimos sucesso se não houve erro na requisição
+                return { success: true };
+
+            } catch (error) {
+                console.error('Erro ao enviar dados:', error);
+                return { success: false, error: error.message };
+            }
+        }
+
+        // Função principal para processar o envio do formulário
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Desabilita o botão e mostra loading
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+
+            try {
+                // Coleta os dados do formulário
+                const formData = new FormData(form);
+
+                // Formata o telefone se fornecido
+                if (formData.get('telefone')) {
+                    formData.set('telefone', formatPhone(formData.get('telefone')));
+                }
+
+                // Valida os dados
+                const validationErrors = validateForm(formData);
+                if (validationErrors.length > 0) {
+                    showMessage(validationErrors.join('. '), 'error');
+                    return;
+                }
+
+                // Envia os dados
+                const result = await submitToGoogleScript(formData);
+
+                if (result.success) {
+                    showMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+                    form.reset(); // Limpa o formulário
+                } else {
+                    showMessage('Erro ao enviar mensagem. Tente novamente.', 'error');
+                }
+
+            } catch (error) {
+                console.error('Erro no envio:', error);
+                showMessage('Erro inesperado. Tente novamente mais tarde.', 'error');
+            } finally {
+                // Reabilita o botão e remove loading
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('loading');
+            }
+        }
+
+        // Adiciona máscara de telefone em tempo real
+        const phoneInput = document.getElementById('telefone');
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+
+            if (value.length <= 11) {
+                if (value.length <= 10) {
+                    value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+                } else {
+                    value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+                }
+                e.target.value = value;
+            }
+        });
+
+        // Adiciona validação em tempo real para email
+        const emailInput = document.getElementById('email');
+        emailInput.addEventListener('blur', function(e) {
+            if (e.target.value && !isValidEmail(e.target.value)) {
+                e.target.style.borderColor = '#e74c3c';
+            } else {
+                e.target.style.borderColor = '#e1e8ed';
+            }
+        });
+
+        // Adiciona o event listener para o envio do formulário
+        form.addEventListener('submit', handleFormSubmit);
+
+        // Verifica se a URL do Google Script foi configurada
+        if (GOOGLE_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec') {
+            console.warn('⚠️ ATENÇÃO: Configure a URL do Google Apps Script na variável GOOGLE_SCRIPT_URL');
+            showMessage('Configuração pendente: URL do Google Apps Script não definida.', 'error');
+        }
+    });
+    </script>
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-chart-line text-primary text-2xl"></i>
+                        <h3 class="text-xl font-bold">Miner<span class="text-primary">Ativos</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Fornecendo insights de mercado acionáveis ​para ajudar os investidores a tomarem decisões baseados em dados.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Mercados</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mercado de Ações</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Commodities</a></li>
+                        <li><a href="#oraculo" class="text-gray-400 hover:text-white">Altas e quedas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Recursos</h4>
+                    <ul class="space-y-2">
+					<li><a href="../index.html" class="text-gray-400 hover:text-white">Início</a></li>
+					<li><a href="#" class="text-gray-400 hover:text-white">Mercados</a></li>
+                    <li><!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
+					<li><a href="#oraculo" class="text-gray-400 hover:text-white">Forecast</a></li>
+					<li><a href="../metodologia.html" class="text-gray-400 hover:text-white">Algoritmos</a></li>
+					<li><a href="#oraculo" class="text-gray-400 hover:text-white">Radar Intraday</a></li>
+					<li><a href="../monitor.html" class="text-gray-400 hover:text-white">Monitor</a></li>
+					<li><a href="../balanceamento.html" class="text-gray-400 hover:text-white">Balanceamento de portfólio</a></li>
+                    <li><a href="../metodologia.html" class="text-gray-400 hover:text-white">Sobre</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quem somos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../metodologia.html" class="text-gray-400 hover:text-white">Sobre</a></li>
+						<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 MinerAtivos.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const closeButton = document.getElementById('close-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        closeButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+</script>
+
+</body></html>
