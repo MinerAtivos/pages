@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-08-28
+## Resumo de Mercado - 2026-08-31
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 0.40 | R$ 0.34 | **+17.65%** 🚀 | +175.01% ⬆️ |
-| TPIS3.SA | Triunfo Participações e Investimentos S.A. | R$ 10.00 | R$ 8.60 | **+16.28%** 🚀 | +346.47% ⬆️ |
-| ARND3.SA | Arandu Investimentos S.A. | R$ 0.58 | R$ 0.50 | **+16.00%** 🚀 | +130.16% ⬆️ |
-| MWET4.SA | Wetzel S.A. | R$ 25.00 | R$ 21.59 | **+15.79%** 🚀 | -81.31% ⬇️ |
-| BOBR4.SA | Bombril S.A. | R$ 1.34 | R$ 1.18 | **+13.56%** 🚀 | +498.17% ⬆️ |
+| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 0.66 | R$ 0.40 | **+65.00%** 🚀 | +263.34% ⬆️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 5.45 | R$ 4.11 | **+32.60%** 🚀 | +32.25% ⬆️ |
+| CEGR3.SA | Companhia Distribuidora de Gás do Rio de Janeiro - CEG | R$ 35.00 | R$ 30.00 | **+16.67%** 🚀 | -61.29% ⬇️ |
+| AMER3.SA | Americanas S.A. | R$ 5.10 | R$ 4.69 | **+8.74%** 🚀 | +13.15% ⬆️ |
+| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 1.86 | R$ 1.72 | **+8.14%** 🚀 | +6.61% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 4.11 | R$ 8.21 | **-49.94%** 📉 | +38.83% ⬆️ |
-| AZEV4.SA | Azevedo & Travassos S.A. | R$ 1.44 | R$ 1.84 | **-21.74%** 📉 | +11.45% ⬆️ |
-| RCSL4.SA | Recrusul S/A | R$ 0.41 | R$ 0.49 | **-16.33%** 📉 | +157.09% ⬆️ |
-| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 1.31 | R$ 1.54 | **-14.94%** 📉 | +21.36% ⬆️ |
-| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.45 | R$ 3.98 | **-13.32%** 📉 | +66.67% ⬆️ |
+| TOKY3.SA | Grupo Toky S.A. | R$ 6.40 | R$ 8.25 | **-22.42%** 📉 | -55.50% ⬇️ |
+| ARND3.SA | Arandu Investimentos S.A. | R$ 0.50 | R$ 0.58 | **-13.79%** 📉 | +85.71% ⬆️ |
+| TCSA3.SA | Tecnisa S.A. | R$ 0.63 | R$ 0.70 | **-10.00%** 📉 | +67.88% ⬆️ |
+| AALR3.SA | Alliança Saúde e Participações S.A. | R$ 2.96 | R$ 3.15 | **-6.03%** 📉 | -63.17% ⬇️ |
+| MEAL3.SA | International Meal Company Alimentação S.A. | R$ 0.64 | R$ 0.68 | **-5.88%** 📉 | +24.68% ⬆️ |
