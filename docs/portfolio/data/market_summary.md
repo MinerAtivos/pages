@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-09-03
+## Resumo de Mercado - 2026-09-04
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 9.00 | R$ 6.64 | **+35.54%** 🚀 | +21.22% ⬆️ |
-| TOKY3.SA | Grupo Toky S.A. | R$ 10.70 | R$ 8.46 | **+26.48%** 🚀 | -6.10% ⬇️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.23 | R$ 0.19 | **+21.05%** 🚀 | +135.72% ⬆️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | -7.64% ⬇️ |
-| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.36 | R$ 1.20 | **+13.33%** 🚀 | -43.31% ⬇️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.32 | R$ 0.23 | **+39.13%** 🚀 | +264.14% ⬆️ |
+| OSXB3.SA | OSX Brasil S.A. | R$ 1.15 | R$ 1.04 | **+10.58%** 🚀 | -92.89% ⬇️ |
+| HOOT4.SA | Hotéis Othon S.A. | R$ 8.89 | R$ 8.10 | **+9.75%** 🚀 | -84.05% ⬇️ |
+| OBTC3.SA | Oranjebtc S.A. - Educação e Investimento | R$ 7.00 | R$ 6.41 | **+9.20%** 🚀 | +135.43% ⬆️ |
+| RCSL3.SA | Recrusul S/A | R$ 0.40 | R$ 0.37 | **+8.11%** 🚀 | +143.16% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| DOTZ3.SA | Dotz S.A. | R$ 10.80 | R$ 12.85 | **-15.95%** 📉 | +1.09% ⬆️ |
-| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.14 | R$ 0.15 | **-6.67%** 📉 | -50.61% ⬇️ |
-| RCSL4.SA | Recrusul S/A | R$ 0.43 | R$ 0.46 | **-6.52%** 📉 | -1.07% ⬇️ |
-| PLPL3.SA | Plano & Plano Desenvolvimento Imobiliário S.A. | R$ 7.18 | R$ 7.61 | **-5.65%** 📉 | +144.29% ⬆️ |
-| RCSL3.SA | Recrusul S/A | R$ 0.37 | R$ 0.39 | **-5.13%** 📉 | +0.41% ⬆️ |
+| MAPT3.SA | Cemepe Investimentos S.A. | R$ 2.06 | R$ 2.50 | **-17.60%** 📉 | 0.00% — |
+| VSTE3.SA | Veste S.A. Estilo | R$ 2.40 | R$ 2.74 | **-12.41%** 📉 | +768.54% ⬆️ |
+| RAPT4.SA | Randoncorp S.A. | R$ 4.80 | R$ 5.16 | **-6.98%** 📉 | +196.60% ⬆️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 8.39 | R$ 9.00 | **-6.78%** 📉 | -40.51% ⬇️ |
+| NORD3.SA | Nordon Indústrias Metalúrgicas S/A | R$ 1.39 | R$ 1.49 | **-6.71%** 📉 | +370.89% ⬆️ |
