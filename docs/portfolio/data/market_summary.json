@@ -1,15 +1,15 @@
 {
-  "last_update": "2026-09-04T22:25:05.434947",
+  "last_update": "2026-09-07T22:53:38.930298",
   "date": "2026-09-04",
   "ibov": {
     "ticker": "^BVSP",
     "name": "IBOVESPA",
-    "last_close": 185147.16,
+    "last_close": 185147.0,
     "date": "2026-09-04",
-    "daily_delta": -0.0002205326479037817,
-    "monthly_delta": 0.041756186489315006,
-    "yearly_delta": 0.31316561815125565,
-    "delta_volume": 0,
+    "daily_delta": -0.0002213966347711649,
+    "monthly_delta": 0.04175528622711355,
+    "yearly_delta": 0.3131644833431446,
+    "delta_volume": -0.13125435997753876,
     "is_liquid": true,
     "is_ibov": false,
     "prev_close": 185188.0
@@ -18,12 +18,12 @@
     {
       "ticker": "^BVSP",
       "name": "IBOVESPA",
-      "last_close": 185147.16,
+      "last_close": 185147.0,
       "date": "2026-09-04",
-      "daily_delta": -0.0002205326479037817,
-      "monthly_delta": 0.041756186489315006,
-      "yearly_delta": 0.31316561815125565,
-      "delta_volume": 0,
+      "daily_delta": -0.0002213966347711649,
+      "monthly_delta": 0.04175528622711355,
+      "yearly_delta": 0.3131644833431446,
+      "delta_volume": -0.13125435997753876,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 185188.0
@@ -49,7 +49,7 @@
       "daily_delta": -0.01046698872785834,
       "monthly_delta": 0.01738410596026485,
       "yearly_delta": 0.2234942757590841,
-      "delta_volume": 0.7412944847521872,
+      "delta_volume": 0.7418687903210368,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 24.84
@@ -62,7 +62,7 @@
       "daily_delta": -0.0012690355329948444,
       "monthly_delta": -0.0063131313131312705,
       "yearly_delta": 0.36988685813751077,
-      "delta_volume": -0.07144111024039357,
+      "delta_volume": -0.0714209521505742,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 15.76
@@ -81,6 +81,19 @@
       "prev_close": 2.09
     },
     {
+      "ticker": "AFLT3.SA",
+      "name": "Afluente Transmissão de Energia Elétrica S.A.",
+      "last_close": 7.39,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.04084507042253516,
+      "yearly_delta": 0.09481481481481469,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 7.39
+    },
+    {
       "ticker": "AGRO3.SA",
       "name": "BrasilAgro - Companhia Brasileira de Propriedades Agrícolas",
       "last_close": 19.27,
@@ -88,7 +101,7 @@
       "daily_delta": 0.014210526315789451,
       "monthly_delta": 0.053581191908146586,
       "yearly_delta": -0.05585497305242526,
-      "delta_volume": 1.4801635991820041,
+      "delta_volume": 1.4817995910020452,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 19.0
@@ -107,6 +120,45 @@
       "prev_close": 1.34
     },
     {
+      "ticker": "AHEB3.SA",
+      "name": "São Paulo Turismo S.A.",
+      "last_close": 23.89,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.25226917057902964,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 23.89
+    },
+    {
+      "ticker": "AHEB5.SA",
+      "name": "São Paulo Turismo S.A.",
+      "last_close": 58.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.0,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 58.0
+    },
+    {
+      "ticker": "AHEB6.SA",
+      "name": "São Paulo Turismo S.A.",
+      "last_close": 55.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.0,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 55.0
+    },
+    {
       "ticker": "ALLD3.SA",
       "name": "Allied Tecnologia S.A.",
       "last_close": 5.19,
@@ -114,7 +166,7 @@
       "daily_delta": -0.007648183556405397,
       "monthly_delta": 0.0926315789473684,
       "yearly_delta": -0.1722488038277511,
-      "delta_volume": -0.2826409162362452,
+      "delta_volume": -0.27976644958454977,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.23
@@ -127,7 +179,7 @@
       "daily_delta": -0.007236388697450025,
       "monthly_delta": 0.0599705665930832,
       "yearly_delta": 0.3301015697137579,
-      "delta_volume": -0.1634971587748324,
+      "delta_volume": -0.16318810600098077,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 29.02
@@ -153,7 +205,7 @@
       "daily_delta": -0.012372634643377012,
       "monthly_delta": 0.09083601286173648,
       "yearly_delta": 0.5669745958429562,
-      "delta_volume": 0.451455240687322,
+      "delta_volume": 0.4520781622854515,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 13.74
@@ -244,7 +296,7 @@
       "daily_delta": 0.043233082706766846,
       "monthly_delta": 0.17584745762711873,
       "yearly_delta": -0.1328125000000001,
-      "delta_volume": -0.06487249076409896,
+      "delta_volume": -0.06200308461161397,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.32
@@ -270,7 +322,7 @@
       "daily_delta": 0.01384083044982698,
       "monthly_delta": 0.3627906976744186,
       "yearly_delta": -0.18384401114206117,
-      "delta_volume": -0.4141628609021548,
+      "delta_volume": -0.4090395703320976,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 2.89
@@ -283,7 +335,7 @@
       "daily_delta": 0.010526315789473717,
       "monthly_delta": 0.0847457627118644,
       "yearly_delta": 0.0786516853932584,
-      "delta_volume": -0.6119015741811016,
+      "delta_volume": -0.5749794183928884,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.8
@@ -309,7 +361,7 @@
       "daily_delta": -0.003293084522502654,
       "monthly_delta": 0.028312570781426905,
       "yearly_delta": -0.09651741293532345,
-      "delta_volume": -0.3828695294237603,
+      "delta_volume": -0.3815553449167872,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 9.11
@@ -335,7 +387,7 @@
       "daily_delta": 0.01781170483460559,
       "monthly_delta": 0.1049723756906078,
       "yearly_delta": 0.04166666666666674,
-      "delta_volume": -0.10539213281876914,
+      "delta_volume": -0.10448961813819069,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.93
@@ -348,10 +400,23 @@
       "daily_delta": 0.03181427343078247,
       "monthly_delta": 0.07526881720430101,
       "yearly_delta": 0.15163147792706333,
-      "delta_volume": 0.0706807022974838,
+      "delta_volume": 0.07157368036445422,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 11.63
+    },
+    {
+      "ticker": "AVLL3.SA",
+      "name": "Alphaville S.A.",
+      "last_close": 6.9,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.34285714285714286,
+      "yearly_delta": -0.8475138121546961,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 6.9
     },
     {
       "ticker": "AXIA3.SA",
@@ -361,7 +426,7 @@
       "daily_delta": -0.008430493273542616,
       "monthly_delta": 0.02923105566933537,
       "yearly_delta": 0.2696371152962793,
-      "delta_volume": -0.036500564171193184,
+      "delta_volume": -0.036245656256677306,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 55.75
@@ -374,7 +439,7 @@
       "daily_delta": -0.009307320565598687,
       "monthly_delta": 0.041588257433195386,
       "yearly_delta": 0.1407666941467436,
-      "delta_volume": 0.820381500879346,
+      "delta_volume": 0.8204201534507083,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 55.87
@@ -387,7 +452,7 @@
       "daily_delta": -0.06777777777777771,
       "monthly_delta": 0.7442827442827444,
       "yearly_delta": -0.08804347826086945,
-      "delta_volume": -0.4051094890510949,
+      "delta_volume": -0.38282459632824595,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 9.0
@@ -400,7 +465,7 @@
       "daily_delta": -0.039735099337748325,
       "monthly_delta": -0.39075630252100835,
       "yearly_delta": -0.8657407407407407,
-      "delta_volume": -0.6190239972014256,
+      "delta_volume": -0.6173895839127854,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.51
@@ -413,7 +478,7 @@
       "daily_delta": -0.026490066225165587,
       "monthly_delta": -0.09259259259259267,
       "yearly_delta": -0.706,
-      "delta_volume": -0.40980764274501535,
+      "delta_volume": -0.4038916613950001,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.51
@@ -426,7 +491,7 @@
       "daily_delta": 0.03571428571428581,
       "monthly_delta": 0.10839598997493738,
       "yearly_delta": -0.41404438555813183,
-      "delta_volume": -0.05031215116836374,
+      "delta_volume": -0.04892068979378539,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 17.08
@@ -439,10 +504,23 @@
       "daily_delta": 0.0011527377521614035,
       "monthly_delta": 0.11704180064308689,
       "yearly_delta": 0.39855072463768115,
-      "delta_volume": -0.2036352257760944,
+      "delta_volume": -0.19900969612885844,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 17.35
+    },
+    {
+      "ticker": "BALM3.SA",
+      "name": "Baumer S.A.",
+      "last_close": 26.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.5411973918197983,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 26.0
     },
     {
       "ticker": "BALM4.SA",
@@ -456,6 +534,19 @@
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 14.99
+    },
+    {
+      "ticker": "BAUH4.SA",
+      "name": "Excelsior Alimentos S.A.",
+      "last_close": 93.39,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.005431309904153414,
+      "yearly_delta": 0.08618283321702713,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 93.39
     },
     {
       "ticker": "BAZA3.SA",
@@ -478,7 +569,7 @@
       "daily_delta": 0.003118040089086893,
       "monthly_delta": 0.06983372921615194,
       "yearly_delta": 0.12882205513784473,
-      "delta_volume": -0.23989395427495053,
+      "delta_volume": -0.23949643897274098,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 22.45
@@ -491,7 +582,7 @@
       "daily_delta": 0.008934269304403442,
       "monthly_delta": 0.003809523809523929,
       "yearly_delta": 0.19954476479514427,
-      "delta_volume": 0.31933750100584635,
+      "delta_volume": 0.32372160391572535,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 15.67
@@ -504,7 +595,7 @@
       "daily_delta": 0.006183249016301184,
       "monthly_delta": -0.008310249307479367,
       "yearly_delta": 0.15633074935400515,
-      "delta_volume": 0.016745451245759435,
+      "delta_volume": 0.02432680415382693,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 17.79
@@ -517,10 +608,36 @@
       "daily_delta": 0.011273686735428168,
       "monthly_delta": 0.06330390920554851,
       "yearly_delta": 0.47774272695408326,
-      "delta_volume": -0.29152227940632314,
+      "delta_volume": -0.2908325256268677,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 41.69
+    },
+    {
+      "ticker": "BDLL3.SA",
+      "name": "Bardella S.A. Indústrias Mecânicas",
+      "last_close": 4.5,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.022727272727272707,
+      "yearly_delta": -0.3959731543624161,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 4.5
+    },
+    {
+      "ticker": "BDLL4.SA",
+      "name": "Bardella S.A. Indústrias Mecânicas",
+      "last_close": 3.25,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.0714285714285714,
+      "yearly_delta": -0.6130952380952381,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 3.25
     },
     {
       "ticker": "BEEF3.SA",
@@ -530,7 +647,7 @@
       "daily_delta": 0.04221635883905006,
       "monthly_delta": 0.09418282548476453,
       "yearly_delta": -0.32937181663837,
-      "delta_volume": 1.520142410115247,
+      "delta_volume": 1.52511617484334,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 3.79
@@ -543,7 +660,7 @@
       "daily_delta": -0.011173184357541888,
       "monthly_delta": -0.010067114093959662,
       "yearly_delta": 0.1614173228346456,
-      "delta_volume": -0.5098756400877835,
+      "delta_volume": -0.4952450621799561,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 8.95
@@ -595,7 +712,7 @@
       "daily_delta": 0.0,
       "monthly_delta": -0.1585365853658537,
       "yearly_delta": -0.8559498956158664,
-      "delta_volume": -0.7457412054145729,
+      "delta_volume": -0.7453535934916302,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.69
@@ -621,7 +738,7 @@
       "daily_delta": 0.032710280373831724,
       "monthly_delta": 0.07108239095315017,
       "yearly_delta": -0.025000000000000022,
-      "delta_volume": -0.33731343283582094,
+      "delta_volume": -0.33432835820895523,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 6.42
@@ -647,7 +764,7 @@
       "daily_delta": 0.0005927682276229973,
       "monthly_delta": 0.020967741935483897,
       "yearly_delta": 0.3400370468377878,
-      "delta_volume": -0.4981179422835633,
+      "delta_volume": -0.410288582183187,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 50.61
@@ -660,7 +777,7 @@
       "daily_delta": 0.018124376454938362,
       "monthly_delta": 0.0939789172771126,
       "yearly_delta": 0.3588548601864179,
-      "delta_volume": -0.6881137329620401,
+      "delta_volume": -0.6519126483951341,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 60.14
@@ -673,10 +790,36 @@
       "daily_delta": 0.008431703204047292,
       "monthly_delta": 0.1074074074074074,
       "yearly_delta": 0.7588235294117649,
-      "delta_volume": 1.9748550680149801,
+      "delta_volume": 1.974942772695779,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.93
+    },
+    {
+      "ticker": "BMIN3.SA",
+      "name": "Banco Mercantil de Investimentos S.A.",
+      "last_close": 19.5,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.09260120986505349,
+      "yearly_delta": -0.13140311804008908,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 19.5
+    },
+    {
+      "ticker": "BMIN4.SA",
+      "name": "Banco Mercantil de Investimentos S.A.",
+      "last_close": 18.86,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.059550561797752755,
+      "yearly_delta": 0.14859926918392197,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 18.86
     },
     {
       "ticker": "BMKS3.SA",
@@ -764,10 +907,23 @@
       "daily_delta": 0.007311681686787974,
       "monthly_delta": 0.05804607965708164,
       "yearly_delta": 0.3402714932126696,
-      "delta_volume": -0.42745279805609104,
+      "delta_volume": -0.42719295473459107,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 58.81
+    },
+    {
+      "ticker": "BPAR3.SA",
+      "name": "Banco do Estado do Pará S.A",
+      "last_close": 180.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.05677214818293885,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 180.0
     },
     {
       "ticker": "BRAP3.SA",
@@ -790,7 +946,7 @@
       "daily_delta": -0.002661934338952898,
       "monthly_delta": 0.021818181818181737,
       "yearly_delta": 0.5323790047716428,
-      "delta_volume": -0.29039205050993555,
+      "delta_volume": -0.29028517379489827,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 22.54
@@ -803,7 +959,7 @@
       "daily_delta": -0.04180064308681675,
       "monthly_delta": -0.08071979434447307,
       "yearly_delta": -0.05246422893481728,
-      "delta_volume": -0.09989733979151016,
+      "delta_volume": -0.09834710174384553,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 18.66
@@ -816,7 +972,7 @@
       "daily_delta": 0.007751937984496138,
       "monthly_delta": 0.007751937984496138,
       "yearly_delta": -0.06413612565445015,
-      "delta_volume": -0.12702994929719402,
+      "delta_volume": -0.12681999979005054,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 14.19
@@ -842,10 +998,23 @@
       "daily_delta": -0.028340080971660075,
       "monthly_delta": -0.18228279386712098,
       "yearly_delta": -0.47483588621444206,
-      "delta_volume": -0.6343250872593331,
+      "delta_volume": -0.6288160878866352,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 4.94
+    },
+    {
+      "ticker": "BRKM6.SA",
+      "name": "Braskem S.A.",
+      "last_close": 7.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.16666666666666674,
+      "yearly_delta": -0.04761904761904756,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 7.0
     },
     {
       "ticker": "BRSR3.SA",
@@ -855,10 +1024,23 @@
       "daily_delta": -0.010033444816053505,
       "monthly_delta": 0.003389830508474745,
       "yearly_delta": 0.5730735163861826,
-      "delta_volume": 0.1866501854140914,
+      "delta_volume": 0.21137206427688504,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 17.94
+    },
+    {
+      "ticker": "BRSR5.SA",
+      "name": "Banco do Estado do Rio Grande do Sul S.A.",
+      "last_close": 18.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.24653739612188375,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 18.0
     },
     {
       "ticker": "BRSR6.SA",
@@ -868,7 +1050,7 @@
       "daily_delta": -0.007999999999999896,
       "monthly_delta": 0.03477051460361613,
       "yearly_delta": 0.44325897187196905,
-      "delta_volume": -0.17817306274875933,
+      "delta_volume": -0.1779273745761879,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 15.0
@@ -913,6 +1095,19 @@
       "prev_close": 2.6
     },
     {
+      "ticker": "CALI3.SA",
+      "name": "Construtora Adolpho Lindenberg S.A.",
+      "last_close": 29.99,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.9461388708630758,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 29.99
+    },
+    {
       "ticker": "CAMB3.SA",
       "name": "Cambuci S.A.",
       "last_close": 8.52,
@@ -920,7 +1115,7 @@
       "daily_delta": -0.015028901734104094,
       "monthly_delta": -0.01616628175519641,
       "yearly_delta": -0.02850627137970352,
-      "delta_volume": 0.10185185185185186,
+      "delta_volume": 0.1064814814814814,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 8.65
@@ -933,7 +1128,7 @@
       "daily_delta": -0.027559055118110187,
       "monthly_delta": 0.05330490405117261,
       "yearly_delta": 0.014373716632443578,
-      "delta_volume": 0.7465646248826425,
+      "delta_volume": 0.7477026373438789,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.08
@@ -946,7 +1141,7 @@
       "daily_delta": -0.04270462633451966,
       "monthly_delta": 0.17211328976034856,
       "yearly_delta": 0.16956521739130448,
-      "delta_volume": -0.31385885122539925,
+      "delta_volume": -0.30969098228884706,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.62
@@ -978,6 +1173,19 @@
       "prev_close": 8.81
     },
     {
+      "ticker": "CCTY3.SA",
+      "name": "RDVC City S.A.",
+      "last_close": 5.75,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.29963459196102327,
+      "yearly_delta": -0.843024843024843,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 5.75
+    },
+    {
       "ticker": "CEAB3.SA",
       "name": "C&A Modas S.A.",
       "last_close": 9.21,
@@ -985,7 +1193,7 @@
       "daily_delta": -0.011802575107296098,
       "monthly_delta": -0.013918629550321082,
       "yearly_delta": -0.4438405797101448,
-      "delta_volume": -0.5557614130633823,
+      "delta_volume": -0.5557441784813317,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 9.32
@@ -998,7 +1206,7 @@
       "daily_delta": 0.000849617672047609,
       "monthly_delta": -0.008000000000000007,
       "yearly_delta": 0.13432835820895517,
-      "delta_volume": -0.03561643835616435,
+      "delta_volume": 0.008219178082191858,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 23.54
@@ -1030,6 +1238,19 @@
       "prev_close": 27.55
     },
     {
+      "ticker": "CEDO3.SA",
+      "name": "Companhia de Fiação e Tecidos Cedro e Cachoeira S.A.",
+      "last_close": 9.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.5714285714285714,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 9.0
+    },
+    {
       "ticker": "CEDO4.SA",
       "name": "Companhia de Fiação e Tecidos Cedro e Cachoeira S.A.",
       "last_close": 5.12,
@@ -1056,6 +1277,19 @@
       "prev_close": 46.45
     },
     {
+      "ticker": "CEEB5.SA",
+      "name": "Companhia de Eletricidade do Estado da Bahia - COELBA",
+      "last_close": 40.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.24843945068664164,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 40.0
+    },
+    {
       "ticker": "CEED3.SA",
       "name": "Companhia Estadual de Distribuição de Energia Elétrica",
       "last_close": 10.0,
@@ -1067,6 +1301,45 @@
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 10.0
+    },
+    {
+      "ticker": "CEED4.SA",
+      "name": "Companhia Estadual de Distribuição de Energia Elétrica",
+      "last_close": 20.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.0,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 20.0
+    },
+    {
+      "ticker": "CEGR3.SA",
+      "name": "Companhia Distribuidora de Gás do Rio de Janeiro - CEG",
+      "last_close": 35.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.16705568522840952,
+      "yearly_delta": -0.6340443329150982,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 35.0
+    },
+    {
+      "ticker": "CGAS3.SA",
+      "name": "Companhia de Gás de São Paulo - COMGÁS",
+      "last_close": 125.69,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.009558232931726973,
+      "yearly_delta": 0.09466991813272951,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 125.69
     },
     {
       "ticker": "CGAS5.SA",
@@ -1108,6 +1381,19 @@
       "prev_close": 23.46
     },
     {
+      "ticker": "CLSC3.SA",
+      "name": "Centrais Elétricas de Santa Catarina S.A.",
+      "last_close": 133.98,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.03860465116279066,
+      "yearly_delta": 0.5919676806083649,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 133.98
+    },
+    {
       "ticker": "CLSC4.SA",
       "name": "Centrais Elétricas de Santa Catarina S.A.",
       "last_close": 156.99,
@@ -1141,7 +1427,7 @@
       "daily_delta": 0.007155635062611854,
       "monthly_delta": 0.000888888888888939,
       "yearly_delta": 0.1362260343087789,
-      "delta_volume": -0.07703751565020345,
+      "delta_volume": -0.060458934670963416,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 11.18
@@ -1154,10 +1440,23 @@
       "daily_delta": -0.010510510510510551,
       "monthly_delta": 0.1169491525423727,
       "yearly_delta": 0.37866108786610875,
-      "delta_volume": 0.38009910197509966,
+      "delta_volume": 0.3814454453342957,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 6.66
+    },
+    {
+      "ticker": "COCE3.SA",
+      "name": "Companhia Energética do Ceará - COELCE",
+      "last_close": 28.8,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.07395498392282962,
+      "yearly_delta": -0.21675278759858585,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 28.8
     },
     {
       "ticker": "COCE5.SA",
@@ -1180,7 +1479,7 @@
       "daily_delta": 0.016666666666666607,
       "monthly_delta": 0.09909909909909898,
       "yearly_delta": -0.0792452830188679,
-      "delta_volume": -0.03442853262618906,
+      "delta_volume": -0.03252824865078119,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 2.4
@@ -1193,7 +1492,7 @@
       "daily_delta": 0.002139952921035748,
       "monthly_delta": 0.016055543501844127,
       "yearly_delta": 0.33532934131736525,
-      "delta_volume": -0.3260644217808931,
+      "delta_volume": -0.3257120371648309,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 46.73
@@ -1206,10 +1505,23 @@
       "daily_delta": 0.004435994930291454,
       "monthly_delta": 0.06662180349932711,
       "yearly_delta": 0.5225744476464937,
-      "delta_volume": 0.6206445869038038,
+      "delta_volume": 0.6213588966502497,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 15.78
+    },
+    {
+      "ticker": "CRPG3.SA",
+      "name": "Tronox Pigmentos do Brasil S.A.",
+      "last_close": 17.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.0,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 17.0
     },
     {
       "ticker": "CRPG5.SA",
@@ -1225,6 +1537,19 @@
       "prev_close": 9.05
     },
     {
+      "ticker": "CRPG6.SA",
+      "name": "Tronox Pigmentos do Brasil S.A.",
+      "last_close": 9.45,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.12983425414364647,
+      "yearly_delta": -0.40937500000000004,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 9.45
+    },
+    {
       "ticker": "CSAN3.SA",
       "name": "Cosan S.A.",
       "last_close": 3.8,
@@ -1232,7 +1557,7 @@
       "daily_delta": -0.005235602094240788,
       "monthly_delta": -0.02813299232736577,
       "yearly_delta": -0.46853146853146854,
-      "delta_volume": -0.35829774911917,
+      "delta_volume": -0.3580192154099563,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 3.82
@@ -1258,7 +1583,7 @@
       "daily_delta": -0.017053445850914284,
       "monthly_delta": -0.12242975984931725,
       "yearly_delta": 0.8914073071718538,
-      "delta_volume": -0.16460817141109074,
+      "delta_volume": -0.1638173762665729,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 56.88
@@ -1271,7 +1596,7 @@
       "daily_delta": -0.0031347962382444194,
       "monthly_delta": 0.3006134969325154,
       "yearly_delta": -0.1686274509803921,
-      "delta_volume": 0.050230729203992075,
+      "delta_volume": 0.0527574058961644,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 6.38
@@ -1284,7 +1609,7 @@
       "daily_delta": -0.004922644163150469,
       "monthly_delta": -0.012561060711793415,
       "yearly_delta": -0.11892901618929008,
-      "delta_volume": -0.16013788780946414,
+      "delta_volume": -0.15804867857515925,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 14.22
@@ -1303,6 +1628,19 @@
       "prev_close": 1.64
     },
     {
+      "ticker": "CTKA3.SA",
+      "name": "Karsten S.A.",
+      "last_close": 44.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.33333333333333326,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 44.0
+    },
+    {
       "ticker": "CTKA4.SA",
       "name": "Karsten S.A.",
       "last_close": 31.01,
@@ -1316,6 +1654,32 @@
       "prev_close": 31.0
     },
     {
+      "ticker": "CTSA3.SA",
+      "name": "Companhia Tecidos Santanense Ltda.",
+      "last_close": 2.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.24528301886792447,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 2.0
+    },
+    {
+      "ticker": "CTSA4.SA",
+      "name": "Companhia Tecidos Santanense Ltda.",
+      "last_close": 1.29,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.4798387096774194,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 1.29
+    },
+    {
       "ticker": "CURY3.SA",
       "name": "Cury Construtora e Incorporadora S.A.",
       "last_close": 33.21,
@@ -1323,7 +1687,7 @@
       "daily_delta": 0.012500000000000178,
       "monthly_delta": 0.057306590257879764,
       "yearly_delta": 0.1269087207329489,
-      "delta_volume": -0.5998748882007165,
+      "delta_volume": -0.5997714900194906,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 32.8
@@ -1336,7 +1700,7 @@
       "daily_delta": 0.05027932960893855,
       "monthly_delta": 0.2129032258064516,
       "yearly_delta": -0.11737089201877937,
-      "delta_volume": 0.16455371548374198,
+      "delta_volume": 0.1719259318905022,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.79
@@ -1349,7 +1713,7 @@
       "daily_delta": 0.01062215477996964,
       "monthly_delta": 0.027249357326478263,
       "yearly_delta": 0.533384497313891,
-      "delta_volume": -0.35740330868099346,
+      "delta_volume": -0.35701070340143404,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 19.77
@@ -1362,7 +1726,7 @@
       "daily_delta": 0.010260457774269982,
       "monthly_delta": 0.18408880666049954,
       "yearly_delta": -0.01081916537867067,
-      "delta_volume": -0.12140533506831486,
+      "delta_volume": -0.1208020346601999,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 25.34
@@ -1388,7 +1752,7 @@
       "daily_delta": 0.0071428571428571175,
       "monthly_delta": -0.007042253521126751,
       "yearly_delta": 1.1526717557251906,
-      "delta_volume": -0.36699762248919854,
+      "delta_volume": -0.3593358767169814,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 2.8
@@ -1414,7 +1778,7 @@
       "daily_delta": 0.0026773761713521083,
       "monthly_delta": 0.027434842249657088,
       "yearly_delta": 0.060906515580736675,
-      "delta_volume": -0.027567603131784968,
+      "delta_volume": -0.026251727087308385,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 7.47
@@ -1422,11 +1786,11 @@
     {
       "ticker": "DEXP4.SA",
       "name": "Dexxos Participações S.A.",
-      "last_close": 7.5,
+      "last_close": 7.4,
       "date": "2026-09-04",
-      "daily_delta": 0.013513513513513375,
-      "monthly_delta": 0.034482758620689724,
-      "yearly_delta": 0.09011627906976738,
+      "daily_delta": 0.0,
+      "monthly_delta": 0.020689655172413834,
+      "yearly_delta": 0.07558139534883734,
       "delta_volume": -0.5663716814159292,
       "is_liquid": true,
       "is_ibov": false,
@@ -1440,7 +1804,7 @@
       "daily_delta": -0.0008718395815169311,
       "monthly_delta": -0.029635901778154117,
       "yearly_delta": -0.19181946403385042,
-      "delta_volume": -0.09970780713023375,
+      "delta_volume": -0.09965430175214063,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 11.47
@@ -1453,10 +1817,23 @@
       "daily_delta": 0.008090614886731462,
       "monthly_delta": -0.07014925373134329,
       "yearly_delta": 0.38752783964365256,
-      "delta_volume": -0.45208619899128843,
+      "delta_volume": -0.44750114626318205,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 6.18
+    },
+    {
+      "ticker": "DOHL3.SA",
+      "name": "Döhler S.A.",
+      "last_close": 6.46,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.007680491551459223,
+      "yearly_delta": -0.0030864197530865445,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 6.46
     },
     {
       "ticker": "DOHL4.SA",
@@ -1479,10 +1856,23 @@
       "daily_delta": -0.050000000000000044,
       "monthly_delta": 0.6548387096774193,
       "yearly_delta": 0.12253829321663012,
-      "delta_volume": -0.7541547841479005,
+      "delta_volume": -0.7508768479365392,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 10.8
+    },
+    {
+      "ticker": "DTCY3.SA",
+      "name": "DTCOM - Direct to Company S.A.",
+      "last_close": 1.95,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.15217391304347816,
+      "yearly_delta": -0.3275862068965517,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 1.95
     },
     {
       "ticker": "DXCO3.SA",
@@ -1492,7 +1882,7 @@
       "daily_delta": 0.0,
       "monthly_delta": 0.11023622047244097,
       "yearly_delta": 0.13709677419354827,
-      "delta_volume": -0.28862766377044213,
+      "delta_volume": -0.28853646803475475,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 5.64
@@ -1518,7 +1908,7 @@
       "daily_delta": 0.009927797833934937,
       "monthly_delta": 0.00629496402877705,
       "yearly_delta": -0.01148409893992941,
-      "delta_volume": -0.805115712545676,
+      "delta_volume": -0.7929354445797807,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 11.08
@@ -1531,10 +1921,23 @@
       "daily_delta": 0.03664921465968596,
       "monthly_delta": 0.09392265193370153,
       "yearly_delta": 0.0012642225031604948,
-      "delta_volume": 0.3235448823459912,
+      "delta_volume": 0.3306984791323755,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 7.64
+    },
+    {
+      "ticker": "EGGY3.SA",
+      "name": "Granja Faria S.A.",
+      "last_close": 0.17,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.0,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 0.17
     },
     {
       "ticker": "EGIE3.SA",
@@ -1544,10 +1947,23 @@
       "daily_delta": -0.007246376811594124,
       "monthly_delta": 0.030427350427350452,
       "yearly_delta": 0.12336936265374598,
-      "delta_volume": 0.34709939252879707,
+      "delta_volume": 0.35910085337197595,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 30.36
+    },
+    {
+      "ticker": "EKTR3.SA",
+      "name": "Elektro Redes S.A.",
+      "last_close": 51.52,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.20345713618313477,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 51.52
     },
     {
       "ticker": "EKTR4.SA",
@@ -1561,6 +1977,19 @@
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 38.0
+    },
+    {
+      "ticker": "EMAE3.SA",
+      "name": "Empresa Metropolitana de Águas e Energia S.A.",
+      "last_close": 150.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.0,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 150.0
     },
     {
       "ticker": "EMAE4.SA",
@@ -1583,7 +2012,7 @@
       "daily_delta": 0.011178537208559547,
       "monthly_delta": 0.021180518223846923,
       "yearly_delta": 0.2073217236557774,
-      "delta_volume": -0.2513301471650148,
+      "delta_volume": -0.25077542104190953,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 93.93
@@ -1596,7 +2025,7 @@
       "daily_delta": -0.0018089725036180004,
       "monthly_delta": 0.022609340252038423,
       "yearly_delta": 0.8271523178807947,
-      "delta_volume": -0.5138977365746258,
+      "delta_volume": -0.5137145374346624,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 27.64
@@ -1648,7 +2077,7 @@
       "daily_delta": 0.0,
       "monthly_delta": 0.0,
       "yearly_delta": -0.013157894736842146,
-      "delta_volume": -0.5981017526834638,
+      "delta_volume": -0.5970366513213174,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.75
@@ -1706,6 +2135,45 @@
       "prev_close": 5.51
     },
     {
+      "ticker": "EQPA5.SA",
+      "name": "Equatorial Pará Distribuidora de Energia S.A.",
+      "last_close": 9.78,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.05961538461538474,
+      "yearly_delta": 0.6436974789915966,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 9.78
+    },
+    {
+      "ticker": "EQPA6.SA",
+      "name": "Equatorial Pará Distribuidora de Energia S.A.",
+      "last_close": 6.59,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.015408320493066174,
+      "yearly_delta": 0.010736196319018454,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 6.59
+    },
+    {
+      "ticker": "EQPA7.SA",
+      "name": "Equatorial Pará Distribuidora de Energia S.A.",
+      "last_close": 10.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.010101010101010166,
+      "yearly_delta": 0.6207455429497568,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 10.0
+    },
+    {
       "ticker": "EQTL3.SA",
       "name": "Equatorial S.A.",
       "last_close": 39.16,
@@ -1713,7 +2181,7 @@
       "daily_delta": 0.006166495375128367,
       "monthly_delta": -0.0005104645227157478,
       "yearly_delta": 0.1393657259237706,
-      "delta_volume": -0.5030286349040857,
+      "delta_volume": -0.5030049752342406,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 38.92
@@ -1726,10 +2194,23 @@
       "daily_delta": -0.06283422459893051,
       "monthly_delta": -0.08366013071895428,
       "yearly_delta": -0.33867924528301885,
-      "delta_volume": 0.0047095761381474865,
+      "delta_volume": 0.008634222919937207,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 7.48
+    },
+    {
+      "ticker": "ESTR3.SA",
+      "name": "Manufatura de Brinquedos Estrela S.A.",
+      "last_close": 3.01,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.398,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 3.01
     },
     {
       "ticker": "ESTR4.SA",
@@ -1752,10 +2233,23 @@
       "daily_delta": -0.0053050397877983935,
       "monthly_delta": 0.021798365122615904,
       "yearly_delta": -0.16666666666666663,
-      "delta_volume": -0.5485242621310655,
+      "delta_volume": -0.5472736368184092,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.77
+    },
+    {
+      "ticker": "EUCA3.SA",
+      "name": "Eucatex S.A. Indústria e Comércio",
+      "last_close": 21.5,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.05494505494505497,
+      "yearly_delta": 0.10199897488467435,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 21.5
     },
     {
       "ticker": "EUCA4.SA",
@@ -1791,7 +2285,7 @@
       "daily_delta": -0.018867924528301883,
       "monthly_delta": 0.16696588868940743,
       "yearly_delta": 0.19485294117647056,
-      "delta_volume": -0.2737282224766793,
+      "delta_volume": -0.2737033569679993,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 13.25
@@ -1817,7 +2311,7 @@
       "daily_delta": -0.019230769230769162,
       "monthly_delta": -0.05872483221476499,
       "yearly_delta": -0.0426621160409556,
-      "delta_volume": 0.4590139628101497,
+      "delta_volume": 0.4593718524881001,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.72
@@ -1836,6 +2330,19 @@
       "prev_close": 3.15
     },
     {
+      "ticker": "FICT3.SA",
+      "name": "Fictor Alimentos S.A.",
+      "last_close": 0.18,
+      "date": "2026-09-04",
+      "daily_delta": -0.052631578947368474,
+      "monthly_delta": -0.10000000000000009,
+      "yearly_delta": -0.9435736677115988,
+      "delta_volume": 1.9863494539781592,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 0.19
+    },
+    {
       "ticker": "FIEI3.SA",
       "name": "Fica Empreendimentos Imobiliarios S.A",
       "last_close": 7.49,
@@ -1849,6 +2356,19 @@
       "prev_close": 7.69
     },
     {
+      "ticker": "FIGE3.SA",
+      "name": "Investimentos Bemge S.A.",
+      "last_close": 33.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 1.7477102414654455,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 33.0
+    },
+    {
       "ticker": "FIQE3.SA",
       "name": "Unifique Telecomunicações S.A.",
       "last_close": 4.92,
@@ -1856,7 +2376,7 @@
       "daily_delta": -0.010060362173038184,
       "monthly_delta": -0.06994328922495274,
       "yearly_delta": 0.40170940170940184,
-      "delta_volume": -0.20404350786528624,
+      "delta_volume": -0.20378162264085065,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 4.97
@@ -1888,6 +2408,32 @@
       "prev_close": 22.75
     },
     {
+      "ticker": "FRIO3.SA",
+      "name": "Metalfrio Solutions S.A.",
+      "last_close": 205.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.10865689812600554,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 205.0
+    },
+    {
+      "ticker": "GEPA3.SA",
+      "name": "Rio Paranapanema Energia S.A.",
+      "last_close": 33.71,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.036581880537296385,
+      "yearly_delta": 0.2069459362692445,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 33.71
+    },
+    {
       "ticker": "GEPA4.SA",
       "name": "Rio Paranapanema Energia S.A.",
       "last_close": 36.26,
@@ -1908,7 +2454,7 @@
       "daily_delta": -0.045454545454545525,
       "monthly_delta": -0.16000000000000003,
       "yearly_delta": -0.9828571428571429,
-      "delta_volume": -0.061559613786246414,
+      "delta_volume": -0.023746086983540082,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.22
@@ -1947,7 +2493,7 @@
       "daily_delta": 0.014728682170542573,
       "monthly_delta": 0.1207191780821919,
       "yearly_delta": -0.15165262475696695,
-      "delta_volume": 0.17778454106147135,
+      "delta_volume": 0.17844556788401178,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 12.9
@@ -1960,7 +2506,7 @@
       "daily_delta": 0.014583333333333393,
       "monthly_delta": 0.25192802056555275,
       "yearly_delta": -0.30823863636363635,
-      "delta_volume": -0.32651159449222766,
+      "delta_volume": -0.3264148844971806,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 4.8
@@ -1973,7 +2519,7 @@
       "daily_delta": 0.0010050251256283893,
       "monthly_delta": -0.03300970873786402,
       "yearly_delta": 0.46686303387334327,
-      "delta_volume": -0.5514617541049259,
+      "delta_volume": -0.5494593512214658,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 9.95
@@ -1986,10 +2532,23 @@
       "daily_delta": 0.006306306306306242,
       "monthly_delta": -0.02103418054338302,
       "yearly_delta": 0.6282798833819241,
-      "delta_volume": -0.1897694348347121,
+      "delta_volume": -0.1897337422513632,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 11.1
+    },
+    {
+      "ticker": "GPAR3.SA",
+      "name": "Companhia CELG de Participações S/A",
+      "last_close": 10.51,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.48556045031815953,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 10.51
     },
     {
       "ticker": "GRND3.SA",
@@ -1999,10 +2558,23 @@
       "daily_delta": -0.0027100271002709064,
       "monthly_delta": 0.04249291784702569,
       "yearly_delta": -0.06835443037974687,
-      "delta_volume": -0.39549528393299693,
+      "delta_volume": -0.39472010250634393,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.69
+    },
+    {
+      "ticker": "GSHP3.SA",
+      "name": "General Shopping e Outlets do Brasil S.A.",
+      "last_close": 2.75,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.23398328690807801,
+      "yearly_delta": -0.017857142857142794,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 2.75
     },
     {
       "ticker": "HAGA3.SA",
@@ -2038,7 +2610,7 @@
       "daily_delta": -0.009549795361528002,
       "monthly_delta": -0.3465346534653465,
       "yearly_delta": -0.8241705013320417,
-      "delta_volume": -0.5675698811497552,
+      "delta_volume": -0.5655994075658111,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 7.33
@@ -2051,7 +2623,7 @@
       "daily_delta": -0.059090909090909194,
       "monthly_delta": 0.03499999999999992,
       "yearly_delta": -0.40517241379310354,
-      "delta_volume": 0.8875021371174561,
+      "delta_volume": 0.8885078394496797,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 2.2
@@ -2064,7 +2636,7 @@
       "daily_delta": -0.03717472118959109,
       "monthly_delta": 0.15624999999999978,
       "yearly_delta": -0.34760705289672555,
-      "delta_volume": -0.5219423016137437,
+      "delta_volume": -0.5207463030831134,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 2.69
@@ -2081,6 +2653,45 @@
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.42
+    },
+    {
+      "ticker": "HBTS5.SA",
+      "name": "Companhia Habitasul de Participações",
+      "last_close": 32.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.011735639283508403,
+      "yearly_delta": 0.06382978723404253,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 32.0
+    },
+    {
+      "ticker": "HETA4.SA",
+      "name": "Hercules S.A - Fábrica de Talheres",
+      "last_close": 4.8,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.020408163265306256,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 4.8
+    },
+    {
+      "ticker": "HOOT3.SA",
+      "name": "Hoteis Othon SA",
+      "last_close": 3.3,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.0,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 3.3
     },
     {
       "ticker": "HOOT4.SA",
@@ -2103,7 +2714,7 @@
       "daily_delta": 0.018917729872415245,
       "monthly_delta": 0.07921714818266534,
       "yearly_delta": 0.046070460704606964,
-      "delta_volume": 0.14481174266917263,
+      "delta_volume": 0.14484351739904766,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 22.73
@@ -2129,7 +2740,7 @@
       "daily_delta": 0.0,
       "monthly_delta": 0.024390243902439046,
       "yearly_delta": 0.22627737226277356,
-      "delta_volume": -0.9332591768631813,
+      "delta_volume": -0.9310344827586207,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.36
@@ -2142,7 +2753,7 @@
       "daily_delta": -0.03412969283276457,
       "monthly_delta": -0.01565217391304341,
       "yearly_delta": 0.10763209393346385,
-      "delta_volume": -0.8704103671706264,
+      "delta_volume": -0.8488120950323974,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 11.72
@@ -2155,7 +2766,7 @@
       "daily_delta": -0.005269100489273648,
       "monthly_delta": 0.05762304921968786,
       "yearly_delta": 0.14963027403218798,
-      "delta_volume": 0.09878001097950628,
+      "delta_volume": 0.0988590002330183,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 26.57
@@ -2168,7 +2779,7 @@
       "daily_delta": 0.0,
       "monthly_delta": -0.07643312101910837,
       "yearly_delta": -0.11042944785276065,
-      "delta_volume": -0.7262719428741446,
+      "delta_volume": -0.7232966379053853,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.45
@@ -2207,7 +2818,7 @@
       "daily_delta": 0.0464255677039529,
       "monthly_delta": 0.14778597785977854,
       "yearly_delta": 0.37754650132860945,
-      "delta_volume": 2.206900744576607,
+      "delta_volume": 2.2263555800330446,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 59.45
@@ -2233,7 +2844,7 @@
       "daily_delta": 0.0021707670043413785,
       "monthly_delta": 0.03706476974915751,
       "yearly_delta": 0.2889716147045138,
-      "delta_volume": -0.24788247485661918,
+      "delta_volume": -0.24771118869739728,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 27.64
@@ -2246,7 +2857,7 @@
       "daily_delta": 0.0014245014245015675,
       "monthly_delta": 0.015162454873646203,
       "yearly_delta": 0.4144869215291751,
-      "delta_volume": -0.5207540329889433,
+      "delta_volume": -0.5164038426681168,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 14.04
@@ -2259,7 +2870,7 @@
       "daily_delta": 0.015283842794759694,
       "monthly_delta": 0.016023306627822143,
       "yearly_delta": 0.4133738601823709,
-      "delta_volume": 0.061710678124179186,
+      "delta_volume": 0.06187768566516616,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 13.74
@@ -2285,7 +2896,7 @@
       "daily_delta": 0.0,
       "monthly_delta": -0.0108541764983483,
       "yearly_delta": 0.22968612496333218,
-      "delta_volume": -0.18182780859727266,
+      "delta_volume": -0.18154086847211215,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 41.92
@@ -2298,7 +2909,7 @@
       "daily_delta": 0.0037735849056603765,
       "monthly_delta": 0.33000000000000007,
       "yearly_delta": -0.08591065292096223,
-      "delta_volume": 0.3592133927344807,
+      "delta_volume": 0.3604694522402998,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 2.65
@@ -2324,10 +2935,36 @@
       "daily_delta": -0.018010291595197292,
       "monthly_delta": 0.055299539170506895,
       "yearly_delta": 1.1892925430210322,
-      "delta_volume": 0.6234032924286697,
+      "delta_volume": 0.6234556113333212,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 11.66
+    },
+    {
+      "ticker": "JOPA3.SA",
+      "name": "JOSAPAR Joaquim Oliveira S.A. Participações",
+      "last_close": 17.1,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.15094339622641506,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 17.1
+    },
+    {
+      "ticker": "JOPA4.SA",
+      "name": "JOSAPAR Joaquim Oliveira S.A. Participações",
+      "last_close": 18.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.23404255319148937,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 18.0
     },
     {
       "ticker": "JSLG3.SA",
@@ -2337,7 +2974,7 @@
       "daily_delta": -0.013559322033898313,
       "monthly_delta": 0.015706806282722585,
       "yearly_delta": 0.31081081081081074,
-      "delta_volume": -0.17649980135081444,
+      "delta_volume": -0.17600317838696866,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.9
@@ -2350,7 +2987,7 @@
       "daily_delta": 0.0121212121212122,
       "monthly_delta": 0.060317460317460325,
       "yearly_delta": -0.1187335092348285,
-      "delta_volume": -0.22983317532862624,
+      "delta_volume": -0.22898419481272902,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 6.6
@@ -2363,7 +3000,7 @@
       "daily_delta": -0.004938271604938205,
       "monthly_delta": 0.07466666666666666,
       "yearly_delta": 0.15142857142857147,
-      "delta_volume": -0.3159177391081277,
+      "delta_volume": -0.31463508486895553,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 4.05
@@ -2376,7 +3013,7 @@
       "daily_delta": -0.002590673575129432,
       "monthly_delta": 0.037735849056603765,
       "yearly_delta": 0.1191860465116279,
-      "delta_volume": -0.24203029046062952,
+      "delta_volume": -0.24130764372359625,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.86
@@ -2415,7 +3052,7 @@
       "daily_delta": -0.007483629560336769,
       "monthly_delta": 0.0037842951750235443,
       "yearly_delta": -0.10840336134453787,
-      "delta_volume": -0.04161885261270992,
+      "delta_volume": -0.04071882336175925,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 10.69
@@ -2441,7 +3078,7 @@
       "daily_delta": -0.019230769230769273,
       "monthly_delta": 0.15161290322580645,
       "yearly_delta": -0.3437500000000001,
-      "delta_volume": -0.5044815254011432,
+      "delta_volume": -0.5040777237431338,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.64
@@ -2454,7 +3091,7 @@
       "daily_delta": 0.016260162601626105,
       "monthly_delta": -0.0234375,
       "yearly_delta": -0.49799196787148603,
-      "delta_volume": 0.11381270419050371,
+      "delta_volume": 0.11992695508267492,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.23
@@ -2467,7 +3104,7 @@
       "daily_delta": -0.015145476285372661,
       "monthly_delta": -0.03551912568306015,
       "yearly_delta": 0.5067073170731708,
-      "delta_volume": -0.2644830284361598,
+      "delta_volume": -0.26369065895427035,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 25.09
@@ -2493,7 +3130,7 @@
       "daily_delta": 0.0,
       "monthly_delta": -0.0979020979020978,
       "yearly_delta": -0.01526717557251911,
-      "delta_volume": -0.0621224466859599,
+      "delta_volume": -0.055941108707257436,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.29
@@ -2506,7 +3143,7 @@
       "daily_delta": -0.004385964912280715,
       "monthly_delta": -0.16971470373079733,
       "yearly_delta": -0.25181278839815424,
-      "delta_volume": -0.4989883602974009,
+      "delta_volume": -0.4982044369615398,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 11.4
@@ -2519,7 +3156,7 @@
       "daily_delta": -0.018918918918918948,
       "monthly_delta": -0.42380952380952386,
       "yearly_delta": -0.6787610619469027,
-      "delta_volume": -0.8242431114638848,
+      "delta_volume": -0.8185735344143327,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.7
@@ -2564,6 +3201,19 @@
       "prev_close": 2.5
     },
     {
+      "ticker": "MAPT4.SA",
+      "name": "Cemepe Investimentos S.A.",
+      "last_close": 3.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.0625,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 3.0
+    },
+    {
       "ticker": "MATD3.SA",
       "name": "Hospital Mater Dei S.A.",
       "last_close": 5.17,
@@ -2571,7 +3221,7 @@
       "daily_delta": 0.023762376237623783,
       "monthly_delta": 0.04233870967741926,
       "yearly_delta": 0.1644144144144144,
-      "delta_volume": -0.13609208345062718,
+      "delta_volume": -0.07290982452847894,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.05
@@ -2584,7 +3234,7 @@
       "daily_delta": -0.03701687534022857,
       "monthly_delta": 0.05485986881335725,
       "yearly_delta": -0.26106934001670845,
-      "delta_volume": -0.04199827322385685,
+      "delta_volume": -0.03815149468717138,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 18.37
@@ -2597,7 +3247,7 @@
       "daily_delta": 0.008508224617129967,
       "monthly_delta": 0.013105413105413133,
       "yearly_delta": -0.3627240143369175,
-      "delta_volume": -0.5343170268780996,
+      "delta_volume": -0.5341945753994979,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 17.63
@@ -2610,7 +3260,7 @@
       "daily_delta": -0.001547388781431458,
       "monthly_delta": 0.02869669190912716,
       "yearly_delta": 0.16946080652469409,
-      "delta_volume": 0.9282305783546478,
+      "delta_volume": 0.9435961061271234,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 25.85
@@ -2623,7 +3273,7 @@
       "daily_delta": 0.030303030303030276,
       "monthly_delta": 0.15254237288135597,
       "yearly_delta": -0.4925373134328358,
-      "delta_volume": -0.10600075244544771,
+      "delta_volume": -0.08389766741911209,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.66
@@ -2636,7 +3286,7 @@
       "daily_delta": -0.010204081632652962,
       "monthly_delta": 0.0034482758620690834,
       "yearly_delta": -0.13649851632047472,
-      "delta_volume": 0.17020258414420164,
+      "delta_volume": 0.17126601797203178,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 2.94
@@ -2662,7 +3312,7 @@
       "daily_delta": 0.04136690647482033,
       "monthly_delta": 0.20876826722338215,
       "yearly_delta": -0.2904411764705882,
-      "delta_volume": 0.12925333372574666,
+      "delta_volume": 0.1325297488028585,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 5.56
@@ -2692,6 +3342,32 @@
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.88
+    },
+    {
+      "ticker": "MMAQ3.SA",
+      "name": "Minasmáquinas S/A",
+      "last_close": 2550.01,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.8603570412414006,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 2550.01
+    },
+    {
+      "ticker": "MMAQ4.SA",
+      "name": "Minasmáquinas S/A",
+      "last_close": 2550.01,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.8603570412414006,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 2550.01
     },
     {
       "ticker": "MNDL3.SA",
@@ -2727,7 +3403,7 @@
       "daily_delta": 0.019441069258809174,
       "monthly_delta": 0.12090848363393447,
       "yearly_delta": 0.15010281014393434,
-      "delta_volume": 0.4690082161190956,
+      "delta_volume": 0.46934436153955916,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 16.46
@@ -2740,7 +3416,7 @@
       "daily_delta": 0.045103092783505216,
       "monthly_delta": 0.018844221105527525,
       "yearly_delta": 0.1552706552706553,
-      "delta_volume": 0.19186524275660677,
+      "delta_volume": 0.19190002600047484,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 7.76
@@ -2753,10 +3429,36 @@
       "daily_delta": -0.010695187165775444,
       "monthly_delta": 0.17834394904458595,
       "yearly_delta": -0.2965779467680608,
-      "delta_volume": -0.5664905244483431,
+      "delta_volume": -0.566068795274384,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 5.61
+    },
+    {
+      "ticker": "MSPA3.SA",
+      "name": "Companhia Melhoramentos de São Paulo",
+      "last_close": 37.4,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.02324366675372158,
+      "yearly_delta": -0.18695652173913047,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 37.4
+    },
+    {
+      "ticker": "MSPA4.SA",
+      "name": "Companhia Melhoramentos de São Paulo",
+      "last_close": 35.11,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.00028490028490013586,
+      "yearly_delta": -0.12224999999999997,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 35.11
     },
     {
       "ticker": "MTRE3.SA",
@@ -2766,10 +3468,23 @@
       "daily_delta": 0.0029325513196480912,
       "monthly_delta": 0.19163763066202089,
       "yearly_delta": 0.020895522388059584,
-      "delta_volume": -0.2302540272186816,
+      "delta_volume": -0.23011593142162723,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.41
+    },
+    {
+      "ticker": "MTSA3.SA",
+      "name": "METISA Metalúrgica Timboense S.A.",
+      "last_close": 76.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.043382756727073035,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 76.0
     },
     {
       "ticker": "MTSA4.SA",
@@ -2792,10 +3507,23 @@
       "daily_delta": -0.005601317957166452,
       "monthly_delta": 0.05156794425087119,
       "yearly_delta": 0.1333082989110026,
-      "delta_volume": -0.10644048939303707,
+      "delta_volume": -0.10641671629301297,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 30.35
+    },
+    {
+      "ticker": "MWET3.SA",
+      "name": "Wetzel S.A.",
+      "last_close": 24.5,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.53125,
+      "yearly_delta": 0.8846153846153846,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 24.5
     },
     {
       "ticker": "MWET4.SA",
@@ -2831,7 +3559,7 @@
       "daily_delta": -0.03804347826086951,
       "monthly_delta": 0.06626506024096379,
       "yearly_delta": 0.018411967779056404,
-      "delta_volume": -0.21647538273272726,
+      "delta_volume": -0.215994935521158,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 9.2
@@ -2883,7 +3611,7 @@
       "daily_delta": 0.09204368174726985,
       "monthly_delta": 0.1200000000000001,
       "yearly_delta": -0.36993699369936994,
-      "delta_volume": 1.3543084989875238,
+      "delta_volume": 1.3577057695488337,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 6.41
@@ -2896,10 +3624,36 @@
       "daily_delta": -0.01853871319520184,
       "monthly_delta": 0.0,
       "yearly_delta": 0.3293943870014773,
-      "delta_volume": 0.8004866180048662,
+      "delta_volume": 0.8126520681265206,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 27.51
+    },
+    {
+      "ticker": "OIBR3.SA",
+      "name": "Oi S.A.",
+      "last_close": 0.1,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.16666666666666663,
+      "yearly_delta": -0.8214285714285714,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 0.1
+    },
+    {
+      "ticker": "OIBR4.SA",
+      "name": "Oi S.A.",
+      "last_close": 0.5,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.13636363636363646,
+      "yearly_delta": -0.9310344827586207,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 0.5
     },
     {
       "ticker": "ONCO3.SA",
@@ -2909,7 +3663,7 @@
       "daily_delta": 0.007352941176470562,
       "monthly_delta": 1.2833333333333337,
       "yearly_delta": -0.5243055555555556,
-      "delta_volume": -0.12449365427610648,
+      "delta_volume": -0.12339750922705583,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.36
@@ -2980,6 +3734,19 @@
       "prev_close": 30.88
     },
     {
+      "ticker": "PATI4.SA",
+      "name": "Panatlântica S.A.",
+      "last_close": 30.37,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.16182096403978585,
+      "yearly_delta": -0.003935716628402641,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 30.37
+    },
+    {
       "ticker": "PCAR3.SA",
       "name": "Companhia Brasileira De Distribuicao",
       "last_close": 2.83,
@@ -2987,7 +3754,7 @@
       "daily_delta": 0.04814814814814805,
       "monthly_delta": -0.03741496598639449,
       "yearly_delta": -0.2572178477690289,
-      "delta_volume": 0.39955532208862854,
+      "delta_volume": 0.4019155195515207,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 2.7
@@ -3019,6 +3786,32 @@
       "prev_close": 1.69
     },
     {
+      "ticker": "PEAB3.SA",
+      "name": "Companhia de Participações Aliança da Bahia",
+      "last_close": 38.86,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.008420515437611575,
+      "yearly_delta": 0.1147446930579461,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 38.86
+    },
+    {
+      "ticker": "PEAB4.SA",
+      "name": "Companhia de Participações Aliança da Bahia",
+      "last_close": 38.87,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.00511901714870755,
+      "yearly_delta": 0.11791774518262854,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 38.87
+    },
+    {
       "ticker": "PETR3.SA",
       "name": "Petróleo Brasileiro S.A. - Petrobras",
       "last_close": 52.01,
@@ -3026,7 +3819,7 @@
       "daily_delta": -0.010840623811335104,
       "monthly_delta": 0.1341037941561274,
       "yearly_delta": 0.6815389589395409,
-      "delta_volume": -0.21525001106570074,
+      "delta_volume": -0.21504766682334298,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 52.58
@@ -3039,7 +3832,7 @@
       "daily_delta": -0.009461732548360025,
       "monthly_delta": 0.15891758917589183,
       "yearly_delta": 0.6640762981278701,
-      "delta_volume": -0.4581734367539012,
+      "delta_volume": -0.4633578635248966,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 47.56
@@ -3052,7 +3845,7 @@
       "daily_delta": 0.026075619295958363,
       "monthly_delta": 0.11001410437235548,
       "yearly_delta": 0.05637583892617459,
-      "delta_volume": -0.45187601957585644,
+      "delta_volume": -0.4512234910277325,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 7.67
@@ -3065,7 +3858,7 @@
       "daily_delta": 0.02400000000000002,
       "monthly_delta": 0.09090909090909083,
       "yearly_delta": 0.06077348066298338,
-      "delta_volume": -0.1280896752613334,
+      "delta_volume": -0.12687456331914582,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.75
@@ -3091,7 +3884,7 @@
       "daily_delta": -0.012411347517730431,
       "monthly_delta": -0.1611445783132529,
       "yearly_delta": 0.7543307086614175,
-      "delta_volume": 0.134320298030149,
+      "delta_volume": 0.13482657801141662,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 11.28
@@ -3130,7 +3923,7 @@
       "daily_delta": 0.3913043478260869,
       "monthly_delta": 0.6842105263157894,
       "yearly_delta": -0.8012422360248448,
-      "delta_volume": 2.641392633376645,
+      "delta_volume": 2.6428201524006805,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.23
@@ -3143,7 +3936,7 @@
       "daily_delta": 0.023328149300155587,
       "monthly_delta": 0.05958132045088571,
       "yearly_delta": 0.39702760084925703,
-      "delta_volume": 0.18369911150078355,
+      "delta_volume": 0.18383718441709074,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 12.86
@@ -3156,7 +3949,7 @@
       "daily_delta": -0.009302325581395321,
       "monthly_delta": 0.009478672985782088,
       "yearly_delta": -0.25263157894736843,
-      "delta_volume": -0.3284178897492199,
+      "delta_volume": -0.3276320351323241,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 4.3
@@ -3169,7 +3962,7 @@
       "daily_delta": 0.004385964912280826,
       "monthly_delta": 0.011037527593819041,
       "yearly_delta": -0.36033519553072624,
-      "delta_volume": -0.1863886533553799,
+      "delta_volume": -0.18509422315770052,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 4.56
@@ -3182,10 +3975,23 @@
       "daily_delta": -0.005813953488372103,
       "monthly_delta": -0.011560693641618491,
       "yearly_delta": -0.1719128329297821,
-      "delta_volume": 0.05888985104639466,
+      "delta_volume": 0.0595872538022979,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.44
+    },
+    {
+      "ticker": "PPAR3.SA",
+      "name": "Polpar SA",
+      "last_close": 83.34,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.17025089605734767,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 83.34
     },
     {
       "ticker": "PRIO3.SA",
@@ -3195,7 +4001,7 @@
       "daily_delta": -0.021300813008130137,
       "monthly_delta": 0.016722972972972983,
       "yearly_delta": 0.612808145766345,
-      "delta_volume": 0.21130329089653688,
+      "delta_volume": 0.2116742086612151,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 61.5
@@ -3247,7 +4053,7 @@
       "daily_delta": -0.019607843137254943,
       "monthly_delta": -0.05063291139240511,
       "yearly_delta": -0.23857868020304562,
-      "delta_volume": 0.11836481150074696,
+      "delta_volume": 0.12703178382855373,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.53
@@ -3260,7 +4066,7 @@
       "daily_delta": -0.013813517513566853,
       "monthly_delta": -0.027250608272506138,
       "yearly_delta": 0.1962896469180131,
-      "delta_volume": -0.5755991511427245,
+      "delta_volume": -0.5753490513343751,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 20.27
@@ -3273,7 +4079,7 @@
       "daily_delta": -0.017555705604321403,
       "monthly_delta": 0.04002859185132235,
       "yearly_delta": -0.010204081632652962,
-      "delta_volume": 0.26983209403932773,
+      "delta_volume": 0.26998910220589334,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 14.81
@@ -3286,7 +4092,7 @@
       "daily_delta": 0.03703703703703698,
       "monthly_delta": 0.0769230769230771,
       "yearly_delta": -0.7829457364341085,
-      "delta_volume": -0.30186606253140624,
+      "delta_volume": -0.2952867229352797,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.27
@@ -3299,7 +4105,7 @@
       "daily_delta": 0.0013071895424836555,
       "monthly_delta": -0.08373205741626788,
       "yearly_delta": -0.043695380774032455,
-      "delta_volume": 0.43761142865887726,
+      "delta_volume": 0.4383766039988064,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 7.65
@@ -3325,7 +4131,7 @@
       "daily_delta": -0.06976744186046513,
       "monthly_delta": -0.053254437869822535,
       "yearly_delta": -0.28358208955223885,
-      "delta_volume": 1.9659957877074468,
+      "delta_volume": 1.975434119569682,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.16
@@ -3351,7 +4157,7 @@
       "daily_delta": -0.023255813953488413,
       "monthly_delta": -0.46153846153846156,
       "yearly_delta": 0.5555555555555554,
-      "delta_volume": -0.49482053733399445,
+      "delta_volume": -0.47681340573793607,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.43
@@ -3377,7 +4183,7 @@
       "daily_delta": -0.02447552447552437,
       "monthly_delta": 0.139938712972421,
       "yearly_delta": 0.009954751131221684,
-      "delta_volume": 3.3822432870445516,
+      "delta_volume": 3.38274271644646,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 11.44
@@ -3403,7 +4209,7 @@
       "daily_delta": -0.0029931972789115635,
       "monthly_delta": -0.0653061224489796,
       "yearly_delta": 0.04002270791938689,
-      "delta_volume": -0.2833277090294182,
+      "delta_volume": -0.2832906257069009,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 36.75
@@ -3416,7 +4222,7 @@
       "daily_delta": -0.02081021087680357,
       "monthly_delta": -0.07131578947368422,
       "yearly_delta": -0.12799604645416363,
-      "delta_volume": -0.490305816510094,
+      "delta_volume": -0.48897328269704843,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 36.04
@@ -3442,7 +4248,7 @@
       "daily_delta": -0.04444444444444451,
       "monthly_delta": 0.04878048780487809,
       "yearly_delta": -0.21818181818181825,
-      "delta_volume": 0.4949464474279681,
+      "delta_volume": 0.5567958968170161,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.9
@@ -3455,7 +4261,7 @@
       "daily_delta": 0.061728395061728225,
       "monthly_delta": 0.07499999999999996,
       "yearly_delta": -0.18095238095238098,
-      "delta_volume": 0.7645943896891585,
+      "delta_volume": 0.8025018953752843,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.81
@@ -3468,10 +4274,75 @@
       "daily_delta": 0.015332197614991383,
       "monthly_delta": 0.02405498281786933,
       "yearly_delta": -0.21887287024901703,
-      "delta_volume": -0.3069010883865566,
+      "delta_volume": -0.30630307379500055,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.87
+    },
+    {
+      "ticker": "RPAD3.SA",
+      "name": "Alfa Holdings S.A.",
+      "last_close": 7.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.16472545757071555,
+      "yearly_delta": 0.4285714285714284,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 7.0
+    },
+    {
+      "ticker": "RPAD5.SA",
+      "name": "Alfa Holdings S.A.",
+      "last_close": 7.79,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.1609538002980626,
+      "yearly_delta": 0.3092436974789916,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 7.79
+    },
+    {
+      "ticker": "RPAD6.SA",
+      "name": "Alfa Holdings S.A.",
+      "last_close": 7.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.07692307692307687,
+      "yearly_delta": 0.7369727047146402,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 7.0
+    },
+    {
+      "ticker": "RPMG3.SA",
+      "name": "Refinaria de Petróleos de Manguinhos S.A.",
+      "last_close": 0.85,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.23423423423423428,
+      "yearly_delta": -0.7089041095890412,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 0.85
+    },
+    {
+      "ticker": "RSID3.SA",
+      "name": "Rossi Residencial S.A.",
+      "last_close": 1.6,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.17525773195876282,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 1.6
     },
     {
       "ticker": "RSUL4.SA",
@@ -3507,7 +4378,7 @@
       "daily_delta": 0.0013183915622940745,
       "monthly_delta": 0.028436018957346043,
       "yearly_delta": 0.22598870056497167,
-      "delta_volume": -0.5539939581739683,
+      "delta_volume": -0.5534753464974265,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 15.17
@@ -3520,7 +4391,7 @@
       "daily_delta": -0.007265521796565477,
       "monthly_delta": 0.026639344262294973,
       "yearly_delta": 0.09868421052631571,
-      "delta_volume": -0.5019134938895377,
+      "delta_volume": -0.5014510180249968,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 15.14
@@ -3533,7 +4404,7 @@
       "daily_delta": -0.0003285151116951823,
       "monthly_delta": 0.032225237449118094,
       "yearly_delta": 0.16545384909996175,
-      "delta_volume": -0.076948541038795,
+      "delta_volume": -0.076909132288279,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 30.44
@@ -3546,7 +4417,7 @@
       "daily_delta": 0.0026075619295959918,
       "monthly_delta": 0.018543046357615944,
       "yearly_delta": 0.03221476510067123,
-      "delta_volume": -0.24270511500171643,
+      "delta_volume": -0.24201853759011327,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 7.67
@@ -3559,7 +4430,7 @@
       "daily_delta": -0.01013024602026058,
       "monthly_delta": -0.004366812227074246,
       "yearly_delta": -0.007256894049346818,
-      "delta_volume": -0.2980538489565665,
+      "delta_volume": -0.2972371942256229,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 6.91
@@ -3585,7 +4456,7 @@
       "daily_delta": 0.005561735261401468,
       "monthly_delta": -0.03418803418803418,
       "yearly_delta": -0.15276476101218373,
-      "delta_volume": -0.1088831103137029,
+      "delta_volume": -0.10872503378885723,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 8.99
@@ -3598,7 +4469,7 @@
       "daily_delta": 0.010666666666666602,
       "monthly_delta": -0.04258390472753515,
       "yearly_delta": 0.1534782608695653,
-      "delta_volume": -0.003437893027693706,
+      "delta_volume": -0.003406272949260103,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 26.25
@@ -3611,7 +4482,7 @@
       "daily_delta": 0.0,
       "monthly_delta": -0.048327137546468335,
       "yearly_delta": -0.19242902208201884,
-      "delta_volume": -0.8102383053839365,
+      "delta_volume": -0.7837599293909974,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 12.8
@@ -3650,7 +4521,7 @@
       "daily_delta": 0.0,
       "monthly_delta": -0.011061946902654829,
       "yearly_delta": 0.054245283018867774,
-      "delta_volume": 0.8279947003351258,
+      "delta_volume": 0.8305276283999687,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 4.47
@@ -3663,7 +4534,7 @@
       "daily_delta": 0.02933333333333321,
       "monthly_delta": 0.007832898172323688,
       "yearly_delta": -0.27238454288407166,
-      "delta_volume": 0.4993817869972068,
+      "delta_volume": 0.49945066866882715,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 7.5
@@ -3676,7 +4547,7 @@
       "daily_delta": -0.004851425106124796,
       "monthly_delta": 0.2146558105107328,
       "yearly_delta": 0.13800277392510396,
-      "delta_volume": 1.759773887615208,
+      "delta_volume": 1.76107850452718,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 16.49
@@ -3689,7 +4560,7 @@
       "daily_delta": 0.01697792869269943,
       "monthly_delta": -0.09879638916750266,
       "yearly_delta": -0.23040685224839408,
-      "delta_volume": -0.49432870065079904,
+      "delta_volume": -0.49422140398580283,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 17.67
@@ -3702,10 +4573,23 @@
       "daily_delta": 0.017786561264822254,
       "monthly_delta": 0.44055944055944063,
       "yearly_delta": 0.16449971735443758,
-      "delta_volume": -0.527886220464141,
+      "delta_volume": -0.5278478902068109,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 20.24
+    },
+    {
+      "ticker": "SNSY3.SA",
+      "name": "Sansuy S.A.",
+      "last_close": 9.13,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.16999999999999993,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 9.13
     },
     {
       "ticker": "SNSY5.SA",
@@ -3721,6 +4605,19 @@
       "prev_close": 2.35
     },
     {
+      "ticker": "SNSY6.SA",
+      "name": "Sansuy S.A.",
+      "last_close": 11.51,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.0,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 11.51
+    },
+    {
       "ticker": "SOJA3.SA",
       "name": "Boa Safra Sementes S.A.",
       "last_close": 7.88,
@@ -3734,6 +4631,45 @@
       "prev_close": 7.81
     },
     {
+      "ticker": "SOND3.SA",
+      "name": "Sondotécnica Engenharia de Solos S.A.",
+      "last_close": 38.66,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.19950356810425074,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 38.66
+    },
+    {
+      "ticker": "SOND5.SA",
+      "name": "Sondotécnica Engenharia de Solos S.A.",
+      "last_close": 82.1,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.09452073056925725,
+      "yearly_delta": 0.7390383393348865,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 82.1
+    },
+    {
+      "ticker": "SOND6.SA",
+      "name": "Sondotécnica Engenharia de Solos S.A.",
+      "last_close": 78.56,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.017754438609652423,
+      "yearly_delta": 0.7033824804856896,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 78.56
+    },
+    {
       "ticker": "SUZB3.SA",
       "name": "Suzano S.A.",
       "last_close": 46.89,
@@ -3741,7 +4677,7 @@
       "daily_delta": 0.002137208805300217,
       "monthly_delta": 0.0945378151260503,
       "yearly_delta": -0.07277041724342492,
-      "delta_volume": -0.5171867574845557,
+      "delta_volume": -0.5170473625851417,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 46.79
@@ -3754,7 +4690,7 @@
       "daily_delta": -0.04303797468354442,
       "monthly_delta": -0.07352941176470595,
       "yearly_delta": -0.10213776722090262,
-      "delta_volume": 3.998451115870002,
+      "delta_volume": 4.019192694654329,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.95
@@ -3767,7 +4703,7 @@
       "daily_delta": -0.0029069767441859407,
       "monthly_delta": 0.0610982211910287,
       "yearly_delta": 0.2834424695977551,
-      "delta_volume": -0.4534682465716948,
+      "delta_volume": -0.4494741046465185,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 13.76
@@ -3780,7 +4716,7 @@
       "daily_delta": 0.010064701653486718,
       "monthly_delta": 0.06520090978013648,
       "yearly_delta": 0.3130841121495329,
-      "delta_volume": -0.41108802137449907,
+      "delta_volume": -0.40143981000445306,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 13.91
@@ -3793,7 +4729,7 @@
       "daily_delta": -0.00048134777376640514,
       "monthly_delta": 0.05325893989348218,
       "yearly_delta": 0.28935113318845085,
-      "delta_volume": -0.4862616607209952,
+      "delta_volume": -0.48420121283618633,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 41.55
@@ -3819,7 +4755,7 @@
       "daily_delta": 0.021778584392014633,
       "monthly_delta": 0.16082474226804133,
       "yearly_delta": 0.1729166666666666,
-      "delta_volume": 0.022436807725078056,
+      "delta_volume": 0.023727763290387616,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.51
@@ -3884,7 +4820,7 @@
       "daily_delta": 0.03004164187983349,
       "monthly_delta": 0.05482790130977788,
       "yearly_delta": 0.5439144003566654,
-      "delta_volume": 0.9882344688732883,
+      "delta_volume": 0.9882723855059881,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 33.62
@@ -3923,7 +4859,7 @@
       "daily_delta": 0.0010542962572481773,
       "monthly_delta": 0.015508021390374216,
       "yearly_delta": -0.10635294117647065,
-      "delta_volume": -0.4859015801784382,
+      "delta_volume": -0.4854504407694684,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 18.97
@@ -3968,6 +4904,19 @@
       "prev_close": 10.01
     },
     {
+      "ticker": "TRAD3.SA",
+      "name": "TC S.A.",
+      "last_close": 1.12,
+      "date": "2026-09-04",
+      "daily_delta": -0.01754385964912264,
+      "monthly_delta": 0.1313131313131315,
+      "yearly_delta": 0.08737864077669921,
+      "delta_volume": -0.8389694041867954,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 1.14
+    },
+    {
       "ticker": "TRIS3.SA",
       "name": "Trisul S.A.",
       "last_close": 4.97,
@@ -3975,7 +4924,7 @@
       "daily_delta": 0.002016129032258007,
       "monthly_delta": 0.13990825688073372,
       "yearly_delta": 0.1295454545454544,
-      "delta_volume": 0.20966172000179695,
+      "delta_volume": 0.21265667350514383,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 4.96
@@ -3988,7 +4937,7 @@
       "daily_delta": -0.026747195858498718,
       "monthly_delta": -0.044067796610169574,
       "yearly_delta": -0.19658119658119655,
-      "delta_volume": -0.11077691916153809,
+      "delta_volume": -0.10915737355976118,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 11.59
@@ -4005,6 +4954,32 @@
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 15.7
+    },
+    {
+      "ticker": "TXRX3.SA",
+      "name": "Têxtil Renauxview S.A.",
+      "last_close": 9.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": -0.09819639278557113,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 9.0
+    },
+    {
+      "ticker": "TXRX4.SA",
+      "name": "Têxtil Renauxview S.A.",
+      "last_close": 1.65,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 0.05095541401273884,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 1.65
     },
     {
       "ticker": "UCAS3.SA",
@@ -4027,7 +5002,7 @@
       "daily_delta": 0.026611796982167313,
       "monthly_delta": 0.18869123252858966,
       "yearly_delta": 1.0459267359212685,
-      "delta_volume": -0.1322512354767823,
+      "delta_volume": -0.1313123946685577,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 36.45
@@ -4046,6 +5021,19 @@
       "prev_close": 56.19
     },
     {
+      "ticker": "UNIP5.SA",
+      "name": "Unipar Carbocloro S.A.",
+      "last_close": 57.7,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.07915735716565586,
+      "yearly_delta": -0.03495567820705803,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 57.7
+    },
+    {
       "ticker": "UNIP6.SA",
       "name": "Unipar Carbocloro S.A.",
       "last_close": 56.97,
@@ -4053,7 +5041,7 @@
       "daily_delta": -0.004716981132075526,
       "monthly_delta": -0.10283464566929135,
       "yearly_delta": -0.0723009281875916,
-      "delta_volume": -0.3960806326459857,
+      "delta_volume": -0.3950900595994783,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 57.24
@@ -4079,10 +5067,23 @@
       "daily_delta": -0.023047375160051176,
       "monthly_delta": 0.02278820375335111,
       "yearly_delta": 0.73015873015873,
-      "delta_volume": 0.24058894519928575,
+      "delta_volume": 0.24313742661431292,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 7.81
+    },
+    {
+      "ticker": "USIM6.SA",
+      "name": "Usinas Siderúrgicas de Minas Gerais S.A.",
+      "last_close": 6.47,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": -0.25202312138728333,
+      "yearly_delta": -0.19125000000000003,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 6.47
     },
     {
       "ticker": "VALE3.SA",
@@ -4092,7 +5093,7 @@
       "daily_delta": 0.0021669853409815865,
       "monthly_delta": 0.054311385275580104,
       "yearly_delta": 0.5268984268790056,
-      "delta_volume": -0.35599859416410407,
+      "delta_volume": -0.3539909226228948,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 78.45
@@ -4105,7 +5106,7 @@
       "daily_delta": 0.035502958579881616,
       "monthly_delta": 0.054216867469879526,
       "yearly_delta": -0.11392405063291144,
-      "delta_volume": -0.21702090980268218,
+      "delta_volume": -0.21660142080349387,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.38
@@ -4118,7 +5119,7 @@
       "daily_delta": 0.0032546786004883366,
       "monthly_delta": 0.0541464804787688,
       "yearly_delta": 0.7382518796992481,
-      "delta_volume": -0.3020477631319958,
+      "delta_volume": -0.29286850787306695,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 36.87
@@ -4157,7 +5158,7 @@
       "daily_delta": 0.020270270270270396,
       "monthly_delta": -0.05625000000000002,
       "yearly_delta": -0.7712121212121212,
-      "delta_volume": -0.9570262140094542,
+      "delta_volume": -0.5616673828964331,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.48
@@ -4170,7 +5171,7 @@
       "daily_delta": -0.008248102936324608,
       "monthly_delta": -0.03344051446945351,
       "yearly_delta": -0.037772087067861726,
-      "delta_volume": -0.3846942321056289,
+      "delta_volume": -0.38460736622654623,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 30.31
@@ -4196,7 +5197,7 @@
       "daily_delta": -0.12408759124087598,
       "monthly_delta": -0.19191919191919204,
       "yearly_delta": -0.5706618962432917,
-      "delta_volume": 7.685429283933024,
+      "delta_volume": 7.844555278470491,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 2.74
@@ -4222,7 +5223,7 @@
       "daily_delta": 0.0,
       "monthly_delta": -0.06805157593123212,
       "yearly_delta": -0.27962347729789583,
-      "delta_volume": 0.21001149764798654,
+      "delta_volume": 0.21313612385237124,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 13.01
@@ -4235,7 +5236,7 @@
       "daily_delta": -0.03797468354430378,
       "monthly_delta": 0.1692307692307693,
       "yearly_delta": -0.15555555555555556,
-      "delta_volume": -0.05203140125000705,
+      "delta_volume": -0.04554076511171168,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.79
@@ -4261,7 +5262,7 @@
       "daily_delta": -0.00614675374567808,
       "monthly_delta": 0.0602459016393444,
       "yearly_delta": 0.449705799943962,
-      "delta_volume": -0.09750278989889538,
+      "delta_volume": -0.0973691420476187,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 52.06
@@ -4313,10 +5314,23 @@
       "daily_delta": 0.0024752475247524774,
       "monthly_delta": -0.0012330456226880004,
       "yearly_delta": 0.06860158311345632,
-      "delta_volume": -0.2791456125862576,
+      "delta_volume": -0.2780258387805663,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 8.08
+    },
+    {
+      "ticker": "WLMM3.SA",
+      "name": "WLM Participações e Comércio de Máquinas e Veículos S.A.",
+      "last_close": 19.69,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.000508130081300795,
+      "yearly_delta": -0.08247903075489282,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 19.69
     },
     {
       "ticker": "WLMM4.SA",
@@ -4326,7 +5340,7 @@
       "daily_delta": -0.006329113924050778,
       "monthly_delta": -0.07155529272619754,
       "yearly_delta": -0.16710875331565,
-      "delta_volume": -0.8375634517766497,
+      "delta_volume": -0.817258883248731,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 15.8
@@ -4339,7 +5353,7 @@
       "daily_delta": 0.015806111696522684,
       "monthly_delta": 0.1628468033775634,
       "yearly_delta": -0.27627627627627627,
-      "delta_volume": 0.09398160353117002,
+      "delta_volume": 0.09400211927649171,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 9.49
@@ -4354,7 +5368,7 @@
       "daily_delta": 0.3913043478260869,
       "monthly_delta": 0.6842105263157894,
       "yearly_delta": -0.8012422360248448,
-      "delta_volume": 2.641392633376645,
+      "delta_volume": 2.6428201524006805,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.23
@@ -4393,7 +5407,7 @@
       "daily_delta": 0.09204368174726985,
       "monthly_delta": 0.1200000000000001,
       "yearly_delta": -0.36993699369936994,
-      "delta_volume": 1.3543084989875238,
+      "delta_volume": 1.3577057695488337,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 6.41
@@ -4434,7 +5448,7 @@
       "daily_delta": -0.12408759124087598,
       "monthly_delta": -0.19191919191919204,
       "yearly_delta": -0.5706618962432917,
-      "delta_volume": 7.685429283933024,
+      "delta_volume": 7.844555278470491,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 2.74
@@ -4447,7 +5461,7 @@
       "daily_delta": -0.06976744186046513,
       "monthly_delta": -0.053254437869822535,
       "yearly_delta": -0.28358208955223885,
-      "delta_volume": 1.9659957877074468,
+      "delta_volume": 1.975434119569682,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.16
@@ -4460,7 +5474,7 @@
       "daily_delta": -0.06777777777777771,
       "monthly_delta": 0.7442827442827444,
       "yearly_delta": -0.08804347826086945,
-      "delta_volume": -0.4051094890510949,
+      "delta_volume": -0.38282459632824595,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 9.0
@@ -4514,7 +5528,7 @@
       "daily_delta": 0.007352941176470562,
       "monthly_delta": 1.2833333333333337,
       "yearly_delta": -0.5243055555555556,
-      "delta_volume": -0.12449365427610648,
+      "delta_volume": -0.12339750922705583,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.36
@@ -4527,7 +5541,7 @@
       "daily_delta": -0.06777777777777771,
       "monthly_delta": 0.7442827442827444,
       "yearly_delta": -0.08804347826086945,
-      "delta_volume": -0.4051094890510949,
+      "delta_volume": -0.38282459632824595,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 9.0
@@ -4555,7 +5569,7 @@
       "daily_delta": -0.023255813953488413,
       "monthly_delta": -0.46153846153846156,
       "yearly_delta": 0.5555555555555554,
-      "delta_volume": -0.49482053733399445,
+      "delta_volume": -0.47681340573793607,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.43
@@ -4568,7 +5582,7 @@
       "daily_delta": -0.018918918918918948,
       "monthly_delta": -0.42380952380952386,
       "yearly_delta": -0.6787610619469027,
-      "delta_volume": -0.8242431114638848,
+      "delta_volume": -0.8185735344143327,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.7
@@ -4581,7 +5595,7 @@
       "daily_delta": -0.039735099337748325,
       "monthly_delta": -0.39075630252100835,
       "yearly_delta": -0.8657407407407407,
-      "delta_volume": -0.6190239972014256,
+      "delta_volume": -0.6173895839127854,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.51
@@ -4594,23 +5608,23 @@
       "daily_delta": -0.009549795361528002,
       "monthly_delta": -0.3465346534653465,
       "yearly_delta": -0.8241705013320417,
-      "delta_volume": -0.5675698811497552,
+      "delta_volume": -0.5655994075658111,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 7.33
     },
     {
-      "ticker": "AGXY3.SA",
-      "name": "AgroGalaxy Participações S.A.",
-      "last_close": 1.33,
+      "ticker": "AVLL3.SA",
+      "name": "Alphaville S.A.",
+      "last_close": 6.9,
       "date": "2026-09-04",
-      "daily_delta": -0.007462686567164201,
-      "monthly_delta": -0.27717391304347827,
-      "yearly_delta": -0.7710843373493976,
-      "delta_volume": 0.6437402054675256,
+      "daily_delta": 0.0,
+      "monthly_delta": -0.34285714285714286,
+      "yearly_delta": -0.8475138121546961,
+      "delta_volume": 0,
       "is_liquid": true,
       "is_ibov": false,
-      "prev_close": 1.34
+      "prev_close": 6.9
     }
   ],
   "gainers_year": [
@@ -4641,6 +5655,19 @@
       "prev_close": 11.2
     },
     {
+      "ticker": "FIGE3.SA",
+      "name": "Investimentos Bemge S.A.",
+      "last_close": 33.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 1.7477102414654455,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 33.0
+    },
+    {
       "ticker": "TPIS3.SA",
       "name": "Triunfo Participações e Investimentos S.A.",
       "last_close": 9.77,
@@ -4665,19 +5692,6 @@
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 10.7
-    },
-    {
-      "ticker": "DESK3.SA",
-      "name": "Desktop S.A.",
-      "last_close": 18.85,
-      "date": "2026-09-04",
-      "daily_delta": -0.0047518479408659164,
-      "monthly_delta": 0.016720604099244918,
-      "yearly_delta": 1.2987804878048785,
-      "delta_volume": -0.19938721587730546,
-      "is_liquid": true,
-      "is_ibov": false,
-      "prev_close": 18.94
     }
   ],
   "losers_year": [
@@ -4715,7 +5729,7 @@
       "daily_delta": -0.045454545454545525,
       "monthly_delta": -0.16000000000000003,
       "yearly_delta": -0.9828571428571429,
-      "delta_volume": -0.061559613786246414,
+      "delta_volume": -0.023746086983540082,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.22
@@ -4756,7 +5770,7 @@
       "daily_delta": 0.3913043478260869,
       "monthly_delta": 0.6842105263157894,
       "yearly_delta": -0.8012422360248448,
-      "delta_volume": 2.641392633376645,
+      "delta_volume": 2.6428201524006805,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.23
@@ -4795,7 +5809,7 @@
       "daily_delta": 0.09204368174726985,
       "monthly_delta": 0.1200000000000001,
       "yearly_delta": -0.36993699369936994,
-      "delta_volume": 1.3543084989875238,
+      "delta_volume": 1.3577057695488337,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 6.41
@@ -4836,7 +5850,7 @@
       "daily_delta": -0.12408759124087598,
       "monthly_delta": -0.19191919191919204,
       "yearly_delta": -0.5706618962432917,
-      "delta_volume": 7.685429283933024,
+      "delta_volume": 7.844555278470491,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 2.74
@@ -4849,7 +5863,7 @@
       "daily_delta": -0.06976744186046513,
       "monthly_delta": -0.053254437869822535,
       "yearly_delta": -0.28358208955223885,
-      "delta_volume": 1.9659957877074468,
+      "delta_volume": 1.975434119569682,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 5.16
@@ -4862,7 +5876,7 @@
       "daily_delta": -0.06777777777777771,
       "monthly_delta": 0.7442827442827444,
       "yearly_delta": -0.08804347826086945,
-      "delta_volume": -0.4051094890510949,
+      "delta_volume": -0.38282459632824595,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 9.0
@@ -4916,7 +5930,7 @@
       "daily_delta": 0.007352941176470562,
       "monthly_delta": 1.2833333333333337,
       "yearly_delta": -0.5243055555555556,
-      "delta_volume": -0.12449365427610648,
+      "delta_volume": -0.12339750922705583,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.36
@@ -4929,7 +5943,7 @@
       "daily_delta": -0.06777777777777771,
       "monthly_delta": 0.7442827442827444,
       "yearly_delta": -0.08804347826086945,
-      "delta_volume": -0.4051094890510949,
+      "delta_volume": -0.38282459632824595,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 9.0
@@ -4957,7 +5971,7 @@
       "daily_delta": -0.023255813953488413,
       "monthly_delta": -0.46153846153846156,
       "yearly_delta": 0.5555555555555554,
-      "delta_volume": -0.49482053733399445,
+      "delta_volume": -0.47681340573793607,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.43
@@ -4970,7 +5984,7 @@
       "daily_delta": -0.018918918918918948,
       "monthly_delta": -0.42380952380952386,
       "yearly_delta": -0.6787610619469027,
-      "delta_volume": -0.8242431114638848,
+      "delta_volume": -0.8185735344143327,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 3.7
@@ -4983,7 +5997,7 @@
       "daily_delta": -0.039735099337748325,
       "monthly_delta": -0.39075630252100835,
       "yearly_delta": -0.8657407407407407,
-      "delta_volume": -0.6190239972014256,
+      "delta_volume": -0.6173895839127854,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 1.51
@@ -4996,23 +6010,23 @@
       "daily_delta": -0.009549795361528002,
       "monthly_delta": -0.3465346534653465,
       "yearly_delta": -0.8241705013320417,
-      "delta_volume": -0.5675698811497552,
+      "delta_volume": -0.5655994075658111,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 7.33
     },
     {
-      "ticker": "AGXY3.SA",
-      "name": "AgroGalaxy Participações S.A.",
-      "last_close": 1.33,
+      "ticker": "AVLL3.SA",
+      "name": "Alphaville S.A.",
+      "last_close": 6.9,
       "date": "2026-09-04",
-      "daily_delta": -0.007462686567164201,
-      "monthly_delta": -0.27717391304347827,
-      "yearly_delta": -0.7710843373493976,
-      "delta_volume": 0.6437402054675256,
+      "daily_delta": 0.0,
+      "monthly_delta": -0.34285714285714286,
+      "yearly_delta": -0.8475138121546961,
+      "delta_volume": 0,
       "is_liquid": true,
       "is_ibov": false,
-      "prev_close": 1.34
+      "prev_close": 6.9
     }
   ],
   "gainers_year_liquid": [
@@ -5043,6 +6057,19 @@
       "prev_close": 11.2
     },
     {
+      "ticker": "FIGE3.SA",
+      "name": "Investimentos Bemge S.A.",
+      "last_close": 33.0,
+      "date": "2026-09-04",
+      "daily_delta": 0.0,
+      "monthly_delta": 0.0,
+      "yearly_delta": 1.7477102414654455,
+      "delta_volume": 0,
+      "is_liquid": true,
+      "is_ibov": false,
+      "prev_close": 33.0
+    },
+    {
       "ticker": "TPIS3.SA",
       "name": "Triunfo Participações e Investimentos S.A.",
       "last_close": 9.77,
@@ -5067,19 +6094,6 @@
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 10.7
-    },
-    {
-      "ticker": "DESK3.SA",
-      "name": "Desktop S.A.",
-      "last_close": 18.85,
-      "date": "2026-09-04",
-      "daily_delta": -0.0047518479408659164,
-      "monthly_delta": 0.016720604099244918,
-      "yearly_delta": 1.2987804878048785,
-      "delta_volume": -0.19938721587730546,
-      "is_liquid": true,
-      "is_ibov": false,
-      "prev_close": 18.94
     }
   ],
   "losers_year_liquid": [
@@ -5117,7 +6131,7 @@
       "daily_delta": -0.045454545454545525,
       "monthly_delta": -0.16000000000000003,
       "yearly_delta": -0.9828571428571429,
-      "delta_volume": -0.061559613786246414,
+      "delta_volume": -0.023746086983540082,
       "is_liquid": true,
       "is_ibov": false,
       "prev_close": 0.22
@@ -5158,7 +6172,7 @@
       "daily_delta": 0.04814814814814805,
       "monthly_delta": -0.03741496598639449,
       "yearly_delta": -0.2572178477690289,
-      "delta_volume": 0.39955532208862854,
+      "delta_volume": 0.4019155195515207,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 2.7
@@ -5171,7 +6185,7 @@
       "daily_delta": 0.0464255677039529,
       "monthly_delta": 0.14778597785977854,
       "yearly_delta": 0.37754650132860945,
-      "delta_volume": 2.206900744576607,
+      "delta_volume": 2.2263555800330446,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 59.45
@@ -5184,7 +6198,7 @@
       "daily_delta": 0.04221635883905006,
       "monthly_delta": 0.09418282548476453,
       "yearly_delta": -0.32937181663837,
-      "delta_volume": 1.520142410115247,
+      "delta_volume": 1.52511617484334,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 3.79
@@ -5197,7 +6211,7 @@
       "daily_delta": 0.04136690647482033,
       "monthly_delta": 0.20876826722338215,
       "yearly_delta": -0.2904411764705882,
-      "delta_volume": 0.12925333372574666,
+      "delta_volume": 0.1325297488028585,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 5.56
@@ -5210,7 +6224,7 @@
       "daily_delta": 0.03664921465968596,
       "monthly_delta": 0.09392265193370153,
       "yearly_delta": 0.0012642225031604948,
-      "delta_volume": 0.3235448823459912,
+      "delta_volume": 0.3306984791323755,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 7.64
@@ -5225,7 +6239,7 @@
       "daily_delta": -0.028340080971660075,
       "monthly_delta": -0.18228279386712098,
       "yearly_delta": -0.47483588621444206,
-      "delta_volume": -0.6343250872593331,
+      "delta_volume": -0.6288160878866352,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 4.94
@@ -5238,7 +6252,7 @@
       "daily_delta": -0.023047375160051176,
       "monthly_delta": 0.02278820375335111,
       "yearly_delta": 0.73015873015873,
-      "delta_volume": 0.24058894519928575,
+      "delta_volume": 0.24313742661431292,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 7.81
@@ -5251,7 +6265,7 @@
       "daily_delta": -0.021300813008130137,
       "monthly_delta": 0.016722972972972983,
       "yearly_delta": 0.612808145766345,
-      "delta_volume": 0.21130329089653688,
+      "delta_volume": 0.2116742086612151,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 61.5
@@ -5264,7 +6278,7 @@
       "daily_delta": -0.018867924528301883,
       "monthly_delta": 0.16696588868940743,
       "yearly_delta": 0.19485294117647056,
-      "delta_volume": -0.2737282224766793,
+      "delta_volume": -0.2737033569679993,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 13.25
@@ -5277,7 +6291,7 @@
       "daily_delta": -0.018010291595197292,
       "monthly_delta": 0.055299539170506895,
       "yearly_delta": 1.1892925430210322,
-      "delta_volume": 0.6234032924286697,
+      "delta_volume": 0.6234556113333212,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 11.66
@@ -5292,7 +6306,7 @@
       "daily_delta": 0.017786561264822254,
       "monthly_delta": 0.44055944055944063,
       "yearly_delta": 0.16449971735443758,
-      "delta_volume": -0.527886220464141,
+      "delta_volume": -0.5278478902068109,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 20.24
@@ -5305,7 +6319,7 @@
       "daily_delta": -0.0031347962382444194,
       "monthly_delta": 0.3006134969325154,
       "yearly_delta": -0.1686274509803921,
-      "delta_volume": 0.050230729203992075,
+      "delta_volume": 0.0527574058961644,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 6.38
@@ -5318,7 +6332,7 @@
       "daily_delta": -0.004851425106124796,
       "monthly_delta": 0.2146558105107328,
       "yearly_delta": 0.13800277392510396,
-      "delta_volume": 1.759773887615208,
+      "delta_volume": 1.76107850452718,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 16.49
@@ -5331,7 +6345,7 @@
       "daily_delta": 0.04136690647482033,
       "monthly_delta": 0.20876826722338215,
       "yearly_delta": -0.2904411764705882,
-      "delta_volume": 0.12925333372574666,
+      "delta_volume": 0.1325297488028585,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 5.56
@@ -5344,7 +6358,7 @@
       "daily_delta": 0.026611796982167313,
       "monthly_delta": 0.18869123252858966,
       "yearly_delta": 1.0459267359212685,
-      "delta_volume": -0.1322512354767823,
+      "delta_volume": -0.1313123946685577,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 36.45
@@ -5359,7 +6373,7 @@
       "daily_delta": -0.009549795361528002,
       "monthly_delta": -0.3465346534653465,
       "yearly_delta": -0.8241705013320417,
-      "delta_volume": -0.5675698811497552,
+      "delta_volume": -0.5655994075658111,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 7.33
@@ -5372,7 +6386,7 @@
       "daily_delta": -0.028340080971660075,
       "monthly_delta": -0.18228279386712098,
       "yearly_delta": -0.47483588621444206,
-      "delta_volume": -0.6343250872593331,
+      "delta_volume": -0.6288160878866352,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 4.94
@@ -5385,7 +6399,7 @@
       "daily_delta": -0.004385964912280715,
       "monthly_delta": -0.16971470373079733,
       "yearly_delta": -0.25181278839815424,
-      "delta_volume": -0.4989883602974009,
+      "delta_volume": -0.4982044369615398,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 11.4
@@ -5398,7 +6412,7 @@
       "daily_delta": -0.0029931972789115635,
       "monthly_delta": -0.0653061224489796,
       "yearly_delta": 0.04002270791938689,
-      "delta_volume": -0.2833277090294182,
+      "delta_volume": -0.2832906257069009,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 36.75
@@ -5411,7 +6425,7 @@
       "daily_delta": 0.010666666666666602,
       "monthly_delta": -0.04258390472753515,
       "yearly_delta": 0.1534782608695653,
-      "delta_volume": -0.003437893027693706,
+      "delta_volume": -0.003406272949260103,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 26.25
@@ -5426,7 +6440,7 @@
       "daily_delta": -0.018010291595197292,
       "monthly_delta": 0.055299539170506895,
       "yearly_delta": 1.1892925430210322,
-      "delta_volume": 0.6234032924286697,
+      "delta_volume": 0.6234556113333212,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 11.66
@@ -5439,7 +6453,7 @@
       "daily_delta": 0.026611796982167313,
       "monthly_delta": 0.18869123252858966,
       "yearly_delta": 1.0459267359212685,
-      "delta_volume": -0.1322512354767823,
+      "delta_volume": -0.1313123946685577,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 36.45
@@ -5452,7 +6466,7 @@
       "daily_delta": 0.0032546786004883366,
       "monthly_delta": 0.0541464804787688,
       "yearly_delta": 0.7382518796992481,
-      "delta_volume": -0.3020477631319958,
+      "delta_volume": -0.29286850787306695,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 36.87
@@ -5465,7 +6479,7 @@
       "daily_delta": -0.023047375160051176,
       "monthly_delta": 0.02278820375335111,
       "yearly_delta": 0.73015873015873,
-      "delta_volume": 0.24058894519928575,
+      "delta_volume": 0.24313742661431292,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 7.81
@@ -5478,7 +6492,7 @@
       "daily_delta": -0.010840623811335104,
       "monthly_delta": 0.1341037941561274,
       "yearly_delta": 0.6815389589395409,
-      "delta_volume": -0.21525001106570074,
+      "delta_volume": -0.21504766682334298,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 52.58
@@ -5493,7 +6507,7 @@
       "daily_delta": -0.009549795361528002,
       "monthly_delta": -0.3465346534653465,
       "yearly_delta": -0.8241705013320417,
-      "delta_volume": -0.5675698811497552,
+      "delta_volume": -0.5655994075658111,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 7.33
@@ -5506,7 +6520,7 @@
       "daily_delta": -0.028340080971660075,
       "monthly_delta": -0.18228279386712098,
       "yearly_delta": -0.47483588621444206,
-      "delta_volume": -0.6343250872593331,
+      "delta_volume": -0.6288160878866352,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 4.94
@@ -5519,7 +6533,7 @@
       "daily_delta": -0.005235602094240788,
       "monthly_delta": -0.02813299232736577,
       "yearly_delta": -0.46853146853146854,
-      "delta_volume": -0.35829774911917,
+      "delta_volume": -0.3580192154099563,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 3.82
@@ -5532,7 +6546,7 @@
       "daily_delta": 0.04221635883905006,
       "monthly_delta": 0.09418282548476453,
       "yearly_delta": -0.32937181663837,
-      "delta_volume": 1.520142410115247,
+      "delta_volume": 1.52511617484334,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 3.79
@@ -5545,7 +6559,7 @@
       "daily_delta": -0.010695187165775444,
       "monthly_delta": 0.17834394904458595,
       "yearly_delta": -0.2965779467680608,
-      "delta_volume": -0.5664905244483431,
+      "delta_volume": -0.566068795274384,
       "is_liquid": true,
       "is_ibov": true,
       "prev_close": 5.61

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-06T07:20:43.762078",
+  "timestamp": "2026-09-07T22:53:38.930298",
   "period": "5d",
   "start": null,
   "assets": {
@@ -8,8 +8,8 @@
       "name": "IBOVESPA",
       "sector": "N/A",
       "currency": "BRL",
-      "last_price": 185147.15625,
-      "last_update": "2026-09-04T22:25:06.032159",
+      "last_price": 185147.0,
+      "last_update": "2026-09-07T22:53:39.945985",
       "history": {
         "dates": [
           "2026-08-31",
@@ -23,14 +23,14 @@
           179723.0,
           185205.0,
           185188.0,
-          185147.16
+          185147.0
         ],
         "volumes": [
           9998200,
           9836300,
           13716400,
           11170900,
-          0
+          8300200
         ]
       },
       "dividends": {
@@ -38,10 +38,10 @@
         "values": []
       },
       "stats": {
-        "avg_price": 182536.43125,
+        "avg_price": 182536.4,
         "min_price": 177419.0,
         "max_price": 185205.0,
-        "volatility": 1.4526428483472824
+        "volatility": 1.4526641742189115
       }
     },
     "AALR3.SA": {
@@ -50,7 +50,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 3.299999952316284,
-      "last_update": "2026-09-04T22:25:06.427323",
+      "last_update": "2026-09-07T22:53:40.359107",
       "history": {
         "dates": [
           "2026-08-31",
@@ -97,7 +97,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 24.579999923706055,
-      "last_update": "2026-09-04T22:25:07.481113",
+      "last_update": "2026-09-07T22:53:41.643574",
       "history": {
         "dates": [
           "2026-08-31",
@@ -118,7 +118,7 @@
           899300,
           774400,
           630900,
-          909600
+          909900
         ]
       },
       "dividends": {
@@ -214,7 +214,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 15.739999771118164,
-      "last_update": "2026-09-04T22:25:07.968510",
+      "last_update": "2026-09-07T22:53:42.180918",
       "history": {
         "dates": [
           "2026-08-31",
@@ -235,7 +235,7 @@
           49321300,
           45834800,
           33952600,
-          27638300
+          27638900
         ]
       },
       "dividends": {
@@ -363,7 +363,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 2.069999933242798,
-      "last_update": "2026-09-04T22:25:08.862915",
+      "last_update": "2026-09-07T22:53:43.172574",
       "history": {
         "dates": [
           "2026-08-31",
@@ -408,17 +408,19 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 7.389999866485596,
-      "last_update": "2026-09-04T22:25:10.035079",
+      "last_update": "2026-09-07T22:53:43.918148",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           7.28,
           7.47,
+          7.39,
           7.39,
           7.39
         ],
@@ -426,7 +428,8 @@
           500,
           100,
           200,
-          200
+          200,
+          0
         ]
       },
       "dividends": {
@@ -494,10 +497,10 @@
         ]
       },
       "stats": {
-        "avg_price": 7.382499933242798,
+        "avg_price": 7.383999919891357,
         "min_price": 7.28000020980835,
         "max_price": 7.46999979019165,
-        "volatility": 1.89327607467965
+        "volatility": 1.5669874084557673
       }
     },
     "AGRO3.SA": {
@@ -506,7 +509,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 19.270000457763672,
-      "last_update": "2026-09-04T22:25:10.442511",
+      "last_update": "2026-09-07T22:53:44.382522",
       "history": {
         "dates": [
           "2026-08-31",
@@ -527,7 +530,7 @@
           215300,
           205000,
           95900,
-          303200
+          303400
         ]
       },
       "dividends": {
@@ -579,7 +582,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 1.3300000429153442,
-      "last_update": "2026-09-04T22:25:10.767465",
+      "last_update": "2026-09-07T22:53:44.747200",
       "history": {
         "dates": [
           "2026-08-31",
@@ -626,21 +629,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 23.889999389648438,
-      "last_update": "2026-09-04T22:25:11.153828",
+      "last_update": "2026-09-07T22:53:45.110095",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          23.89,
           23.89,
           23.89,
           23.89,
           23.89
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -664,21 +670,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 58.0,
-      "last_update": "2026-09-04T22:25:11.501680",
+      "last_update": "2026-09-07T22:53:45.474878",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          58.0,
           58.0,
           58.0,
           58.0,
           58.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -702,21 +711,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 55.0,
-      "last_update": "2026-09-04T22:25:11.885926",
+      "last_update": "2026-09-07T22:53:45.806401",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          55.0,
           55.0,
           55.0,
           55.0,
           55.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -740,7 +752,7 @@
       "sector": "Technology",
       "currency": "BRL",
       "last_price": 5.190000057220459,
-      "last_update": "2026-09-04T22:25:12.251902",
+      "last_update": "2026-09-07T22:53:46.143424",
       "history": {
         "dates": [
           "2026-08-31",
@@ -761,7 +773,7 @@
           641400,
           921500,
           582400,
-          399300
+          400900
         ]
       },
       "dividends": {
@@ -803,7 +815,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 28.809999465942383,
-      "last_update": "2026-09-04T22:25:12.705719",
+      "last_update": "2026-09-07T22:53:46.565101",
       "history": {
         "dates": [
           "2026-08-31",
@@ -824,7 +836,7 @@
           8040900,
           7907200,
           8780600,
-          4060000
+          4061500
         ]
       },
       "dividends": {
@@ -920,7 +932,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 10.199999809265137,
-      "last_update": "2026-09-04T22:25:13.203979",
+      "last_update": "2026-09-07T22:53:47.102235",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1063,7 +1075,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 13.569999694824219,
-      "last_update": "2026-09-04T22:25:13.717440",
+      "last_update": "2026-09-07T22:53:47.637672",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1084,7 +1096,7 @@
           3787500,
           2582200,
           3321500,
-          3029100
+          3030400
         ]
       },
       "dividends": {
@@ -1192,7 +1204,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 4.5,
-      "last_update": "2026-09-04T22:25:14.401576",
+      "last_update": "2026-09-07T22:53:48.031672",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1237,7 +1249,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 11.65999984741211,
-      "last_update": "2026-09-04T22:25:14.931651",
+      "last_update": "2026-09-07T22:53:48.419794",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1328,7 +1340,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 10.920000076293945,
-      "last_update": "2026-09-04T22:25:15.374031",
+      "last_update": "2026-09-07T22:53:48.823705",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1419,7 +1431,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 33.63999938964844,
-      "last_update": "2026-09-04T22:25:15.826760",
+      "last_update": "2026-09-07T22:53:49.223763",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1518,7 +1530,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 0.800000011920929,
-      "last_update": "2026-09-04T22:25:16.273763",
+      "last_update": "2026-09-07T22:53:49.609850",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1587,7 +1599,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 0.14000000059604645,
-      "last_update": "2026-09-04T22:25:16.722320",
+      "last_update": "2026-09-07T22:53:49.980558",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1636,7 +1648,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 5.550000190734863,
-      "last_update": "2026-09-04T22:25:17.140965",
+      "last_update": "2026-09-07T22:53:50.472729",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1657,7 +1669,7 @@
           2790200,
           2014700,
           1200800,
-          1564300
+          1569100
         ]
       },
       "dividends": {
@@ -1693,7 +1705,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 12.399999618530273,
-      "last_update": "2026-09-04T22:25:17.441122",
+      "last_update": "2026-09-07T22:53:50.798510",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1734,7 +1746,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 2.930000066757202,
-      "last_update": "2026-09-04T22:25:17.913916",
+      "last_update": "2026-09-07T22:53:51.294102",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1755,7 +1767,7 @@
           12848300,
           11459600,
           6529100,
-          5786000
+          5836600
         ]
       },
       "dividends": {
@@ -1795,7 +1807,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 3.8399999141693115,
-      "last_update": "2026-09-04T22:25:18.688220",
+      "last_update": "2026-09-07T22:53:52.039455",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1816,7 +1828,7 @@
           577800,
           1018800,
           480400,
-          466700
+          511100
         ]
       },
       "dividends": {
@@ -1870,7 +1882,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 0.5099999904632568,
-      "last_update": "2026-09-04T22:25:19.026024",
+      "last_update": "2026-09-07T22:53:52.349710",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1911,7 +1923,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 9.079999923706055,
-      "last_update": "2026-09-04T22:25:19.415165",
+      "last_update": "2026-09-07T22:53:52.725330",
       "history": {
         "dates": [
           "2026-08-31",
@@ -1932,7 +1944,7 @@
           11543800,
           17222400,
           24826300,
-          8170900
+          8188300
         ]
       },
       "dividends": {
@@ -1970,7 +1982,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 1.1699999570846558,
-      "last_update": "2026-09-04T22:25:19.754104",
+      "last_update": "2026-09-07T22:53:53.107604",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2011,7 +2023,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 4.0,
-      "last_update": "2026-09-04T22:25:20.079938",
+      "last_update": "2026-09-07T22:53:53.407258",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2032,7 +2044,7 @@
           4792100,
           9978400,
           8161400,
-          4559700
+          4564300
         ]
       },
       "dividends": {
@@ -2056,7 +2068,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 12.0,
-      "last_update": "2026-09-04T22:25:20.426630",
+      "last_update": "2026-09-07T22:53:53.780643",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2077,7 +2089,7 @@
           2398700,
           4321100,
           3618600,
-          3597000
+          3600000
         ]
       },
       "dividends": {
@@ -2109,15 +2121,17 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 6.900000095367432,
-      "last_update": "2026-09-04T22:25:20.772740",
+      "last_update": "2026-09-07T22:53:54.123668",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          6.9,
           6.9,
           6.9,
           6.9,
@@ -2127,7 +2141,8 @@
           300,
           400,
           0,
-          100
+          100,
+          0
         ]
       },
       "dividends": {
@@ -2147,7 +2162,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 55.279998779296875,
-      "last_update": "2026-09-04T22:25:21.286311",
+      "last_update": "2026-09-07T22:53:54.639024",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2168,7 +2183,7 @@
           11964000,
           15059100,
           14867800,
-          12851300
+          12854700
         ]
       },
       "dividends": {
@@ -2226,7 +2241,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 55.349998474121094,
-      "last_update": "2026-09-04T22:25:22.181932",
+      "last_update": "2026-09-07T22:53:55.447209",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2247,7 +2262,7 @@
           944000,
           959900,
           9934900,
-          4709600
+          4709700
         ]
       },
       "dividends": {
@@ -2267,7 +2282,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 8.390000343322754,
-      "last_update": "2026-09-04T22:25:22.604132",
+      "last_update": "2026-09-07T22:53:55.832095",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2288,7 +2303,7 @@
           1690300,
           1589100,
           2614100,
-          1075800
+          1116100
         ]
       },
       "dividends": {
@@ -2316,7 +2331,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 1.4500000476837158,
-      "last_update": "2026-09-04T22:25:23.014960",
+      "last_update": "2026-09-07T22:53:56.296219",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2337,7 +2352,7 @@
           3633300,
           3629300,
           6736500,
-          2657300
+          2668700
         ]
       },
       "dividends": {
@@ -2365,7 +2380,7 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 1.4700000286102295,
-      "last_update": "2026-09-04T22:25:23.312930",
+      "last_update": "2026-09-07T22:53:56.641627",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2386,7 +2401,7 @@
           1187100,
           1640500,
           2156600,
-          1007600
+          1017700
         ]
       },
       "dividends": {
@@ -2406,7 +2421,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 17.690000534057617,
-      "last_update": "2026-09-04T22:25:23.754016",
+      "last_update": "2026-09-07T22:53:57.051265",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2427,7 +2442,7 @@
           1941600,
           9141200,
           4885900,
-          3071300
+          3075800
         ]
       },
       "dividends": {
@@ -2549,7 +2564,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 17.3700008392334,
-      "last_update": "2026-09-04T22:25:24.229619",
+      "last_update": "2026-09-07T22:53:57.483797",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2570,7 +2585,7 @@
           55222400,
           41077700,
           42865600,
-          28924100
+          29092100
         ]
       },
       "dividends": {
@@ -2758,15 +2773,17 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 26.0,
-      "last_update": "2026-09-04T22:25:24.685763",
+      "last_update": "2026-09-07T22:53:58.034084",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          26.0,
           26.0,
           26.0,
           26.0,
@@ -2776,7 +2793,8 @@
           0,
           100,
           0,
-          100
+          100,
+          0
         ]
       },
       "dividends": {
@@ -2844,7 +2862,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 14.989999771118164,
-      "last_update": "2026-09-04T22:25:25.095896",
+      "last_update": "2026-09-07T22:53:58.518696",
       "history": {
         "dates": [
           "2026-08-31",
@@ -2931,25 +2949,28 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 93.38999938964844,
-      "last_update": "2026-09-04T22:25:25.683000",
+      "last_update": "2026-09-07T22:53:59.019317",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           93.9,
           93.9,
           93.9,
+          93.39,
           93.39
         ],
         "volumes": [
           0,
           0,
           0,
-          100
+          100,
+          0
         ]
       },
       "dividends": {
@@ -2983,10 +3004,10 @@
         ]
       },
       "stats": {
-        "avg_price": 93.77250099182129,
+        "avg_price": 93.69600067138671,
         "min_price": 93.38999938964844,
         "max_price": 93.9000015258789,
-        "volatility": 0.31357813190108746
+        "volatility": 0.27156662829760925
       }
     },
     "BAZA3.SA": {
@@ -2995,7 +3016,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 68.1500015258789,
-      "last_update": "2026-09-04T22:25:26.145051",
+      "last_update": "2026-09-07T22:53:59.514566",
       "history": {
         "dates": [
           "2026-08-31",
@@ -3084,7 +3105,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 22.520000457763672,
-      "last_update": "2026-09-04T22:25:26.629074",
+      "last_update": "2026-09-07T22:54:00.006796",
       "history": {
         "dates": [
           "2026-08-31",
@@ -3105,7 +3126,7 @@
           30326100,
           54300800,
           40886400,
-          26770000
+          26784000
         ]
       },
       "dividends": {
@@ -3387,7 +3408,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 15.8100004196167,
-      "last_update": "2026-09-04T22:25:27.130788",
+      "last_update": "2026-09-07T22:54:00.630530",
       "history": {
         "dates": [
           "2026-08-31",
@@ -3408,7 +3429,7 @@
           6004900,
           15242200,
           11932900,
-          9509600
+          9541200
         ]
       },
       "dividends": {
@@ -3966,7 +3987,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 17.899999618530273,
-      "last_update": "2026-09-04T22:25:27.623394",
+      "last_update": "2026-09-07T22:54:01.203629",
       "history": {
         "dates": [
           "2026-08-31",
@@ -3987,7 +4008,7 @@
           45884200,
           90113300,
           75715700,
-          44203100
+          44532700
         ]
       },
       "dividends": {
@@ -4545,7 +4566,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 42.15999984741211,
-      "last_update": "2026-09-04T22:25:28.307025",
+      "last_update": "2026-09-07T22:54:01.866104",
       "history": {
         "dates": [
           "2026-08-31",
@@ -4566,7 +4587,7 @@
           5854600,
           6995300,
           7570600,
-          4930300
+          4935100
         ]
       },
       "dividends": {
@@ -4646,17 +4667,19 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 4.5,
-      "last_update": "2026-09-04T22:25:28.676641",
+      "last_update": "2026-09-07T22:54:02.245702",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           4.46,
           4.8,
+          4.5,
           4.5,
           4.5
         ],
@@ -4664,6 +4687,7 @@
           0,
           100,
           100,
+          0,
           0
         ]
       },
@@ -4684,10 +4708,10 @@
         ]
       },
       "stats": {
-        "avg_price": 4.565000057220459,
+        "avg_price": 4.552000045776367,
         "min_price": 4.460000038146973,
         "max_price": 4.800000190734863,
-        "volatility": 6.947982206567336
+        "volatility": 5.67761922963223
       }
     },
     "BDLL4.SA": {
@@ -4696,17 +4720,19 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 3.25,
-      "last_update": "2026-09-04T22:25:29.056386",
+      "last_update": "2026-09-07T22:54:02.659908",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           3.5,
           3.5,
+          3.25,
           3.25,
           3.25
         ],
@@ -4714,6 +4740,7 @@
           5600,
           0,
           100,
+          0,
           0
         ]
       },
@@ -4734,10 +4761,10 @@
         ]
       },
       "stats": {
-        "avg_price": 3.375,
+        "avg_price": 3.35,
         "min_price": 3.25,
         "max_price": 3.5,
-        "volatility": 4.123930494211611
+        "volatility": 3.57142857142857
       }
     },
     "BEEF3.SA": {
@@ -4746,7 +4773,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 3.950000047683716,
-      "last_update": "2026-09-04T22:25:29.573821",
+      "last_update": "2026-09-07T22:54:03.167119",
       "history": {
         "dates": [
           "2026-08-31",
@@ -4767,7 +4794,7 @@
           16552000,
           15812800,
           24525200,
-          47121900
+          47214900
         ]
       },
       "dividends": {
@@ -4815,7 +4842,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 8.850000381469727,
-      "last_update": "2026-09-04T22:25:30.133931",
+      "last_update": "2026-09-07T22:54:03.764451",
       "history": {
         "dates": [
           "2026-08-31",
@@ -4836,7 +4863,7 @@
           16800,
           26500,
           20600,
-          6700
+          6900
         ]
       },
       "dividends": {
@@ -5324,7 +5351,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 8.970000267028809,
-      "last_update": "2026-09-04T22:25:30.642060",
+      "last_update": "2026-09-07T22:54:04.274636",
       "history": {
         "dates": [
           "2026-08-31",
@@ -5809,7 +5836,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 46.369998931884766,
-      "last_update": "2026-09-04T22:25:31.525895",
+      "last_update": "2026-09-07T22:54:05.077599",
       "history": {
         "dates": [
           "2026-08-31",
@@ -5952,7 +5979,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 34.0,
-      "last_update": "2026-09-04T22:25:31.936814",
+      "last_update": "2026-09-07T22:54:05.575607",
       "history": {
         "dates": [
           "2026-08-31",
@@ -6081,7 +6108,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 0.6899999976158142,
-      "last_update": "2026-09-04T22:25:32.385386",
+      "last_update": "2026-09-07T22:54:06.061049",
       "history": {
         "dates": [
           "2026-08-31",
@@ -6102,7 +6129,7 @@
           50327500,
           28627700,
           18885900,
-          3476600
+          3481900
         ]
       },
       "dividends": {
@@ -6140,7 +6167,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 6.010000228881836,
-      "last_update": "2026-09-04T22:25:32.826464",
+      "last_update": "2026-09-07T22:54:06.575258",
       "history": {
         "dates": [
           "2026-08-31",
@@ -6197,7 +6224,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 6.630000114440918,
-      "last_update": "2026-09-04T22:25:33.218817",
+      "last_update": "2026-09-07T22:54:07.024543",
       "history": {
         "dates": [
           "2026-08-31",
@@ -6218,7 +6245,7 @@
           5600,
           31000,
           3300,
-          22200
+          22300
         ]
       },
       "dividends": {
@@ -6238,7 +6265,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 9.680000305175781,
-      "last_update": "2026-09-04T22:25:33.580189",
+      "last_update": "2026-09-07T22:54:07.377955",
       "history": {
         "dates": [
           "2026-08-31",
@@ -6323,7 +6350,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 50.63999938964844,
-      "last_update": "2026-09-04T22:25:34.070605",
+      "last_update": "2026-09-07T22:54:07.857589",
       "history": {
         "dates": [
           "2026-08-31",
@@ -6344,7 +6371,7 @@
           2100,
           18800,
           1700,
-          4000
+          4700
         ]
       },
       "dividends": {
@@ -6424,7 +6451,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 61.22999954223633,
-      "last_update": "2026-09-04T22:25:34.500172",
+      "last_update": "2026-09-07T22:54:08.296710",
       "history": {
         "dates": [
           "2026-08-31",
@@ -6445,7 +6472,7 @@
           26200,
           33100,
           13200,
-          11200
+          12500
         ]
       },
       "dividends": {
@@ -6523,7 +6550,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 5.980000019073486,
-      "last_update": "2026-09-04T22:25:36.011864",
+      "last_update": "2026-09-07T22:54:09.961581",
       "history": {
         "dates": [
           "2026-08-31",
@@ -6544,7 +6571,7 @@
           2477300,
           1599300,
           1571700,
-          3391900
+          3392000
         ]
       },
       "dividends": {
@@ -6604,21 +6631,24 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 19.5,
-      "last_update": "2026-09-04T22:25:36.543249",
+      "last_update": "2026-09-07T22:54:10.450402",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          19.5,
           19.5,
           19.5,
           19.5,
           19.5
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -6688,25 +6718,28 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 18.860000610351562,
-      "last_update": "2026-09-04T22:25:36.992419",
+      "last_update": "2026-09-07T22:54:10.921150",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           18.87,
           18.87,
           18.87,
+          18.86,
           18.86
         ],
         "volumes": [
           1400,
           0,
           0,
-          100
+          100,
+          0
         ]
       },
       "dividends": {
@@ -6760,10 +6793,10 @@
         ]
       },
       "stats": {
-        "avg_price": 18.86750078201294,
+        "avg_price": 18.866000747680665,
         "min_price": 18.860000610351562,
         "max_price": 18.8700008392334,
-        "volatility": 0.030596897615827606
+        "volatility": 0.02649769061229823
       }
     },
     "BMKS3.SA": {
@@ -6772,7 +6805,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 377.0,
-      "last_update": "2026-09-04T22:25:37.473226",
+      "last_update": "2026-09-07T22:54:11.398805",
       "history": {
         "dates": [
           "2026-08-31",
@@ -6855,7 +6888,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 26.049999237060547,
-      "last_update": "2026-09-04T22:25:37.822229",
+      "last_update": "2026-09-07T22:54:11.785509",
       "history": {
         "dates": [
           "2026-08-31",
@@ -6916,7 +6949,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 109.25,
-      "last_update": "2026-09-04T22:25:38.390428",
+      "last_update": "2026-09-07T22:54:12.255406",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7029,7 +7062,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 1.2899999618530273,
-      "last_update": "2026-09-04T22:25:38.894496",
+      "last_update": "2026-09-07T22:54:12.701823",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7070,7 +7103,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 23.469999313354492,
-      "last_update": "2026-09-04T22:25:39.316326",
+      "last_update": "2026-09-07T22:54:13.131895",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7163,7 +7196,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 19.610000610351562,
-      "last_update": "2026-09-04T22:25:39.773457",
+      "last_update": "2026-09-07T22:54:13.566825",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7256,7 +7289,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 59.2400016784668,
-      "last_update": "2026-09-04T22:25:40.507813",
+      "last_update": "2026-09-07T22:54:14.199167",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7277,7 +7310,7 @@
           14181700,
           11058600,
           14273100,
-          8152700
+          8156400
         ]
       },
       "dividends": {
@@ -7347,21 +7380,24 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 180.0,
-      "last_update": "2026-09-04T22:25:40.985629",
+      "last_update": "2026-09-07T22:54:14.699920",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          180.0,
           180.0,
           180.0,
           180.0,
           180.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -7511,7 +7547,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 19.299999237060547,
-      "last_update": "2026-09-04T22:25:41.498274",
+      "last_update": "2026-09-07T22:54:15.207798",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7616,7 +7652,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 22.479999542236328,
-      "last_update": "2026-09-04T22:25:42.010623",
+      "last_update": "2026-09-07T22:54:15.704130",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7637,7 +7673,7 @@
           1865000,
           3434200,
           2472300,
-          1327900
+          1328100
         ]
       },
       "dividends": {
@@ -7727,7 +7763,7 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 17.8799991607666,
-      "last_update": "2026-09-04T22:25:42.397838",
+      "last_update": "2026-09-07T22:54:16.076456",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7748,7 +7784,7 @@
           4234400,
           5092700,
           3381500,
-          5225600
+          5234600
         ]
       },
       "dividends": {
@@ -7774,7 +7810,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 14.300000190734863,
-      "last_update": "2026-09-04T22:25:43.371788",
+      "last_update": "2026-09-07T22:54:17.073195",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7795,7 +7831,7 @@
           381200,
           476400,
           351700,
-          415800
+          415900
         ]
       },
       "dividends": {
@@ -7853,7 +7889,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 4.269999980926514,
-      "last_update": "2026-09-04T22:25:43.887193",
+      "last_update": "2026-09-07T22:54:17.541849",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7920,7 +7956,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 4.800000190734863,
-      "last_update": "2026-09-04T22:25:44.424635",
+      "last_update": "2026-09-07T22:54:18.085219",
       "history": {
         "dates": [
           "2026-08-31",
@@ -7941,7 +7977,7 @@
           4081500,
           10653900,
           5088200,
-          3637500
+          3692300
         ]
       },
       "dividends": {
@@ -7995,15 +8031,17 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 7.0,
-      "last_update": "2026-09-04T22:25:44.877232",
+      "last_update": "2026-09-07T22:54:18.513512",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          7.0,
           7.0,
           7.0,
           7.0,
@@ -8013,7 +8051,8 @@
           0,
           0,
           100,
-          100
+          100,
+          0
         ]
       },
       "dividends": {
@@ -8053,7 +8092,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 17.760000228881836,
-      "last_update": "2026-09-04T22:25:45.465418",
+      "last_update": "2026-09-07T22:54:19.121153",
       "history": {
         "dates": [
           "2026-08-31",
@@ -8074,7 +8113,7 @@
           4100,
           3600,
           1800,
-          4800
+          4900
         ]
       },
       "dividends": {
@@ -8288,15 +8327,17 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 18.0,
-      "last_update": "2026-09-04T22:25:45.960132",
+      "last_update": "2026-09-07T22:54:19.617266",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          18.0,
           18.0,
           18.0,
           18.0,
@@ -8306,7 +8347,8 @@
           0,
           0,
           0,
-          1300
+          1300,
+          0
         ]
       },
       "dividends": {
@@ -8504,7 +8546,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 14.880000114440918,
-      "last_update": "2026-09-04T22:25:46.410751",
+      "last_update": "2026-09-07T22:54:20.080321",
       "history": {
         "dates": [
           "2026-08-31",
@@ -8525,7 +8567,7 @@
           1366600,
           1478500,
           968800,
-          1003500
+          1003800
         ]
       },
       "dividends": {
@@ -8725,7 +8767,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 2.819999933242798,
-      "last_update": "2026-09-04T22:25:46.772813",
+      "last_update": "2026-09-07T22:54:20.421075",
       "history": {
         "dates": [
           "2026-08-31",
@@ -8770,7 +8812,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 2.5899999141693115,
-      "last_update": "2026-09-04T22:25:47.229602",
+      "last_update": "2026-09-07T22:54:20.886234",
       "history": {
         "dates": [
           "2026-08-31",
@@ -8931,7 +8973,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 2.5999999046325684,
-      "last_update": "2026-09-04T22:25:47.658871",
+      "last_update": "2026-09-07T22:54:21.354204",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9086,21 +9128,24 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 29.989999771118164,
-      "last_update": "2026-09-04T22:25:48.098411",
+      "last_update": "2026-09-07T22:54:21.782496",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          29.99,
           29.99,
           29.99,
           29.99,
           29.99
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -9146,7 +9191,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 8.520000457763672,
-      "last_update": "2026-09-04T22:25:48.592606",
+      "last_update": "2026-09-07T22:54:22.229483",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9167,7 +9212,7 @@
           29500,
           9800,
           9900,
-          23800
+          23900
         ]
       },
       "dividends": {
@@ -9231,7 +9276,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 4.940000057220459,
-      "last_update": "2026-09-04T22:25:49.030574",
+      "last_update": "2026-09-07T22:54:22.602509",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9252,7 +9297,7 @@
           833000,
           899700,
           829400,
-          1227800
+          1228600
         ]
       },
       "dividends": {
@@ -9348,7 +9393,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 5.380000114440918,
-      "last_update": "2026-09-04T22:25:49.363780",
+      "last_update": "2026-09-07T22:54:22.965574",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9369,7 +9414,7 @@
           1575800,
           2374500,
           1950700,
-          1498100
+          1507200
         ]
       },
       "dividends": {
@@ -9393,7 +9438,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 8.80737018585205,
-      "last_update": "2026-09-04T22:25:49.699130",
+      "last_update": "2026-09-07T22:54:23.320286",
       "history": {
         "dates": [
           "2026-09-03"
@@ -9422,7 +9467,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 11.149999618530273,
-      "last_update": "2026-09-04T22:25:50.739657",
+      "last_update": "2026-09-07T22:54:24.375015",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9473,7 +9518,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 8.819999694824219,
-      "last_update": "2026-09-04T22:25:51.196526",
+      "last_update": "2026-09-07T22:54:24.883013",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9542,21 +9587,24 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 5.75,
-      "last_update": "2026-09-04T22:25:51.519019",
+      "last_update": "2026-09-07T22:54:25.190084",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          5.75,
           5.75,
           5.75,
           5.75,
           5.75
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -9580,7 +9628,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 9.210000038146973,
-      "last_update": "2026-09-04T22:25:51.934814",
+      "last_update": "2026-09-07T22:54:25.542805",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9601,7 +9649,7 @@
           12959100,
           13800800,
           9252000,
-          5155200
+          5155400
         ]
       },
       "dividends": {
@@ -9631,7 +9679,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 23.559999465942383,
-      "last_update": "2026-09-04T22:25:52.467612",
+      "last_update": "2026-09-07T22:54:26.067520",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9652,7 +9700,7 @@
           15500,
           21100,
           17300,
-          8800
+          9200
         ]
       },
       "dividends": {
@@ -9708,7 +9756,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 23.610000610351562,
-      "last_update": "2026-09-04T22:25:52.905535",
+      "last_update": "2026-09-07T22:54:26.568152",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9785,7 +9833,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 27.079999923706055,
-      "last_update": "2026-09-04T22:25:53.405696",
+      "last_update": "2026-09-07T22:54:27.071273",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9862,21 +9910,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 9.0,
-      "last_update": "2026-09-04T22:25:53.809237",
+      "last_update": "2026-09-07T22:54:27.562863",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          9.0,
           9.0,
           9.0,
           9.0,
           9.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -9926,7 +9977,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 5.119999885559082,
-      "last_update": "2026-09-04T22:25:54.223792",
+      "last_update": "2026-09-07T22:54:27.958142",
       "history": {
         "dates": [
           "2026-08-31",
@@ -9979,7 +10030,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 47.20000076293945,
-      "last_update": "2026-09-04T22:25:54.754854",
+      "last_update": "2026-09-07T22:54:28.433819",
       "history": {
         "dates": [
           "2026-08-31",
@@ -10148,21 +10199,24 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 40.0,
-      "last_update": "2026-09-04T22:25:55.282968",
+      "last_update": "2026-09-07T22:54:28.895209",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          40.0,
           40.0,
           40.0,
           40.0,
           40.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -10302,7 +10356,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 10.0,
-      "last_update": "2026-09-04T22:25:55.908185",
+      "last_update": "2026-09-07T22:54:29.595518",
       "history": {
         "dates": [
           "2026-08-31",
@@ -10343,21 +10397,24 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 20.0,
-      "last_update": "2026-09-04T22:25:56.350026",
+      "last_update": "2026-09-07T22:54:29.961209",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          20.0,
           20.0,
           20.0,
           20.0,
           20.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -10381,15 +10438,17 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 35.0,
-      "last_update": "2026-09-04T22:25:56.862663",
+      "last_update": "2026-09-07T22:54:30.575033",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          35.0,
           35.0,
           35.0,
           35.0,
@@ -10397,6 +10456,7 @@
         ],
         "volumes": [
           600,
+          0,
           0,
           0,
           0
@@ -10495,17 +10555,19 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 125.69000244140625,
-      "last_update": "2026-09-04T22:25:57.395018",
+      "last_update": "2026-09-07T22:54:31.029897",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           125.39,
           125.39,
+          125.69,
           125.69,
           125.69
         ],
@@ -10513,6 +10575,7 @@
           100,
           0,
           200,
+          0,
           0
         ]
       },
@@ -10617,10 +10680,10 @@
         ]
       },
       "stats": {
-        "avg_price": 125.54000091552734,
+        "avg_price": 125.57000122070312,
         "min_price": 125.38999938964844,
         "max_price": 125.69000244140625,
-        "volatility": 0.138134495201526
+        "volatility": 0.11962798198346114
       }
     },
     "CGAS5.SA": {
@@ -10629,7 +10692,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 121.05999755859375,
-      "last_update": "2026-09-04T22:25:57.863456",
+      "last_update": "2026-09-07T22:54:31.546021",
       "history": {
         "dates": [
           "2026-08-31",
@@ -10764,7 +10827,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 23.75,
-      "last_update": "2026-09-04T22:25:58.310029",
+      "last_update": "2026-09-07T22:54:31.997575",
       "history": {
         "dates": [
           "2026-08-31",
@@ -10871,7 +10934,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 23.610000610351562,
-      "last_update": "2026-09-04T22:25:58.776451",
+      "last_update": "2026-09-07T22:54:32.490763",
       "history": {
         "dates": [
           "2026-08-31",
@@ -10976,16 +11039,18 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 133.97999572753906,
-      "last_update": "2026-09-04T22:25:59.296328",
+      "last_update": "2026-09-07T22:54:33.022185",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           134.0,
+          133.98,
           133.98,
           133.98,
           133.98
@@ -10993,6 +11058,7 @@
         "volumes": [
           400,
           500,
+          0,
           0,
           0
         ]
@@ -11086,10 +11152,10 @@
         ]
       },
       "stats": {
-        "avg_price": 133.9849967956543,
+        "avg_price": 133.98399658203124,
         "min_price": 133.97999572753906,
         "max_price": 134.0,
-        "volatility": 0.008619009022582768
+        "volatility": 0.007464280769003961
       }
     },
     "CLSC4.SA": {
@@ -11098,7 +11164,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 156.99000549316406,
-      "last_update": "2026-09-04T22:25:59.735267",
+      "last_update": "2026-09-07T22:54:33.508602",
       "history": {
         "dates": [
           "2026-08-31",
@@ -11209,7 +11275,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 17.040000915527344,
-      "last_update": "2026-09-04T22:26:00.244648",
+      "last_update": "2026-09-07T22:54:34.058124",
       "history": {
         "dates": [
           "2026-08-31",
@@ -11362,7 +11428,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 11.260000228881836,
-      "last_update": "2026-09-04T22:26:00.754790",
+      "last_update": "2026-09-07T22:54:34.570504",
       "history": {
         "dates": [
           "2026-08-31",
@@ -11383,7 +11449,7 @@
           28263200,
           24435600,
           16106200,
-          16055800
+          16344200
         ]
       },
       "dividends": {
@@ -11509,7 +11575,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 6.590000152587891,
-      "last_update": "2026-09-04T22:26:01.149157",
+      "last_update": "2026-09-07T22:54:34.966309",
       "history": {
         "dates": [
           "2026-08-31",
@@ -11530,7 +11596,7 @@
           7641400,
           10598000,
           10307000,
-          9943200
+          9952900
         ]
       },
       "dividends": {
@@ -11586,15 +11652,17 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 28.799999237060547,
-      "last_update": "2026-09-04T22:26:01.829887",
+      "last_update": "2026-09-07T22:54:35.424618",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          28.8,
           28.8,
           28.8,
           28.8,
@@ -11603,6 +11671,7 @@
         "volumes": [
           0,
           100,
+          0,
           0,
           0
         ]
@@ -11668,7 +11737,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 31.219999313354492,
-      "last_update": "2026-09-04T22:26:02.287928",
+      "last_update": "2026-09-07T22:54:35.902090",
       "history": {
         "dates": [
           "2026-08-31",
@@ -11751,7 +11820,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 2.440000057220459,
-      "last_update": "2026-09-04T22:26:02.898799",
+      "last_update": "2026-09-07T22:54:36.436489",
       "history": {
         "dates": [
           "2026-08-31",
@@ -11772,7 +11841,7 @@
           26811900,
           39422300,
           32264400,
-          28048200
+          28103400
         ]
       },
       "dividends": {
@@ -11854,7 +11923,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 46.83000183105469,
-      "last_update": "2026-09-04T22:26:03.909423",
+      "last_update": "2026-09-07T22:54:37.603168",
       "history": {
         "dates": [
           "2026-08-31",
@@ -11875,7 +11944,7 @@
           1467100,
           3107900,
           1529000,
-          1147500
+          1148100
         ]
       },
       "dividends": {
@@ -11949,7 +12018,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 15.850000381469727,
-      "last_update": "2026-09-04T22:26:04.457655",
+      "last_update": "2026-09-07T22:54:38.150629",
       "history": {
         "dates": [
           "2026-08-31",
@@ -11970,7 +12039,7 @@
           30261600,
           31849200,
           18497400,
-          31309800
+          31323600
         ]
       },
       "dividends": {
@@ -12064,21 +12133,24 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 17.0,
-      "last_update": "2026-09-04T22:26:04.978174",
+      "last_update": "2026-09-07T22:54:38.615221",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          17.0,
           17.0,
           17.0,
           17.0,
           17.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -12152,7 +12224,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 8.989999771118164,
-      "last_update": "2026-09-04T22:26:05.461208",
+      "last_update": "2026-09-07T22:54:39.073243",
       "history": {
         "dates": [
           "2026-08-31",
@@ -12243,25 +12315,28 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 9.449999809265137,
-      "last_update": "2026-09-04T22:26:05.912792",
+      "last_update": "2026-09-07T22:54:39.543748",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           9.75,
           9.75,
           9.75,
+          9.45,
           9.45
         ],
         "volumes": [
           0,
           0,
           0,
-          500
+          500,
+          0
         ]
       },
       "dividends": {
@@ -12317,10 +12392,10 @@
         ]
       },
       "stats": {
-        "avg_price": 9.674999952316284,
+        "avg_price": 9.629999923706055,
         "min_price": 9.449999809265137,
         "max_price": 9.75,
-        "volatility": 1.7764634961816623
+        "volatility": 1.5384625165890398
       }
     },
     "CSAN3.SA": {
@@ -12329,7 +12404,7 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 3.799999952316284,
-      "last_update": "2026-09-04T22:26:07.055498",
+      "last_update": "2026-09-07T22:54:40.639155",
       "history": {
         "dates": [
           "2026-08-31",
@@ -12350,7 +12425,7 @@
           37008400,
           91285700,
           43728400,
-          24420900
+          24431500
         ]
       },
       "dividends": {
@@ -12416,7 +12491,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 5.579999923706055,
-      "last_update": "2026-09-04T22:26:07.388391",
+      "last_update": "2026-09-07T22:54:40.964729",
       "history": {
         "dates": [
           "2026-08-31",
@@ -12475,7 +12550,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 55.90999984741211,
-      "last_update": "2026-09-04T22:26:07.835273",
+      "last_update": "2026-09-07T22:54:41.468539",
       "history": {
         "dates": [
           "2026-08-31",
@@ -12496,7 +12571,7 @@
           6204000,
           6214900,
           3004200,
-          4014300
+          4018100
         ]
       },
       "dividends": {
@@ -12652,7 +12727,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 6.360000133514404,
-      "last_update": "2026-09-04T22:26:08.301747",
+      "last_update": "2026-09-07T22:54:41.962939",
       "history": {
         "dates": [
           "2026-08-31",
@@ -12673,7 +12748,7 @@
           22722300,
           19114900,
           44973900,
-          18538300
+          18582900
         ]
       },
       "dividends": {
@@ -12751,7 +12826,7 @@
       "sector": "Technology",
       "currency": "BRL",
       "last_price": 14.149999618530273,
-      "last_update": "2026-09-04T22:26:08.765191",
+      "last_update": "2026-09-07T22:54:42.403150",
       "history": {
         "dates": [
           "2026-08-31",
@@ -12772,7 +12847,7 @@
           42600,
           36500,
           18800,
-          40200
+          40300
         ]
       },
       "dividends": {
@@ -12888,7 +12963,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 1.590000033378601,
-      "last_update": "2026-09-04T22:26:09.218264",
+      "last_update": "2026-09-07T22:54:42.872189",
       "history": {
         "dates": [
           "2026-08-31",
@@ -12951,21 +13026,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 44.0,
-      "last_update": "2026-09-04T22:26:09.937752",
+      "last_update": "2026-09-07T22:54:43.660909",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          44.0,
           44.0,
           44.0,
           44.0,
           44.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -12997,7 +13075,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 31.010000228881836,
-      "last_update": "2026-09-04T22:26:10.400297",
+      "last_update": "2026-09-07T22:54:44.092151",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13044,21 +13122,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 2.0,
-      "last_update": "2026-09-04T22:26:10.931680",
+      "last_update": "2026-09-07T22:54:44.598275",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          2.0,
           2.0,
           2.0,
           2.0,
           2.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -13126,21 +13207,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 1.2899999618530273,
-      "last_update": "2026-09-04T22:26:11.357196",
+      "last_update": "2026-09-07T22:54:45.022126",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          1.29,
           1.29,
           1.29,
           1.29,
           1.29
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -13196,7 +13280,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 33.209999084472656,
-      "last_update": "2026-09-04T22:26:11.705692",
+      "last_update": "2026-09-07T22:54:45.393759",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13217,7 +13301,7 @@
           2766300,
           4830800,
           3355000,
-          1547900
+          1548300
         ]
       },
       "dividends": {
@@ -13275,7 +13359,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 1.8799999952316284,
-      "last_update": "2026-09-04T22:26:12.120621",
+      "last_update": "2026-09-07T22:54:45.790578",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13296,7 +13380,7 @@
           17900000,
           15037600,
           10015200,
-          19524500
+          19648100
         ]
       },
       "dividends": {
@@ -13344,7 +13428,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 19.979999542236328,
-      "last_update": "2026-09-04T22:26:12.492059",
+      "last_update": "2026-09-07T22:54:46.162409",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13365,7 +13449,7 @@
           5166700,
           7023800,
           9584400,
-          3928200
+          3930600
         ]
       },
       "dividends": {
@@ -13417,7 +13501,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 25.600000381469727,
-      "last_update": "2026-09-04T22:26:12.934808",
+      "last_update": "2026-09-07T22:54:46.617452",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13438,7 +13522,7 @@
           8143500,
           11748800,
           7042800,
-          7427200
+          7432300
         ]
       },
       "dividends": {
@@ -13502,7 +13586,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 24.110000610351562,
-      "last_update": "2026-09-04T22:26:13.255784",
+      "last_update": "2026-09-07T22:54:46.989764",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13543,7 +13627,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 2.819999933242798,
-      "last_update": "2026-09-04T22:26:13.748529",
+      "last_update": "2026-09-07T22:54:47.435165",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13564,7 +13648,7 @@
           927800,
           1005400,
           849500,
-          801400
+          811100
         ]
       },
       "dividends": {
@@ -13618,7 +13702,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 18.850000381469727,
-      "last_update": "2026-09-04T22:26:14.152950",
+      "last_update": "2026-09-07T22:54:47.814880",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13675,7 +13759,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 7.489999771118164,
-      "last_update": "2026-09-04T22:26:14.667920",
+      "last_update": "2026-09-07T22:54:48.290063",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13696,7 +13780,7 @@
           79100,
           70900,
           96100,
-          73900
+          74000
         ]
       },
       "dividends": {
@@ -13737,8 +13821,8 @@
       "name": "Dexxos Participações S.A.",
       "sector": "Basic Materials",
       "currency": "BRL",
-      "last_price": 7.5,
-      "last_update": "2026-09-04T22:26:15.039603",
+      "last_price": 7.400000095367432,
+      "last_update": "2026-09-07T22:54:48.639775",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13752,7 +13836,7 @@
           7.25,
           7.39,
           7.4,
-          7.5
+          7.4
         ],
         "volumes": [
           1700,
@@ -13785,10 +13869,10 @@
         ]
       },
       "stats": {
-        "avg_price": 7.347999954223633,
+        "avg_price": 7.3279999732971195,
         "min_price": 7.199999809265137,
-        "max_price": 7.5,
-        "volatility": 0.7806314431715742
+        "max_price": 7.400000095367432,
+        "volatility": 0.880142094296972
       }
     },
     "DIRR3.SA": {
@@ -13797,7 +13881,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 11.460000038146973,
-      "last_update": "2026-09-04T22:26:15.524179",
+      "last_update": "2026-09-07T22:54:49.148750",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13818,7 +13902,7 @@
           9038400,
           11729700,
           10547900,
-          8413100
+          8413600
         ]
       },
       "dividends": {
@@ -13884,7 +13968,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 6.230000019073486,
-      "last_update": "2026-09-04T22:26:15.888192",
+      "last_update": "2026-09-07T22:54:49.534993",
       "history": {
         "dates": [
           "2026-08-31",
@@ -13905,7 +13989,7 @@
           41500,
           28300,
           43700,
-          23900
+          24100
         ]
       },
       "dividends": {
@@ -13925,21 +14009,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 6.460000038146973,
-      "last_update": "2026-09-04T22:26:16.410283",
+      "last_update": "2026-09-07T22:54:50.130706",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          6.46,
           6.46,
           6.46,
           6.46,
           6.46
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -14003,7 +14090,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 3.7300000190734863,
-      "last_update": "2026-09-04T22:26:16.895280",
+      "last_update": "2026-09-07T22:54:50.650165",
       "history": {
         "dates": [
           "2026-08-31",
@@ -14078,7 +14165,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 10.260000228881836,
-      "last_update": "2026-09-04T22:26:17.281306",
+      "last_update": "2026-09-07T22:54:51.126058",
       "history": {
         "dates": [
           "2026-08-31",
@@ -14099,7 +14186,7 @@
           138500,
           137500,
           154200,
-          37500
+          38000
         ]
       },
       "dividends": {
@@ -14119,16 +14206,18 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 1.9500000476837158,
-      "last_update": "2026-09-04T22:26:17.663949",
+      "last_update": "2026-09-07T22:54:51.504374",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           2.0,
+          1.95,
           1.95,
           1.95,
           1.95
@@ -14136,6 +14225,7 @@
         "volumes": [
           0,
           200,
+          0,
           0,
           0
         ]
@@ -14145,10 +14235,10 @@
         "values": []
       },
       "stats": {
-        "avg_price": 1.9625000357627869,
+        "avg_price": 1.9600000381469727,
         "min_price": 1.9500000476837158,
         "max_price": 2.0,
-        "volatility": 1.4433742964637561
+        "volatility": 1.2499988079071045
       }
     },
     "DXCO3.SA": {
@@ -14157,7 +14247,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 5.639999866485596,
-      "last_update": "2026-09-04T22:26:18.397747",
+      "last_update": "2026-09-07T22:54:52.241307",
       "history": {
         "dates": [
           "2026-08-31",
@@ -14178,7 +14268,7 @@
           1667000,
           4169200,
           2527000,
-          1560100
+          1560300
         ]
       },
       "dividends": {
@@ -14260,7 +14350,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 12.300000190734863,
-      "last_update": "2026-09-04T22:26:18.819074",
+      "last_update": "2026-09-07T22:54:52.663669",
       "history": {
         "dates": [
           "2026-08-31",
@@ -14341,7 +14431,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 11.1899995803833,
-      "last_update": "2026-09-04T22:26:19.237347",
+      "last_update": "2026-09-07T22:54:53.121140",
       "history": {
         "dates": [
           "2026-08-31",
@@ -14362,7 +14452,7 @@
           22700,
           8900,
           3700,
-          1600
+          1700
         ]
       },
       "dividends": {
@@ -14424,7 +14514,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 7.920000076293945,
-      "last_update": "2026-09-04T22:26:19.659076",
+      "last_update": "2026-09-07T22:54:53.536014",
       "history": {
         "dates": [
           "2026-08-31",
@@ -14445,7 +14535,7 @@
           11941400,
           13925400,
           9328000,
-          8177800
+          8222000
         ]
       },
       "dividends": {
@@ -14509,21 +14599,24 @@
       "sector": "N/A",
       "currency": "BRL",
       "last_price": 0.17000000178813934,
-      "last_update": "2026-09-04T22:26:20.026839",
+      "last_update": "2026-09-07T22:54:53.876810",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          0.17,
           0.17,
           0.17,
           0.17,
           0.17
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -14547,7 +14640,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 30.139999389648438,
-      "last_update": "2026-09-04T22:26:20.539681",
+      "last_update": "2026-09-07T22:54:54.387091",
       "history": {
         "dates": [
           "2026-08-31",
@@ -14568,7 +14661,7 @@
           3882700,
           3936400,
           3484100,
-          5735700
+          5786800
         ]
       },
       "dividends": {
@@ -14700,21 +14793,24 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 51.52000045776367,
-      "last_update": "2026-09-04T22:26:21.044201",
+      "last_update": "2026-09-07T22:54:54.875012",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          51.52,
           51.52,
           51.52,
           51.52,
           51.52
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -14856,7 +14952,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 38.0,
-      "last_update": "2026-09-04T22:26:21.548874",
+      "last_update": "2026-09-07T22:54:55.307239",
       "history": {
         "dates": [
           "2026-08-31",
@@ -15007,21 +15103,24 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 150.0,
-      "last_update": "2026-09-04T22:26:21.985660",
+      "last_update": "2026-09-07T22:54:55.678751",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          150.0,
           150.0,
           150.0,
           150.0,
           150.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -15077,7 +15176,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 34.29999923706055,
-      "last_update": "2026-09-04T22:26:22.414320",
+      "last_update": "2026-09-07T22:54:56.245500",
       "history": {
         "dates": [
           "2026-08-31",
@@ -15164,7 +15263,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 94.9800033569336,
-      "last_update": "2026-09-04T22:26:22.898514",
+      "last_update": "2026-09-07T22:54:57.059017",
       "history": {
         "dates": [
           "2026-08-31",
@@ -15185,7 +15284,7 @@
           4959600,
           5618800,
           4391200,
-          3913900
+          3916800
         ]
       },
       "dividends": {
@@ -15301,7 +15400,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 27.59000015258789,
-      "last_update": "2026-09-04T22:26:23.316447",
+      "last_update": "2026-09-07T22:54:57.477407",
       "history": {
         "dates": [
           "2026-08-31",
@@ -15322,7 +15421,7 @@
           16752300,
           20531800,
           11561000,
-          5837500
+          5839700
         ]
       },
       "dividends": {
@@ -15346,7 +15445,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 12.390000343322754,
-      "last_update": "2026-09-04T22:26:23.795337",
+      "last_update": "2026-09-07T22:54:57.986275",
       "history": {
         "dates": [
           "2026-08-31",
@@ -15469,7 +15568,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 9.859999656677246,
-      "last_update": "2026-09-04T22:26:24.246057",
+      "last_update": "2026-09-07T22:54:58.500767",
       "history": {
         "dates": [
           "2026-08-31",
@@ -15588,7 +15687,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 51.43000030517578,
-      "last_update": "2026-09-04T22:26:24.751175",
+      "last_update": "2026-09-07T22:54:58.951595",
       "history": {
         "dates": [
           "2026-08-31",
@@ -15703,7 +15802,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 0.75,
-      "last_update": "2026-09-04T22:26:25.093025",
+      "last_update": "2026-09-07T22:54:59.349326",
       "history": {
         "dates": [
           "2026-08-31",
@@ -15724,7 +15823,7 @@
           671000,
           507200,
           242800,
-          339600
+          340500
         ]
       },
       "dividends": {
@@ -15748,7 +15847,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 34.0,
-      "last_update": "2026-09-04T22:26:25.587254",
+      "last_update": "2026-09-07T22:54:59.871320",
       "history": {
         "dates": [
           "2026-08-31",
@@ -15849,7 +15948,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 34.310001373291016,
-      "last_update": "2026-09-04T22:26:26.014231",
+      "last_update": "2026-09-07T22:55:00.318467",
       "history": {
         "dates": [
           "2026-08-31",
@@ -15956,7 +16055,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 1.350000023841858,
-      "last_update": "2026-09-04T22:26:26.536069",
+      "last_update": "2026-09-07T22:55:00.789111",
       "history": {
         "dates": [
           "2026-08-31",
@@ -16017,7 +16116,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 5.519999980926514,
-      "last_update": "2026-09-04T22:26:26.959427",
+      "last_update": "2026-09-07T22:55:01.291408",
       "history": {
         "dates": [
           "2026-08-31",
@@ -16106,25 +16205,28 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 9.779999732971191,
-      "last_update": "2026-09-04T22:26:27.427864",
+      "last_update": "2026-09-07T22:55:01.765705",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           9.89,
           9.89,
           9.89,
+          9.78,
           9.78
         ],
         "volumes": [
           0,
           0,
           0,
-          100
+          100,
+          0
         ]
       },
       "dividends": {
@@ -16178,10 +16280,10 @@
         ]
       },
       "stats": {
-        "avg_price": 9.862500190734863,
+        "avg_price": 9.84600009918213,
         "min_price": 9.779999732971191,
         "max_price": 9.890000343322754,
-        "volatility": 0.6421524751551291
+        "volatility": 0.5561203565873973
       }
     },
     "EQPA6.SA": {
@@ -16190,21 +16292,24 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 6.590000152587891,
-      "last_update": "2026-09-04T22:26:27.839969",
+      "last_update": "2026-09-07T22:55:02.219807",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          6.59,
           6.59,
           6.59,
           6.59,
           6.59
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -16274,21 +16379,24 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 10.0,
-      "last_update": "2026-09-04T22:26:28.327415",
+      "last_update": "2026-09-07T22:55:02.707407",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          10.0,
           10.0,
           10.0,
           10.0,
           10.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -16358,7 +16466,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 39.15999984741211,
-      "last_update": "2026-09-04T22:26:28.784773",
+      "last_update": "2026-09-07T22:55:03.151457",
       "history": {
         "dates": [
           "2026-08-31",
@@ -16379,7 +16487,7 @@
           12867100,
           14969200,
           10043300,
-          6301500
+          6301800
         ]
       },
       "dividends": {
@@ -16457,7 +16565,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 7.010000228881836,
-      "last_update": "2026-09-04T22:26:29.158035",
+      "last_update": "2026-09-07T22:55:03.635635",
       "history": {
         "dates": [
           "2026-08-31",
@@ -16478,7 +16586,7 @@
           59000,
           48900,
           36800,
-          102400
+          102800
         ]
       },
       "dividends": {
@@ -16510,21 +16618,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 3.009999990463257,
-      "last_update": "2026-09-04T22:26:29.570882",
+      "last_update": "2026-09-07T22:55:04.045033",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          3.01,
           3.01,
           3.01,
           3.01,
           3.01
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -16548,7 +16659,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 1.3899999856948853,
-      "last_update": "2026-09-04T22:26:30.036653",
+      "last_update": "2026-09-07T22:55:04.505038",
       "history": {
         "dates": [
           "2026-08-31",
@@ -16589,7 +16700,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 3.75,
-      "last_update": "2026-09-04T22:26:30.560378",
+      "last_update": "2026-09-07T22:55:04.965063",
       "history": {
         "dates": [
           "2026-08-31",
@@ -16610,7 +16721,7 @@
           35400,
           34600,
           64400,
-          36100
+          36200
         ]
       },
       "dividends": {
@@ -16732,25 +16843,28 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 21.5,
-      "last_update": "2026-09-04T22:26:31.284991",
+      "last_update": "2026-09-07T22:55:05.482698",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           21.05,
           21.4,
           21.35,
+          21.5,
           21.5
         ],
         "volumes": [
           0,
           100,
           200,
-          200
+          200,
+          0
         ]
       },
       "dividends": {
@@ -16794,10 +16908,10 @@
         ]
       },
       "stats": {
-        "avg_price": 21.324999809265137,
+        "avg_price": 21.35999984741211,
         "min_price": 21.049999237060547,
         "max_price": 21.5,
-        "volatility": 0.9482006474179606
+        "volatility": 0.8518269244907019
       }
     },
     "EUCA4.SA": {
@@ -16806,7 +16920,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 21.059999465942383,
-      "last_update": "2026-09-04T22:26:32.074862",
+      "last_update": "2026-09-07T22:55:05.972168",
       "history": {
         "dates": [
           "2026-08-31",
@@ -16883,7 +16997,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 4.230000019073486,
-      "last_update": "2026-09-04T22:26:33.155159",
+      "last_update": "2026-09-07T22:55:06.695747",
       "history": {
         "dates": [
           "2026-08-31",
@@ -16966,7 +17080,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 13.0,
-      "last_update": "2026-09-04T22:26:33.733240",
+      "last_update": "2026-09-07T22:55:07.157283",
       "history": {
         "dates": [
           "2026-08-31",
@@ -16987,7 +17101,7 @@
           15023800,
           9091300,
           5941300,
-          2920800
+          2920900
         ]
       },
       "dividends": {
@@ -17075,7 +17189,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 10.149999618530273,
-      "last_update": "2026-09-04T22:26:34.227662",
+      "last_update": "2026-09-07T22:55:07.665785",
       "history": {
         "dates": [
           "2026-08-31",
@@ -17228,7 +17342,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 5.610000133514404,
-      "last_update": "2026-09-04T22:26:34.723249",
+      "last_update": "2026-09-07T22:55:08.176737",
       "history": {
         "dates": [
           "2026-08-31",
@@ -17249,7 +17363,7 @@
           2055800,
           2168200,
           1524400,
-          2853700
+          2854400
         ]
       },
       "dividends": {
@@ -17377,7 +17491,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 3.069999933242798,
-      "last_update": "2026-09-04T22:26:35.128783",
+      "last_update": "2026-09-07T22:55:08.603176",
       "history": {
         "dates": [
           "2026-08-31",
@@ -17421,28 +17535,31 @@
     "FICT3.SA": {
       "ticker": "FICT3.SA",
       "name": "Fictor Alimentos S.A.",
-      "sector": "Communication Services",
+      "sector": "",
       "currency": "BRL",
-      "last_price": 0.1899999976158142,
-      "last_update": "2026-09-04T22:26:35.589524",
+      "last_price": 0.18000000715255737,
+      "last_update": "2026-09-07T22:55:09.110855",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           0.19,
           0.2,
           0.18,
-          0.19
+          0.19,
+          0.18
         ],
         "volumes": [
           0,
           1300,
           18600,
-          79200
+          79200,
+          40300
         ]
       },
       "dividends": {
@@ -17458,10 +17575,10 @@
         ]
       },
       "stats": {
-        "avg_price": 0.1900000013411045,
+        "avg_price": 0.18800000250339508,
         "min_price": 0.18000000715255737,
         "max_price": 0.20000000298023224,
-        "volatility": 8.897795305290112
+        "volatility": 7.774476838920321
       }
     },
     "FIEI3.SA": {
@@ -17470,7 +17587,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 7.489999771118164,
-      "last_update": "2026-09-04T22:26:36.016395",
+      "last_update": "2026-09-07T22:55:09.557137",
       "history": {
         "dates": [
           "2026-08-31",
@@ -17525,21 +17642,24 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 33.0,
-      "last_update": "2026-09-04T22:26:36.489662",
+      "last_update": "2026-09-07T22:55:10.195061",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          33.0,
           33.0,
           33.0,
           33.0,
           33.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -17605,7 +17725,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 4.920000076293945,
-      "last_update": "2026-09-04T22:26:36.934815",
+      "last_update": "2026-09-07T22:55:10.673601",
       "history": {
         "dates": [
           "2026-08-31",
@@ -17626,7 +17746,7 @@
           1032700,
           1011200,
           743700,
-          911800
+          912100
         ]
       },
       "dividends": {
@@ -17672,7 +17792,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 20.170000076293945,
-      "last_update": "2026-09-04T22:26:37.354359",
+      "last_update": "2026-09-07T22:55:11.150308",
       "history": {
         "dates": [
           "2026-08-31",
@@ -17797,7 +17917,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 22.649999618530273,
-      "last_update": "2026-09-04T22:26:37.861326",
+      "last_update": "2026-09-07T22:55:11.591998",
       "history": {
         "dates": [
           "2026-08-31",
@@ -17938,21 +18058,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 205.0,
-      "last_update": "2026-09-04T22:26:38.239090",
+      "last_update": "2026-09-07T22:55:11.992355",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          205.0,
           205.0,
           205.0,
           205.0,
           205.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -17986,15 +18109,17 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 33.709999084472656,
-      "last_update": "2026-09-04T22:26:38.655040",
+      "last_update": "2026-09-07T22:55:12.467801",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          33.71,
           33.71,
           33.71,
           33.71,
@@ -18002,6 +18127,7 @@
         ],
         "volumes": [
           300,
+          0,
           0,
           0,
           0
@@ -18110,7 +18236,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 36.2599983215332,
-      "last_update": "2026-09-04T22:26:39.122356",
+      "last_update": "2026-09-07T22:55:12.925125",
       "history": {
         "dates": [
           "2026-08-31",
@@ -18239,7 +18365,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 0.20999999344348907,
-      "last_update": "2026-09-04T22:26:39.642965",
+      "last_update": "2026-09-07T22:55:13.359322",
       "history": {
         "dates": [
           "2026-08-31",
@@ -18260,7 +18386,7 @@
           5246500,
           5707100,
           5006600,
-          3020300
+          3142000
         ]
       },
       "dividends": {
@@ -18296,7 +18422,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 21.549999237060547,
-      "last_update": "2026-09-04T22:26:40.191006",
+      "last_update": "2026-09-07T22:55:13.903595",
       "history": {
         "dates": [
           "2026-08-31",
@@ -18471,7 +18597,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 25.34000015258789,
-      "last_update": "2026-09-04T22:26:40.685439",
+      "last_update": "2026-09-07T22:55:14.476358",
       "history": {
         "dates": [
           "2026-08-31",
@@ -18702,7 +18828,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 13.09000015258789,
-      "last_update": "2026-09-04T22:26:41.042164",
+      "last_update": "2026-09-07T22:55:14.932178",
       "history": {
         "dates": [
           "2026-08-31",
@@ -18723,7 +18849,7 @@
           2685100,
           3839700,
           3562300,
-          4276200
+          4278600
         ]
       },
       "dividends": {
@@ -18755,7 +18881,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 4.869999885559082,
-      "last_update": "2026-09-04T22:26:41.398055",
+      "last_update": "2026-09-07T22:55:15.271618",
       "history": {
         "dates": [
           "2026-08-31",
@@ -18776,7 +18902,7 @@
           5358800,
           7908800,
           4233100,
-          4874800
+          4875500
         ]
       },
       "dividends": {
@@ -18814,7 +18940,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 9.960000038146973,
-      "last_update": "2026-09-04T22:26:41.938558",
+      "last_update": "2026-09-07T22:55:15.769585",
       "history": {
         "dates": [
           "2026-08-31",
@@ -18835,7 +18961,7 @@
           73500,
           129000,
           21400,
-          22400
+          22500
         ]
       },
       "dividends": {
@@ -18983,7 +19109,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 11.170000076293945,
-      "last_update": "2026-09-04T22:26:42.480018",
+      "last_update": "2026-09-07T22:55:16.370780",
       "history": {
         "dates": [
           "2026-08-31",
@@ -19004,7 +19130,7 @@
           12275100,
           11947900,
           10197100,
-          9080100
+          9080500
         ]
       },
       "dividends": {
@@ -19208,21 +19334,24 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 10.510000228881836,
-      "last_update": "2026-09-04T22:26:42.916450",
+      "last_update": "2026-09-07T22:55:16.762569",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          10.51,
           10.51,
           10.51,
           10.51,
           10.51
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -19258,7 +19387,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 3.680000066757202,
-      "last_update": "2026-09-04T22:26:43.417058",
+      "last_update": "2026-09-07T22:55:17.221553",
       "history": {
         "dates": [
           "2026-08-31",
@@ -19279,7 +19408,7 @@
           2721100,
           5191700,
           4210100,
-          2651400
+          2654800
         ]
       },
       "dividends": {
@@ -19447,21 +19576,24 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 2.75,
-      "last_update": "2026-09-04T22:26:43.822045",
+      "last_update": "2026-09-07T22:55:17.635103",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          2.75,
           2.75,
           2.75,
           2.75,
           2.75
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -19489,7 +19621,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 2.630000114440918,
-      "last_update": "2026-09-04T22:26:44.236606",
+      "last_update": "2026-09-07T22:55:18.003175",
       "history": {
         "dates": [
           "2026-08-31",
@@ -19530,7 +19662,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 1.9500000476837158,
-      "last_update": "2026-09-04T22:26:44.608361",
+      "last_update": "2026-09-07T22:55:18.386846",
       "history": {
         "dates": [
           "2026-08-31",
@@ -19571,7 +19703,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 7.260000228881836,
-      "last_update": "2026-09-04T22:26:45.069519",
+      "last_update": "2026-09-07T22:55:18.827503",
       "history": {
         "dates": [
           "2026-08-31",
@@ -19592,7 +19724,7 @@
           9270300,
           16697800,
           11377700,
-          5354700
+          5379100
         ]
       },
       "dividends": {
@@ -19636,7 +19768,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 2.069999933242798,
-      "last_update": "2026-09-04T22:26:45.497062",
+      "last_update": "2026-09-07T22:55:19.252332",
       "history": {
         "dates": [
           "2026-08-31",
@@ -19657,7 +19789,7 @@
           628800,
           798000,
           466000,
-          938400
+          938900
         ]
       },
       "dividends": {
@@ -19709,7 +19841,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 2.5899999141693115,
-      "last_update": "2026-09-04T22:26:45.880714",
+      "last_update": "2026-09-07T22:55:19.590991",
       "history": {
         "dates": [
           "2026-08-31",
@@ -19730,7 +19862,7 @@
           755500,
           1014200,
           250500,
-          279800
+          280500
         ]
       },
       "dividends": {
@@ -19754,7 +19886,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 3.4200000762939453,
-      "last_update": "2026-09-04T22:26:46.256104",
+      "last_update": "2026-09-07T22:55:20.015209",
       "history": {
         "dates": [
           "2026-08-31",
@@ -19795,21 +19927,24 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 32.0,
-      "last_update": "2026-09-04T22:26:46.902592",
+      "last_update": "2026-09-07T22:55:20.506630",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          32.0,
           32.0,
           32.0,
           32.0,
           32.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -19865,7 +20000,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 96.0,
-      "last_update": "2026-09-04T22:26:47.335728",
+      "last_update": "2026-09-07T22:55:20.912997",
       "history": {
         "dates": [
           "2026-09-03"
@@ -19894,21 +20029,24 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 4.800000190734863,
-      "last_update": "2026-09-04T22:26:47.794395",
+      "last_update": "2026-09-07T22:55:21.379595",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          4.8,
           4.8,
           4.8,
           4.8,
           4.8
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -19932,21 +20070,24 @@
       "sector": "N/A",
       "currency": "BRL",
       "last_price": 3.299999952316284,
-      "last_update": "2026-09-04T22:26:48.477162",
+      "last_update": "2026-09-07T22:55:22.014215",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          3.3,
           3.3,
           3.3,
           3.3,
           3.3
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -19970,7 +20111,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 8.890000343322754,
-      "last_update": "2026-09-04T22:26:49.511280",
+      "last_update": "2026-09-07T22:55:22.408023",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20011,7 +20152,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 23.15999984741211,
-      "last_update": "2026-09-04T22:26:50.278612",
+      "last_update": "2026-09-07T22:55:23.188418",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20032,7 +20173,7 @@
           2299300,
           4352100,
           2622100,
-          3602900
+          3603000
         ]
       },
       "dividends": {
@@ -20148,7 +20289,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 1.7300000190734863,
-      "last_update": "2026-09-04T22:26:50.676011",
+      "last_update": "2026-09-07T22:55:23.532710",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20189,7 +20330,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 3.359999895095825,
-      "last_update": "2026-09-04T22:26:51.278034",
+      "last_update": "2026-09-07T22:55:24.081217",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20210,7 +20351,7 @@
           26300,
           150400,
           19800,
-          3000
+          3100
         ]
       },
       "dividends": {
@@ -20274,7 +20415,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 11.319999694824219,
-      "last_update": "2026-09-04T22:26:51.713601",
+      "last_update": "2026-09-07T22:55:24.444764",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20295,7 +20436,7 @@
           2200,
           4100,
           500,
-          600
+          700
         ]
       },
       "dividends": {
@@ -20333,7 +20474,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 26.43000030517578,
-      "last_update": "2026-09-04T22:26:52.106380",
+      "last_update": "2026-09-07T22:55:24.849968",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20354,7 +20495,7 @@
           3596400,
           3607800,
           2876600,
-          2782100
+          2782300
         ]
       },
       "dividends": {
@@ -20396,7 +20537,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 1.4500000476837158,
-      "last_update": "2026-09-04T22:26:52.526017",
+      "last_update": "2026-09-07T22:55:25.319694",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20417,7 +20558,7 @@
           173500,
           24100,
           10200,
-          9200
+          9300
         ]
       },
       "dividends": {
@@ -20441,7 +20582,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 1.409999966621399,
-      "last_update": "2026-09-04T22:26:52.959058",
+      "last_update": "2026-09-07T22:55:25.904980",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20486,7 +20627,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 14.9399995803833,
-      "last_update": "2026-09-04T22:26:53.609339",
+      "last_update": "2026-09-07T22:55:26.567845",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20561,7 +20702,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 62.209999084472656,
-      "last_update": "2026-09-04T22:26:54.387708",
+      "last_update": "2026-09-07T22:55:26.972136",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20582,7 +20723,7 @@
           854400,
           737400,
           1225900,
-          2241800
+          2255400
         ]
       },
       "dividends": {
@@ -20624,7 +20765,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 32.599998474121094,
-      "last_update": "2026-09-04T22:26:54.874114",
+      "last_update": "2026-09-07T22:55:27.481634",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20801,7 +20942,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 27.700000762939453,
-      "last_update": "2026-09-04T22:26:55.366361",
+      "last_update": "2026-09-07T22:55:28.062675",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20822,7 +20963,7 @@
           2358300,
           5018200,
           4258800,
-          2634600
+          2635200
         ]
       },
       "dividends": {
@@ -20974,7 +21115,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 14.0600004196167,
-      "last_update": "2026-09-04T22:26:55.837807",
+      "last_update": "2026-09-07T22:55:28.605772",
       "history": {
         "dates": [
           "2026-08-31",
@@ -20995,7 +21136,7 @@
           129300,
           132100,
           162300,
-          66100
+          66700
         ]
       },
       "dividends": {
@@ -21305,7 +21446,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 13.949999809265137,
-      "last_update": "2026-09-04T22:26:56.353060",
+      "last_update": "2026-09-07T22:55:29.110328",
       "history": {
         "dates": [
           "2026-08-31",
@@ -21326,7 +21467,7 @@
           23947900,
           32752000,
           36836400,
-          26700500
+          26704700
         ]
       },
       "dividends": {
@@ -21632,7 +21773,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 45.720001220703125,
-      "last_update": "2026-09-04T22:26:56.905549",
+      "last_update": "2026-09-07T22:55:29.707995",
       "history": {
         "dates": [
           "2026-08-31",
@@ -22235,7 +22376,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 41.91999816894531,
-      "last_update": "2026-09-04T22:26:57.446640",
+      "last_update": "2026-09-07T22:55:30.345942",
       "history": {
         "dates": [
           "2026-08-31",
@@ -22256,7 +22397,7 @@
           27032600,
           44023900,
           42338500,
-          23951500
+          23959900
         ]
       },
       "dividends": {
@@ -22828,7 +22969,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 2.6600000858306885,
-      "last_update": "2026-09-04T22:26:58.064196",
+      "last_update": "2026-09-07T22:55:30.736677",
       "history": {
         "dates": [
           "2026-08-31",
@@ -22849,7 +22990,7 @@
           1929500,
           1176200,
           1862200,
-          1731400
+          1733000
         ]
       },
       "dividends": {
@@ -22883,7 +23024,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 0.46000000834465027,
-      "last_update": "2026-09-04T22:26:58.498551",
+      "last_update": "2026-09-07T22:55:31.140818",
       "history": {
         "dates": [
           "2026-08-31",
@@ -22934,7 +23075,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 11.449999809265137,
-      "last_update": "2026-09-04T22:26:59.029435",
+      "last_update": "2026-09-07T22:55:31.595557",
       "history": {
         "dates": [
           "2026-08-31",
@@ -22955,7 +23096,7 @@
           5001700,
           4280200,
           4137800,
-          6205800
+          6206000
         ]
       },
       "dividends": {
@@ -23099,21 +23240,24 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 17.100000381469727,
-      "last_update": "2026-09-04T22:26:59.889663",
+      "last_update": "2026-09-07T22:55:32.014904",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          17.1,
           17.1,
           17.1,
           17.1,
           17.1
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -23179,21 +23323,24 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 18.0,
-      "last_update": "2026-09-04T22:27:00.337196",
+      "last_update": "2026-09-07T22:55:32.439317",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          18.0,
           18.0,
           18.0,
           18.0,
           18.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -23265,7 +23412,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 5.820000171661377,
-      "last_update": "2026-09-04T22:27:00.730418",
+      "last_update": "2026-09-07T22:55:32.807651",
       "history": {
         "dates": [
           "2026-08-31",
@@ -23286,7 +23433,7 @@
           1125600,
           1698700,
           807400,
-          829100
+          829600
         ]
       },
       "dividends": {
@@ -23324,7 +23471,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 6.679999828338623,
-      "last_update": "2026-09-04T22:27:01.256401",
+      "last_update": "2026-09-07T22:55:33.276249",
       "history": {
         "dates": [
           "2026-08-31",
@@ -23345,7 +23492,7 @@
           1046200,
           1357200,
           1182500,
-          1088600
+          1089800
         ]
       },
       "dividends": {
@@ -23421,7 +23568,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 4.03000020980835,
-      "last_update": "2026-09-04T22:27:02.109968",
+      "last_update": "2026-09-07T22:55:34.132895",
       "history": {
         "dates": [
           "2026-08-31",
@@ -23442,7 +23589,7 @@
           1550700,
           933000,
           829200,
-          480000
+          480900
         ]
       },
       "dividends": {
@@ -23576,7 +23723,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 3.8499999046325684,
-      "last_update": "2026-09-04T22:27:02.576844",
+      "last_update": "2026-09-07T22:55:34.715858",
       "history": {
         "dates": [
           "2026-08-31",
@@ -23597,7 +23744,7 @@
           3874700,
           5398800,
           4188500,
-          2622200
+          2624700
         ]
       },
       "dividends": {
@@ -23735,7 +23882,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 19.469999313354492,
-      "last_update": "2026-09-04T22:27:03.027794",
+      "last_update": "2026-09-07T22:55:35.218568",
       "history": {
         "dates": [
           "2026-08-31",
@@ -23872,7 +24019,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 9.539999961853027,
-      "last_update": "2026-09-04T22:27:03.459376",
+      "last_update": "2026-09-07T22:55:35.580391",
       "history": {
         "dates": [
           "2026-08-31",
@@ -23923,7 +24070,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 10.609999656677246,
-      "last_update": "2026-09-04T22:27:03.905933",
+      "last_update": "2026-09-07T22:55:35.961496",
       "history": {
         "dates": [
           "2026-08-31",
@@ -23944,7 +24091,7 @@
           541100,
           742300,
           704100,
-          638900
+          639500
         ]
       },
       "dividends": {
@@ -24006,7 +24153,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 32.810001373291016,
-      "last_update": "2026-09-04T22:27:04.395290",
+      "last_update": "2026-09-07T22:55:36.472188",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24139,7 +24286,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 3.569999933242798,
-      "last_update": "2026-09-04T22:27:04.897687",
+      "last_update": "2026-09-07T22:55:37.010621",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24160,7 +24307,7 @@
           4195500,
           4824400,
           4390700,
-          1840700
+          1842200
         ]
       },
       "dividends": {
@@ -24218,7 +24365,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 1.25,
-      "last_update": "2026-09-04T22:27:05.245144",
+      "last_update": "2026-09-07T22:55:37.409257",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24239,7 +24386,7 @@
           1565600,
           2907500,
           2064000,
-          2732500
+          2747500
         ]
       },
       "dividends": {
@@ -24271,7 +24418,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 24.709999084472656,
-      "last_update": "2026-09-04T22:27:06.285679",
+      "last_update": "2026-09-07T22:55:38.407397",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24292,7 +24439,7 @@
           431700,
           521200,
           480000,
-          371300
+          371700
         ]
       },
       "dividends": {
@@ -24342,7 +24489,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 28.0,
-      "last_update": "2026-09-04T22:27:06.892617",
+      "last_update": "2026-09-07T22:55:38.880419",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24389,7 +24536,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 1.2899999618530273,
-      "last_update": "2026-09-04T22:27:07.326228",
+      "last_update": "2026-09-07T22:55:39.373745",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24410,7 +24557,7 @@
           294100,
           337500,
           235500,
-          166900
+          168000
         ]
       },
       "dividends": {
@@ -24456,7 +24603,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 11.350000381469727,
-      "last_update": "2026-09-04T22:27:07.870652",
+      "last_update": "2026-09-07T22:55:39.914327",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24477,7 +24624,7 @@
           18261300,
           15952800,
           25440100,
-          11248300
+          11265900
         ]
       },
       "dividends": {
@@ -24655,7 +24802,7 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 3.630000114440918,
-      "last_update": "2026-09-04T22:27:08.241092",
+      "last_update": "2026-09-07T22:55:40.331131",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24676,7 +24823,7 @@
           4100,
           10400,
           4600,
-          3100
+          3200
         ]
       },
       "dividends": {
@@ -24696,7 +24843,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 2.5999999046325684,
-      "last_update": "2026-09-04T22:27:08.888748",
+      "last_update": "2026-09-07T22:55:40.949004",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24779,7 +24926,7 @@
       "sector": "Technology",
       "currency": "BRL",
       "last_price": 4.21999979019165,
-      "last_update": "2026-09-04T22:27:09.324538",
+      "last_update": "2026-09-07T22:55:41.312968",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24834,7 +24981,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 2.059999942779541,
-      "last_update": "2026-09-04T22:27:09.698681",
+      "last_update": "2026-09-07T22:55:41.689162",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24875,21 +25022,24 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 3.0,
-      "last_update": "2026-09-04T22:27:10.072106",
+      "last_update": "2026-09-07T22:55:42.051476",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          3.0,
           3.0,
           3.0,
           3.0,
           3.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -24913,7 +25063,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 5.170000076293945,
-      "last_update": "2026-09-04T22:27:10.450353",
+      "last_update": "2026-09-07T22:55:42.458047",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24934,7 +25084,7 @@
           142800,
           270500,
           238500,
-          138100
+          148200
         ]
       },
       "dividends": {
@@ -24966,7 +25116,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 17.690000534057617,
-      "last_update": "2026-09-04T22:27:10.865198",
+      "last_update": "2026-09-07T22:55:42.926627",
       "history": {
         "dates": [
           "2026-08-31",
@@ -24987,7 +25137,7 @@
           3541900,
           4663300,
           3504700,
-          5603400
+          5625900
         ]
       },
       "dividends": {
@@ -25031,7 +25181,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 17.780000686645508,
-      "last_update": "2026-09-04T22:27:11.324805",
+      "last_update": "2026-09-07T22:55:43.372499",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25052,7 +25202,7 @@
           653500,
           1198200,
           826300,
-          380300
+          380400
         ]
       },
       "dividends": {
@@ -25184,7 +25334,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 25.809999465942383,
-      "last_update": "2026-09-04T22:27:11.669820",
+      "last_update": "2026-09-07T22:55:43.751457",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25205,7 +25355,7 @@
           1880900,
           1164400,
           1348200,
-          2020400
+          2036500
         ]
       },
       "dividends": {
@@ -25235,7 +25385,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 0.6800000071525574,
-      "last_update": "2026-09-04T22:27:12.141074",
+      "last_update": "2026-09-07T22:55:44.159238",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25256,7 +25406,7 @@
           86500,
           341600,
           165700,
-          190100
+          194800
         ]
       },
       "dividends": {
@@ -25286,7 +25436,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 2.9100000858306885,
-      "last_update": "2026-09-04T22:27:12.485379",
+      "last_update": "2026-09-07T22:55:44.537318",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25307,7 +25457,7 @@
           795700,
           615300,
           410900,
-          550200
+          550700
         ]
       },
       "dividends": {
@@ -25363,7 +25513,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 5.340000152587891,
-      "last_update": "2026-09-04T22:27:13.624134",
+      "last_update": "2026-09-07T22:55:45.676676",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25408,7 +25558,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 5.789999961853027,
-      "last_update": "2026-09-04T22:27:14.182600",
+      "last_update": "2026-09-07T22:55:46.151171",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25429,7 +25579,7 @@
           28276800,
           65931300,
           41714000,
-          31846700
+          31939100
         ]
       },
       "dividends": {
@@ -25485,7 +25635,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 15.789999961853027,
-      "last_update": "2026-09-04T22:27:14.702172",
+      "last_update": "2026-09-07T22:55:46.623073",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25592,7 +25742,7 @@
       "sector": "Technology",
       "currency": "BRL",
       "last_price": 1.8600000143051147,
-      "last_update": "2026-09-04T22:27:15.094892",
+      "last_update": "2026-09-07T22:55:46.976728",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25639,21 +25789,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 2550.010009765625,
-      "last_update": "2026-09-04T22:27:15.531053",
+      "last_update": "2026-09-07T22:55:47.434445",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          2550.01,
           2550.01,
           2550.01,
           2550.01,
           2550.01
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -25729,21 +25882,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 2550.010009765625,
-      "last_update": "2026-09-04T22:27:16.026980",
+      "last_update": "2026-09-07T22:55:47.884379",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          2550.01,
           2550.01,
           2550.01,
           2550.01,
           2550.01
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -25807,7 +25963,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 18.5,
-      "last_update": "2026-09-04T22:27:16.498078",
+      "last_update": "2026-09-07T22:55:48.320659",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25860,7 +26016,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 4.119999885559082,
-      "last_update": "2026-09-04T22:27:16.909730",
+      "last_update": "2026-09-07T22:55:48.758472",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25905,7 +26061,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 16.780000686645508,
-      "last_update": "2026-09-04T22:27:17.434342",
+      "last_update": "2026-09-07T22:55:49.267627",
       "history": {
         "dates": [
           "2026-08-31",
@@ -25926,7 +26082,7 @@
           20975200,
           52976700,
           19874300,
-          22287800
+          22292900
         ]
       },
       "dividends": {
@@ -26024,7 +26180,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 8.109999656677246,
-      "last_update": "2026-09-04T22:27:17.829658",
+      "last_update": "2026-09-07T22:55:49.630235",
       "history": {
         "dates": [
           "2026-08-31",
@@ -26045,7 +26201,7 @@
           8313100,
           8566600,
           6124300,
-          6853100
+          6853300
         ]
       },
       "dividends": {
@@ -26115,7 +26271,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 5.550000190734863,
-      "last_update": "2026-09-04T22:27:18.271578",
+      "last_update": "2026-09-07T22:55:50.076055",
       "history": {
         "dates": [
           "2026-08-31",
@@ -26136,7 +26292,7 @@
           12147900,
           14679700,
           13637500,
-          6167600
+          6173600
         ]
       },
       "dividends": {
@@ -26206,21 +26362,24 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 37.400001525878906,
-      "last_update": "2026-09-04T22:27:18.708863",
+      "last_update": "2026-09-07T22:55:50.514909",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          37.4,
           37.4,
           37.4,
           37.4,
           37.4
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -26262,17 +26421,19 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 35.11000061035156,
-      "last_update": "2026-09-04T22:27:19.153226",
+      "last_update": "2026-09-07T22:55:50.900366",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           35.1,
           35.1,
+          35.11,
           35.11,
           35.11
         ],
@@ -26280,6 +26441,7 @@
           0,
           0,
           100,
+          0,
           0
         ]
       },
@@ -26306,10 +26468,10 @@
         ]
       },
       "stats": {
-        "avg_price": 35.10499954223633,
+        "avg_price": 35.10599975585937,
         "min_price": 35.099998474121094,
         "max_price": 35.11000061035156,
-        "volatility": 0.016452240160039856
+        "volatility": 0.014248057927757074
       }
     },
     "MTRE3.SA": {
@@ -26318,7 +26480,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 3.4200000762939453,
-      "last_update": "2026-09-04T22:27:19.499763",
+      "last_update": "2026-09-07T22:55:51.362896",
       "history": {
         "dates": [
           "2026-08-31",
@@ -26339,7 +26501,7 @@
           1015000,
           2040700,
           1032400,
-          557400
+          557500
         ]
       },
       "dividends": {
@@ -26433,21 +26595,24 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 76.0,
-      "last_update": "2026-09-04T22:27:19.918279",
+      "last_update": "2026-09-07T22:55:51.758145",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          76.0,
           76.0,
           76.0,
           76.0,
           76.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -26555,7 +26720,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 46.75,
-      "last_update": "2026-09-04T22:27:20.356731",
+      "last_update": "2026-09-07T22:55:52.181441",
       "history": {
         "dates": [
           "2026-08-31",
@@ -26672,7 +26837,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 30.18000030517578,
-      "last_update": "2026-09-04T22:27:20.933462",
+      "last_update": "2026-09-07T22:55:52.657571",
       "history": {
         "dates": [
           "2026-08-31",
@@ -26693,7 +26858,7 @@
           5584800,
           7166000,
           8051200,
-          3758700
+          3758800
         ]
       },
       "dividends": {
@@ -26803,25 +26968,28 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 24.5,
-      "last_update": "2026-09-04T22:27:21.343353",
+      "last_update": "2026-09-07T22:55:53.083320",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           16.0,
           21.0,
           23.39,
+          24.5,
           24.5
         ],
         "volumes": [
           0,
           900,
           100,
-          100
+          100,
+          0
         ]
       },
       "dividends": {
@@ -26829,10 +26997,10 @@
         "values": []
       },
       "stats": {
-        "avg_price": 21.22249984741211,
+        "avg_price": 21.87799987792969,
         "min_price": 16.0,
         "max_price": 24.5,
-        "volatility": 13.7918387149005
+        "volatility": 13.75347930487552
       }
     },
     "MWET4.SA": {
@@ -26841,7 +27009,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 31.889999389648438,
-      "last_update": "2026-09-04T22:27:21.728081",
+      "last_update": "2026-09-07T22:55:53.464279",
       "history": {
         "dates": [
           "2026-08-31",
@@ -26882,7 +27050,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 9.8100004196167,
-      "last_update": "2026-09-04T22:27:22.241144",
+      "last_update": "2026-09-07T22:55:54.001555",
       "history": {
         "dates": [
           "2026-08-31",
@@ -26981,7 +27149,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 8.850000381469727,
-      "last_update": "2026-09-04T22:27:22.664319",
+      "last_update": "2026-09-07T22:55:54.475807",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27002,7 +27170,7 @@
           20916500,
           8862800,
           5641400,
-          5544800
+          5548200
         ]
       },
       "dividends": {
@@ -27072,7 +27240,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 2.3299999237060547,
-      "last_update": "2026-09-04T22:27:24.153363",
+      "last_update": "2026-09-07T22:55:55.819045",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27129,7 +27297,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 1.3899999856948853,
-      "last_update": "2026-09-04T22:27:24.713053",
+      "last_update": "2026-09-07T22:55:56.305184",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27170,7 +27338,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 2.1700000762939453,
-      "last_update": "2026-09-04T22:27:25.085592",
+      "last_update": "2026-09-07T22:55:56.737264",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27211,7 +27379,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 7.0,
-      "last_update": "2026-09-04T22:27:25.473710",
+      "last_update": "2026-09-07T22:55:57.054919",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27232,7 +27400,7 @@
           3797900,
           3647900,
           4193700,
-          2633400
+          2637200
         ]
       },
       "dividends": {
@@ -27252,7 +27420,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 100.0,
-      "last_update": "2026-09-04T22:27:26.838081",
+      "last_update": "2026-09-07T22:55:58.729003",
       "history": {
         "dates": [
           "2026-09-03"
@@ -27281,7 +27449,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 27.0,
-      "last_update": "2026-09-04T22:27:27.559410",
+      "last_update": "2026-09-07T22:55:59.449468",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27302,7 +27470,7 @@
           1800,
           9300,
           2100,
-          14800
+          14900
         ]
       },
       "dividends": {
@@ -27368,21 +27536,24 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 0.10000000149011612,
-      "last_update": "2026-09-04T22:27:28.048324",
+      "last_update": "2026-09-07T22:55:59.868429",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          0.1,
           0.1,
           0.1,
           0.1,
           0.1
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -27422,21 +27593,24 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 0.5,
-      "last_update": "2026-09-04T22:27:28.524739",
+      "last_update": "2026-09-07T22:56:00.334608",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          0.5,
           0.5,
           0.5,
           0.5,
           0.5
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -27508,7 +27682,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 1.3700000047683716,
-      "last_update": "2026-09-04T22:27:28.946816",
+      "last_update": "2026-09-07T22:56:00.673297",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27529,7 +27703,7 @@
           21699000,
           42278500,
           22860200,
-          34344700
+          34387700
         ]
       },
       "dividends": {
@@ -27549,7 +27723,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 11.359999656677246,
-      "last_update": "2026-09-04T22:27:29.333269",
+      "last_update": "2026-09-07T22:56:01.069735",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27594,7 +27768,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 17.100000381469727,
-      "last_update": "2026-09-04T22:27:30.648432",
+      "last_update": "2026-09-07T22:56:02.397336",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27635,7 +27809,7 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 1.149999976158142,
-      "last_update": "2026-09-04T22:27:31.059749",
+      "last_update": "2026-09-07T22:56:02.773524",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27676,7 +27850,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 23.510000228881836,
-      "last_update": "2026-09-04T22:27:31.361953",
+      "last_update": "2026-09-07T22:56:03.114276",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27717,7 +27891,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 28.989999771118164,
-      "last_update": "2026-09-04T22:27:32.360553",
+      "last_update": "2026-09-07T22:56:04.261152",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27802,21 +27976,24 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 30.3700008392334,
-      "last_update": "2026-09-04T22:27:32.826590",
+      "last_update": "2026-09-07T22:56:04.772048",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          30.37,
           30.37,
           30.37,
           30.37,
           30.37
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -27882,7 +28059,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 2.8299999237060547,
-      "last_update": "2026-09-04T22:27:33.319749",
+      "last_update": "2026-09-07T22:56:05.256440",
       "history": {
         "dates": [
           "2026-08-31",
@@ -27903,7 +28080,7 @@
           6401000,
           4984900,
           1855600,
-          6700700
+          6712000
         ]
       },
       "dividends": {
@@ -28003,7 +28180,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 1.1699999570846558,
-      "last_update": "2026-09-04T22:27:33.743100",
+      "last_update": "2026-09-07T22:56:05.673316",
       "history": {
         "dates": [
           "2026-08-31",
@@ -28056,7 +28233,7 @@
       "sector": "Technology",
       "currency": "BRL",
       "last_price": 1.7400000095367432,
-      "last_update": "2026-09-04T22:27:34.140121",
+      "last_update": "2026-09-07T22:56:06.145878",
       "history": {
         "dates": [
           "2026-08-31",
@@ -28101,15 +28278,17 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 38.86000061035156,
-      "last_update": "2026-09-04T22:27:34.561428",
+      "last_update": "2026-09-07T22:56:06.662967",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          38.86,
           38.86,
           38.86,
           38.86,
@@ -28118,6 +28297,7 @@
         "volumes": [
           0,
           3900,
+          0,
           0,
           0
         ]
@@ -28201,15 +28381,17 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 38.869998931884766,
-      "last_update": "2026-09-04T22:27:35.025877",
+      "last_update": "2026-09-07T22:56:07.148003",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          38.87,
           38.87,
           38.87,
           38.87,
@@ -28219,7 +28401,8 @@
           0,
           0,
           0,
-          500
+          500,
+          0
         ]
       },
       "dividends": {
@@ -28293,7 +28476,7 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 52.0099983215332,
-      "last_update": "2026-09-04T22:27:35.529236",
+      "last_update": "2026-09-07T22:56:07.646596",
       "history": {
         "dates": [
           "2026-08-31",
@@ -28314,7 +28497,7 @@
           10985700,
           18260400,
           16659400,
-          9307900
+          9310300
         ]
       },
       "dividends": {
@@ -28438,7 +28621,7 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 47.11000061035156,
-      "last_update": "2026-09-04T22:27:36.077670",
+      "last_update": "2026-09-07T22:56:08.181339",
       "history": {
         "dates": [
           "2026-08-31",
@@ -28459,7 +28642,7 @@
           49726600,
           54091600,
           51488400,
-          29116600
+          28838000
         ]
       },
       "dividends": {
@@ -28605,7 +28788,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 7.869999885559082,
-      "last_update": "2026-09-04T22:27:36.558950",
+      "last_update": "2026-09-07T22:56:08.602420",
       "history": {
         "dates": [
           "2026-08-31",
@@ -28626,7 +28809,7 @@
           131600,
           267400,
           133400,
-          84000
+          84100
         ]
       },
       "dividends": {
@@ -28678,7 +28861,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 3.8399999141693115,
-      "last_update": "2026-09-04T22:27:37.040917",
+      "last_update": "2026-09-07T22:56:08.938743",
       "history": {
         "dates": [
           "2026-08-31",
@@ -28699,7 +28882,7 @@
           4546000,
           8061200,
           5502400,
-          3874800
+          3880200
         ]
       },
       "dividends": {
@@ -28729,7 +28912,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 11.130000114440918,
-      "last_update": "2026-09-04T22:27:37.659630",
+      "last_update": "2026-09-07T22:56:09.369180",
       "history": {
         "dates": [
           "2026-08-31",
@@ -28830,7 +29013,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 11.140000343322754,
-      "last_update": "2026-09-04T22:27:38.199449",
+      "last_update": "2026-09-07T22:56:09.796237",
       "history": {
         "dates": [
           "2026-08-31",
@@ -28851,7 +29034,7 @@
           1149200,
           1446600,
           1125800,
-          1344300
+          1344900
         ]
       },
       "dividends": {
@@ -28955,7 +29138,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 2.5899999141693115,
-      "last_update": "2026-09-04T22:27:38.593793",
+      "last_update": "2026-09-07T22:56:10.210472",
       "history": {
         "dates": [
           "2026-08-31",
@@ -29000,7 +29183,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 7.230000019073486,
-      "last_update": "2026-09-04T22:27:38.921978",
+      "last_update": "2026-09-07T22:56:10.600914",
       "history": {
         "dates": [
           "2026-08-31",
@@ -29055,7 +29238,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 0.3199999928474426,
-      "last_update": "2026-09-04T22:27:39.541401",
+      "last_update": "2026-09-07T22:56:11.120454",
       "history": {
         "dates": [
           "2026-08-31",
@@ -29076,7 +29259,7 @@
           5127700,
           5454400,
           21080200,
-          34946700
+          34960400
         ]
       },
       "dividends": {
@@ -29102,7 +29285,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 13.15999984741211,
-      "last_update": "2026-09-04T22:27:40.005776",
+      "last_update": "2026-09-07T22:56:11.592365",
       "history": {
         "dates": [
           "2026-08-31",
@@ -29123,7 +29306,7 @@
           557900,
           1941600,
           676700,
-          857300
+          857400
         ]
       },
       "dividends": {
@@ -29237,7 +29420,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 4.260000228881836,
-      "last_update": "2026-09-04T22:27:40.523403",
+      "last_update": "2026-09-07T22:56:12.145677",
       "history": {
         "dates": [
           "2026-08-31",
@@ -29258,7 +29441,7 @@
           2114600,
           1678600,
           1140700,
-          1452800
+          1454500
         ]
       },
       "dividends": {
@@ -29382,7 +29565,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 4.579999923706055,
-      "last_update": "2026-09-04T22:27:41.062835",
+      "last_update": "2026-09-07T22:56:12.634320",
       "history": {
         "dates": [
           "2026-08-31",
@@ -29403,7 +29586,7 @@
           15146900,
           21557700,
           10810400,
-          11816700
+          11835500
         ]
       },
       "dividends": {
@@ -29521,7 +29704,7 @@
       "sector": "Technology",
       "currency": "BRL",
       "last_price": 3.4200000762939453,
-      "last_update": "2026-09-04T22:27:41.565346",
+      "last_update": "2026-09-07T22:56:13.163372",
       "history": {
         "dates": [
           "2026-08-31",
@@ -29542,7 +29725,7 @@
           1321700,
           807500,
           772900,
-          911000
+          911600
         ]
       },
       "dividends": {
@@ -29596,21 +29779,24 @@
       "sector": "N/A",
       "currency": "BRL",
       "last_price": 83.33999633789062,
-      "last_update": "2026-09-04T22:27:42.012715",
+      "last_update": "2026-09-07T22:56:13.748266",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          83.34,
           83.34,
           83.34,
           83.34,
           83.34
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -29680,7 +29866,7 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 60.189998626708984,
-      "last_update": "2026-09-04T22:27:42.764794",
+      "last_update": "2026-09-07T22:56:14.424787",
       "history": {
         "dates": [
           "2026-08-31",
@@ -29701,7 +29887,7 @@
           7754500,
           7432300,
           12936000,
-          8490800
+          8493400
         ]
       },
       "dividends": {
@@ -29725,7 +29911,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 18.149999618530273,
-      "last_update": "2026-09-04T22:27:43.116258",
+      "last_update": "2026-09-07T22:56:14.817638",
       "history": {
         "dates": [
           "2026-08-31",
@@ -29778,7 +29964,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 51.65999984741211,
-      "last_update": "2026-09-04T22:27:43.798003",
+      "last_update": "2026-09-07T22:56:15.555392",
       "history": {
         "dates": [
           "2026-08-31",
@@ -29927,7 +30113,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 1.6699999570846558,
-      "last_update": "2026-09-04T22:27:44.344999",
+      "last_update": "2026-09-07T22:56:16.087981",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30012,7 +30198,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 1.5,
-      "last_update": "2026-09-04T22:27:45.695151",
+      "last_update": "2026-09-07T22:56:17.445312",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30033,7 +30219,7 @@
           4065500,
           9209700,
           5627400,
-          3780800
+          3810100
         ]
       },
       "dividends": {
@@ -30095,7 +30281,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 19.989999771118164,
-      "last_update": "2026-09-04T22:27:46.812775",
+      "last_update": "2026-09-07T22:56:18.667869",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30116,7 +30302,7 @@
           6620400,
           8454000,
           5012200,
-          4581700
+          4584400
         ]
       },
       "dividends": {
@@ -30304,7 +30490,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 14.550000190734863,
-      "last_update": "2026-09-04T22:27:47.194744",
+      "last_update": "2026-09-07T22:56:19.136659",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30325,7 +30511,7 @@
           7331800,
           22557900,
           13716600,
-          17792900
+          17795100
         ]
       },
       "dividends": {
@@ -30357,7 +30543,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 0.2800000011920929,
-      "last_update": "2026-09-04T22:27:47.966356",
+      "last_update": "2026-09-07T22:56:19.741885",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30378,7 +30564,7 @@
           33117200,
           16896600,
           18128200,
-          9836400
+          9929100
         ]
       },
       "dividends": {
@@ -30420,7 +30606,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 7.659999847412109,
-      "last_update": "2026-09-04T22:27:48.412839",
+      "last_update": "2026-09-07T22:56:20.233213",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30441,7 +30627,7 @@
           1343100,
           1012000,
           789000,
-          939400
+          939900
         ]
       },
       "dividends": {
@@ -30559,7 +30745,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 8.4399995803833,
-      "last_update": "2026-09-04T22:27:48.989460",
+      "last_update": "2026-09-07T22:56:20.779437",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30680,7 +30866,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 4.800000190734863,
-      "last_update": "2026-09-04T22:27:49.486013",
+      "last_update": "2026-09-07T22:56:21.301486",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30701,7 +30887,7 @@
           4070200,
           4381600,
           4347700,
-          6787800
+          6809400
         ]
       },
       "dividends": {
@@ -30789,7 +30975,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 0.4000000059604645,
-      "last_update": "2026-09-04T22:27:50.947032",
+      "last_update": "2026-09-07T22:56:22.516218",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30830,7 +31016,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 0.41999998688697815,
-      "last_update": "2026-09-04T22:27:51.339530",
+      "last_update": "2026-09-07T22:56:22.948692",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30851,7 +31037,7 @@
           3305800,
           8426900,
           7315400,
-          3403000
+          3524300
         ]
       },
       "dividends": {
@@ -30871,7 +31057,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 37.130001068115234,
-      "last_update": "2026-09-04T22:27:51.764438",
+      "last_update": "2026-09-07T22:56:23.348613",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30956,7 +31142,7 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 11.15999984741211,
-      "last_update": "2026-09-04T22:27:52.177452",
+      "last_update": "2026-09-07T22:56:23.699517",
       "history": {
         "dates": [
           "2026-08-31",
@@ -30977,7 +31163,7 @@
           1936600,
           2645600,
           2355000,
-          8774500
+          8775500
         ]
       },
       "dividends": {
@@ -31021,7 +31207,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 5.539999961853027,
-      "last_update": "2026-09-04T22:27:52.651923",
+      "last_update": "2026-09-07T22:56:24.184090",
       "history": {
         "dates": [
           "2026-08-31",
@@ -31118,7 +31304,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 36.63999938964844,
-      "last_update": "2026-09-04T22:27:53.107172",
+      "last_update": "2026-09-07T22:56:24.671656",
       "history": {
         "dates": [
           "2026-08-31",
@@ -31139,7 +31325,7 @@
           12634300,
           11389200,
           13589800,
-          7730400
+          7730800
         ]
       },
       "dividends": {
@@ -31335,7 +31521,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 35.290000915527344,
-      "last_update": "2026-09-04T22:27:53.465594",
+      "last_update": "2026-09-07T22:56:25.010053",
       "history": {
         "dates": [
           "2026-08-31",
@@ -31356,7 +31542,7 @@
           654600,
           66800,
           832700,
-          76500
+          76700
         ]
       },
       "dividends": {
@@ -31382,7 +31568,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 7.159999847412109,
-      "last_update": "2026-09-04T22:27:53.957927",
+      "last_update": "2026-09-07T22:56:25.525037",
       "history": {
         "dates": [
           "2026-08-31",
@@ -31511,7 +31697,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 0.8600000143051147,
-      "last_update": "2026-09-04T22:27:54.705399",
+      "last_update": "2026-09-07T22:56:26.295931",
       "history": {
         "dates": [
           "2026-08-31",
@@ -31532,7 +31718,7 @@
           25000,
           108100,
           201700,
-          99100
+          103200
         ]
       },
       "dividends": {
@@ -31556,7 +31742,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 0.8600000143051147,
-      "last_update": "2026-09-04T22:27:55.045762",
+      "last_update": "2026-09-07T22:56:26.644298",
       "history": {
         "dates": [
           "2026-08-31",
@@ -31577,7 +31763,7 @@
           31900,
           106900,
           147600,
-          93100
+          95100
         ]
       },
       "dividends": {
@@ -31597,7 +31783,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 5.960000038146973,
-      "last_update": "2026-09-04T22:27:55.645153",
+      "last_update": "2026-09-07T22:56:27.172423",
       "history": {
         "dates": [
           "2026-08-31",
@@ -31618,7 +31804,7 @@
           162200,
           209600,
           148500,
-          115900
+          116000
         ]
       },
       "dividends": {
@@ -31740,15 +31926,17 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 7.0,
-      "last_update": "2026-09-04T22:27:56.153164",
+      "last_update": "2026-09-07T22:56:27.630337",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          7.0,
           7.0,
           7.0,
           7.0,
@@ -31758,6 +31946,7 @@
           0,
           0,
           100,
+          0,
           0
         ]
       },
@@ -31808,21 +31997,24 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 7.789999961853027,
-      "last_update": "2026-09-04T22:27:56.591920",
+      "last_update": "2026-09-07T22:56:28.140413",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          7.79,
           7.79,
           7.79,
           7.79,
           7.79
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -31912,21 +32104,24 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 7.0,
-      "last_update": "2026-09-04T22:27:57.083655",
+      "last_update": "2026-09-07T22:56:28.568308",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          7.0,
           7.0,
           7.0,
           7.0,
           7.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -31968,21 +32163,24 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 0.8500000238418579,
-      "last_update": "2026-09-04T22:27:57.582351",
+      "last_update": "2026-09-07T22:56:28.984437",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          0.85,
           0.85,
           0.85,
           0.85,
           0.85
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -32006,21 +32204,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 1.600000023841858,
-      "last_update": "2026-09-04T22:27:58.057678",
+      "last_update": "2026-09-07T22:56:29.448726",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          1.6,
           1.6,
           1.6,
           1.6,
           1.6
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -32056,7 +32257,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 38.27000045776367,
-      "last_update": "2026-09-04T22:27:58.539505",
+      "last_update": "2026-09-07T22:56:29.989843",
       "history": {
         "dates": [
           "2026-08-31",
@@ -32109,7 +32310,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 0.6899999976158142,
-      "last_update": "2026-09-04T22:27:58.894686",
+      "last_update": "2026-09-07T22:56:30.304167",
       "history": {
         "dates": [
           "2026-08-31",
@@ -32150,7 +32351,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 15.1899995803833,
-      "last_update": "2026-09-04T22:28:00.299674",
+      "last_update": "2026-09-07T22:56:31.716408",
       "history": {
         "dates": [
           "2026-08-31",
@@ -32171,7 +32372,7 @@
           272700,
           233100,
           355400,
-          172000
+          172200
         ]
       },
       "dividends": {
@@ -32335,7 +32536,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 15.029999732971191,
-      "last_update": "2026-09-04T22:28:00.816665",
+      "last_update": "2026-09-07T22:56:32.212631",
       "history": {
         "dates": [
           "2026-08-31",
@@ -32356,7 +32557,7 @@
           375500,
           301600,
           696400,
-          215400
+          215600
         ]
       },
       "dividends": {
@@ -32526,7 +32727,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 30.43000030517578,
-      "last_update": "2026-09-04T22:28:01.260289",
+      "last_update": "2026-09-07T22:56:32.673070",
       "history": {
         "dates": [
           "2026-08-31",
@@ -32547,7 +32748,7 @@
           3378200,
           6099800,
           4030200,
-          4684500
+          4684700
         ]
       },
       "dividends": {
@@ -32705,7 +32906,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 7.690000057220459,
-      "last_update": "2026-09-04T22:28:01.733256",
+      "last_update": "2026-09-07T22:56:33.173970",
       "history": {
         "dates": [
           "2026-08-31",
@@ -32726,7 +32927,7 @@
           101100,
           141000,
           104400,
-          110300
+          110400
         ]
       },
       "dividends": {
@@ -32822,7 +33023,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 6.840000152587891,
-      "last_update": "2026-09-04T22:28:02.171040",
+      "last_update": "2026-09-07T22:56:33.607647",
       "history": {
         "dates": [
           "2026-08-31",
@@ -32843,7 +33044,7 @@
           2226100,
           1476000,
           781800,
-          1117400
+          1118700
         ]
       },
       "dividends": {
@@ -32941,7 +33142,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 34.95000076293945,
-      "last_update": "2026-09-04T22:28:02.564536",
+      "last_update": "2026-09-07T22:56:34.001377",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33024,7 +33225,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 9.039999961853027,
-      "last_update": "2026-09-04T22:28:02.973433",
+      "last_update": "2026-09-07T22:56:34.440359",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33045,7 +33246,7 @@
           3873900,
           1927300,
           3747000,
-          2254900
+          2255300
         ]
       },
       "dividends": {
@@ -33077,7 +33278,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 26.530000686645508,
-      "last_update": "2026-09-04T22:28:03.587907",
+      "last_update": "2026-09-07T22:56:34.975491",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33098,7 +33299,7 @@
           23173000,
           34568000,
           19138800,
-          25213400
+          25214200
         ]
       },
       "dividends": {
@@ -33170,7 +33371,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 12.800000190734863,
-      "last_update": "2026-09-04T22:28:04.122040",
+      "last_update": "2026-09-07T22:56:35.500531",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33191,7 +33392,7 @@
           37900,
           22100,
           17800,
-          4300
+          4900
         ]
       },
       "dividends": {
@@ -33261,7 +33462,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 13.520000457763672,
-      "last_update": "2026-09-04T22:28:04.564202",
+      "last_update": "2026-09-07T22:56:35.911229",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33346,7 +33547,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 0.07000000029802322,
-      "last_update": "2026-09-04T22:28:04.934929",
+      "last_update": "2026-09-07T22:56:36.239301",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33387,7 +33588,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 6.239999771118164,
-      "last_update": "2026-09-04T22:28:05.369733",
+      "last_update": "2026-09-07T22:56:36.675143",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33437,7 +33638,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 27.940000534057617,
-      "last_update": "2026-09-04T22:28:05.702696",
+      "last_update": "2026-09-07T22:56:37.060719",
       "history": {
         "dates": [
           "2026-09-03"
@@ -33466,7 +33667,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 4.46999979019165,
-      "last_update": "2026-09-04T22:28:06.219217",
+      "last_update": "2026-09-07T22:56:37.539982",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33487,7 +33688,7 @@
           910800,
           1015000,
           604000,
-          938200
+          939500
         ]
       },
       "dividends": {
@@ -33601,7 +33802,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 7.71999979019165,
-      "last_update": "2026-09-04T22:28:06.643131",
+      "last_update": "2026-09-07T22:56:37.926452",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33622,7 +33823,7 @@
           2698500,
           4685600,
           2899200,
-          4353500
+          4353700
         ]
       },
       "dividends": {
@@ -33660,7 +33861,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 16.40999984741211,
-      "last_update": "2026-09-04T22:28:07.180644",
+      "last_update": "2026-09-07T22:56:38.399787",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33681,7 +33882,7 @@
           3181400,
           3620000,
           2693600,
-          8673100
+          8677200
         ]
       },
       "dividends": {
@@ -33745,7 +33946,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 17.969999313354492,
-      "last_update": "2026-09-04T22:28:07.562931",
+      "last_update": "2026-09-07T22:56:38.758318",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33766,7 +33967,7 @@
           11077500,
           13998100,
           10234200,
-          5655400
+          5656600
         ]
       },
       "dividends": {
@@ -33810,7 +34011,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 20.600000381469727,
-      "last_update": "2026-09-04T22:28:08.014240",
+      "last_update": "2026-09-07T22:56:39.245333",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33831,7 +34032,7 @@
           4204400,
           2474000,
           2033300,
-          1231700
+          1231800
         ]
       },
       "dividends": {
@@ -33907,21 +34108,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 9.130000114440918,
-      "last_update": "2026-09-04T22:28:08.419032",
+      "last_update": "2026-09-07T22:56:39.661714",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          9.13,
           9.13,
           9.13,
           9.13,
           9.13
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -33945,7 +34149,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 2.2899999618530273,
-      "last_update": "2026-09-04T22:28:08.872640",
+      "last_update": "2026-09-07T22:56:40.102857",
       "history": {
         "dates": [
           "2026-08-31",
@@ -33986,21 +34190,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 11.510000228881836,
-      "last_update": "2026-09-04T22:28:09.238526",
+      "last_update": "2026-09-07T22:56:40.506086",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          11.51,
           11.51,
           11.51,
           11.51,
           11.51
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -34024,7 +34231,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 7.880000114440918,
-      "last_update": "2026-09-04T22:28:09.612639",
+      "last_update": "2026-09-07T22:56:40.880466",
       "history": {
         "dates": [
           "2026-08-31",
@@ -34083,21 +34290,24 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 38.65999984741211,
-      "last_update": "2026-09-04T22:28:10.077350",
+      "last_update": "2026-09-07T22:56:41.320183",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          38.66,
           38.66,
           38.66,
           38.66,
           38.66
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -34169,21 +34379,24 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 82.0999984741211,
-      "last_update": "2026-09-04T22:28:10.650534",
+      "last_update": "2026-09-07T22:56:41.805311",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          82.1,
           82.1,
           82.1,
           82.1,
           82.1
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -34253,25 +34466,28 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 78.55999755859375,
-      "last_update": "2026-09-04T22:28:11.071914",
+      "last_update": "2026-09-07T22:56:42.261662",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           79.52,
           79.52,
           79.52,
+          78.56,
           78.56
         ],
         "volumes": [
           0,
           0,
           0,
-          100
+          100,
+          0
         ]
       },
       "dividends": {
@@ -34325,10 +34541,10 @@
         ]
       },
       "stats": {
-        "avg_price": 79.27999687194824,
+        "avg_price": 79.13599700927735,
         "min_price": 78.55999755859375,
         "max_price": 79.5199966430664,
-        "volatility": 0.6970017017605243
+        "volatility": 0.6036211802055992
       }
     },
     "SUZB3.SA": {
@@ -34337,7 +34553,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 46.88999938964844,
-      "last_update": "2026-09-04T22:28:11.525195",
+      "last_update": "2026-09-07T22:56:42.715551",
       "history": {
         "dates": [
           "2026-08-31",
@@ -34358,7 +34574,7 @@
           4834800,
           7750200,
           4246700,
-          3810000
+          3811100
         ]
       },
       "dividends": {
@@ -34424,7 +34640,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 3.7799999713897705,
-      "last_update": "2026-09-04T22:28:12.033852",
+      "last_update": "2026-09-07T22:56:43.227029",
       "history": {
         "dates": [
           "2026-08-31",
@@ -34445,7 +34661,7 @@
           422400,
           472500,
           398000,
-          1855600
+          1863300
         ]
       },
       "dividends": {
@@ -34507,7 +34723,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 13.720000267028809,
-      "last_update": "2026-09-04T22:28:12.487984",
+      "last_update": "2026-09-07T22:56:43.857081",
       "history": {
         "dates": [
           "2026-08-31",
@@ -34528,7 +34744,7 @@
           104500,
           169400,
           140400,
-          82100
+          82700
         ]
       },
       "dividends": {
@@ -34664,7 +34880,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 14.050000190734863,
-      "last_update": "2026-09-04T22:28:12.912017",
+      "last_update": "2026-09-07T22:56:44.228059",
       "history": {
         "dates": [
           "2026-08-31",
@@ -34685,7 +34901,7 @@
           164600,
           379800,
           228700,
-          158700
+          161300
         ]
       },
       "dividends": {
@@ -34789,7 +35005,7 @@
       "sector": "Utilities",
       "currency": "BRL",
       "last_price": 41.529998779296875,
-      "last_update": "2026-09-04T22:28:13.394493",
+      "last_update": "2026-09-07T22:56:44.663010",
       "history": {
         "dates": [
           "2026-08-31",
@@ -34810,7 +35026,7 @@
           1917100,
           4634100,
           2360900,
-          1271600
+          1276700
         ]
       },
       "dividends": {
@@ -34952,7 +35168,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 5.670000076293945,
-      "last_update": "2026-09-04T22:28:13.937197",
+      "last_update": "2026-09-07T22:56:45.181339",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35029,7 +35245,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 5.630000114440918,
-      "last_update": "2026-09-04T22:28:14.377351",
+      "last_update": "2026-09-07T22:56:45.683561",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35050,7 +35266,7 @@
           537000,
           303500,
           449000,
-          396000
+          396500
         ]
       },
       "dividends": {
@@ -35102,7 +35318,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 0.6299999952316284,
-      "last_update": "2026-09-04T22:28:14.836320",
+      "last_update": "2026-09-07T22:56:46.127567",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35161,7 +35377,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 10.09000015258789,
-      "last_update": "2026-09-04T22:28:15.229205",
+      "last_update": "2026-09-07T22:56:46.573756",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35228,7 +35444,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 17.860000610351562,
-      "last_update": "2026-09-04T22:28:15.936231",
+      "last_update": "2026-09-07T22:56:46.986770",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35269,7 +35485,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 8.109999656677246,
-      "last_update": "2026-09-04T22:28:16.395684",
+      "last_update": "2026-09-07T22:56:47.403740",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35310,7 +35526,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 34.630001068115234,
-      "last_update": "2026-09-04T22:28:16.857722",
+      "last_update": "2026-09-07T22:56:47.825932",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35331,7 +35547,7 @@
           2523300,
           3015600,
           2024300,
-          5243700
+          5243800
         ]
       },
       "dividends": {
@@ -35379,7 +35595,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 13.0600004196167,
-      "last_update": "2026-09-04T22:28:17.639225",
+      "last_update": "2026-09-07T22:56:48.456724",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35470,7 +35686,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 33.65999984741211,
-      "last_update": "2026-09-04T22:28:18.126057",
+      "last_update": "2026-09-07T22:56:48.896201",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35599,7 +35815,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 18.989999771118164,
-      "last_update": "2026-09-04T22:28:18.651669",
+      "last_update": "2026-09-07T22:56:49.374284",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35620,7 +35836,7 @@
           6058600,
           11236700,
           5950600,
-          4102400
+          4106000
         ]
       },
       "dividends": {
@@ -35732,7 +35948,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 10.5,
-      "last_update": "2026-09-04T22:28:19.665292",
+      "last_update": "2026-09-07T22:56:50.341801",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35773,7 +35989,7 @@
       "sector": "Technology",
       "currency": "BRL",
       "last_price": 34.5,
-      "last_update": "2026-09-04T22:28:20.141325",
+      "last_update": "2026-09-07T22:56:50.789947",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35912,7 +36128,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 9.770000457763672,
-      "last_update": "2026-09-04T22:28:20.667395",
+      "last_update": "2026-09-07T22:56:51.320716",
       "history": {
         "dates": [
           "2026-08-31",
@@ -35990,26 +36206,29 @@
       "name": "TC S.A.",
       "sector": "Technology",
       "currency": "BRL",
-      "last_price": 1.1399999856948853,
-      "last_update": "2026-09-04T22:28:20.975046",
+      "last_price": 1.1200000047683716,
+      "last_update": "2026-09-07T22:56:51.667642",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           1.06,
           1.07,
           1.07,
-          1.14
+          1.14,
+          1.12
         ],
         "volumes": [
           4700,
           2300,
           3000,
-          14200
+          14200,
+          2000
         ]
       },
       "dividends": {
@@ -36017,10 +36236,10 @@
         "values": []
       },
       "stats": {
-        "avg_price": 1.0850000083446503,
+        "avg_price": 1.0920000076293945,
         "min_price": 1.059999942779541,
         "max_price": 1.1399999856948853,
-        "volatility": 3.536317061096002
+        "volatility": 3.584921950341511
       }
     },
     "TRIS3.SA": {
@@ -36029,7 +36248,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 4.96999979019165,
-      "last_update": "2026-09-04T22:28:21.447995",
+      "last_update": "2026-09-07T22:56:52.209568",
       "history": {
         "dates": [
           "2026-08-31",
@@ -36050,7 +36269,7 @@
           315700,
           370900,
           241800,
-          403900
+          404900
         ]
       },
       "dividends": {
@@ -36108,7 +36327,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 11.279999732971191,
-      "last_update": "2026-09-04T22:28:21.819767",
+      "last_update": "2026-09-07T22:56:52.636993",
       "history": {
         "dates": [
           "2026-08-31",
@@ -36129,7 +36348,7 @@
           1056000,
           1896900,
           2903400,
-          1921700
+          1925200
         ]
       },
       "dividends": {
@@ -36161,7 +36380,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 15.720000267028809,
-      "last_update": "2026-09-04T22:28:22.321279",
+      "last_update": "2026-09-07T22:56:53.125198",
       "history": {
         "dates": [
           "2026-08-31",
@@ -36268,21 +36487,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 9.0,
-      "last_update": "2026-09-04T22:28:22.732542",
+      "last_update": "2026-09-07T22:56:53.496748",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          9.0,
           9.0,
           9.0,
           9.0,
           9.0
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -36306,21 +36528,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 1.649999976158142,
-      "last_update": "2026-09-04T22:28:23.130866",
+      "last_update": "2026-09-07T22:56:53.909434",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          1.65,
           1.65,
           1.65,
           1.65,
           1.65
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -36344,7 +36569,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 1.1399999856948853,
-      "last_update": "2026-09-04T22:28:23.605255",
+      "last_update": "2026-09-07T22:56:54.323392",
       "history": {
         "dates": [
           "2026-08-31",
@@ -36415,7 +36640,7 @@
       "sector": "Energy",
       "currency": "BRL",
       "last_price": 37.41999816894531,
-      "last_update": "2026-09-04T22:28:24.048453",
+      "last_update": "2026-09-07T22:56:54.832885",
       "history": {
         "dates": [
           "2026-08-31",
@@ -36436,7 +36661,7 @@
           16188200,
           15135800,
           13235600,
-          10351900
+          10363100
         ]
       },
       "dividends": {
@@ -36532,7 +36757,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 56.209999084472656,
-      "last_update": "2026-09-04T22:28:24.533112",
+      "last_update": "2026-09-07T22:56:55.335528",
       "history": {
         "dates": [
           "2026-08-31",
@@ -36645,25 +36870,28 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 57.70000076293945,
-      "last_update": "2026-09-04T22:28:25.038833",
+      "last_update": "2026-09-07T22:56:55.783647",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
           58.0,
           58.0,
           57.01,
+          57.7,
           57.7
         ],
         "volumes": [
           100,
           0,
           1500,
-          100
+          100,
+          0
         ]
       },
       "dividends": {
@@ -36729,10 +36957,10 @@
         ]
       },
       "stats": {
-        "avg_price": 57.677499771118164,
+        "avg_price": 57.68199996948242,
         "min_price": 57.0099983215332,
         "max_price": 58.0,
-        "volatility": 1.4656361226551626
+        "volatility": 1.199545454338727
       }
     },
     "UNIP6.SA": {
@@ -36741,7 +36969,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 56.970001220703125,
-      "last_update": "2026-09-04T22:28:25.476455",
+      "last_update": "2026-09-07T22:56:56.225541",
       "history": {
         "dates": [
           "2026-08-31",
@@ -36762,7 +36990,7 @@
           647600,
           761900,
           606900,
-          182900
+          183200
         ]
       },
       "dividends": {
@@ -36842,7 +37070,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 7.119999885559082,
-      "last_update": "2026-09-04T22:28:25.970584",
+      "last_update": "2026-09-07T22:56:56.800011",
       "history": {
         "dates": [
           "2026-08-31",
@@ -36931,7 +37159,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 7.630000114440918,
-      "last_update": "2026-09-04T22:28:26.527436",
+      "last_update": "2026-09-07T22:56:57.253518",
       "history": {
         "dates": [
           "2026-08-31",
@@ -36952,7 +37180,7 @@
           8357300,
           13431400,
           11755900,
-          12608000
+          12633900
         ]
       },
       "dividends": {
@@ -37022,15 +37250,17 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 6.46999979019165,
-      "last_update": "2026-09-04T22:28:26.945126",
+      "last_update": "2026-09-07T22:56:57.653510",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          6.47,
           6.47,
           6.47,
           6.47,
@@ -37039,6 +37269,7 @@
         "volumes": [
           0,
           100,
+          0,
           0,
           0
         ]
@@ -37096,7 +37327,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 78.62000274658203,
-      "last_update": "2026-09-04T22:28:27.419891",
+      "last_update": "2026-09-07T22:56:58.203609",
       "history": {
         "dates": [
           "2026-08-31",
@@ -37117,7 +37348,7 @@
           15755000,
           32989800,
           32356700,
-          13825200
+          13868300
         ]
       },
       "dividends": {
@@ -37165,7 +37396,7 @@
         "values": [
           0.4366,
           0.6533,
-          2.6879,
+          2.6889,
           0.492,
           0.4217,
           0.32,
@@ -37217,7 +37448,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 3.5,
-      "last_update": "2026-09-04T22:28:27.823002",
+      "last_update": "2026-09-07T22:56:58.582630",
       "history": {
         "dates": [
           "2026-08-31",
@@ -37238,7 +37469,7 @@
           20545100,
           41121900,
           14745800,
-          13625500
+          13632800
         ]
       },
       "dividends": {
@@ -37272,7 +37503,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 36.9900016784668,
-      "last_update": "2026-09-04T22:28:28.240460",
+      "last_update": "2026-09-07T22:56:58.947484",
       "history": {
         "dates": [
           "2026-08-31",
@@ -37293,7 +37524,7 @@
           10935200,
           15909700,
           20457800,
-          7428700
+          7526400
         ]
       },
       "dividends": {
@@ -37361,7 +37592,7 @@
       "sector": "Basic Materials",
       "currency": "BRL",
       "last_price": 3.2300000190734863,
-      "last_update": "2026-09-04T22:28:28.595068",
+      "last_update": "2026-09-07T22:56:59.304073",
       "history": {
         "dates": [
           "2026-08-31",
@@ -37428,7 +37659,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 23.1299991607666,
-      "last_update": "2026-09-04T22:28:28.955937",
+      "last_update": "2026-09-07T22:56:59.783354",
       "history": {
         "dates": [
           "2026-08-31",
@@ -37489,7 +37720,7 @@
       "sector": "Real Estate",
       "currency": "BRL",
       "last_price": 1.5099999904632568,
-      "last_update": "2026-09-04T22:28:29.319824",
+      "last_update": "2026-09-07T22:57:00.164697",
       "history": {
         "dates": [
           "2026-08-31",
@@ -37510,7 +37741,7 @@
           2900,
           20200,
           2300,
-          500
+          5100
         ]
       },
       "dividends": {
@@ -37530,7 +37761,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 30.059999465942383,
-      "last_update": "2026-09-04T22:28:29.833505",
+      "last_update": "2026-09-07T22:57:00.713022",
       "history": {
         "dates": [
           "2026-08-31",
@@ -37551,7 +37782,7 @@
           4805800,
           8481900,
           7591600,
-          3541700
+          3542200
         ]
       },
       "dividends": {
@@ -37805,7 +38036,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 17.8799991607666,
-      "last_update": "2026-09-04T22:28:30.289893",
+      "last_update": "2026-09-07T22:57:01.168042",
       "history": {
         "dates": [
           "2026-08-31",
@@ -37960,7 +38191,7 @@
       "sector": "N/A",
       "currency": "BRL",
       "last_price": 2.4000000953674316,
-      "last_update": "2026-09-04T22:28:30.972852",
+      "last_update": "2026-09-07T22:57:01.785766",
       "history": {
         "dates": [
           "2026-08-31",
@@ -37981,7 +38212,7 @@
           55300,
           19800,
           12800,
-          365700
+          372400
         ]
       },
       "dividends": {
@@ -38031,7 +38262,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 14.770000457763672,
-      "last_update": "2026-09-04T22:28:31.328879",
+      "last_update": "2026-09-07T22:57:02.134143",
       "history": {
         "dates": [
           "2026-08-31",
@@ -38078,7 +38309,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 13.010000228881836,
-      "last_update": "2026-09-04T22:28:31.846737",
+      "last_update": "2026-09-07T22:57:02.611356",
       "history": {
         "dates": [
           "2026-08-31",
@@ -38099,7 +38330,7 @@
           3179500,
           9036200,
           6509300,
-          2478400
+          2484800
         ]
       },
       "dividends": {
@@ -38191,7 +38422,7 @@
       "sector": "Healthcare",
       "currency": "BRL",
       "last_price": 0.7599999904632568,
-      "last_update": "2026-09-04T22:28:32.257619",
+      "last_update": "2026-09-07T22:57:03.025030",
       "history": {
         "dates": [
           "2026-08-31",
@@ -38212,7 +38443,7 @@
           778000,
           1339200,
           1612300,
-          847100
+          852900
         ]
       },
       "dividends": {
@@ -38242,7 +38473,7 @@
       "sector": "Communication Services",
       "currency": "BRL",
       "last_price": 2.5899999141693115,
-      "last_update": "2026-09-04T22:28:32.637018",
+      "last_update": "2026-09-07T22:57:03.399290",
       "history": {
         "dates": [
           "2026-08-31",
@@ -38291,7 +38522,7 @@
       "sector": "Industrials",
       "currency": "BRL",
       "last_price": 51.7400016784668,
-      "last_update": "2026-09-04T22:28:33.117414",
+      "last_update": "2026-09-07T22:57:03.917380",
       "history": {
         "dates": [
           "2026-08-31",
@@ -38312,7 +38543,7 @@
           7960100,
           9517600,
           10693400,
-          6752800
+          6753800
         ]
       },
       "dividends": {
@@ -38550,7 +38781,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 2.9000000953674316,
-      "last_update": "2026-09-04T22:28:33.467579",
+      "last_update": "2026-09-07T22:57:04.306326",
       "history": {
         "dates": [
           "2026-08-31",
@@ -38595,7 +38826,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 3.6700000762939453,
-      "last_update": "2026-09-04T22:28:33.953957",
+      "last_update": "2026-09-07T22:57:04.803047",
       "history": {
         "dates": [
           "2026-08-31",
@@ -38704,7 +38935,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 3.7300000190734863,
-      "last_update": "2026-09-04T22:28:34.446856",
+      "last_update": "2026-09-07T22:57:05.299865",
       "history": {
         "dates": [
           "2026-08-31",
@@ -38801,7 +39032,7 @@
       "sector": "Financial Services",
       "currency": "BRL",
       "last_price": 8.100000381469727,
-      "last_update": "2026-09-04T22:28:34.857657",
+      "last_update": "2026-09-07T22:57:05.701080",
       "history": {
         "dates": [
           "2026-08-31",
@@ -38822,7 +39053,7 @@
           534100,
           287100,
           613900,
-          257500
+          257900
         ]
       },
       "dividends": {
@@ -38882,21 +39113,24 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 19.690000534057617,
-      "last_update": "2026-09-04T22:28:35.203377",
+      "last_update": "2026-09-07T22:57:06.055287",
       "history": {
         "dates": [
           "2026-08-31",
           "2026-09-01",
           "2026-09-02",
-          "2026-09-03"
+          "2026-09-03",
+          "2026-09-04"
         ],
         "closes": [
+          19.69,
           19.69,
           19.69,
           19.69,
           19.69
         ],
         "volumes": [
+          0,
           0,
           0,
           0,
@@ -38976,7 +39210,7 @@
       "sector": "Consumer Cyclical",
       "currency": "BRL",
       "last_price": 15.699999809265137,
-      "last_update": "2026-09-04T22:28:35.696142",
+      "last_update": "2026-09-07T22:57:06.512601",
       "history": {
         "dates": [
           "2026-08-31",
@@ -38997,7 +39231,7 @@
           7500,
           14900,
           11700,
-          800
+          900
         ]
       },
       "dividends": {
@@ -39093,7 +39327,7 @@
       "sector": "Consumer Defensive",
       "currency": "BRL",
       "last_price": 9.640000343322754,
-      "last_update": "2026-09-04T22:28:36.191417",
+      "last_update": "2026-09-07T22:57:06.947166",
       "history": {
         "dates": [
           "2026-08-31",
@@ -39114,7 +39348,7 @@
           4303900,
           5101900,
           7365400,
-          5332400
+          5332500
         ]
       },
       "dividends": {
