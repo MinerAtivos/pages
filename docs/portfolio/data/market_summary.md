@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-09-04
+## Resumo de Mercado - 2026-09-08
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.32 | R$ 0.23 | **+39.13%** 🚀 | +264.28% ⬆️ |
-| OSXB3.SA | OSX Brasil S.A. | R$ 1.15 | R$ 1.04 | **+10.58%** 🚀 | -92.89% ⬇️ |
-| HOOT4.SA | Hotéis Othon S.A. | R$ 8.89 | R$ 8.10 | **+9.75%** 🚀 | -84.05% ⬇️ |
-| OBTC3.SA | Oranjebtc S.A. - Educação e Investimento | R$ 7.00 | R$ 6.41 | **+9.20%** 🚀 | +135.77% ⬆️ |
-| RCSL3.SA | Recrusul S/A | R$ 0.40 | R$ 0.37 | **+8.11%** 🚀 | +143.16% ⬆️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.49 | R$ 0.32 | **+53.12%** 🚀 | +265.12% ⬆️ |
+| BMIN4.SA | Banco Mercantil de Investimentos S.A. | R$ 21.00 | R$ 18.86 | **+11.35%** 🚀 | -41.67% ⬇️ |
+| ATED3.SA | Atom Educação E Editora S.A. | R$ 1.27 | R$ 1.17 | **+8.55%** 🚀 | +228.81% ⬆️ |
+| SIMH3.SA | SIMPAR S.A. | R$ 8.33 | R$ 7.72 | **+7.90%** 🚀 | +114.85% ⬆️ |
+| CTKA4.SA | Karsten S.A. | R$ 33.40 | R$ 31.01 | **+7.71%** 🚀 | +17.00% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| MAPT3.SA | Cemepe Investimentos S.A. | R$ 2.06 | R$ 2.50 | **-17.60%** 📉 | 0.00% — |
-| VSTE3.SA | Veste S.A. Estilo | R$ 2.40 | R$ 2.74 | **-12.41%** 📉 | +784.46% ⬆️ |
-| RAPT4.SA | Randoncorp S.A. | R$ 4.80 | R$ 5.16 | **-6.98%** 📉 | +197.54% ⬆️ |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 8.39 | R$ 9.00 | **-6.78%** 📉 | -38.28% ⬇️ |
-| NORD3.SA | Nordon Indústrias Metalúrgicas S/A | R$ 1.39 | R$ 1.49 | **-6.71%** 📉 | +370.89% ⬆️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.20 | R$ 1.37 | **-12.41%** 📉 | -57.85% ⬇️ |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.25 | R$ 1.39 | **-10.07%** 📉 | -92.71% ⬇️ |
+| PTBL3.SA | PBG S.A. | R$ 1.53 | R$ 1.67 | **-8.38%** 📉 | +139.30% ⬆️ |
+| PDTC3.SA | Padtec Holding S.A. | R$ 1.61 | R$ 1.74 | **-7.47%** 📉 | +18.99% ⬆️ |
+| HOOT4.SA | Hotéis Othon S.A. | R$ 8.30 | R$ 8.89 | **-6.64%** 📉 | -59.29% ⬇️ |
