@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-09-09
+## Resumo de Mercado - 2026-09-10
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.47 | R$ 1.25 | **+17.60%** 🚀 | +86.53% ⬆️ |
-| AMAR3.SA | Marisa Lojas S.A. | R$ 0.90 | R$ 0.78 | **+15.38%** 🚀 | +148.97% ⬆️ |
-| AZTE3.SA | Azevedo & Travassos Energia S.A. | R$ 1.73 | R$ 1.50 | **+15.33%** 🚀 | +100.65% ⬆️ |
-| BDLL3.SA | Bardella S.A. Indústrias Mecânicas | R$ 5.01 | R$ 4.50 | **+11.33%** 🚀 | -84.72% ⬇️ |
-| CSNA3.SA | Companhia Siderúrgica Nacional | R$ 7.11 | R$ 6.62 | **+7.40%** 🚀 | +99.54% ⬆️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.90 | R$ 0.41 | **+119.51%** 🚀 | +360.84% ⬆️ |
+| CEGR3.SA | Companhia Distribuidora de Gás do Rio de Janeiro - CEG | R$ 57.00 | R$ 35.00 | **+62.86%** 🚀 | 0.00% — |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | +561.19% ⬆️ |
+| VSTE3.SA | Veste S.A. Estilo | R$ 2.45 | R$ 2.11 | **+16.11%** 🚀 | +135.96% ⬆️ |
+| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 0.73 | R$ 0.65 | **+12.31%** 🚀 | +43.59% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.41 | R$ 0.49 | **-16.33%** 📉 | +521.81% ⬆️ |
-| OSXB3.SA | OSX Brasil S.A. | R$ 1.05 | R$ 1.23 | **-14.63%** 📉 | -81.94% ⬇️ |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | -50.72% ⬇️ |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 7.32 | R$ 8.35 | **-12.34%** 📉 | -29.96% ⬇️ |
-| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 1.65 | R$ 1.83 | **-9.84%** 📉 | +10.26% ⬆️ |
+| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 2.24 | R$ 2.60 | **-13.85%** 📉 | +528.30% ⬆️ |
+| CTAX3.SA | Contax Participações S.A. | R$ 1.45 | R$ 1.64 | **-11.59%** 📉 | +1509.45% ⬆️ |
+| ONCO3.SA | Oncoclínicas do Brasil Serviços Médicos S.A. | R$ 1.09 | R$ 1.17 | **-6.84%** 📉 | -69.18% ⬇️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 6.84 | R$ 7.32 | **-6.56%** 📉 | -43.17% ⬇️ |
+| HAGA4.SA | HAGA S/A Indústria e Comércio | R$ 1.85 | R$ 1.97 | **-6.09%** 📉 | +293.27% ⬆️ |
