@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-09-15
+## Resumo de Mercado - 2026-09-16
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| MGEL4.SA | Mangels Industrial S.A. | R$ 6.20 | R$ 5.24 | **+18.32%** 🚀 | +29.41% ⬆️ |
-| WDCN3.SA | Livetech da Bahia Indústria e Comércio S.A. | R$ 3.17 | R$ 2.85 | **+11.23%** 🚀 | +73.07% ⬆️ |
-| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.51 | R$ 1.36 | **+11.03%** 🚀 | -92.76% ⬇️ |
-| RVEE3.SA | Revee S.A. | R$ 0.74 | R$ 0.68 | **+8.82%** 🚀 | -93.85% ⬇️ |
-| WEST3.SA | Westwing Comércio Varejista S.A. | R$ 3.14 | R$ 2.91 | **+7.90%** 🚀 | +340.07% ⬆️ |
+| HETA4.SA | Hercules S.A - Fábrica de Talheres | R$ 6.35 | R$ 5.10 | **+24.51%** 🚀 | 0.00% — |
+| ESTR4.SA | Manufatura de Brinquedos Estrela S.A. | R$ 1.79 | R$ 1.51 | **+18.54%** 🚀 | +5.05% ⬆️ |
+| RCSL3.SA | Recrusul S/A | R$ 0.52 | R$ 0.44 | **+18.18%** 🚀 | +1672.87% ⬆️ |
+| LUXM4.SA | Trevisa Investimentos S.A. | R$ 3.44 | R$ 2.98 | **+15.44%** 🚀 | +117.87% ⬆️ |
+| VSTE3.SA | Veste S.A. Estilo | R$ 2.74 | R$ 2.48 | **+10.48%** 🚀 | -34.50% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.39 | R$ 0.62 | **-37.10%** 📉 | +10.79% ⬆️ |
-| CTAX3.SA | Contax Participações S.A. | R$ 1.51 | R$ 1.99 | **-24.12%** 📉 | +29.27% ⬆️ |
-| EQPA7.SA | Equatorial Pará Distribuidora de Energia S.A. | R$ 8.01 | R$ 10.00 | **-19.90%** 📉 | 0.00% — |
-| AGXY3.SA | AgroGalaxy Participações S.A. | R$ 0.65 | R$ 0.80 | **-18.75%** 📉 | +455.94% ⬆️ |
-| NORD3.SA | Nordon Indústrias Metalúrgicas S/A | R$ 1.25 | R$ 1.41 | **-11.35%** 📉 | +415.17% ⬆️ |
+| BRKM5.SA | Braskem S.A. | R$ 4.53 | R$ 5.34 | **-15.17%** 📉 | +30.57% ⬆️ |
+| ENMT4.SA | Energisa Mato Grosso - Distribuidora de Energia S/A | R$ 37.24 | R$ 41.94 | **-11.21%** 📉 | +168.80% ⬆️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 7.21 | R$ 7.93 | **-9.08%** 📉 | -48.66% ⬇️ |
+| OBTC3.SA | Oranjebtc S.A. - Educação e Investimento | R$ 6.29 | R$ 6.87 | **-8.44%** 📉 | +487.15% ⬆️ |
+| WDCN3.SA | Livetech da Bahia Indústria e Comércio S.A. | R$ 2.92 | R$ 3.17 | **-7.89%** 📉 | +29.09% ⬆️ |
