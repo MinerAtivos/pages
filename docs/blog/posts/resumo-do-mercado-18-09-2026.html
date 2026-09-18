@@ -1,0 +1,595 @@
+<html lang="pt-br">
+	<head>
+		<link rel="icon" type="image/png" href="../favicon.png">
+
+    <script src="../../cookie-consent.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinerAtivos | Insights de Mercado</title>
+	                <meta name="MinerAtivos" content="Insights de mercado acionáveis. Fundamentos para análises e estratégias baseadas em dados para os mercados financeiros dinâmicos de hoje. Fornecendo insights de mercado acionáveis​para ajudar os investidores a tomarem decisões baseados em dados. Mercado de Ações, Commodities, Altas e quedas, Forecast, Algoritmos, Radar Intraday, Resumo do mercado, Balanceamento de portfólio">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+			<link rel="stylesheet" href="../style.css">
+			<script src="../script.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        dark: '#1f2937',
+                        light: '#f9fafb'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        .ticker-container {
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .chart-container {
+            height: 300px;
+            position: relative;
+        }
+
+        .trend-up {
+            color: #10b981;
+        }
+
+        .trend-down {
+            color: #ef4444;
+        }
+
+        .trend-neutral {
+            color: #6b7280;
+        }
+
+	.iframe-container {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      border-radius: 12px;
+      clip-path: inset(0 round 12px); /* recorte arredondado */
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 400px; /* maior que o container para mostrar só uma parte */
+      border: none;
+      pointer-events: none;
+      transform: translateY(-100px); /* move o conteúdo para cima */
+    }
+
+    #mobile-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 75%;
+        max-width: 300px;
+        background-color: white;
+        z-index: 100;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-chart-line text-primary text-2xl"></i>
+                <h1 class="text-xl font-bold text-dark">Miner<span class="text-primary">Ativos</span></h1>
+            </div>
+            <div class="hidden md:flex md:items-center md:space-x-8">
+                <nav class="flex flex-col md:flex-row md:space-x-8">
+					<a href="../index.html" class="text-dark hover:text-primary font-medium">Início</a>
+                    <a href="#" class="text-dark hover:text-primary font-medium">Mercados</a>
+                    <!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
+					<a href="#oraculo" class="text-dark hover:text-primary font-medium">Forecast</a>
+					<a href="../metodologia.html" class="text-dark hover:text-primary font-medium">Algoritmos</a>
+					<a href="#oraculo" class="text-dark hover:text-primary font-medium">Radar Intraday</a>
+					<a href="../monitor.html" class="text-dark hover:text-primary font-medium">Monitor</a>
+					<a href="../balanceamento.html" class="text-dark hover:text-primary font-medium">Balanceamento de portfólio</a>
+                    <a href="../metodologia.html" class="text-dark hover:text-primary font-medium">Sobre</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-md font-medium" onclick="focarNoFormulario()">
+                    Seguir
+                </button>
+                <button id="hamburger-button" class="md:hidden text-dark">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <script>
+                    function focarNoFormulario() {
+                      const campoNome = document.getElementById("nome");
+                      campoNome.scrollIntoView({ behavior: "smooth", block: "center" });
+                      campoNome.focus();
+                    }
+                </script>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <div class="flex justify-end">
+                    <button id="close-button" class="text-dark p-2">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <nav class="flex flex-col space-y-2">
+					<a href="../index.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Início</a>
+					<a href="#" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Mercados</a>
+                    <!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
+					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Forecast</a>
+					<a href="../metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Algoritmos</a>
+					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Radar Intraday</a>
+					<a href="../monitor.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Monitor</a>
+					<a href="../balanceamento.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Balanceamento de portfólio</a>
+                    <a href="../metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
+
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<!-- aqui começa o corpo da página-->
+
+<main class="full-screen-main">
+    
+    <article class="max-w-4xl mx-auto px-4 py-12">
+        <header class="mb-8">
+            <div class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
+                <time datetime="2026-09-18">18/09/2026</time>
+                <span>•</span>
+                <div class="flex"><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#resumo</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#mercado</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#b3</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#altas</span><span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-full text-xs font-medium mr-2">#baixas</span></div>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-6">Resumo do mercado 18.09.2026</h1>
+            <img src="../../assets/blog/default-cover.png" alt="Resumo do mercado 18.09.2026" class="w-full h-[400px] object-cover rounded-2xl shadow-lg mb-8">
+        </header>
+        <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+            <div class="market-post-container space-y-6">
+    <h2 class="text-2xl font-bold text-gray-900 border-b pb-2 mb-4">Resumo do mercado 18.09</h2>
+
+    <div class="pre-formatted-block bg-gray-900 text-green-400 p-5 rounded-xl font-mono text-sm shadow-inner relative overflow-x-auto">
+        <button onclick="navigator.clipboard.writeText(this.nextElementSibling.innerText); alert('Copiado com sucesso!');" class="absolute top-3 right-3 bg-gray-800 hover:bg-gray-700 text-gray-200 text-xs px-3 py-1 rounded border border-gray-600 font-sans transition-all">
+            <i class="fas fa-copy mr-1"></i> Copiar
+        </button>
+        <pre class="whitespace-pre">📈Altas
+
+#YDUQ3 10.60 4.95%
+#SUZB3 47.99 2.76%
+#BBAS3 23.20 2.16%
+#TAEE11 41.91 2.10%
+#IRBR3 62.00 2.01%
+
+📉Baixas
+
+#CMIN3 5.46 -10.20%
+#CSNA3 5.85 -9.44%
+#MRVE3 5.23 -8.41%
+#PCAR3 3.05 -7.29%
+#HAPV3 6.21 -4.31%</pre>
+    </div>
+
+    <div class="news-summary-section mt-8 pt-4 border-t border-gray-200">
+        <h3 class="text-xl font-bold mb-3 text-gray-800">Panorama Geral do Mercado</h3>
+        <p class="text-gray-700 leading-relaxed bg-blue-50/50 p-4 rounded-lg border border-blue-100">O mercado brasileiro segue atento ao cenário fiscal e movimentações de commodities.</p>
+        
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800">Destaques por Ativo</h3>
+            <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li><strong>#YDUQ3:</strong> A Yduqs (YDUQ3) sinaliza um cenário de otimismo cauteloso, com o BBI elevando seu preço-alvo para R$ 17, refletindo uma perspectiva de potencial de valorização. Essa visão positiva é sustentada pelos segmentos de medicina e ensino híbrido, identificados como pilares estratégicos para a recuperação e o crescimento futuro da companhia. Embora a empresa tenha registrado um prejuízo de R$ 74,3 milhões no quarto trimestre, a notável redução de 27,6% nas perdas indica uma trajetória de melhora na eficiência operacional. Assim, a ação demonstra um movimento em direção à sustentabilidade, embora a persistência do prejuízo ainda exija acompanhamento para a consolidação da lucratividade.</li><li><strong>#SUZB3:</strong> SUZB3 está sob o intenso escrutínio do mercado, evidenciado por sua inclusão no "Giro Semanal de Gráficos" do Investing.com, o que sugere que a ação está em um ponto técnico relevante ou exibindo padrões que merecem a atenção de analistas e investidores para potenciais movimentos. Adicionalmente, a Terra Investimentos recomendou SUZB3 como uma das ações para investir na semana, apontando um viés otimista de curto prazo, possivelmente embasado em catalisadores iminentes ou um momento técnico favorável. O sentimento de mercado extraído dessas notícias é de otimismo cauteloso e atenção elevada, com a recomendação da corretora indicando expectativa de valorização no curtíssimo prazo. Essa convergência de atenção técnica e recomendação de compra sinaliza que SUZB3 é um ativo de alta visibilidade e potencial para movimentos de preço nos próximos dias.</li><li><strong>#BBAS3:</strong> A notícia da Nord Investimentos, que projeta uma queda de 40% no lucro do Banco do Brasil (BBAS3) para o 4T25, sinaliza um potencial fator de preocupação para o mercado. É, contudo, crucial notar a temporalidade atípica da informação, uma vez que resultados financeiros para um trimestre tão futuro (4T25) são incomuns para este tipo de manchete, o que demanda cautela na interpretação como um dado consumado e aponta para uma possível projeção ou erro na reportagem. Apesar dessa anomalia temporal, a mera expectativa ou projeção de um "despencar" de lucros dessa magnitude, seja por deterioração de fundamentos ou ambiente adverso, impacta o sentimento do mercado de forma inequivocamente pessimista, sugerindo uma reavaliação baixista das expectativas de rentabilidade futura da companhia.</li><li><strong>#TAEE11:</strong> A nomeação de Andrea Marques de Almeida, ex-CFO da Petrobras e reconhecida por sua influência global, para a presidência do conselho da Taesa (TAEE11) sinaliza um robusto avanço na governança e na expertise estratégica da companhia. Este reforço gerencial se alinha à performance financeira consistente, marcada pelo avanço da receita e pela manutenção de fortes pagamentos de dividendos, características altamente valorizadas pelos investidores. Além disso, a "virada das chuvas" no Brasil, embora com impacto indireto para uma transmissora, cria um ambiente mais estável e favorável para o setor elétrico como um todo, reduzindo riscos sistêmicos. O sentimento de mercado para TAEE11 é, portanto, claramente otimista, impulsionado pela solidez da gestão, pelos resultados financeiros e pela melhoria do cenário setorial.</li><li><strong>#IRBR3:</strong> A aprovação do corte de impostos para resseguradoras representa um catalisador positivo direto para a IRBR3, significando uma redução nos custos operacionais e uma perspectiva de melhora na rentabilidade. Essa medida, que levou à valorização de 4% das ações, injeta otimismo no mercado ao sinalizar um potencial aumento no lucro líquido e no fluxo de caixa da empresa. Concomitantemente, a indicação de uma secretária da Fazenda para o conselho reforça a supervisão governamental e a governança corporativa, transmitindo maior segurança e estabilidade à gestão após períodos turbulentos. O sentimento geral do mercado é claramente otimista, alavancado pela combinação de benefícios fiscais tangíveis e a percepção de uma gestão mais robusta e alinhada com as melhores práticas.</li><li><strong>#CMIN3:</strong> A CSN Mineração (CMIN3) registrou uma queda acentuada, azedando o humor dos investidores e sendo categorizada em zona de risco. Este desempenho negativo é impulsionado principalmente pelo aumento dos custos de frete e petróleo, que impactam diretamente suas margens operacionais e de exportação, um fator crítico para exportadores de commodities. Diferentemente da VALE3, que se mostra mais resiliente, a CMIN3 aparenta maior sensibilidade a essas pressões de custo, sinalizando vulnerabilidade específica. O sentimento do mercado é claramente pessimista, refletindo a preocupação com a rentabilidade da empresa sob o cenário atual de custos elevados.</li><li><strong>#CSNA3:</strong> A CSN (CSNA3) enfrenta um cenário financeiro complexo e desafiador, com as dívidas bilionárias da companhia sendo o principal ponto de preocupação. A indicação de que "vender só não basta" revela que estratégias de desinvestimento de ativos, mesmo que em curso, são insuficientes para resolver a magnitude do endividamento, sugerindo problemas estruturais mais profundos ou um fluxo de caixa operacional inadequado para arcar com os custos financeiros. Isso acentua os "dilemas" da gestão em encontrar soluções eficazes e sustentáveis para a desalavancagem. O sentimento de mercado é, portanto, predominantemente pessimista, dada a percepção de risco elevada e a falta de uma rota clara e imediata para a normalização da saúde financeira da empresa.</li><li><strong>#MRVE3:</strong> A manchete fornecida não apresenta informações diretas sobre MRVE3.SA, impedindo uma análise aprofundada de fatos específicos que impactem o papel. No entanto, o recuo do Ibovespa sinaliza um sentimento de mercado geral mais cauteloso ou pessimista, o que, por extensão, pode gerar pressão vendedora em ativos como MRVE3, mesmo sem um driver específico da empresa. O avanço de TASA4 é um movimento isolado em um cenário de índice em queda, não alterando o contexto geral de prudência. Assim, o mercado parece apresentar uma disposição de baixa que pode influenciar a performance de MRVE3 por correlação com o índice.</li><li><strong>#PCAR3:</strong> A renúncia de uma conselheira, somada à eleição de um novo membro para o conselho de administração do GPA (PCAR3.SA), indica um período de reestruturação na governança corporativa da empresa. Tais mudanças, especialmente em posições de conselho, podem sinalizar ajustes estratégicos ou uma busca por novas perspectivas na gestão, o que, em si, gera uma neutralidade no sentimento do mercado, aguardando os desdobramentos e a direção que estas alterações trarão. O impacto direto nos papéis dependerá da clareza sobre os motivos da saída e das qualificações e intenções do novo conselheiro em relação ao futuro da companhia.</li><li><strong>#HAPV3:</strong> HAPV3 enfrentou uma forte desvalorização recente, um "tombo" que, paradoxalmente, impulsionou o BB Investimentos a reavaliar o ativo. Essa análise resultou em uma projeção otimista de potencial valorização de até 60%, sinalizando que a corretora vê a atual cotação como um ponto de entrada estratégico e um descolamento do preço de mercado em relação ao valor intrínseco. O sentimento do BB Investimentos é claramente otimista, sugerindo que o mercado pode ter precificado excessivamente os riscos ou subavaliado os fundamentos da Hapvida. A questão levantada sobre "hora de comprar?" reflete uma tese de investimento contrária, buscando capitalizar sobre uma possível recuperação significativa do papel após a correção.</li>
+            </ul>
+            
+    </div>
+</div>
+        </div>
+        <footer class="mt-12 pt-8 border-t border-gray-200">
+            <a href="../index.html" class="text-primary hover:text-secondary font-medium flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Voltar ao Blog
+            </a>
+        </footer>
+    </article>
+    
+</main>
+
+<!-- até aqui vai o corpo da pagina-->
+
+	<!-- trecho adaptado para captação de leads -->
+
+<section class="py-16 bg-primary text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Mantenha-se à frente no mercado</h2>
+    <p class="text-xl opacity-90 max-w-2xl mx-auto mb-8">
+      Receba nossos insights e análises diárias de mercado diretamente em sua caixa de entrada.
+    </p>
+    <div id="message" class="message"></div>
+    <form id="leadForm" class="flex flex-col gap-3 items-center max-w-md mx-auto">
+      <input type="text" name="nome" id="nome" placeholder="Preencha o seu nome completo"
+        class="px-4 py-3 rounded-md text-dark w-full" required>
+      <input type="email" name="email" id="email" placeholder="Seu endereço de email"
+        class="px-4 py-3 rounded-md text-dark w-full hidden" required>
+      <button type="submit"
+        class="bg-secondary hover:bg-blue-900 px-6 py-3 rounded-md font-semibold mt-2 hidden"
+        id="submitBtn">
+        Inscrever <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </form>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('leadForm');
+  const nomeInput = document.getElementById('nome');
+  const emailInput = document.getElementById('email');
+  const submitBtn = document.getElementById('submitBtn');
+  const messageDiv = document.getElementById('message');
+
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec';
+
+  function showMessage(text, type) {
+    messageDiv.textContent = text;
+    messageDiv.className = `message ${type} show`;
+    setTimeout(() => {
+      messageDiv.classList.remove('show');
+    }, 5000);
+  }
+
+  function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  async function submitToGoogleScript(formData) {
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData)
+      });
+      return { success: true };
+    } catch (error) {
+      console.error('Erro ao enviar dados:', error);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.classList.add('loading');
+
+    try {
+      const formData = new FormData(form);
+      const nome = formData.get('nome');
+      const email = formData.get('email');
+
+      if (!nome || nome.trim().length < 2) {
+        showMessage('Por favor, insira seu nome completo.', 'error');
+        return;
+      }
+
+      if (!email || !isValidEmail(email)) {
+        showMessage('Por favor, insira um e-mail válido.', 'error');
+        return;
+      }
+
+      const result = await submitToGoogleScript(formData);
+
+      if (result.success) {
+        showMessage('Inscrição realizada com sucesso!', 'success');
+        form.reset();
+        nomeInput.classList.add('hidden');
+        emailInput.classList.add('hidden');
+        submitBtn.classList.add('hidden');
+      } else {
+        showMessage('Erro ao enviar. Tente novamente.', 'error');
+      }
+    } catch (error) {
+      console.error('Erro no envio:', error);
+      showMessage('Erro inesperado. Tente novamente mais tarde.', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('loading');
+    }
+  }
+
+  nomeInput.addEventListener('input', () => {
+    if (nomeInput.value.trim().length >= 2) {
+      emailInput.classList.remove('hidden');
+      submitBtn.classList.remove('hidden');
+    } else {
+      emailInput.classList.add('hidden');
+      submitBtn.classList.add('hidden');
+    }
+  });
+
+  form.addEventListener('submit', handleFormSubmit);
+});
+</script>
+
+
+
+<!-- trecho adaptado para captação de leads -->
+
+
+
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('leadForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const messageDiv = document.getElementById('message');
+
+        // IMPORTANTE: Substitua esta URL pela URL do seu Google Apps Script
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec';
+
+        // Função para mostrar mensagens ao usuário
+        function showMessage(text, type) {
+            messageDiv.textContent = text;
+            messageDiv.className = `message ${type} show`;
+
+            // Remove a mensagem após 5 segundos
+            setTimeout(() => {
+                messageDiv.classList.remove('show');
+            }, 5000);
+        }
+
+        // Função para validar email
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // Função para formatar telefone (opcional)
+        function formatPhone(phone) {
+            // Remove todos os caracteres não numéricos
+            const cleaned = phone.replace(/\D/g, '');
+
+            // Aplica máscara brasileira se tiver 10 ou 11 dígitos
+            if (cleaned.length === 10) {
+                return cleaned.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+            } else if (cleaned.length === 11) {
+                return cleaned.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+            }
+
+            return phone; // Retorna original se não conseguir formatar
+        }
+
+        // Função para validar o formulário
+        function validateForm(formData) {
+            const errors = [];
+
+            if (!formData.get('nome') || formData.get('nome').trim().length < 2) {
+                errors.push('Nome deve ter pelo menos 2 caracteres');
+            }
+
+            if (!formData.get('email') || !isValidEmail(formData.get('email'))) {
+                errors.push('E-mail deve ter um formato válido');
+            }
+
+            return errors;
+        }
+
+        // Função para enviar dados para o Google Apps Script
+        async function submitToGoogleScript(formData) {
+            try {
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors', // Necessário para Google Apps Script
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams(formData)
+                });
+
+                // Como usamos 'no-cors', não podemos ler a resposta
+                // Assumimos sucesso se não houve erro na requisição
+                return { success: true };
+
+            } catch (error) {
+                console.error('Erro ao enviar dados:', error);
+                return { success: false, error: error.message };
+            }
+        }
+
+        // Função principal para processar o envio do formulário
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Desabilita o botão e mostra loading
+            submitBtn.disabled = true;
+            submitBtn.classList.add('loading');
+
+            try {
+                // Coleta os dados do formulário
+                const formData = new FormData(form);
+
+                // Formata o telefone se fornecido
+                if (formData.get('telefone')) {
+                    formData.set('telefone', formatPhone(formData.get('telefone')));
+                }
+
+                // Valida os dados
+                const validationErrors = validateForm(formData);
+                if (validationErrors.length > 0) {
+                    showMessage(validationErrors.join('. '), 'error');
+                    return;
+                }
+
+                // Envia os dados
+                const result = await submitToGoogleScript(formData);
+
+                if (result.success) {
+                    showMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
+                    form.reset(); // Limpa o formulário
+                } else {
+                    showMessage('Erro ao enviar mensagem. Tente novamente.', 'error');
+                }
+
+            } catch (error) {
+                console.error('Erro no envio:', error);
+                showMessage('Erro inesperado. Tente novamente mais tarde.', 'error');
+            } finally {
+                // Reabilita o botão e remove loading
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('loading');
+            }
+        }
+
+        // Adiciona máscara de telefone em tempo real
+        const phoneInput = document.getElementById('telefone');
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+
+            if (value.length <= 11) {
+                if (value.length <= 10) {
+                    value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+                } else {
+                    value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+                }
+                e.target.value = value;
+            }
+        });
+
+        // Adiciona validação em tempo real para email
+        const emailInput = document.getElementById('email');
+        emailInput.addEventListener('blur', function(e) {
+            if (e.target.value && !isValidEmail(e.target.value)) {
+                e.target.style.borderColor = '#e74c3c';
+            } else {
+                e.target.style.borderColor = '#e1e8ed';
+            }
+        });
+
+        // Adiciona o event listener para o envio do formulário
+        form.addEventListener('submit', handleFormSubmit);
+
+        // Verifica se a URL do Google Script foi configurada
+        if (GOOGLE_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec') {
+            console.warn('⚠️ ATENÇÃO: Configure a URL do Google Apps Script na variável GOOGLE_SCRIPT_URL');
+            showMessage('Configuração pendente: URL do Google Apps Script não definida.', 'error');
+        }
+    });
+    </script>
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-chart-line text-primary text-2xl"></i>
+                        <h3 class="text-xl font-bold">Miner<span class="text-primary">Ativos</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Fornecendo insights de mercado acionáveis ​para ajudar os investidores a tomarem decisões baseados em dados.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Mercados</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Mercado de Ações</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Commodities</a></li>
+                        <li><a href="#oraculo" class="text-gray-400 hover:text-white">Altas e quedas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Recursos</h4>
+                    <ul class="space-y-2">
+					<li><a href="../index.html" class="text-gray-400 hover:text-white">Início</a></li>
+					<li><a href="#" class="text-gray-400 hover:text-white">Mercados</a></li>
+                    <li><!--<a href="#" class="text-dark hover:text-primary font-medium">Insights</a>-->
+					<li><a href="#oraculo" class="text-gray-400 hover:text-white">Forecast</a></li>
+					<li><a href="../metodologia.html" class="text-gray-400 hover:text-white">Algoritmos</a></li>
+					<li><a href="#oraculo" class="text-gray-400 hover:text-white">Radar Intraday</a></li>
+					<li><a href="../monitor.html" class="text-gray-400 hover:text-white">Monitor</a></li>
+					<li><a href="../balanceamento.html" class="text-gray-400 hover:text-white">Balanceamento de portfólio</a></li>
+                    <li><a href="../metodologia.html" class="text-gray-400 hover:text-white">Sobre</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quem somos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../metodologia.html" class="text-gray-400 hover:text-white">Sobre</a></li>
+						<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 MinerAtivos.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const closeButton = document.getElementById('close-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        closeButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+</script>
+
+</body></html>
