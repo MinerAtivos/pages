@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-09-25
+## Resumo de Mercado - 2026-09-28
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZZA3.SA | Azzas 2154 S.A. | R$ 16.38 | R$ 14.50 | **+12.97%** 🚀 | +236.03% ⬆️ |
-| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 1.01 | R$ 0.91 | **+10.99%** 🚀 | +37.65% ⬆️ |
-| HOOT4.SA | Hotéis Othon S.A. | R$ 7.66 | R$ 7.03 | **+8.96%** 🚀 | +210.36% ⬆️ |
-| ROMI3.SA | Romi S.A. | R$ 6.33 | R$ 5.88 | **+7.65%** 🚀 | +1292.80% ⬆️ |
-| MGLU3.SA | Magazine Luiza S.A. | R$ 6.76 | R$ 6.30 | **+7.30%** 🚀 | +55.08% ⬆️ |
+| AALR3.SA | Alliança Saúde e Participações S.A. | R$ 3.37 | R$ 3.11 | **+8.36%** 🚀 | -46.76% ⬇️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.42 | R$ 0.39 | **+7.69%** 🚀 | +44.66% ⬆️ |
+| NUTR3.SA | Nutriplant Indústria e Comércio S/A | R$ 2.44 | R$ 2.31 | **+5.63%** 🚀 | +179.95% ⬆️ |
+| UCAS3.SA | Unicasa Indústria de Móveis S.A. | R$ 1.18 | R$ 1.12 | **+5.36%** 🚀 | +199.18% ⬆️ |
+| EALT3.SA | Electro Aço Altona S.A. | R$ 12.85 | R$ 12.30 | **+4.47%** 🚀 | -51.85% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| BRKM6.SA | Braskem S.A. | R$ 4.66 | R$ 5.20 | **-10.38%** 📉 | +270.59% ⬆️ |
-| ARML3.SA | Armac Locação, Logística e Serviços S.A. | R$ 4.22 | R$ 4.67 | **-9.64%** 📉 | +181.72% ⬆️ |
-| JFEN3.SA | João Fortes Engenharia S.A. | R$ 2.90 | R$ 3.16 | **-8.23%** 📉 | +31.57% ⬆️ |
-| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.26 | R$ 0.28 | **-7.14%** 📉 | -58.60% ⬇️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.39 | R$ 0.42 | **-7.14%** 📉 | +24.00% ⬆️ |
+| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.20 | R$ 0.26 | **-23.08%** 📉 | -54.95% ⬇️ |
+| JFEN3.SA | João Fortes Engenharia S.A. | R$ 2.46 | R$ 2.90 | **-15.17%** 📉 | +124.35% ⬆️ |
+| CRPG6.SA | Tronox Pigmentos do Brasil S.A. | R$ 8.00 | R$ 9.39 | **-14.80%** 📉 | +633.33% ⬆️ |
+| CEEB5.SA | Companhia de Eletricidade do Estado da Bahia - COELBA | R$ 40.00 | R$ 45.00 | **-11.11%** 📉 | 0.00% — |
+| BDLL4.SA | Bardella S.A. Indústrias Mecânicas | R$ 3.06 | R$ 3.39 | **-9.73%** 📉 | -46.67% ⬇️ |
