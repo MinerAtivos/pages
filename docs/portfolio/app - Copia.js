@@ -26,8 +26,6 @@ class B3App {
     this.taxConfig = null;
     this.fiscalData = { dt_loss: 0, st_loss: 0, irrf_balance: 0, tax_balance: 0 };
     this.userComparisonTickers = []; // Ativos adicionados manualmente pelo usuário para comparação
-	this.screenerScope = 'all'; // 'all' or 'portfolio'
-    this.screenerSortBy = 'dy_desc';
     this.init();
   }
 
@@ -257,7 +255,6 @@ class B3App {
     this.setupNavigation();
     this.setupModal();
     this.setupAuth();
-	this.setupScreenerEvents();
 
     this.setSplashMessage('Verificando sessão...');
     // 1. Carregar status de autenticação e portfólio (Unificado)
@@ -539,10 +536,6 @@ class B3App {
     if (name === 'summary') {
       this.renderMarketSummary();
     }
-	
-    if (name === 'screener') {
-      this.renderScreener();
-    }
 
     if (name === 'taxes') {
       if (!this.user) {
@@ -800,9 +793,6 @@ class B3App {
       // News area
       if (this.$('newsGuestTip')) this.$('newsGuestTip').classList.add('hidden');
 
-	  // Screener area
-      if (this.$('screenerGuestAlert')) this.$('screenerGuestAlert').classList.add('hidden');
-
       // Admin Panel
       // Note: Admin management is handled via Google Sheets in this version
       this.$('adminPanel').classList.add('hidden');
@@ -824,9 +814,6 @@ class B3App {
 
       // News area
       if (this.$('newsGuestTip')) this.$('newsGuestTip').classList.remove('hidden');
-
-      // Screener area
-      if (this.$('screenerGuestAlert')) this.$('screenerGuestAlert').classList.remove('hidden');
 
       if (this.currentPage === 'dividends') this.showPage('dashboard');
     }
@@ -982,10 +969,7 @@ class B3App {
     } else if (reason === 'taxes') {
       reasonBox.classList.remove('hidden');
       reasonText.textContent = '📜 A apuração de IR é exclusiva para membros.';
-    } else if (reason === 'screener') {
-      reasonBox.classList.remove('hidden');
-      reasonText.textContent = '🔍 O filtro de ativos por análise financeira é exclusivo para membros.';
-	} else {
+    } else {
       reasonBox.classList.add('hidden');
     }
 
@@ -5130,327 +5114,6 @@ class B3App {
     }
 
   }
-
-  /* ------------------------------------------------------------------
-     Screener / Filtro de Ativos
-  ------------------------------------------------------------------ */
-  setupScreenerEvents() {
-    const filterIds = [
-      'screenerSearchInput', 'screenerMinDY', 'screenerMaxPL', 'screenerMaxPVP',
-      'screenerMaxEvEbitda', 'screenerMinROE', 'screenerMinOpMargin', 'screenerMaxDebtEquity',
-      'screenerPerfPeriod', 'screenerMinPerfVal', 'screenerRoeSector', 'screenerOpMarginSector',
-      'screenerDebtSector', 'screenerEvEbitdaSector', 'screenerRevenueGrowth', 'screenerNetIncomeGrowth',
-      'screenerSortBy'
-    ];
-
-    filterIds.forEach(id => {
-      const el = this.$(id);
-      if (el) {
-        const evt = el.tagName === 'SELECT' || el.type === 'checkbox' ? 'change' : 'input';
-        el.addEventListener(evt, () => {
-          if (!this.user) {
-            this.openAuthModal('register', 'screener');
-            return;
-          }
-          this.renderScreener();
-        });
-      }
-    });
-  }
-
-  setScreenerScope(scope) {
-    if (!this.user) {
-      this.openAuthModal('register', 'screener');
-      return;
-    }
-    this.screenerScope = scope;
-    const btnAll = this.$('btnScreenerScopeAll');
-    const btnPort = this.$('btnScreenerScopePortfolio');
-    if (btnAll && btnPort) {
-      btnAll.classList.toggle('active', scope === 'all');
-      btnPort.classList.toggle('active', scope === 'portfolio');
-    }
-    this.renderScreener();
-  }
-
-  resetScreenerFilters() {
-    if (!this.user) {
-      this.openAuthModal('register', 'screener');
-      return;
-    }
-    const inputIds = [
-      'screenerSearchInput', 'screenerMinDY', 'screenerMaxPL', 'screenerMaxPVP',
-      'screenerMaxEvEbitda', 'screenerMinROE', 'screenerMinOpMargin', 'screenerMaxDebtEquity',
-      'screenerMinPerfVal'
-    ];
-    inputIds.forEach(id => {
-      const el = this.$(id);
-      if (el) el.value = '';
-    });
-
-    const checkIds = [
-      'screenerRoeSector', 'screenerOpMarginSector', 'screenerDebtSector',
-      'screenerEvEbitdaSector', 'screenerRevenueGrowth', 'screenerNetIncomeGrowth'
-    ];
-    checkIds.forEach(id => {
-      const el = this.$(id);
-      if (el) el.checked = false;
-    });
-
-    const perfSelect = this.$('screenerPerfPeriod');
-    if (perfSelect) perfSelect.value = '1m';
-
-    const sortSelect = this.$('screenerSortBy');
-    if (sortSelect) sortSelect.value = 'dy_desc';
-
-    this.screenerSortBy = 'dy_desc';
-    this.renderScreener();
-  }
-
-  setScreenerSort(colKey) {
-    if (!this.user) {
-      this.openAuthModal('register', 'screener');
-      return;
-    }
-    const map = {
-      'ticker': 'ticker_asc',
-      'price': 'price_asc',
-      'dy': 'dy_desc',
-      'pl': 'pl_asc',
-      'pvp': 'pvp_asc',
-      'evebitda': 'evebitda_asc',
-      'roe': 'roe_desc',
-      'perf': 'perf_desc'
-    };
-    const newSort = map[colKey] || 'dy_desc';
-    this.screenerSortBy = newSort;
-    const select = this.$('screenerSortBy');
-    if (select) select.value = newSort;
-    this.renderScreener();
-  }
-
-  renderScreener() {
-    if (!this.marketFinancials || !this.marketFinancials.assets) {
-      const tbody = this.$('screenerTableBody');
-      if (tbody) tbody.innerHTML = '<tr><td colspan="9" class="empty-state">Dados fundamentalistas em carregamento...</td></tr>';
-      return;
-    }
-
-    const searchVal = (this.$('screenerSearchInput')?.value || '').trim().toLowerCase();
-    const minDY = parseFloat(this.$('screenerMinDY')?.value);
-    const maxPL = parseFloat(this.$('screenerMaxPL')?.value);
-    const maxPVP = parseFloat(this.$('screenerMaxPVP')?.value);
-    const maxEvEbitda = parseFloat(this.$('screenerMaxEvEbitda')?.value);
-    const minROE = parseFloat(this.$('screenerMinROE')?.value);
-    const minOpMargin = parseFloat(this.$('screenerMinOpMargin')?.value);
-    const maxDebtEquity = parseFloat(this.$('screenerMaxDebtEquity')?.value);
-    const minPerfVal = parseFloat(this.$('screenerMinPerfVal')?.value);
-    const perfPeriod = this.$('screenerPerfPeriod')?.value || '1m';
-
-    const checkRoeSector = this.$('screenerRoeSector')?.checked;
-    const checkOpMarginSector = this.$('screenerOpMarginSector')?.checked;
-    const checkDebtSector = this.$('screenerDebtSector')?.checked;
-    const checkEvEbitdaSector = this.$('screenerEvEbitdaSector')?.checked;
-    const checkRevenueGrowth = this.$('screenerRevenueGrowth')?.checked;
-    const checkNetIncomeGrowth = this.$('screenerNetIncomeGrowth')?.checked;
-
-    this.screenerSortBy = this.$('screenerSortBy')?.value || this.screenerSortBy || 'dy_desc';
-
-    // Set of tickers if portfolio scope is selected
-    let portfolioTickers = new Set();
-    if (this.screenerScope === 'portfolio' && this.portfolio && this.portfolio.positions) {
-      portfolioTickers = new Set(this.portfolio.positions.map(p => p.ticker));
-    }
-
-    const allTickers = Object.keys(this.marketFinancials.assets);
-    const results = [];
-
-    allTickers.forEach(tickerSA => {
-      // Scope filter
-      if (this.screenerScope === 'portfolio' && !portfolioTickers.has(tickerSA)) {
-        return;
-      }
-
-      const finAsset = this.marketFinancials.assets[tickerSA];
-      if (!finAsset) return;
-
-      const stats = finAsset.stats || {};
-      const historical = finAsset.historical || {};
-      const newsAsset = this.marketNews && this.marketNews.assets && this.marketNews.assets[tickerSA];
-      const mktAsset = this.marketData && this.marketData.assets && this.marketData.assets[tickerSA];
-
-      const tickerClean = tickerSA.replace('.SA', '');
-      const name = finAsset.name || stats.name || mktAsset?.name || tickerClean;
-      const sector = stats.sector || 'N/A';
-
-      // Search text filter
-      if (searchVal) {
-        const matchTicker = tickerClean.toLowerCase().includes(searchVal);
-        const matchName = name.toLowerCase().includes(searchVal);
-        const matchSector = sector.toLowerCase().includes(searchVal);
-        if (!matchTicker && !matchName && !matchSector) return;
-      }
-
-      // Values
-      const price = newsAsset?.last_close || stats.last_price || mktAsset?.last_price || 0;
-      const dy = stats.dividend_yield != null ? stats.dividend_yield * 100 : null;
-      const pl = stats.forward_pe != null ? stats.forward_pe : null;
-      const pvp = stats.price_to_book != null ? stats.price_to_book : null;
-      const evEbitda = stats.ev_to_ebitda != null ? stats.ev_to_ebitda : null;
-      const roe = stats.roe != null ? stats.roe * 100 : null;
-      const opMargin = stats.operating_margin_current != null ? stats.operating_margin_current * 100 : null;
-      const debtEquity = stats.debt_to_equity_current != null ? stats.debt_to_equity_current : null;
-
-      let perfVal = null;
-      if (perfPeriod === '1d' && newsAsset?.daily_delta != null) perfVal = newsAsset.daily_delta * 100;
-      else if (perfPeriod === '1m' && newsAsset?.monthly_delta != null) perfVal = newsAsset.monthly_delta * 100;
-      else if (perfPeriod === '1y' && newsAsset?.yearly_delta != null) perfVal = newsAsset.yearly_delta * 100;
-
-      // Numerical filters
-      if (!isNaN(minDY) && (dy == null || dy < minDY)) return;
-      if (!isNaN(maxPL) && (pl == null || pl > maxPL)) return;
-      if (!isNaN(maxPVP) && (pvp == null || pvp > maxPVP)) return;
-      if (!isNaN(maxEvEbitda) && (evEbitda == null || evEbitda > maxEvEbitda)) return;
-      if (!isNaN(minROE) && (roe == null || roe < minROE)) return;
-      if (!isNaN(minOpMargin) && (opMargin == null || opMargin < minOpMargin)) return;
-      if (!isNaN(maxDebtEquity) && (debtEquity == null || debtEquity > maxDebtEquity)) return;
-      if (!isNaN(minPerfVal) && (perfVal == null || perfVal < minPerfVal)) return;
-
-      // Sector Averages
-      const sectorAvg = this.marketFinancials.sector_averages[sector] || {};
-      const secStats = sectorAvg.stats || {};
-
-      if (checkRoeSector) {
-        const secRoe = secStats.roe != null ? secStats.roe * 100 : null;
-        if (roe == null || secRoe == null || roe <= secRoe) return;
-      }
-
-      if (checkOpMarginSector) {
-        const secMargin = secStats.operating_margin_current != null ? secStats.operating_margin_current * 100 : null;
-        if (opMargin == null || secMargin == null || opMargin <= secMargin) return;
-      }
-
-      if (checkDebtSector) {
-        const secDebt = secStats.debt_to_equity_current != null ? secStats.debt_to_equity_current : null;
-        if (debtEquity == null || secDebt == null || debtEquity >= secDebt) return;
-      }
-
-      if (checkEvEbitdaSector) {
-        const secEvEbitda = secStats.ev_to_ebitda != null ? secStats.ev_to_ebitda : null;
-        if (evEbitda == null || secEvEbitda == null || evEbitda >= secEvEbitda) return;
-      }
-
-      // Historical Evolution
-      if (checkRevenueGrowth) {
-        const revMap = historical.revenue || {};
-        const revYears = Object.keys(revMap).sort();
-        if (revYears.length < 2) return;
-        const firstRev = revMap[revYears[0]];
-        const lastRev = revMap[revYears[revYears.length - 1]];
-        if (firstRev == null || lastRev == null || lastRev <= firstRev) return;
-      }
-
-      if (checkNetIncomeGrowth) {
-        const incMap = historical.net_income || {};
-        const incYears = Object.keys(incMap).sort();
-        if (incYears.length < 2) return;
-        const firstInc = incMap[incYears[0]];
-        const lastInc = incMap[incYears[incYears.length - 1]];
-        if (firstInc == null || lastInc == null || lastInc <= firstInc) return;
-      }
-
-      results.push({
-        ticker: tickerClean,
-        tickerSA,
-        name,
-        sector,
-        price,
-        dy,
-        pl,
-        pvp,
-        evEbitda,
-        roe,
-        opMargin,
-        debtEquity,
-        perfVal,
-        monthlyDelta: newsAsset?.monthly_delta != null ? newsAsset.monthly_delta * 100 : null,
-        yearlyDelta: newsAsset?.yearly_delta != null ? newsAsset.yearly_delta * 100 : null
-      });
-    });
-
-    // Sorting
-    const sortKey = this.screenerSortBy;
-    results.sort((a, b) => {
-      if (sortKey === 'dy_desc') return (b.dy || -999) - (a.dy || -999);
-      if (sortKey === 'pl_asc') return (a.pl || 9999) - (b.pl || 9999);
-      if (sortKey === 'pvp_asc') return (a.pvp || 9999) - (b.pvp || 9999);
-      if (sortKey === 'evebitda_asc') return (a.evEbitda || 9999) - (b.evEbitda || 9999);
-      if (sortKey === 'roe_desc') return (b.roe || -999) - (a.roe || -999);
-      if (sortKey === 'perf_desc') return (b.perfVal || -999) - (a.perfVal || -999);
-      if (sortKey === 'price_asc') return (a.price || 0) - (b.price || 0);
-      if (sortKey === 'ticker' || sortKey === 'ticker_asc') return a.ticker.localeCompare(b.ticker);
-      if (sortKey === 'evebitda') return (a.evEbitda || 9999) - (b.evEbitda || 9999);
-      if (sortKey === 'perf') return (b.perfVal || -999) - (a.perfVal || -999);
-      return 0;
-    });
-
-    // Render Match Count
-    const matchEl = this.$('screenerMatchCount');
-    if (matchEl) {
-      matchEl.textContent = `${results.length} ativo(s) encontrado(s)`;
-    }
-
-    // Render Table
-    const tbody = this.$('screenerTableBody');
-    if (!tbody) return;
-
-    if (results.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="9" class="empty-state">Nenhum ativo atende aos critérios selecionados.</td></tr>';
-      return;
-    }
-
-    tbody.innerHTML = results.map(r => {
-      const logoHtml = this.getAssetLogoHTML(r.tickerSA, 24);
-
-      const dyText = r.dy != null ? `${this.formatNumber(r.dy, 2)}%` : '—';
-      const plText = r.pl != null ? `${this.formatNumber(r.pl, 2)}x` : '—';
-      const pvpText = r.pvp != null ? `${this.formatNumber(r.pvp, 2)}x` : '—';
-      const evEbitdaText = r.evEbitda != null ? `${this.formatNumber(r.evEbitda, 2)}x` : '—';
-      const roeText = r.roe != null ? `${this.formatNumber(r.roe, 2)}%` : '—';
-
-      const mPerf = r.monthlyDelta != null ? `<span class="${r.monthlyDelta >= 0 ? 'var-up' : 'var-down'}">1M: ${r.monthlyDelta > 0 ? '+' : ''}${this.formatNumber(r.monthlyDelta, 1)}%</span>` : '';
-      const yPerf = r.yearlyDelta != null ? `<span class="${r.yearlyDelta >= 0 ? 'var-up' : 'var-down'}">1A: ${r.yearlyDelta > 0 ? '+' : ''}${this.formatNumber(r.yearlyDelta, 1)}%</span>` : '';
-      const perfCell = (mPerf || yPerf) ? `<div style="font-size: 0.75rem; line-height: 1.2;">${mPerf} <br> ${yPerf}</div>` : '—';
-
-      return `
-        <tr>
-          <td>
-            <div style="display: flex; align-items: center; gap: 0.5rem;">
-              ${logoHtml}
-              <div>
-                <a href="#" onclick="event.preventDefault(); app.showMonitor('${r.ticker}')" class="ticker-link"><strong>${r.ticker}</strong></a>
-                <div style="font-size: 0.65rem; color: var(--text-muted);">${this.escapeHTML(r.name)}</div>
-              </div>
-            </div>
-          </td>
-          <td>R$ ${this.formatNumber(r.price, 2)}</td>
-          <td style="font-weight: 600; color: var(--green);">${dyText}</td>
-          <td>${plText}</td>
-          <td>${pvpText}</td>
-          <td>${evEbitdaText}</td>
-          <td>${roeText}</td>
-          <td>${perfCell}</td>
-          <td style="text-align: center;">
-            <div style="display: flex; gap: 0.25rem; justify-content: center;">
-              <button class="btn btn-outline btn-sm" onclick="app.showMonitor('${r.ticker}')" title="Análise Fundamentalista" style="padding: 0.2rem 0.4rem; font-size: 0.75rem;">📊</button>
-              <button class="btn btn-primary btn-sm" onclick="app.openModal(null, 'buy'); app.$('posTicker').value='${r.ticker}'; app.validateTicker();" title="Comprar Ativo" style="padding: 0.2rem 0.4rem; font-size: 0.75rem;">➕</button>
-            </div>
-          </td>
-        </tr>
-      `;
-    }).join('');
-  }
-
 
 }
 
