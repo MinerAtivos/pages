@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-09-30
+## Resumo de Mercado - 2026-10-01
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| CTAX3.SA | Contax Participações S.A. | R$ 1.83 | R$ 1.55 | **+18.06%** 🚀 | +1292.75% ⬆️ |
-| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 1.22 | R$ 1.07 | **+14.02%** 🚀 | +165.14% ⬆️ |
-| BRKM5.SA | Braskem S.A. | R$ 4.24 | R$ 3.72 | **+13.98%** 🚀 | -43.32% ⬇️ |
-| MGLU3.SA | Magazine Luiza S.A. | R$ 7.46 | R$ 6.63 | **+12.52%** 🚀 | +74.03% ⬆️ |
-| PCAR3.SA | Companhia Brasileira De Distribuicao | R$ 3.35 | R$ 3.00 | **+11.67%** 🚀 | +119.80% ⬆️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | -22.18% ⬇️ |
+| BRKM6.SA | Braskem S.A. | R$ 5.30 | R$ 4.66 | **+13.73%** 🚀 | -57.89% ⬇️ |
+| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 1.32 | R$ 1.22 | **+8.20%** 🚀 | +100.48% ⬆️ |
+| OFSA3.SA | Ouro Fino Saúde Animal Participações S.A. | R$ 27.60 | R$ 25.75 | **+7.18%** 🚀 | -25.93% ⬇️ |
+| AZZA3.SA | Azzas 2154 S.A. | R$ 18.60 | R$ 17.38 | **+7.02%** 🚀 | +127.08% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | +99.00% ⬆️ |
-| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.17 | R$ 0.19 | **-10.53%** 📉 | -43.55% ⬇️ |
-| COCE3.SA | Companhia Energética do Ceará - COELCE | R$ 29.41 | R$ 32.50 | **-9.51%** 📉 | +500.00% ⬆️ |
-| BSLI3.SA | BRB - Banco de Brasília S.A. | R$ 2.02 | R$ 2.17 | **-6.91%** 📉 | -69.02% ⬇️ |
-| PEAB3.SA | Companhia de Participações Aliança da Bahia | R$ 36.86 | R$ 38.86 | **-5.15%** 📉 | +71.43% ⬆️ |
+| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.09 | R$ 0.17 | **-47.06%** 📉 | +1998.69% ⬆️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.37 | R$ 0.41 | **-9.76%** 📉 | +247.62% ⬆️ |
+| ENMT3.SA | Energisa Mato Grosso - Distribuidora de Energia S/A | R$ 36.99 | R$ 39.89 | **-7.27%** 📉 | +37.84% ⬆️ |
+| FHER3.SA | Fertilizantes Heringer S.A. | R$ 2.62 | R$ 2.82 | **-7.09%** 📉 | +223.85% ⬆️ |
+| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 2.90 | R$ 3.12 | **-7.05%** 📉 | +41.41% ⬆️ |
