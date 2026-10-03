@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-10-01
+## Resumo de Mercado - 2026-10-02
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.07 | R$ 0.06 | **+16.67%** 🚀 | -22.18% ⬇️ |
-| BRKM6.SA | Braskem S.A. | R$ 5.30 | R$ 4.66 | **+13.73%** 🚀 | -57.89% ⬇️ |
-| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 1.32 | R$ 1.22 | **+8.20%** 🚀 | +100.48% ⬆️ |
-| OFSA3.SA | Ouro Fino Saúde Animal Participações S.A. | R$ 27.60 | R$ 25.75 | **+7.18%** 🚀 | -25.93% ⬇️ |
-| AZZA3.SA | Azzas 2154 S.A. | R$ 18.60 | R$ 17.38 | **+7.02%** 🚀 | +127.08% ⬆️ |
+| OSXB3.SA | OSX Brasil S.A. | R$ 1.45 | R$ 1.25 | **+16.00%** 🚀 | +50.00% ⬆️ |
+| SOND5.SA | Sondotécnica Engenharia de Solos S.A. | R$ 89.40 | R$ 78.00 | **+14.62%** 🚀 | -33.33% ⬇️ |
+| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 3.27 | R$ 2.90 | **+12.76%** 🚀 | -55.36% ⬇️ |
+| HAPV3.SA | Hapvida Participações e Investimentos S.A. | R$ 7.80 | R$ 6.94 | **+12.39%** 🚀 | +6.55% ⬆️ |
+| WEST3.SA | Westwing Comércio Varejista S.A. | R$ 3.60 | R$ 3.25 | **+10.77%** 🚀 | +441.33% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.09 | R$ 0.17 | **-47.06%** 📉 | +1998.69% ⬆️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.37 | R$ 0.41 | **-9.76%** 📉 | +247.62% ⬆️ |
-| ENMT3.SA | Energisa Mato Grosso - Distribuidora de Energia S/A | R$ 36.99 | R$ 39.89 | **-7.27%** 📉 | +37.84% ⬆️ |
-| FHER3.SA | Fertilizantes Heringer S.A. | R$ 2.62 | R$ 2.82 | **-7.09%** 📉 | +223.85% ⬆️ |
-| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 2.90 | R$ 3.12 | **-7.05%** 📉 | +41.41% ⬆️ |
+| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.11 | R$ 0.17 | **-35.29%** 📉 | +1633.69% ⬆️ |
+| CTAX3.SA | Contax Participações S.A. | R$ 1.20 | R$ 1.84 | **-34.78%** 📉 | +9008.43% ⬆️ |
+| MAPT4.SA | Cemepe Investimentos S.A. | R$ 2.50 | R$ 3.00 | **-16.67%** 📉 | 0.00% — |
+| RCSL3.SA | Recrusul S/A | R$ 0.43 | R$ 0.50 | **-14.00%** 📉 | +43.99% ⬆️ |
+| BRKM6.SA | Braskem S.A. | R$ 4.60 | R$ 5.30 | **-13.21%** 📉 | +1007.69% ⬆️ |
