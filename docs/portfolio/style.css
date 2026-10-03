@@ -457,6 +457,46 @@ tbody tr:hover {
   padding: 2.5rem 1rem !important;
 }
 
+/* -- Screener Table Sticky Styles -------------------------------------- */
+#screenerTable {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#screenerTable th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg-secondary);
+  border-bottom: 2px solid var(--border-glass);
+}
+
+#screenerTable td {
+  border-bottom: 1px solid var(--border-glass);
+  background: var(--bg-secondary);
+}
+
+#screenerTable th:first-child {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-glass);
+}
+
+#screenerTable td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-glass);
+}
+
+#screenerTable tbody tr:hover td {
+  background: #1e293b;
+}
+
 /* -- User Profile Sidebar ---------------------------------------------- */
 .user-profile-sidebar {
   display: flex;

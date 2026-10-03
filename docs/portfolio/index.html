@@ -497,7 +497,7 @@
 
       <div class="card glass" style="margin-bottom: 1.5rem; padding: 1.25rem;">
         <!-- Escopo e Busca -->
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.08);">
+       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
           <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: 10px; gap: 4px;">
             <button class="btn btn-sm btn-screener-scope active" id="btnScreenerScopeAll" onclick="app.setScreenerScope('all')" style="width: auto;">🌐 Toda a B3</button>
             <button class="btn btn-sm btn-screener-scope" id="btnScreenerScopePortfolio" onclick="app.setScreenerScope('portfolio')" style="width: auto;">💼 Minha Carteira</button>
@@ -505,12 +505,20 @@
           <div class="form-inline" style="flex: 1; max-width: 320px;">
             <input type="text" id="screenerSearchInput" class="input-sm" placeholder="🔍 Buscar ticker, nome ou setor..." style="width: 100%;">
           </div>
+		   <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <button class="btn btn-outline btn-sm" id="btnToggleScreenerFilters" onclick="app.toggleScreenerFilters()" style="width: auto;">
+              ⚙️ Filtros Avançados <span id="screenerFiltersChevron">▼</span>
+            </button>
           <button class="btn btn-outline btn-sm" id="btnResetScreener" onclick="app.resetScreenerFilters()" style="width: auto;">
             🔄 Limpar Filtros
           </button>
+		   </div>
         </div>
 
         <!-- Painel de Filtros -->
+		<!-- Painel de Filtros Recolhível -->
+        <div id="screenerCollapsibleFilters" class="collapsible-operations" style="display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
+
         <div class="screener-filters-grid">
           <!-- Métricas Básicas -->
           <div class="form-group" style="margin-bottom: 0;">
@@ -575,6 +583,7 @@
             <input type="checkbox" id="screenerNetIncomeGrowth"> Lucro Líquido em Evolução Histórica
           </label>
         </div>
+		</div>
       </div>
 
       <!-- Barra de Resultados -->
@@ -597,8 +606,8 @@
       </div>
 
       <!-- Tabela do Screener -->
-      <div class="card glass" id="screenerTableCard" style="padding: 0; overflow: hidden;">
-        <div class="table-responsive">
+      <div class="card glass" id="screenerTableCard" style="padding: 0;">
+         <div class="table-responsive">
           <table id="screenerTable">
             <thead>
               <tr>

@@ -5158,6 +5158,21 @@ class B3App {
     });
   }
 
+  toggleScreenerFilters() {
+    const filtersPanel = this.$('screenerCollapsibleFilters');
+    const chevron = this.$('screenerFiltersChevron');
+    if (!filtersPanel) return;
+
+    const isHidden = filtersPanel.style.display === 'none' || filtersPanel.style.display === '';
+    if (isHidden) {
+      filtersPanel.style.display = 'block';
+      if (chevron) chevron.textContent = '▲';
+    } else {
+      filtersPanel.style.display = 'none';
+      if (chevron) chevron.textContent = '▼';
+    }
+  }
+
   setScreenerScope(scope) {
     if (!this.user) {
       this.openAuthModal('register', 'screener');
@@ -5427,10 +5442,7 @@ class B3App {
           <td>
             <div style="display: flex; align-items: center; gap: 0.5rem;">
               ${logoHtml}
-              <div>
                 <a href="#" onclick="event.preventDefault(); app.showMonitor('${r.ticker}')" class="ticker-link"><strong>${r.ticker}</strong></a>
-                <div style="font-size: 0.65rem; color: var(--text-muted);">${this.escapeHTML(r.name)}</div>
-              </div>
             </div>
           </td>
           <td>R$ ${this.formatNumber(r.price, 2)}</td>
