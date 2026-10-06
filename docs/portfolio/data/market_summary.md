@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-10-02
+## Resumo de Mercado - 2026-10-05
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| OSXB3.SA | OSX Brasil S.A. | R$ 1.45 | R$ 1.25 | **+16.00%** 🚀 | +50.00% ⬆️ |
-| SOND5.SA | Sondotécnica Engenharia de Solos S.A. | R$ 89.40 | R$ 78.00 | **+14.62%** 🚀 | -33.33% ⬇️ |
-| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 3.27 | R$ 2.90 | **+12.76%** 🚀 | -55.36% ⬇️ |
-| HAPV3.SA | Hapvida Participações e Investimentos S.A. | R$ 7.80 | R$ 6.94 | **+12.39%** 🚀 | +6.55% ⬆️ |
-| WEST3.SA | Westwing Comércio Varejista S.A. | R$ 3.60 | R$ 3.25 | **+10.77%** 🚀 | +441.33% ⬆️ |
+| GSHP3.SA | General Shopping e Outlets do Brasil S.A. | R$ 4.47 | R$ 2.77 | **+61.37%** 🚀 | 0.00% — |
+| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.15 | R$ 0.11 | **+36.36%** 🚀 | 0.00% — |
+| LJQQ3.SA | Lojas Quero-Quero S.A. | R$ 1.95 | R$ 1.54 | **+26.62%** 🚀 | 0.00% — |
+| ECOR3.SA | EcoRodovias Infraestrutura e Logística S.A. | R$ 12.33 | R$ 9.89 | **+24.67%** 🚀 | 0.00% — |
+| MOVI3.SA | Movida Participações S.A. | R$ 13.50 | R$ 10.85 | **+24.42%** 🚀 | 0.00% — |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.11 | R$ 0.17 | **-35.29%** 📉 | +1633.69% ⬆️ |
-| CTAX3.SA | Contax Participações S.A. | R$ 1.20 | R$ 1.84 | **-34.78%** 📉 | +9008.43% ⬆️ |
-| MAPT4.SA | Cemepe Investimentos S.A. | R$ 2.50 | R$ 3.00 | **-16.67%** 📉 | 0.00% — |
-| RCSL3.SA | Recrusul S/A | R$ 0.43 | R$ 0.50 | **-14.00%** 📉 | +43.99% ⬆️ |
-| BRKM6.SA | Braskem S.A. | R$ 4.60 | R$ 5.30 | **-13.21%** 📉 | +1007.69% ⬆️ |
+| MAPT4.SA | Cemepe Investimentos S.A. | R$ 2.00 | R$ 2.50 | **-20.00%** 📉 | 0.00% — |
+| SOND5.SA | Sondotécnica Engenharia de Solos S.A. | R$ 75.01 | R$ 89.40 | **-16.10%** 📉 | 0.00% — |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | 0.00% — |
+| RCSL4.SA | Recrusul S/A | R$ 0.95 | R$ 1.08 | **-12.04%** 📉 | 0.00% — |
+| RVEE3.SA | Revee S.A. | R$ 0.66 | R$ 0.70 | **-5.71%** 📉 | 0.00% — |
