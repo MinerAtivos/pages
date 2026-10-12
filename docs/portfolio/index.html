@@ -803,42 +803,50 @@
         <p class="subtitle" id="forecastSubTitle">Previsão quantitativa de ativos baseada em modelos estatísticos e aprendizado de máquina</p>
       </div>
 
-      <div class="alert alert-info glass" id="forecastGuestAlert">
+       <div class="alert alert-info glass" id="forecastGuestAlert" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
         <strong>🔒 Área Exclusiva para Membros:</strong> Faça login para visualizar o Mapa de Oportunidades completo e a tabela interativa com estatísticas de probabilidade e acurácia.
+		  </div>
+        <button class="btn btn-primary btn-sm" onclick="app.openAuthModal('login', 'forecast')" style="white-space: nowrap;">🔐 Entrar / Cadastrar</button>
+     
       </div>
 
       <div id="forecastContent">
         <!-- Toolbar & Combinable Filters -->
         <div class="card glass" style="margin-bottom: 1.5rem; padding: 1.25rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
-            <h2 class="card-title" style="margin: 0; font-size: 1.1rem;">⚙️ Filtros do Modelo</h2>
-            <div class="form-inline" style="flex: 1; max-width: 320px;">
-              <input type="text" id="forecastSearchInput" class="input-sm" placeholder="🔍 Buscar ativo (Ex: CMIG3)..." style="width: 100%;" oninput="app.filterForecastData()">
-            </div>
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 280px;">
+              <h2 class="card-title" style="margin: 0; font-size: 1.1rem; white-space: nowrap;">⚙️ Filtros do Modelo</h2>
+              <div class="form-inline" style="flex: 1; max-width: 320px;">
+                <input type="text" id="forecastSearchInput" class="input-sm" placeholder="🔍 Buscar ativo (Ex: CMIG3)..." style="width: 100%;" oninput="app.filterForecastData()">
+              </div>
             <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
               🔄 Limpar Filtros
             </button>
+			</div>
           </div>
+          <!-- Painel de Filtros Recolhível -->
+          <div id="forecastCollapsibleFilters" class="collapsible-operations" style="display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="forecastFilterSignal">Consistência do Modelo</label>
+                <select id="forecastFilterSignal" class="input-sm" onchange="app.filterForecastData()">
+                  <option value="ALL">Todas</option>
+                  <option value="ALTA">Alta Consistência</option>
+                  <option value="MEDIA">Média Consistência</option>
+                  <option value="BAIXA">Baixa Consistência</option>
+                </select>
+              </div>
 
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
-            <div class="form-group" style="margin-bottom: 0;">
-              <label for="forecastFilterSignal">Força do Sinal</label>
-              <select id="forecastFilterSignal" class="input-sm" onchange="app.filterForecastData()">
-                <option value="ALL">Todos os Sinais</option>
-                <option value="ALTA">Alta Convicção (ALTA)</option>
-                <option value="MEDIA">Média Convicção (MÉDIA)</option>
-                <option value="BAIXA">Baixa Convicção (BAIXA)</option>
-              </select>
-            </div>
-
-            <div class="form-group" style="margin-bottom: 0;">
-              <label for="forecastFilterTrend">Tendência</label>
-              <select id="forecastFilterTrend" class="input-sm" onchange="app.filterForecastData()">
-                <option value="ALL">Todas</option>
-                <option value="SOBE">🟩 SOBE (Alta)</option>
-                <option value="CAI">🟥 CAI (Queda)</option>
-              </select>
-            </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="forecastFilterTrend">Viés Estatístico</label>
+                <select id="forecastFilterTrend" class="input-sm" onchange="app.filterForecastData()">
+                  <option value="ALL">Todos</option>
+                  <option value="POSITIVO">🟢 Positivo</option>
+                  <option value="NEGATIVO">🔴 Negativo</option>
+                  <option value="INCONSISTENTE">⚪ Inconsistente</option>
+                </select>
+              </div>
 
             <div class="form-group" style="margin-bottom: 0;">
               <label for="forecastFilterMinChance">Meta Chance Acerto &ge; (%)</label>
@@ -848,7 +856,8 @@
             <div class="form-group" style="margin-bottom: 0;">
               <label for="forecastFilterMinAccuracy">Acurácia Ensemble &ge; (%)</label>
               <input type="number" id="forecastFilterMinAccuracy" class="input-sm" placeholder="Ex: 50" min="0" max="100" step="1" oninput="app.filterForecastData()">
-            </div>
+				</div>
+			</div>
           </div>
         </div>
 
@@ -857,7 +866,7 @@
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
             <div>
               <h2 class="card-title" style="margin-bottom: 0.25rem;">📊 Mapa Visual Direcional de Oportunidades</h2>
-              <p class="subtitle" style="margin: 0; font-size: 0.85rem;">Meta Chance de Acerto (%) vs. Acurácia do Ensemble (%). Os ícones indicam a tendência (🟩 SOBE / 🟥 CAI).</p>
+                  <p class="subtitle" style="margin: 0; font-size: 0.85rem;">Meta Chance de Acerto (%) vs. Acurácia do Ensemble (%). Os marcadores refletem o Viés Estatístico e a Consistência do Modelo.</p>
             </div>
             <div id="forecastChartStats" style="font-weight: 600; font-size: 0.85rem; color: var(--accent-light);"></div>
           </div>
@@ -880,9 +889,9 @@
                 <tr>
                   <th onclick="app.sortForecastTable('ativo')" style="cursor: pointer;">Ativo ⇳</th>
                   <th onclick="app.sortForecastTable('preco')" style="cursor: pointer;">Preço ⇳</th>
-                  <th onclick="app.sortForecastTable('tendencia')" style="cursor: pointer;">Tendência ⇳</th>
-                  <th onclick="app.sortForecastTable('forca_sinal')" style="cursor: pointer;">Força Sinal ⇳</th>
-                  <th onclick="app.sortForecastTable('meta_chance_acerto_pct')" style="cursor: pointer;">Meta Chance Acerto ⇳</th>
+                  <th onclick="app.sortForecastTable('tendencia')" style="cursor: pointer;">Viés Estatístico ⇳</th>
+                  <th onclick="app.sortForecastTable('forca_sinal')" style="cursor: pointer;">Consistência do Modelo ⇳</th>
+                  <th onclick="app.sortForecastTable('meta_chance_acerto_pct')" style="cursor: pointer;">Meta Prob. ⇳</th>
                   <th onclick="app.sortForecastTable('acuracia_ens_pct')" style="cursor: pointer;">Acurácia Ensemble ⇳</th>
                   <th onclick="app.sortForecastTable('prob_subir_pct')" style="cursor: pointer;">Prob. Subir ⇳</th>
                   <th onclick="app.sortForecastTable('data_previsao')" style="cursor: pointer;">Data Previsão ⇳</th>
@@ -1438,6 +1447,48 @@
           </div>
         </form>
       </div>
+    </div>
+  </div>
+
+<!-- Modal: Termos de Uso do Módulo Preditivo (Click-Wrap) -->
+  <div class="modal-overlay" id="forecastTermsModalOverlay" style="display: none; z-index: 10000; background: rgba(10, 15, 29, 0.85); backdrop-filter: blur(8px);">
+    <div class="modal glass" id="forecastTermsModal" style="max-width: 640px; width: 92%; border: 1px solid rgba(99, 102, 241, 0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+      <div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+        <h2 style="margin: 0; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem; color: #f8fafc;">
+          📜 Termos de Uso do Módulo Preditivo
+        </h2>
+      </div>
+
+      <div style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6; max-height: 240px; overflow-y: auto; background: rgba(0,0,0,0.25); border-radius: 8px; padding: 1rem; margin: 1rem 0; border: 1px solid rgba(255,255,255,0.05);">
+        <p style="margin-top: 0;">
+          <strong>AVISO DE RESPONSABILIDADE E CARÁTER EXPERIMENTAL:</strong>
+        </p>
+        <p>
+          As projeções, classificações e estatísticas geradas por inteligência artificial e aprendizado de máquina no Módulo Preditivo (Tendências) possuem caráter estritamente estatístico, educacional e de pesquisa quantitativa.
+        </p>
+        <p>
+          Estas informações <strong>não constituem</strong>, sob nenhuma hipótese, recomendação de investimento, consultoria financeira, análise de valores mobiliários ou indicação de compra e venda de ativos na B3.
+        </p>
+        <p style="margin-bottom: 0;">
+          Investimentos no mercado financeiro e na B3 envolvem riscos severos de perda patrimonial. Decisões operacionais baseadas nestes dados são de sua inteira e exclusiva responsabilidade.
+        </p>
+      </div>
+
+      <form id="forecastTermsForm" onsubmit="event.preventDefault(); app.acceptForecastTerms();">
+        <div style="margin-bottom: 1.25rem; display: flex; align-items: flex-start; gap: 0.75rem; background: rgba(99, 102, 241, 0.1); padding: 0.85rem; border-radius: 8px; border: 1px solid rgba(99, 102, 241, 0.25);">
+          <input type="checkbox" id="chkForecastTermsAccept" onchange="app.onForecastTermsCheckboxChange()" style="margin-top: 0.2rem; width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer;">
+          <label for="chkForecastTermsAccept" style="font-size: 0.83rem; color: #e2e8f0; cursor: pointer; user-select: none; line-height: 1.4;">
+            Declaro que li e compreendi os Termos de Uso do Módulo Preditivo. Estou ciente de que as projeções geradas por inteligência artificial e aprendizado de máquina possuem caráter exclusivamente estatístico, educacional e experimental, não constituindo, sob nenhuma hipótese, recomendação de investimento, consultoria financeira ou indicação de compra e venda de ativos na B3. Compreendo que investimentos envolvem riscos severos de perda patrimonial e que decisões baseadas nestes dados são de minha exclusiva responsabilidade.
+          </label>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+          <button type="button" class="btn btn-outline" onclick="app.declineForecastTerms()">Recusar</button>
+          <button type="submit" id="btnAcceptForecastTerms" class="btn btn-primary btn-glow" disabled style="opacity: 0.5; cursor: not-allowed;">
+            Concordar e Acessar Módulo
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 

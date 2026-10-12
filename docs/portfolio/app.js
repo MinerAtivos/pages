@@ -9,7 +9,8 @@ class B3App {
     // 2. Extensões > Apps Script. Cole o código do arquivo 'docs/api.gs'.
     // 3. Implantar > App da Web (Quem tem acesso: "Qualquer pessoa").
     // 4. Copie a URL gerada e cole abaixo:
-    this.GAS_URL = "https://script.google.com/macros/s/AKfycbyIQkk8nPe2ROYHPbMbvfm6EZV8TvSneHgnKovW7JoVxbMrVjF3Bs-0SG_Ps6uLk1NY5Q/exec";
+    // this.GAS_URL = "https://script.google.com/macros/s/AKfycbyIQkk8nPe2ROYHPbMbvfm6EZV8TvSneHgnKovW7JoVxbMrVjF3Bs-0SG_Ps6uLk1NY5Q/exec";
+	this.GAS_URL = "https://script.google.com/macros/s/AKfycbx62T6RHS0G81LX-e2t_pKC-wBqejxVlIhAz8psCk_rivEYr83151m6zP-x0phpbF3u/exec";
 
     this.portfolio = { name: 'Meu Portfólio', positions: [] };
     this.user = null; // { username: '...' } if logged in
@@ -28,6 +29,8 @@ class B3App {
     this.userComparisonTickers = []; // Ativos adicionados manualmente pelo usuário para comparação
 	this.screenerScope = 'all'; // 'all' or 'portfolio'
     this.screenerSortBy = 'dy_desc';
+	 this.FORECAST_TERMS_VERSION_HASH = "v1.0-2026-03";
+    this.FORECAST_DISCLAIMER_TEXT = "Declaro que li e compreendi os Termos de Uso do Módulo Preditivo. Estou ciente de que as projeções geradas por inteligência artificial e aprendizado de máquina possuem caráter exclusivamente estatístico, educacional e experimental, não constituindo, sob nenhuma hipótese, recomendação de investimento, consultoria financeira ou indicação de compra e venda de ativos na B3. Compreendo que investimentos envolvem riscos severos de perda patrimonial e que decisões baseadas nestes dados são de minha exclusiva responsabilidade.";
     this.init();
   }
 
@@ -546,6 +549,12 @@ class B3App {
     }
 
    if (name === 'forecast') {
+	   if (!this.user) {
+        if (this.$('forecastGuestAlert')) this.$('forecastGuestAlert').classList.remove('hidden');
+        if (this.$('forecastContent')) this.$('forecastContent').classList.add('hidden');
+        this.openAuthModal('register', 'forecast');
+        return;
+      }
       this.renderForecastPage();
     }
 
@@ -810,7 +819,10 @@ class B3App {
 
       // Forecast area
       if (this.$('forecastGuestAlert')) this.$('forecastGuestAlert').classList.add('hidden');
-      if (this.$('forecastContent')) this.$('forecastContent').classList.remove('forecast-guest-locked');
+       if (this.$('forecastContent')) {
+        this.$('forecastContent').classList.remove('hidden');
+        this.$('forecastContent').classList.remove('forecast-guest-locked');
+      }
 
       // Admin Panel
       // Note: Admin management is handled via Google Sheets in this version
@@ -839,7 +851,8 @@ class B3App {
 
       // Forecast area
       if (this.$('forecastGuestAlert')) this.$('forecastGuestAlert').classList.remove('hidden');
-      if (this.$('forecastContent')) this.$('forecastContent').classList.add('forecast-guest-locked');
+      if (this.$('forecastContent')) this.$('forecastContent').classList.add('hidden');
+      if (this.currentPage === 'forecast') this.showPage('dashboard');
 
       if (this.currentPage === 'dividends') this.showPage('dashboard');
     }
@@ -5480,7 +5493,8 @@ class B3App {
      TENDÊNCIAS / MAPA DE PREVISÕES (FORECAST)
   ------------------------------------------------------------------ */
   async loadForecastData() {
-    if (this.forecastLoading) return;
+    if (!this.user) return;
+	if (this.forecastLoading) return;
     this.forecastLoading = true;
     try {
       const resp = await fetch('data/forecast.csv');
@@ -5548,11 +5562,119 @@ class B3App {
     return data;
   }
 
+onForecastTermsCheckboxChange() {
+    const chk = this.$('chkForecastTermsAccept');
+    const btn = this.$('btnAcceptForecastTerms');
+    if (!btn) return;
+    if (chk && chk.checked) {
+      btn.disabled = false;
+      btn.style.opacity = '1.0';
+      btn.style.cursor = 'pointer';
+    } else {
+      btn.disabled = true;
+      btn.style.opacity = '0.5';
+      btn.style.cursor = 'not-allowed';
+    }
+  }
+
+  declineForecastTerms() {
+    if (this.$('forecastTermsModalOverlay')) this.$('forecastTermsModalOverlay').style.display = 'none';
+    this.toast('É necessário aceitar os Termos de Uso para visualizar o Módulo Preditivo.', 'warning');
+    this.showPage('dashboard');
+  }
+
+  async acceptForecastTerms() {
+    if (!this.user) return;
+    const chk = this.$('chkForecastTermsAccept');
+    if (!chk || !chk.checked) return;
+
+    const btn = this.$('btnAcceptForecastTerms');
+    if (btn) {
+      btn.disabled = true;
+      btn.textContent = 'Registrando aceite...';
+    }
+
+    let clientIp = '0.0.0.0';
+    try {
+      const resp = await fetch('https://api.ipify.org?format=json');
+      if (resp.ok) {
+        const ipData = await resp.json();
+        clientIp = ipData.ip || clientIp;
+      }
+    } catch (e) {
+      console.warn('Network call to ipify failed, falling back:', e);
+    }
+
+    const payload = {
+      action: 'accept_forecast_terms',
+      username: this.user.username,
+      session_token: this.user.session_token,
+      ip_address: clientIp,
+      user_agent: navigator.userAgent,
+      terms_version_hash: this.FORECAST_TERMS_VERSION_HASH,
+      disclaimer_text: this.FORECAST_DISCLAIMER_TEXT
+    };
+
+    if (this.GAS_URL) {
+      try {
+        await fetch(this.GAS_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify(payload)
+        });
+      } catch (err) {
+        console.error('Error sending terms acceptance to GAS:', err);
+      }
+    }
+
+    localStorage.setItem('forecast_terms_accepted_' + this.user.username, this.FORECAST_TERMS_VERSION_HASH);
+    this.user.accepted_forecast_terms_hash = this.FORECAST_TERMS_VERSION_HASH;
+
+    if (this.$('forecastTermsModalOverlay')) this.$('forecastTermsModalOverlay').style.display = 'none';
+    if (this.$('forecastContent')) this.$('forecastContent').classList.remove('hidden');
+
+    if (btn) {
+      btn.disabled = false;
+      btn.textContent = 'Concordar e Acessar Módulo';
+    }
+
+    this.toast('Termos de Uso aceitos com sucesso!', 'success');
+    await this.renderForecastPage();
+  }
+
+
   async renderForecastPage() {
+	if (!this.user) return;
+
+    const acceptedHash = localStorage.getItem('forecast_terms_accepted_' + this.user.username) || this.user.accepted_forecast_terms_hash;
+    if (acceptedHash !== this.FORECAST_TERMS_VERSION_HASH) {
+      if (this.$('forecastTermsModalOverlay')) this.$('forecastTermsModalOverlay').style.display = 'flex';
+      if (this.$('forecastContent')) this.$('forecastContent').classList.add('hidden');
+      return;
+    }
+
+    if (this.$('forecastTermsModalOverlay')) this.$('forecastTermsModalOverlay').style.display = 'none';
+    if (this.$('forecastContent')) this.$('forecastContent').classList.remove('hidden');
+
     if (!this.forecastData || this.forecastData.length === 0) {
       await this.loadForecastData();
     }
     this.filterForecastData();
+  }
+
+  toggleForecastFilters() {
+    const filtersPanel = this.$('forecastCollapsibleFilters');
+    const chevron = this.$('forecastFiltersChevron');
+    if (!filtersPanel) return;
+
+    const isHidden = filtersPanel.style.display === 'none' || filtersPanel.style.display === '';
+    if (isHidden) {
+      filtersPanel.style.display = 'block';
+      if (chevron) chevron.textContent = '▲';
+    } else {
+      filtersPanel.style.display = 'none';
+      if (chevron) chevron.textContent = '▼';
+    }
   }
 
   resetForecastFilters() {
@@ -5562,6 +5684,84 @@ class B3App {
     if (this.$('forecastFilterMinChance')) this.$('forecastFilterMinChance').value = '';
     if (this.$('forecastFilterMinAccuracy')) this.$('forecastFilterMinAccuracy').value = '';
     this.filterForecastData();
+  }
+
+ getStatisticalBias(item) {
+    if (item.forca_sinal === 'BAIXA') {
+      return {
+        label: 'Inconsistente',
+        val: 'INCONSISTENTE',
+        color: '#9ca3af',
+        bg: 'rgba(156, 163, 175, 0.25)',
+        border: 'rgba(156, 163, 175, 0.5)',
+        arrow: '⚪',
+        badgeHtml: `<span class="badge" style="background: rgba(156, 163, 175, 0.2); color: #9ca3af; border: 1px solid rgba(156, 163, 175, 0.4); padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700;">Inconsistente</span>`
+      };
+    }
+    if (item.forca_sinal === 'MEDIA') {
+      if (item.tendencia === 'SOBE') {
+        return {
+          label: 'Positivo',
+          val: 'POSITIVO',
+          color: '#facc15',
+          bg: 'rgba(250, 204, 21, 0.25)',
+          border: 'rgba(250, 204, 21, 0.5)',
+          arrow: '🟡',
+          badgeHtml: `<span class="badge" style="background: rgba(250, 204, 21, 0.2); color: #facc15; border: 1px solid rgba(250, 204, 21, 0.4); padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700;">Positivo</span>`
+        };
+      } else {
+        return {
+          label: 'Negativo',
+          val: 'NEGATIVO',
+          color: '#f97316',
+          bg: 'rgba(249, 115, 22, 0.25)',
+          border: 'rgba(249, 115, 22, 0.5)',
+          arrow: '🟠',
+          badgeHtml: `<span class="badge" style="background: rgba(249, 115, 22, 0.2); color: #f97316; border: 1px solid rgba(249, 115, 22, 0.4); padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700;">Negativo</span>`
+        };
+      }
+    }
+    // ALTA
+    if (item.tendencia === 'SOBE') {
+      return {
+        label: 'Positivo',
+        val: 'POSITIVO',
+        color: '#4ade80',
+        bg: 'rgba(34, 197, 94, 0.25)',
+        border: 'rgba(34, 197, 94, 0.5)',
+        arrow: '🟢',
+        badgeHtml: `<span class="badge badge-success" style="background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700;">Positivo</span>`
+      };
+    } else {
+      return {
+        label: 'Negativo',
+        val: 'NEGATIVO',
+        color: '#f87171',
+        bg: 'rgba(239, 68, 68, 0.25)',
+        border: 'rgba(239, 68, 68, 0.5)',
+        arrow: '🔴',
+        badgeHtml: `<span class="badge badge-danger" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700;">Negativo</span>`
+      };
+    }
+  }
+
+  getModelConsistency(item) {
+    if (item.forca_sinal === 'ALTA') {
+      return {
+        label: 'Alta',
+        badgeHtml: `<span class="badge" style="background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.4); padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600;">Alta</span>`
+      };
+    }
+    if (item.forca_sinal === 'MEDIA') {
+      return {
+        label: 'Média',
+        badgeHtml: `<span class="badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600;">Média</span>`
+      };
+    }
+    return {
+      label: 'Baixa',
+      badgeHtml: `<span class="badge" style="background: rgba(156, 163, 175, 0.2); color: #9ca3af; border: 1px solid rgba(156, 163, 175, 0.4); padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600;">Baixa</span>`
+    };
   }
 
   filterForecastData() {
@@ -5580,8 +5780,14 @@ class B3App {
       if (signalFilter !== 'ALL' && item.forca_sinal !== signalFilter) {
         return false;
       }
-      if (trendFilter !== 'ALL' && item.tendencia !== trendFilter) {
-        return false;
+	  
+	const bias = this.getStatisticalBias(item);
+      if (trendFilter !== 'ALL') {
+        if (trendFilter === 'POSITIVO' && bias.val !== 'POSITIVO') return false;
+        if (trendFilter === 'NEGATIVO' && bias.val !== 'NEGATIVO') return false;
+        if (trendFilter === 'INCONSISTENTE' && bias.val !== 'INCONSISTENTE') return false;
+        if (trendFilter === 'SOBE' && item.tendencia !== 'SOBE') return false;
+        if (trendFilter === 'CAI' && item.tendencia !== 'CAI') return false;
       }
       if (minChance > 0 && item.meta_chance_acerto_pct < minChance) {
         return false;
@@ -5605,13 +5811,20 @@ class B3App {
       this.forecastChart = null;
     }
 
-    const dataSobe = filteredData.filter(d => d.tendencia === 'SOBE').map(d => ({
+    const dataPositivo = filteredData.filter(d => this.getStatisticalBias(d).val === 'POSITIVO').map(d => ({
       x: d.acuracia_ens_pct,
       y: d.meta_chance_acerto_pct,
       item: d
     }));
 
-    const dataCai = filteredData.filter(d => d.tendencia === 'CAI').map(d => ({
+        const dataNegativo = filteredData.filter(d => this.getStatisticalBias(d).val === 'NEGATIVO').map(d => ({
+      x: d.acuracia_ens_pct,
+      y: d.meta_chance_acerto_pct,
+      item: d
+    }));
+
+    const dataInconsistente = filteredData.filter(d => this.getStatisticalBias(d).val === 'INCONSISTENTE').map(d => ({
+    
       x: d.acuracia_ens_pct,
       y: d.meta_chance_acerto_pct,
       item: d
@@ -5619,7 +5832,7 @@ class B3App {
 
     const statsEl = this.$('forecastChartStats');
     if (statsEl) {
-      statsEl.innerHTML = `Exibindo <strong>${filteredData.length}</strong> de ${this.forecastData.length} ativos (<span style="color: var(--green);">🟩 ${dataSobe.length} SOBE</span> / <span style="color: var(--red);">🟥 ${dataCai.length} CAI</span>)`;
+  statsEl.innerHTML = `Exibindo <strong>${filteredData.length}</strong> de ${this.forecastData.length} ativos (<span style="color: #4ade80;">🟢 ${dataPositivo.length} Positivo</span> / <span style="color: #f87171;">🔴 ${dataNegativo.length} Negativo</span> / <span style="color: #9ca3af;">⚪ ${dataInconsistente.length} Inconsistente</span>)`;
     }
 
     const appRef = this;
@@ -5636,12 +5849,11 @@ class B3App {
 
             const { x, y } = element.tooltipPosition();
             const ticker = raw.item.ticker;
-            const isSobe = raw.item.tendencia === 'SOBE';
+            const bias = appRef.getStatisticalBias(raw.item);
 
             ctx.font = 'bold 11px Inter, sans-serif';
             const textWidth = ctx.measureText(ticker).width;
-            const paddingX = 6;
-            const paddingY = 3;
+            const paddingX = 6;            
             const boxWidth = textWidth + paddingX * 2 + 10;
             const boxHeight = 18;
 
@@ -5649,8 +5861,8 @@ class B3App {
             const boxY = y - boxHeight - 8;
 
             ctx.beginPath();
-            ctx.fillStyle = isSobe ? 'rgba(34, 197, 94, 0.95)' : 'rgba(239, 68, 68, 0.95)';
-            ctx.strokeStyle = isSobe ? '#15803d' : '#991b1b';
+            ctx.fillStyle = bias.bg;
+            ctx.strokeStyle = bias.border;
             ctx.lineWidth = 1;
 
             if (ctx.roundRect) {
@@ -5664,8 +5876,7 @@ class B3App {
             ctx.fillStyle = '#ffffff';
             ctx.textAlign = 'left';
             ctx.textBaseline = 'middle';
-            const arrow = isSobe ? '▲' : '▼';
-            ctx.fillText(`${arrow} ${ticker}`, boxX + paddingX, boxY + boxHeight / 2);
+            ctx.fillText(`${bias.arrow} ${ticker}`, boxX + paddingX, boxY + boxHeight / 2);
           });
         });
         ctx.restore();
@@ -5678,18 +5889,26 @@ class B3App {
       data: {
         datasets: [
           {
-            label: 'SOBE (Tendência de Alta)',
-            data: dataSobe,
+            label: 'Viés Positivo',
+            data: dataPositivo,
             backgroundColor: 'rgba(34, 197, 94, 0.8)',
             borderColor: '#22c55e',
             pointRadius: 6,
             pointHoverRadius: 9,
           },
           {
-            label: 'CAI (Tendência de Queda)',
-            data: dataCai,
+            label: 'Viés Negativo',
+            data: dataNegativo,
             backgroundColor: 'rgba(239, 68, 68, 0.8)',
             borderColor: '#ef4444',
+            pointRadius: 6,
+            pointHoverRadius: 9,
+			,
+          {
+            label: 'Inconsistente',
+            data: dataInconsistente,
+            backgroundColor: 'rgba(156, 163, 175, 0.8)',
+            borderColor: '#9ca3af',
             pointRadius: 6,
             pointHoverRadius: 9,
           }
@@ -5749,11 +5968,13 @@ class B3App {
               label: (context) => {
                 const item = context.raw.item;
                 if (!item) return '';
+				const bias = appRef.getStatisticalBias(item);
+                const consistency = appRef.getModelConsistency(item);
                 return [
                   `Preço: R$ ${appRef.formatNumber(item.preco, 2)}`,
-                  `Tendência: ${item.tendencia === 'SOBE' ? '🟩 SOBE' : '🟥 CAI'}`,
-                  `Força do Sinal: ${item.forca_sinal}`,
-                  `Meta Chance de Acerto: ${appRef.formatNumber(item.meta_chance_acerto_pct, 1)}%`,
+                  `Viés Estatístico: ${bias.label}`,
+                  `Consistência do Modelo: ${consistency.label}`,
+                  `Meta Prob.: ${appRef.formatNumber(item.meta_chance_acerto_pct, 1)}%`,
                   `Acurácia Ensemble: ${appRef.formatNumber(item.acuracia_ens_pct, 1)}%`,
                   `Prob. Subir: ${appRef.formatNumber(item.prob_subir_pct, 1)}%`,
                   `Data Previsão: ${item.data_previsao}`,
@@ -5810,16 +6031,8 @@ class B3App {
 
     tbody.innerHTML = sorted.map(r => {
       const logoHtml = this.getAssetLogoHTML(r.tickerSA, 24);
-      const isSobe = r.tendencia === 'SOBE';
-      const trendBadge = isSobe
-        ? `<span class="badge badge-success" style="background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700;">🟩 SOBE</span>`
-        : `<span class="badge badge-danger" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700;">🟥 CAI</span>`;
-
-      const signalBadge = r.forca_sinal === 'ALTA'
-        ? `<span class="badge" style="background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.4); padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600;">⚡ ALTA</span>`
-        : r.forca_sinal === 'MEDIA'
-        ? `<span class="badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600;">🔹 MÉDIA</span>`
-        : `<span class="badge" style="background: rgba(156, 163, 175, 0.2); color: #9ca3af; border: 1px solid rgba(156, 163, 175, 0.4); padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600;">🔸 BAIXA</span>`;
+      onst bias = this.getStatisticalBias(r);
+      const consistency = this.getModelConsistency(r);
 
       return `
         <tr>
@@ -5830,8 +6043,8 @@ class B3App {
             </div>
           </td>
           <td style="font-weight: 600;">R$ ${this.formatNumber(r.preco, 2)}</td>
-          <td>${trendBadge}</td>
-          <td>${signalBadge}</td>
+          <td>${bias.badgeHtml}</td>
+          <td>${consistency.badgeHtml}</td>
           <td style="font-weight: 700; color: var(--accent-light);">${this.formatNumber(r.meta_chance_acerto_pct, 1)}%</td>
           <td style="font-weight: 600;">${this.formatNumber(r.acuracia_ens_pct, 1)}%</td>
           <td>${this.formatNumber(r.prob_subir_pct, 1)}%</td>
