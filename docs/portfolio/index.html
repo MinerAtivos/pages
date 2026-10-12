@@ -698,7 +698,7 @@
       </div>
 
       <div class="rebalance-results" id="rebalanceResults" style="display:none;">
-      <div class="stats-grid stats-grid-main" id="rebalanceStatsGrid">
+      <div class="stats-grid stats-grid-main" id="statsGrid">
           <div class="stat-card glass">
             <div class="stat-label">Retorno Esperado</div>
             <div class="stat-value accent" id="rebReturn">—</div>
@@ -803,12 +803,11 @@
         <p class="subtitle" id="forecastSubTitle">Previsão quantitativa de ativos baseada em modelos estatísticos e aprendizado de máquina</p>
       </div>
 
-       <div class="alert alert-info glass" id="forecastGuestAlert" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div class="alert alert-info glass" id="forecastGuestAlert" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <div>
-        <strong>🔒 Área Exclusiva para Membros:</strong> Faça login para visualizar o Mapa de Oportunidades completo e a tabela interativa com estatísticas de probabilidade e acurácia.
-		  </div>
+          <strong>🔒 Área Exclusiva para Membros:</strong> Faça login para visualizar o Mapa de Oportunidades completo e a tabela interativa com estatísticas de probabilidade e acurácia.
+        </div>
         <button class="btn btn-primary btn-sm" onclick="app.openAuthModal('login', 'forecast')" style="white-space: nowrap;">🔐 Entrar / Cadastrar</button>
-     
       </div>
 
       <div id="forecastContent">
@@ -820,11 +819,17 @@
               <div class="form-inline" style="flex: 1; max-width: 320px;">
                 <input type="text" id="forecastSearchInput" class="input-sm" placeholder="🔍 Buscar ativo (Ex: CMIG3)..." style="width: 100%;" oninput="app.filterForecastData()">
               </div>
-            <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
-              🔄 Limpar Filtros
-            </button>
-			</div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <button class="btn btn-outline btn-sm" id="btnToggleForecastFilters" onclick="app.toggleForecastFilters()" style="width: auto;">
+                ⚙️ Filtros Avançados <span id="forecastFiltersChevron">▼</span>
+              </button>
+              <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
+                🔄 Limpar Filtros
+              </button>
+            </div>
           </div>
+
           <!-- Painel de Filtros Recolhível -->
           <div id="forecastCollapsibleFilters" class="collapsible-operations" style="display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
@@ -848,16 +853,16 @@
                 </select>
               </div>
 
-            <div class="form-group" style="margin-bottom: 0;">
-              <label for="forecastFilterMinChance">Meta Chance Acerto &ge; (%)</label>
-              <input type="number" id="forecastFilterMinChance" class="input-sm" placeholder="Ex: 70" min="0" max="100" step="5" oninput="app.filterForecastData()">
-            </div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="forecastFilterMinChance">Meta Chance Acerto &ge; (%)</label>
+                <input type="number" id="forecastFilterMinChance" class="input-sm" placeholder="Ex: 70" min="0" max="100" step="5" oninput="app.filterForecastData()">
+              </div>
 
-            <div class="form-group" style="margin-bottom: 0;">
-              <label for="forecastFilterMinAccuracy">Acurácia Ensemble &ge; (%)</label>
-              <input type="number" id="forecastFilterMinAccuracy" class="input-sm" placeholder="Ex: 50" min="0" max="100" step="1" oninput="app.filterForecastData()">
-				</div>
-			</div>
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="forecastFilterMinAccuracy">Acurácia Ensemble &ge; (%)</label>
+                <input type="number" id="forecastFilterMinAccuracy" class="input-sm" placeholder="Ex: 50" min="0" max="100" step="1" oninput="app.filterForecastData()">
+              </div>
+            </div>
           </div>
         </div>
 
@@ -866,7 +871,7 @@
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
             <div>
               <h2 class="card-title" style="margin-bottom: 0.25rem;">📊 Mapa Visual Direcional de Oportunidades</h2>
-                  <p class="subtitle" style="margin: 0; font-size: 0.85rem;">Meta Chance de Acerto (%) vs. Acurácia do Ensemble (%). Os marcadores refletem o Viés Estatístico e a Consistência do Modelo.</p>
+              <p class="subtitle" style="margin: 0; font-size: 0.85rem;">Meta Chance de Acerto (%) vs. Acurácia do Ensemble (%). Os marcadores refletem o Viés Estatístico e a Consistência do Modelo.</p>
             </div>
             <div id="forecastChartStats" style="font-weight: 600; font-size: 0.85rem; color: var(--accent-light);"></div>
           </div>
@@ -891,7 +896,7 @@
                   <th onclick="app.sortForecastTable('preco')" style="cursor: pointer;">Preço ⇳</th>
                   <th onclick="app.sortForecastTable('tendencia')" style="cursor: pointer;">Viés Estatístico ⇳</th>
                   <th onclick="app.sortForecastTable('forca_sinal')" style="cursor: pointer;">Consistência do Modelo ⇳</th>
-                  <th onclick="app.sortForecastTable('meta_chance_acerto_pct')" style="cursor: pointer;">Meta Prob. ⇳</th>
+                  <th onclick="app.sortForecastTable('meta_chance_acerto_pct')" style="cursor: pointer;">Meta Chance Acerto ⇳</th>
                   <th onclick="app.sortForecastTable('acuracia_ens_pct')" style="cursor: pointer;">Acurácia Ensemble ⇳</th>
                   <th onclick="app.sortForecastTable('prob_subir_pct')" style="cursor: pointer;">Prob. Subir ⇳</th>
                   <th onclick="app.sortForecastTable('data_previsao')" style="cursor: pointer;">Data Previsão ⇳</th>
@@ -925,8 +930,10 @@
           <button class="btn btn-sm btn-period" onclick="app.setSummaryPeriod('year')" id="btn-period-year" style="width: auto;">Ano</button>
         </div>      
         <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: 12px; gap: 4px;">
-          <button class="btn btn-sm btn-summary-filter" onclick="app.setSummaryFilter('geral')" id="btn-filter-geral" style="width: auto;">Geral</button>
+          <!--<button class="btn btn-sm btn-summary-filter active" onclick="app.setSummaryFilter('geral')" id="btn-filter-geral" style="width: auto;">Geral</button>-->
+		  <button class="btn btn-sm btn-summary-filter" onclick="app.setSummaryFilter('geral')" id="btn-filter-geral" style="width: auto;">Geral</button>
           <button class="btn btn-sm btn-summary-filter" onclick="app.setSummaryFilter('liquid')" id="btn-filter-liquid" style="width: auto;">Liquidez</button>
+          <!--<button class="btn btn-sm btn-summary-filter" onclick="app.setSummaryFilter('ibov')" id="btn-filter-ibov" style="width: auto;">IBOV</button>-->
           <button class="btn btn-sm btn-summary-filter active" onclick="app.setSummaryFilter('ibov')" id="btn-filter-ibov" style="width: auto;">IBOV</button>
 
         </div>
@@ -1448,7 +1455,7 @@
     </div>
   </div>
 
-<!-- Modal: Termos de Uso do Módulo Preditivo (Click-Wrap) -->
+  <!-- Modal: Termos de Uso do Módulo Preditivo (Click-Wrap) -->
   <div class="modal-overlay" id="forecastTermsModalOverlay" style="display: none; z-index: 10000; background: rgba(10, 15, 29, 0.85); backdrop-filter: blur(8px);">
     <div class="modal glass" id="forecastTermsModal" style="max-width: 640px; width: 92%; border: 1px solid rgba(99, 102, 241, 0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
       <div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
