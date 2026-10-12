@@ -271,7 +271,8 @@ class B3App {
       this.loadMarketSummary(),
       this.loadPortfolio(),
       this.loadMarketData(true), // true = load only essential market_data.json
-      this.loadMarketFinancials() // Carrega demonstrativos para o monitor
+      this.loadMarketFinancials(), // Carrega demonstrativos para o monitor
+	  this.loadForecastData() // Previsão/Tendências
     ]);
 
     // 3. Análise inicial para liberar o dashboard rapidamente
