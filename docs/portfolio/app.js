@@ -544,6 +544,10 @@ class B3App {
       this.renderScreener();
     }
 
+   if (name === 'forecast') {
+      this.renderForecastPage();
+    }
+
     if (name === 'taxes') {
       if (!this.user) {
         this.openAuthModal('register', 'taxes');
@@ -803,6 +807,10 @@ class B3App {
 	  // Screener area
       if (this.$('screenerGuestAlert')) this.$('screenerGuestAlert').classList.add('hidden');
 
+      // Forecast area
+      if (this.$('forecastGuestAlert')) this.$('forecastGuestAlert').classList.add('hidden');
+      if (this.$('forecastContent')) this.$('forecastContent').classList.remove('forecast-guest-locked');
+
       // Admin Panel
       // Note: Admin management is handled via Google Sheets in this version
       this.$('adminPanel').classList.add('hidden');
@@ -827,6 +835,10 @@ class B3App {
 
       // Screener area
       if (this.$('screenerGuestAlert')) this.$('screenerGuestAlert').classList.remove('hidden');
+
+      // Forecast area
+      if (this.$('forecastGuestAlert')) this.$('forecastGuestAlert').classList.remove('hidden');
+      if (this.$('forecastContent')) this.$('forecastContent').classList.add('forecast-guest-locked');
 
       if (this.currentPage === 'dividends') this.showPage('dashboard');
     }
@@ -5463,6 +5475,375 @@ class B3App {
     }).join('');
   }
 
+ /* ------------------------------------------------------------------
+     TENDÊNCIAS / MAPA DE PREVISÕES (FORECAST)
+  ------------------------------------------------------------------ */
+  async loadForecastData() {
+    if (this.forecastLoading) return;
+    this.forecastLoading = true;
+    try {
+      const resp = await fetch('data/forecast.csv');
+      if (!resp.ok) throw new Error(`HTTP error! status: ${resp.status}`);
+      const text = await resp.text();
+      this.forecastData = this.parseForecastCSV(text);
+      console.log('Loaded forecast data:', this.forecastData.length, 'records');
+    } catch (err) {
+      console.error('Error loading forecast CSV:', err);
+      this.forecastData = [];
+    } finally {
+      this.forecastLoading = false;
+    }
+  }
+
+  parseForecastCSV(csvText) {
+    const lines = csvText.trim().split(/\r?\n/);
+    if (lines.length < 2) return [];
+
+    const headers = lines[0].split(',').map(h => h.trim());
+    const data = [];
+
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (!line) continue;
+
+      const cols = line.split(',');
+      if (cols.length < headers.length) continue;
+
+      const obj = {};
+      headers.forEach((h, idx) => {
+        let val = cols[idx] ? cols[idx].trim() : '';
+        obj[h] = val;
+      });
+
+      const parseNum = (val) => {
+        if (!val) return 0;
+        return parseFloat(val.replace(',', '.')) || 0;
+      };
+
+      const rawTicker = obj['ativo'] || '';
+      const tickerClean = rawTicker.replace('.SA', '').replace('BMFBOVESPA:', '').trim();
+
+      data.push({
+        rawTicker: rawTicker,
+        ticker: tickerClean,
+        tickerSA: rawTicker.endsWith('.SA') ? rawTicker : `${tickerClean}.SA`,
+        data_ult_cotacao: obj['data_ult_cotacao'] || '',
+        data_previsao: obj['data_previsao'] || '',
+        preco: parseNum(obj['preco']),
+        acuracia_rf_pct: parseNum(obj['acuracia_rf_pct']),
+        acuracia_xgb_pct: parseNum(obj['acuracia_xgb_pct']),
+        acuracia_ens_pct: parseNum(obj['acuracia_ens_pct']),
+        prob_rf_pct: parseNum(obj['prob_rf_pct']),
+        prob_xgb_pct: parseNum(obj['prob_xgb_pct']),
+        tendencia: (obj['tendencia'] || 'CAI').toUpperCase(),
+        prob_subir_pct: parseNum(obj['prob_subir_pct']),
+        confianca_pct: parseNum(obj['confianca_pct']),
+        meta_chance_acerto_pct: parseNum(obj['meta_chance_acerto_pct']),
+        forca_sinal: (obj['forca_sinal'] || 'MEDIA').toUpperCase(),
+        horizonte_dias: parseNum(obj['horizonte_dias']) || 5
+      });
+    }
+
+    return data;
+  }
+
+  async renderForecastPage() {
+    if (!this.forecastData || this.forecastData.length === 0) {
+      await this.loadForecastData();
+    }
+    this.filterForecastData();
+  }
+
+  resetForecastFilters() {
+    if (this.$('forecastSearchInput')) this.$('forecastSearchInput').value = '';
+    if (this.$('forecastFilterSignal')) this.$('forecastFilterSignal').value = 'ALL';
+    if (this.$('forecastFilterTrend')) this.$('forecastFilterTrend').value = 'ALL';
+    if (this.$('forecastFilterMinChance')) this.$('forecastFilterMinChance').value = '';
+    if (this.$('forecastFilterMinAccuracy')) this.$('forecastFilterMinAccuracy').value = '';
+    this.filterForecastData();
+  }
+
+  filterForecastData() {
+    if (!this.forecastData) return;
+
+    const searchTerm = (this.$('forecastSearchInput')?.value || '').toLowerCase().trim();
+    const signalFilter = this.$('forecastFilterSignal')?.value || 'ALL';
+    const trendFilter = this.$('forecastFilterTrend')?.value || 'ALL';
+    const minChance = parseFloat(this.$('forecastFilterMinChance')?.value) || 0;
+    const minAccuracy = parseFloat(this.$('forecastFilterMinAccuracy')?.value) || 0;
+
+    let filtered = this.forecastData.filter(item => {
+      if (searchTerm && !item.ticker.toLowerCase().includes(searchTerm)) {
+        return false;
+      }
+      if (signalFilter !== 'ALL' && item.forca_sinal !== signalFilter) {
+        return false;
+      }
+      if (trendFilter !== 'ALL' && item.tendencia !== trendFilter) {
+        return false;
+      }
+      if (minChance > 0 && item.meta_chance_acerto_pct < minChance) {
+        return false;
+      }
+      if (minAccuracy > 0 && item.acuracia_ens_pct < minAccuracy) {
+        return false;
+      }
+      return true;
+    });
+
+    this.renderForecastScatterChart(filtered);
+    this.renderForecastTable(filtered);
+  }
+
+  renderForecastScatterChart(filteredData) {
+    const ctx = this.$('forecastScatterChart')?.getContext('2d');
+    if (!ctx) return;
+
+    if (this.forecastChart) {
+      this.forecastChart.destroy();
+      this.forecastChart = null;
+    }
+
+    const dataSobe = filteredData.filter(d => d.tendencia === 'SOBE').map(d => ({
+      x: d.acuracia_ens_pct,
+      y: d.meta_chance_acerto_pct,
+      item: d
+    }));
+
+    const dataCai = filteredData.filter(d => d.tendencia === 'CAI').map(d => ({
+      x: d.acuracia_ens_pct,
+      y: d.meta_chance_acerto_pct,
+      item: d
+    }));
+
+    const statsEl = this.$('forecastChartStats');
+    if (statsEl) {
+      statsEl.innerHTML = `Exibindo <strong>${filteredData.length}</strong> de ${this.forecastData.length} ativos (<span style="color: var(--green);">🟩 ${dataSobe.length} SOBE</span> / <span style="color: var(--red);">🟥 ${dataCai.length} CAI</span>)`;
+    }
+
+    const appRef = this;
+    const tickerBadgePlugin = {
+      id: 'tickerBadgePlugin',
+      afterDatasetsDraw: (chart) => {
+        const { ctx } = chart;
+        ctx.save();
+        chart.data.datasets.forEach((dataset, datasetIndex) => {
+          const meta = chart.getDatasetMeta(datasetIndex);
+          meta.data.forEach((element, index) => {
+            const raw = dataset.data[index];
+            if (!raw || !raw.item) return;
+
+            const { x, y } = element.tooltipPosition();
+            const ticker = raw.item.ticker;
+            const isSobe = raw.item.tendencia === 'SOBE';
+
+            ctx.font = 'bold 11px Inter, sans-serif';
+            const textWidth = ctx.measureText(ticker).width;
+            const paddingX = 6;
+            const paddingY = 3;
+            const boxWidth = textWidth + paddingX * 2 + 10;
+            const boxHeight = 18;
+
+            const boxX = x - boxWidth / 2;
+            const boxY = y - boxHeight - 8;
+
+            ctx.beginPath();
+            ctx.fillStyle = isSobe ? 'rgba(34, 197, 94, 0.95)' : 'rgba(239, 68, 68, 0.95)';
+            ctx.strokeStyle = isSobe ? '#15803d' : '#991b1b';
+            ctx.lineWidth = 1;
+
+            if (ctx.roundRect) {
+              ctx.roundRect(boxX, boxY, boxWidth, boxHeight, 4);
+            } else {
+              ctx.rect(boxX, boxY, boxWidth, boxHeight);
+            }
+            ctx.fill();
+            ctx.stroke();
+
+            ctx.fillStyle = '#ffffff';
+            ctx.textAlign = 'left';
+            ctx.textBaseline = 'middle';
+            const arrow = isSobe ? '▲' : '▼';
+            ctx.fillText(`${arrow} ${ticker}`, boxX + paddingX, boxY + boxHeight / 2);
+          });
+        });
+        ctx.restore();
+      }
+    };
+
+    this.forecastChart = new Chart(ctx, {
+      type: 'scatter',
+      plugins: [tickerBadgePlugin],
+      data: {
+        datasets: [
+          {
+            label: 'SOBE (Tendência de Alta)',
+            data: dataSobe,
+            backgroundColor: 'rgba(34, 197, 94, 0.8)',
+            borderColor: '#22c55e',
+            pointRadius: 6,
+            pointHoverRadius: 9,
+          },
+          {
+            label: 'CAI (Tendência de Queda)',
+            data: dataCai,
+            backgroundColor: 'rgba(239, 68, 68, 0.8)',
+            borderColor: '#ef4444',
+            pointRadius: 6,
+            pointHoverRadius: 9,
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        onClick: (evt, activeEls) => {
+          if (activeEls.length > 0) {
+            const first = activeEls[0];
+            const dataset = this.forecastChart.data.datasets[first.datasetIndex];
+            const pointData = dataset.data[first.index];
+            if (pointData && pointData.item) {
+              this.showMonitor(pointData.item.ticker);
+            }
+          }
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Acurácia do Ensemble (%)',
+              color: '#9ca3af',
+              font: { weight: 'bold', size: 12 }
+            },
+            grid: { color: 'rgba(255,255,255,0.06)' },
+            ticks: { color: '#e5e7eb' }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Meta Chance de Acerto (%)',
+              color: '#9ca3af',
+              font: { weight: 'bold', size: 12 }
+            },
+            grid: { color: 'rgba(255,255,255,0.06)' },
+            ticks: { color: '#e5e7eb' }
+          }
+        },
+        plugins: {
+          legend: {
+            labels: { color: '#f3f4f6', font: { weight: 'bold' } }
+          },
+          tooltip: {
+            backgroundColor: 'rgba(17, 24, 39, 0.95)',
+            titleColor: '#6366f1',
+            bodyColor: '#f3f4f6',
+            borderColor: 'rgba(255, 255, 255, 0.15)',
+            borderWidth: 1,
+            padding: 12,
+            callbacks: {
+              title: (tooltipItems) => {
+                const item = tooltipItems[0]?.raw?.item;
+                return item ? `${item.ticker} (${item.rawTicker})` : '';
+              },
+              label: (context) => {
+                const item = context.raw.item;
+                if (!item) return '';
+                return [
+                  `Preço: R$ ${appRef.formatNumber(item.preco, 2)}`,
+                  `Tendência: ${item.tendencia === 'SOBE' ? '🟩 SOBE' : '🟥 CAI'}`,
+                  `Força do Sinal: ${item.forca_sinal}`,
+                  `Meta Chance de Acerto: ${appRef.formatNumber(item.meta_chance_acerto_pct, 1)}%`,
+                  `Acurácia Ensemble: ${appRef.formatNumber(item.acuracia_ens_pct, 1)}%`,
+                  `Prob. Subir: ${appRef.formatNumber(item.prob_subir_pct, 1)}%`,
+                  `Data Previsão: ${item.data_previsao}`,
+                  `💡 Clique para abrir Análise do Ativo`
+                ];
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  sortForecastTable(col) {
+    if (this.forecastSortCol === col) {
+      this.forecastSortAsc = !this.forecastSortAsc;
+    } else {
+      this.forecastSortCol = col;
+      this.forecastSortAsc = true;
+    }
+    this.filterForecastData();
+  }
+
+  renderForecastTable(data) {
+    const matchEl = this.$('forecastMatchCount');
+    if (matchEl) {
+      matchEl.textContent = `${data.length} ativo(s) em destaque`;
+    }
+
+    const tbody = this.$('forecastTableBody');
+    if (!tbody) return;
+
+    if (!data || data.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="9" class="empty-state">Nenhum ativo atende aos critérios selecionados.</td></tr>';
+      return;
+    }
+
+    const col = this.forecastSortCol || 'meta_chance_acerto_pct';
+    const asc = this.forecastSortAsc !== undefined ? this.forecastSortAsc : false;
+
+    const sorted = [...data].sort((a, b) => {
+      let va = a[col];
+      let vb = b[col];
+
+      if (typeof va === 'string') {
+        va = va.toLowerCase();
+        vb = (vb || '').toLowerCase();
+      }
+
+      if (va < vb) return asc ? -1 : 1;
+      if (va > vb) return asc ? 1 : -1;
+      return 0;
+    });
+
+    tbody.innerHTML = sorted.map(r => {
+      const logoHtml = this.getAssetLogoHTML(r.tickerSA, 24);
+      const isSobe = r.tendencia === 'SOBE';
+      const trendBadge = isSobe
+        ? `<span class="badge badge-success" style="background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700;">🟩 SOBE</span>`
+        : `<span class="badge badge-danger" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700;">🟥 CAI</span>`;
+
+      const signalBadge = r.forca_sinal === 'ALTA'
+        ? `<span class="badge" style="background: rgba(99, 102, 241, 0.2); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.4); padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600;">⚡ ALTA</span>`
+        : r.forca_sinal === 'MEDIA'
+        ? `<span class="badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600;">🔹 MÉDIA</span>`
+        : `<span class="badge" style="background: rgba(156, 163, 175, 0.2); color: #9ca3af; border: 1px solid rgba(156, 163, 175, 0.4); padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600;">🔸 BAIXA</span>`;
+
+      return `
+        <tr>
+          <td>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              ${logoHtml}
+              <a href="#" onclick="event.preventDefault(); app.showMonitor('${r.ticker}')" class="ticker-link news-card-ticker"><strong>${r.ticker}</strong></a>
+            </div>
+          </td>
+          <td style="font-weight: 600;">R$ ${this.formatNumber(r.preco, 2)}</td>
+          <td>${trendBadge}</td>
+          <td>${signalBadge}</td>
+          <td style="font-weight: 700; color: var(--accent-light);">${this.formatNumber(r.meta_chance_acerto_pct, 1)}%</td>
+          <td style="font-weight: 600;">${this.formatNumber(r.acuracia_ens_pct, 1)}%</td>
+          <td>${this.formatNumber(r.prob_subir_pct, 1)}%</td>
+          <td style="font-size: 0.85rem; color: var(--text-muted);">${r.data_previsao}</td>
+          <td style="text-align: center;">
+            <button class="btn btn-outline btn-sm" onclick="app.showMonitor('${r.ticker}')" title="Análise do Ativo" style="padding: 0.25rem 0.6rem; font-size: 0.8rem; border-radius: 6px;">
+              📊 Analisar
+            </button>
+          </td>
+        </tr>
+      `;
+    }).join('');
+  }
 
 }
 

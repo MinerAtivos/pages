@@ -70,6 +70,9 @@
       <a href="#" class="nav-link" data-section="news" id="nav-news">
         <span class="nav-icon">🤖</span> Market Research (IA)
       </a>
+	  <a href="#" class="nav-link" data-section="forecast" id="nav-forecast">
+        <span class="nav-icon">🔮</span> Tendências
+      </a>	  
       <a href="#" class="nav-link" data-section="members" id="nav-members">
         <span class="nav-icon">👤</span> Área de Membros
       </a>
@@ -789,6 +792,113 @@
 	  <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️ Este conteúdo foi consolidado por inteligência artificial com base em padrões de linguagem e probabilidade, podendo conter erros. Além disso, o conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
 
     </section>
+
+
+    <!-- ============================================================ -->
+    <!-- MAPA DE TENDÊNCIAS / OPORTUNIDADES -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="forecast" id="page-forecast">
+      <div class="page-header">
+        <h1>🔮 Tendências de Mercado</h1>
+        <p class="subtitle" id="forecastSubTitle">Previsão quantitativa de ativos baseada em modelos estatísticos e aprendizado de máquina</p>
+      </div>
+
+      <div class="alert alert-info glass" id="forecastGuestAlert">
+        <strong>🔒 Área Exclusiva para Membros:</strong> Faça login para visualizar o Mapa de Oportunidades completo e a tabela interativa com estatísticas de probabilidade e acurácia.
+      </div>
+
+      <div id="forecastContent">
+        <!-- Toolbar & Combinable Filters -->
+        <div class="card glass" style="margin-bottom: 1.5rem; padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+            <h2 class="card-title" style="margin: 0; font-size: 1.1rem;">⚙️ Filtros do Modelo</h2>
+            <div class="form-inline" style="flex: 1; max-width: 320px;">
+              <input type="text" id="forecastSearchInput" class="input-sm" placeholder="🔍 Buscar ativo (Ex: CMIG3)..." style="width: 100%;" oninput="app.filterForecastData()">
+            </div>
+            <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
+              🔄 Limpar Filtros
+            </button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="forecastFilterSignal">Força do Sinal</label>
+              <select id="forecastFilterSignal" class="input-sm" onchange="app.filterForecastData()">
+                <option value="ALL">Todos os Sinais</option>
+                <option value="ALTA">Alta Convicção (ALTA)</option>
+                <option value="MEDIA">Média Convicção (MÉDIA)</option>
+                <option value="BAIXA">Baixa Convicção (BAIXA)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="forecastFilterTrend">Tendência</label>
+              <select id="forecastFilterTrend" class="input-sm" onchange="app.filterForecastData()">
+                <option value="ALL">Todas</option>
+                <option value="SOBE">🟩 SOBE (Alta)</option>
+                <option value="CAI">🟥 CAI (Queda)</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="forecastFilterMinChance">Meta Chance Acerto &ge; (%)</label>
+              <input type="number" id="forecastFilterMinChance" class="input-sm" placeholder="Ex: 70" min="0" max="100" step="5" oninput="app.filterForecastData()">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="forecastFilterMinAccuracy">Acurácia Ensemble &ge; (%)</label>
+              <input type="number" id="forecastFilterMinAccuracy" class="input-sm" placeholder="Ex: 50" min="0" max="100" step="1" oninput="app.filterForecastData()">
+            </div>
+          </div>
+        </div>
+
+        <!-- Scatter Chart Card -->
+        <div class="card glass" style="margin-bottom: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+            <div>
+              <h2 class="card-title" style="margin-bottom: 0.25rem;">📊 Mapa Visual Direcional de Oportunidades</h2>
+              <p class="subtitle" style="margin: 0; font-size: 0.85rem;">Meta Chance de Acerto (%) vs. Acurácia do Ensemble (%). Os ícones indicam a tendência (🟩 SOBE / 🟥 CAI).</p>
+            </div>
+            <div id="forecastChartStats" style="font-weight: 600; font-size: 0.85rem; color: var(--accent-light);"></div>
+          </div>
+          <div class="chart-container" style="height: 480px; position: relative;">
+            <canvas id="forecastScatterChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Detailed Table Card -->
+        <div class="card glass" id="forecastTableCard">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h2 class="card-title" style="margin: 0;">Tabela Detalhada dos Ativos em Destaque</h2>
+            <div id="forecastMatchCount" style="font-weight: 600; color: var(--text-secondary); font-size: 0.9rem;">
+              Carregando dados...
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table id="forecastTable">
+              <thead>
+                <tr>
+                  <th onclick="app.sortForecastTable('ativo')" style="cursor: pointer;">Ativo ⇳</th>
+                  <th onclick="app.sortForecastTable('preco')" style="cursor: pointer;">Preço ⇳</th>
+                  <th onclick="app.sortForecastTable('tendencia')" style="cursor: pointer;">Tendência ⇳</th>
+                  <th onclick="app.sortForecastTable('forca_sinal')" style="cursor: pointer;">Força Sinal ⇳</th>
+                  <th onclick="app.sortForecastTable('meta_chance_acerto_pct')" style="cursor: pointer;">Meta Chance Acerto ⇳</th>
+                  <th onclick="app.sortForecastTable('acuracia_ens_pct')" style="cursor: pointer;">Acurácia Ensemble ⇳</th>
+                  <th onclick="app.sortForecastTable('prob_subir_pct')" style="cursor: pointer;">Prob. Subir ⇳</th>
+                  <th onclick="app.sortForecastTable('data_previsao')" style="cursor: pointer;">Data Previsão ⇳</th>
+                  <th style="text-align: center;">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="forecastTableBody">
+                <tr><td colspan="9" class="empty-state">Carregando previsão...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️ Disclaimer: Os dados apresentados resultam de algoritmos quantitativos e aprendizado de máquina apenas para fins estatísticos e educacionais. Não constituem recomendação de investimento.</p>
+    </section>
+
 
     <!-- ============================================================ -->
     <!-- RESUMO DE MERCADO -->
