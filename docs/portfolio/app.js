@@ -5903,7 +5903,7 @@ onForecastTermsCheckboxChange() {
             borderColor: '#ef4444',
             pointRadius: 6,
             pointHoverRadius: 9,
-			,
+          },
           {
             label: 'Inconsistente',
             data: dataInconsistente,
@@ -6031,7 +6031,7 @@ onForecastTermsCheckboxChange() {
 
     tbody.innerHTML = sorted.map(r => {
       const logoHtml = this.getAssetLogoHTML(r.tickerSA, 24);
-      onst bias = this.getStatisticalBias(r);
+      const bias = this.getStatisticalBias(r);
       const consistency = this.getModelConsistency(r);
 
       return `
