@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-10-09
+## Resumo de Mercado - 2026-10-13
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 10.27 | R$ 7.19 | **+42.84%** 🚀 | +66.17% ⬆️ |
-| WEST3.SA | Westwing Comércio Varejista S.A. | R$ 5.50 | R$ 4.12 | **+33.50%** 🚀 | +704.80% ⬆️ |
-| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 2.34 | R$ 1.80 | **+30.00%** 🚀 | +314.16% ⬆️ |
-| MRVE3.SA | MRV Engenharia e Participações S.A. | R$ 7.82 | R$ 6.43 | **+21.62%** 🚀 | +128.65% ⬆️ |
-| LJQQ3.SA | Lojas Quero-Quero S.A. | R$ 2.93 | R$ 2.41 | **+21.58%** 🚀 | +172.12% ⬆️ |
+| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 4.09 | R$ 2.34 | **+74.79%** 🚀 | +2158.78% ⬆️ |
+| JFEN3.SA | João Fortes Engenharia S.A. | R$ 3.17 | R$ 2.16 | **+46.76%** 🚀 | +152.23% ⬆️ |
+| LUPA3.SA | Lupatech S.A. | R$ 4.78 | R$ 4.13 | **+15.74%** 🚀 | +177.48% ⬆️ |
+| CCTY3.SA | RDVC City S.A. | R$ 5.56 | R$ 5.00 | **+11.20%** 🚀 | +84.62% ⬆️ |
+| TCSA3.SA | Tecnisa S.A. | R$ 0.73 | R$ 0.66 | **+10.61%** 🚀 | +588.51% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| BDLL3.SA | Bardella S.A. Indústrias Mecânicas | R$ 5.10 | R$ 5.60 | **-8.93%** 📉 | -69.44% ⬇️ |
-| FESA3.SA | Cia de Ferro Ligas da Bahia S.A. - FERBASA | R$ 10.11 | R$ 10.89 | **-7.16%** 📉 | -27.78% ⬇️ |
-| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.15 | R$ 0.16 | **-6.25%** 📉 | +4.84% ⬆️ |
-| GSHP3.SA | General Shopping e Outlets do Brasil S.A. | R$ 3.76 | R$ 4.01 | **-6.23%** 📉 | +20.00% ⬆️ |
-| FICT3.SA | Fictor Alimentos S.A. | R$ 0.36 | R$ 0.38 | **-5.26%** 📉 | +38.71% ⬆️ |
+| PTBL3.SA | PBG S.A. | R$ 2.80 | R$ 3.28 | **-14.63%** 📉 | +49.50% ⬆️ |
+| SNSY5.SA | Sansuy S.A. | R$ 2.48 | R$ 2.80 | **-11.43%** 📉 | +132.58% ⬆️ |
+| GFSA3.SA | Gafisa S.A. | R$ 0.39 | R$ 0.44 | **-11.36%** 📉 | +62.15% ⬆️ |
+| VAMO3.SA | Vamos Locação de Caminhões, Máquinas e Equipamentos S.A. | R$ 6.09 | R$ 6.86 | **-11.22%** 📉 | +63.05% ⬆️ |
+| JSLG3.SA | JSL S.A. | R$ 11.53 | R$ 12.84 | **-10.20%** 📉 | +128.82% ⬆️ |
