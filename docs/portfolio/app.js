@@ -10,7 +10,7 @@ class B3App {
     // 3. Implantar > App da Web (Quem tem acesso: "Qualquer pessoa").
     // 4. Copie a URL gerada e cole abaixo:
     // this.GAS_URL = "https://script.google.com/macros/s/AKfycbyIQkk8nPe2ROYHPbMbvfm6EZV8TvSneHgnKovW7JoVxbMrVjF3Bs-0SG_Ps6uLk1NY5Q/exec";
-	this.GAS_URL = "https://script.google.com/macros/s/AKfycbx62T6RHS0G81LX-e2t_pKC-wBqejxVlIhAz8psCk_rivEYr83151m6zP-x0phpbF3u/exec";
+	this.GAS_URL = "https://script.google.com/macros/s/AKfycbwWUUVfYa4YX6tU0zqK6CaDVGmPsXIn5WPin8OwCsR5e2L_pB81F7sE3jJkiv5Kk9Pf/exec";
 
     this.portfolio = { name: 'Meu Portfólio', positions: [] };
     this.user = null; // { username: '...' } if logged in
