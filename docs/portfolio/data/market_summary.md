@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-10-13
+## Resumo de Mercado - 2026-10-14
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 4.09 | R$ 2.34 | **+74.79%** 🚀 | +2158.78% ⬆️ |
-| JFEN3.SA | João Fortes Engenharia S.A. | R$ 3.17 | R$ 2.16 | **+46.76%** 🚀 | +152.23% ⬆️ |
-| LUPA3.SA | Lupatech S.A. | R$ 4.78 | R$ 4.13 | **+15.74%** 🚀 | +177.48% ⬆️ |
-| CCTY3.SA | RDVC City S.A. | R$ 5.56 | R$ 5.00 | **+11.20%** 🚀 | +84.62% ⬆️ |
-| TCSA3.SA | Tecnisa S.A. | R$ 0.73 | R$ 0.66 | **+10.61%** 🚀 | +588.51% ⬆️ |
+| JFEN3.SA | João Fortes Engenharia S.A. | R$ 3.89 | R$ 3.17 | **+22.71%** 🚀 | +161.91% ⬆️ |
+| TCSA3.SA | Tecnisa S.A. | R$ 0.89 | R$ 0.73 | **+21.92%** 🚀 | +376.51% ⬆️ |
+| AERI3.SA | Aeris Indústria e Comércio de Equipamentos para Geração de Energia S.A. | R$ 2.55 | R$ 2.26 | **+12.83%** 🚀 | +682.92% ⬆️ |
+| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 4.57 | R$ 4.09 | **+11.74%** 🚀 | +1201.94% ⬆️ |
+| HOOT4.SA | Hotéis Othon S.A. | R$ 8.74 | R$ 8.14 | **+7.37%** 🚀 | -53.86% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| PTBL3.SA | PBG S.A. | R$ 2.80 | R$ 3.28 | **-14.63%** 📉 | +49.50% ⬆️ |
-| SNSY5.SA | Sansuy S.A. | R$ 2.48 | R$ 2.80 | **-11.43%** 📉 | +132.58% ⬆️ |
-| GFSA3.SA | Gafisa S.A. | R$ 0.39 | R$ 0.44 | **-11.36%** 📉 | +62.15% ⬆️ |
-| VAMO3.SA | Vamos Locação de Caminhões, Máquinas e Equipamentos S.A. | R$ 6.09 | R$ 6.86 | **-11.22%** 📉 | +63.05% ⬆️ |
-| JSLG3.SA | JSL S.A. | R$ 11.53 | R$ 12.84 | **-10.20%** 📉 | +128.82% ⬆️ |
+| BHIA3.SA | Grupo Casas Bahia S.A. | R$ 1.09 | R$ 1.44 | **-24.31%** 📉 | +178.55% ⬆️ |
+| SEQL3.SA | Sequoia Logística e Transportes S.A. | R$ 0.06 | R$ 0.07 | **-14.29%** 📉 | +50.16% ⬆️ |
+| RVEE3.SA | Revee S.A. | R$ 0.61 | R$ 0.69 | **-11.59%** 📉 | +473.20% ⬆️ |
+| AMER3.SA | Americanas S.A. | R$ 5.71 | R$ 6.40 | **-10.78%** 📉 | +73.19% ⬆️ |
+| IFCM3.SA | Infracommerce CXaaS S.A. | R$ 1.31 | R$ 1.44 | **-9.03%** 📉 | +56.78% ⬆️ |
