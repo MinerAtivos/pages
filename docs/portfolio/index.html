@@ -820,11 +820,17 @@
               <div class="form-inline" style="flex: 1; max-width: 320px;">
                 <input type="text" id="forecastSearchInput" class="input-sm" placeholder="🔍 Buscar ativo (Ex: CMIG3)..." style="width: 100%;" oninput="app.filterForecastData()">
               </div>
-            <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
-              🔄 Limpar Filtros
-            </button>
-			</div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <button class="btn btn-outline btn-sm" id="btnToggleForecastFilters" onclick="app.toggleForecastFilters()" style="width: auto;">
+                ⚙️ Filtros Avançados <span id="forecastFiltersChevron">▼</span>
+              </button>
+              <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
+                🔄 Limpar Filtros
+              </button>
+            </div>
           </div>
+		  
           <!-- Painel de Filtros Recolhível -->
           <div id="forecastCollapsibleFilters" class="collapsible-operations" style="display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
