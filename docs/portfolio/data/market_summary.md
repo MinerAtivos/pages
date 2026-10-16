@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-10-09
+## Resumo de Mercado - 2026-10-15
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 10.27 | R$ 7.19 | **+42.84%** 🚀 | +66.17% ⬆️ |
-| WEST3.SA | Westwing Comércio Varejista S.A. | R$ 5.50 | R$ 4.12 | **+33.50%** 🚀 | +704.80% ⬆️ |
-| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 2.34 | R$ 1.80 | **+30.00%** 🚀 | +314.16% ⬆️ |
-| MRVE3.SA | MRV Engenharia e Participações S.A. | R$ 7.82 | R$ 6.43 | **+21.62%** 🚀 | +128.65% ⬆️ |
-| LJQQ3.SA | Lojas Quero-Quero S.A. | R$ 2.93 | R$ 2.41 | **+21.58%** 🚀 | +172.12% ⬆️ |
+| JFEN3.SA | João Fortes Engenharia S.A. | R$ 5.09 | R$ 3.89 | **+30.85%** 🚀 | +126.74% ⬆️ |
+| VSTE3.SA | Veste S.A. Estilo | R$ 3.79 | R$ 3.27 | **+15.90%** 🚀 | +272.06% ⬆️ |
+| LUXM4.SA | Trevisa Investimentos S.A. | R$ 3.70 | R$ 3.25 | **+13.85%** 🚀 | +0.26% ⬆️ |
+| RVEE3.SA | Revee S.A. | R$ 0.67 | R$ 0.61 | **+9.84%** 🚀 | -42.72% ⬇️ |
+| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 4.98 | R$ 4.57 | **+8.97%** 🚀 | +300.93% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| BDLL3.SA | Bardella S.A. Indústrias Mecânicas | R$ 5.10 | R$ 5.60 | **-8.93%** 📉 | -69.44% ⬇️ |
-| FESA3.SA | Cia de Ferro Ligas da Bahia S.A. - FERBASA | R$ 10.11 | R$ 10.89 | **-7.16%** 📉 | -27.78% ⬇️ |
-| AMBP3.SA | Ambipar Participações e Empreendimentos S.A. | R$ 0.15 | R$ 0.16 | **-6.25%** 📉 | +4.84% ⬆️ |
-| GSHP3.SA | General Shopping e Outlets do Brasil S.A. | R$ 3.76 | R$ 4.01 | **-6.23%** 📉 | +20.00% ⬆️ |
-| FICT3.SA | Fictor Alimentos S.A. | R$ 0.36 | R$ 0.38 | **-5.26%** 📉 | +38.71% ⬆️ |
+| PDGR3.SA | PDG Realty S.A. Empreendimentos e Participações | R$ 0.90 | R$ 1.20 | **-25.00%** 📉 | +962.38% ⬆️ |
+| CTKA3.SA | Karsten S.A. | R$ 34.00 | R$ 40.00 | **-15.00%** 📉 | -50.00% ⬇️ |
+| PLPL3.SA | Plano & Plano Desenvolvimento Imobiliário S.A. | R$ 7.37 | R$ 8.23 | **-10.45%** 📉 | +179.31% ⬆️ |
+| LUPA3.SA | Lupatech S.A. | R$ 4.35 | R$ 4.80 | **-9.38%** 📉 | -29.12% ⬇️ |
+| DIRR3.SA | Direcional Engenharia S.A. | R$ 10.58 | R$ 11.66 | **-9.26%** 📉 | +274.71% ⬆️ |
