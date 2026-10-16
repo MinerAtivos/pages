@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-10-15
+## Resumo de Mercado - 2026-10-16
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| JFEN3.SA | João Fortes Engenharia S.A. | R$ 5.09 | R$ 3.89 | **+30.85%** 🚀 | +126.74% ⬆️ |
-| VSTE3.SA | Veste S.A. Estilo | R$ 3.79 | R$ 3.27 | **+15.90%** 🚀 | +272.06% ⬆️ |
-| LUXM4.SA | Trevisa Investimentos S.A. | R$ 3.70 | R$ 3.25 | **+13.85%** 🚀 | +0.26% ⬆️ |
-| RVEE3.SA | Revee S.A. | R$ 0.67 | R$ 0.61 | **+9.84%** 🚀 | -42.72% ⬇️ |
-| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 4.98 | R$ 4.57 | **+8.97%** 🚀 | +300.93% ⬆️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 12.55 | R$ 10.90 | **+15.14%** 🚀 | -66.31% ⬇️ |
+| GSHP3.SA | General Shopping e Outlets do Brasil S.A. | R$ 4.10 | R$ 3.76 | **+9.04%** 🚀 | +23.81% ⬆️ |
+| NUTR3.SA | Nutriplant Indústria e Comércio S/A | R$ 2.59 | R$ 2.40 | **+7.92%** 🚀 | -36.17% ⬇️ |
+| MGLU3.SA | Magazine Luiza S.A. | R$ 11.11 | R$ 10.39 | **+6.93%** 🚀 | +68.08% ⬆️ |
+| DOTZ3.SA | Dotz S.A. | R$ 13.45 | R$ 12.59 | **+6.83%** 🚀 | -76.13% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| PDGR3.SA | PDG Realty S.A. Empreendimentos e Participações | R$ 0.90 | R$ 1.20 | **-25.00%** 📉 | +962.38% ⬆️ |
-| CTKA3.SA | Karsten S.A. | R$ 34.00 | R$ 40.00 | **-15.00%** 📉 | -50.00% ⬇️ |
-| PLPL3.SA | Plano & Plano Desenvolvimento Imobiliário S.A. | R$ 7.37 | R$ 8.23 | **-10.45%** 📉 | +179.31% ⬆️ |
-| LUPA3.SA | Lupatech S.A. | R$ 4.35 | R$ 4.80 | **-9.38%** 📉 | -29.12% ⬇️ |
-| DIRR3.SA | Direcional Engenharia S.A. | R$ 10.58 | R$ 11.66 | **-9.26%** 📉 | +274.71% ⬆️ |
+| PDGR3.SA | PDG Realty S.A. Empreendimentos e Participações | R$ 0.25 | R$ 0.90 | **-72.22%** 📉 | +8003.19% ⬆️ |
+| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 3.77 | R$ 4.98 | **-24.30%** 📉 | +181.75% ⬆️ |
+| EQPA5.SA | Equatorial Pará Distribuidora de Energia S.A. | R$ 6.80 | R$ 7.90 | **-13.92%** 📉 | 0.00% — |
+| GFSA3.SA | Gafisa S.A. | R$ 0.35 | R$ 0.40 | **-12.50%** 📉 | +72.77% ⬆️ |
+| BRKM6.SA | Braskem S.A. | R$ 3.50 | R$ 3.99 | **-12.28%** 📉 | +1057.89% ⬆️ |
