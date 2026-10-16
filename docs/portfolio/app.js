@@ -10,7 +10,7 @@ class B3App {
     // 3. Implantar > App da Web (Quem tem acesso: "Qualquer pessoa").
     // 4. Copie a URL gerada e cole abaixo:
     // this.GAS_URL = "https://script.google.com/macros/s/AKfycbyIQkk8nPe2ROYHPbMbvfm6EZV8TvSneHgnKovW7JoVxbMrVjF3Bs-0SG_Ps6uLk1NY5Q/exec";
-	this.GAS_URL = "https://script.google.com/macros/s/AKfycbwWUUVfYa4YX6tU0zqK6CaDVGmPsXIn5WPin8OwCsR5e2L_pB81F7sE3jJkiv5Kk9Pf/exec";
+	this.GAS_URL = "https://script.google.com/macros/s/AKfycbx62T6RHS0G81LX-e2t_pKC-wBqejxVlIhAz8psCk_rivEYr83151m6zP-x0phpbF3u/exec";
 
     this.portfolio = { name: 'Meu Portfólio', positions: [] };
     this.user = null; // { username: '...' } if logged in
@@ -5686,6 +5686,69 @@ onForecastTermsCheckboxChange() {
     this.filterForecastData();
   }
 
+  getForecastMarketDetails(item) {
+    if (!this.marketData || !this.marketData.assets) {
+      return { hasNewer: false, fechamento_ult_dia: null, delta_rs: null, delta_pct: null, sparklineCloses: null };
+    }
+
+    const asset = this.marketData.assets[item.tickerSA] ||
+                  this.marketData.assets[item.ticker] ||
+                  this.marketData.assets[item.rawTicker];
+
+    if (!asset || !asset.history || !asset.history.dates || !asset.history.closes || asset.history.dates.length === 0) {
+      return { hasNewer: false, fechamento_ult_dia: null, delta_rs: null, delta_pct: null, sparklineCloses: null };
+    }
+
+    let isoForecastDate = item.data_ult_cotacao;
+    if (isoForecastDate && isoForecastDate.includes('/')) {
+      const parts = isoForecastDate.split('/');
+      if (parts.length === 3) {
+        isoForecastDate = `${parts[2]}-${parts[1].padStart(2, '0')}-${parts[0].padStart(2, '0')}`;
+      }
+    }
+
+    const dates = asset.history.dates;
+    const closes = asset.history.closes;
+    const lastDate = dates[dates.length - 1];
+
+    if (!lastDate || lastDate <= isoForecastDate) {
+      return { hasNewer: false, fechamento_ult_dia: null, delta_rs: null, delta_pct: null, sparklineCloses: null };
+    }
+
+    const fechamento_ult_dia = closes[closes.length - 1];
+    const precoBase = item.preco;
+    const delta_rs = fechamento_ult_dia - precoBase;
+    const delta_pct = precoBase > 0 ? (delta_rs / precoBase) * 100 : 0;
+
+    let startIdx = dates.indexOf(isoForecastDate);
+    if (startIdx === -1) {
+      for (let i = dates.length - 1; i >= 0; i--) {
+        if (dates[i] <= isoForecastDate) {
+          startIdx = i;
+          break;
+        }
+      }
+    }
+
+    let sparklineCloses = [];
+    if (startIdx !== -1) {
+      sparklineCloses = closes.slice(startIdx);
+      if (sparklineCloses.length > 0 && item.preco) {
+        sparklineCloses[0] = item.preco;
+      }
+    } else {
+      sparklineCloses = [item.preco, ...closes];
+    }
+
+    return {
+      hasNewer: true,
+      fechamento_ult_dia,
+      delta_rs,
+      delta_pct,
+      sparklineCloses
+    };
+  }
+
  getStatisticalBias(item) {
     if (item.forca_sinal === 'BAIXA') {
       return {
@@ -5998,6 +6061,60 @@ onForecastTermsCheckboxChange() {
     this.filterForecastData();
   }
 
+  renderForecastSparkline(data, canvasId) {
+    if (!data || data.length === 0) return;
+
+    const ctx = document.getElementById(canvasId);
+    if (!ctx) return;
+
+    const avg = data.reduce((a, b) => a + b, 0) / data.length;
+    const avgLine = data.map(() => avg);
+    const isUp = data[data.length - 1] >= data[0];
+
+    const existingChart = Chart.getChart(ctx);
+    if (existingChart) {
+      existingChart.destroy();
+    }
+
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: data.map((_, i) => i),
+        datasets: [
+          {
+            data: data,
+            borderColor: isUp ? '#00ccff' : '#ffcc00',
+            borderWidth: 1.8,
+            pointRadius: 0,
+            fill: false,
+            tension: 0.3
+          },
+          {
+            data: avgLine,
+            borderColor: 'rgba(255, 255, 255, 0.7)',
+            borderWidth: 1.0,
+            borderDash: [5, 2],
+            pointRadius: 0,
+            fill: false
+          }
+        ]
+      },
+      options: {
+        events: [],
+        responsive: false,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { enabled: false } },
+        scales: {
+          x: { display: false },
+          y: { display: false }
+        }
+      }
+    });
+
+    if (!this.forecastSparkCharts) this.forecastSparkCharts = [];
+    this.forecastSparkCharts.push(chart);
+  }
+
   renderForecastTable(data) {
     const matchEl = this.$('forecastMatchCount');
     if (matchEl) {
@@ -6008,7 +6125,7 @@ onForecastTermsCheckboxChange() {
     if (!tbody) return;
 
     if (!data || data.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="9" class="empty-state">Nenhum ativo atende aos critérios selecionados.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="11" class="empty-state">Nenhum ativo atende aos critérios selecionados.</td></tr>';
       return;
     }
 
@@ -6016,6 +6133,17 @@ onForecastTermsCheckboxChange() {
     const asc = this.forecastSortAsc !== undefined ? this.forecastSortAsc : false;
 
     const sorted = [...data].sort((a, b) => {
+      if (col === 'delta_pct') {
+        const detA = this.getForecastMarketDetails(a);
+        const detB = this.getForecastMarketDetails(b);
+        if (detA.hasNewer && !detB.hasNewer) return -1;
+        if (!detA.hasNewer && detB.hasNewer) return 1;
+        if (!detA.hasNewer && !detB.hasNewer) return 0;
+        let va = detA.delta_pct;
+        let vb = detB.delta_pct;
+        return asc ? (va - vb) : (vb - va);
+      }
+
       let va = a[col];
       let vb = b[col];
 
@@ -6029,10 +6157,29 @@ onForecastTermsCheckboxChange() {
       return 0;
     });
 
-    tbody.innerHTML = sorted.map(r => {
+    tbody.innerHTML = sorted.map((r, idx) => {
       const logoHtml = this.getAssetLogoHTML(r.tickerSA, 24);
       const bias = this.getStatisticalBias(r);
       const consistency = this.getModelConsistency(r);
+      const details = this.getForecastMarketDetails(r);
+
+      let lastCloseHtml = '';
+      let sparklineCanvasHtml = '';
+
+      if (details.hasNewer) {
+        const deltaColor = details.delta_pct > 0 ? 'var(--green)' : (details.delta_pct < 0 ? 'var(--red)' : 'var(--text-muted)');
+        const deltaRsSign = details.delta_rs > 0 ? '+' : (details.delta_rs < 0 ? '-' : '');
+        const deltaPctSign = details.delta_pct > 0 ? '+' : '';
+
+        lastCloseHtml = `
+          <div style="font-weight: 600;">R$ ${this.formatNumber(details.fechamento_ult_dia, 2)}</div>
+          <small style="color: ${deltaColor}; font-weight: 600;">
+            ${deltaRsSign}R$ ${this.formatNumber(Math.abs(details.delta_rs), 2)} (${deltaPctSign}${this.formatNumber(details.delta_pct, 2)}%)
+          </small>
+        `;
+
+        sparklineCanvasHtml = `<canvas id="forecast-spark-${idx}" width="80" height="30"></canvas>`;
+      }
 
       return `
         <tr>
@@ -6043,6 +6190,8 @@ onForecastTermsCheckboxChange() {
             </div>
           </td>
           <td style="font-weight: 600;">R$ ${this.formatNumber(r.preco, 2)}</td>
+          <td>${lastCloseHtml}</td>
+          <td style="padding: 2px 5px; text-align: center;">${sparklineCanvasHtml}</td>
           <td>${bias.badgeHtml}</td>
           <td>${consistency.badgeHtml}</td>
           <td style="font-weight: 700; color: var(--accent-light);">${this.formatNumber(r.meta_chance_acerto_pct, 1)}%</td>
@@ -6057,6 +6206,20 @@ onForecastTermsCheckboxChange() {
         </tr>
       `;
     }).join('');
+
+    if (this.forecastSparkCharts) {
+      this.forecastSparkCharts.forEach(c => c.destroy());
+    }
+    this.forecastSparkCharts = [];
+
+    setTimeout(() => {
+      sorted.forEach((r, idx) => {
+        const details = this.getForecastMarketDetails(r);
+        if (details.hasNewer && details.sparklineCloses && details.sparklineCloses.length > 0) {
+          this.renderForecastSparkline(details.sparklineCloses, `forecast-spark-${idx}`);
+        }
+      });
+    }, 50);
   }
 
 }
