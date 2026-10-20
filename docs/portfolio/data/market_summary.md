@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-10-15
+## Resumo de Mercado - 2026-10-19
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| JFEN3.SA | João Fortes Engenharia S.A. | R$ 5.09 | R$ 3.89 | **+30.85%** 🚀 | +126.74% ⬆️ |
-| VSTE3.SA | Veste S.A. Estilo | R$ 3.79 | R$ 3.27 | **+15.90%** 🚀 | +272.06% ⬆️ |
-| LUXM4.SA | Trevisa Investimentos S.A. | R$ 3.70 | R$ 3.25 | **+13.85%** 🚀 | +0.26% ⬆️ |
-| RVEE3.SA | Revee S.A. | R$ 0.67 | R$ 0.61 | **+9.84%** 🚀 | -42.72% ⬇️ |
-| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 4.98 | R$ 4.57 | **+8.97%** 🚀 | +300.93% ⬆️ |
+| NUTR3.SA | Nutriplant Indústria e Comércio S/A | R$ 3.24 | R$ 2.45 | **+32.24%** 🚀 | +322.69% ⬆️ |
+| GSHP3.SA | General Shopping e Outlets do Brasil S.A. | R$ 4.78 | R$ 4.10 | **+16.59%** 🚀 | +411.63% ⬆️ |
+| AMOB3.SA | Automob Participações S.A. | R$ 16.13 | R$ 13.99 | **+15.30%** 🚀 | +188.73% ⬆️ |
+| DASA3.SA | Diagnósticos da América S.A. | R$ 5.30 | R$ 4.66 | **+13.73%** 🚀 | +42.78% ⬆️ |
+| AZZA3.SA | Azzas 2154 S.A. | R$ 26.50 | R$ 23.40 | **+13.25%** 🚀 | +73.42% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| PDGR3.SA | PDG Realty S.A. Empreendimentos e Participações | R$ 0.90 | R$ 1.20 | **-25.00%** 📉 | +962.38% ⬆️ |
-| CTKA3.SA | Karsten S.A. | R$ 34.00 | R$ 40.00 | **-15.00%** 📉 | -50.00% ⬇️ |
-| PLPL3.SA | Plano & Plano Desenvolvimento Imobiliário S.A. | R$ 7.37 | R$ 8.23 | **-10.45%** 📉 | +179.31% ⬆️ |
-| LUPA3.SA | Lupatech S.A. | R$ 4.35 | R$ 4.80 | **-9.38%** 📉 | -29.12% ⬇️ |
-| DIRR3.SA | Direcional Engenharia S.A. | R$ 10.58 | R$ 11.66 | **-9.26%** 📉 | +274.71% ⬆️ |
+| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 3.35 | R$ 3.77 | **-11.14%** 📉 | +21.92% ⬆️ |
+| JFEN3.SA | João Fortes Engenharia S.A. | R$ 4.00 | R$ 4.50 | **-11.11%** 📉 | -65.99% ⬇️ |
+| CCTY3.SA | RDVC City S.A. | R$ 4.60 | R$ 5.16 | **-10.85%** 📉 | +263.64% ⬆️ |
+| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 3.40 | R$ 3.80 | **-10.53%** 📉 | -6.19% ⬇️ |
+| BOBR4.SA | Bombril S.A. | R$ 1.48 | R$ 1.60 | **-7.50%** 📉 | -73.47% ⬇️ |
