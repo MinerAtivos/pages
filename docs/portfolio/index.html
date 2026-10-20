@@ -7,7 +7,7 @@
   <meta name="description" content="Plataforma inteligente de análise e rebalanceamento de portfólios de investimentos na B3.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@3.0.0/dist/chartjs-chart-treemap.min.js"></script>
@@ -32,52 +32,87 @@
   <!-- Sidebar Navigation -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-header">
-	<img src="../assets/logo4_2.png" alt="MinerAtivos" style="height: 60px; width: auto; vertical-align: middle;">
-      <span class="sidebar-title">Gestão<br><small>Portfólio</small></span>
+	<img src="../assets/logo4.png" alt="MinerAtivos" style="height: 42px; width: auto; vertical-align: middle; object-fit: contain;">
+      <span class="sidebar-title" style="display: flex; flex-direction: column; justify-content: center; line-height: 1.1;">Gestão<small style="font-size: 0.7rem; color: var(--accent); font-weight: 600;">Portfólio</small></span>
     </div>
     <nav class="sidebar-nav">
-      <div id="userProfile" class="user-profile-sidebar" style="display: none; padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); margin-bottom: 0.5rem; align-items: center; gap: 1rem;">
-        <span class="user-avatar" style="font-size: 1.5rem;">👤</span>
-        <div class="user-info" style="display: flex; flex-direction: column;">
-          <span class="user-name" id="sidebarUserName" style="font-weight: 600; font-size: 0.9rem; color: var(--text-primary);">Usuário</span>
-          <a href="#" class="logout-link" id="btnLogout" style="font-size: 0.8rem; color: var(--red); text-decoration: none;">Sair</a>
+      <div id="userProfile" class="user-profile-sidebar" style="display: none;">
+        <span class="user-avatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </span>
+        <div class="user-info">
+          <span class="user-name" id="sidebarUserName">Usuário</span>
+          <a href="#" class="logout-link" id="btnLogout">Sair</a>
         </div>
       </div>
+
       <a href="#" class="nav-link active" data-section="dashboard" id="nav-dashboard">
-        <span class="nav-icon">🏠</span> Dashboard
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+        </span> Dashboard
       </a>
+
+      <div class="nav-group-label">Gestão da Carteira</div>
       <a href="#" class="nav-link" data-section="positions" id="nav-positions">
-        <span class="nav-icon">💼</span> Posições
-      </a>
-	  <a href="#" class="nav-link" data-section="screener" id="nav-screener">
-        <span class="nav-icon">🔍</span> Mineração de Ativos
-      </a>
-      <a href="#" class="nav-link" data-section="barsi" id="nav-barsi">
-        <span class="nav-icon">🎯</span> Preço-Teto
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </span> Posições
       </a>
       <a href="#" class="nav-link" data-section="rebalance" id="nav-rebalance">
-        <span class="nav-icon">⚖️</span> Rebalanceamento
-      </a>
-      <a href="#" class="nav-link" data-section="dividends" id="nav-dividends">
-        <span class="nav-icon">💰</span> Proventos
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>
+        </span> Rebalanceamento
       </a>
       <a href="#" class="nav-link" data-section="taxes" id="nav-taxes">
-        <span class="nav-icon">📜</span> Imposto de Renda
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </span> Imposto de Renda
       </a>
+
+      <div class="nav-group-label">Comparativos</div>
+      <a href="#" class="nav-link" data-section="screener" id="nav-screener">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span> Mineração de Ativos
+      </a>
+      <a href="#" class="nav-link" data-section="dividends" id="nav-dividends">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span> Proventos
+      </a>
+      <a href="#" class="nav-link" data-section="barsi" id="nav-barsi">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </span> Preço-Teto
+      </a>
+
+      <div class="nav-group-label">Mercado</div>
       <a href="#" class="nav-link" data-section="summary" id="nav-summary">
-        <span class="nav-icon">🌍</span> Resumo de Mercado
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </span> Resumo de Mercado
       </a>
       <a href="#" class="nav-link" data-section="news" id="nav-news">
-        <span class="nav-icon">🤖</span> Market Research (IA)
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+        </span> Market Research (IA)
       </a>
-	  <a href="#" class="nav-link" data-section="forecast" id="nav-forecast">
-        <span class="nav-icon">🔮</span> Tendências
+      <a href="#" class="nav-link" data-section="forecast" id="nav-forecast">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </span> Tendências
       </a>
+
+      <div class="nav-group-label">Conta</div>
       <a href="#" class="nav-link" data-section="members" id="nav-members">
-        <span class="nav-icon">👤</span> Área de Membros
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </span> Área de Membros
       </a>
-      <a href="https://minerativos.com.br" class="nav-link" target="_self"> <!-- class="nav-link" id="nav-about" -->
-        <span class="nav-icon">ℹ️</span> Página principal
+      <a href="https://minerativos.com.br" class="nav-link" target="_self">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        </span> Página principal
       </a>
     </nav>
   </aside>
@@ -111,51 +146,62 @@
         <p class="subtitle">Visão geral do seu portfólio de investimentos na B3</p>
       </div>
 
-      <div class="stats-grid stats-grid-main" id="statsGrid">
-        <div class="stat-card glass">
-          <div class="stat-icon">💰</div>
+      <!-- Top Primary KPIs (High Emphasis) -->
+      <div class="stats-grid stats-grid-primary" id="statsGridPrimary" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; margin-bottom: 1.25rem;">
+        <div class="stat-card glass highlight-kpi">
+          <div class="stat-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
           <div class="stat-label">Patrimônio Total</div>
-          <div class="stat-value" id="statTotalValue">R$ 0,00</div>
+          <div class="stat-value stat-value-lg" id="statTotalValue">R$ 0,00</div>
         </div>
-        <div class="stat-card glass">
-          <div class="stat-icon">💵</div>
+        <div class="stat-card glass highlight-kpi">
+          <div class="stat-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
           <div class="stat-label">Valor Investido</div>
-          <div class="stat-value" id="statTotalInvested">R$ 0,00</div>
+          <div class="stat-value stat-value-lg" id="statTotalInvested">R$ 0,00</div>
         </div>
-        <div class="stat-card glass">
-          <div class="stat-icon">🤑</div>
+        <div class="stat-card glass highlight-kpi">
+          <div class="stat-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
           <div class="stat-label">Total Proventos</div>
-          <div class="stat-value positive" id="statTotalProventos">R$ 0,00</div>
+          <div class="stat-value stat-value-lg positive" id="statTotalProventos">R$ 0,00</div>
         </div>
+        <div class="stat-card glass highlight-kpi">
+          <div class="stat-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="stat-label">TIR carteira</div>
+          <div class="stat-value stat-value-lg" id="statRentabilityReal">0% a.a.</div>
+        </div>
+        <div class="stat-card glass highlight-kpi">
+          <div class="stat-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div class="stat-label">Índice Sharpe</div>
+          <div class="stat-value stat-value-lg accent" id="statSharpe">0.00</div>
+        </div>
+      </div>
+
+      <!-- Secondary KPIs -->
+      <div class="stats-grid stats-grid-secondary" id="statsGridSecondary" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
         <div class="stat-card glass">
-          <div class="stat-icon">📉</div>
           <div class="stat-label">Lucro Realizado</div>
           <div class="stat-value" id="statRealizedProfit">R$ 0,00</div>
         </div>
         <div class="stat-card glass">
-          <div class="stat-icon">📊</div>
-          <div class="stat-label">TIR carteira</div>
-          <div class="stat-value" id="statRentabilityReal">0% a.a.</div>
-        </div>
-        <div class="stat-card glass">
-          <div class="stat-icon">🎯</div>
           <div class="stat-label">Rentab. Projetada</div>
           <div class="stat-value" id="statRentabilityProj">0%</div>
         </div>
         <div class="stat-card glass">
-          <div class="stat-icon">💼</div>
           <div class="stat-label">Posições</div>
           <div class="stat-value" id="statPositions">0</div>
         </div>
         <div class="stat-card glass">
-          <div class="stat-icon">⚡</div>
           <div class="stat-label">Volatilidade</div>
           <div class="stat-value" id="statVolatility">0%</div>
-        </div>
-        <div class="stat-card glass">
-          <div class="stat-icon">🎯</div>
-          <div class="stat-label">Índice Sharpe</div>
-          <div class="stat-value accent" id="statSharpe">0.00</div>
         </div>
       </div>
 
@@ -205,7 +251,8 @@
       <div class="toolbar">
         <div class="toolbar-group">
           <button class="btn btn-outline" id="btnToggleOperations" style="display: flex; align-items: center; gap: 0.5rem;">
-            ⚙️ Registrar movimentações <span id="operationsChevron">▼</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            Registrar movimentações <span id="operationsChevron">▼</span>
           </button>
         </div>
         <div class="form-inline">
@@ -226,19 +273,23 @@
       </div>
 
       <!-- Collapsible Operations Sub-Toolbar -->
-      <div class="collapsible-operations glass" id="collapsibleOperations" style="display: none; padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(255, 255, 255, 0.02);">
+      <div class="collapsible-operations glass" id="collapsibleOperations" style="display: none; padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid var(--border-glass);">
         <div class="toolbar-group" style="margin-bottom: 0;">
           <button class="btn btn-primary" id="btnAddPosition">
-            ➕ Registrar Compra
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Registrar Compra
           </button>
           <button class="btn btn-danger" id="btnSellPosition">
-            ➖ Registrar Venda
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Registrar Venda
           </button>
           <button class="btn btn-secondary" id="btnAddBulk">
-            📥 Adicionar Vários
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Adicionar Vários
           </button>
           <button class="btn btn-outline" onclick="app.$('fileImport').click()">
-            📄 Importar CSV
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Importar CSV
           </button>
           <input type="file" id="fileImport" style="display:none" accept=".csv" onchange="app.importCSV(this)">
         </div>
@@ -262,7 +313,7 @@
       </div>
 
       <div class="alert alert-info glass" id="dividendsGuestAlert">
-        <strong>🔒 Área Exclusiva:</strong> Faça login para acessar o detalhamento de proventos da sua carteira e o filtro de descoberta.
+        <strong>Área Exclusiva:</strong> Faça login para acessar o detalhamento de proventos da sua carteira e o filtro de descoberta.
       </div>
 
       <div id="dividendsContent" class="hidden">
@@ -277,12 +328,14 @@
               <input type="date" id="divEndDate" class="input-sm" style="width: 150px;">
             </div>
             <button class="btn btn-primary" id="btnFilterDividends">
-              🔍 Filtrar
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Filtrar
             </button>
           </div>
           <div class="toolbar-group">
             <button class="btn btn-outline" id="btnToggleDiscovery">
-              🌐 Descoberta de Ativos
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              Descoberta de Ativos
             </button>
           </div>
         </div>
@@ -333,7 +386,7 @@
       </div>
 
       <div class="alert alert-info glass" id="taxesGuestAlert">
-        <strong>🔒 Área Exclusiva:</strong> Faça login para gerenciar sua apuração de IR e compensação de prejuízos.
+        <strong>Área Exclusiva:</strong> Faça login para gerenciar sua apuração de IR e compensação de prejuízos.
       </div>
 
       <div id="taxesContent" class="hidden">
@@ -361,10 +414,12 @@
               <input type="number" id="taxYear" value="2024" class="input-sm" style="width: 80px;">
             </div>
             <button class="btn btn-primary" id="btnCalculateTaxes">
-              🧾 Gerar Relatório
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              Gerar Relatório
             </button>
             <button class="btn btn-outline" id="btnSaveFiscalBalance" style="display: none;">
-              💾 Confirmar e Salvar Balanço
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Confirmar e Salvar Balanço
             </button>
           </div>
         </div>
@@ -434,7 +489,7 @@
       </div>
 
       <div class="alert alert-info glass">
-        <strong>📌 Método Barsi/Bazin:</strong> Calcula o preço máximo que você deveria pagar para obter um <em>dividend yield</em> de <strong id="barsiTargetDisplay">6%</strong> ao ano.
+        <strong>Método Barsi/Bazin:</strong> Calcula o preço máximo recomendado para obter um <em>dividend yield</em> de <strong id="barsiTargetDisplay">6%</strong> ao ano.
       </div>
 
       <div class="toolbar">
@@ -443,8 +498,9 @@
             <label for="barsiYield">Yield Alvo (%):</label>
             <input type="number" id="barsiYield" value="6" min="1" max="20" step="0.5" class="input-sm">
           </div>
-          <button class="btn btn-primary" id="btnRunBarsi">
-            🎯 Calcular Preço-Teto
+          <button class="btn btn-primary btn-high-emphasis" id="btnRunBarsi">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            Calcular Preço-Teto
           </button>
         </div>
         <div class="form-inline">
@@ -495,25 +551,25 @@
       </div>
 
       <div class="alert alert-info glass" id="screenerGuestAlert">
-        <strong>🔒 Área Exclusiva:</strong> Faça login ou seja membro para utilizar a filtragem avançada por critérios de análise financeira.
+        <strong>Área Exclusiva:</strong> Faça login ou seja membro para utilizar a filtragem avançada por critérios de análise financeira.
       </div>
 
       <div class="card glass" style="margin-bottom: 1.5rem; padding: 1.25rem;">
         <!-- Escopo e Busca -->
        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
           <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: 10px; gap: 4px;">
-            <button class="btn btn-sm btn-screener-scope active" id="btnScreenerScopeAll" onclick="app.setScreenerScope('all')" style="width: auto;">🌐 Toda a B3</button>
-            <button class="btn btn-sm btn-screener-scope" id="btnScreenerScopePortfolio" onclick="app.setScreenerScope('portfolio')" style="width: auto;">💼 Minha Carteira</button>
+            <button class="btn btn-sm btn-screener-scope active" id="btnScreenerScopeAll" onclick="app.setScreenerScope('all')" style="width: auto;">Toda a B3</button>
+            <button class="btn btn-sm btn-screener-scope" id="btnScreenerScopePortfolio" onclick="app.setScreenerScope('portfolio')" style="width: auto;">Minha Carteira</button>
           </div>
           <div class="form-inline" style="flex: 1; max-width: 320px;">
-            <input type="text" id="screenerSearchInput" class="input-sm" placeholder="🔍 Buscar ticker, nome ou setor..." style="width: 100%;">
+            <input type="text" id="screenerSearchInput" class="input-sm" placeholder="Buscar ticker, nome ou setor..." style="width: 100%;">
           </div>
 		   <div style="display: flex; gap: 0.5rem; align-items: center;">
             <button class="btn btn-outline btn-sm" id="btnToggleScreenerFilters" onclick="app.toggleScreenerFilters()" style="width: auto;">
-              ⚙️ Filtros Avançados <span id="screenerFiltersChevron">▼</span>
+              Filtros Avançados <span id="screenerFiltersChevron">▼</span>
             </button>
           <button class="btn btn-outline btn-sm" id="btnResetScreener" onclick="app.resetScreenerFilters()" style="width: auto;">
-            🔄 Limpar Filtros
+            Limpar Filtros
           </button>
 		   </div>
         </div>
@@ -675,11 +731,13 @@
           </div>
         </div>
         <div class="form-actions" style="margin-top: 1.25rem; justify-content: flex-start;">
-          <button class="btn btn-primary" id="btnRunRebalance">
-            ⚖️ Calcular Alocação Sugerida
+          <button class="btn btn-primary btn-high-emphasis" id="btnRunRebalance">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>
+            Otimizar Portfólio (Markowitz)
           </button>
           <button class="btn btn-outline" id="btnRequestExpertAnalysis" title="Disponível para Membros">
-            📩 Solicitar Análise Especializada
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Solicitar Análise Especializada
           </button>
         </div>
       </div>
@@ -761,7 +819,7 @@
       <div id="newsContent">
         <div class="card glass news-insight-card" style="margin-bottom: 2rem; border-left: 4px solid var(--accent);">
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
-            <h2 class="card-title" style="margin-bottom: 0;">🌍 Panorama Geral do Mercado</h2>
+            <h2 class="card-title" style="margin-bottom: 0;">Panorama Geral do Mercado</h2>
             <div id="ibovHeaderCard" class="ibov-header-card glass" style="padding: 0.5rem 1rem; border-radius: 8px; display: none;">
               <span style="font-weight: 700; color: var(--text-secondary); font-size: 0.8rem;">IBOVESPA:</span>
               <span id="ibovScore" style="font-weight: 800; font-size: 1.1rem; margin-left: 0.5rem;">—</span>
@@ -799,15 +857,15 @@
     <!-- ============================================================ -->
     <section class="page" data-page="forecast" id="page-forecast">
       <div class="page-header">
-        <h1>🔮 Tendências de Mercado</h1>
+        <h1>Tendências de Mercado</h1>
         <p class="subtitle" id="forecastSubTitle">Previsão quantitativa de ativos baseada em modelos estatísticos e aprendizado de máquina</p>
       </div>
 
        <div class="alert alert-info glass" id="forecastGuestAlert" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
         <div>
-        <strong>🔒 Área Exclusiva para Membros:</strong> Faça login para visualizar o Mapa de Oportunidades completo e a tabela interativa com estatísticas de probabilidade e acurácia.
+        <strong>Área Exclusiva para Membros:</strong> Faça login para visualizar o Mapa de Oportunidades completo e a tabela interativa com estatísticas de probabilidade e acurácia.
 		  </div>
-        <button class="btn btn-primary btn-sm" onclick="app.openAuthModal('login', 'forecast')" style="white-space: nowrap;">🔐 Entrar / Cadastrar</button>
+        <button class="btn btn-primary btn-sm" onclick="app.openAuthModal('login', 'forecast')" style="white-space: nowrap;">Entrar / Cadastrar</button>
 
       </div>
 
@@ -816,21 +874,15 @@
         <div class="card glass" style="margin-bottom: 1.5rem; padding: 1.25rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
             <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 280px;">
-              <h2 class="card-title" style="margin: 0; font-size: 1.1rem; white-space: nowrap;">⚙️ Filtros do Modelo</h2>
+              <h2 class="card-title" style="margin: 0; font-size: 1.1rem; white-space: nowrap;">Filtros do Modelo</h2>
               <div class="form-inline" style="flex: 1; max-width: 320px;">
-                <input type="text" id="forecastSearchInput" class="input-sm" placeholder="🔍 Buscar ativo (Ex: CMIG3)..." style="width: 100%;" oninput="app.filterForecastData()">
+                <input type="text" id="forecastSearchInput" class="input-sm" placeholder="Buscar ativo (Ex: CMIG3)..." style="width: 100%;" oninput="app.filterForecastData()">
               </div>
-            </div>
-            <div style="display: flex; gap: 0.5rem; align-items: center;">
-              <button class="btn btn-outline btn-sm" id="btnToggleForecastFilters" onclick="app.toggleForecastFilters()" style="width: auto;">
-                ⚙️ Filtros Avançados <span id="forecastFiltersChevron">▼</span>
-              </button>
-              <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
-                🔄 Limpar Filtros
-              </button>
-            </div>
+            <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
+              Limpar Filtros
+            </button>
+			</div>
           </div>
-		  
           <!-- Painel de Filtros Recolhível -->
           <div id="forecastCollapsibleFilters" class="collapsible-operations" style="display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
@@ -848,9 +900,9 @@
                 <label for="forecastFilterTrend">Viés Estatístico</label>
                 <select id="forecastFilterTrend" class="input-sm" onchange="app.filterForecastData()">
                   <option value="ALL">Todos</option>
-                  <option value="POSITIVO">🟢 Positivo</option>
-                  <option value="NEGATIVO">🔴 Negativo</option>
-                  <option value="INCONSISTENTE">⚪ Inconsistente</option>
+                  <option value="POSITIVO">Positivo</option>
+                  <option value="NEGATIVO">Negativo</option>
+                  <option value="INCONSISTENTE">Inconsistente</option>
                 </select>
               </div>
 
@@ -871,7 +923,7 @@
         <div class="card glass" style="margin-bottom: 1.5rem;">
           <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
             <div>
-              <h2 class="card-title" style="margin-bottom: 0.25rem;">📊 Mapa Visual Direcional de Oportunidades</h2>
+              <h2 class="card-title" style="margin-bottom: 0.25rem;">Mapa Visual Direcional de Oportunidades</h2>
                   <p class="subtitle" style="margin: 0; font-size: 0.85rem;">Meta Chance de Acerto (%) vs. Acurácia do Ensemble (%). Os marcadores refletem o Viés Estatístico e a Consistência do Modelo.</p>
             </div>
             <div id="forecastChartStats" style="font-weight: 600; font-size: 0.85rem; color: var(--accent-light);"></div>
@@ -942,7 +994,8 @@
       <div class="summary-grid">
         <div class="card glass">
           <h2 class="card-title" style="color: var(--green); display: flex; align-items: center; gap: 0.5rem;">
-            📈 Maiores Altas
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            Maiores Altas
           </h2>
           <div class="table-responsive">
             <table class="summary-table">
@@ -963,7 +1016,8 @@
 
         <div class="card glass">
           <h2 class="card-title" style="color: var(--red); display: flex; align-items: center; gap: 0.5rem;">
-            📉 Maiores Baixas
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+            Maiores Baixas
           </h2>
           <div class="table-responsive">
             <table class="summary-table">
@@ -984,7 +1038,7 @@
       </div>
 
       <div class="card glass" style="margin-top: 1.5rem;">
-        <h2 class="card-title">🗺️ Mapa do Mercado (Treemap)</h2>
+        <h2 class="card-title">Mapa do Mercado (Treemap)</h2>
         <p class="subtitle" id="treemapSubtitle" style="margin-bottom: 1rem;">O tamanho dos blocos representa a variação absoluta do período. Cores: Verde (Alta) e Laranja/Vermelho (Baixa).</p>
         <div class="chart-container" style="height: 600px;">
           <canvas id="marketTreemap"></canvas>
@@ -1004,7 +1058,9 @@
 
       <div id="loginArea" class="hidden">
         <div class="card glass" style="max-width: 500px; margin: 2rem auto; text-align: center; padding: 3rem 2rem;">
-          <div style="font-size: 4rem; margin-bottom: 1.5rem;">👤</div>
+          <div style="margin-bottom: 1.5rem; color: var(--accent);">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
           <h2 class="card-title">Acesse sua Conta</h2>
           <p style="color: var(--text-secondary); margin-bottom: 2rem;">Faça login para sincronizar seu portfólio e acessar recursos exclusivos.</p>
           <button class="btn btn-primary btn-glow" onclick="app.openAuthModal('login')" style="padding: 0.8rem 2.5rem; font-size: 1rem;">
@@ -1016,14 +1072,14 @@
       <!-- User Dashboard -->
       <div id="memberDashboard" style="display: none;">
         <div class="alert alert-success glass" style="margin-bottom: 2rem;">
-          🎉 Você está conectado como <strong id="memberWelcomeName">usuário</strong>.
+          Você está conectado como <strong id="memberWelcomeName">usuário</strong>.
           Seu portfólio agora é sincronizado automaticamente com o servidor.
         </div>
 
         <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
           <!-- Admin Panel -->
           <div class="card glass" id="adminPanel" style="display: none; grid-column: 1 / -1;">
-            <h2 class="card-title">🛡️ Painel de Administração</h2>
+            <h2 class="card-title">Painel de Administração</h2>
             <p style="margin-bottom: 1rem; color: var(--text-muted);">Como o sistema agora utiliza <strong>Google Sheets</strong>, o gerenciamento de usuários e leads deve ser feito diretamente na sua planilha Google.</p>
 
             <div id="adminUsersTableCard" style="display: none;">
@@ -1105,8 +1161,8 @@
 
       <!-- Sistema de Abas do Monitor -->
       <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: var(--radius-sm); gap: 4px; margin-bottom: 1rem; width: fit-content;">
-        <button class="btn btn-sm btn-summary-filter active" id="btnMonitorTabTechnical" style="width: auto; padding: 0.5rem 1rem;">📈 Análise Técnica</button>
-        <button class="btn btn-sm btn-summary-filter" id="btnMonitorTabFundamental" style="width: auto; padding: 0.5rem 1rem;">📊 Análise Fundamentalista & Pares</button>
+        <button class="btn btn-sm btn-summary-filter active" id="btnMonitorTabTechnical" style="width: auto; padding: 0.5rem 1rem;">Análise Técnica</button>
+        <button class="btn btn-sm btn-summary-filter" id="btnMonitorTabFundamental" style="width: auto; padding: 0.5rem 1rem;">Análise Fundamentalista & Pares</button>
       </div>
 
       <!-- Conteúdo da Aba Técnica -->
@@ -1251,10 +1307,10 @@
       </div>
 
       <div class="card glass about-content">
-        <h2>🎯 O Projeto</h2>
+        <h2>O Projeto</h2>
         <p>Plataforma para análise e rebalanceamento de portfólios de investimentos na B3 (Bolsa de Valores Brasileira). Oferece ferramentas para otimização de alocação de ativos usando a <strong>Teoria Moderna de Portfólio (Markowitz)</strong> e avaliação via <strong>Método Barsi/Bazin</strong>.</p>
 
-        <h2>⚙️ Funcionalidades</h2>
+        <h2>Funcionalidades</h2>
         <ul>
           <li><strong>Dashboard:</strong> Visão geral com gráficos interativos</li>
           <li><strong>Gestão de Posições:</strong> Adicione, edite e remova ativos do portfólio</li>
@@ -1263,7 +1319,7 @@
           <li><strong>Dados Atualizados:</strong> Histórico diário via yfinance para análises</li>
         </ul>
 
-        <h2>🛠️ Tecnologias</h2>
+        <h2>Tecnologias</h2>
         <div class="tech-grid">
           <span class="tech-badge">HTML5 / CSS3</span>
           <span class="tech-badge">JavaScript (ES6+)</span>
@@ -1271,7 +1327,7 @@
         </div>
 
         <div class="alert alert-warning" style="margin-top:2rem;">
-          <strong>⚠️ Aviso Legal:</strong> Esta plataforma é fornecida como ferramenta educacional. Não constitui recomendação de investimento. Consulte um profissional qualificado.
+          <strong>Aviso Legal:</strong> Esta plataforma é fornecida como ferramenta educacional. Não constitui recomendação de investimento. Consulte um profissional qualificado.
         </div>
 
         <p class="license-text">MIT License — Você é livre para usar.</p>
@@ -1372,7 +1428,8 @@
 
       <div class="toolbar">
         <button type="button" class="btn btn-outline btn-sm" id="btnBulkAddRow" style="width: auto;">
-          ➕ Nova Linha
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Nova Linha
         </button>
       </div>
 
@@ -1457,15 +1514,15 @@
   </div>
 
 <!-- Modal: Termos de Uso do Módulo Preditivo (Click-Wrap) -->
-  <div class="modal-overlay" id="forecastTermsModalOverlay" style="display: none; z-index: 10000; background: rgba(10, 15, 29, 0.85); backdrop-filter: blur(8px);">
-    <div class="modal glass" id="forecastTermsModal" style="max-width: 640px; width: 92%; border: 1px solid rgba(99, 102, 241, 0.4); box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
-      <div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
-        <h2 style="margin: 0; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem; color: #f8fafc;">
-          📜 Termos de Uso do Módulo Preditivo
+  <div class="modal-overlay" id="forecastTermsModalOverlay" style="display: none; z-index: 10000; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(8px);">
+    <div class="modal glass" id="forecastTermsModal" style="max-width: 640px; width: 92%; border: 1px solid var(--border-glass); box-shadow: var(--shadow-md);">
+      <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 1rem;">
+        <h2 style="margin: 0; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary);">
+          Termos de Uso do Módulo Preditivo
         </h2>
       </div>
 
-      <div style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6; max-height: 240px; overflow-y: auto; background: rgba(0,0,0,0.25); border-radius: 8px; padding: 1rem; margin: 1rem 0; border: 1px solid rgba(255,255,255,0.05);">
+      <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; max-height: 240px; overflow-y: auto; background: var(--bg-glass); border-radius: 8px; padding: 1rem; margin: 1rem 0; border: 1px solid var(--border-glass);">
         <p style="margin-top: 0;">
           <strong>AVISO DE RESPONSABILIDADE E CARÁTER EXPERIMENTAL:</strong>
         </p>
@@ -1481,9 +1538,9 @@
       </div>
 
       <form id="forecastTermsForm" onsubmit="event.preventDefault(); app.acceptForecastTerms();">
-        <div style="margin-bottom: 1.25rem; display: flex; align-items: flex-start; gap: 0.75rem; background: rgba(99, 102, 241, 0.1); padding: 0.85rem; border-radius: 8px; border: 1px solid rgba(99, 102, 241, 0.25);">
+        <div style="margin-bottom: 1.25rem; display: flex; align-items: flex-start; gap: 0.75rem; background: var(--accent-glow); padding: 0.85rem; border-radius: 8px; border: 1px solid var(--border-glass);">
           <input type="checkbox" id="chkForecastTermsAccept" onchange="app.onForecastTermsCheckboxChange()" style="margin-top: 0.2rem; width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer;">
-          <label for="chkForecastTermsAccept" style="font-size: 0.83rem; color: #e2e8f0; cursor: pointer; user-select: none; line-height: 1.4;">
+          <label for="chkForecastTermsAccept" style="font-size: 0.83rem; color: var(--text-primary); cursor: pointer; user-select: none; line-height: 1.4;">
             Declaro que li e compreendi os Termos de Uso do Módulo Preditivo. Estou ciente de que as projeções geradas por inteligência artificial e aprendizado de máquina possuem caráter exclusivamente estatístico, educacional e experimental, não constituindo, sob nenhuma hipótese, recomendação de investimento, consultoria financeira ou indicação de compra e venda de ativos na B3. Compreendo que investimentos envolvem riscos severos de perda patrimonial e que decisões baseadas nestes dados são de minha exclusiva responsabilidade.
           </label>
         </div>
