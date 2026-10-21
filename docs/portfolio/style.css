@@ -88,9 +88,10 @@ body::before, body::after {
   border-bottom: 1px solid var(--border-glass);
 }
 .sidebar-header img, .mobile-header img {
-  background: #0F172A;
+  background: #FFFFFF;
   padding: 4px 8px;
   border-radius: 6px;
+  border: 1px solid var(--border-color);
 }
 .sidebar-logo { font-size: 2rem; }
 .sidebar-title {
@@ -843,13 +844,17 @@ body.loading {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  transition: transform 0.2s, border-color 0.2s;
-  border: 1px solid rgba(255,255,255,0.05);
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
 }
 
 .news-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
 }
 
 .news-card-header {
