@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-10-21
+## Resumo de Mercado - 2026-10-22
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 16.70 | R$ 13.40 | **+24.63%** 🚀 | -35.72% ⬇️ |
-| PATI4.SA | Panatlântica S.A. | R$ 35.45 | R$ 29.48 | **+20.25%** 🚀 | -45.45% ⬇️ |
-| LUPA3.SA | Lupatech S.A. | R$ 5.20 | R$ 4.33 | **+20.09%** 🚀 | +441.57% ⬆️ |
-| PLAS3.SA | Plascar Participações Industriais S.A. | R$ 4.50 | R$ 3.89 | **+15.68%** 🚀 | +187.70% ⬆️ |
-| RNEW3.SA | Renova Energia S.A. | R$ 1.03 | R$ 0.92 | **+11.96%** 🚀 | +159.82% ⬆️ |
+| OSXB3.SA | OSX Brasil S.A. | R$ 2.05 | R$ 1.84 | **+11.41%** 🚀 | +218.50% ⬆️ |
+| PMAM3.SA | Paranapanema S.A. | R$ 0.41 | R$ 0.38 | **+7.89%** 🚀 | +31.30% ⬆️ |
+| NEXP3.SA | Nexpe Participações S.A. | R$ 2.61 | R$ 2.43 | **+7.41%** 🚀 | -36.97% ⬇️ |
+| MTSA4.SA | METISA Metalúrgica Timboense S.A. | R$ 49.39 | R$ 46.30 | **+6.67%** 🚀 | -3.16% ⬇️ |
+| BPAC5.SA | Banco BTG Pactual S.A. | R$ 27.00 | R$ 25.69 | **+5.10%** 🚀 | -74.81% ⬇️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| GSHP3.SA | General Shopping e Outlets do Brasil S.A. | R$ 3.80 | R$ 4.78 | **-20.50%** 📉 | -47.83% ⬇️ |
-| NUTR3.SA | Nutriplant Indústria e Comércio S/A | R$ 3.54 | R$ 4.38 | **-19.18%** 📉 | +337.55% ⬆️ |
-| WLMM3.SA | WLM Participações e Comércio de Máquinas e Veículos S.A. | R$ 16.03 | R$ 18.40 | **-12.88%** 📉 | -61.54% ⬇️ |
-| CTAX3.SA | Contax Participações S.A. | R$ 1.06 | R$ 1.16 | **-8.62%** 📉 | +4485.45% ⬆️ |
-| HAPV3.SA | Hapvida Participações e Investimentos S.A. | R$ 8.74 | R$ 9.55 | **-8.48%** 📉 | +8.14% ⬆️ |
+| JFEN3.SA | João Fortes Engenharia S.A. | R$ 3.05 | R$ 4.10 | **-25.61%** 📉 | -2.46% ⬇️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 13.57 | R$ 16.70 | **-18.74%** 📉 | -19.50% ⬇️ |
+| DOTZ3.SA | Dotz S.A. | R$ 11.18 | R$ 12.30 | **-9.11%** 📉 | +81.46% ⬆️ |
+| PINE4.SA | Banco Pine S.A. | R$ 16.32 | R$ 17.71 | **-7.85%** 📉 | +44.07% ⬆️ |
+| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 1.49 | R$ 1.61 | **-7.45%** 📉 | +29.45% ⬆️ |
