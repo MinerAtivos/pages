@@ -701,6 +701,9 @@ class B3App {
         await this.runAnalysis();
         this.renderPositions();
         this.showPage('dashboard');
+
+        // Carregar histórico completo para o membro logado
+        await this.loadMarketData(false);
       } else {
         this.toast(data.error || 'Erro no login', 'error');
       }
@@ -1217,8 +1220,6 @@ class B3App {
       // Se já temos dados carregados (essential), mesclamos com o novo histórico completo
       if (this.marketData && !essentialOnly) {
         this.marketData = this.mergeMarketData([this.marketData, newData]);
-        // Re-analisar para habilitar ferramentas que dependem do histórico completo
-        this.runAnalysis();
       } else {
         this.marketData = newData;
       }
@@ -1226,6 +1227,18 @@ class B3App {
       // 4. Se for visitante, garantir restrição de 2 anos no histórico para economia de memória
       if (!this.user) {
         this.restrictHistoricalData(2);
+      }
+
+      // Re-analisar e re-renderizar para habilitar ferramentas e gráficos que dependem do histórico completo
+      if (!essentialOnly) {
+        await this.runAnalysis();
+        this.renderPositions();
+        if (this.currentPage === 'monitor' && this.currentMonitorTicker) {
+          this.renderFundamentalAnalysis(this.currentMonitorTicker);
+        }
+        if (this.currentPage === 'rebalance' && this.rebalanceResults) {
+          this.renderRebalance();
+        }
       }
 
       console.log('Dados de mercado carregados e mesclados com sucesso');
@@ -1258,26 +1271,36 @@ class B3App {
 
   mergeMarketData(dataList) {
     // Usamos o primeiro arquivo como base (geralmente market_data.json, o mais recente)
-    const base = dataList[0];
-    const mergedAssets = { ...base.assets };
+    const base = JSON.parse(JSON.stringify(dataList[0]));
+    const mergedAssets = base.assets || {};
 
     // Percorrer os outros arquivos para mesclar histórico e dividendos
     for (let i = 1; i < dataList.length; i++) {
       const current = dataList[i];
 
+      if (!current || !current.assets) continue;
+
       Object.keys(current.assets).forEach(ticker => {
         if (!mergedAssets[ticker]) {
-          // Se o ativo não existe na base, adicionamos (caso raro, mas possível)
-          mergedAssets[ticker] = current.assets[ticker];
+          // Se o ativo não existe na base, adicionamos
+          mergedAssets[ticker] = JSON.parse(JSON.stringify(current.assets[ticker]));
           return;
         }
 
         const baseAsset = mergedAssets[ticker];
         const extraAsset = current.assets[ticker];
 
+        if (!baseAsset.history) {
+          baseAsset.history = { dates: [], closes: [], volumes: [] };
+        }
+
         // Mesclar Histórico
         if (extraAsset.history && extraAsset.history.dates) {
           this.mergeAssetHistory(baseAsset.history, extraAsset.history);
+        }
+
+        if (!baseAsset.dividends) {
+          baseAsset.dividends = { dates: [], values: [] };
         }
 
         // Mesclar Dividendos
@@ -3682,7 +3705,7 @@ class B3App {
           },
           {
             data: avgLine,
-            borderColor: 'rgba(255, 255, 255, 0.7)',
+            borderColor: 'rgba(100, 116, 139, 0.5)',
             borderWidth: 1.0,
             borderDash: [5, 2],
             pointRadius: 0,
@@ -3814,7 +3837,7 @@ class B3App {
           {
             label: 'Ref',
             data: zeros,
-            borderColor: 'rgba(255, 255, 255, 0.25)',
+            borderColor: 'rgba(100, 116, 139, 0.4)',
             borderWidth: 0.8,
             borderDash: [3, 3],
             pointRadius: 0,
@@ -6152,7 +6175,7 @@ onForecastTermsCheckboxChange() {
           },
           {
             data: avgLine,
-            borderColor: 'rgba(255, 255, 255, 0.7)',
+            borderColor: 'rgba(100, 116, 139, 0.5)',
             borderWidth: 1.0,
             borderDash: [5, 2],
             pointRadius: 0,
