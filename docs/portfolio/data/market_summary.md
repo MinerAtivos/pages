@@ -1,21 +1,21 @@
-## Resumo de Mercado - 2026-10-22
+## Resumo de Mercado - 2026-10-23
 
 ### 📈 Maiores Altas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| OSXB3.SA | OSX Brasil S.A. | R$ 2.05 | R$ 1.84 | **+11.41%** 🚀 | +218.50% ⬆️ |
-| PMAM3.SA | Paranapanema S.A. | R$ 0.41 | R$ 0.38 | **+7.89%** 🚀 | +31.30% ⬆️ |
-| NEXP3.SA | Nexpe Participações S.A. | R$ 2.61 | R$ 2.43 | **+7.41%** 🚀 | -36.97% ⬇️ |
-| MTSA4.SA | METISA Metalúrgica Timboense S.A. | R$ 49.39 | R$ 46.30 | **+6.67%** 🚀 | -3.16% ⬇️ |
-| BPAC5.SA | Banco BTG Pactual S.A. | R$ 27.00 | R$ 25.69 | **+5.10%** 🚀 | -74.81% ⬇️ |
+| AFLT3.SA | Afluente Transmissão de Energia Elétrica S.A. | R$ 7.79 | R$ 6.61 | **+17.85%** 🚀 | +400.68% ⬆️ |
+| DOTZ3.SA | Dotz S.A. | R$ 13.00 | R$ 11.18 | **+16.28%** 🚀 | +198.16% ⬆️ |
+| ENJU3.SA | Enjoei S.A. | R$ 8.80 | R$ 7.75 | **+13.55%** 🚀 | +46.44% ⬆️ |
+| CSNA3.SA | Companhia Siderúrgica Nacional | R$ 6.07 | R$ 5.40 | **+12.41%** 🚀 | +0.09% ⬆️ |
+| VIVR3.SA | Viver Incorporadora e Construtora S.A. | R$ 3.24 | R$ 2.90 | **+11.72%** 🚀 | +109.17% ⬆️ |
 
 ### 📉 Maiores Baixas (Dia - Geral)
 
 | Ativo | Nome | Fechamento | Anterior | Variação | DeltaVolume |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| JFEN3.SA | João Fortes Engenharia S.A. | R$ 3.05 | R$ 4.10 | **-25.61%** 📉 | -2.46% ⬇️ |
-| AZEV3.SA | Azevedo & Travassos S.A. | R$ 13.57 | R$ 16.70 | **-18.74%** 📉 | -19.50% ⬇️ |
-| DOTZ3.SA | Dotz S.A. | R$ 11.18 | R$ 12.30 | **-9.11%** 📉 | +81.46% ⬆️ |
-| PINE4.SA | Banco Pine S.A. | R$ 16.32 | R$ 17.71 | **-7.85%** 📉 | +44.07% ⬆️ |
-| CVCB3.SA | CVC Brasil Operadora e Agência de Viagens S.A. | R$ 1.49 | R$ 1.61 | **-7.45%** 📉 | +29.45% ⬆️ |
+| AZEV3.SA | Azevedo & Travassos S.A. | R$ 12.01 | R$ 13.57 | **-11.50%** 📉 | +24.64% ⬆️ |
+| RCSL4.SA | Recrusul S/A | R$ 0.86 | R$ 0.93 | **-7.53%** 📉 | +34.39% ⬆️ |
+| VVEO3.SA | CM Hospitalar S/A | R$ 0.89 | R$ 0.94 | **-5.32%** 📉 | +59.33% ⬆️ |
+| CCTY3.SA | RDVC City S.A. | R$ 4.70 | R$ 4.96 | **-5.24%** 📉 | -81.08% ⬇️ |
+| WHRL3.SA | Whirlpool S.A. | R$ 3.70 | R$ 3.87 | **-4.39%** 📉 | +17.13% ⬆️ |
