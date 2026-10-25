@@ -1544,7 +1544,7 @@ class B3App {
       if (recData && !isIbov) {
         recBox.style.display = 'block';
         recBox.innerHTML = `
-          <div style="font-size: 0.75rem; font-weight: 600; color: var(--accent-light); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem;">
+          <div style="font-size: 0.75rem; font-weight: 600; color: var(--accent-light); margin-bottom: 0.5rem; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem;">
             Varredura de citações (15 dias)
           </div>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-bottom: 0.75rem;">
@@ -1625,15 +1625,14 @@ class B3App {
                   <strong style="color: var(--accent); font-size: 0.85rem;">📅 ${dateFormatted}</strong>
                   ${badge}
                 </div>
-                ${(inc > 0 || exc > 0) ? `<div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem;">Recomendações: <span style="color:var(--green)">+${inc} inclusões</span> / <span style="color:var(--red)">-${exc} exclusões</span></div>` : ''}
-                <div style="color: var(--text-secondary); line-height: 1.35;">${sumText}</div>
+                ${(inc > 0 || exc > 0) ? `<div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem;">Citações: <span style="color:var(--green)">+${inc} inclusões</span> / <span style="color:var(--red)">-${exc} exclusões</span></div>` : ''}
               </div>
             `;
           }).join('');
 
           historyBox.innerHTML = `
-            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem;">
-              📜 Histórico de Sentimento e Recomendações
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.6rem; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem;">
+              Histórico
             </div>
             <div style="display: flex; flex-direction: column; gap: 0.5rem; max-height: 220px; overflow-y: auto; padding-right: 0.25rem;">
               ${itemsHtml}
