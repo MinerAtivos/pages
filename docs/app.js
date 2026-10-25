@@ -1366,9 +1366,44 @@ class B3App {
       if (res.ok) {
         this.marketNews = await res.json();
       }
+      const histRes = await fetch(`./data/market_news_history.json?t=${new Date().getTime()}`);
+      if (histRes.ok) {
+        this.marketNewsHistory = await histRes.json();
+      }
     } catch (e) {
       console.warn('Market news not available yet.');
     }
+  }
+
+  getSentimentBadgeHTML(sentiment) {
+    if (!sentiment) return '';
+    const score = sentiment.score != null ? Number(sentiment.score) : 0;
+    const label = (sentiment.label || 'neutro').toLowerCase();
+
+    let bg = '#F1F5F9';
+    let color = '#475569';
+    let border = '#CBD5E1';
+    let text = 'Neutro';
+    let icon = '●';
+
+    if (label === 'inclusao_carteira' || label === 'positivo' || score > 0.2) {
+      bg = '#ECFDF5';
+      color = '#059669';
+      border = '#A7F3D0';
+      text = label === 'inclusao_carteira' ? 'Inclusão em Carteira' : 'Positivo';
+      icon = '▲';
+    } else if (label === 'exclusao_carteira' || label === 'negativo' || score < -0.2) {
+      bg = '#FEF2F2';
+      color = '#DC2626';
+      border = '#FCA5A5';
+      text = label === 'exclusao_carteira' ? 'Exclusão de Carteira' : 'Negativo';
+      icon = '▼';
+    }
+
+    const scoreStr = (score >= 0 ? '+' : '') + score.toFixed(2);
+    return `<span class="badge" style="background: ${bg}; color: ${color}; border: 1px solid ${border}; padding: 0.35rem 0.65rem; border-radius: 6px; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+      <span>${icon}</span> <span>${text}</span> <small style="opacity: 0.8; font-weight: 600;">(${scoreStr})</small>
+    </span>`;
   }
 
   renderMarketNews() {
@@ -1476,7 +1511,7 @@ class B3App {
     });
   }
 
-  showAssetNews(ticker) {
+  async showAssetNews(ticker) {
     if (!this.marketNews || !this.marketNews.assets[ticker]) {
       this.toast('Notícias não encontradas para este ativo.', 'warning');
       return;
@@ -1496,23 +1531,119 @@ class B3App {
     if (data.period) updateText += ` | Período: ${data.period}`;
     this.$('newsModalUpdateDate').textContent = updateText;
 
+    // Render Sentiment Badge
+    const sentimentContainer = this.$('newsModalSentimentBadge');
+    if (sentimentContainer) {
+      sentimentContainer.innerHTML = this.getSentimentBadgeHTML(data.sentiment);
+    }
+
+    // Render Recommendation Trend 15D Box
+    const recBox = this.$('newsModalRecommendationBox');
+    if (recBox) {
+      const recData = data.recommendation_trend_15d;
+      if (recData && !isIbov) {
+        recBox.style.display = 'block';
+        recBox.innerHTML = `
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent-light); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem;">
+            🔍 Varredura de Carteiras & Recomendações (15 dias)
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-bottom: 0.75rem;">
+            <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 0.75rem; border-radius: 6px; text-align: center;">
+              <span style="display: block; font-size: 0.7rem; color: var(--green); font-weight: 600;">Inclusões / Otimismo</span>
+              <strong style="font-size: 1.1rem; color: var(--green);">${recData.inclusions_count || 0}</strong>
+            </div>
+            <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); padding: 0.5rem 0.75rem; border-radius: 6px; text-align: center;">
+              <span style="display: block; font-size: 0.7rem; color: var(--red); font-weight: 600;">Exclusões / Cautela</span>
+              <strong style="font-size: 1.1rem; color: var(--red);">${recData.exclusions_count || 0}</strong>
+            </div>
+          </div>
+          ${recData.current_status ? `<div style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.4rem;"><strong>Status Atual:</strong> ${this.escapeHTML(recData.current_status)}</div>` : ''}
+          ${recData.trend_summary ? `<div style="font-size: 0.85rem; color: var(--text-primary); line-height: 1.4; background: rgba(0,0,0,0.02); padding: 0.5rem; border-radius: 4px; border-left: 3px solid var(--accent);">${this.escapeHTML(recData.trend_summary)}</div>` : ''}
+        `;
+      } else {
+        recBox.style.display = 'none';
+      }
+    }
+
     // Handle summary text and outdated disclaimer
     const textElement = this.$('newsModalText');
     if (textElement) {
-        // Transforma o container em flexbox para neutralizar margens invisíveis do topo
         textElement.style.display = 'flex';
         textElement.style.flexDirection = 'column';
         textElement.style.justifyContent = 'flex-start';
-        textElement.style.gap = '0px'; // Garante espaço zero entre os elementos filhos
+        textElement.style.gap = '0px';
         textElement.style.paddingTop = '0px';
         textElement.style.marginTop = '0px';
       if (data.is_outdated) {
         textElement.innerHTML = `
           <div class="news-outdated-label" style="margin-bottom: 1rem;">AVISO: Este resumo não necessariamente retrata o desempenho do dia, pois não houve fontes disponíveis para a data atual.</div>
           <div style="white-space: pre-wrap; margin-top: 0;">${this.escapeHTML(data.summary).trim()}</div><br>
-        `.replace(/>\s+</g, '><'); // Remove os espaços e quebras de linha gerados pelas crases;
+        `.replace(/>\s+</g, '><');
       } else {
         textElement.textContent = data.summary;
+      }
+    }
+
+    // Render Historical Sentiment & Recommendation Timeline
+    const historyBox = this.$('newsModalHistoryBox');
+    if (historyBox) {
+      if (!this.marketNewsHistory) {
+        try {
+          const histRes = await fetch(`./data/market_news_history.json?t=${new Date().getTime()}`);
+          if (histRes.ok) {
+            this.marketNewsHistory = await histRes.json();
+          }
+        } catch (e) {
+          console.warn('Erro ao carregar histórico de notícias:', e);
+        }
+      }
+
+      if (this.marketNewsHistory && this.marketNewsHistory.history) {
+        const histObj = this.marketNewsHistory.history;
+        const availableDates = Object.keys(histObj).sort().reverse();
+        const historyEntries = [];
+
+        availableDates.forEach(dStr => {
+          if (histObj[dStr] && histObj[dStr][ticker]) {
+            historyEntries.push({ date: dStr, data: histObj[dStr][ticker] });
+          }
+        });
+
+        if (historyEntries.length > 0 && !isIbov) {
+          historyBox.style.display = 'block';
+          let itemsHtml = historyEntries.map(entry => {
+            const dateFormatted = entry.date.split('-').reverse().join('/');
+            const badge = this.getSentimentBadgeHTML(entry.data.sentiment);
+            const sumText = this.escapeHTML(entry.data.summary || '');
+            const recTrend = entry.data.recommendation_trend_15d || {};
+            const inc = recTrend.inclusions_count || 0;
+            const exc = recTrend.exclusions_count || 0;
+
+            return `
+              <div style="padding: 0.65rem 0.85rem; border-radius: 6px; background: rgba(0,0,0,0.02); border: 1px solid var(--border-color); font-size: 0.82rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap; gap: 0.4rem;">
+                  <strong style="color: var(--accent); font-size: 0.85rem;">📅 ${dateFormatted}</strong>
+                  ${badge}
+                </div>
+                ${(inc > 0 || exc > 0) ? `<div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.25rem;">Recomendações: <span style="color:var(--green)">+${inc} inclusões</span> / <span style="color:var(--red)">-${exc} exclusões</span></div>` : ''}
+                <div style="color: var(--text-secondary); line-height: 1.35;">${sumText}</div>
+              </div>
+            `;
+          }).join('');
+
+          historyBox.innerHTML = `
+            <div style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem;">
+              📜 Histórico de Sentimento e Recomendações
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; max-height: 220px; overflow-y: auto; padding-right: 0.25rem;">
+              ${itemsHtml}
+            </div>
+          `;
+        } else {
+          historyBox.style.display = 'none';
+        }
+      } else {
+        historyBox.style.display = 'none';
       }
     }
 

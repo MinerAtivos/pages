@@ -876,17 +876,12 @@
             <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 280px;">
               <h2 class="card-title" style="margin: 0; font-size: 1.1rem; white-space: nowrap;">Filtros do Modelo</h2>
               <div class="form-inline" style="flex: 1; max-width: 320px;">
-                <input type="text" id="forecastSearchInput" class="input-sm" placeholder="🔍Buscar ativo (Ex: CMIG3)..." style="width: 100%;" oninput="app.filterForecastData()">
+                <input type="text" id="forecastSearchInput" class="input-sm" placeholder="Buscar ativo (Ex: CMIG3)..." style="width: 100%;" oninput="app.filterForecastData()">
               </div>
-            </div>
-            <div style="display: flex; gap: 0.5rem; align-items: center;">
-              <button class="btn btn-outline btn-sm" id="btnToggleForecastFilters" onclick="app.toggleForecastFilters()" style="width: auto;">
-                Filtros Avançados <span id="forecastFiltersChevron">▼</span>
-              </button>
-              <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
-                Limpar Filtros
-              </button>
-            </div>
+            <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
+              Limpar Filtros
+            </button>
+			</div>
           </div>
           <!-- Painel de Filtros Recolhível -->
           <div id="forecastCollapsibleFilters" class="collapsible-operations" style="display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
@@ -1568,16 +1563,29 @@
         <button class="modal-close" id="newsModalClose">&times;</button>
       </div>
       <div class="news-modal-content" id="newsModalScrollArea">
-        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-          <div id="newsModalLogoContainer"></div>
-          <div>
-            <h3 id="newsModalTickerName" style="margin: 0; color: var(--text-primary);">Petróleo Brasileiro S.A.</h3>
-            <p id="newsModalUpdateDate" style="margin: 0; font-size: 0.8rem; color: var(--text-muted);"></p>
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; flex-wrap: wrap; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div id="newsModalLogoContainer"></div>
+            <div>
+              <h3 id="newsModalTickerName" style="margin: 0; color: var(--text-primary);">Petróleo Brasileiro S.A.</h3>
+              <p id="newsModalUpdateDate" style="margin: 0; font-size: 0.8rem; color: var(--text-muted);"></p>
+            </div>
           </div>
+          <div id="newsModalSentimentBadge"></div>
         </div>
-        <div id="newsModalText" style="line-height: 1.6; font-size: 1.05rem; color: var(--text-primary); background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+
+        <div id="newsModalRecommendationBox" style="display: none; margin-bottom: 1rem; padding: 1rem; border-radius: 8px; background: var(--bg-card); border: 1px solid var(--border-color);">
+          <!-- Painel de Recomendações e Tendência 15D -->
+        </div>
+
+        <div id="newsModalText" style="line-height: 1.6; font-size: 1.05rem; color: var(--text-primary); background: rgba(255,255,255,0.03); padding: 1.25rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
           Carregando resumo...
         </div>
+
+        <div id="newsModalHistoryBox" style="margin-top: 1.25rem; display: none;">
+          <!-- Histórico de Recomendações e Sentimento -->
+        </div>
+
         <div id="newsModalSources" style="margin-top: 1rem; font-size: 0.85rem;">
           <!-- Fontes serão inseridas aqui -->
         </div>
