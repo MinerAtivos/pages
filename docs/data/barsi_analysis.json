@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-02-21T16:16:17.032586",
+  "target_yield": 6,
+  "analyses": [
+    {
+      "ticker": "ABEV3.SA",
+      "name": "Ambev S.A.",
+      "current_price": 16.03,
+      "price_ceiling": 39.56,
+      "margin_of_safety": 146.77,
+      "recommendation": "COMPRAR - Preço abaixo do teto com boa margem",
+      "dpa_avg": 0.2143,
+      "current_yield": 14.81
+    },
+    {
+      "ticker": "VALE3.SA",
+      "name": "Vale S.A.",
+      "current_price": 86.81,
+      "price_ceiling": 135.66,
+      "margin_of_safety": 56.27,
+      "recommendation": "COMPRAR - Preço abaixo do teto com boa margem",
+      "dpa_avg": 1.6012,
+      "current_yield": 9.38
+    },
+    {
+      "ticker": "PETR4.SA",
+      "name": "Petróleo Brasileiro S.A. - Petrobras",
+      "current_price": 37.97,
+      "price_ceiling": 54.69,
+      "margin_of_safety": 44.03,
+      "recommendation": "COMPRAR - Preço abaixo do teto com boa margem",
+      "dpa_avg": 0.8248,
+      "current_yield": 8.64
+    },
+    {
+      "ticker": "PETR4.SA",
+      "name": "Petróleo Brasileiro S.A. - Petrobras",
+      "current_price": 37.97,
+      "price_ceiling": 54.69,
+      "margin_of_safety": 44.03,
+      "recommendation": "COMPRAR - Preço abaixo do teto com boa margem",
+      "dpa_avg": 0.8248,
+      "current_yield": 8.64
+    },
+    {
+      "ticker": "ITUB4.SA",
+      "name": "Itaú Unibanco Holding S.A.",
+      "current_price": 49.23,
+      "price_ceiling": 37.11,
+      "margin_of_safety": -24.63,
+      "recommendation": "VENDER - Preço acima do teto",
+      "dpa_avg": 0.0748,
+      "current_yield": 4.52
+    },
+    {
+      "ticker": "WEGE3.SA",
+      "name": "WEG S.A.",
+      "current_price": 51.99,
+      "price_ceiling": 32.89,
+      "margin_of_safety": -36.75,
+      "recommendation": "VENDER - Preço acima do teto",
+      "dpa_avg": 0.0595,
+      "current_yield": 3.8
+    },
+    {
+      "ticker": "BBDC4.SA",
+      "name": "Banco Bradesco S.A.",
+      "current_price": 21.76,
+      "price_ceiling": 7.39,
+      "margin_of_safety": -66.05,
+      "recommendation": "VENDER - Preço acima do teto",
+      "dpa_avg": 0.0477,
+      "current_yield": 2.04
+    }
+  ],
+  "summary": {
+    "total_analyzed": 7,
+    "buy_signals": 4,
+    "hold_signals": 0,
+    "sell_signals": 3
+  }
+}

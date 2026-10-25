@@ -1,1096 +1,1659 @@
-<html lang="pt-br">
-	<head>
-		<link rel="icon" type="image/png" href="favicon.png">
-		
-	<script src="cookie-consent.js"></script>
-		
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MinerAtivos | Insights de Mercado</title>
-	                <meta name="MinerAtivos" content="Insights de mercado acionáveis. Fundamentos para análises e estratégias baseadas em dados para os mercados financeiros dinâmicos de hoje. Fornecendo insights de mercado acionáveis​para ajudar os investidores a tomarem decisões baseados em dados. Mercado de Ações, Commodities, Altas e quedas, Forecast, Algoritmos, Radar Intraday, Resumo do mercado, Balanceamento de portfólio">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-			<link rel="stylesheet" href="style.css">
-			<script src="script.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2563eb',
-                        secondary: '#1e40af',
-                        accent: '#3b82f6',
-                        dark: '#1f2937',
-                        light: '#f9fafb'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-	
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6;
-        }
-        
-        .ticker-container {
-            background: linear-gradient(90deg, #2563eb, #3b82f6);
-            color: white;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .ticker-content {
-            display: inline-block;
-            white-space: nowrap;
-            animation: ticker 30s linear infinite;
-        }
-        
-        @keyframes ticker {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            transition: all 0.3s ease;
-        }
-        
-        .chart-container {
-            height: 300px;
-            position: relative;
-        }
-        
-        .trend-up {
-            color: #10b981;
-        }
-        
-        .trend-down {
-            color: #ef4444;
-        }
-        
-        .trend-neutral {
-            color: #6b7280;
-        }
-		
-	.iframe-container {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      position: relative;
-      border-radius: 12px;
-      clip-path: inset(0 round 12px); /* recorte arredondado */
-    }
-
-    .iframe-container iframe {
-      width: 100%;
-      height: 400px; /* maior que o container para mostrar só uma parte */
-      border: none;
-      pointer-events: none;
-      transform: translateY(-100px); /* move o conteúdo para cima */
-    }
-
-    #mobile-menu {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 75%;
-        max-width: 300px;
-        background-color: white;
-        z-index: 100;
-        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
-    }
-    </style>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MinerAtivos - Rebalanceamento de Portfólio</title>
+  <meta name="description" content="Plataforma inteligente de análise e rebalanceamento de portfólios de investimentos na B3.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-treemap@3.0.0/dist/chartjs-chart-treemap.min.js"></script>
+  <script src="https://s3.tradingview.com/tv.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="../cookie-consent.js"></script>
+  <script src="app.js"></script>
 </head>
-<body class="min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <!--<i class="fas fa-chart-line text-primary text-2xl"></i>
-                <h1 class="text-xl font-bold text-dark">Miner<span class="text-primary">Ativos</span></h1>-->
-				<img src="../assets/logo4.png" alt="MinerAtivos" style="height: 80px; width: auto; margin-right: 10px;">
-            </div>
-            <div class="hidden md:flex md:items-center md:space-x-8">
-                <nav class="flex flex-col md:flex-row md:space-x-8">		                    
-					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Forecast</a>
-					<a href="metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Algoritmos</a>					
-					<a href="https://minerativos.com.br/portfolio/" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Gestão de portfólio</a>
-					<a href="https://minerativos.com.br/portfolio/index.html?section=summary" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Resumo do mercado</a>
-					<a href="monitor.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Monitor</a>
-					<a href="https://minerativos.com.br/blog" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Blog</a>
-                    <a href="metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sobre</a>				
-                </nav>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="bg-primary hover:bg-secondary text-white px-4 py-2 rounded-md font-medium" onclick="focarNoFormulario()">
-                    Seguir
-                </button>
-                <button id="hamburger-button" class="md:hidden text-dark">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-                <!--<script>
-                    function focarNoFormulario() {
-                      const campoNome = document.getElementById("nome");
-                      campoNome.scrollIntoView({ behavior: "smooth", block: "center" });
-                      campoNome.focus();
-                    }
-                </script>-->
-				<script>
-					function focarNoFormulario() {
-					  const campoNome = document.getElementById("nome");
-					  if (campoNome) {
-						campoNome.scrollIntoView({ behavior: "smooth", block: "center" });
-						campoNome.focus();
-					  }
-					}
-					
-					// Executa automaticamente ao carregar a página
-					window.addEventListener("DOMContentLoaded", () => {
-					  const urlParams = new URLSearchParams(window.location.search);
-					  
-					  if (urlParams.get("cadastro") === "true") {
-						// Pequeno atraso para garantir que a página renderizou totalmente
-						setTimeout(focarNoFormulario, 300); 
-					  }
-					});
-                </script>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <div class="flex justify-end">
-                    <button id="close-button" class="text-dark p-2">
-                        <i class="fas fa-times text-xl"></i>
-                    </button>
-                </div>
-                <nav class="flex flex-col space-y-2">					
-					<a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Forecast</a>
-					<a href="metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Algoritmos</a>						
-					<a href="https://minerativos.com.br/portfolio/" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Gestão de portfólio</a>
-					<a href="https://minerativos.com.br/portfolio/index.html?section=summary" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Resumo do mercado</a>
-					<a href="monitor.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Monitor</a>
-					<a href="https://minerativos.com.br/blog" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Blog</a>
-                    <a href="metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
-					
-                </nav>
-            </div>
-        </div>
-    </header>
+<body class="loading">
 
-    <!-- Live Ticker -->
-    <div class="ticker-container py-2" style="pointer-events: none;">
-        <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container" style="width: 100%; height: 106px;">
-  <iframe scrolling="no" allowtransparency="true" frameborder="0" src="https://www.tradingview-widget.com/embed-widget/ticker-tape/?locale=br#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FOREXCOM%3ASPXUSD%22%2C%22title%22%3A%22S%26P%20500%20Index%22%7D%2C%7B%22proName%22%3A%22FOREXCOM%3ANSXUSD%22%2C%22title%22%3A%22US%20100%20Cash%20CFD%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%20to%20USD%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3ABTCUSD%22%2C%22title%22%3A%22Bitcoin%22%7D%2C%7B%22proName%22%3A%22BITSTAMP%3AETHUSD%22%2C%22title%22%3A%22Ethereum%22%7D%2C%7B%22description%22%3A%22Ibovespa%20index%22%2C%22proName%22%3A%22BMFBOVESPA%3AIBOV%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22isTransparent%22%3Afalse%2C%22largeChartUrl%22%3A%22https%3A%2F%2Fminerativos.github.io%2Fpages%2Fteste_twitter3.html%22%2C%22displayMode%22%3A%22adaptive%22%2C%22colorTheme%22%3A%22light%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A78%2C%22utm_source%22%3A%22%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22ticker-tape%22%2C%22page-uri%22%3A%22__NHTTP__%22%7D" title="ticker tape TradingView widget" lang="en" style="user-select: none; box-sizing: border-box; display: block; height: 74px; width: 100%;"></iframe>
-    
-<style>
-
-
-	.tradingview-widget-copyright {
-		font-size: 13px !important;
-		line-height: 32px !important;
-		text-align: center !important;
-		vertical-align: middle !important;
-		/* @mixin sf-pro-display-font; */
-		font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS', Roboto, Ubuntu, sans-serif !important;
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright .blue-text {
-		color: #2962FF !important;
-	}
-
-	.tradingview-widget-copyright a {
-		text-decoration: none !important;
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright a:visited {
-		color: #B2B5BE !important;
-	}
-
-	.tradingview-widget-copyright a:hover .blue-text {
-		color: #1E53E5 !important;
-	}
-
-	.tradingview-widget-copyright a:active .blue-text {
-		color: #1848CC !important;
-	}
-
-	.tradingview-widget-copyright a:visited .blue-text {
-		color: #2962FF !important;
-	}
-	</style></div>
-	<div class="absolute bottom-[85px] right-1 bg-white text-purple-600 px-2 py-1 rounded-md text-[0.30rem] font-small">MA</div>
-<!-- TradingView Widget END -->
+  <!-- Splash Screen -->
+  <div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+      <img src="../assets/logo4_2.png" alt="MinerAtivos" class="splash-logo">
+      <div class="splash-loader">
+        <div class="spinner"></div>
+        <p id="splashMessage">Carregando ambiente...</p>
+      </div>
     </div>
-
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-primary to-accent text-white py-1">
-        <div class="container mx-auto px-4">
-            <div class="max-w-3xl">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Insights de mercado acionáveis</h2>
-                <p class="text mb-8 opacity-90">Fundamentos para análises e estratégias baseadas em dados para os mercados financeiros dinâmicos de hoje.</p>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Market Overview -->
-    <section class="py-12 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl font-bold text-dark">Visão geral do mercado</h2>
-                <!--<div class="flex space-x-2">
-                    <button class="bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-md text-sm">Stocks</button>
-                    <button class="bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-md text-sm">Crypto</button>
-                    <button class="bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-md text-sm">Forex</button>
-                    <button class="bg-gray-100 hover:bg-gray-200 px-3 py-1 rounded-md text-sm">Commodities</button>
-                </div>-->
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
-                <!-- Market Card 1 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start">
-						
-                            <div>
-                                <h3 class="font-bold text-lg text-dark">Bovespa</h3>
-                                <p class="text-gray-500 text-sm">Índice Bovespa</p>
-                            </div>
-                            
-                        </div>
-						<div class="mt-4">
-                            <p class="text-2xl font-bold"></p>
-                            <p class="text-gray-500 text-sm"></p>
-                        </div>
-                        <div class="mt-4">
-                            <p class="text-2xl font-bold"></p>
-                            <p class="text-gray-500 text-sm"></p>
-                        </div>
-                        <div class="chart-container mt-4">
-                            <!-- TradingView Widget BEGIN -->
-							<div class="tradingview-widget-container" style="pointer-events: none;">
-							  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
-							  {
-							  "colorTheme": "light",
-							  "dateRange": "12M",
-							  "showChart": true,
-							  "locale": "br",
-							  "width": "100%",
-							  "height": "80%",
-							  "largeChartUrl": "",
-							  "isTransparent": false,
-							  "showSymbolLogo": true,
-							  "showFloatingTooltip": false,
-							  "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
-							  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
-							  "gridLineColor": "rgba(240, 243, 250, 0)",
-							  "scaleFontColor": "rgba(15, 15, 15, 1)",
-							  "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
-							  "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
-							  "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
-							  "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
-							  "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
-							  "tabs": [
-								{
-								  "title": "Indices",
-								  "symbols": [
-									{
-									  "s": "BMFBOVESPA:IBOV"
-									}
-								  ],
-								  "originalTitle": "Indices"
-								}
-							  ]
-							}
-							  </script>
-							</div>
-
-							<div class="absolute bottom-[74px] right-[4px] bg-white text-blue-600 px-2 py-1 rounded-md text-[0.30rem] font-small">MA</div>
-
-							<!-- TradingView Widget END -->
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Market Card 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="font-bold text-lg text-dark">Bitcoin</h3>
-                                <p class="text-gray-500 text-sm">Criptomoeda</p>
-                            </div>
-                            
-                        </div>
-                        <div class="mt-4">
-                            <p class="text-2xl font-bold"></p>
-                            <p class="text-gray-500 text-sm"></p>
-                        </div>
-                        <div class="chart-container mt-4">
-                            <!-- TradingView Widget BEGIN -->
-							<div class="tradingview-widget-container" style="pointer-events: none;">
-							  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
-							  {
-							  "colorTheme": "light",
-							  "dateRange": "12M",
-							  "showChart": true,
-							  "locale": "br",
-							  "width": "100%",
-							  "height": "80%",
-							  "largeChartUrl": "",
-							  "isTransparent": false,
-							  "showSymbolLogo": true,
-							  "showFloatingTooltip": false,
-							  "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
-							  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
-							  "gridLineColor": "rgba(240, 243, 250, 0)",
-							  "scaleFontColor": "rgba(15, 15, 15, 1)",
-							  "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
-							  "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
-							  "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
-							  "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
-							  "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
-							  "tabs": [
-								{
-								  "title": "Indices",
-								  "symbols": [
-									{
-									  "s": "BTCUSD"
-									}
-								  ],
-								  "originalTitle": "Indices"
-								}
-							  ]
-							}
-							  </script>
-							</div>
-							<!-- TradingView Widget END -->
-							<div class="absolute bottom-[74px] right-[4px] bg-white text-blue-600 px-2 py-1 rounded-md text-[0.30rem] font-small">MA</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Market Card 3 -->
-             <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
-                    <div class="p-5">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h3 class="font-bold text-lg text-dark">Dólar</h3>
-                                <p class="text-gray-500 text-sm">Moedas</p>
-                            </div>
-                            
-                        </div>
-                        <div class="mt-4">
-                            <p class="text-2xl font-bold"></p>
-                            <p class="text-gray-500 text-sm"></p>
-                        </div>
-                        <div class="chart-container mt-4">
-                            <!-- TradingView Widget BEGIN -->
-							<div class="tradingview-widget-container" style="pointer-events: none;">
-							  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
-							  {
-							  "colorTheme": "light",
-							  "dateRange": "12M",
-							  "showChart": true,
-							  "locale": "br",
-							  "width": "100%",
-							  "height": "80%",
-							  "largeChartUrl": "",
-							  "isTransparent": false,
-							  "showSymbolLogo": true,
-							  "showFloatingTooltip": false,
-							  "plotLineColorGrowing": "rgba(41, 98, 255, 1)",
-							  "plotLineColorFalling": "rgba(41, 98, 255, 1)",
-							  "gridLineColor": "rgba(240, 243, 250, 0)",
-							  "scaleFontColor": "rgba(15, 15, 15, 1)",
-							  "belowLineFillColorGrowing": "rgba(41, 98, 255, 0.12)",
-							  "belowLineFillColorFalling": "rgba(41, 98, 255, 0.12)",
-							  "belowLineFillColorGrowingBottom": "rgba(41, 98, 255, 0)",
-							  "belowLineFillColorFallingBottom": "rgba(41, 98, 255, 0)",
-							  "symbolActiveColor": "rgba(41, 98, 255, 0.12)",
-							  "tabs": [
-								{
-								  "title": "Indices",
-								  "symbols": [
-									{
-									  "s": "USDBRL"
-									}
-								  ],
-								  "originalTitle": "Indices"
-								}
-							  ]
-							}
-							  </script>
-							</div>
-							<!-- TradingView Widget END -->
-							<div class="absolute bottom-[74px] right-[4px] bg-white text-blue-600 px-2 py-1 rounded-md text-[0.30rem] font-small">MA</div>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <!-- Market Card 4 -->
-    
-                </div>
-            </div>
-        </div>
-    </section>
-	
-	    <section class="from-yellow-400 to-yellow-600 text-white py-1">
-        <div class="container mx-auto px-4">
-            
-        </div>
-    </section>
-	
-		<!-- Featured Insights -->
-    <section class="py-12 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl font-bold text-dark">Insights em destaque</h2>
-                <a href="#" class="text-primary hover:text-secondary font-medium">Mais destaques <i class="fas fa-arrow-right ml-1"></i></a>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
-                <!-- Insight Card 1 -->
-				<div class="bg-white rounded-xl shadow-md overflow-hidden card-hover h-[400px]">
-				    <div class="relative h-full flex flex-col">
-				        <div class="relative">
-				            <img src="grafico_variacoes.png" alt="Gráfico variações" class="w-full h-48 object-cover" height="200">
-				            <div class="absolute top-1 left-1 bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-xs font-medium">Resumo do mercado</div>
-				        </div>
-				        
-				        <!--<div class="relative flex-grow">
-				            <iframe src="teste_publica_resumo_maiores_var_textos_llama3_miniatura.html" allowfullscreen 
-				                    class="w-full h-full object-cover" 
-				                    style="pointer-events: none;" 
-				                    scrolling="no"
-				                    sandbox="allow-forms allow-same-origin allow-scripts">
-				                <div class="absolute inset-0 z-20" style="background: rgba(255,255,255,0); pointer-events: all;"></div>
-				            </iframe>
-				            
-				            <button onclick="window.location.href='https://minerativos.github.io/pages/teste_publica_resumo_maiores_var_textos_llama3.html'" class="absolute bottom-4 right-1 bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium">Saiba mais</button>
-				        </div>-->
-						
-						<div class="relative w-full h-64 overflow-hidden rounded-lg shadow-md">
-						    <!-- Iframe como imagem estática -->
-						    <iframe src="teste_publica_resumo_maiores_var_textos_llama3_miniatura.html"
-						        class="w-full h-full pointer-events-none"
-						        scrolling="no"
-						        sandbox="allow-forms allow-same-origin allow-scripts"
-						        style="transform: scale(1); border: none;">
-						    </iframe>
-						
-						    <!-- Camada bloqueadora para garantir que o iframe não interaja -->
-						    <div class="absolute inset-0 z-10 bg-transparent pointer-events-none"></div>
-						
-						    <!-- Botão clicável -->
-						    <button onclick="window.location.href='https://minerativos.com.br/portfolio/index.html?section=summary'"
-						        class="absolute bottom-4 right-4 z-20 bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium shadow-md">
-						        Acesse
-						    </button>
-						</div>
-
-				    </div>
-				</div>
-                
-                <!-- Insight Card 2 -->
-			<div class="relative bg-white rounded-xl shadow-md overflow-hidden card-hover h-96">
-			    <div class="absolute top-1 left-1 bg-purple-50 text-purple-600 px-2 py-1 rounded-md text-xs font-medium z-10">Market Research</div>
-			    
-			    <div class="relative h-full">
-			        <!-- Substituído o iframe pela tag img com a mesma formatação -->
-			        <img src="market_research.png" alt="Radar Intraday" class="w-full h-full object-cover">
-			        
-			        <!-- Div transparente para controle de cliques (opcional, mantida do seu código) -->
-			        <div class="absolute inset-0 z-20" style="background: rgba(255,255,255,0); pointer-events: all;"></div>									
-			        
-			        <!-- Botão Acesse ajustado com z-30 para garantir que fique clicável acima da div transparente -->
-			        <button onclick="window.location.href='https://minerativos.com.br/portfolio/index.html?section=news'" class="absolute bottom-10 right-1 bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium z-30">Acesse</button>																		
-			    </div>
-			</div>
-                
-                <!-- Insight Card 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover h-96">
-                                <span class="bg-green-50 text-green-600 px-2 py-1 rounded-md text-xs">Forecast</span>
-								<span id="oraculo" class="bg-blue-50 text-blue-600 px-2 py-1 rounded-md text-xs">Oráculo</span>
-				
-                     <div class="relative h-full">
-                            <iframe src="forecast.html" allowfullscreen
-						class="w-full h-full object-cover" 
-						style="pointer-events: none;" 
-						scrolling="no">
-						<div class="absolute inset-0 z-20" style="background: rgba(255,255,255,0); pointer-events: all;"></div>
-						</iframe>														
-						 <button onclick="window.location.href='/forecast.html'" class="absolute bottom-10 right-1 bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium">Saiba mais</button>
-                    <!--    <div class="absolute top-1 left-1 bg-blue-600 text-white px-3 py-1 rounded-md text-sm font-medium"></div> -->
-                    </div> 
-                </div>
-            </div>
-        </div>
-    </section>
-
-<!--    <main id="posts-container">
-        <h2>Últimos Posts</h2>
-        <section class="posts-grid">
-            </section>
-    </main>-->
-
-<!--POSTS DAQUI-->
-<!--
-    COMPONENTE DE ÚLTIMOS POSTS DO BLOG
-    Instruções: Copie este trecho e cole no seu index.html onde desejar exibir os posts.
--->
-
-<section class="py-12 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center mb-8">
-            <h2 class="text-2xl font-bold text-dark">Últimas atualizações</h2>
-            <a href="blog/index.html" class="text-primary hover:text-secondary font-medium">Ver tudo <i class="fas fa-arrow-right ml-1"></i></a>
-        </div>
-
-        <div id="home-blog-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Os posts serão carregados via JavaScript abaixo -->
-            <div class="animate-pulse bg-white rounded-xl h-64"></div>
-            <div class="animate-pulse bg-white rounded-xl h-64"></div>
-            <div class="animate-pulse bg-white rounded-xl h-64"></div>
-        </div>
-    </div>
-</section>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const blogGrid = document.getElementById('home-blog-grid');
-
-    fetch('blog/posts.json')
-        .then(response => response.json())
-        .then(posts => {
-            blogGrid.innerHTML = '';
-            // Pega os 3 posts mais recentes
-            const recentPosts = posts.slice(0, 3);
-
-            recentPosts.forEach(post => {
-                const date = new Date(post.date).toLocaleDateString('pt-BR');
-                blogGrid.innerHTML += `
-                    <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all cursor-pointer" onclick="window.location.href='blog/${post.path}'">
-                        <img src="${post.imageUrl}" alt="${post.title}" class="w-full h-40 object-cover">
-                        <div class="p-5">
-                            <div class="flex items-center text-xs text-gray-500 mb-2">
-                                <span>${date}</span>
-                                <span class="mx-2">•</span>
-                                <span class="text-primary">${post.tags[0] || 'Mercado'}</span>
-                            </div>
-                            <h3 class="font-bold text-lg text-dark mb-2 line-clamp-2">${post.title}</h3>
-                            <p class="text-gray-600 text-sm line-clamp-2 mb-4">${post.description}</p>
-                            <span class="text-primary text-sm font-medium">Ler mais →</span>
-                        </div>
-                    </div>
-                `;
-            });
-        })
-        .catch(err => {
-            console.error('Erro ao carregar posts para a home:', err);
-            blogGrid.innerHTML = '<p class="col-span-3 text-center text-gray-400">Blog temporariamente indisponível.</p>';
-        });
-});
-</script>
-<!--POSTS ATÉ AQUI-->	
-	<!-- <section class="bg-yellow-500 from-primary to-accent py-1 text-2xl font-bold">Altas e baixas -->
-
-<section id="gainers-section" class="relative bg-gradient-to-r from-blue-600 to-purple-600 py-2 text-2xl font-bold text-white text-center shadow-2xl">
-  <span class="relative z-10 drop-shadow-[3px_3px_2px_rgba(0,0,0,0.5)]">
-    Altas e baixas
-  </span>
-</section>
-
-
-
-
-
-	
-    <!-- Market Movers -->
-    <section id="gainers-section" class="py-12 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl px-3 font-bold text-dark">Maiores altas</h2>
-                <div class="flex space-x-2">
-
-					
-					<button onclick="document.getElementById('losers-section').scrollIntoView({ behavior: 'smooth' });"
-					        class="bg-primary text-white py-1 px-4 rounded-md text-sm">ver quedas 
-					</button>
-
-					
-                </div>
-            </div>
-            
-            <div class="overflow-x-auto">
-				<!-- TradingView Widget BEGIN 
-				<div class="relative tradingview-widget-container" style="pointer-events: none;" sandbox="allow-forms allow-same-origin allow-scripts">-->
-				<div class="relative overflow-hidden" style="height: 400px;">
-				  <div class="tradingview-widget-container__widget"></div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
-				  {
-				  "width": "100%",
-				  "height": "100%",
-				  "defaultColumn": "overview",
-				  "defaultScreen": "top_gainers",
-				  "market": "brazil",
-				  "showToolbar": false,
-				  "colorTheme": "light",
-				  "locale": "br"
-				}
-				  </script>
-					<!-- Div sobreposta posicionada no canto inferior direito -->
-					<div class="absolute bottom-[12px] right-[1px] bg-white text-blue-600 px-2 py-1 rounded-md z-10 text-[0.30rem] font-[8px]">
-					  MA
-					</div>
-					<div class="absolute inset-0 z-20" style="background: rgba(255,255,255,0); pointer-events: all;"></div>
-
-				</div>
-				<!-- TradingView Widget END -->
-            </div>
-        </div>
-    </section>
-	
-    <section id="losers-section" class="py-12 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl px-3 font-bold text-dark">Maiores quedas</h2>
-                <div class="flex space-x-2">
-
-					
-					<button onclick="document.getElementById('gainers-section').scrollIntoView({ behavior: 'smooth' });"
-					        class="bg-primary text-white py-1 px-4 rounded-md text-sm">ver altas 
-					</button>
-
-					
-                </div>
-            </div>
-            
-            <div class="overflow-x-auto">
-				<!-- TradingView Widget BEGIN 
-				<div class="relative tradingview-widget-container" style="pointer-events: none;" sandbox="allow-forms allow-same-origin allow-scripts">-->
-				<div class="relative overflow-hidden" style="height: 400px;">
-				  <div class="tradingview-widget-container__widget"></div>
-				  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
-				  {
-				  "width": "100%",
-				  "height": "100%",
-				  "defaultColumn": "overview",
-				  "defaultScreen": "top_losers",
-				  "market": "brazil",
-				  "showToolbar": false,
-				  "colorTheme": "light",
-				  "locale": "br"
-				}
-				  </script>
-					<!-- Div sobreposta posicionada no canto inferior direito -->
-					<div class="absolute bottom-[12px] right-[1px] bg-white text-blue-600 px-2 py-1 rounded-md z-10 text-[0.30rem] font-[8px]">
-					  MA
-					</div>
-					<div class="absolute inset-0 z-20" style="background: rgba(255,255,255,0); pointer-events: all;"></div>
-
-				</div>
-				<!-- TradingView Widget END -->
-            </div>
-        </div>
-    </section>
-    
-
-
-    <!-- Newsletter 
-    <section class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">Mantenha-se à frente no mercado</h2>
-            <p class="text-xl opacity-90 max-w-2xl mx-auto mb-8">Receba nossos insights e análises diárias de mercado diretamente em sua caixa de entrada.</p>
-        <form id="leadForm">    
-			<div class="flex flex-col sm:flex-row justify-center max-w-md mx-auto">
-                
-				<div class="form-group">
-				<input id="email" type="email" placeholder="Seu endereço de email" class="px-4 py-3 rounded-l-md flex-grow text-dark sm:rounded-r-none">
-				</div>
-						
-				<button id="submitBtn" type="submit" class="submit-btn bg-secondary hover:bg-blue-900 px-6 py-3 rounded-r-md sm:rounded-l-none font-semibold mt-2 sm:mt-0">
-                    Inscrever 
-                </button>
-				
-		</form>
-            </div>
-
-        </div>
-		
-
-		
-    </section> -->
-	
-	<!-- trecho adaptado para captação de leads -->
-
-<section class="py-16 bg-primary text-white">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-4">Mantenha-se à frente no mercado</h2>
-    <p class="text-xl opacity-90 max-w-2xl mx-auto mb-8">
-      Receba nossos insights e análises diárias de mercado diretamente em sua caixa de entrada.
-    </p>
-    <div id="message" class="message"></div>
-    <form id="leadForm" class="flex flex-col gap-3 items-center max-w-md mx-auto">
-      <input type="text" name="nome" id="nome" placeholder="Preencha o seu nome completo"
-        class="px-4 py-3 rounded-md text-dark w-full" required>
-      <input type="email" name="email" id="email" placeholder="Seu endereço de email"
-        class="px-4 py-3 rounded-md text-dark w-full hidden" required>
-      <button type="submit"
-        class="bg-secondary hover:bg-blue-900 px-6 py-3 rounded-md font-semibold mt-2 hidden"
-        id="submitBtn">
-        Inscrever <i class="fas fa-arrow-right ml-2"></i>
-      </button>
-    </form>
   </div>
-</section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('leadForm');
-  const nomeInput = document.getElementById('nome');
-  const emailInput = document.getElementById('email');
-  const submitBtn = document.getElementById('submitBtn');
-  const messageDiv = document.getElementById('message');
-
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec';
-
-  function showMessage(text, type) {
-    messageDiv.textContent = text;
-    messageDiv.className = `message ${type} show`;
-    setTimeout(() => {
-      messageDiv.classList.remove('show');
-    }, 5000);
-  }
-
-  function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
-
-  async function submitToGoogleScript(formData) {
-    try {
-      await fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams(formData)
-      });
-      return { success: true };
-    } catch (error) {
-      console.error('Erro ao enviar dados:', error);
-      return { success: false, error: error.message };
-    }
-  }
-
-  async function handleFormSubmit(event) {
-    event.preventDefault();
-    submitBtn.disabled = true;
-    submitBtn.classList.add('loading');
-
-    try {
-      const formData = new FormData(form);
-      const nome = formData.get('nome');
-      const email = formData.get('email');
-
-      if (!nome || nome.trim().length < 2) {
-        showMessage('Por favor, insira seu nome completo.', 'error');
-        return;
-      }
-
-      if (!email || !isValidEmail(email)) {
-        showMessage('Por favor, insira um e-mail válido.', 'error');
-        return;
-      }
-
-      const result = await submitToGoogleScript(formData);
-
-      if (result.success) {
-        showMessage('Inscrição realizada com sucesso!', 'success');
-        form.reset();
-        nomeInput.classList.add('hidden');
-        emailInput.classList.add('hidden');
-        submitBtn.classList.add('hidden');
-      } else {
-        showMessage('Erro ao enviar. Tente novamente.', 'error');
-      }
-    } catch (error) {
-      console.error('Erro no envio:', error);
-      showMessage('Erro inesperado. Tente novamente mais tarde.', 'error');
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.classList.remove('loading');
-    }
-  }
-
-  nomeInput.addEventListener('input', () => {
-    if (nomeInput.value.trim().length >= 2) {
-      emailInput.classList.remove('hidden');
-      submitBtn.classList.remove('hidden');
-    } else {
-      emailInput.classList.add('hidden');
-      submitBtn.classList.add('hidden');
-    }
-  });
-
-  form.addEventListener('submit', handleFormSubmit);
-});
-</script>
-
-
-
-<!-- trecho adaptado para captação de leads -->
-	 
-	
-	
-	<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('leadForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const messageDiv = document.getElementById('message');
-        
-        // IMPORTANTE: Substitua esta URL pela URL do seu Google Apps Script
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec';
-        
-        // Função para mostrar mensagens ao usuário
-        function showMessage(text, type) {
-            messageDiv.textContent = text;
-            messageDiv.className = `message ${type} show`;
-            
-            // Remove a mensagem após 5 segundos
-            setTimeout(() => {
-                messageDiv.classList.remove('show');
-            }, 5000);
-        }
-        
-        // Função para validar email
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-        
-        // Função para formatar telefone (opcional)
-        function formatPhone(phone) {
-            // Remove todos os caracteres não numéricos
-            const cleaned = phone.replace(/\D/g, '');
-            
-            // Aplica máscara brasileira se tiver 10 ou 11 dígitos
-            if (cleaned.length === 10) {
-                return cleaned.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
-            } else if (cleaned.length === 11) {
-                return cleaned.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-            }
-            
-            return phone; // Retorna original se não conseguir formatar
-        }
-        
-        // Função para validar o formulário
-        function validateForm(formData) {
-            const errors = [];
-            
-            if (!formData.get('nome') || formData.get('nome').trim().length < 2) {
-                errors.push('Nome deve ter pelo menos 2 caracteres');
-            }
-            
-            if (!formData.get('email') || !isValidEmail(formData.get('email'))) {
-                errors.push('E-mail deve ter um formato válido');
-            }
-            
-            return errors;
-        }
-        
-        // Função para enviar dados para o Google Apps Script
-        async function submitToGoogleScript(formData) {
-            try {
-                const response = await fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors', // Necessário para Google Apps Script
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    body: new URLSearchParams(formData)
-                });
-                
-                // Como usamos 'no-cors', não podemos ler a resposta
-                // Assumimos sucesso se não houve erro na requisição
-                return { success: true };
-                
-            } catch (error) {
-                console.error('Erro ao enviar dados:', error);
-                return { success: false, error: error.message };
-            }
-        }
-        
-        // Função principal para processar o envio do formulário
-        async function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            // Desabilita o botão e mostra loading
-            submitBtn.disabled = true;
-            submitBtn.classList.add('loading');
-            
-            try {
-                // Coleta os dados do formulário
-                const formData = new FormData(form);
-                
-                // Formata o telefone se fornecido
-                if (formData.get('telefone')) {
-                    formData.set('telefone', formatPhone(formData.get('telefone')));
-                }
-                
-                // Valida os dados
-                const validationErrors = validateForm(formData);
-                if (validationErrors.length > 0) {
-                    showMessage(validationErrors.join('. '), 'error');
-                    return;
-                }
-                
-                // Envia os dados
-                const result = await submitToGoogleScript(formData);
-                
-                if (result.success) {
-                    showMessage('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
-                    form.reset(); // Limpa o formulário
-                } else {
-                    showMessage('Erro ao enviar mensagem. Tente novamente.', 'error');
-                }
-                
-            } catch (error) {
-                console.error('Erro no envio:', error);
-                showMessage('Erro inesperado. Tente novamente mais tarde.', 'error');
-            } finally {
-                // Reabilita o botão e remove loading
-                submitBtn.disabled = false;
-                submitBtn.classList.remove('loading');
-            }
-        }
-        
-        // Adiciona máscara de telefone em tempo real
-        const phoneInput = document.getElementById('telefone');
-        phoneInput.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            
-            if (value.length <= 11) {
-                if (value.length <= 10) {
-                    value = value.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
-                } else {
-                    value = value.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
-                }
-                e.target.value = value;
-            }
-        });
-        
-        // Adiciona validação em tempo real para email
-        const emailInput = document.getElementById('email');
-        emailInput.addEventListener('blur', function(e) {
-            if (e.target.value && !isValidEmail(e.target.value)) {
-                e.target.style.borderColor = '#e74c3c';
-            } else {
-                e.target.style.borderColor = '#e1e8ed';
-            }
-        });
-        
-        // Adiciona o event listener para o envio do formulário
-        form.addEventListener('submit', handleFormSubmit);
-        
-        // Verifica se a URL do Google Script foi configurada
-        if (GOOGLE_SCRIPT_URL === 'https://script.google.com/macros/s/AKfycbzPZLCx333DpwRzoGB08xiQRG9gEPRW22gTAsUnlTWV1kS97ZuKxf5UidFGSxbQXRW-/exec') {
-            console.warn('⚠️ ATENÇÃO: Configure a URL do Google Apps Script na variável GOOGLE_SCRIPT_URL');
-            showMessage('Configuração pendente: URL do Google Apps Script não definida.', 'error');
-        }
-    });
-    </script>
-    <!-- Footer -->
-    <footer class="bg-dark text-white pt-12 pb-6">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <!--<i class="fas fa-chart-line text-primary text-2xl"></i>
-                        <h3 class="text-xl font-bold">Miner<span class="text-primary">Ativos</span></h3>-->
-						<img src="../assets/logo4.png" alt="MinerAtivos" style="height: 80px; width: auto; margin-right: 10px;">
-                    </div>
-                    <p class="text-gray-400 mb-4">Fornecendo insights de mercado acionáveis ​para ajudar os investidores a tomarem decisões baseados em dados.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook text-xl"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Mercados</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Mercado de Ações</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Commodities</a></li>
-                        <li><a href="#oraculo" class="text-gray-400 hover:text-white">Altas e quedas</a></li>                        
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Recursos</h4>
-                    <ul class="space-y-2">					
-					<li><a href="#oraculo" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Forecast</a></li>
-					<li><a href="metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Algoritmos</a></li>					
-					<li><a href="https://minerativos.com.br/portfolio/" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Gestão de portfólio</a></li>
-					<li><a href="https://minerativos.com.br/portfolio/index.html?section=summary" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Resumo do mercado</a></li>
-					<li><a href="monitor.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Monitor</a></li>
-					<li><a href="https://minerativos.com.br/blog" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Blog</a></li>
-					<li><a href="metodologia.html" class="text-dark hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sobre</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quem somos</h4>
-                    <ul class="space-y-2">
-                        <li><a href="metodologia.html" class="text-gray-400 hover:text-white">Sobre</a></li>
-						<li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2025 MinerAtivos.</p>
-                <div class="flex space-x-6">
-                    <a href="politica-privacidade.html" class="text-gray-400 hover:text-white text-sm">Política de Privacidade</a>
-                    <a href="termos-uso.html" class="text-gray-400 hover:text-white text-sm">Termos de Uso</a>
-                </div>
-            </div>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+	<img src="../assets/logo4.png" alt="MinerAtivos" style="height: 42px; width: auto; vertical-align: middle; object-fit: contain;">
+      <span class="sidebar-title" style="display: flex; flex-direction: column; justify-content: center; line-height: 1.1;">Gestão<small style="font-size: 0.7rem; color: var(--accent); font-weight: 600;">Portfólio</small></span>
+    </div>
+    <nav class="sidebar-nav">
+      <div id="userProfile" class="user-profile-sidebar" style="display: none;">
+        <span class="user-avatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </span>
+        <div class="user-info">
+          <span class="user-name" id="sidebarUserName">Usuário</span>
+          <a href="#" class="logout-link" id="btnLogout">Sair</a>
         </div>
-    </footer>
+      </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const hamburgerButton = document.getElementById('hamburger-button');
-        const closeButton = document.getElementById('close-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+      <a href="#" class="nav-link active" data-section="dashboard" id="nav-dashboard">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+        </span> Dashboard
+      </a>
 
-        hamburgerButton.addEventListener('click', function () {
-            mobileMenu.classList.toggle('hidden');
+      <div class="nav-group-label">Gestão da Carteira</div>
+      <a href="#" class="nav-link" data-section="positions" id="nav-positions">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </span> Posições
+      </a>
+      <a href="#" class="nav-link" data-section="rebalance" id="nav-rebalance">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>
+        </span> Rebalanceamento
+      </a>
+      <a href="#" class="nav-link" data-section="taxes" id="nav-taxes">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </span> Imposto de Renda
+      </a>
+
+      <div class="nav-group-label">Comparativos</div>
+      <a href="#" class="nav-link" data-section="screener" id="nav-screener">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span> Mineração de Ativos
+      </a>
+      <a href="#" class="nav-link" data-section="dividends" id="nav-dividends">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </span> Proventos
+      </a>
+      <a href="#" class="nav-link" data-section="barsi" id="nav-barsi">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        </span> Preço-Teto
+      </a>
+
+      <div class="nav-group-label">Mercado</div>
+      <a href="#" class="nav-link" data-section="summary" id="nav-summary">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </span> Resumo de Mercado
+      </a>
+      <a href="#" class="nav-link" data-section="news" id="nav-news">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+        </span> Market Research (IA)
+      </a>
+      <a href="#" class="nav-link" data-section="forecast" id="nav-forecast">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </span> Tendências
+      </a>
+
+      <div class="nav-group-label">Conta</div>
+      <a href="#" class="nav-link" data-section="members" id="nav-members">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </span> Área de Membros
+      </a>
+      <a href="https://minerativos.com.br" class="nav-link" target="_self">
+        <span class="nav-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        </span> Página principal
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Mobile header -->
+  <header class="mobile-header" id="mobileHeader">
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <!-- <span class="mobile-title">📊 MinerAtivos - Rebalanceamento de Portfólio</span> -->
+	<hgroup>
+    <h1 class="mobile-title">
+        <img src="../assets/logo4_2.png" alt="MinerAtivos" style="height: 60px; width: auto; vertical-align: middle;"><!--📊 MinerAtivos-->
+    </h1>
+    <!--<p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">
+        Mercado e Balanceamento de Portfólio
+    </p>-->
+</hgroup>
+  </header>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Main Content -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ============================================================ -->
+    <!-- DASHBOARD -->
+    <!-- ============================================================ -->
+    <section class="page active" data-page="dashboard" id="page-dashboard">
+      <div class="page-header">
+        <h1>Dashboard</h1>
+        <p class="subtitle">Visão geral do seu portfólio de investimentos na B3</p>
+      </div>
+
+      <!-- Top Primary KPIs (High Emphasis) -->
+      <div class="stats-grid stats-grid-primary" id="statsGridPrimary" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem; margin-bottom: 1.25rem;">
+        <div class="stat-card glass highlight-kpi">
+          <div class="stat-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="stat-label">Patrimônio Total</div>
+          <div class="stat-value stat-value-lg" id="statTotalValue">R$ 0,00</div>
+        </div>
+        <div class="stat-card glass highlight-kpi">
+          <div class="stat-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          </div>
+          <div class="stat-label">Valor Investido</div>
+          <div class="stat-value stat-value-lg" id="statTotalInvested">R$ 0,00</div>
+        </div>
+        <div class="stat-card glass highlight-kpi">
+          <div class="stat-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <div class="stat-label">Total Proventos</div>
+          <div class="stat-value stat-value-lg positive" id="statTotalProventos">R$ 0,00</div>
+        </div>
+        <div class="stat-card glass highlight-kpi">
+          <div class="stat-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div class="stat-label">TIR carteira</div>
+          <div class="stat-value stat-value-lg" id="statRentabilityReal">0% a.a.</div>
+        </div>
+        <div class="stat-card glass highlight-kpi">
+          <div class="stat-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div class="stat-label">Índice Sharpe</div>
+          <div class="stat-value stat-value-lg accent" id="statSharpe">0.00</div>
+        </div>
+      </div>
+
+      <!-- Secondary KPIs -->
+      <div class="stats-grid stats-grid-secondary" id="statsGridSecondary" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+        <div class="stat-card glass">
+          <div class="stat-label">Lucro Realizado</div>
+          <div class="stat-value" id="statRealizedProfit">R$ 0,00</div>
+        </div>
+        <div class="stat-card glass">
+          <div class="stat-label">Rentab. Projetada</div>
+          <div class="stat-value" id="statRentabilityProj">0%</div>
+        </div>
+        <div class="stat-card glass">
+          <div class="stat-label">Posições</div>
+          <div class="stat-value" id="statPositions">0</div>
+        </div>
+        <div class="stat-card glass">
+          <div class="stat-label">Volatilidade</div>
+          <div class="stat-value" id="statVolatility">0%</div>
+        </div>
+      </div>
+
+      <div class="charts-row">
+        <div class="card glass chart-card">
+          <h2 class="card-title">Alocação por Ativo</h2>
+          <div class="chart-container">
+            <canvas id="allocationChart"></canvas>
+          </div>
+        </div>
+        <div class="card glass chart-card">
+          <h2 class="card-title">Rentabilidade por Ativo</h2>
+          <div class="chart-container">
+            <canvas id="rentabilityChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="card glass chart-card" id="historicalComparisonCard" style="margin-top: 1.25rem; margin-bottom: 1.25rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+          <h2 class="card-title" style="margin-bottom: 0;">Rentabilidade Histórica Comparada</h2>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <label for="inputAtratividade" style="font-size: 0.85rem; color: var(--text-muted);">Taxa de Atratividade (% ao ano):</label>
+            <input type="number" id="inputAtratividade" value="10" step="0.5" style="width: 70px; padding: 0.25rem 0.5rem; border-radius: 4px; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.3); color: white; font-family: inherit; font-size: 0.85rem; text-align: center;">
+          </div>
+        </div>
+        <div class="chart-container" id="historicalComparisonChartContainer" style="height: 320px;">
+          <canvas id="historicalComparisonChart"></canvas>
+        </div>
+        <div id="historicalComparisonEmptyState" class="empty-state" style="display: none; height: 320px; align-items: center; justify-content: center; text-align: center; color: var(--text-muted);">
+          Nenhum ativo no portfólio. Registre compras para visualizar o histórico comparado.
+        </div>
+      </div>
+
+		   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- POSIÇÕES -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="positions" id="page-positions">
+      <div class="page-header">
+        <h1>Suas Posições</h1>
+        <p class="subtitle">Detalhamento de cada ativo no seu portfólio</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="toolbar-group">
+          <button class="btn btn-outline" id="btnToggleOperations" style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            Registrar movimentações <span id="operationsChevron">▼</span>
+          </button>
+        </div>
+        <div class="form-inline">
+          <label for="sortPositions">Ordenar por:</label>
+          <select id="sortPositions" class="input-sm" style="width: 140px;">
+            <option value="ticker">Ativo (A-Z)</option>
+            <option value="market_value">Valor Mercado</option>
+            <option value="dividends">Total Proventos</option>
+            <option value="equity">Patrimônio Total</option>
+            <option value="rentability">Rentabilidade</option>
+          </select>
+        </div>
+        <div class="form-inline">
+          <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+            <input type="checkbox" id="hideClosedPositions" checked> Ocultar encerradas
+          </label>
+        </div>
+      </div>
+
+      <!-- Collapsible Operations Sub-Toolbar -->
+      <div class="collapsible-operations glass" id="collapsibleOperations" style="display: none; padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid var(--border-glass);">
+        <div class="toolbar-group" style="margin-bottom: 0;">
+          <button class="btn btn-primary" id="btnAddPosition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Registrar Compra
+          </button>
+          <button class="btn btn-danger" id="btnSellPosition">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Registrar Venda
+          </button>
+          <button class="btn btn-secondary" id="btnAddBulk">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Adicionar Vários
+          </button>
+          <button class="btn btn-outline" onclick="app.$('fileImport').click()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Importar CSV
+          </button>
+          <input type="file" id="fileImport" style="display:none" accept=".csv" onchange="app.importCSV(this)">
+        </div>
+      </div>
+
+      <div class="positions-container" id="positionsTableCard">
+        <div class="news-grid" id="positionsBody">
+          <div class="empty-state" style="width: 100%; text-align: center;">Carregando...</div>
+        </div>
+      </div>
+		   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PROVENTOS -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="dividends" id="page-dividends">
+      <div class="page-header">
+        <h1>Carteira de Proventos</h1>
+        <p class="subtitle">Análise de dividendos recebidos e descoberta de ativos</p>
+      </div>
+
+      <div class="alert alert-info glass" id="dividendsGuestAlert">
+        <strong>Área Exclusiva:</strong> Faça login para acessar o detalhamento de proventos da sua carteira e o filtro de descoberta.
+      </div>
+
+      <div id="dividendsContent" class="hidden">
+        <div class="toolbar">
+          <div class="toolbar-group">
+            <div class="form-inline">
+              <label for="divStartDate">De:</label>
+              <input type="date" id="divStartDate" class="input-sm" style="width: 150px;">
+            </div>
+            <div class="form-inline">
+              <label for="divEndDate">Até:</label>
+              <input type="date" id="divEndDate" class="input-sm" style="width: 150px;">
+            </div>
+            <button class="btn btn-primary" id="btnFilterDividends">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Filtrar
+            </button>
+          </div>
+          <div class="toolbar-group">
+            <button class="btn btn-outline" id="btnToggleDiscovery">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              Descoberta de Ativos
+            </button>
+          </div>
+        </div>
+
+        <div class="stats-grid stats-grid-3">
+          <div class="stat-card glass">
+            <div class="stat-label">Total Recebido (Período)</div>
+            <div class="stat-value accent" id="divStatTotal">R$ 0,00</div>
+          </div>
+          <div class="stat-card glass">
+            <div class="stat-label">Maior Pagador</div>
+            <div class="stat-value" id="divStatTopPayer">—</div>
+          </div>
+          <div class="stat-card glass">
+            <div class="stat-label">Yield da Carteira (Mês)</div>
+            <div class="stat-value accent" id="divStatYield">—</div>
+          </div>
+        </div>
+
+        <div class="card glass">
+          <h2 class="card-title" id="divTableTitle">Meus Proventos no Período</h2>
+          <div class="table-responsive">
+            <table id="dividendsTable">
+              <thead>
+                <tr>
+                  <th>Ativo</th>
+                  <th>Proventos Acumulados</th>
+                  <th>Yield no Período</th>
+                  <th>% da Renda Total</th>
+                </tr>
+              </thead>
+              <tbody id="dividendsBody">
+                <tr><td colspan="4" class="empty-state">Clique em Filtrar para carregar os dados</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- IMPOSTO DE RENDA -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="taxes" id="page-taxes">
+      <div class="page-header">
+        <h1>Apuração de Imposto de Renda</h1>
+        <p class="subtitle">Controle de lucros, prejuízos e DARF (Day Trade e Swing Trade)</p>
+      </div>
+
+      <div class="alert alert-info glass" id="taxesGuestAlert">
+        <strong>Área Exclusiva:</strong> Faça login para gerenciar sua apuração de IR e compensação de prejuízos.
+      </div>
+
+      <div id="taxesContent" class="hidden">
+        <div class="toolbar">
+          <div class="toolbar-group">
+            <div class="form-inline">
+              <label for="taxMonth">Mês:</label>
+              <select id="taxMonth" class="input-sm">
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+              </select>
+            </div>
+            <div class="form-inline">
+              <label for="taxYear">Ano:</label>
+              <input type="number" id="taxYear" value="2024" class="input-sm" style="width: 80px;">
+            </div>
+            <button class="btn btn-primary" id="btnCalculateTaxes">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              Gerar Relatório
+            </button>
+            <button class="btn btn-outline" id="btnSaveFiscalBalance" style="display: none;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              Confirmar e Salvar Balanço
+            </button>
+          </div>
+        </div>
+
+        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <div class="card glass">
+            <h2 class="card-title">Resumo do Mês</h2>
+            <div class="tax-report-summary" id="taxReportSummary">
+              <div class="report-item"><span>Total de Vendas (Ações):</span> <strong id="repTotalSales">R$ 0,00</strong></div>
+              <div class="report-item"><span>Isenção Aplicada:</span> <strong id="repIsento">Não</strong></div>
+              <hr style="opacity: 0.1; margin: 0.5rem 0;">
+              <div class="report-item"><span>Lucro/Prejuízo Swing Trade:</span> <strong id="repSTResult">R$ 0,00</strong></div>
+              <div class="report-item"><span>Lucro/Prejuízo Day Trade:</span> <strong id="repDTResult">R$ 0,00</strong></div>
+              <div class="report-item"><span>Prejuízo Compensado:</span> <strong id="repLossCompensated">R$ 0,00</strong></div>
+              <hr style="opacity: 0.1; margin: 0.5rem 0;">
+              <div class="report-item"><span>Imposto Devido (Bruto):</span> <strong id="repTaxDue">R$ 0,00</strong></div>
+              <div class="report-item"><span>IRRF Retido (Dedo-duro):</span> <strong id="repIRRF">R$ 0,00</strong></div>
+              <div class="report-item" style="font-size: 1.2rem; margin-top: 0.5rem; color: var(--accent);"><span>DARF a Pagar (6015):</span> <strong id="repDARF">R$ 0,00</strong></div>
+            </div>
+          </div>
+
+          <div class="card glass">
+            <h2 class="card-title">Saldos Acumulados</h2>
+            <div class="tax-report-summary">
+              <div class="report-item"><span>Prejuízo Swing Trade Acumulado:</span> <strong id="repSTLossBalance">R$ 0,00</strong></div>
+              <div class="report-item"><span>Prejuízo Day Trade Acumulado:</span> <strong id="repDTLossBalance">R$ 0,00</strong></div>
+              <div class="report-item"><span>Saldo de IRRF para Compensar:</span> <strong id="repIRRFBalance">R$ 0,00</strong></div>
+              <div class="report-item"><span>Imposto Acumulado (Meses Ant.):</span> <strong id="repTaxBalance">R$ 0,00</strong></div>
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem;">* Estes saldos são atualizados automaticamente após a apuração de cada mês.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card glass" style="margin-top: 1.5rem;">
+          <h2 class="card-title">Detalhamento das Operações</h2>
+          <div class="table-responsive">
+            <table id="taxDetailsTable">
+              <thead>
+                <tr>
+                  <th>Data</th>
+                  <th>Ativo</th>
+                  <th>Tipo</th>
+                  <th>Qtd</th>
+                  <th>Preço Unit.</th>
+                  <th>Custos</th>
+                  <th>Resultado</th>
+                  <th>IRRF</th>
+                </tr>
+              </thead>
+              <tbody id="taxDetailsBody">
+                <tr><td colspan="8" class="empty-state">Selecione o mês e ano para ver o detalhamento.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️ Atenção: A apuração automática é uma ferramenta de auxílio. Verifique sempre as Notas de Corretagem e consulte um contador especializado para sua declaração anual.</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- PREÇO-TETO BARSI -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="barsi" id="page-barsi">
+      <div class="page-header">
+        <h1>Preço-Teto — Método Barsi</h1>
+        <p class="subtitle">Preço máximo recomendado baseado em dividendos históricos</p>
+      </div>
+
+      <div class="alert alert-info glass">
+        <strong>Método Barsi/Bazin:</strong> Calcula o preço máximo recomendado para obter um <em>dividend yield</em> de <strong id="barsiTargetDisplay">6%</strong> ao ano.
+      </div>
+
+      <div class="toolbar">
+        <div class="toolbar-group">
+          <div class="form-inline">
+            <label for="barsiYield">Yield Alvo (%):</label>
+            <input type="number" id="barsiYield" value="6" min="1" max="20" step="0.5" class="input-sm">
+          </div>
+          <button class="btn btn-primary btn-high-emphasis" id="btnRunBarsi">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            Calcular Preço-Teto
+          </button>
+        </div>
+        <div class="form-inline">
+          <label for="sortBarsi">Ordenar por:</label>
+          <select id="sortBarsi" class="input-sm">
+            <option value="ticker">Ativo (A-Z)</option>
+            <option value="margin">Margem</option>
+            <option value="yield">Yield Atual</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="card glass" id="barsiTableCard">
+        <div class="table-responsive">
+          <table id="barsiTable">
+            <thead>
+              <tr>
+                <th>Ativo</th>
+                <th>Preço Atual</th>
+                <th>Preço-Teto</th>
+                <th>Margem</th>
+                <th>Yield Atual</th>
+                <th>Recomendação</th>
+              </tr>
+            </thead>
+            <tbody id="barsiBody">
+              <tr><td colspan="6" class="empty-state">Clique em "Calcular Preço-Teto" para iniciar a análise</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="barsi-summary glass" id="barsiSummary" style="display:none;">
+        <div class="summary-item"><span class="dot dot-green"></span> Aumentar: <strong id="barsiBuy">0</strong></div>
+        <div class="summary-item"><span class="dot dot-yellow"></span> Manter: <strong id="barsiHold">0</strong></div>
+        <div class="summary-item"><span class="dot dot-red"></span> Diminuir: <strong id="barsiSell">0</strong></div>
+      </div>
+	   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FILTRO DE ATIVOS (SCREENER) -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="screener" id="page-screener">
+      <div class="page-header">
+        <h1>Filtro de Ativos (Screener)</h1>
+        <p class="subtitle">Filtre e selecione ativos por múltiplos fundamentalistas, dados setoriais e desempenho</p>
+      </div>
+
+      <div class="alert alert-info glass" id="screenerGuestAlert">
+        <strong>Área Exclusiva:</strong> Faça login ou seja membro para utilizar a filtragem avançada por critérios de análise financeira.
+      </div>
+
+      <div class="card glass" style="margin-bottom: 1.5rem; padding: 1.25rem;">
+        <!-- Escopo e Busca -->
+       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: 10px; gap: 4px;">
+            <button class="btn btn-sm btn-screener-scope active" id="btnScreenerScopeAll" onclick="app.setScreenerScope('all')" style="width: auto;">Toda a B3</button>
+            <button class="btn btn-sm btn-screener-scope" id="btnScreenerScopePortfolio" onclick="app.setScreenerScope('portfolio')" style="width: auto;">Minha Carteira</button>
+          </div>
+          <div class="form-inline" style="flex: 1; max-width: 320px;">
+            <input type="text" id="screenerSearchInput" class="input-sm" placeholder="Buscar ticker, nome ou setor..." style="width: 100%;">
+          </div>
+		   <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <button class="btn btn-outline btn-sm" id="btnToggleScreenerFilters" onclick="app.toggleScreenerFilters()" style="width: auto;">
+              Filtros Avançados <span id="screenerFiltersChevron">▼</span>
+            </button>
+          <button class="btn btn-outline btn-sm" id="btnResetScreener" onclick="app.resetScreenerFilters()" style="width: auto;">
+            Limpar Filtros
+          </button>
+		   </div>
+        </div>
+
+        <!-- Painel de Filtros -->
+		<!-- Painel de Filtros Recolhível -->
+        <div id="screenerCollapsibleFilters" class="collapsible-operations" style="display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
+
+        <div class="screener-filters-grid">
+          <!-- Métricas Básicas -->
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="screenerMinDY">Div. Yield (DY) &ge; (%)</label>
+            <input type="number" id="screenerMinDY" class="input-sm" placeholder="Ex: 6.0" step="0.5" min="0">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="screenerMaxPL">Preço / Lucro (P/L) &le;</label>
+            <input type="number" id="screenerMaxPL" class="input-sm" placeholder="Ex: 12.0" step="0.5" min="0">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="screenerMaxPVP">Preço / V.Patrim. (P/VP) &le;</label>
+            <input type="number" id="screenerMaxPVP" class="input-sm" placeholder="Ex: 1.5" step="0.1" min="0">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="screenerMaxEvEbitda">EV / EBITDA &le;</label>
+            <input type="number" id="screenerMaxEvEbitda" class="input-sm" placeholder="Ex: 8.0" step="0.5" min="0">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="screenerMinROE">ROE &ge; (%)</label>
+            <input type="number" id="screenerMinROE" class="input-sm" placeholder="Ex: 10.0" step="1" min="0">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="screenerMinOpMargin">Margem Oper. &ge; (%)</label>
+            <input type="number" id="screenerMinOpMargin" class="input-sm" placeholder="Ex: 15.0" step="1">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="screenerMaxDebtEquity">Dívida / Patrimônio &le;</label>
+            <input type="number" id="screenerMaxDebtEquity" class="input-sm" placeholder="Ex: 150.0" step="10" min="0">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="screenerMinPerfVal">Valorização Cotação &ge; (%)</label>
+            <div style="display: flex; gap: 0.5rem;">
+              <select id="screenerPerfPeriod" class="input-sm" style="width: 80px;">
+                <option value="1m" selected>1 Mês</option>
+                <option value="1y">1 Ano</option>
+                <option value="1d">1 Dia</option>
+              </select>
+              <input type="number" id="screenerMinPerfVal" class="input-sm" placeholder="Ex: 0.0" step="1" style="flex: 1;">
+            </div>
+          </div>
+        </div>
+
+        <!-- Filtros Relativos e Evolução Histórica -->
+        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);">
+          <label class="screener-checkbox-label">
+            <input type="checkbox" id="screenerRoeSector"> ROE &gt; Média do Setor
+          </label>
+          <label class="screener-checkbox-label">
+            <input type="checkbox" id="screenerOpMarginSector"> Margem Oper. &gt; Média do Setor
+          </label>
+          <label class="screener-checkbox-label">
+            <input type="checkbox" id="screenerDebtSector"> Endividamento &lt; Média do Setor
+          </label>
+          <label class="screener-checkbox-label">
+            <input type="checkbox" id="screenerEvEbitdaSector"> EV/EBITDA &lt; Média do Setor
+          </label>
+          <label class="screener-checkbox-label">
+            <input type="checkbox" id="screenerRevenueGrowth"> Receita em Evolução Histórica
+          </label>
+          <label class="screener-checkbox-label">
+            <input type="checkbox" id="screenerNetIncomeGrowth"> Lucro Líquido em Evolução Histórica
+          </label>
+        </div>
+		</div>
+      </div>
+
+      <!-- Barra de Resultados -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div id="screenerMatchCount" style="font-weight: 600; color: var(--text-secondary); font-size: 0.95rem;">
+          Carregando ativos...
+        </div>
+        <div class="form-inline">
+          <label for="screenerSortBy">Ordenar resultado:</label>
+          <select id="screenerSortBy" class="input-sm" style="width: 170px;">
+            <option value="dy_desc">Maior Dividend Yield</option>
+            <option value="pl_asc">Menor P/L</option>
+            <option value="pvp_asc">Menor P/VP</option>
+            <option value="evebitda_asc">Menor EV/EBITDA</option>
+            <option value="roe_desc">Maior ROE</option>
+            <option value="perf_desc">Maior Valorização</option>
+            <option value="ticker_asc">Ativo (A-Z)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Tabela do Screener -->
+      <div class="card glass" id="screenerTableCard" style="padding: 0;">
+         <div class="table-responsive">
+          <table id="screenerTable">
+            <thead>
+              <tr>
+                <th onclick="app.setScreenerSort('ticker')" style="cursor: pointer;">Ativo ⇳</th>
+                <th onclick="app.setScreenerSort('price')" style="cursor: pointer;">Preço ⇳</th>
+                <th onclick="app.setScreenerSort('dy')" style="cursor: pointer;">DY ⇳</th>
+                <th onclick="app.setScreenerSort('pl')" style="cursor: pointer;">P/L ⇳</th>
+                <th onclick="app.setScreenerSort('pvp')" style="cursor: pointer;">P/VP ⇳</th>
+                <th onclick="app.setScreenerSort('evebitda')" style="cursor: pointer;">EV/EBITDA ⇳</th>
+                <th onclick="app.setScreenerSort('roe')" style="cursor: pointer;">ROE ⇳</th>
+                <th onclick="app.setScreenerSort('perf')" style="cursor: pointer;">Var. (1M / 1A) ⇳</th>
+                <th style="text-align: center;">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="screenerTableBody">
+              <tr><td colspan="9" class="empty-state">Carregando dados...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️ Disclaimer: O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos.</p>
+    </section>
+
+
+
+    <!-- ============================================================ -->
+    <!-- REBALANCEAMENTO -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="rebalance" id="page-rebalance">
+      <div class="page-header">
+        <h1>Rebalanceamento Inteligente</h1>
+        <p class="subtitle">Otimização de alocação baseada em Teoria Moderna de Portfólio</p>
+      </div>
+
+      <div class="card glass" style="margin-bottom: 1.5rem; padding: 1.25rem;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="rebalanceStrategy">Estratégia de Otimização</label>
+            <select id="rebalanceStrategy">
+              <option value="sharpe">Máximo Sharpe (Risco x Retorno)</option>
+              <option value="return">Maior Retorno Esperado</option>
+              <option value="risk">Mínimo Risco (Variância)</option>
+              <option value="volatility">Volatilidade Inversa (Tradicional)</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="maxAssetWeight">Peso Máx. por Ativo (%)</label>
+            <input type="number" id="maxAssetWeight" value="100" min="5" max="100" step="5">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="analysisPeriod">Período de Análise (Meses)</label>
+            <select id="analysisPeriod">
+              <option value="6">6 Meses</option>
+              <option value="12" selected>12 Meses</option>
+              <option value="24">24 Meses</option>
+              <option value="60">5 Anos</option>
+            </select>
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="riskFreeRate">Taxa Livre de Risco (% a.a.)</label>
+            <input type="number" id="riskFreeRate" value="10" min="0" max="30" step="0.5">
+          </div>
+        </div>
+        <div class="form-actions" style="margin-top: 1.25rem; justify-content: flex-start;">
+          <button class="btn btn-primary btn-high-emphasis" id="btnRunRebalance">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h18"/></svg>
+            Otimizar Portfólio (Markowitz)
+          </button>
+          <button class="btn btn-outline" id="btnRequestExpertAnalysis" title="Disponível para Membros">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Solicitar Análise Especializada
+          </button>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <div class="toolbar-group">
+        </div>
+        <div class="form-inline">
+          <label for="sortRebalance">Ordenar por:</label>
+          <select id="sortRebalance" class="input-sm">
+            <option value="ticker">Ativo (A-Z)</option>
+            <option value="allocation">Alocação Alvo</option>
+            <option value="value">Valor Total</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="rebalance-results" id="rebalanceResults" style="display:none;">
+      <div class="stats-grid stats-grid-main" id="rebalanceStatsGrid">
+          <div class="stat-card glass">
+            <div class="stat-label">Retorno Esperado</div>
+            <div class="stat-value accent" id="rebReturn">—</div>
+          </div>
+          <div class="stat-card glass">
+            <div class="stat-label">Volatilidade</div>
+            <div class="stat-value" id="rebVol">—</div>
+          </div>
+          <div class="stat-card glass">
+            <div class="stat-label">Sharpe Ratio</div>
+            <div class="stat-value accent" id="rebSharpe">—</div>
+          </div>
+        </div>
+
+        <div class="charts-row" style="margin-top:1.5rem;">
+          <div class="card glass chart-card">
+            <h2 class="card-title">Alocação Ótima</h2>
+            <div class="chart-container">
+              <canvas id="optimalChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="card glass" style="margin-top:1.5rem;" id="suggestionsCard">
+          <h2 class="card-title">Sugestões de Ajuste</h2>
+          <div class="table-responsive">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ação</th>
+                  <th>Ativo</th>
+                  <th>Qtd</th>
+                  <th>Preço</th>
+                  <th>Valor Total</th>
+                  <th>Aloc. Atual → Alvo</th>
+                </tr>
+              </thead>
+              <tbody id="suggestionsBody">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card glass" id="rebalancePlaceholder">
+        <p class="empty-state" style="padding:2rem;">Clique em <strong>"Otimizar Portfólio"</strong> para calcular a alocação ótima usando a Teoria de Markowitz.</p>
+      </div>
+		   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- INSIGHTS DE MERCADO (IA) -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="news" id="page-news">
+      <div class="page-header">
+        <h1>Market Research</h1>
+        <p class="subtitle">Seu agente de busca e resumo das principais notícias e sentimentos de mercado utilizando IA Generativa</p>
+      </div>
+
+      <div id="newsContent">
+        <div class="card glass news-insight-card" style="margin-bottom: 2rem; border-left: 4px solid var(--accent);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+            <h2 class="card-title" style="margin-bottom: 0;">Panorama Geral do Mercado</h2>
+            <div id="ibovHeaderCard" class="ibov-header-card glass" style="padding: 0.5rem 1rem; border-radius: 8px; display: none;">
+              <span style="font-weight: 700; color: var(--text-secondary); font-size: 0.8rem;">IBOVESPA:</span>
+              <span id="ibovScore" style="font-weight: 800; font-size: 1.1rem; margin-left: 0.5rem;">—</span>
+              <div style="display: flex; gap: 0.75rem; margin-top: 0.25rem; font-size: 0.75rem; font-weight: 600;">
+                <span id="ibovDay" title="Variação Dia">—</span>
+                <span id="ibovMonth" title="Variação Mês (30d)">—</span>
+                <span id="ibovYear" title="Variação Ano (365d)">—</span>
+              </div>
+            </div>
+          </div>
+          <p id="marketInsightText" style="font-size: 1.1rem; line-height: 1.6; color: var(--text-primary);">Carregando insights...</p>
+          <p class="subtitle" id="newsLastUpdate" style="margin-top: 1rem; font-size: 0.8rem;"></p>
+        </div>
+
+        <div class="news-grid" id="newsAssetsGrid">
+          <!-- Asset news cards will be injected here -->
+        </div>
+      </div>
+
+      <div class="alert alert-info glass hidden" id="newsGuestTip">
+        <strong>💡 Dica:</strong> Você está vendo os insights dos ativos que foram destaque no dia. Para ver insights de todos os ativos da sua carteira, é necessário estar logado e clicar no ícone 🤖 localizado no final da linha de cada ativo listado em <a href="#" onclick="app.showPage('positions')" style="color: var(--accent); text-decoration: underline;">Posições</a>.
+      </div>
+	  <!--
+	  <div class="alert alert-info glass" style="margin-top:1.5rem;">
+        <strong>💡 Dica:</strong> Você está vendo os insights dos ativos que foram destaque no dia. Para ver insights de todos os ativos da sua carteira, é necessário estar logado e clicar no ícone 🤖 localizado no final da linha de cada ativo listado em <a href="#" onclick="app.showPage('positions')" style="color: var(--accent); text-decoration: underline;">Posições</a>.
+      </div>
+	  -->
+	  <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️ Este conteúdo foi consolidado por inteligência artificial com base em padrões de linguagem e probabilidade, podendo conter erros. Além disso, o conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
+
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- MAPA DE TENDÊNCIAS / OPORTUNIDADES -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="forecast" id="page-forecast">
+      <div class="page-header">
+        <h1>Tendências de Mercado</h1>
+        <p class="subtitle" id="forecastSubTitle">Previsão quantitativa de ativos baseada em modelos estatísticos e aprendizado de máquina</p>
+      </div>
+
+       <div class="alert alert-info glass" id="forecastGuestAlert" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+        <div>
+        <strong>Área Exclusiva para Membros:</strong> Faça login para visualizar o Mapa de Oportunidades completo e a tabela interativa com estatísticas de probabilidade e acurácia.
+		  </div>
+        <button class="btn btn-primary btn-sm" onclick="app.openAuthModal('login', 'forecast')" style="white-space: nowrap;">Entrar / Cadastrar</button>
+
+      </div>
+
+      <div id="forecastContent">
+        <!-- Toolbar & Combinable Filters -->
+        <div class="card glass" style="margin-bottom: 1.5rem; padding: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 1rem; flex: 1; min-width: 280px;">
+              <h2 class="card-title" style="margin: 0; font-size: 1.1rem; white-space: nowrap;">Filtros do Modelo</h2>
+              <div class="form-inline" style="flex: 1; max-width: 320px;">
+                <input type="text" id="forecastSearchInput" class="input-sm" placeholder="🔍Buscar ativo (Ex: CMIG3)..." style="width: 100%;" oninput="app.filterForecastData()">
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <button class="btn btn-outline btn-sm" id="btnToggleForecastFilters" onclick="app.toggleForecastFilters()" style="width: auto;">
+                Filtros Avançados <span id="forecastFiltersChevron">▼</span>
+              </button>
+              <button class="btn btn-outline btn-sm" id="btnResetForecastFilters" onclick="app.resetForecastFilters()" style="width: auto;">
+                Limpar Filtros
+              </button>
+            </div>
+          </div>
+          <!-- Painel de Filtros Recolhível -->
+          <div id="forecastCollapsibleFilters" class="collapsible-operations" style="display: none; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="forecastFilterSignal">Consistência do Modelo</label>
+                <select id="forecastFilterSignal" class="input-sm" onchange="app.filterForecastData()">
+                  <option value="ALL">Todas</option>
+                  <option value="ALTA">Alta Consistência</option>
+                  <option value="MEDIA">Média Consistência</option>
+                  <option value="BAIXA">Baixa Consistência</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="forecastFilterTrend">Viés Estatístico</label>
+                <select id="forecastFilterTrend" class="input-sm" onchange="app.filterForecastData()">
+                  <option value="ALL">Todos</option>
+                  <option value="POSITIVO">Positivo</option>
+                  <option value="NEGATIVO">Negativo</option>
+                  <option value="INCONSISTENTE">Inconsistente</option>
+                </select>
+              </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="forecastFilterMinChance">Meta Chance Acerto &ge; (%)</label>
+              <input type="number" id="forecastFilterMinChance" class="input-sm" placeholder="Ex: 70" min="0" max="100" step="5" oninput="app.filterForecastData()">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0;">
+              <label for="forecastFilterMinAccuracy">Acurácia Ensemble &ge; (%)</label>
+              <input type="number" id="forecastFilterMinAccuracy" class="input-sm" placeholder="Ex: 50" min="0" max="100" step="1" oninput="app.filterForecastData()">
+				</div>
+			</div>
+          </div>
+        </div>
+
+        <!-- Scatter Chart Card -->
+        <div class="card glass" style="margin-bottom: 1.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+            <div>
+              <h2 class="card-title" style="margin-bottom: 0.25rem;">Mapa Visual Direcional de Oportunidades</h2>
+                  <p class="subtitle" style="margin: 0; font-size: 0.85rem;">Meta Chance de Acerto (%) vs. Acurácia do Ensemble (%). Os marcadores refletem o Viés Estatístico e a Consistência do Modelo.</p>
+            </div>
+            <div id="forecastChartStats" style="font-weight: 600; font-size: 0.85rem; color: var(--accent-light);"></div>
+          </div>
+          <div class="chart-container" style="height: 480px; position: relative;">
+            <canvas id="forecastScatterChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Detailed Table Card -->
+        <div class="card glass" id="forecastTableCard">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+            <h2 class="card-title" style="margin: 0;">Tabela Detalhada dos Ativos em Destaque</h2>
+            <div id="forecastMatchCount" style="font-weight: 600; color: var(--text-secondary); font-size: 0.9rem;">
+              Carregando dados...
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table id="forecastTable">
+              <thead>
+                <tr>
+                  <th onclick="app.sortForecastTable('ativo')" style="cursor: pointer;">Ativo ⇳</th>
+                  <th onclick="app.sortForecastTable('preco')" style="cursor: pointer;">Preço (base cálculo) ⇳</th>
+                  <th onclick="app.sortForecastTable('delta_pct')" style="cursor: pointer;">Fechamento Últ. Dia ⇳</th>
+                  <th>Evolução (Sparkline)</th>
+                  <th onclick="app.sortForecastTable('tendencia')" style="cursor: pointer;">Viés Estatístico ⇳</th>
+                  <th onclick="app.sortForecastTable('forca_sinal')" style="cursor: pointer;">Consistência do Modelo ⇳</th>
+                  <th onclick="app.sortForecastTable('meta_chance_acerto_pct')" style="cursor: pointer;">Meta Prob. ⇳</th>
+                  <th onclick="app.sortForecastTable('acuracia_ens_pct')" style="cursor: pointer;">Acurácia Ensemble ⇳</th>
+                  <th onclick="app.sortForecastTable('prob_subir_pct')" style="cursor: pointer;">Prob. Subir ⇳</th>
+                  <th onclick="app.sortForecastTable('data_previsao')" style="cursor: pointer;">Data Previsão ⇳</th>
+                  <th style="text-align: center;">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="forecastTableBody">
+                <tr><td colspan="11" class="empty-state">Carregando previsão...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️ Disclaimer: Os dados apresentados resultam de algoritmos quantitativos e aprendizado de máquina apenas para fins estatísticos e educacionais. Não constituem recomendação de investimento.</p>
+    </section>
+
+
+    <!-- ============================================================ -->
+    <!-- RESUMO DE MERCADO -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="summary" id="page-summary">
+      <div class="page-header">
+        <h1>Resumo do Mercado</h1>
+        <p class="subtitle" id="summaryDateFull">Visão dos ativos que mais se movimentaram</p>
+      </div>
+
+      <div class="toolbar" style="justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: 12px; gap: 4px;">
+          <button class="btn btn-sm btn-period active" onclick="app.setSummaryPeriod('day')" id="btn-period-day" style="width: auto;">Dia</button>
+          <button class="btn btn-sm btn-period" onclick="app.setSummaryPeriod('month')" id="btn-period-month" style="width: auto;">Mês</button>
+          <button class="btn btn-sm btn-period" onclick="app.setSummaryPeriod('year')" id="btn-period-year" style="width: auto;">Ano</button>
+        </div>
+        <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: 12px; gap: 4px;">
+          <button class="btn btn-sm btn-summary-filter" onclick="app.setSummaryFilter('geral')" id="btn-filter-geral" style="width: auto;">Geral</button>
+          <button class="btn btn-sm btn-summary-filter" onclick="app.setSummaryFilter('liquid')" id="btn-filter-liquid" style="width: auto;">Liquidez</button>
+          <button class="btn btn-sm btn-summary-filter active" onclick="app.setSummaryFilter('ibov')" id="btn-filter-ibov" style="width: auto;">IBOV</button>
+
+        </div>
+	  </div>
+      <div class="summary-grid">
+        <div class="card glass">
+          <h2 class="card-title" style="color: var(--green); display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            Maiores Altas
+          </h2>
+          <div class="table-responsive">
+            <table class="summary-table">
+              <thead>
+                <tr>
+                  <th>Ativo</th>
+                  <th>Fech</th>
+                  <th>Var</th>
+                  <th>15d</th>
+                </tr>
+              </thead>
+              <tbody id="gainersBody">
+                <tr><td colspan="4" class="empty-state">Carregando dados...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card glass">
+          <h2 class="card-title" style="color: var(--red); display: flex; align-items: center; gap: 0.5rem;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+            Maiores Baixas
+          </h2>
+          <div class="table-responsive">
+            <table class="summary-table">
+              <thead>
+                <tr>
+                  <th>Ativo</th>
+                  <th>Fech</th>
+                  <th>Var</th>
+                  <th>15d</th>
+                </tr>
+              </thead>
+              <tbody id="losersBody">
+                <tr><td colspan="4" class="empty-state">Carregando dados...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card glass" style="margin-top: 1.5rem;">
+        <h2 class="card-title">Mapa do Mercado (Treemap)</h2>
+        <p class="subtitle" id="treemapSubtitle" style="margin-bottom: 1rem;">O tamanho dos blocos representa a variação absoluta do período. Cores: Verde (Alta) e Laranja/Vermelho (Baixa).</p>
+        <div class="chart-container" style="height: 600px;">
+          <canvas id="marketTreemap"></canvas>
+        </div>
+      </div>
+		   <p style="margin: 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">⚠️Disclaimer: </strong>O conteúdo deste site é estritamente educativo e informativo, destinado ao aculturamento de mercado. Não constitui recomendação de compra ou venda de ativos. Investimentos envolvem riscos. Para recomendações personalizadas, consulte um profissional de investimentos certificado (CVM/ANBIMA).</p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ÁREA DE MEMBROS -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="members" id="page-members">
+      <div class="page-header">
+        <h1>Área de Membros</h1>
+        <p class="subtitle">Gerencie sua conta e sincronização</p>
+      </div>
+
+      <div id="loginArea" class="hidden">
+        <div class="card glass" style="max-width: 500px; margin: 2rem auto; text-align: center; padding: 3rem 2rem;">
+          <div style="margin-bottom: 1.5rem; color: var(--accent);">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h2 class="card-title">Acesse sua Conta</h2>
+          <p style="color: var(--text-secondary); margin-bottom: 2rem;">Faça login para sincronizar seu portfólio e acessar recursos exclusivos.</p>
+          <button class="btn btn-primary btn-glow" onclick="app.openAuthModal('login')" style="padding: 0.8rem 2.5rem; font-size: 1rem;">
+            Entrar agora
+          </button>
+        </div>
+      </div>
+
+      <!-- User Dashboard -->
+      <div id="memberDashboard" style="display: none;">
+        <div class="alert alert-success glass" style="margin-bottom: 2rem;">
+          Você está conectado como <strong id="memberWelcomeName">usuário</strong>.
+          Seu portfólio agora é sincronizado automaticamente com o servidor.
+        </div>
+
+        <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <!-- Admin Panel -->
+          <div class="card glass" id="adminPanel" style="display: none; grid-column: 1 / -1;">
+            <h2 class="card-title">Painel de Administração</h2>
+            <p style="margin-bottom: 1rem; color: var(--text-muted);">Como o sistema agora utiliza <strong>Google Sheets</strong>, o gerenciamento de usuários e leads deve ser feito diretamente na sua planilha Google.</p>
+
+            <div id="adminUsersTableCard" style="display: none;">
+              <div class="table-responsive" style="margin-top: 1rem;">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Usuário</th>
+                      <th>Tipo</th>
+                      <th>Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody id="adminUsersBody">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="alert alert-info glass">
+
+            </div>
+          </div>
+
+          <div class="card glass">
+            <h2 class="card-title">Alterar Senha</h2>
+            <form id="changePasswordForm">
+              <div class="form-group">
+                <label for="oldPassword">Senha Atual</label>
+                <input type="password" id="oldPassword" required>
+              </div>
+              <div class="form-group">
+                <label for="newPassword">Nova Senha</label>
+                <input type="password" id="newPassword" required>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-secondary">Atualizar Senha</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="card glass">
+            <h2 class="card-title">Sincronização & Conta</h2>
+            <p style="margin-bottom: 1rem; color: var(--text-muted);">Seus dados são salvos no servidor sempre que você adiciona ou remove um ativo.</p>
+            <div class="form-actions">
+               <button class="btn btn-outline" id="btnLogoutFull" style="width: 100%">Sair da Conta</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- SOBRE -->
+    <!-- ============================================================ -->
+    <!-- ============================================================ -->
+    <!-- MONITOR DE GRÁFICOS (Análise Avançada) -->
+    <!-- ============================================================ -->
+    <section class="page" data-page="monitor" id="page-monitor">
+      <div class="page-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h1 id="monitorPageTitle" style="margin-bottom: 0.25rem;">Análise de Ativo</h1>
+          <p class="subtitle" id="monitorPageSubtitle" style="margin: 0;">Gráficos e comparativos fundamentalistas de pares</p>
+        </div>
+
+        <!-- Bloco de Comparação Personalizada (Adicionar até 3 ativos) -->
+        <div id="monitorComparisonContainer" class="glass" style="display: none; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: var(--radius-sm); max-width: 500px; flex: 1; min-width: 280px;">
+          <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600; white-space: nowrap;">Comparar +:</span>
+          <div style="display: flex; gap: 0.25rem; flex: 1; align-items: center;">
+            <input type="text" id="monitorCompInput" placeholder="Ex: ITUB4" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); color: #fff; padding: 0.35rem 0.5rem; border-radius: 4px; font-size: 0.8rem; width: 80px; text-transform: uppercase;" />
+            <button class="btn btn-primary" id="btnMonitorCompAdd" style="padding: 0.35rem 0.75rem; font-size: 0.8rem; border-radius: 4px; background: var(--accent); color: #fff; border: none; cursor: pointer; font-weight: 600;">+</button>
+          </div>
+          <div id="monitorCompBadges" style="display: flex; gap: 0.35rem; flex-wrap: wrap;"></div>
+        </div>
+
+        <button class="btn btn-primary btn-voltar" id="btnVoltarMonitor" style="margin-left: auto;">
+          <i class="fas fa-arrow-left"></i> Voltar
+        </button>
+      </div>
+
+      <!-- Sistema de Abas do Monitor -->
+      <div class="btn-group glass" style="display: flex; padding: 4px; border-radius: var(--radius-sm); gap: 4px; margin-bottom: 1rem; width: fit-content;">
+        <button class="btn btn-sm btn-summary-filter active" id="btnMonitorTabTechnical" style="width: auto; padding: 0.5rem 1rem;">Análise Técnica</button>
+        <button class="btn btn-sm btn-summary-filter" id="btnMonitorTabFundamental" style="width: auto; padding: 0.5rem 1rem;">Análise Fundamentalista & Pares</button>
+      </div>
+
+      <!-- Conteúdo da Aba Técnica -->
+      <div id="monitorTabContentTechnical" class="monitor-tab-panel active">
+        <div class="card glass" style="height: calc(100vh - 240px); min-height: 450px; padding: 0; overflow: hidden; border-radius: var(--radius); display: flex; flex-direction: column;">
+          <div id="tradingview_chart_spa" style="flex: 1; width: 100%;"></div>
+        </div>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.8em; color: #94a3b8; font-weight: normal;">Fonte do gráfico: TradingView.</p>
+      </div>
+
+      <!-- Conteúdo da Aba Fundamentalista -->
+      <div id="monitorTabContentFundamental" class="monitor-tab-panel" style="display: none; flex-direction: column; gap: 1.5rem; overflow-y: auto; max-height: calc(100vh - 230px); padding-right: 0.5rem;">
+
+        <!-- KPI Cards Principais do Ativo -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+          <div class="card glass" style="padding: 1rem;">
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Valor de Mercado</p>
+            <h3 id="fundKpiMarketCap" style="margin: 0.25rem 0 0 0; font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">—</h3>
+          </div>
+          <div class="card glass" style="padding: 1rem;">
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Preço / Lucro (P/L)</p>
+            <h3 id="fundKpiPE" style="margin: 0.25rem 0 0 0; font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">—</h3>
+          </div>
+          <div class="card glass" style="padding: 1rem;">
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Preço / V.Patrimonial (P/VP)</p>
+            <h3 id="fundKpiPB" style="margin: 0.25rem 0 0 0; font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">—</h3>
+          </div>
+          <div class="card glass" style="padding: 1rem;">
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">Dividend Yield</p>
+            <h3 id="fundKpiDY" style="margin: 0.25rem 0 0 0; font-size: 1.4rem; font-weight: 700; color: var(--green);">—</h3>
+          </div>
+          <div class="card glass" style="padding: 1rem;">
+            <p style="margin: 0; font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase;">ROE (TTM)</p>
+            <h3 id="fundKpiROE" style="margin: 0.25rem 0 0 0; font-size: 1.4rem; font-weight: 700; color: var(--text-primary);">—</h3>
+          </div>
+        </div>
+
+        <!-- Seção: Comparativo de Fechamento Rescalonado (Base 100) e Sparklines de Preço -->
+        <div class="card glass" style="padding: 1.5rem;">
+          <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Desempenho de Cotação Comparada (Base 100)</h2>
+          <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Evolução das cotações rescalonadas para base 100 no início do período, comparando o ativo principal com seus pares e a média dos pares.</p>
+          <div style="height: 320px; position: relative; width: 100%;">
+            <canvas id="chartPerformanceBase100"></canvas>
+          </div>
+        </div>
+
+        <!-- Grid de Gráficos Financeiros e de Pares -->
+        <div class="fund-charts-grid">
+
+          <!-- 1. Receita Anual -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Receita Anual</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Histórico da Receita Líquida comparado com a média do segmento ao longo dos anos.</p>
+            <div style="height: 250px; position: relative;">
+              <canvas id="chartAnnualRevenue"></canvas>
+            </div>
+          </div>
+
+          <!-- 2. Margem Operacional -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Margem Operacional</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Evolução da margem operacional em relação à média do segmento.</p>
+            <div style="height: 250px; position: relative;">
+              <canvas id="chartOperatingMargin"></canvas>
+            </div>
+          </div>
+
+          <!-- 3. Liquidez Corrente / Razão Atual -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Índice de Liquidez Corrente em Comparação com os Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Capacidade de cobrir obrigações de curto prazo com ativos circulantes de curto prazo.</p>
+            <div class="fund-sub-grid">
+              <div style="height: 220px; position: relative;">
+                <canvas id="chartLiquidityPeers"></canvas>
+              </div>
+              <div style="height: 220px; position: relative;">
+                <canvas id="chartLiquidityHistory"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. ROE x Pares -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Retorno sobre o Capital Próprio (ROE TTM) versus Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Retorno financeiro gerado em relação ao patrimônio líquido da empresa.</p>
+            <div style="height: 220px; position: relative;">
+              <canvas id="chartRoePeers"></canvas>
+            </div>
+          </div>
+
+          <!-- 5. Relação Dívida / Patrimônio -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Índice Dívida/Patrimônio em Comparação com os Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Nível de endividamento bruto comparado com o capital próprio dos acionistas.</p>
+            <div class="fund-sub-grid">
+              <div style="height: 220px; position: relative;">
+                <canvas id="chartDebtEquityPeers"></canvas>
+              </div>
+              <div style="height: 220px; position: relative;">
+                <canvas id="chartDebtEquityHistory"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. EV/EBITDA versus Pares (Proposto: Novo comparativo comum ao mercado de ações) -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Múltiplo de Valor da Firma / EBITDA (EV/EBITDA) versus Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Múltiplo de valor para avaliar a atratividade do ativo em relação à sua capacidade de geração de caixa operacional.</p>
+            <div style="height: 220px; position: relative;">
+              <canvas id="chartEvEbitdaPeers"></canvas>
+            </div>
+          </div>
+
+          <!-- 7. Preço / Lucro (P/L) versus Pares -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Preço / Lucro (P/L) versus Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Múltiplo de preço sobre lucro líquido. Avalia em quantos anos o investidor reaveria o capital investido se os lucros fossem distribuídos.</p>
+            <div style="height: 220px; position: relative;">
+              <canvas id="chartPLPeers"></canvas>
+            </div>
+          </div>
+
+          <!-- 8. Preço / Valor Patrimonial (P/VP) versus Pares -->
+          <div class="card glass" style="padding: 1.5rem;">
+            <h2 class="card-title" style="margin-bottom: 0.25rem; font-size: 1.1rem; font-weight: 700;">Preço / Valor Patrimonial (P/VP) versus Pares</h2>
+            <p class="subtitle" style="margin: 0 0 1rem 0; font-size: 0.85rem;">Múltiplo que relaciona o preço da ação ao valor patrimonial por ação. Avalia se o ativo está descontado ou prêmiado.</p>
+            <div style="height: 220px; position: relative;">
+              <canvas id="chartPVPeers"></canvas>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="page" data-page="about" id="page-about">
+      <div class="page-header">
+        <h1>Sobre o Projeto</h1>
+        <p class="subtitle">Rebalanceamento de portfólio</p>
+      </div>
+
+      <div class="card glass about-content">
+        <h2>O Projeto</h2>
+        <p>Plataforma para análise e rebalanceamento de portfólios de investimentos na B3 (Bolsa de Valores Brasileira). Oferece ferramentas para otimização de alocação de ativos usando a <strong>Teoria Moderna de Portfólio (Markowitz)</strong> e avaliação via <strong>Método Barsi/Bazin</strong>.</p>
+
+        <h2>Funcionalidades</h2>
+        <ul>
+          <li><strong>Dashboard:</strong> Visão geral com gráficos interativos</li>
+          <li><strong>Gestão de Posições:</strong> Adicione, edite e remova ativos do portfólio</li>
+          <li><strong>Preço-Teto (Barsi):</strong> Identifica oportunidades de compra baseado em dividendos</li>
+          <li><strong>Rebalanceamento:</strong> Otimização de alocação baseada em volatilidade</li>
+          <li><strong>Dados Atualizados:</strong> Histórico diário via yfinance para análises</li>
+        </ul>
+
+        <h2>Tecnologias</h2>
+        <div class="tech-grid">
+          <span class="tech-badge">HTML5 / CSS3</span>
+          <span class="tech-badge">JavaScript (ES6+)</span>
+          <span class="tech-badge">Chart.js</span>
+        </div>
+
+        <div class="alert alert-warning" style="margin-top:2rem;">
+          <strong>Aviso Legal:</strong> Esta plataforma é fornecida como ferramenta educacional. Não constitui recomendação de investimento. Consulte um profissional qualificado.
+        </div>
+
+        <p class="license-text">MIT License — Você é livre para usar.</p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; font-size: 0.9rem;">
+          <a href="../politica-privacidade.html" style="color: var(--text-muted); text-decoration: underline;">Política de Privacidade</a>
+          <a href="../termos-uso.html" style="color: var(--text-muted); text-decoration: underline;">Termos de Uso</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- Modal: Add/Edit Position -->
+  <!-- ============================================================ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal glass" id="positionModal">
+      <div class="modal-header">
+        <h2 id="modalTitle">Adicionar Ativo</h2>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <form id="positionForm">
+        <div class="form-group">
+          <label for="posType">Tipo de Operação</label>
+          <select id="posType" required>
+            <option value="buy">Compra</option>
+            <option value="sell">Venda</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="posTicker">Código do Ativo</label>
+          <input type="text" id="posTicker" list="assetList" required placeholder="Ex: PETR4">
+          <datalist id="assetList"></datalist>
+          <small id="tickerWarning" style="display:none; color: var(--red); margin-top: 0.25rem;">Ativo não listado</small>
+        </div>
+        <div class="form-group">
+          <label for="posQty">Quantidade</label>
+          <input type="number" id="posQty" min="1" required placeholder="Ex: 100">
+        </div>
+        <div class="form-group">
+          <label for="posPrice" id="labelPosPrice">Preço de Compra (R$)</label>
+          <input type="number" id="posPrice" min="0.01" step="0.0001" required placeholder="Ex: 28.5000">
+        </div>
+        <div class="form-group">
+          <label for="posDate">Data da Operação</label>
+          <input type="date" id="posDate" required>
+        </div>
+        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label for="posCosts">Custos Operacionais (R$)</label>
+            <input type="number" id="posCosts" min="0" step="0.01" value="0" placeholder="Ex: 1.50">
+          </div>
+          <div class="form-group">
+            <label for="posIRRF">IRRF Retido (R$)</label>
+            <input type="number" id="posIRRF" min="0" step="0.01" value="0" placeholder="Ex: 0.05">
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-outline" id="modalCancel">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Loading overlay -->
+  <div class="loading-overlay" id="loadingOverlay">
+    <div class="spinner"></div>
+    <p id="loadingText">Processando...</p>
+  </div>
+
+  <!-- Modal: Bulk Add Positions -->
+  <div class="modal-overlay" id="bulkModalOverlay">
+    <div class="modal glass modal-lg" id="bulkModal">
+      <div class="modal-header">
+        <h2>Adicionar Vários Ativos</h2>
+        <button class="modal-close" id="bulkModalClose">&times;</button>
+      </div>
+      <p class="subtitle" style="margin-bottom: 1rem;">Preencha a tabela abaixo com os ativos que deseja adicionar.</p>
+
+      <div class="table-responsive" style="max-height: 400px; margin-bottom: 1rem;">
+        <table id="bulkTable">
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Ativo</th>
+              <th>Quantidade</th>
+              <th>Preço (Unit.)</th>
+              <th>Data</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="bulkTableBody">
+            <!-- Rows added via JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="toolbar">
+        <button type="button" class="btn btn-outline btn-sm" id="btnBulkAddRow" style="width: auto;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Nova Linha
+        </button>
+      </div>
+
+      <div class="form-actions" style="margin-top: 1.5rem;">
+        <button type="button" class="btn btn-outline" id="bulkModalCancel">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="btnBulkSave">Salvar Todos</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Unified Auth (Login & Membership) -->
+  <div class="modal-overlay" id="authModalOverlay">
+    <div class="modal glass auth-modal" id="authModal">
+      <div class="modal-header auth-modal-header">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login" id="tabLogin">Entrar</button>
+          <button class="auth-tab" data-tab="register" id="tabRegister">Seja Membro</button>
+        </div>
+        <button class="modal-close" id="authModalClose">&times;</button>
+      </div>
+
+      <!-- Common Header for Context/Reason -->
+      <div id="authModalReasonBox" class="auth-reason-box hidden">
+        <p id="authModalReasonText"></p>
+      </div>
+
+      <!-- Login Tab Content -->
+      <div class="auth-tab-content active" id="authTabLogin">
+        <div class="auth-content-header">
+          <img src="../assets/logo4_2.png" alt="MinerAtivos" style="height: 50px; margin-bottom: 1rem;">
+          <h2>Bem-vindo de volta</h2>
+          <p class="subtitle">Acesse sua conta para sincronizar seu portfólio</p>
+        </div>
+
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginUsername">Usuário</label>
+            <input type="text" id="loginUsername" required placeholder="Seu usuário">
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Senha</label>
+            <input type="password" id="loginPassword" required placeholder="Sua senha">
+          </div>
+          <button type="submit" class="btn btn-primary btn-glow" style="width: 100%; margin-top: 0.5rem; justify-content: center;">
+            Entrar
+          </button>
+          <div class="auth-footer">
+            <a href="mailto:minerativos+esquecisenha@gmail.com" style="font-size: 0.8rem; color: var(--text-muted); text-decoration: none;">Esqueceu a senha?</a>
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Novo? <a href="#" onclick="app.switchAuthTab('register')" style="color: var(--accent); font-weight: 600;">Solicite acesso</a></span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Register Tab Content -->
+      <div class="auth-tab-content" id="authTabRegister">
+        <div class="auth-content-header">
+          <h2 style="font-size: 1.4rem; color: var(--accent-light);">Plano Pro</h2>
+          <p class="subtitle">Libere todo o potencial da ferramenta</p>
+        </div>
+
+        <div class="auth-features-list">
+          <div class="feature-item"><span>✅</span> Ativos ilimitados & Sincronização</div>
+          <div class="feature-item"><span>✅</span> Preço-teto & Rebalanceamento</div>
+          <div class="feature-item"><span>✅</span> IA Market Research personalizada</div>
+          <div class="feature-item"><span>✅</span> Controle de IR completo</div>
+        </div>
+
+        <form id="leadForm">
+          <div class="form-group">
+            <label for="leadEmail">E-mail para convite</label>
+            <input type="email" id="leadEmail" required placeholder="seu@email.com">
+          </div>
+          <button type="submit" class="btn btn-primary btn-glow" style="width: 100%; justify-content: center;">
+            Quero ser Membro
+          </button>
+          <div class="auth-footer" style="justify-content: center;">
+            <span style="font-size: 0.8rem; color: var(--text-secondary);">Já tem conta? <a href="#" onclick="app.switchAuthTab('login')" style="color: var(--accent); font-weight: 600;">Fazer Login</a></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal: Termos de Uso do Módulo Preditivo (Click-Wrap) -->
+  <div class="modal-overlay" id="forecastTermsModalOverlay" style="display: none; z-index: 10000; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(8px);">
+    <div class="modal glass" id="forecastTermsModal" style="max-width: 640px; width: 92%; border: 1px solid var(--border-glass); box-shadow: var(--shadow-md);">
+      <div class="modal-header" style="border-bottom: 1px solid var(--border-glass); padding-bottom: 1rem;">
+        <h2 style="margin: 0; font-size: 1.25rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary);">
+          Termos de Uso do Módulo Preditivo
+        </h2>
+      </div>
+
+      <div style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; max-height: 240px; overflow-y: auto; background: var(--bg-glass); border-radius: 8px; padding: 1rem; margin: 1rem 0; border: 1px solid var(--border-glass);">
+        <p style="margin-top: 0;">
+          <strong>AVISO DE RESPONSABILIDADE E CARÁTER EXPERIMENTAL:</strong>
+        </p>
+        <p>
+          As projeções, classificações e estatísticas geradas por inteligência artificial e aprendizado de máquina no Módulo Preditivo (Tendências) possuem caráter estritamente estatístico, educacional e de pesquisa quantitativa.
+        </p>
+        <p>
+          Estas informações <strong>não constituem</strong>, sob nenhuma hipótese, recomendação de investimento, consultoria financeira, análise de valores mobiliários ou indicação de compra e venda de ativos na B3.
+        </p>
+        <p style="margin-bottom: 0;">
+          Investimentos no mercado financeiro e na B3 envolvem riscos severos de perda patrimonial. Decisões operacionais baseadas nestes dados são de sua inteira e exclusiva responsabilidade.
+        </p>
+      </div>
+
+      <form id="forecastTermsForm" onsubmit="event.preventDefault(); app.acceptForecastTerms();">
+        <div style="margin-bottom: 1.25rem; display: flex; align-items: flex-start; gap: 0.75rem; background: var(--accent-glow); padding: 0.85rem; border-radius: 8px; border: 1px solid var(--border-glass);">
+          <input type="checkbox" id="chkForecastTermsAccept" onchange="app.onForecastTermsCheckboxChange()" style="margin-top: 0.2rem; width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer;">
+          <label for="chkForecastTermsAccept" style="font-size: 0.83rem; color: var(--text-primary); cursor: pointer; user-select: none; line-height: 1.4;">
+            Declaro que li e compreendi os Termos de Uso do Módulo Preditivo. Estou ciente de que as projeções geradas por inteligência artificial e aprendizado de máquina possuem caráter exclusivamente estatístico, educacional e experimental, não constituindo, sob nenhuma hipótese, recomendação de investimento, consultoria financeira ou indicação de compra e venda de ativos na B3. Compreendo que investimentos envolvem riscos severos de perda patrimonial e que decisões baseadas nestes dados são de minha exclusiva responsabilidade.
+          </label>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+          <button type="button" class="btn btn-outline" onclick="app.declineForecastTerms()">Recusar</button>
+          <button type="submit" id="btnAcceptForecastTerms" class="btn btn-primary btn-glow" disabled style="opacity: 0.5; cursor: not-allowed;">
+            Concordar e Acessar Módulo
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Asset News IA -->
+  <div class="modal-overlay" id="newsModalOverlay">
+    <div class="modal glass" id="newsModal">
+      <div class="modal-header">
+        <h2 id="newsModalTitle">Resumo IA: PETR4</h2>
+        <button class="modal-close" id="newsModalClose">&times;</button>
+      </div>
+      <div class="news-modal-content" id="newsModalScrollArea">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <div id="newsModalLogoContainer"></div>
+          <div>
+            <h3 id="newsModalTickerName" style="margin: 0; color: var(--text-primary);">Petróleo Brasileiro S.A.</h3>
+            <p id="newsModalUpdateDate" style="margin: 0; font-size: 0.8rem; color: var(--text-muted);"></p>
+          </div>
+        </div>
+        <div id="newsModalText" style="line-height: 1.6; font-size: 1.05rem; color: var(--text-primary); background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05);">
+          Carregando resumo...
+        </div>
+        <div id="newsModalSources" style="margin-top: 1rem; font-size: 0.85rem;">
+          <!-- Fontes serão inseridas aqui -->
+        </div>
+      </div>
+      <div class="form-actions" style="margin-top: 1.5rem;">
+        <button type="button" class="btn btn-primary" id="newsModalOk" style="width: 100%">Entendi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- <script src="app.js"></script> -->
+
+
+    <!-- script para abrir mercado oriundo da página minerativos.com ou links internos -->
+      <script>
+        window.addEventListener('load', function() {
+          const urlParams = new URLSearchParams(window.location.search);
+          const targetSection = urlParams.get('section');
+          const ticker = urlParams.get('ticker');
+
+          // Se houver ticker na URL, abre o monitor SPA
+          if (ticker && window.app) {
+              setTimeout(() => {
+                  window.app.showMonitor(ticker);
+              }, 800); // Aguarda inicialização dos dados
+              return;
+          }
+
+          if (targetSection) {
+            const btn = document.getElementById('nav-' + targetSection) || document.querySelector(`[data-section="${targetSection}"]`);
+            // Tenta encontrar a seção real que o botão ativa
+            const section = document.getElementById(targetSection) || document.querySelector(`[data-page="${targetSection}"]`) || document.querySelector(`[data-section="${targetSection}"]`);
+
+            if (btn) {
+              setTimeout(() => {
+                btn.click(); // Ativa a lógica do site
+
+                if (section) {
+                  const menuHeight = 0;
+                  const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - menuHeight;
+
+                  window.scrollTo({
+                    top: sectionTop,
+                    behavior: 'smooth'
+                  });
+                }
+              }, 500); // Garante que o layout estabilizou
+            }
+          }
         });
 
-        closeButton.addEventListener('click', function () {
-            mobileMenu.classList.toggle('hidden');
-        });
-    });
-</script>
+		//força navegação dos links do menu, pois o que ia para página inicial não estava funcionando
+		document.querySelectorAll('.nav-link').forEach(link => {
+			link.addEventListener('click', function(e) {
+				// Pega o href do link clicado
+				const href = this.getAttribute('href');
 
-</body></html>
+				// Se for um link externo (começa com http), força a navegação
+				if (href && href.startsWith('http')) {
+					window.location.href = href;
+				}
+			});
+		});
+
+
+
+      </script>
+    <!-- script para abrir mercado oriundo da página minerativos.com -->
+
+
+
+
+
+</body>
+
+</html>
