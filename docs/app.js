@@ -1544,8 +1544,8 @@ class B3App {
       if (recData && !isIbov) {
         recBox.style.display = 'block';
         recBox.innerHTML = `
-          <div style="font-size: 0.85rem; font-weight: 700; color: var(--accent-light); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem;">
-            🔍 Varredura de Carteiras & Recomendações (15 dias)
+          <div style="font-size: 0.75rem; font-weight: 600; color: var(--accent-light); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem;">
+            Varredura de citações (15 dias)
           </div>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.5rem; margin-bottom: 0.75rem;">
             <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 0.5rem 0.75rem; border-radius: 6px; text-align: center;">
