@@ -41,7 +41,7 @@ jobs:
           User-agent: CCBot
           Disallow: /
 
-          Sitemap: https://minerativos.github.io/pages/sitemap.xml
+          Sitemap: https://f0f9e5b1d8ca4afaec9259d91674131a.github.io/pages/sitemap.xml
           EOT
           fi
 
@@ -49,7 +49,7 @@ jobs:
       - name: Gerar Sitemap XML
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url-path: https://minerativos.github.io/pages/
+          base-url-path: https://f0f9e5b1d8ca4afaec9259d91674131a.github.io/pages/
           sitemap-path: sitemap.xml
           drop-html-extension: true
           omit-unreachable-files: true
