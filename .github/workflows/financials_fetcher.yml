@@ -33,12 +33,12 @@ jobs:
           python -m pip install -r requirements.txt
       
       - name: Fetch market data
-        run: python docs/portfolio/scripts/financials_fetcher.py
+        run: python docs/scripts/financials_fetcher.py
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/portfolio/data/market_financials.json
+          git add docs/data/market_financials.json
           git commit -m "Update market financials data - $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
           git push
