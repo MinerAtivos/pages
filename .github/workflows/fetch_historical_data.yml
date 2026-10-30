@@ -35,12 +35,12 @@ jobs:
           pip install yfinance pandas
 
       - name: Fetch historical data
-        run: python docs/portfolio/scripts/data_fetcher.py --period "${{ github.event.inputs.period }}" --output "${{ github.event.inputs.filename }}"
+        run: python docs/scripts/data_fetcher.py --period "${{ github.event.inputs.period }}" --output "${{ github.event.inputs.filename }}"
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/portfolio/data/
+          git add docs/data/
           git commit -m "Add historical market data: ${{ github.event.inputs.filename }} (period: ${{ github.event.inputs.period }})" || echo "No changes to commit"
           git push
